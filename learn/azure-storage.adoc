@@ -1,0 +1,58 @@
+---
+sidebar: sidebar 
+permalink: learn/azure-storage.html 
+keywords: service level, cvs, cvs-performance, storage class, storage classes, pv size, persistent volume size, volume size, bandwidth, performance 
+summary: Astra Control Service使用Azure NetApp Files 支援功能作為Azure Kubernetes Service（KS）叢集的儲存後端。您應該瞭解如何選擇儲存類別和持續磁碟區大小、以協助您達成效能目標。 
+---
+= 適用於高峰叢集的儲存類別和PV大小
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/learn/
+
+
+[role="lead"]
+Astra Control Service支援Azure NetApp Files 以支援以支援以支援功能不全或Azure託管磁碟做為Azure Kubernetes Service（KS）叢集的儲存後端。
+
+
+
+== Azure NetApp Files
+
+Astra Control Service支援Azure NetApp Files 將支援用作Azure Kubernetes Service（KS）叢集的儲存後端。您應該瞭解如何選擇儲存類別和持續磁碟區大小、以協助您達成效能目標。
+
+
+
+=== 服務層級與儲存類別
+
+支援三種服務層級：超儲存設備、優質儲存設備和標準儲存設備。Azure NetApp Files每個服務層級都是針對不同的效能需求而設計：
+
+超儲存設備:: 每1 TiB可提供高達128 MIB/s的處理量。
+頂級儲存設備:: 每1 TiB可提供高達64 MIB/s的處理量。
+標準儲存設備:: 每1 TiB可提供高達16 MIB/s的處理量。
+
+
+這些服務層級是容量集區的屬性。您需要為要搭配Kubernetes叢集使用的每個服務層級設定容量資源池。 link:../get-started/set-up-microsoft-azure-with-anf.html["瞭解如何設定容量資源池"]。
+
+Astra Control Service使用這些服務層級做為持續磁碟區的儲存類別。當您將Kubernetes叢集新增至Astra Control Service時、系統會提示您選擇「Ultra」、「Premium」或「Standard」作為預設儲存類別。儲存類別名稱為_NetApp-anf-perf-ulu_、_NetApp-anf-perf-pPremium _和_NetApp-anf-perf-Standard_。
+
+https://docs.microsoft.com/en-us/azure/azure-netapp-files/azure-netapp-files-service-levels["如需深入瞭解Azure NetApp Files 這些服務層級、請參閱《The》（英文）"^]。
+
+
+
+=== 持續的Volume大小與效能
+
+如上所述、每個服務層級的處理量是以已配置容量的1 TiB為單位。這表示較大的磁碟區可提供較佳的效能。因此、您在配置磁碟區時、應同時考量容量和效能需求。
+
+
+
+=== 最小Volume大小
+
+Astra Control Service會使用最小100 GiB的磁碟區大小來配置持續磁碟區、即使PVC要求較小的磁碟區大小也一樣。例如、如果Helm圖表中的永久虛擬磁碟要求6 GiB、Astra Control Service會自動配置100 GiB磁碟區。
+
+
+
+== Azure託管磁碟
+
+Astra Control Service支援Azure託管磁碟做為儲存後端選項。此服務提供由Azure管理的區塊層級儲存設備。
+
+https://docs.microsoft.com/en-us/azure/virtual-machines/managed-disks-overview["深入瞭解Azure託管磁碟"^]。

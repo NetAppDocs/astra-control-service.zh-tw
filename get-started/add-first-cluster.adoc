@@ -1,0 +1,147 @@
+---
+sidebar: sidebar 
+permalink: get-started/add-first-cluster.html 
+keywords: discover cluster, add cluster, add kubernetes cluster, discover kubernetes cluster, add cluster 
+summary: 設定環境之後、您就可以建立Kubernetes叢集、然後將其新增至Astra Control Service。 
+---
+= 從Astra Control Service開始管理Kubernetes叢集
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/get-started/
+
+
+[role="lead"]
+設定環境之後、您就可以建立Kubernetes叢集、然後將其新增至Astra Control Service。
+
+
+
+== 建立Kubernetes叢集
+
+如果您還沒有叢集、請建立符合的叢集 link:set-up-google-cloud.html#gke-cluster-requirements["Google Kubernetes Engine（GKE）的Astra控制服務要求"]、 link:set-up-microsoft-azure-with-anf.html["Azure Kubernetes Service（含Azure NetApp Files ）的Astra Control Service要求"]或 link:set-up-microsoft-azure-with-amd.html["Azure Kubernetes Service（Astra Control Service）與Azure託管磁碟的相關要求"] 。
+
+
+
+== 開始管理Kubernetes叢集
+
+登入Astra Control Service之後、您的第一步就是開始管理叢集。
+
+[NOTE]
+====
+當Astra Control管理叢集時、它會追蹤叢集的預設StorageClass。如果您使用「kubecll」命令變更StorageClass、Astra Control會還原變更。若要變更由Astra Control管理之叢集中的預設StorageClass、請使用下列其中一種方法：
+
+* 使用Astra Control API「PUT /managedClusters'端點」、並使用「DefaultStorageClass」參數指派不同的預設StorageClass
+* 從Astra Control管理中移除叢集、並以選取的不同預設StorageClass重新新增叢集
+
+
+====
+.您需要的是 #8217 ；需要的是什麼
+* 若為GKE、您應該擁有具有所需權限之服務帳戶的服務帳戶金鑰檔案。 link:../get-started/set-up-google-cloud.html#create-a-service-account["瞭解如何設定服務帳戶"]。
+* 若為高效能、您應該擁有Json檔案、其中應包含建立服務主體時Azure CLI的輸出。 link:../get-started/set-up-microsoft-azure-with-anf.html#create-an-azure-service-principal-2["瞭解如何設定服務主體"]。
++
+如果您未將Azure訂閱ID新增至Json檔案、您也需要Azure訂閱ID。
+
+* 若為私有高層叢集：
++
+** 叢集應符合中所述的需求 https://docs.microsoft.com/en-us/azure/aks/private-clusters["Azure文件"^]。
+** 您需要在Astra服務叢集上安裝Astra Connector、以便Astra Control Service能夠管理叢集。若要安裝Astra Connector、 <<Manage a private cluster,請遵循下列指示>>。
+
+
+
+
+.步驟
+. 在儀表板上、選取*管理Kubernetes叢集*。
++
+依照提示新增叢集。
+
+. *供應商*：選取您的雲端供應商、然後提供必要的認證資料。
++
+.. * Microsoft Azure *：上傳Json檔案或從剪貼簿貼上Json檔案的內容、以提供Azure服務主體的詳細資料。
++
+當您建立服務主體時、Json檔案應包含Azure CLI的輸出。它也可以包含您的訂閱ID、以便自動新增至Astra。否則、您必須在提供Json之後手動輸入ID。
+
+.. * Google Cloud Platform *：上傳檔案或從剪貼簿貼上內容、以提供服務帳戶金鑰檔案。
++
+Astra Control Service使用服務帳戶來探索在Google Kubernetes Engine中執行的叢集。
+
+
+
+. *叢集*：選取您要新增的叢集。
++
+請謹慎注意「合格」標籤。如果出現警告、請將游標暫留在警告上、以判斷叢集是否有問題。例如、它可能會識別叢集沒有工作節點。
+
++
+如果您選取的叢集尚未設定Cloud Volumes Service 成適用於Google Cloud或Azure NetApp Files NetApp的功能、則會出現警告。此叢集未安裝及設定NetApp Trident。如果您打算使用不同的儲存服務、可以繼續新增叢集。
+
++
+如果您選取標記有「私有」圖示的叢集、則會使用私有IP位址、而Astra Control則需要Astra Connector來管理叢集。如果您看到一則訊息、指出您需要安裝Astra Connector、 <<Manage a private cluster,請遵循下列指示>> 安裝Astra Connector並啟用叢集管理。安裝Astra Connector之後、叢集應該符合資格、您可以繼續新增叢集。
+
+. *儲存設備*：選取要將Kubernetes應用程式部署至此叢集的儲存類別、以供預設使用。
++
+每個VMware for Google Cloud服務的價格、效能和恢復能力資訊Cloud Volumes Service 都會顯示在清單中。每Azure NetApp Files 項服務都會顯示效能和恢復能力資訊。對於非NetApp儲存類別（例如Google持續磁碟或Azure託管磁碟）、無法取得價格、效能和恢復能力資訊。
+
++
+每個儲存類別都可以使用下列其中一項服務：
+
++
+** https://cloud.netapp.com/cloud-volumes-service-for-gcp["適用於 Google Cloud Cloud Volumes Service"^]
+** https://cloud.google.com/persistent-disk/["Google持續磁碟"^]
+** https://cloud.netapp.com/azure-netapp-files["Azure NetApp Files"^]
+** https://docs.microsoft.com/en-us/azure/virtual-machines/managed-disks-overview["Azure託管磁碟"^]
++
+深入瞭解 link:../learn/choose-class-and-size.html["GKE叢集的儲存類別"] 和 link:../learn/azure-storage.html["適用於高效能叢集的儲存類別"]。
+
+
+
+. *審查與核准*：檢閱組態詳細資料、然後選取*新增叢集*。
+
+
+Astra Control Service會在合格的叢集上建立物件存放區以供應用程式備份、在叢集上建立管理員帳戶、並設定您指定的預設儲存類別。此程序可能需要5分鐘的時間。
+
+
+
+== 管理私有叢集
+
+您可以使用Astra Control Service來管理私有的高可用性叢集。若要這麼做、您必須在私有的Astra服務叢集上安裝Astra Connector運算子。您可以在新增叢集以進行管理之前、或在系統提示時新增叢集的過程中完成此步驟。
+
+.步驟
+. 為Astra Connector運算子建立命名空間。
++
+[listing]
+----
+kubectl create ns astra-connector-operator
+----
+. 將「astraconnecor_toper.yaml」檔案套用到運算子命名空間。
++
+[listing]
+----
+kubectl apply -f astraconnector_operator.yaml -n astra-connector-operator
+----
+. 為私有叢集元件建立命名空間。
++
+[listing]
+----
+kubectl create ns astra-connector
+----
+. 套用Astra Connector自訂資源定義（CRD）。
++
+[listing]
+----
+kubectl apply -f config/samples/astraconnector_v1.yaml -n astra-connector
+----
+. 檢查Astra Connector的狀態。
++
+[listing]
+----
+kubectl get astraconnector astra-connector -n astra-connector
+----
++
+您應該會看到類似下列的輸出：
+
++
+[listing]
+----
+NAME              REGISTERED   ASTRACONNECTORID
+astra-connector   true         22b839aa-8b85-445a-85dd-0b1f53b5ea19
+----
+

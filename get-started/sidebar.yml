@@ -1,0 +1,28 @@
+---
+section: get-started
+title: 開始使用
+entries:
+- title: Astra Control簡介
+  url: "/get-started/intro.html"
+- title: 支援的Kubernetes部署
+  url: "/get-started/supported-deployments.html"
+- title: 快速入門
+  url: "/get-started/quick-start.html"
+- title: 設定您的雲端供應商
+  entries:
+  - title: 設定Google Cloud
+    url: "/get-started/set-up-google-cloud.html"
+  - title: 使用Azure NetApp Files 更新功能來設定Microsoft Azure
+    url: "/get-started/set-up-microsoft-azure-with-anf.html"
+  - title: 使用Azure託管磁碟來設定Microsoft Azure
+    url: "/get-started/set-up-microsoft-azure-with-amd.html"
+- title: 註冊帳戶
+  url: "/get-started/register.html"
+- title: 管理叢集
+  url: "/get-started/add-first-cluster.html"
+- title: 接下來呢？
+  url: "/get-started/whats-next.html"
+- title: 影片
+  url: "/get-started/videos.html"
+- title: 常見問題集
+  url: "/get-started/faq.html"

@@ -1,0 +1,25 @@
+---
+sidebar: sidebar 
+permalink: use/close-account.html 
+keywords: close account, delete account, delete my account, close my account 
+summary: 如果您不再需要Astra Control帳戶、您可以隨時關閉帳戶。 
+---
+= 關閉您的帳戶
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/use/
+
+
+如果您不再需要Astra Control帳戶、您可以隨時關閉帳戶。
+
+
+NOTE: 當您關閉帳戶時、Astra Control自動建立的庫位會自動刪除。
+
+.步驟
+. link:unmanage.html["取消管理所有應用程式和叢集"]。
+. link:manage-credentials.html["從Astra Control移除認證資料"]。
+. 選擇*帳戶>帳單>付款方式*。
+. 選擇*關閉帳戶*。
+. 輸入您的帳戶名稱、然後確認關閉帳戶。
+

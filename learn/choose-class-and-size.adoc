@@ -1,0 +1,120 @@
+---
+sidebar: sidebar 
+permalink: learn/choose-class-and-size.html 
+keywords: service level, cvs, cvs-performance, storage class, storage classes, pv size, persistent volume size, volume size, bandwidth, performance 
+summary: Astra Control Service使用Cloud Volumes Service 支援Google Cloud的功能、做為持續磁碟區的儲存後端。您應該瞭解如何選擇服務層級、儲存類別和持續容量、以協助您達成效能目標。 
+---
+= GKE叢集的服務類型、儲存類別和PV大小
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/learn/
+
+
+[role="lead"]
+Astra Control Service支援Cloud Volumes Service 以支援VMware for Google Cloud或Google持續磁碟作為持續磁碟區的儲存後端選項。
+
+
+
+== 適用於 Google Cloud Cloud Volumes Service
+
+Astra Control Service可以Cloud Volumes Service 使用適用於Google Cloud的功能、做為持續磁碟區的儲存後端。您應該瞭解如何選擇服務類型、儲存類別和持續Volume大小、以協助您達成效能目標。
+
+
+
+=== 總覽
+
+適用於Google Cloud的支援提供兩種服務類型：_CVS_和_CVs-Performance。Cloud Volumes Service這些服務類型在特定的Google Cloud地區均受到支援。 https://cloud.netapp.com/cloud-volumes-global-regions#cvsGcp["前往NetApp Cloud Central的全球區域地圖"^] 識別叢集所在的Google Cloud區域所支援的服務類型。
+
+如果Kubernetes叢集必須位於特定區域、則您將使用該區域所支援的服務類型。
+
+但如果您有在Google Cloud區域之間選擇的靈活度、我們建議您根據效能需求來執行下列作業：
+
+* 對於需要中高效能儲存設備的K8s應用程式、請選擇支援CVS-Performance的Google Cloud區域、然後使用Premium或Extreme儲存等級。這類工作負載包括AI / ML管道、CI/CD管道、媒體處理、以及包括關聯式、NoSQL、時間序列等的資料庫
+* 對於需要低至中度儲存效能的K8s應用程式（Web應用程式、一般用途檔案儲存設備等）、請選擇支援CVS或CVS效能的Google Cloud區域、搭配Standard儲存類別。
+
+
+下表提供本頁所述資訊的快速比較。
+
+[cols="5*"]
+|===
+| 服務類型 | 使用案例 | 支援的地區 | 儲存類別 | 最小Volume大小 
+
+
+| CVS效能 | 具有中高儲存效能需求的應用程式 | https://cloud.netapp.com/cloud-volumes-global-regions#cvsGcp["檢視支援的Google Cloud地區"^]  a| 
+* NetApp-CVs-perf-Standard
+* NetApp-CVs-perf-Premium
+* NetApp-CVs-perf-Extreme
+
+| 100 GiB 
+
+
+| CVS | 需要低到中儲存效能的應用程式 | https://cloud.netapp.com/cloud-volumes-global-regions#cvsGcp["檢視支援的Google Cloud地區"^] | NetApp-CVS標準 | 300 GiB 
+|===
+
+
+=== CVS效能服務類型
+
+在選擇儲存類別並建立持續磁碟區之前、請先深入瞭解CVS效能服務類型。
+
+
+
+==== 儲存類別
+
+CVS效能服務類型支援三種服務層級：Standard、Premium和Extreme。當您將叢集新增至Astra Control Service時、系統會提示您選擇「Standard（標準）」、「Premium（高級）」或「Extreme（極致）」作為持續磁碟區的預設儲存類別。每個服務層級都是針對不同的容量和頻寬需求而設計。
+
+儲存類別的名稱為_NetApp-CVs-perf-Standard_、_NetApp-CVs-perf-Premium _和_NetApp-CVs-perf-Extreme _。
+
+https://cloud.google.com/solutions/partners/netapp-cloud-volumes/selecting-the-appropriate-service-level-and-allocated-capacity-for-netapp-cloud-volumes-service#service_levels["如需深入瞭解這些服務層級、請參閱Cloud Volumes Service 《for Google Cloud》（英文）文件"^]。
+
+
+
+==== 持續的Volume大小與效能
+
+https://cloud.google.com/solutions/partners/netapp-cloud-volumes/selecting-the-appropriate-service-level-and-allocated-capacity-for-netapp-cloud-volumes-service#service_levels["如Google Cloud文件所說明"^]、每個服務層級的允許頻寬是以已配置容量的GiB為單位。這表示較大的磁碟區將提供較佳的效能。
+
+請務必閱讀上面連結的Google Cloud頁面。其中包括成本比較和範例、可協助您更深入瞭解如何將服務層級與Volume大小結合、以符合您的效能目標。
+
+
+
+==== 最小Volume大小
+
+Astra Control Service會以最低100 GiB的磁碟區大小、搭配CVS效能服務類型來配置持續磁碟區、即使該PVC要求較小的磁碟區大小也一樣。例如、如果Helm圖表中的永久虛擬磁碟要求6 GiB、Astra Control Service會自動配置100 GiB磁碟區。
+
+
+
+=== CVS服務類型
+
+在選擇儲存類別並建立持續磁碟區之前、請先深入瞭解CVS服務類型。
+
+
+
+==== 儲存類別
+
+CVS服務類型支援一種服務層級：Standard。當您在支援CVS服務類型的區域中管理叢集時、Astra Control Service會使用標準服務層級做為持續磁碟區的預設儲存類別。儲存類別的名稱為_NetApp-CVs-Standard_。
+
+https://cloud.google.com/solutions/partners/netapp-cloud-volumes/service-levels["深入瞭解Cloud Volumes Service 《適用於Google Cloud的解決方案》文件中的標準服務層級"^]。
+
+
+
+==== 持續的Volume大小與效能
+
+CVS服務類型允許的頻寬是以已配置容量的GiB為單位。這表示較大的磁碟區將提供較佳的效能。
+
+
+
+==== 最小Volume大小
+
+Astra Control Service會以最低300 GiB的磁碟區大小來配置持續磁碟區、並搭配CVS服務類型、即使該PVC要求較小的磁碟區大小也沒問題。例如、如果要求20 GiB、Astra Control Service會自動配置300 GiB磁碟區。
+
+由於限制、如果某個PVC要求的Volume介於700-999 GiB之間、Astra Control Service會自動配置1000 GiB的Volume大小。
+
+
+
+== Google持續磁碟
+
+Astra Control Service支援Google持續磁碟做為儲存後端選項。此服務提供由Google管理的區塊層級儲存設備。
+
+https://cloud.google.com/persistent-disk/["深入瞭解Google持續磁碟"^]。
+
+https://cloud.google.com/compute/docs/disks/performance["深入瞭解不同的Google持續磁碟效能等級"^]。

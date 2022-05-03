@@ -1,0 +1,45 @@
+---
+sidebar: sidebar 
+permalink: use/clone-apps.html 
+keywords: clone app, clone storage, clone persistent storage, clone data, move workload, clone data, migrate data, data migration, move storage, move application, move data 
+summary: 複製現有的應用程式、在相同的Kubernetes叢集或其他叢集上建立複製的應用程式。如果您需要將應用程式和儲存設備從一個Kubernetes叢集移至另一個叢集、複製作業將有助於您。例如、您可能想要透過CI CD傳輸途徑和Kubernetes命名空間來移動工作負載。 
+---
+= 複製及移轉應用程式
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/use/
+
+
+[role="lead"]
+複製現有的應用程式、在相同的Kubernetes叢集或其他叢集上建立複製的應用程式。如果您需要將應用程式和儲存設備從一個Kubernetes叢集移至另一個叢集、複製作業將有助於您。例如、您可能想要透過CI/CD傳輸途徑和Kubernetes命名空間來移動工作負載。
+
+當Astra Control複製應用程式時、會建立應用程式組態和持續儲存的複本。
+
+[NOTE]
+====
+* 如果您複製由操作人員部署的Jenkins CI執行個體、則需要手動還原持續性資料。這是應用程式部署模式的限制。
+* 如果您部署的應用程式已明確設定StorageClass、且需要複製應用程式、則目標叢集必須具有原本指定的StorageClass。將具有明確設定StorageClass的應用程式複製到沒有相同StorageClass的叢集、將會失敗。
+* 在應用程式備份或應用程式還原期間、您可以選擇性地指定庫位ID。不過、應用程式複製作業一律會使用已定義的預設儲存區。沒有選項可變更實體複本的儲存區。如果您想要控制所使用的儲存桶、您也可以選擇 link:../use/manage-buckets.html#edit-a-bucket["變更庫位預設值"] 或執行 link:../use/protect-apps.html#create-a-backup["備份"] 接著是A link:../use/restore-apps.html["還原"] 獨立提供。
+* 任何具有命名空間名稱/ ID或命名空間標籤限制的成員使用者、都可以將應用程式複製或還原到同一個叢集上的新命名空間、或是組織帳戶中的任何其他叢集。不過、相同的使用者無法存取新命名空間中的複製或還原應用程式。在複製或還原作業建立新命名空間之後、帳戶管理員/擁有者可以編輯成員使用者帳戶、並更新受影響使用者的角色限制、以便授予新命名空間的存取權。
+
+
+====
+.步驟
+. 選擇*應用程式*。
+. 選取所需應用程式*「Action"（行動）」欄中的下拉式清單。
+. 選擇* Clone（克隆）*。
+. *複製詳細資料*：指定複製的詳細資料：
++
+** 保留預設名稱和命名空間、或加以編輯。
+** 選擇要複製的目的地叢集。
+** 選擇是要從現有的快照或備份建立複本。如果您未選取此選項、Astra Control會從應用程式的目前狀態建立複本。
+
+
+. * Clone Summary（複製摘要）*：檢閱有關複製的詳細資料、然後選取* Clone App*（複製應用程式*）。
++
+image:screenshot-clone-summary.gif["「Clone Summary」（複製摘要）對話方塊的快照、可用來檢閱原始應用程式和複製應用程式的複製資訊。"]
+
+
+
+Astra Control會根據您提供的資訊來複製該應用程式。

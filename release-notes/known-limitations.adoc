@@ -1,0 +1,99 @@
+---
+sidebar: sidebar 
+permalink: release-notes/known-limitations.html 
+keywords: limitations, known limitations, interoperability 
+summary: 已知限制指出本產品版本不支援的平台、裝置或功能、或是無法與產品正確互通的平台、裝置或功能。請仔細檢閱這些限制。 
+---
+= 已知限制
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/release-notes/
+
+
+已知限制指出本產品版本不支援的平台、裝置或功能、或是無法與產品正確互通的平台、裝置或功能。請仔細檢閱這些限制。
+
+
+
+== 一般限制
+
+下列限制會影響Astra Control Service在任何支援的Kubernetes部署中對Kubernetes叢集的管理。
+
+
+
+=== Astra Trident不會從叢集解除安裝
+
+當您從Astra Control Service取消管理叢集時、不會自動從叢集解除安裝Astra Trident。若要解除安裝Astra Trident、您需要 https://docs.netapp.com/us-en/trident/trident-managing-k8s/uninstall-trident.html["請遵循Astra Trident文件中的下列步驟"^]。
+
+
+
+=== 現有連線至Postgres Pod會導致故障
+
+當您在Postgres Pod上執行作業時、不應直接在Pod內連線以使用psql命令。Astra Control Service需要psql存取權限才能凍結及解出資料庫。如果有預先存在的連線、則快照、備份或複製都會失敗。
+
+
+
+== GKE叢集的管理限制
+
+以下限制適用於Google Kubernetes Engine（GKE）中Kubernetes叢集的管理。
+
+
+
+=== 支援一個GCP專案和一個服務帳戶
+
+Astra Control Service支援一個Google Cloud Platform專案和一個服務帳戶。您不應將多個服務帳戶新增至Astra Control Service、也不應旋轉服務帳戶認證資料。
+
+
+
+=== Google Marketplace應用程式尚未通過驗證
+
+NetApp尚未驗證從Google Marketplace部署的應用程式。有些使用者報告在探索或備份從Google Marketplace部署的PostgreSQL、MariaDB和MySQL應用程式時發生問題。
+
+無論您使用哪種類型的應用程式搭配Astra Control Service使用、您都應該自行測試備份與還原工作流程、以確保符合災難恢復需求。
+
+
+
+== 應用程式管理限制
+
+下列限制會影響Astra Control Service對應用程式的管理。
+
+
+
+=== 使用參照運算子所安裝的應用程式複製可能會失敗
+
+Astra Control支援以命名空間範圍運算子安裝的應用程式。這些運算子通常採用「傳遞值」而非「傳遞參照」架構來設計。以下是一些遵循這些模式的營運者應用程式：
+
+* https://github.com/k8ssandra/cass-operator/tree/v1.7.1["Apache K8ssandra"^]
++
+
+NOTE: 對於K8ssandra、支援就地還原作業。若要還原新命名空間或叢集的作業、必須先關閉應用程式的原始執行個體。這是為了確保傳遞的對等群組資訊不會導致跨執行個體通訊。不支援複製應用程式。
+
+* https://github.com/jenkinsci/kubernetes-operator["Jenkins CI"^]
+* https://github.com/percona/percona-xtradb-cluster-operator["Percona XtraDB叢集"^]
+
+
+請注意、Astra Control可能無法複製以「傳遞參考」架構設計的操作員（例如、CockroachDB操作員）。在這些類型的複製作業中、複製的操作員會嘗試從來源操作員參考Kubernetes機密、儘管在複製程序中有自己的新秘密。由於Astra Control不知道來源營運者的Kubernetes機密資料、因此複製作業可能會失敗。
+
+
+
+== 無法停止進行中的應用程式備份
+
+無法取消執行中的備份。如果您需要刪除備份、請等到備份完成後再使用中的指示 link:../use/protect-apps.html#delete-backups["刪除備份"]。若要刪除失敗的備份、請使用 link:https://docs.netapp.com/us-en/astra-automation/index.html["Astra API"^]。
+
+
+
+== 角色型存取控制（RBAC）限制
+
+下列限制適用於Astra Control限制使用者存取資源或功能的方式。
+
+
+
+=== 具有命名空間RBAC限制的使用者可以新增及取消管理叢集
+
+不應允許具有命名空間RBAC限制的使用者新增或取消管理叢集。由於目前的限制、Astra無法防止此類使用者取消管理叢集。
+
+
+
+=== 具有命名空間限制的成員使用者、必須先將命名空間新增至限制、才能存取複製或還原的應用程式
+
+任何具有命名空間名稱/ ID或命名空間標籤之RBAC限制的「成員」使用者、都可以將應用程式複製或還原至同一叢集上的新命名空間、或是組織帳戶中的任何其他叢集。不過、相同的使用者無法存取新命名空間中的複製或還原應用程式。在複製或還原作業建立新命名空間之後、帳戶管理員/擁有者可以編輯「成員」使用者帳戶、並更新受影響使用者的角色限制、以授予新命名空間的存取權。

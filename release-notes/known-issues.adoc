@@ -1,0 +1,66 @@
+---
+sidebar: sidebar 
+permalink: release-notes/known-issues.html 
+keywords: bugs, known issues, problems 
+summary: 已知問題可識別可能導致您無法成功使用本產品版本的問題。 
+---
+= 已知問題
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/release-notes/
+
+
+已知問題可識別可能導致您無法成功使用本產品版本的問題。
+
+下列已知問題會影響目前的版本：
+
+.應用程式
+* <<App clones fail after an application is deployed with a set storage class>>
+
+
+.備份、還原及複製
+* <<Restore of an app results in PV size larger than original PV>>
+* <<App clones fail using a specific version of PostgreSQL>>
+
+
+.其他問題
+* <<Snapshots eventually begin to fail when using external-snapshotter version 4.2.0>>
+* <<App data management operations fail with Internal Service Error (500) when Astra Trident is offline>>
+
+
+
+
+== 應用程式複製在以設定的儲存類別部署應用程式之後失敗
+
+在以明確設定的儲存類別（例如「helm install ...-set globe.storageClass = NetApp-CVs-perf-Extreme」）部署應用程式之後、後續嘗試複製應用程式時、必須讓目標叢集擁有原本指定的儲存類別。將具有明確設定儲存類別的應用程式複製到沒有相同儲存類別的叢集、將會失敗。在此案例中沒有任何恢復步驟。
+
+
+
+== 還原應用程式會導致PV大小大於原始PV
+
+如果您在建立備份之後調整持續磁碟區的大小、然後從該備份還原、則持續磁碟區大小將會與PV的新大小相符、而非使用備份的大小。
+
+
+
+== 使用特定版本的PostgreSQL時、應用程式複製失敗
+
+同一個叢集內的應用程式複製作業、會持續失敗、並顯示Bitnami PostgreSQL 11.5.0圖表。若要成功複製、請使用舊版或更新版本的圖表。
+
+
+
+== 使用外部Snapshotter 4.2.0版時、快照最終會開始失敗
+
+使用Kubernetes Snapshot-Controller（也稱為exter-snapshotter）4.2.0版搭配Kubernetes 1.20或1.21時、快照最終可能會開始失敗。若要避免這種情況發生、請使用不同的 https://kubernetes-csi.github.io/docs/snapshot-controller.html["支援的版本"^] Kubernetes版本1.20或1.21的外部快照功能（例如4.2.1版）。
+
+. 執行POST呼叫、將更新的Kbeconfig檔案新增至「/assignon」端點、並從回應本文擷取指派的「id」。
+. 使用適當的叢集ID從「/叢集」端點執行「PUT」呼叫、並將「credentialId」設定為上一步的「id」值。
+
+
+完成這些步驟後、與叢集相關的認證資料會更新、叢集應重新連線並將其狀態更新為「可用」。
+
+
+
+== 當Astra Trident離線時、應用程式資料管理作業會因內部服務錯誤（500）而失敗
+
+如果應用程式叢集上的Astra Trident離線（並重新連線）、而且在嘗試應用程式資料管理時遇到500個內部服務錯誤、請重新啟動應用程式叢集中的所有Kubernetes節點、以還原功能。

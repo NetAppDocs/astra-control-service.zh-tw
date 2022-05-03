@@ -1,0 +1,265 @@
+---
+sidebar: sidebar 
+permalink: get-started/set-up-microsoft-azure-with-amd.html 
+keywords: azure, azure netapp files, register, create account, create netapp account, azure subscription, azure permissions, service principal, create service principal, set up azure permissions, set up service principal, setup service principal, setup azure permissions, permissions, create capacity pool, setup capacity pool, set up capacity pool, kubernetes cluster, cluster requirements, version requirements, supported versions, supported regions, azure regions, kubernetes version, linux, image type, networking 
+summary: 您必須先採取幾個步驟來準備Microsoft Azure訂閱、才能使用Astra Control Service管理Azure Kubernetes服務叢集。 
+---
+= 使用Azure託管磁碟來設定Microsoft Azure
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/get-started/
+
+
+您必須先採取幾個步驟來準備Microsoft Azure訂閱、才能使用Astra Control Service管理Azure Kubernetes服務叢集。如果您打算將Azure託管磁碟當作儲存後端、請遵循下列指示。
+
+
+
+== 設定Azure的快速入門
+
+請依照下列步驟快速入門、或向下捲動至其餘部分以取得完整詳細資料。
+
+
+
+==== 檢閱Azure Kubernetes服務的Astra Control Service要求
+
+[role="quick-margin-para"]
+確保叢集正常運作、並執行Kubernetes 1.21/x至1.23版、確保節點集區處於線上狀態並執行* Linux *等功能。 <<Azure Kubernetes Service cluster requirements,深入瞭解此步驟>>。
+
+
+
+==== 註冊Microsoft Azure
+
+[role="quick-margin-para"]
+建立Microsoft Azure帳戶。 <<Sign up for Microsoft Azure,深入瞭解此步驟>>。
+
+
+
+==== 建立Azure服務主體
+
+[role="quick-margin-para"]
+建立具備「貢獻者」角色的Azure服務主體。 <<Create an Azure service principal,深入瞭解此步驟>>。
+
+
+
+==== 設定Container Storage介面（SCSI）驅動程式詳細資料
+
+[role="quick-margin-para"]
+您必須設定Azure訂閱和叢集、才能搭配使用csi驅動程式。 <<Configure Container Storage Interface (CSI) driver details,深入瞭解此步驟>>。
+
+
+
+== Azure Kubernetes服務叢集需求
+
+Kubernetes叢集必須符合下列需求、才能從Astra Control Service進行探索和管理。
+
+Kubernetes版本:: 叢集必須執行Kubernetes 1.21/x至1.23版。
+映像類型:: 所有節點集區的映像類型必須是Linux。
+叢集狀態:: 叢集必須以正常狀態執行、且至少有一個線上工作者節點、且在故障狀態下沒有工作節點。
+Azure地區:: 最佳實務做法是、您應該選擇一個支援Azure NetApp Files 此功能的區域、即使您不將其用作儲存後端。如此一Azure NetApp Files 來、如果您的效能需求改變、就能更輕鬆地將VMware用作儲存後端。 https://azure.microsoft.com/en-us/global-infrastructure/services/?products=netapp["依地區檢視Azure產品"^]。
+私有網路:: 不得在叢集上啟用私有網路。
+外部Volume Snapshot控制器:: 叢集必須安裝一個csi Volume Snapshot控制器。此控制器預設為從K8s 1.21版開始安裝、但您需要檢查執行1.19和1.20版的叢集。 https://docs.netapp.com/us-en/trident/trident-use/vol-snapshots.html["深入瞭解適用於隨需磁碟區快照的外部快照控制器"^]。
+csi驅動程式:: 叢集必須安裝適當的SCSI驅動程式。
+
+
+
+
+== 註冊Microsoft Azure
+
+如果您沒有Microsoft Azure帳戶、請先註冊Microsoft Azure。
+
+.步驟
+. 前往 https://azure.microsoft.com/en-us/free/["Azure訂閱頁面"^] 訂閱Azure服務。
+. 選取計畫、然後依照指示完成訂閱。
+
+
+
+
+== 建立Azure服務主體
+
+Astra Control Service需要指派「貢獻者」角色的Azure服務主體。Astra Control Service使用此服務主體來協助Kubernetes應用程式資料管理。
+
+服務主體是專為搭配應用程式、服務和工具使用而建立的身分識別。指派角色給服務主體會限制對特定Azure資源的存取。
+
+請依照下列步驟、使用Azure CLI建立服務主體。您需要將輸出儲存在Json檔案中、稍後再提供給Astra Control Service。 https://docs.microsoft.com/en-us/cli/azure/create-an-azure-service-principal-azure-cli["如需使用CLI的詳細資訊、請參閱Azure文件"^]。
+
+下列步驟假設您擁有建立服務主體的權限、而且您的機器上已安裝Microsoft Azure SDK（AZ命令）。
+
+.需求
+* 服務主體必須使用一般驗證。不支援憑證。
+* 服務委託人必須獲得「參與者」或「擁有者」的Azure訂閱存取權。
+* 您為範圍選擇的訂閱或資源群組必須包含高層叢集和Azure NetApp Files 您的帳戶。
+
+
+.步驟
+. 識別您的高層叢集所在的訂閱和租戶ID（這些是您要在Astra Control Service中管理的叢集）。
++
+[source, azureCLI]
+----
+az configure --list-defaults
+az account list --output table
+----
+. 視您使用的是整個訂閱或資源群組而定、執行下列其中一項：
++
+** 建立服務主體、指派「參與者」角色、並將範圍指定給叢集所在的整個訂閱。
++
+[source, azurecli]
+----
+az ad sp create-for-rbac --name service-principal-name --role contributor --scopes /subscriptions/SUBSCRIPTION-ID
+----
+** 建立服務主體、指派「參與者」角色、並指定叢集所在的資源群組。
++
+[source, azurecli]
+----
+az ad sp create-for-rbac --name service-principal-name --role contributor --scopes /subscriptions/SUBSCRIPTION-ID/resourceGroups/RESOURCE-GROUP-ID
+----
+
+
+. 將產生的Azure CLI輸出儲存為Json檔案。
++
+您必須提供此檔案、Astra Control Service才能探索您的高效能叢集、並管理Kubernetes資料管理作業。 link:../use/manage-credentials.html["深入瞭解Astra Control Service的認證管理"]。
+
+. 選用：將訂閱ID新增至Json檔案、以便Astra Control Service在您選取檔案時自動填入ID。
++
+否則、您必須在提示時在Astra Control Service中輸入訂閱ID。
+
++
+* 範例 *
+
++
+[source, JSON]
+----
+{
+  "appId": "0db3929a-bfb0-4c93-baee-aaf8",
+  "displayName": "sp-example-dev-sandbox",
+  "name": "http://sp-example-dev-sandbox",
+  "password": "mypassword",
+  "tenant": "011cdf6c-7512-4805-aaf8-7721afd8ca37",
+  "subscriptionId": "99ce999a-8c99-99d9-a9d9-99cce99f99ad"
+}
+----
+. 選用：測試您的服務主體。根據服務主體使用的範圍、從下列命令範例中進行選擇。
++
+.訂購範圍
+[source, azurecli]
+----
+az login --service-principal --username APP-ID-SERVICEPRINCIPAL --password PASSWORD --tenant TENANT-ID
+az group list --subscription SUBSCRIPTION-ID
+az aks list --subscription SUBSCRIPTION-ID
+az storage container list --subscription SUBSCRIPTION-ID
+----
++
+.資源群組範圍
+[source, azurecli]
+----
+az login --service-principal --username APP-ID-SERVICEPRINCIPAL --password PASSWORD --tenant TENANT-ID
+az aks list --subscription SUBSCRIPTION-ID --resource-group RESOURCE-GROUP-ID
+----
+
+
+
+
+== 設定Container Storage介面（SCSI）驅動程式詳細資料
+
+若要將Azure託管磁碟搭配Astra Control Service使用、您必須先為Kubernetes版本早於1.21的Kubernetes設定「csi Volume Snapshot功能」、並安裝必要的csi驅動程式。
+
+
+
+=== 安裝適用於Kubernetes 1.19的SCSI Volume Snapshot控制器
+
+如果您使用Kubernetes 1.19版、請依照下列指示安裝Volume Snapshot控制器。
+
+.步驟
+. 安裝Volume Snapshot客戶需求日。
++
+[source, kubectl]
+----
+kubectl apply -f https://raw.githubusercontent.com/kubernetes-csi/external-snapshotter/release-3.0/client/config/crd/snapshot.storage.k8s.io_volumesnapshotclasses.yaml
+kubectl apply -f https://raw.githubusercontent.com/kubernetes-csi/external-snapshotter/release-3.0/client/config/crd/snapshot.storage.k8s.io_volumesnapshotcontents.yaml
+kubectl apply -f https://raw.githubusercontent.com/kubernetes-csi/external-snapshotter/release-3.0/client/config/crd/snapshot.storage.k8s.io_volumesnapshots.yaml
+----
+. 建立Snapshot控制器。
++
+如果您希望快照控制器位於特定命名空間、請先下載並編輯下列檔案、再套用這些檔案。
+
++
+[source, kubectl]
+----
+kubectl apply -f https://raw.githubusercontent.com/kubernetes-csi/external-snapshotter/release-3.0/deploy/kubernetes/snapshot-controller/rbac-snapshot-controller.yaml
+kubectl apply -f https://raw.githubusercontent.com/kubernetes-csi/external-snapshotter/release-3.0/deploy/kubernetes/snapshot-controller/setup-snapshot-controller.yaml
+----
+
+
+
+
+=== 安裝適用於Kubernetes 1.20的SCSI Volume Snapshot控制器
+
+如果您使用Kubernetes版本1.20、請依照下列指示安裝Volume Snapshot控制器。
+
+.步驟
+. 安裝Volume Snapshot客戶需求日。
++
+[source, kubectl]
+----
+kubectl apply -f https://raw.githubusercontent.com/kubernetes-csi/external-snapshotter/v4.0.0/client/config/crd/snapshot.storage.k8s.io_volumesnapshotclasses.yaml
+kubectl apply -f https://raw.githubusercontent.com/kubernetes-csi/external-snapshotter/v4.0.0/client/config/crd/snapshot.storage.k8s.io_volumesnapshotcontents.yaml
+kubectl apply -f https://raw.githubusercontent.com/kubernetes-csi/external-snapshotter/v4.0.0/client/config/crd/snapshot.storage.k8s.io_volumesnapshots.yaml
+----
+. 建立Snapshot控制器。
++
+如果您希望快照控制器位於特定命名空間、請先下載並編輯下列檔案、再套用這些檔案。
+
++
+[source, kubectl]
+----
+kubectl apply -f https://raw.githubusercontent.com/kubernetes-csi/external-snapshotter/v4.0.0/deploy/kubernetes/snapshot-controller/rbac-snapshot-controller.yaml
+kubectl apply -f https://raw.githubusercontent.com/kubernetes-csi/external-snapshotter/v4.0.0/deploy/kubernetes/snapshot-controller/setup-snapshot-controller.yaml
+----
+
+
+
+
+=== 在Azure訂閱中啟用「csi驅動程式」功能
+
+安裝SCSI驅動程式之前、您必須先在Azure訂閱中啟用「csi驅動程式」功能。
+
+.步驟
+. 開啟Azure命令列介面。
+. 執行下列命令來登錄驅動程式：
++
+[listing]
+----
+az feature register --namespace "Microsoft.ContainerService" --name "EnableAzureDiskFileCSIDriver"
+----
+. 執行下列命令以確保已查詢變更：
++
+[listing]
+----
+'az provider register -n Microsoft.ContainerService
+----
++
+您應該會看到類似下列的輸出：
+
+
+
+[listing]
+----
+{
+"id": "/subscriptions/b200155f-001a-43be-87be-3edde83acef4/providers/Microsoft.Features/providers/Microsoft.ContainerService/features/EnableAzureDiskFileCSIDriver",
+"name": "Microsoft.ContainerService/EnableAzureDiskFileCSIDriver",
+"properties": {
+   "state": "Registering"
+},
+"type": "Microsoft.Features/providers/features"
+}
+----
+
+
+=== 在Azure Kubernetes服務叢集中安裝Azure託管磁碟SCSI驅動程式
+
+您可以安裝Azure csi驅動程式來完成準備工作。
+
+.步驟
+. 前往 https://docs.microsoft.com/en-us/azure/aks/csi-storage-drivers["Microsoft csi驅動程式文件"^]。
+. 請依照指示安裝所需的SCSI驅動程式。
+

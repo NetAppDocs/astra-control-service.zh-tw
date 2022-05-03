@@ -1,0 +1,112 @@
+---
+sidebar: sidebar 
+permalink: support/register-support.html 
+keywords: support, register for support, support registration 
+summary: Astra Control會在您設定帳戶時、嘗試自動登錄您的帳戶以取得支援。如果無法、您可以自行手動註冊以取得支援。需要註冊支援、才能從NetApp技術支援取得協助。 
+---
+= 註冊以取得支援
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/support/
+
+
+Astra Control會在您設定帳戶時、嘗試自動登錄您的帳戶以取得支援。如果無法、您可以自行手動註冊以取得支援。需要註冊支援、才能從NetApp技術支援取得協助。
+
+
+
+== 驗證您的支援註冊
+
+Astra Control包含「Support Status（支援狀態）」欄位、可讓您確認是否已註冊支援。
+
+.步驟
+. 選取*支援*。
+. 請參閱「支援狀態」欄位。
++
+「支援狀態」會從「未登錄」開始、然後移至「進行中」、最後在完成後移至「已登錄」。
+
++
+此支援登錄狀態每15分鐘輪詢一次。新的NetApp客戶可能需要下一個營業日才能完成就職與支援註冊。如果序號在48小時內未顯示「已登錄」、您可以使用astra.feedback@netapp.com聯絡NetApp、或從手動登錄 https://register.netapp.com[]。
+
+
+
+
+
+== 取得您的序號
+
+當您註冊帳戶時、Astra Control會使用您提供的公司相關資訊、產生以「941」開頭的20位數NetApp序號。
+
+NetApp序號代表您的Astra Control帳戶。開啟網路票證時、您需要使用此序號。
+
+您可以在「*支援*」頁面的Astra Control介面中找到序號。
+
+
+
+== 啟動支援服務權利
+
+如果Astra Control無法自動註冊您的帳戶以取得支援、則您必須註冊與Astra Control相關的NetApp序號、才能啟動支援權利。我們提供2種支援登錄選項：
+
+. 目前擁有現有NetApp支援網站（NSS）SSO帳戶的NetApp客戶
+. 沒有現有NetApp支援網站（NSS）SSO帳戶的新NetApp客戶
+
+
+
+
+=== 選項1：目前擁有現有NetApp支援網站（NSS）帳戶的NetApp客戶
+
+.步驟
+. 瀏覽至 https://register.netapp.com["雲端資料服務支援註冊"^] 頁面以建立一個新的nss.
+. 選擇*我已註冊為NetApp客戶*。
+. 輸入您的NetApp支援網站認證資料以登入。
++
+此時會顯示「現有客戶註冊」頁面。
+
++
+image:screenshot-existing-registration.gif["現有客戶註冊表"]
+
+. 填寫表單上的必要資訊：
++
+.. 輸入您的姓名、公司和電子郵件地址。
+.. 選擇* Astra *作為產品線。
+.. 輸入您的序號。
+.. 選擇*提交註冊*。
+
+
+
+
+您應重新導向至「已成功提交登錄」頁面。與您的註冊相關的電子郵件地址將在幾分鐘內收到一封電子郵件、說明「您的產品現在已符合支援資格」。
+
+這是適用序號的一次性支援登錄。
+
+
+
+=== 選項2：沒有現有NetApp支援網站（NSS）帳戶的新NetApp客戶
+
+.步驟
+. 瀏覽至 https://register.netapp.com["雲端資料服務支援註冊"^] 頁面以建立一個新的nss.
+. 選擇*我不是NetApp註冊客戶*。
++
+隨即顯示「新客戶註冊」頁面。
+
++
+image:screenshot-new-registration.gif["新客戶註冊表"]
+
+. 填寫表單上的必要資訊：
++
+.. 輸入您的姓名和公司資訊。
+.. 選擇* Astra *作為產品線。
+.. 輸入您的序號。
+.. 選擇*提交註冊*。
++
+您將收到您提交的註冊確認電子郵件。如果沒有發生錯誤、您將會被重新導向至「已成功提交登錄」頁面。您也會在一小時內收到一封電子郵件、指出「您的產品現在已符合支援資格」。
+
++
+這是適用序號的一次性支援登錄。
+
+
+
+. 身為NetApp的新客戶、您也需要建立NetApp支援網站（NSS）使用者帳戶、以便日後啟用支援服務、以及存取技術支援聊天室和網路票證的支援入口網站。
++
+前往 http://now.netapp.com/newuser/["NetApp支援註冊網站"^] 以執行此工作。您可以提供新註冊的Astra Control序號、以加速程序。
+
+

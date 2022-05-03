@@ -1,0 +1,10 @@
+---
+section: support
+title: 知識與支援
+entries:
+- title: 註冊以取得支援
+  url: "/support/register-support.html"
+- title: 疑難排解
+  url: "/support/troubleshooting.html"
+- title: 取得協助
+  url: "/support/get-help.html"

@@ -1,0 +1,19 @@
+---
+sidebar: sidebar 
+permalink: get-started/supported-deployments.html 
+keywords: gke, aks, google kubernetes engine, azure kubernetes service 
+summary: Astra Control Service可管理在Google Kubernetes Engine（GKE）和Azure Kubernetes Service（KS）的託管Kubernetes叢集上執行的應用程式。 
+---
+= 支援的Kubernetes部署
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/get-started/
+
+
+Astra Control Service可管理在Google Kubernetes Engine（GKE）和Azure Kubernetes Service（KS）的託管Kubernetes叢集上執行的應用程式。
+
+* link:set-up-google-cloud.html["瞭解如何設定Google Cloud for Astra Control Service"]。
+* link:set-up-microsoft-azure-with-anf.html["瞭解如何使用Azure NetApp Files 支援Astra Control Service的功能來設定Microsoft Azure"]。
+* link:set-up-microsoft-azure-with-amd.html["瞭解如何使用Azure託管磁碟來設定Microsoft Azure、以利Astra Control Service"]。
+

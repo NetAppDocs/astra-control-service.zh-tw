@@ -1,0 +1,93 @@
+---
+settings:
+  name: Astra Control Service
+  platform: cloud
+  internal:
+    pdf_enabled: true
+  prod:
+    pdf_enabled: true
+    harmony_enabled: false
+  langs: zh-tw,us-en,ja-jp,zh-cn,ko-kr
+sidebar:
+  entries:
+  - title: Astra Control Service文件
+    url: "/index.html"
+  - section: release-notes
+  - section: get-started
+  - section: use
+  - title: 利用Astra Control REST API實現自動化
+    url: "/automation.html"
+  - section: learn
+  - section: solutions
+  - section: support
+  - title: 法律聲明
+    url: "/legal-notices.html"
+homepage:
+  tiles:
+  - title: 開始使用
+    links:
+    - title: 瞭解Astra Control Service
+      url: "/get-started/intro.html"
+    - title: 快速入門
+      url: "/get-started/quick-start.html"
+    - title: 常見問題集
+      url: "/get-started/faq.html"
+  - title: 使用Astra Control Service
+    links:
+    - title: 管理應用程式
+      url: "/use/manage-apps.html"
+    - title: 保護您的應用程式
+      url: "/use/protect-apps.html"
+    - title: 移轉應用程式
+      url: "/use/clone-apps.html"
+    - title: 設定帳單
+      url: "/use/set-up-billing.html"
+  - title: 使用Astra Control REST API
+    links:
+    - title: 開始使用
+      url: https://docs.netapp.com/us-en/astra-automation/get-started/before_get_started.html
+    - title: API 參考
+      url: https://docs.netapp.com/us-en/astra-automation/reference/api_reference.html
+    - title: API工作流程
+      url: https://docs.netapp.com/us-en/astra-automation/workflows/workflows_before.html
+  - title: 示範教學課程
+    links:
+    - title: Astra Control Service影片
+      url: "/get-started/videos.html"
+    - title: 部署Jenkins
+      url: "/solutions/jenkins-deploy-from-helm-chart.html"
+    - title: 部署MariaDB
+      url: "/solutions/mariadb-deploy-from-helm-chart.html"
+    - title: 部署MySQL
+      url: "/solutions/mysql-deploy-from-helm-chart.html"
+    - title: 部署Postgres
+      url: "/solutions/postgres-deploy-from-helm-chart.html"
+  - title: Astra控制中心
+    links:
+    - title: Astra Control Center簡介
+      url: https://docs.netapp.com/us-en/astra-control-center/concepts/intro.html
+    - title: 新增功能
+      url: https://docs.netapp.com/us-en/astra-control-center/release-notes/whats-new.html
+    - title: 快速入門
+      url: https://docs.netapp.com/us-en/astra-control-center/get-started/quick-start.html
+  - title: 解決方案簡介
+    links:
+    - title: DataStax Enterprise Apache Cassandra搭配Astra Control
+      url: https://cloud.netapp.com/hubfs/SB-4134-0321-DataStax-Cassandra-Guide%20(1).pdf
+    - title: 具備Astra Control的PostgreSQL DBaaS
+      url: https://cloud.netapp.com/hubfs/SB-4122-0221-PostgresSQL-DBaaS-with-Astra%20(2).pdf
+    - title: MySQL DBaaas搭配Astra Control
+      url: https://cloud.netapp.com/hubfs/SB-4110-0221-MySQL-Astra%20(2).pdf
+    - title: 簡化Jenkins生命週期管理
+      url: https://cloud.netapp.com/hubfs/SB-4100-Jenkins%20(2).pdf
+  - title: 部落格社群
+    links:
+    - title: 可寬延的「容器」通道
+      url: https://netapp.io/slack
+    - title: Astra Control部落格
+      url: https://cloud.netapp.com/blog/topic/astra
+    - title: Astra Control：簡化混合雲的應用程式資料管理
+      url: https://cloud.netapp.com/blog/blg-astra-control-simplifying-kubernetes-application-data-management-for-the-hybrid-cloud
+    - title: 雲端中心的Kubernetes Hub
+      url: https://cloud.netapp.com/kubernetes-hub
+product-family: {}

@@ -1,0 +1,24 @@
+---
+sidebar: sidebar 
+permalink: get-started/whats-next.html 
+keywords: get started, manage apps, manage account 
+summary: 現在您已經登入並新增叢集至Astra Control、就能開始使用Astra Control的應用程式資料管理功能。 
+---
+= 接下來呢？
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/get-started/
+
+
+[role="lead"]
+現在您已經登入Astra Control並新增叢集、就可以開始使用Astra Control的應用程式資料管理功能。
+
+* link:../use/manage-apps.html["開始管理應用程式"]
+* link:../use/protect-apps.html["保護應用程式"]
+* link:../use/clone-apps.html["複製應用程式"]
+* link:../use/set-up-billing.html["設定帳單"]
+* link:../use/manage-users.html["邀請及管理使用者"]
+* link:../use/manage-credentials.html["管理雲端供應商認證資料"]
+* link:../use/manage-notifications.html["管理通知"]
+

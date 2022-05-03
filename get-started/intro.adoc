@@ -1,0 +1,176 @@
+---
+sidebar: sidebar 
+permalink: get-started/intro.html 
+keywords: introduction, how astra works, how Astra works, what Astra is, concept, understanding, overview 
+summary: Astra Control是Kubernetes應用程式資料生命週期管理解決方案、可簡化狀態應用程式的作業。輕鬆保護、備份及移轉Kubernetes工作負載、並立即建立可運作的應用程式複本。 
+---
+= Astra Control簡介
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/get-started/
+
+
+Astra Control是Kubernetes應用程式資料生命週期管理解決方案、可簡化狀態應用程式的作業。輕鬆保護、備份及移轉Kubernetes工作負載、並立即建立可運作的應用程式複本。
+
+
+
+== 功能
+
+Astra Control為Kubernetes應用程式資料生命週期管理提供關鍵功能：
+
+* 自動管理持續儲存
+* 建立應用程式感知的隨需快照與備份
+* 自動化原則導向的快照與備份作業
+* 將應用程式和資料從一個Kubernetes叢集移轉到另一個叢集
+* 從正式作業到接移、輕鬆複製應用程式
+* 視覺化應用程式健全狀況與保護狀態
+* 使用使用者介面或API來實作備份與移轉工作流程
+
+
+Astra Control會持續監控您的運算狀態變更、因此您可以隨時掌握新增的應用程式。
+
+
+
+== 部署模式
+
+Astra Control提供兩種部署模式：
+
+* * Astra Control Service*：NetApp管理的服務、可在Google Kubernetes Engine（GKE）和Azure Kubernetes Service（KS）中、提供Kubernetes叢集的應用程式感知資料管理功能。
+* * Astra Control Center*：自我管理的軟體、可針對在內部部署環境中執行的Kubernetes叢集、提供應用程式感知資料管理功能。
+
+
+[cols="1h,2d,2a"]
+|===
+|  | Astra控制服務 | Astra控制中心 
+
+
+| 如何提供？ | 是NetApp提供的完整託管雲端服務  a| 
+這是您下載、安裝及管理的軟體
+
+
+
+| 它的代管位置為何？ | 在NetApp首選的公有雲上  a| 
+在您提供的Kubernetes叢集上
+
+
+
+| 如何更新？ | 由NetApp管理  a| 
+您可以管理任何更新
+
+
+
+| 什麼是應用程式資料管理功能？ | 這兩種平台的功能相同、但儲存後端或外部服務除外  a| 
+這兩種平台的功能相同、但儲存後端或外部服務除外
+
+
+
+| 什麼是儲存後端支援？ | NetApp雲端服務產品  a| 
+* NetApp ONTAP AFF 的功能與FAS 功能
+* Astra Data Store做為儲存後端
+* 儲存後端Cloud Volumes ONTAP
+
+
+|===
+
+
+== 支援的應用程式
+
+NetApp已驗證某些應用程式、以確保快照與備份的安全性與一致性。
+
+* https://docs.netapp.com/us-en/astra/learn/validated-vs-standard.html["瞭解Astra Control Service中已驗證的應用程式與標準應用程式之間的差異"^]。
+* https://docs.netapp.com/us-en/astra-control-center/concepts/validated-vs-standard.html["瞭解Astra Control Center中已驗證的應用程式與標準應用程式之間的差異"^]。
+
+
+無論您使用哪種類型的應用程式搭配Astra Control、您都應該自行測試備份與還原工作流程、以確保符合災難恢復需求。
+
+
+
+== Astra Control Service的運作方式
+
+Astra Control Service是NetApp託管的雲端服務、隨時可用最新功能進行更新。它利用多個元件來實現應用程式資料生命週期管理。
+
+Astra Control Service的高層級運作方式如下：
+
+* 您可以設定雲端供應商並註冊Astra帳戶、開始使用Astra Control Service。
++
+** 對於GKE叢集、Astra Control Service使用 https://cloud.netapp.com/cloud-volumes-service-for-gcp["適用於Cloud Volumes Service Google Cloud的NetApp解決方案"^] 或Google持續磁碟做為持續磁碟區的儲存後端。
+** 對於高峰叢集、Astra Control Service使用 https://cloud.netapp.com/azure-netapp-files["Azure NetApp Files"^] 或Azure Disk Storage做為持續磁碟區的儲存後端。
+
+
+* 您將第一部Kubernetes運算新增至Astra Control Service。Astra Control Service接著會執行下列作業：
++
+** 在雲端供應商帳戶中建立物件存放區、以儲存備份複本。
++
+在Azure中、Astra Control Service也會為Blob容器建立資源群組、儲存帳戶和金鑰。
+
+** 在叢集上建立新的管理員角色和Kubernetes服務帳戶。
+** 使用新的管理員角色進行安裝 https://docs.netapp.com/us-en/trident/index.html["Astra Trident"^] 在叢集上建立一個或多個儲存類別。
+** 如果您使用Azure NetApp Files 適用於Cloud Volumes Service Google Cloud的支援功能作為儲存後端、Astra Control Service會使用Astra Trident來為應用程式配置持續的磁碟區。
+
+
+* 此時、您可以將應用程式新增至叢集。將在新的預設儲存類別上配置持續磁碟區。
+* 然後使用Astra Control Service來管理這些應用程式、並開始建立快照、備份和複製。
++
+Astra Control Service會持續監控您的運算狀態變更、因此您可以隨時掌握新增的應用程式。
+
+
+
+Astra Control的免費方案可讓您管理帳戶中最多10個應用程式。如果您想要管理10個以上的應用程式、則必須將「免費方案」升級為「優質方案」、以設定帳單。
+
+
+
+== Astra控制中心的運作方式
+
+Astra Control Center可在您自己的私有雲端本機執行。
+
+Astra Control Center支援OpenShift Kubernetes叢集：
+
+* Trident儲存後端搭配ONTAP 支援更新版本的支援
+* Astra Data Store儲存後端
+
+
+在雲端連線的環境中、Astra Control Center使用Cloud Insights 「資訊中心」來提供進階的監控和遙測功能。若缺乏Cloud Insights 支援鏈接、Astra Control Center可提供有限（7天數據）的監控與遙測功能、並透過開放式指標端點匯出至Kubernetes原生監控工具（例如Prometheus和Grafana）。
+
+Astra Control Center已完全整合AutoSupport 至整套的功能、可Active IQ 為使用者和NetApp支援人員提供疑難排解和使用資訊。
+
+您可以使用90天試用版授權試用Astra Control Center。評估版本可透過電子郵件和社群（Slack Channel）選項來支援。此外、您也可以從產品內的支援儀表板存取知識庫文章和文件。
+
+若要安裝及使用Astra Control Center、您必須符合特定需求 https://docs.netapp.com/us-en/astra-control-center/get-started/requirements.html["需求"]。
+
+Astra Control Center的高層級運作方式如下：
+
+* 您可以在本機環境中安裝Astra Control Center。深入瞭解如何操作 https://docs.netapp.com/us-en/astra-control-center/get-started/install_acc.html["安裝Astra Control Center"]。
+* 您可以完成以下設定工作：
++
+** 設定授權。
+** 新增第一個叢集。
+** 新增新增叢集時發現的儲存後端。
+** 新增物件存放區儲存應用程式備份。
+
+
+
+
+深入瞭解如何操作 https://docs.netapp.com/us-en/astra-control-center/get-started/setup_overview.html["設定Astra控制中心"]。
+
+Astra Control Center能：
+
+* 探索受管理Kubernetes叢集的詳細資料。
+* 在您選擇管理的叢集上探索您的Astra Trident或Astra Data Store組態、並讓您監控儲存後端。
+* 探索這些叢集上的應用程式、並讓您管理及保護應用程式。
+
+
+您可以將應用程式新增至叢集。或者、如果叢集中已有一些應用程式正在管理中、您可以使用Astra Control Center來探索及管理這些應用程式。然後、使用Astra Control Center建立快照、備份和複製。
+
+
+
+== 以取得更多資訊
+
+* https://docs.netapp.com/us-en/astra/index.html["Astra Control Service文件"^]
+* https://docs.netapp.com/us-en/astra-control-center/index.html["Astra Control Center文件"^]
+* https://docs.netapp.com/us-en/astra-data-store/index.html["Astra Data Store文件"]
+* https://docs.netapp.com/us-en/trident/index.html["Astra Trident文件"^]
+* https://docs.netapp.com/us-en/astra-automation/index.html["使用Astra Control API"^]
+* https://docs.netapp.com/us-en/cloudinsights/["本文檔 Cloud Insights"^]
+* https://docs.netapp.com/us-en/ontap/index.html["本文檔 ONTAP"^]
+

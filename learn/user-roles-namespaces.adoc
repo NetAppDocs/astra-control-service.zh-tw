@@ -1,0 +1,40 @@
+---
+sidebar: sidebar 
+permalink: learn/user-roles-namespaces.html 
+keywords: users, roles, user roles, namespace, namespaces, account, accounts, permissions, restriction, restrict, constraint 
+summary: 瞭解Astra Control Center中可用的資料保護類型、以及如何以最佳方式使用這些類型來保護應用程式。 
+---
+= 使用者角色和命名空間
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/learn/
+
+
+瞭解Astra Control中的使用者角色和命名空間、以及如何使用這些角色和命名空間來控制組織中的資源存取。
+
+
+
+== 使用者角色
+
+您可以使用角色來控制使用者對Astra Control資源或功能的存取。以下是Astra Control的使用者角色：
+
+* *擁有者*具有管理權限、可刪除帳戶。
+* *管理*具有成員權限、可以邀請其他使用者。
+* *成員*可以完全管理應用程式和叢集。
+* *檢視器*可以檢視資源。
+
+
+您可以新增限制給成員或檢視者使用者、將使用者限制為一或多個 <<Namespaces>>。
+
+
+
+== 命名空間
+
+命名空間是可指派給由Astra Control管理之叢集內特定資源的範圍。當您將叢集新增至Astra Control時、Astra Control會探索叢集的命名空間。一旦發現命名空間、就能將其指派為限制給使用者。只有具有該命名空間存取權的成員才能使用該資源。您可以使用命名空間來控制對資源的存取、這種模式對您的組織而言很合理、例如依實體區域或公司內部的部門而定。當您新增限制給使用者時、可以將該使用者設定為只能存取所有命名空間或特定的命名空間集合。您也可以使用命名空間標籤指派命名空間限制。
+
+
+
+== 如需詳細資訊、請參閱
+
+link:../use/manage-roles.html["管理角色"]

@@ -1,0 +1,40 @@
+---
+sidebar: sidebar 
+permalink: use/monitor-account-activity.html 
+keywords: activity, log, activities, download log, download csv, csv 
+summary: 您可以檢視Astra Control帳戶中活動的詳細資料。例如、當新使用者受到邀請、新增運算時、或是快照時。您也可以將帳戶活動匯出至CSV檔案。 
+---
+= 監控帳戶活動
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/use/
+
+
+[role="lead"]
+您可以檢視Astra Control帳戶中活動的詳細資料。例如、當邀請新使用者、新增叢集或擷取快照時。您也可以將帳戶活動匯出至CSV檔案。
+
+.檢視Astra Control中的所有帳戶活動
+. 選擇*活動*。
+. 使用篩選器縮小活動清單範圍、或使用搜尋方塊找到您想要的確切內容。
+. 選取*匯出至CSV*、將您的帳戶活動下載至CSV檔案。
+
+
+.檢視特定應用程式的帳戶活動
+. 選取*應用程式*、然後選取應用程式名稱。
+. 選擇*活動*。
+
+
+.檢視叢集的帳戶活動
+. 選取*叢集*、然後選取叢集名稱。
+. 選擇*活動*。
+
+
+.檢視事件的可能行動
+. 選擇*活動*。
+. 選取需要注意的事件。
+. 選取*「採取行動」*下拉式選項。
++
+您可在此清單中檢視可能採取的修正行動、檢視與問題相關的文件、並取得協助解決問題的支援。
+
+

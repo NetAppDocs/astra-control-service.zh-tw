@@ -1,0 +1,75 @@
+---
+sidebar: sidebar 
+permalink: get-started/register.html 
+keywords: cloud central, sign up, log in, login, register, register for cloud central, create account, sign up for account, get an account, account, accounts 
+summary: Astra Control Service整合於NetApp Cloud Central的驗證服務中。註冊Cloud Central、即可存取Astra Control Service和NetApp的其他雲端服務。 
+---
+= 註冊Astra Control Service帳戶
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/get-started/
+
+
+[role="lead"]
+若要使用Astra Control Service、您需要與NetApp Cloud Central帳戶相關聯的Astra Control Service帳戶。完成Astra Control Service登錄程序、如果您還沒有Cloud Central帳戶、請註冊Cloud Central以存取Astra Control Service。
+
+
+
+== 註冊Astra Control帳戶
+
+登入Astra Control Service之前、您必須先完成註冊程序、才能取得Astra Control Service帳戶。
+
+當您使用Astra Control Service時、您將從帳戶中管理應用程式。帳戶包括可檢視及管理帳戶內應用程式的使用者、以及您的帳單詳細資料。
+
+.步驟
+. https://cloud.netapp.com/astra["前往Cloud Central上的Astra Control頁面"^]。
+. 選擇* Astra Control入門*。
+. 選取*免費方案*標籤。
++
+image:acs-registration-free-plan.png["註冊表單「選擇計畫」標籤的快照、您需要在其中選取「免費方案」選項。"]
+
+. 在表單中提供必要資訊。
++
+填寫表單時請注意以下幾點重要事項：
+
++
+** 您的公司名稱和地址必須準確無誤、因為我們會驗證這些名稱和地址、以符合全球貿易法規遵循的要求。
+** 「* Astra帳戶名稱*」是貴企業的Astra Control Service帳戶名稱。您會在Astra Control Service使用者介面中看到此名稱。請注意、您可以視需要建立其他帳戶（最多5個）。
+** 在*商業電子郵件地址*欄位中、如果您有NetApp Cloud Central帳戶、請在此輸入您用於該帳戶的電子郵件。如果您還沒有NetApp Cloud Central帳戶、請在註冊Cloud Central時使用您在此處輸入的電子郵件地址。
+
+
+. 選擇*提交*。
+
+
+
+
+== 註冊 Cloud Central
+
+如果您還沒有NetApp Cloud Central帳戶、請註冊Cloud Central、以便存取Astra Control Service和NetApp的其他雲端服務。Astra Control Service整合於NetApp Cloud Central的驗證服務中。如果您已擁有Cloud Central帳戶並已完成註冊、則可以存取 https://astra.netapp.io["Astra控制服務"^] 直接使用Cloud Central認證資料。
+
+
+TIP: 您可以使用單一登入功能、從公司目錄（聯盟身分識別）取得認證資料、登入Cloud Central。若要深入瞭解、請前往 https://cloud.netapp.com/help-center["Cloud Central說明中心"^] 然後選取* Cloud Central登入選項*。
+
+.步驟
+. 前往 https://cloud.netapp.com["NetApp Cloud Central"^]。
+. 在右上角選取*註冊*。
+. 填寫表單。
++
+請確認您在此輸入的電話號碼和電子郵件地址與您在前一份免費方案註冊表單中使用的相同。
+
+. 選擇*註冊*。
++
+
+TIP: 您在這些表單中輸入的電子郵件地址是NetApp Cloud Central使用者ID。當您註冊新的Astra Control Service帳戶、或Astra Control Service管理員邀請您加入現有的Astra Control Service帳戶時、請使用此Cloud Central使用者ID。
+
++
+image:screenshot-cloud-central-signup.gif["Cloud Central註冊頁面的快照、您可在其中輸入電子郵件地址、密碼、姓名、公司及電話號碼（可選）。"]
+
+. 等待 NetApp Cloud Central 寄送電子郵件。電子郵件來自saas.support@netapp.com的地址、可能需要數分鐘才能送達。請務必檢查您的垃圾郵件資料夾。
+. 當電子郵件送達時、請選取電子郵件中的連結以驗證您的電子郵件地址。
+
+
+您現在擁有作用中的 Cloud Central 使用者登入權限。
+
+現在您已經註冊、您可以使用的Cloud Central認證、直接存取Astra Control Service https://astra.netapp.io[]。

@@ -1,0 +1,143 @@
+---
+sidebar: sidebar 
+permalink: use/set-up-billing.html 
+keywords: billing, set up billing, payments, set up payments, credit card, update credit card, change credit card, free plan, free trial, premium, premium plan 
+summary: Astra Control的免費方案可讓您管理帳戶中最多10個應用程式。如果您想要管理10個以上的應用程式、則必須將「免費方案」升級為「優質方案」、以設定帳單。 
+---
+= 設定帳單
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/use/
+
+
+Astra Control的免費方案可讓您管理帳戶中最多10個應用程式。如果您想要管理10個以上的應用程式、則必須將「免費方案」升級為「優質方案」、以設定帳單。
+
+
+
+== 帳單總覽
+
+使用Astra Control Service的相關成本有兩種：NetApp對Astra Control Service的收費、以及您的雲端供應商對持續磁碟區和物件儲存的收費。
+
+
+
+=== Astra Control服務計費
+
+Astra Control Service提供三項計畫：
+
+免費方案:: 免費管理最多10個應用程式。
+優質PayGo:: 管理無限數量的應用程式、每個應用程式每分鐘收費$.005。
+優質訂閱:: 以折扣價預先付款、每年訂閱一次、可讓您管理每個應用程式套件最多10個應用程式。請聯絡NetApp銷售人員、視組織需求購買任意數量的套件、例如購買3個套件、即可從Astra Control Service管理30個應用程式。如果您管理的應用程式數量超過年度訂閱所允許的數量、則每個應用程式的超額使用率將高達每分鐘$0.005（與Premium PayGo相同）。
++
+--
+如果您還沒有Astra Control帳戶、購買Premium訂閱會自動為您建立Astra Control帳戶。如果您有現有的免費方案、系統會自動將您轉換為「優質訂閱」。
+
+--
+
+
+當您建立Astra Control帳戶時、系統會自動為您註冊免費方案。Astra Control的儀表板顯示您目前在10個免費應用程式中管理的應用程式數量。
+
+如果您嘗試管理第11個應用程式、Astra Control會通知您已達到「免費方案」的上限。接著會提示您從「免費方案」升級至「優質方案」。
+
+您可以隨時升級至優質方案。升級後、Astra Control會開始向您收取帳戶中受管理的_all_應用程式的費用。前10個應用程式不會留在「免費方案」中。
+
+
+
+=== Google Cloud帳單
+
+當您使用Astra Control Service管理GKE叢集時、NetApp Cloud Volumes Service 支援持續的磁碟區、而應用程式的備份則儲存在Google Cloud Storage儲存庫中。
+
+* https://cloud.google.com/solutions/partners/netapp-cloud-volumes/costs["檢視Cloud Volumes Service 報價詳細資料以供參考"^]。
++
+請注意、Astra Control Service支援所有服務類型和服務層級。您使用的服務類型取決於 https://cloud.netapp.com/cloud-volumes-global-regions#cvsGcp["Google Cloud區域"^]。
+
+* https://cloud.google.com/storage/pricing["檢視Google Cloud儲存桶的定價詳細資料"^]。
+
+
+
+
+=== Microsoft Azure帳單
+
+當您使用Astra Control Service管理高效能叢集時、持續的磁碟區會以Azure NetApp Files 支援功能為後盾、而應用程式的備份則會儲存在Azure Blob容器中。
+
+* https://azure.microsoft.com/en-us/pricing/details/netapp["檢視Azure NetApp Files 報價詳細資料以供參考"^]。
+* https://azure.microsoft.com/en-us/pricing/details/storage/blobs["檢視Microsoft Azure Blob儲存設備的定價詳細資料"^]。
+
+
+
+
+== 重要注意事項
+
+* 您的計費計畫依Astra Control帳戶計算。
++
+如果您有多個帳戶、則每個帳戶都有自己的計費計畫。
+
+* 您的Astra Control費用包含管理Kubernetes應用程式的費用。您需要由雲端供應商另行付費、以取得持續磁碟區的儲存後端。
++
+link:../get-started/intro.html["深入瞭解Astra Control定價"]。
+
+* 每個計費期間都會在每月的最後一天結束。
+* 您無法從優質方案降級為免費方案。
+
+
+
+
+== 從「免費方案」升級至「優質PayGo方案」
+
+隨時升級您的計費計畫、即可開始使用Astra Control管理10多個應用程式、而且您可以隨需付費。您只需要一張有效的信用卡。
+
+.步驟
+. 選擇* Account（帳戶）*、然後選擇* Billing（計費）*。
+. 在「*方案*」下、前往* Premium PayGo*並選取「*立即升級*」。
+. 請提供有效信用卡的付款詳細資料、然後選擇*升級至Premium Plan *。
++
+
+NOTE: 若信用卡即將到期、Astra Control將會寄送電子郵件給您。
+
+
+
+您現在可以管理10多個應用程式。Astra Control開始為您目前管理的_all_應用程式充電。
+
+
+
+== 從「免費方案」升級至「優質訂閱」
+
+請聯絡NetApp銷售人員、以每年訂閱的折扣率預付費用。
+
+.步驟
+. 選擇* Account（帳戶）*、然後選擇* Billing（計費）*。
+. 在「*方案*」下、移至* Premium Subscription*並選取*聯絡銷售*。
+. 請提供詳細資料給銷售團隊、以開始流程。
+
+
+NetApp銷售代表將與您聯絡、以處理您的訂單。訂單完成後、Astra Control會在「帳單」索引標籤上反映您目前的計畫。
+
+
+
+== 檢視您目前的成本和帳單記錄
+
+Astra Control會顯示您目前的每月成本、以及應用程式的詳細帳單記錄。
+
+.步驟
+. 選擇* Account（帳戶）*、然後選擇* Billing（計費）*。
++
+您目前的成本會顯示在帳單總覽下方。
+
+. 若要依應用程式檢視帳單記錄、請選取*帳單記錄*。
++
+Astra Control會顯示每個應用程式的使用時間和成本。使用分鐘數是指在計費期間、Astra Control管理您應用程式的分鐘數。
+
+. 選取下拉式清單以選取上個月。
+
+
+
+
+== 變更Premium PayGo的信用卡
+
+如有需要、您可以變更Astra Control檔案中的信用卡進行收費。
+
+.步驟
+. 選擇*帳戶>帳單>付款方式*。
+. 選取「組態」圖示。
+. 修改信用卡。
+

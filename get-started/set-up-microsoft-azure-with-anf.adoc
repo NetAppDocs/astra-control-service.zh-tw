@@ -1,0 +1,306 @@
+---
+sidebar: sidebar 
+permalink: get-started/set-up-microsoft-azure-with-anf.html 
+keywords: azure, azure netapp files, register, create account, create netapp account, azure subscription, azure permissions, service principal, create service principal, set up azure permissions, set up service principal, setup service principal, setup azure permissions, permissions, create capacity pool, setup capacity pool, set up capacity pool, kubernetes cluster, cluster requirements, version requirements, supported versions, supported regions, azure regions, kubernetes version, linux, image type, networking 
+summary: 您必須先採取幾個步驟來準備Microsoft Azure訂閱、才能使用Astra Control Service管理Azure Kubernetes服務叢集。 
+---
+= 使用Azure NetApp Files 更新功能來設定Microsoft Azure
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/get-started/
+
+
+您必須先採取幾個步驟來準備Microsoft Azure訂閱、才能使用Astra Control Service管理Azure Kubernetes服務叢集。如果您計畫將Azure NetApp Files 功能區用作儲存後端、請遵循下列指示。
+
+
+
+== 設定Azure的快速入門
+
+請依照下列步驟快速入門、或向下捲動至其餘部分以取得完整詳細資料。
+
+
+
+==== 檢閱Azure Kubernetes服務的Astra Control Service要求
+
+[role="quick-margin-para"]
+確保叢集正常運作、並執行Kubernetes 1.21/x至1.23版、確保節點集區處於線上狀態並執行* Linux *等功能。 <<Azure Kubernetes Service cluster requirements,深入瞭解此步驟>>。
+
+
+
+==== 註冊Microsoft Azure
+
+[role="quick-margin-para"]
+建立Microsoft Azure帳戶。 <<Sign up for Microsoft Azure,深入瞭解此步驟>>。
+
+
+
+==== 註冊Azure NetApp Files 以供使用
+
+[role="quick-margin-para"]
+註冊NetApp資源供應商。 <<Register for Azure NetApp Files,深入瞭解此步驟>>。
+
+
+
+==== 建立NetApp帳戶
+
+[role="quick-margin-para"]
+前往Azure NetApp Files Azure入口網站的「解決方案」、建立NetApp帳戶。 <<Create a NetApp account,深入瞭解此步驟>>。
+
+
+
+==== 設定容量資源池
+
+[role="quick-margin-para"]
+為您的持續磁碟區設定一個或多個容量集區。 <<Set up a capacity pool,深入瞭解此步驟>>。
+
+
+
+==== 將子網路委派Azure NetApp Files 給
+
+[role="quick-margin-para"]
+將子網路委派Azure NetApp Files 給支援中心、以便Astra Control Service在該子網路中建立持續的磁碟區。 <<Delegate a subnet to Azure NetApp Files,深入瞭解此步驟>>。
+
+
+
+==== 建立Azure服務主體
+
+[role="quick-margin-para"]
+建立具備「貢獻者」角色的Azure服務主體。 <<Create an Azure service principal,深入瞭解此步驟>>。
+
+
+
+== Azure Kubernetes服務叢集需求
+
+Kubernetes叢集必須符合下列需求、才能從Astra Control Service進行探索和管理。
+
+Kubernetes版本:: 叢集必須執行Kubernetes 1.21/x至1.23版。
+映像類型:: 所有節點集區的映像類型必須是Linux。
+叢集狀態:: 叢集必須以正常狀態執行、且至少有一個線上工作者節點、且在故障狀態下沒有工作節點。
+Azure地區:: 叢集必須位於Azure NetApp Files 提供了功能的區域。 https://azure.microsoft.com/en-us/global-infrastructure/services/?products=netapp["依地區檢視Azure產品"^]。
+訂購:: 叢集必須位在Azure NetApp Files 啟用了支援功能的訂購中。您可以在何時選擇訂閱 <<Register for Azure NetApp Files,註冊Azure NetApp Files 以供使用>>。
+Vnet:: 請考慮下列vnet需求：
++
+--
+* 叢集必須位於能夠直接存取Azure NetApp Files 由某個位址委派的子網路的vnet中。 <<Delegate a subnet to Azure NetApp Files,瞭解如何設定委派的子網路>>。
+* 如果您的Kubernetes叢集位於vnet中、且該vnet連接至Azure NetApp Files 位於另一個vnet中的委派子網路、則對等連線的兩端都必須處於線上狀態。
+* 請注意、vnet（包括立即處理的VNets）中使用Azure NetApp Files 的IP數量預設上限為1、000。 https://docs.microsoft.com/en-us/azure/azure-netapp-files/azure-netapp-files-resource-limits["查看Azure NetApp Files 資源限制"^]。
++
+如果您接近極限、您有兩種選擇：
+
++
+** 您可以 https://docs.microsoft.com/en-us/azure/azure-netapp-files/azure-netapp-files-resource-limits#request-limit-increase-["提交申請以增加上限"^]。如需協助、請聯絡您的NetApp代表。
+** 建立新的Amazon Kubernetes Service（aks）叢集時、請為叢集指定新的網路。建立新網路之後、請配置新的子網路、並將子網路委派Azure NetApp Files 給EK。
+
+
+
+
+--
+私有網路:: 不得在叢集上啟用私有網路。
+外部Volume Snapshot控制器:: 叢集必須安裝一個csi Volume Snapshot控制器。此控制器預設為從K8s 1.21版開始安裝、但您需要檢查執行1.19和1.20版的叢集。 https://docs.netapp.com/us-en/trident/trident-use/vol-snapshots.html["深入瞭解適用於隨需磁碟區快照的外部快照控制器"^]。
+
+
+
+
+=== 安裝一個csi Volume Snapshot控制器
+
+如中所述 <<Azure Kubernetes Service cluster requirements>>、Kubernetes叢集必須安裝一個csi Volume Snapshot控制器。請遵循下列步驟、在叢集上安裝控制器。
+
+.K8s版本1.19的步驟
+. 安裝Volume Snapshot客戶需求日。
++
+[source, kubectl]
+----
+kubectl apply -f https://raw.githubusercontent.com/kubernetes-csi/external-snapshotter/release-3.0/client/config/crd/snapshot.storage.k8s.io_volumesnapshotclasses.yaml
+kubectl apply -f https://raw.githubusercontent.com/kubernetes-csi/external-snapshotter/release-3.0/client/config/crd/snapshot.storage.k8s.io_volumesnapshotcontents.yaml
+kubectl apply -f https://raw.githubusercontent.com/kubernetes-csi/external-snapshotter/release-3.0/client/config/crd/snapshot.storage.k8s.io_volumesnapshots.yaml
+----
+. 建立Snapshot控制器。
++
+如果您希望快照控制器位於特定命名空間、請先下載並編輯下列檔案、再套用這些檔案。
+
++
+[source, kubectl]
+----
+kubectl apply -f https://raw.githubusercontent.com/kubernetes-csi/external-snapshotter/release-3.0/deploy/kubernetes/snapshot-controller/rbac-snapshot-controller.yaml
+kubectl apply -f https://raw.githubusercontent.com/kubernetes-csi/external-snapshotter/release-3.0/deploy/kubernetes/snapshot-controller/setup-snapshot-controller.yaml
+----
+
+
+.K8s版本1.20的步驟
+. 安裝Volume Snapshot客戶需求日。
++
+[source, kubectl]
+----
+kubectl apply -f https://raw.githubusercontent.com/kubernetes-csi/external-snapshotter/v4.0.0/client/config/crd/snapshot.storage.k8s.io_volumesnapshotclasses.yaml
+kubectl apply -f https://raw.githubusercontent.com/kubernetes-csi/external-snapshotter/v4.0.0/client/config/crd/snapshot.storage.k8s.io_volumesnapshotcontents.yaml
+kubectl apply -f https://raw.githubusercontent.com/kubernetes-csi/external-snapshotter/v4.0.0/client/config/crd/snapshot.storage.k8s.io_volumesnapshots.yaml
+----
+. 建立Snapshot控制器。
++
+如果您希望快照控制器位於特定命名空間、請先下載並編輯下列檔案、再套用這些檔案。
+
++
+[source, kubectl]
+----
+kubectl apply -f https://raw.githubusercontent.com/kubernetes-csi/external-snapshotter/v4.0.0/deploy/kubernetes/snapshot-controller/rbac-snapshot-controller.yaml
+kubectl apply -f https://raw.githubusercontent.com/kubernetes-csi/external-snapshotter/v4.0.0/deploy/kubernetes/snapshot-controller/setup-snapshot-controller.yaml
+----
+
+
+
+
+== 註冊Microsoft Azure
+
+如果您沒有Microsoft Azure帳戶、請先註冊Microsoft Azure。
+
+.步驟
+. 前往 https://azure.microsoft.com/en-us/free/["Azure訂閱頁面"^] 訂閱Azure服務。
+. 選取計畫、然後依照指示完成訂閱。
+
+
+
+
+== 註冊Azure NetApp Files 以供使用
+
+註冊NetApp資源供應商、即可取得Azure NetApp Files 有關解決方案的資訊。
+
+.步驟
+. 登入 Azure 入口網站。
+. https://docs.microsoft.com/en-us/azure/azure-netapp-files/azure-netapp-files-register["請遵循Azure NetApp Files 下列技術文件來註冊NetApp資源供應商"^]。
+
+
+
+
+== 建立NetApp帳戶
+
+在Azure NetApp Files NetApp建立一個NetApp帳戶。
+
+.步驟
+. https://docs.microsoft.com/en-us/azure/azure-netapp-files/azure-netapp-files-create-netapp-account["請遵循Azure NetApp Files 下列技術文件、從Azure入口網站建立NetApp帳戶"^]。
+
+
+
+
+== 設定容量資源池
+
+需要一個或多個容量集區、Astra Control Service才能在容量集區中配置持續的磁碟區。Astra Control Service不會為您建立容量資源池。
+
+為Kubernetes應用程式設定容量資源池時、請考量下列事項：
+
+* 容量資源池必須在相同的Azure區域中建立、以便透過Astra Control Service管理這些高負載叢集。
+* 容量集區可以具有超高、優質或標準服務層級。每個服務層級都是針對不同的效能需求而設計。Astra Control Service支援這三項功能。
++
+您需要為要搭配Kubernetes叢集使用的每個服務層級設定容量資源池。
+
++
+link:../learn/azure-storage.html["深入瞭Azure NetApp Files 解適用於NetApp的服務層級"]。
+
+* 在您使用Astra Control Service為要保護的應用程式建立容量資源池之前、請先選擇這些應用程式所需的效能和容量。
++
+資源配置適當的容量、可確保使用者能視需要建立持續的磁碟區。如果無法使用容量、則無法配置持續磁碟區。
+
+* 可利用手動或自動QoS類型來建立一個可擴充的資源池。Azure NetApp FilesAstra Control Service支援自動QoS容量集區。不支援手動QoS容量資源池。
+
+
+.步驟
+. https://docs.microsoft.com/en-us/azure/azure-netapp-files/azure-netapp-files-set-up-capacity-pool["請遵循Azure NetApp Files 下列技術文件來設定自動QoS容量資源池"^]。
+
+
+
+
+== 將子網路委派Azure NetApp Files 給
+
+您需要將子網路委派Azure NetApp Files 給支援中心、以便Astra Control Service能在該子網路中建立持續的磁碟區。請注意Azure NetApp Files 、使用者只能在vnet中擁有一個委派的子網路。
+
+如果您使用的是對等VNets、則對等連線的兩端都必須處於線上狀態：Kubernetes叢集所在的vnet、以及具有Azure NetApp Files 由他人委派子網路的vnet。
+
+.步驟
+. https://docs.microsoft.com/en-us/azure/azure-netapp-files/azure-netapp-files-delegate-subnet["請遵循Azure NetApp Files 《支持》文件將子網路委派Azure NetApp Files 給《支持》"^]。
+
+
+請等待約10分鐘、再探索在委派子網路中執行的叢集。
+
+
+
+== 建立Azure服務主體
+
+Astra Control Service需要指派「貢獻者」角色的Azure服務主體。Astra Control Service使用此服務主體來協助Kubernetes應用程式資料管理。
+
+服務主體是專為搭配應用程式、服務和工具使用而建立的身分識別。指派角色給服務主體會限制對特定Azure資源的存取。
+
+請依照下列步驟、使用Azure CLI建立服務主體。您需要將輸出儲存在Json檔案中、稍後再提供給Astra Control Service。 https://docs.microsoft.com/en-us/cli/azure/create-an-azure-service-principal-azure-cli["如需使用CLI的詳細資訊、請參閱Azure文件"^]。
+
+下列步驟假設您擁有建立服務主體的權限、而且您的機器上已安裝Microsoft Azure SDK（AZ命令）。
+
+.需求
+* 服務主體必須使用一般驗證。不支援憑證。
+* 服務委託人必須獲得「參與者」或「擁有者」的Azure訂閱存取權。
+* 您為範圍選擇的訂閱或資源群組必須包含高層叢集和Azure NetApp Files 您的帳戶。
+
+
+.步驟
+. 識別您的高層叢集所在的訂閱和租戶ID（這些是您要在Astra Control Service中管理的叢集）。
++
+[source, azureCLI]
+----
+az configure --list-defaults
+az account list --output table
+----
+. 視您使用的是整個訂閱或資源群組而定、執行下列其中一項：
++
+** 建立服務主體、指派「參與者」角色、並將範圍指定給叢集所在的整個訂閱。
++
+[source, azurecli]
+----
+az ad sp create-for-rbac --name service-principal-name --role contributor --scopes /subscriptions/SUBSCRIPTION-ID
+----
+** 建立服務主體、指派「參與者」角色、並指定叢集所在的資源群組。
++
+[source, azurecli]
+----
+az ad sp create-for-rbac --name service-principal-name --role contributor --scopes /subscriptions/SUBSCRIPTION-ID/resourceGroups/RESOURCE-GROUP-ID
+----
+
+
+. 將產生的Azure CLI輸出儲存為Json檔案。
++
+您必須提供此檔案、Astra Control Service才能探索您的高效能叢集、並管理Kubernetes資料管理作業。 link:../use/manage-credentials.html["深入瞭解Astra Control Service的認證管理"]。
+
+. 選用：將訂閱ID新增至Json檔案、以便Astra Control Service在您選取檔案時自動填入ID。
++
+否則、您必須在提示時在Astra Control Service中輸入訂閱ID。
+
++
+* 範例 *
+
++
+[source, JSON]
+----
+{
+  "appId": "0db3929a-bfb0-4c93-baee-aaf8",
+  "displayName": "sp-example-dev-sandbox",
+  "name": "http://sp-example-dev-sandbox",
+  "password": "mypassword",
+  "tenant": "011cdf6c-7512-4805-aaf8-7721afd8ca37",
+  "subscriptionId": "99ce999a-8c99-99d9-a9d9-99cce99f99ad"
+}
+----
+. 選用：測試您的服務主體。根據服務主體使用的範圍、從下列命令範例中進行選擇。
++
+.訂購範圍
+[source, azurecli]
+----
+az login --service-principal --username APP-ID-SERVICEPRINCIPAL --password PASSWORD --tenant TENANT-ID
+az group list --subscription SUBSCRIPTION-ID
+az aks list --subscription SUBSCRIPTION-ID
+az storage container list --subscription SUBSCRIPTION-ID
+----
++
+.資源群組範圍
+[source, azurecli]
+----
+az login --service-principal --username APP-ID-SERVICEPRINCIPAL --password PASSWORD --tenant TENANT-ID
+az aks list --subscription SUBSCRIPTION-ID --resource-group RESOURCE-GROUP-ID
+----
+

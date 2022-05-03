@@ -1,0 +1,56 @@
+---
+sidebar: sidebar 
+permalink: support/get-help.html 
+keywords: get help, get support, knowledgebase, slack, phone, web, ticket, contact support, support ticket 
+summary: NetApp以多種方式支援Astra Control。我們全年無休提供豐富的免費自助支援選項、例如知識庫（KB）文章和Slack通路。您的Astra Control帳戶透過網路票證提供遠端技術支援。 
+---
+= 取得協助
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/support/
+
+
+NetApp以多種方式支援Astra Control。我們全年無休提供豐富的免費自助支援選項、例如知識庫（KB）文章和Slack通路。您的Astra Control帳戶透過網路票證提供遠端技術支援。
+
+您必須優先 link:register-support.html["啟動NetApp序號支援"] 以使用這些非自助服務支援選項。需要NetApp支援網站（NSS）SSO帳戶才能進行聊天和網路票證、以及案例管理。
+
+您可以從主功能表選取* Support*索引標籤、從Astra Control UI存取支援選項。
+
+
+
+== 自我支援
+
+這些選項全年無休免費提供：
+
+* https://kb.netapp.com/Advice_and_Troubleshooting/Cloud_Services/Project_Astra["知識庫"^]
++
+搜尋與Astra Control相關的文章、常見問題集或中斷修復資訊。
+
+* 文件
++
+這是您目前正在檢視的文件網站。
+
+* https://netapppub.slack.com/#astra["可寬延"^]
++
+前往Pub工作區中的Container通路、與同儕和專家交流。
+
+* 意見反應電子郵件
++
+傳送電子郵件至astra.feedback@netapp.com、讓我們知道您的想法、想法或疑慮。
+
+
+
+
+
+== 訂閱支援
+
+除了上述的自助支援選項、您也可以與NetApp支援工程師合作、在您之後解決問題 link:register-support.html["啟動NetApp序號支援"]。
+
+當您的Astra Control序號啟動之後、您就可以建立來存取NetApp技術支援資源 https://mysupport.netapp.com/site/cases/mine/create["支援服務單"]。
+
+選擇*雲端資料服務> Astra *。
+
+使用您的「941」序號開啟網路票證。 link:register-support.html["深入瞭解您的序號"]。
+
+image:screenshot-web-ticket.gif["NetApp支援網站上的網路票證快照、要求您選取系統、輸入問題詳細資料、並提供您的聯絡資訊。"]

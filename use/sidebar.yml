@@ -1,0 +1,49 @@
+---
+section: use
+title: 使用Astra Control Service
+entries:
+- title: 登入
+  url: "/use/log-in.html"
+- title: 管理及保護應用程式
+  entries:
+  - title: 開始管理應用程式
+    url: "/use/manage-apps.html"
+  - title: 保護應用程式
+    url: "/use/protect-apps.html"
+  - title: 還原應用程式
+    url: "/use/restore-apps.html"
+  - title: 複製及移轉應用程式
+    url: "/use/clone-apps.html"
+  - title: 管理應用程式執行掛勾
+    url: "/use/manage-app-execution-hooks.html"
+    entries:
+    - title: 執行攔截範例
+      url: "/use/execution-hook-examples.html"
+- title: 檢視應用程式與運算健全狀況
+  entries:
+  - title: 儀表板摘要
+    url: "/use/view-dashboard.html"
+  - title: 叢集健全狀況與詳細資料
+    url: "/use/view-clusters.html"
+  - title: 應用程式健全狀況與詳細資料
+    url: "/use/view-apps.html"
+- title: 管理儲存庫
+  url: "/use/manage-buckets.html"
+- title: 管理您的帳戶
+  entries:
+  - title: 設定帳單
+    url: "/use/set-up-billing.html"
+  - title: 邀請及管理使用者
+    url: "/use/manage-users.html"
+  - title: 管理角色
+    url: "/use/manage-roles.html"
+  - title: 管理雲端供應商認證資料
+    url: "/use/manage-credentials.html"
+  - title: 監控帳戶活動
+    url: "/use/monitor-account-activity.html"
+  - title: 管理通知
+    url: "/use/manage-notifications.html"
+  - title: 關閉您的帳戶
+    url: "/use/close-account.html"
+- title: 取消管理應用程式和叢集
+  url: "/use/unmanage.html"

@@ -1,0 +1,16 @@
+---
+sidebar: sidebar 
+permalink: automation.html 
+keywords: api, rest api, automate, automation, endpoints, api reference, curl, ansible, automation, token 
+summary: Astra Control有REST API、可讓您使用程式語言或程式（例如Curl）直接存取Astra Control功能。您也可以使用Ansible和其他自動化技術來管理Astra Control部署。 
+---
+= 使用Astra Control REST API實現自動化
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/get-started/
+
+
+Astra Control有REST API、可讓您使用程式語言或程式（例如Curl）直接存取Astra Control功能。您也可以使用Ansible和其他自動化技術來管理Astra Control部署。
+
+若要深入瞭解、 https://docs.netapp.com/us-en/astra-automation["前往Astra自動化文件"^]。

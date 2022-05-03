@@ -1,0 +1,12 @@
+---
+section: solutions
+title: 部署應用程式
+entries:
+- title: 部署Jenkins
+  url: "/solutions/jenkins-deploy-from-helm-chart.html"
+- title: 部署MariaDB
+  url: "/solutions/mariadb-deploy-from-helm-chart.html"
+- title: 部署MySQL
+  url: "/solutions/mysql-deploy-from-helm-chart.html"
+- title: 部署Postgres
+  url: "/solutions/postgres-deploy-from-helm-chart.html"

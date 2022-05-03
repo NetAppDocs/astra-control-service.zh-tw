@@ -1,0 +1,68 @@
+---
+sidebar: sidebar 
+permalink: use/unmanage.html 
+keywords: unmanage app, remove app, stop managing app, stop managing clusters, unmanage cluster, remove cluster 
+summary: 從Astra Control移除不再需要管理的任何應用程式或叢集。 
+---
+= 取消管理應用程式和叢集
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/use/
+
+
+從Astra Control移除不再需要管理的任何應用程式或叢集。
+
+
+
+== 停止管理應用程式
+
+停止管理不再想從Astra Control備份、快照或複製的應用程式。
+
+* 任何現有的備份與快照都會刪除。
+* 應用程式與資料仍可繼續使用。
+
+
+.步驟
+. 選擇*應用程式*。
+. 選取您不想再管理的應用程式核取方塊。
+. 選取* Action"下拉式清單、然後選取* UnManage application/s*。
+. 確認您要取消管理應用程式、然後選取*是、取消管理應用程式*。
+
+
+Astra Control停止管理應用程式。
+
+
+
+== 停止管理叢集
+
+停止管理不再想從Astra Control管理的叢集。最佳實務做法是、建議您在透過GCP刪除叢集之前、先從Astra Control中移除叢集。
+
+* 此動作會使叢集無法由Astra Control管理。它不會對叢集的組態進行任何變更、也不會刪除叢集。
+* Astra Trident不會從叢集解除安裝。 https://docs.netapp.com/us-en/trident/trident-managing-k8s/uninstall-trident.html["瞭解如何解除安裝Astra Trident"^]。
+
+
+.步驟
+. 選擇*叢集*。
+. 選取您不想再管理之叢集的核取方塊。
+. 選取「*動作*」下拉式清單、然後選取「*取消管理*」。
+. 確認您要取消管理叢集、然後選取*是、取消管理叢集*。
+
+
+Astra Control停止管理叢集。
+
+
+
+== 從雲端供應商刪除叢集
+
+在刪除Kubernetes叢集之前、如果叢集的NetApp儲存類別中含有持續磁碟區（PV）、您必須先依照下列其中一種方法刪除持續磁碟區宣告（PVc）。刪除叢集之前刪除PVC和PV、可確保您不會收到雲端供應商的非預期帳單。
+
+* *方法#1*：從叢集刪除應用程式工作負載命名空間。請勿刪除Trident命名空間。
+* *方法#2*：刪除PVCS和Pod、或是掛載PV的部署。
+
+
+當您從Astra Control管理Kubernetes叢集時、該叢集上的應用程式會使用Cloud Volumes Service 原地不動或Azure NetApp Files 用作持續磁碟區的儲存後端。如果您從雲端供應商刪除叢集、但未先移除PV、則會隨叢集一起刪除後端磁碟區。
+
+使用上述方法之一、將會從叢集刪除對應的PV。刪除叢集之前、請先確定叢集上的NetApp儲存類別上沒有任何PV。
+
+如果您在刪除叢集之前未刪除持續的磁碟區、則需要從Cloud Volumes Service 適用於Google Cloud或Azure NetApp Files 從停止功能中手動刪除後端磁碟區。
