@@ -96,7 +96,8 @@ Vnet:: 請考慮下列vnet需求：
 
 
 --
-私有網路:: 不得在叢集上啟用私有網路。
+
+
 外部Volume Snapshot控制器:: 叢集必須安裝一個csi Volume Snapshot控制器。此控制器預設為從K8s 1.21版開始安裝、但您需要檢查執行1.19和1.20版的叢集。 https://docs.netapp.com/us-en/trident/trident-use/vol-snapshots.html["深入瞭解適用於隨需磁碟區快照的外部快照控制器"^]。
 
 

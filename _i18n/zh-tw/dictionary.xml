@@ -592,7 +592,6 @@
   <block id="d8fcf72bfd3b99486c35821d3f2e44f4" category="paragraph">您現在可以在將叢集新增至Astra Control時、選取認證資料。</block>
   <block id="25f033e226552b2f5ae002edb8e5fd2f" category="section-title">移除認證資料</block>
   <block id="82f2b96e6fd3cf7bfa88172cb51c9afc" category="inline-link-macro">取消管理所有叢集</block>
-  <block id="5074e7a91e497a22dc0714abe6e771dd" category="paragraph">隨時從帳戶移除認證資料。您只能在之後移除認證 <block ref="7193f1b7f27bd5505d89cc1e5724fb4b" category="inline-link-macro-rx"></block>。</block>
   <block id="12fce85c2a771804bf71c2607b90e479" category="admonition">您新增至Astra Control的第一組認證資料一律使用中、因為Astra Control使用認證資料來驗證備份儲存區。最好不要移除這些認證資料。</block>
   <block id="1a5f98a95779208d9234fca9491f7096" category="list-text">選取您要移除之認證資料的「*狀態*」欄中的下拉式清單。</block>
   <block id="6f99fa9b2e1f4893851a8aeb82d171f9" category="list-text">選擇*移除*。</block>
@@ -823,8 +822,6 @@
   <block id="0b21fb3864d43aad91ca35b2b5d2354d" category="list-text">Azure地區</block>
   <block id="5fdc7d711b9ee1a40d68a09729fb4e9f" category="inline-link">依地區檢視Azure產品</block>
   <block id="35878b9641dbe3802b4757bd1077fbb8" category="list-text">最佳實務做法是、您應該選擇一個支援Azure NetApp Files 此功能的區域、即使您不將其用作儲存後端。如此一Azure NetApp Files 來、如果您的效能需求改變、就能更輕鬆地將VMware用作儲存後端。<block ref="044693425a398e22f4ef06b4ccda4a31" category="inline-link-rx"></block>。</block>
-  <block id="609775d4b1f048a0f6500161bd460e47" category="list-text">私有網路</block>
-  <block id="bc287e95f5c3144752a8a8d09fbe96b1" category="list-text">不得在叢集上啟用私有網路。</block>
   <block id="5b033d6a3f89da3c19247af957fdeadd" category="list-text">外部Volume Snapshot控制器</block>
   <block id="fe86e9ef31fe3697198ba10d3c208d2d" category="inline-link">深入瞭解適用於隨需磁碟區快照的外部快照控制器</block>
   <block id="7d653ff1ba76f45cb793405b89658cd9" category="list-text">叢集必須安裝一個csi Volume Snapshot控制器。此控制器預設為從K8s 1.21版開始安裝、但您需要檢查執行1.19和1.20版的叢集。<block ref="005ac06c428589f925784bc23d35b2d8" category="inline-link-rx"></block>。</block>
@@ -1699,4 +1696,14 @@
   <block id="515ddaf1bc34159a3a7827d17c7aa5db" category="sidebar">已驗證的應用程式與標準應用程式比較</block>
   <block id="4e7b93cbf596a837185aa740bdb8b853" category="sidebar">定義自訂應用程式</block>
   <block id="7d0ee6fed10d3d4e5c9ee496729ab519" category="sidebar">版本資訊</block>
+  <block id="ae67f9136c5a827541839e278a3b8b0a" category="paragraph">隨時從帳戶移除認證資料。您只能在之後移除認證 <block ref="7193f1b7f27bd5505d89cc1e5724fb4b" category="inline-link-macro-rx"></block>、除非您正在旋轉認證資料（請參閱 <block ref="029b7394eded829c95ca3b86c4cd802d" category="inline-xref-macro-rx"></block>）。</block>
+  <block id="85149e5821bdf494d4eaf0a96d8f46a8" category="section-title">旋轉認證資料</block>
+  <block id="8e945e6a79e0bf8da80606ed9d20bc53" category="paragraph">您可以在帳戶中旋轉認證資料。如果您旋轉認證資料、請在維護期間（排程或隨需）無備份進行時、於維護期間旋轉認證資料。</block>
+  <block id="d05c0825b09f53538ae182820f680709" category="list-text">依照中的步驟移除現有認證 <block ref="d2f3a923bca17e66f3f1dad217fa3a1a" category="inline-xref-macro-rx"></block>。</block>
+  <block id="60ab1991a8b8c64a87882fcdf3740be4" category="list-text">依照中的步驟新增認證資料 <block ref="3ba4bf3dfb819b290465624916ee777a" category="inline-xref-macro-rx"></block>。</block>
+  <block id="dc8364087e4f87791e74e061f41f25d8" category="list-text">更新所有儲存庫以使用新認證：</block>
+  <block id="071ef8ace6c74c9a1515550077974172" category="list-text">選擇*編輯*。</block>
+  <block id="d2b49295684369e8eca9915ebf3725b5" category="list-text">在「*選取認證資料*」區段中、選擇您新增至Astra Control的新認證資料。</block>
+  <block id="fe7fbb88eb579dd44896aecd5e694bc8" category="list-text">對系統上的任何剩餘儲存區重複步驟* b*到* e*。</block>
+  <block id="83a2a676c481bd5eeebf1ca2831091df" category="paragraph">Astra Control開始使用新的雲端供應商認證資料。</block>
 </blocks>
