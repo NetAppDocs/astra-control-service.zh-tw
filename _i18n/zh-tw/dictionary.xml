@@ -718,9 +718,6 @@
   <block id="68324e985558c5c0e27eed8eb0d54d55" category="paragraph">如果您還沒有叢集、請建立符合的叢集 <block ref="c14ce2b90a6d517d28f6a149c4e1ddd7" category="inline-link-macro-rx"></block>、 <block ref="26225e7fb486798018db81609e04ff4b" category="inline-link-macro-rx"></block>或 <block ref="4367f6239877b226051b2a69dcda335c" category="inline-link-macro-rx"></block> 。</block>
   <block id="7867ff317e101e02ab5ea31a9b4ff20b" category="section-title">開始管理Kubernetes叢集</block>
   <block id="ea1985c42cc53ff4c48ab7df18f4954d" category="paragraph">登入Astra Control Service之後、您的第一步就是開始管理叢集。</block>
-  <block id="f4105577bf107396cef41e7fc8b36c75" category="paragraph">當Astra Control管理叢集時、它會追蹤叢集的預設StorageClass。如果您使用「kubecll」命令變更StorageClass、Astra Control會還原變更。若要變更由Astra Control管理之叢集中的預設StorageClass、請使用下列其中一種方法：</block>
-  <block id="e9fac85aa2673b1b448faa45d2eeb596" category="list-text">使用Astra Control API「PUT /managedClusters'端點」、並使用「DefaultStorageClass」參數指派不同的預設StorageClass</block>
-  <block id="11937632e52ddd422c6068df5f4a8641" category="list-text">從Astra Control管理中移除叢集、並以選取的不同預設StorageClass重新新增叢集</block>
   <block id="686cb20b1345505bc3b4d980227e595c" category="list-text">若為GKE、您應該擁有具有所需權限之服務帳戶的服務帳戶金鑰檔案。 <block ref="9215258f7e020d0c05367a1a3bfd0982" category="inline-link-macro-rx"></block>。</block>
   <block id="3bda726609d17e2981e60b23a6e4c978" category="list-text">若為高效能、您應該擁有Json檔案、其中應包含建立服務主體時Azure CLI的輸出。 <block ref="63026405246b8ab97c47baaea735ffe8" category="inline-link-macro-rx"></block>。</block>
   <block id="cb8cc43b4c249fb9a74f904d642fb136" category="list-text">若為私有高層叢集：</block>
@@ -1516,7 +1513,6 @@
   <block id="40bde2f2e0e627e3fcf147169d6d315a" category="paragraph">此版本包含下列新功能與增強功能。</block>
   <block id="0097e428776046ceb8cd1fcde6d6fa2e" category="section-title">命名空間角色型存取控制（RBAC）</block>
   <block id="382d0f3f80a6edc90145fa9f5e248570" category="paragraph">Astra Control Service現在支援將命名空間限制指派給成員或檢視者使用者。</block>
-  <block id="20f1bb3f9f567f6aa7b19e591c3a1f51" category="paragraph"><block ref="73b2ad293eda73ca2acff9008e7ac0e8" category="inline-link-macro-rx"></block>。</block>
   <block id="81c45fdf5fa9c193ad7e22c5fd4785ef" category="section-title">支援私有的高效能叢集</block>
   <block id="c490fa82068b0f1b8aef0ce959352ea7" category="paragraph">您現在可以管理使用私有IP位址的高效能叢集。</block>
   <block id="2a37eca094676cc6b6a4bfa0ea9fcc57" category="paragraph"><block ref="04d97bec7f4fa11002764129cf40d13a" category="inline-link-macro-rx"></block>。</block>
@@ -1706,4 +1702,21 @@
   <block id="d2b49295684369e8eca9915ebf3725b5" category="list-text">在「*選取認證資料*」區段中、選擇您新增至Astra Control的新認證資料。</block>
   <block id="fe7fbb88eb579dd44896aecd5e694bc8" category="list-text">對系統上的任何剩餘儲存區重複步驟* b*到* e*。</block>
   <block id="83a2a676c481bd5eeebf1ca2831091df" category="paragraph">Astra Control開始使用新的雲端供應商認證資料。</block>
+  <block id="600875fce016d4eddadf3675fe4ec0a6" category="paragraph"><block ref="24c3dfd752dd86b23d8384546f638c63" category="inline-link-macro-rx"></block>。</block>
+  <block id="c232f387cd35833fa7dbddc853981552" category="section-title">Azure Active Directory支援</block>
+  <block id="19a67907b2de4999a969b7863b0d05e9" category="paragraph">Astra Control Service支援使用Azure Active Directory進行驗證和身分識別管理的高峰叢集。</block>
+  <block id="54d90be7ed2f484693994a0a44b349d2" category="inline-link">正式文件</block>
+  <block id="ac4eb04549d46b875b9c5a712e733c6f" category="admonition">Astra Control Service支援使用Azure Active Directory（Azure AD）進行驗證與身分識別管理的高峰叢集。建立叢集時、請遵循中的指示<block ref="ba1ce5a57a4d347a0e1e2ecf2a2c91ba" category="inline-link-rx"></block> 設定叢集使用Azure AD。您必須確保叢集符合高峰管理Azure AD整合的要求。</block>
+  <block id="846cdda4ee8e60864d52aaeeb040485c" category="paragraph">當Astra Control管理叢集時、它會追蹤叢集的預設儲存類別。如果您使用「kubecll」命令變更儲存類別、Astra Control會還原變更。若要變更由Astra Control管理之叢集中的預設儲存類別、請使用下列其中一種方法：</block>
+  <block id="d284e4138e540279377b96192064bb64" category="list-text">使用Astra Control API「PUT /managedClusters'端點」、並使用「DefaultStorageClass」參數指派不同的預設儲存類別。</block>
+  <block id="4cb8b00c0937a1220b88468763322f15" category="list-text">使用Astra Control Web UI指派不同的預設儲存類別。請參閱 <block ref="5b6a21e2a1084a5e4b159e62f7829741" category="inline-xref-macro-rx"></block>。</block>
+  <block id="3664703675e6ea0fab0e620eb7c74fb0" category="section-title">變更預設儲存類別</block>
+  <block id="38219c9a076c4f4be6883cf24fcb296d" category="paragraph">您可以變更叢集的預設儲存類別。</block>
+  <block id="fe575e20478d6256f2449963730fd738" category="list-text">在「*叢集*」頁面上、選取您要變更的叢集。</block>
+  <block id="b84cf83ec24af3992507d72057b607f6" category="list-text">選擇* Storage*（儲存設備）選項卡。</block>
+  <block id="a57d95e33fbdffe3b4bd71d5b0be74cd" category="list-text">選擇*儲存類別*類別。</block>
+  <block id="b76660fac98aeb4fc46b77e989e6d8b0" category="list-text">針對您要設為預設的儲存類別、選取「*動作*」功能表。</block>
+  <block id="b4789b0ec041cd5e51f32c2f901a0951" category="list-text">選擇*設為預設*。</block>
+  <block id="2dd2a1bdae3516df1950c153f6135366" category="paragraph">*我可以使用Active Directory來管理高效能叢集的驗證嗎？*</block>
+  <block id="e4b4463df81090495a7820578ac936d9" category="paragraph">是的、您可以將您的高效能叢集設定為使用Azure Active Directory（Azure AD）進行驗證和身分識別管理。建立叢集時、請遵循中的指示<block ref="ba1ce5a57a4d347a0e1e2ecf2a2c91ba" category="inline-link-rx"></block> 設定叢集使用Azure AD。您必須確保叢集符合高峰管理Azure AD整合的要求。</block>
 </blocks>

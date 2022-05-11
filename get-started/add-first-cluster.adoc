@@ -21,6 +21,9 @@ summary: 設定環境之後、您就可以建立Kubernetes叢集、然後將其�
 如果您還沒有叢集、請建立符合的叢集 link:set-up-google-cloud.html#gke-cluster-requirements["Google Kubernetes Engine（GKE）的Astra控制服務要求"]、 link:set-up-microsoft-azure-with-anf.html["Azure Kubernetes Service（含Azure NetApp Files ）的Astra Control Service要求"]或 link:set-up-microsoft-azure-with-amd.html["Azure Kubernetes Service（Astra Control Service）與Azure託管磁碟的相關要求"] 。
 
 
+NOTE: Astra Control Service支援使用Azure Active Directory（Azure AD）進行驗證與身分識別管理的高峰叢集。建立叢集時、請遵循中的指示 https://docs.microsoft.com/en-us/azure/aks/managed-aad["正式文件"^] 設定叢集使用Azure AD。您必須確保叢集符合高峰管理Azure AD整合的要求。
+
+
 
 == 開始管理Kubernetes叢集
 
@@ -28,10 +31,10 @@ summary: 設定環境之後、您就可以建立Kubernetes叢集、然後將其�
 
 [NOTE]
 ====
-當Astra Control管理叢集時、它會追蹤叢集的預設StorageClass。如果您使用「kubecll」命令變更StorageClass、Astra Control會還原變更。若要變更由Astra Control管理之叢集中的預設StorageClass、請使用下列其中一種方法：
+當Astra Control管理叢集時、它會追蹤叢集的預設儲存類別。如果您使用「kubecll」命令變更儲存類別、Astra Control會還原變更。若要變更由Astra Control管理之叢集中的預設儲存類別、請使用下列其中一種方法：
 
-* 使用Astra Control API「PUT /managedClusters'端點」、並使用「DefaultStorageClass」參數指派不同的預設StorageClass
-* 從Astra Control管理中移除叢集、並以選取的不同預設StorageClass重新新增叢集
+* 使用Astra Control API「PUT /managedClusters'端點」、並使用「DefaultStorageClass」參數指派不同的預設儲存類別。
+* 使用Astra Control Web UI指派不同的預設儲存類別。請參閱 <<Change the default storage class>>。
 
 
 ====
@@ -144,4 +147,19 @@ kubectl get astraconnector astra-connector -n astra-connector
 NAME              REGISTERED   ASTRACONNECTORID
 astra-connector   true         22b839aa-8b85-445a-85dd-0b1f53b5ea19
 ----
+
+
+
+
+== 變更預設儲存類別
+
+您可以變更叢集的預設儲存類別。
+
+.步驟
+. 在Astra Control Service UI中、選取* Clusters*。
+. 在「*叢集*」頁面上、選取您要變更的叢集。
+. 選擇* Storage*（儲存設備）選項卡。
+. 選擇*儲存類別*類別。
+. 針對您要設為預設的儲存類別、選取「*動作*」功能表。
+. 選擇*設為預設*。
 

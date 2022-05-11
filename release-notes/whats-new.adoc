@@ -25,7 +25,15 @@ NetApp會定期更新Astra Control Service、為您提供新功能、增強功�
 
 Astra Control Service現在支援將命名空間限制指派給成員或檢視者使用者。
 
-link:../use/manage-roles.html["管理角色"]。
+link:../learn/user-roles-namespaces.html["命名空間角色型存取控制（RBAC）"]。
+
+
+
+=== Azure Active Directory支援
+
+Astra Control Service支援使用Azure Active Directory進行驗證和身分識別管理的高峰叢集。
+
+link:../get-started/add-first-cluster.html["從Astra Control Service開始管理Kubernetes叢集"]。
 
 
 
