@@ -971,7 +971,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-05-03 06:03:16 +0000">05/03/2022</time>
+    <time datetime="2022-05-11 14:47:07 +0000">05/11/2022</time>
     
   
 
@@ -991,6 +991,18 @@
 <div class="paragraph">
 <p>如果您還沒有叢集、請建立符合的叢集 <a href="set-up-google-cloud.html#gke-cluster-requirements">"Google Kubernetes Engine（GKE）的Astra控制服務要求"</a>、 <a href="set-up-microsoft-azure-with-anf.html">"Azure Kubernetes Service（含Azure NetApp Files ）的Astra Control Service要求"</a>或 <a href="set-up-microsoft-azure-with-amd.html">"Azure Kubernetes Service（Astra Control Service）與Azure託管磁碟的相關要求"</a> 。</p>
 </div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/astra-control-service/images/note.svg" alt="附註">
+</td>
+<td class="content">
+Astra Control Service支援使用Azure Active Directory（Azure AD）進行驗證與身分識別管理的高峰叢集。建立叢集時、請遵循中的指示 <a href="https://docs.microsoft.com/en-us/azure/aks/managed-aad" target="_blank" rel="noopener">"正式文件"</a> 設定叢集使用Azure AD。您必須確保叢集符合高峰管理Azure AD整合的要求。
+</td>
+</tr>
+</table>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -1007,15 +1019,15 @@
 </td>
 <td class="content">
 <div class="paragraph">
-<p>當Astra Control管理叢集時、它會追蹤叢集的預設StorageClass。如果您使用「kubecll」命令變更StorageClass、Astra Control會還原變更。若要變更由Astra Control管理之叢集中的預設StorageClass、請使用下列其中一種方法：</p>
+<p>當Astra Control管理叢集時、它會追蹤叢集的預設儲存類別。如果您使用「kubecll」命令變更儲存類別、Astra Control會還原變更。若要變更由Astra Control管理之叢集中的預設儲存類別、請使用下列其中一種方法：</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>使用Astra Control API「PUT /managedClusters&#8217;端點」、並使用「DefaultStorageClass」參數指派不同的預設StorageClass</p>
+<p>使用Astra Control API「PUT /managedClusters&#8217;端點」、並使用「DefaultStorageClass」參數指派不同的預設儲存類別。</p>
 </li>
 <li>
-<p>從Astra Control管理中移除叢集、並以選取的不同預設StorageClass重新新增叢集</p>
+<p>使用Astra Control Web UI指派不同的預設儲存類別。請參閱 <a href="#Change the default storage class">[Change the default storage class]</a>。</p>
 </li>
 </ul>
 </div>
@@ -1185,6 +1197,37 @@
 astra-connector   true         22b839aa-8b85-445a-85dd-0b1f53b5ea19</pre>
 </div>
 </div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="變更預設儲存類別">變更預設儲存類別</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>您可以變更叢集的預設儲存類別。</p>
+</div>
+<div class="olist arabic">
+<div class="title">步驟</div>
+<ol class="arabic">
+<li>
+<p>在Astra Control Service UI中、選取* Clusters*。</p>
+</li>
+<li>
+<p>在「<strong>叢集</strong>」頁面上、選取您要變更的叢集。</p>
+</li>
+<li>
+<p>選擇* Storage*（儲存設備）選項卡。</p>
+</li>
+<li>
+<p>選擇*儲存類別*類別。</p>
+</li>
+<li>
+<p>針對您要設為預設的儲存類別、選取「<strong>動作</strong>」功能表。</p>
+</li>
+<li>
+<p>選擇*設為預設*。</p>
 </li>
 </ol>
 </div>
