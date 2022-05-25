@@ -21,49 +21,49 @@ summary: 您必須先採取幾個步驟來準備Microsoft Azure訂閱、才能�
 
 
 
-==== 檢閱Azure Kubernetes服務的Astra Control Service要求
+=== 檢閱Azure Kubernetes服務的Astra Control Service要求
 
 [role="quick-margin-para"]
 確保叢集正常運作、並執行Kubernetes 1.21/x至1.23版、確保節點集區處於線上狀態並執行* Linux *等功能。 <<Azure Kubernetes Service cluster requirements,深入瞭解此步驟>>。
 
 
 
-==== 註冊Microsoft Azure
+=== 註冊Microsoft Azure
 
 [role="quick-margin-para"]
 建立Microsoft Azure帳戶。 <<Sign up for Microsoft Azure,深入瞭解此步驟>>。
 
 
 
-==== 註冊Azure NetApp Files 以供使用
+=== 註冊Azure NetApp Files 以供使用
 
 [role="quick-margin-para"]
 註冊NetApp資源供應商。 <<Register for Azure NetApp Files,深入瞭解此步驟>>。
 
 
 
-==== 建立NetApp帳戶
+=== 建立NetApp帳戶
 
 [role="quick-margin-para"]
 前往Azure NetApp Files Azure入口網站的「解決方案」、建立NetApp帳戶。 <<Create a NetApp account,深入瞭解此步驟>>。
 
 
 
-==== 設定容量資源池
+=== 設定容量資源池
 
 [role="quick-margin-para"]
 為您的持續磁碟區設定一個或多個容量集區。 <<Set up a capacity pool,深入瞭解此步驟>>。
 
 
 
-==== 將子網路委派Azure NetApp Files 給
+=== 將子網路委派Azure NetApp Files 給
 
 [role="quick-margin-para"]
 將子網路委派Azure NetApp Files 給支援中心、以便Astra Control Service在該子網路中建立持續的磁碟區。 <<Delegate a subnet to Azure NetApp Files,深入瞭解此步驟>>。
 
 
 
-==== 建立Azure服務主體
+=== 建立Azure服務主體
 
 [role="quick-margin-para"]
 建立具備「貢獻者」角色的Azure服務主體。 <<Create an Azure service principal,深入瞭解此步驟>>。

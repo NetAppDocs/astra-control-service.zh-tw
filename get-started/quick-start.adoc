@@ -15,7 +15,7 @@ summary: 只要幾個步驟、就能開始使用Astra Control Service。
 
 
 
-==== 設定您的雲端供應商
+== 設定您的雲端供應商
 
 . Google Cloud：
 +
@@ -44,7 +44,7 @@ link:set-up-microsoft-azure-with-amd.html["深入瞭解Microsoft Azure和Azure�
 
 
 
-==== 完成Astra Control登錄
+== 完成Astra Control登錄
 
 . 建立 https://cloud.netapp.com["NetApp Cloud Central"^] 帳戶。
 . 建立Astra Control帳戶時、請指定您的NetApp Cloud Central電子郵件ID https://cloud.netapp.com/astra["從Astra產品頁面"^]。
@@ -55,7 +55,7 @@ link:register.html["深入瞭解註冊程序"]。
 
 
 
-==== 將叢集新增至Astra Control
+== 將叢集新增至Astra Control
 
 [role="quick-margin-para"]
 登入後、選取*新增叢集*以使用Astra Control開始管理叢集。

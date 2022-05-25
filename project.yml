@@ -90,4 +90,6 @@ homepage:
       url: https://cloud.netapp.com/blog/blg-astra-control-simplifying-kubernetes-application-data-management-for-the-hybrid-cloud
     - title: 雲端中心的Kubernetes Hub
       url: https://cloud.netapp.com/kubernetes-hub
-product-family: {}
+product-family:
+  name: Astra
+  repo: astra-family

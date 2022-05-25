@@ -2,7 +2,7 @@
 section: get-started
 title: 開始使用
 entries:
-- title: Astra Control簡介
+- title: 瞭解Astra Control
   url: "/get-started/intro.html"
 - title: 支援的Kubernetes部署
   url: "/get-started/supported-deployments.html"

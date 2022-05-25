@@ -4,7 +4,7 @@ permalink: get-started/intro.html
 keywords: introduction, how astra works, how Astra works, what Astra is, concept, understanding, overview 
 summary: Astra Control是Kubernetes應用程式資料生命週期管理解決方案、可簡化狀態應用程式的作業。輕鬆保護、備份及移轉Kubernetes工作負載、並立即建立可運作的應用程式複本。 
 ---
-= Astra Control簡介
+= 瞭解Astra Control
 :hardbreaks:
 :allow-uri-read: 
 :icons: font

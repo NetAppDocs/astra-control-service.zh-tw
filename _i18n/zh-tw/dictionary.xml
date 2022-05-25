@@ -1167,7 +1167,6 @@
   <block id="5fabf021c8fb95cd2d38139cc7c5ff89" category="paragraph">*我可以直接透過雲端供應商來管理Astra Control拍攝的快照嗎？*</block>
   <block id="70e9aa86ac0b41ade7ad4fce41b6d744" category="paragraph">不可以Astra Control所拍攝的快照與備份、只能透過Astra Control進行管理。</block>
   <block id="0e1998253be388fcd1c18fc76ead9054" category="summary">Astra Control是Kubernetes應用程式資料生命週期管理解決方案、可簡化狀態應用程式的作業。輕鬆保護、備份及移轉Kubernetes工作負載、並立即建立可運作的應用程式複本。</block>
-  <block id="7e073986fe6af6ce1775bdfd558def36" category="doc">Astra Control簡介</block>
   <block id="98f770b0af18ca763421bac22b4b6805" category="section-title">功能</block>
   <block id="c66fd3d61ca9e5331b05a6bd70d4a1df" category="paragraph">Astra Control為Kubernetes應用程式資料生命週期管理提供關鍵功能：</block>
   <block id="842f680f400de3b6ee92728ef695d366" category="list-text">自動管理持續儲存</block>
@@ -1719,4 +1718,5 @@
   <block id="b4789b0ec041cd5e51f32c2f901a0951" category="list-text">選擇*設為預設*。</block>
   <block id="2dd2a1bdae3516df1950c153f6135366" category="paragraph">*我可以使用Active Directory來管理高效能叢集的驗證嗎？*</block>
   <block id="e4b4463df81090495a7820578ac936d9" category="paragraph">是的、您可以將您的高效能叢集設定為使用Azure Active Directory（Azure AD）進行驗證和身分識別管理。建立叢集時、請遵循中的指示<block ref="ba1ce5a57a4d347a0e1e2ecf2a2c91ba" category="inline-link-rx"></block> 設定叢集使用Azure AD。您必須確保叢集符合高峰管理Azure AD整合的要求。</block>
+  <block id="35766360770e699f50fa8f51d1c6ff36" category="doc">瞭解Astra Control</block>
 </blocks>
