@@ -277,35 +277,27 @@
     </div>
   </div>
   <div class="n-property-bar__toolbar">
-    <!-- Start Language Selector --><div id="ie-i18n" class="n-property-bar__lang-selector">
-      <div id="ie-i18n-menu">
-      <span class="ie-i18n-lang">繁體中文</span>
-        <button class="ie-i18n-icon-container" type="button">
+    <!-- Start Language Selector --><div id="language-dropdown" class="custom-dropdown custom-dropdown-lang">
+      <div class="custom-dropdown-select custom-dropdown-select-lang">
+      <span class="lang-name">繁體中文</span>
           <svg class="n-globe__icon" aria-labelledby="title">
             <title>globe</title>
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/zh-tw/astra-control-service/common/svg/sprite.svg#globe"></use>
           </svg>
         </button>
       </div>
-      <div id="n-property-navigation-bar__menu--language-selector" class="ie-i18n-results-container n-menu n-menu--v3 n-menu--is-active" style="display: none;">
-        <div class="n-language-selector-menu">
-          <ul class="n-menu__list">
-            <li class="n-menu__list-column">
-              <ul class="n-menu__list"><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/us-en/astra-control-service/release-notes/known-issues.html" class="n-menu__header-text"><span translate="no" class="notranslate">English</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ja-jp/astra-control-service/release-notes/known-issues.html" class="n-menu__header-text"><span translate="no" class="notranslate">日本語</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ko-kr/astra-control-service/release-notes/known-issues.html" class="n-menu__header-text"><span translate="no" class="notranslate">한국어</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-cn/astra-control-service/release-notes/known-issues.html" class="n-menu__header-text"><span translate="no" class="notranslate">简体中文</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-tw/astra-control-service/release-notes/known-issues.html" class="n-menu__header-text"><span translate="no" class="notranslate">繁體中文</span></a>
-                </li></ul>
-            </li>
-          </ul>
-        </div>
-      </div>
+
+      <ul class="custom-dropdown-menu"><li>
+          <a href="https://docs.netapp.com/zh-tw/astra-control-service/release-notes/known-issues.html" target="_self"><span translate="no" class="notranslate">繁體中文</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/us-en/astra-control-service/release-notes/known-issues.html" target="_self"><span translate="no" class="notranslate">English</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/ja-jp/astra-control-service/release-notes/known-issues.html" target="_self"><span translate="no" class="notranslate">日本語</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/zh-cn/astra-control-service/release-notes/known-issues.html" target="_self"><span translate="no" class="notranslate">简体中文</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/ko-kr/astra-control-service/release-notes/known-issues.html" target="_self"><span translate="no" class="notranslate">한국어</span></a>
+        </li></ul>
     </div><!-- End Language Selector -->
 
     <div class="n-property-bar__cta"></div>
@@ -776,7 +768,7 @@
     $("#toggleContainerPdf").toggle('display');
     $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
   });
-</script><div class="sidebar-nav-container">
+</script><div class="sidebar-nav-container" id="mysidebardiv">
   <ul id="mysidebar" class="nav"><li class=" "><a class="na-navbar-padding" href="/zh-tw/astra-control-service/index.html">
         Astra Control Service文件
       </a></li><li class="subfolders "><a href="#">
@@ -975,7 +967,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-05-03 06:03:16 +0000">05/03/2022</time>
+    <time datetime="2022-06-09 17:32:30 +0000">06/09/2022</time>
     
   
 
@@ -1006,6 +998,9 @@
 </li>
 <li>
 <p><a href="#App clones fail using a specific version of PostgreSQL">[App clones fail using a specific version of PostgreSQL]</a></p>
+</li>
+<li>
+<p><a href="#Azure backup buckets use LRS redundancy by default">[Azure backup buckets use LRS redundancy by default]</a></p>
 </li>
 </ul>
 </div>
@@ -1043,6 +1038,24 @@
 <div class="sectionbody">
 <div class="paragraph">
 <p>同一個叢集內的應用程式複製作業、會持續失敗、並顯示Bitnami PostgreSQL 11.5.0圖表。若要成功複製、請使用舊版或更新版本的圖表。</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="azure備份鏟斗預設使用lrs備援">Azure備份鏟斗預設使用LRS備援</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>根據預設、Astra Control Service用來儲存Azure Kubernetes服務備份的儲存區使用本機備援儲存設備（LRS）備援選項。若要為Azure鏟斗使用更持久的備援選項、請參閱Azure雲端供應商設定說明中的選用步驟：</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="../get-started/set-up-microsoft-azure-with-amd.html">"使用Azure託管磁碟來設定Microsoft Azure"</a></p>
+</li>
+<li>
+<p><a href="../get-started/set-up-microsoft-azure-with-anf.html">"使用Azure NetApp Files 更新功能來設定Microsoft Azure"</a></p>
+</li>
+</ul>
 </div>
 </div>
 </div>
@@ -1221,4 +1234,5 @@
     </script>
     <script src='/zh-tw/astra-control-service/js/www-ntap.js'></script>
     <script src='/zh-tw/astra-control-service/js/tabbed-blocks.js'></script>
+    <script src='/zh-tw/astra-control-service/js/sidebar.js'></script>
   </body></html>
