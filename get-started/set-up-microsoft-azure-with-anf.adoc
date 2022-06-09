@@ -70,6 +70,13 @@ summary: 您必須先採取幾個步驟來準備Microsoft Azure訂閱、才能�
 
 
 
+=== 選用：為Azure備份儲存區設定備援
+
+[role="quick-margin-para"]
+根據預設、Astra Control Service用來儲存Azure Kubernetes服務備份的儲存區使用本機備援儲存設備（LRS）備援選項。您可選擇為Azure鏟斗設定更持久的備援層級、作為選用步驟。 <<Optional: Configure redundancy for Azure backup buckets,深入瞭解此步驟>>。
+
+
+
 == Azure Kubernetes服務叢集需求
 
 Kubernetes叢集必須符合下列需求、才能從Astra Control Service進行探索和管理。
@@ -304,4 +311,17 @@ az storage container list --subscription SUBSCRIPTION-ID
 az login --service-principal --username APP-ID-SERVICEPRINCIPAL --password PASSWORD --tenant TENANT-ID
 az aks list --subscription SUBSCRIPTION-ID --resource-group RESOURCE-GROUP-ID
 ----
+
+
+
+
+== 選用：為Azure備份儲存區設定備援
+
+您可以為Azure備份桶設定更持久的備援層級。根據預設、Astra Control Service用來儲存Azure Kubernetes服務備份的儲存區使用本機備援儲存設備（LRS）備援選項。若要為Azure鏟斗使用更持久的備援選項、您需要執行下列動作：
+
+.步驟
+. 建立使用所需備援層級的Azure儲存帳戶 https://docs.microsoft.com/en-us/azure/storage/common/storage-account-create?tabs=azure-portal["這些指示"^]。
+. 使用在新的儲存帳戶中建立Azure容器 https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-portal["這些指示"^]。
+. 將容器新增為Astra Control Service的儲存庫。請參閱 link:../use/manage-buckets.html#add-an-additional-bucket["新增額外的儲存庫"]。
+. （選用）若要將新建立的儲存庫用作Azure備份的預設儲存庫、請將其設為Azure的預設儲存庫。請參閱 link:../use/manage-buckets.html#change-the-default-bucket["變更預設儲存區"]。
 

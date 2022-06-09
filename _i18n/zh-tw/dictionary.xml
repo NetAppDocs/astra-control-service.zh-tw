@@ -862,7 +862,6 @@
   <block id="c83ec598afcfd8eb8180685a01d0e884" category="paragraph">安裝SCSI驅動程式之前、您必須先在Azure訂閱中啟用「csi驅動程式」功能。</block>
   <block id="88bcc5f12a365174fce5ed9581217c0f" category="list-text">開啟Azure命令列介面。</block>
   <block id="d7b43ba09446a633f575c51655477a58" category="list-text">執行下列命令來登錄驅動程式：</block>
-  <block id="e0b4ff61d0820f6567af9482613f2a5d" category="list-text">執行下列命令以確保已查詢變更：</block>
   <block id="daae3454c5ca21f3cde2542bf9240548" category="section-title">在Azure Kubernetes服務叢集中安裝Azure託管磁碟SCSI驅動程式</block>
   <block id="0b1f7cc28b0b37ff72c091633f22b694" category="paragraph">您可以安裝Azure csi驅動程式來完成準備工作。</block>
   <block id="5c45917f00ad20e0e5789b736021ac07" category="inline-link">Microsoft csi驅動程式文件</block>
@@ -1719,4 +1718,18 @@
   <block id="2dd2a1bdae3516df1950c153f6135366" category="paragraph">*我可以使用Active Directory來管理高效能叢集的驗證嗎？*</block>
   <block id="e4b4463df81090495a7820578ac936d9" category="paragraph">是的、您可以將您的高效能叢集設定為使用Azure Active Directory（Azure AD）進行驗證和身分識別管理。建立叢集時、請遵循中的指示<block ref="ba1ce5a57a4d347a0e1e2ecf2a2c91ba" category="inline-link-rx"></block> 設定叢集使用Azure AD。您必須確保叢集符合高峰管理Azure AD整合的要求。</block>
   <block id="35766360770e699f50fa8f51d1c6ff36" category="doc">瞭解Astra Control</block>
+  <block id="7a224873743ae07878fa35eb8d081112" category="list-text"><block ref="3286c558b43bd6d377809c21300aee77" category="inline-xref-macro-rx"></block></block>
+  <block id="8100875d88782acfb46a30b4101b2280" category="section-title">Azure備份鏟斗預設使用LRS備援</block>
+  <block id="7b51ea6a21b6966c72987eb0afc24995" category="paragraph">根據預設、Astra Control Service用來儲存Azure Kubernetes服務備份的儲存區使用本機備援儲存設備（LRS）備援選項。若要為Azure鏟斗使用更持久的備援選項、請參閱Azure雲端供應商設定說明中的選用步驟：</block>
+  <block id="22e9bb5a03504aaee4ab910d594c8096" category="list-text"><block ref="22e9bb5a03504aaee4ab910d594c8096" category="inline-link-macro-rx"></block></block>
+  <block id="864e3787d69e889ea2ae67aeb999effd" category="list-text"><block ref="864e3787d69e889ea2ae67aeb999effd" category="inline-link-macro-rx"></block></block>
+  <block id="87e0c6ecd728fb0d791237540ebc2d13" category="section-title">選用：為Azure備份儲存區設定備援</block>
+  <block id="e6870002b2d5d13ce9775b063bc8ba38" category="paragraph">根據預設、Astra Control Service用來儲存Azure Kubernetes服務備份的儲存區使用本機備援儲存設備（LRS）備援選項。您可選擇為Azure鏟斗設定更持久的備援層級、作為選用步驟。 <block ref="01e018c18178f59acc7c2fe24b863d36" category="inline-xref-macro-rx"></block>。</block>
+  <block id="59007fdeff44241e1503f2d5988af0c3" category="list-text">執行下列命令以確保變更已傳播：</block>
+  <block id="1fbdfcbad2340990dd9a4235c70ce4d7" category="paragraph">您可以為Azure備份桶設定更持久的備援層級。根據預設、Astra Control Service用來儲存Azure Kubernetes服務備份的儲存區使用本機備援儲存設備（LRS）備援選項。若要為Azure鏟斗使用更持久的備援選項、您需要執行下列動作：</block>
+  <block id="9ac0dd27d420b7b48ca72e463ae95e18" category="inline-link">這些指示</block>
+  <block id="e42b53a05e4dc8d35c19c6e591938326" category="list-text">建立使用所需備援層級的Azure儲存帳戶<block ref="c9a7cb9a074b3428e720b565b7629c69" category="inline-link-rx"></block>。</block>
+  <block id="71f57bd63430dbba34c12daa373f7996" category="list-text">使用在新的儲存帳戶中建立Azure容器<block ref="ba03a3cb851c493aa05900ed20930895" category="inline-link-rx"></block>。</block>
+  <block id="4a9b46e4514936c3267b624e9c48f76b" category="list-text">將容器新增為Astra Control Service的儲存庫。請參閱 <block ref="3ecbb82ace41389a409b1cc92181a5a8" category="inline-link-macro-rx"></block>。</block>
+  <block id="695f1c0a89ac16190399389b6dfdcb1b" category="list-text">（選用）若要將新建立的儲存庫用作Azure備份的預設儲存庫、請將其設為Azure的預設儲存庫。請參閱 <block ref="d1523cf11113b501cc0e7216254bf527" category="inline-link-macro-rx"></block>。</block>
 </blocks>

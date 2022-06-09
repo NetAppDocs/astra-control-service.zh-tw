@@ -22,6 +22,7 @@ summary: 已知問題可識別可能導致您無法成功使用本產品版本�
 .備份、還原及複製
 * <<Restore of an app results in PV size larger than original PV>>
 * <<App clones fail using a specific version of PostgreSQL>>
+* <<Azure backup buckets use LRS redundancy by default>>
 
 
 .其他問題
@@ -46,6 +47,16 @@ summary: 已知問題可識別可能導致您無法成功使用本產品版本�
 == 使用特定版本的PostgreSQL時、應用程式複製失敗
 
 同一個叢集內的應用程式複製作業、會持續失敗、並顯示Bitnami PostgreSQL 11.5.0圖表。若要成功複製、請使用舊版或更新版本的圖表。
+
+
+
+== Azure備份鏟斗預設使用LRS備援
+
+根據預設、Astra Control Service用來儲存Azure Kubernetes服務備份的儲存區使用本機備援儲存設備（LRS）備援選項。若要為Azure鏟斗使用更持久的備援選項、請參閱Azure雲端供應商設定說明中的選用步驟：
+
+* link:../get-started/set-up-microsoft-azure-with-amd.html["使用Azure託管磁碟來設定Microsoft Azure"]
+* link:../get-started/set-up-microsoft-azure-with-anf.html["使用Azure NetApp Files 更新功能來設定Microsoft Azure"]
+
 
 
 
