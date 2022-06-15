@@ -1732,4 +1732,5 @@
   <block id="71f57bd63430dbba34c12daa373f7996" category="list-text">使用在新的儲存帳戶中建立Azure容器<block ref="ba03a3cb851c493aa05900ed20930895" category="inline-link-rx"></block>。</block>
   <block id="4a9b46e4514936c3267b624e9c48f76b" category="list-text">將容器新增為Astra Control Service的儲存庫。請參閱 <block ref="3ecbb82ace41389a409b1cc92181a5a8" category="inline-link-macro-rx"></block>。</block>
   <block id="695f1c0a89ac16190399389b6dfdcb1b" category="list-text">（選用）若要將新建立的儲存庫用作Azure備份的預設儲存庫、請將其設為Azure的預設儲存庫。請參閱 <block ref="d1523cf11113b501cc0e7216254bf527" category="inline-link-macro-rx"></block>。</block>
+  <block id="f2ab44c105acc97c54a227f6c52ad099" category="admonition">如果還原至先前刪除的命名空間、則會在還原程序中建立名稱相同的新命名空間。任何在先前刪除命名空間中擁有管理應用程式權限的使用者、都必須手動還原新重新建立命名空間的權限。</block>
 </blocks>
