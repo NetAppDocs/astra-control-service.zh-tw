@@ -64,12 +64,6 @@ summary: 已知問題可識別可能導致您無法成功使用本產品版本�
 
 使用Kubernetes Snapshot-Controller（也稱為exter-snapshotter）4.2.0版搭配Kubernetes 1.20或1.21時、快照最終可能會開始失敗。若要避免這種情況發生、請使用不同的 https://kubernetes-csi.github.io/docs/snapshot-controller.html["支援的版本"^] Kubernetes版本1.20或1.21的外部快照功能（例如4.2.1版）。
 
-. 執行POST呼叫、將更新的Kbeconfig檔案新增至「/assignon」端點、並從回應本文擷取指派的「id」。
-. 使用適當的叢集ID從「/叢集」端點執行「PUT」呼叫、並將「credentialId」設定為上一步的「id」值。
-
-
-完成這些步驟後、與叢集相關的認證資料會更新、叢集應重新連線並將其狀態更新為「可用」。
-
 
 
 == 當Astra Trident離線時、應用程式資料管理作業會因內部服務錯誤（500）而失敗
