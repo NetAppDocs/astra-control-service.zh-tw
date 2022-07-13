@@ -169,7 +169,33 @@
   
   <!-- Start Page Toolbar -->
   
-  <div class="page-nav-toolbar"><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/astra-control-service/issues/new?body=Page%3A%20[架構與元件](https://docs.netapp.com/zh-tw/astra-control-service/learn/architecture.html)" class="page-nav-contribute-link" role="button"><img src="/zh-tw/astra-control-service/images/discuss-sm.svg" alt="" class="github-icon" />要求變更文件</a><a target="_blank" href="https://github.com/NetAppDocs/astra-control-service/blob/main/learn/architecture.adoc" class="page-nav-contribute-link" role="button"><img src="/zh-tw/astra-control-service/images/edit-sm.svg" alt="" class="github-icon" />編輯此頁面</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/zh-tw/astra-control-service/images/article-sm.svg" alt="" class="github-icon" />瞭解如何作出貢獻</a></div>
+  <div class="page-nav-toolbar">
+<div id="flavor-dropdown" class="custom-dropdown" data-url="/zh-tw/astra-control-service/learn/architecture.html">
+  
+  <div class="custom-dropdown-select unselected" title="所有雲端供應商">
+    <label>雲端供應商</label>
+    <span>所有雲端供應商</span>
+    <img src="/zh-tw/astra-control-service/images/filter.svg" class="custom-icon" alt="" />
+  </div>
+  
+
+  <ul class="custom-dropdown-menu">
+    
+    
+    <li data-value="gcp" data-url="/zh-tw/astra-control-service/gcp/learn/architecture.html">
+      <img alt="" src="/zh-tw/astra-control-service/images/gcp-ico.svg" onerror="this.src='/zh-tw/astra-control-service/images/blank-ico.png'" class="custom-icon" />Google Cloud
+    </li>
+    
+    
+    
+    <li data-value="azure" data-url="/zh-tw/astra-control-service/azure/learn/architecture.html">
+      <img alt="" src="/zh-tw/astra-control-service/images/azure-ico.svg" onerror="this.src='/zh-tw/astra-control-service/images/blank-ico.png'" class="custom-icon" />Microsoft Azure
+    </li>
+    
+    
+  </ul>
+</div>
+<div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/astra-control-service/issues/new?body=Page%3A%20[架構與元件](https://docs.netapp.com/zh-tw/astra-control-service/learn/architecture.html)" class="page-nav-contribute-link" role="button"><img src="/zh-tw/astra-control-service/images/discuss-sm.svg" alt="" class="github-icon" />要求變更文件</a><a target="_blank" href="https://github.com/NetAppDocs/astra-control-service/blob/main/learn/architecture.adoc" class="page-nav-contribute-link" role="button"><img src="/zh-tw/astra-control-service/images/edit-sm.svg" alt="" class="github-icon" />編輯此頁面</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/zh-tw/astra-control-service/images/article-sm.svg" alt="" class="github-icon" />瞭解如何作出貢獻</a></div>
     <div class="page-nav-container">
       <nav class="page-nav-fixed">
         <div class="page-nav-title">在此頁面上</div>
@@ -258,11 +284,13 @@
           <div id="react-search" 
           data-search-html="/zh-tw/astra-control-service/search.html"
           data-type="widget" 
-          data-placeholder="搜尋文件" 
-          data-no-results-found="找不到符合 {query} 的相關結果。" 
-          data-did-you-mean="搜尋 {suggestion}。" 
-          data-no-results-found-did-you-mean="找不到符合 {query} 的相關結果。您是否要找的是{suggestion}？" 
-          data-results-found="找到 {hitCount} 筆結果"  
+          data-placeholder="搜尋文件"
+          data-no-results-found="找不到符合 {query} 的相關結果。"
+          data-did-you-mean="搜尋 {suggestion}。"
+          data-no-results-found-did-you-mean="找不到符合 {query} 的相關結果。您是否要找的是{suggestion}？"
+          data-results-found="找到 {hitCount} 筆結果"
+          data-error-message="We're sorry, an issue occurred when fetching your results. Please try again."
+          data-error-reset="Reset Search"
           data-sk-es-pf-indexes=""
           data-flavor=""></div>
           <button class="n-property-bar__search-toggle-button" type="button">
@@ -937,7 +965,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-05-03 06:03:16 +0000">05/03/2022</time>
+    <time datetime="2022-07-13 17:00:46 +0000">07/13/2022</time>
     
   
 
@@ -970,13 +998,25 @@
 <div class="ulist">
 <ul>
 <li>
-<p>Astra控制服務的用途 <a href="https://www.netapp.com/cloud-services/cloud-volumes-service-for-google-cloud/" target="_blank" rel="noopener">"適用於Cloud Volumes Service Google Cloud的NetApp解決方案"</a> 做為GKE叢集和的儲存後端 <a href="https://www.netapp.com/cloud-services/azure-netapp-files/" target="_blank" rel="noopener">"Azure NetApp Files"</a> 做為高效能叢集的儲存後端。</p>
+<p>Astra控制服務的用途 <a href="https://www.netapp.com/cloud-services/azure-netapp-files/" target="_blank" rel="noopener">"Azure NetApp Files"</a> 做為高效能叢集的儲存後端。</p>
 </li>
 <li>
-<p>Astra Control Service也支援Azure託管磁碟和Google持續磁碟做為後端儲存選項。</p>
+<p>Astra Control Service也支援Azure託管磁碟做為後端儲存選項。</p>
+</li>
+</ul>
+</div>
 </li>
 <li>
-<p>Astra Control Center使用下列儲存後端：</p>
+<p>Astra控制服務的用途 <a href="https://www.netapp.com/cloud-services/cloud-volumes-service-for-google-cloud/" target="_blank" rel="noopener">"適用於Cloud Volumes Service Google Cloud的NetApp解決方案"</a> 作為GKE叢集的儲存後端。</p>
+</li>
+<li>
+<p>Astra Control Service也支援Google持續磁碟做為後端儲存選項。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>+* Astra Control Center使用下列儲存後端：</p>
+</div>
 <div class="ulist">
 <ul>
 <li>
@@ -987,15 +1027,13 @@
 </li>
 <li>
 <p>儲存後端Cloud Volumes ONTAP</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-</li>
+<div class="ulist">
+<ul>
 <li>
 <p><strong>《NetApp雲端基礎架構監控工具》《支援VMware技術》</strong>《支援架構監控工具》、可讓您監控由Astra Control Center管理的Kubernetes叢集的效能與使用率。Cloud Insights Cloud Insights可將儲存使用量與工作負載建立關聯。Cloud Insights當您在Cloud Insights Astra控制中心啟用「支援不中斷連線」時、遙測資訊會顯示在Astra控制中心UI頁面中。</p>
+</li>
+</ul>
+</div>
 </li>
 </ul>
 </div>

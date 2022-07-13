@@ -9,14 +9,14 @@
   <meta property="og:title" content="Astra Control Service文件 | NetApp Documentation" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://docs.netapp.com/zh-tw/astra-control-service/index.html" />
-	<meta property="og:description" content="Astra Control Service是NetApp管理的服務、可在Google Kubernetes Engine（GKE）和Azure Kubernetes Service（KS）中、提供Kubernetes叢集的應用程式感知資料管理功能。如果您需要管理在內部部署環境中執行的Kubernetes應用程式、..." />
+	<meta property="og:description" content="Astra Control Service是NetApp管理的服務、可在多個雲端環境中、為Kubernetes叢集提供應用程式感知資料管理功能。如果您需要管理在內部部署環境中執行的Kubernetes應用程式、請前往Astra Control Center的文件。" />
   <meta property="og:image" content="https://docs.netapp.com/zh-tw/astra-control-service/images/logo-tophat-social.png" />
   <meta property="og:image:alt" content="NetApp Logo" />
   <meta name="format-detection" content="telephone=no">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta http-equiv="encoding" content="utf-8">
   <meta http-equiv="nss-type" content="Product Documentation"/>
-  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="Astra Control Service是NetApp管理的服務、可在Google Kubernetes Engine（GKE）和Azure Kubernetes Service（KS）中、提供Kubernetes叢集的應用程式感知資料管理功能。如果您需要管理在內部部署環境中執行的Kubernetes應用程式、...">
+  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="Astra Control Service是NetApp管理的服務、可在多個雲端環境中、為Kubernetes叢集提供應用程式感知資料管理功能。如果您需要管理在內部部署環境中執行的Kubernetes應用程式、請前往Astra Control Center的文件。">
   <meta name="keywords" content=" "><!-- Icons -->
   <link rel="icon" href="/zh-tw/astra-control-service/images/favicon.ico" type="image/x-icon">
 
@@ -169,7 +169,33 @@
   
   <!-- Start Page Toolbar -->
   
-  <div class="page-nav-toolbar"><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/astra-control-service/issues/new?body=Page%3A%20[Astra Control Service文件](https://docs.netapp.com/zh-tw/astra-control-service/index.html)" class="page-nav-contribute-link" role="button"><img src="/zh-tw/astra-control-service/images/discuss-sm.svg" alt="" class="github-icon" />要求變更文件</a><a target="_blank" href="https://github.com/NetAppDocs/astra-control-service/blob/main/index.adoc" class="page-nav-contribute-link" role="button"><img src="/zh-tw/astra-control-service/images/edit-sm.svg" alt="" class="github-icon" />編輯此頁面</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/zh-tw/astra-control-service/images/article-sm.svg" alt="" class="github-icon" />瞭解如何作出貢獻</a></div>
+  <div class="page-nav-toolbar">
+<div id="flavor-dropdown" class="custom-dropdown" data-url="/zh-tw/astra-control-service/index.html">
+  
+  <div class="custom-dropdown-select unselected" title="所有雲端供應商">
+    <label>雲端供應商</label>
+    <span>所有雲端供應商</span>
+    <img src="/zh-tw/astra-control-service/images/filter.svg" class="custom-icon" alt="" />
+  </div>
+  
+
+  <ul class="custom-dropdown-menu">
+    
+    
+    <li data-value="gcp" data-url="/zh-tw/astra-control-service/gcp/index.html">
+      <img alt="" src="/zh-tw/astra-control-service/images/gcp-ico.svg" onerror="this.src='/zh-tw/astra-control-service/images/blank-ico.png'" class="custom-icon" />Google Cloud
+    </li>
+    
+    
+    
+    <li data-value="azure" data-url="/zh-tw/astra-control-service/azure/index.html">
+      <img alt="" src="/zh-tw/astra-control-service/images/azure-ico.svg" onerror="this.src='/zh-tw/astra-control-service/images/blank-ico.png'" class="custom-icon" />Microsoft Azure
+    </li>
+    
+    
+  </ul>
+</div>
+<div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/astra-control-service/issues/new?body=Page%3A%20[Astra Control Service文件](https://docs.netapp.com/zh-tw/astra-control-service/index.html)" class="page-nav-contribute-link" role="button"><img src="/zh-tw/astra-control-service/images/discuss-sm.svg" alt="" class="github-icon" />要求變更文件</a><a target="_blank" href="https://github.com/NetAppDocs/astra-control-service/blob/main/index.adoc" class="page-nav-contribute-link" role="button"><img src="/zh-tw/astra-control-service/images/edit-sm.svg" alt="" class="github-icon" />編輯此頁面</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/zh-tw/astra-control-service/images/article-sm.svg" alt="" class="github-icon" />瞭解如何作出貢獻</a></div>
     <div class="page-nav-container">
       <nav class="page-nav-fixed">
         <div class="page-nav-title">在此頁面上</div>
@@ -258,11 +284,13 @@
           <div id="react-search" 
           data-search-html="/zh-tw/astra-control-service/search.html"
           data-type="widget" 
-          data-placeholder="搜尋文件" 
-          data-no-results-found="找不到符合 {query} 的相關結果。" 
-          data-did-you-mean="搜尋 {suggestion}。" 
-          data-no-results-found-did-you-mean="找不到符合 {query} 的相關結果。您是否要找的是{suggestion}？" 
-          data-results-found="找到 {hitCount} 筆結果"  
+          data-placeholder="搜尋文件"
+          data-no-results-found="找不到符合 {query} 的相關結果。"
+          data-did-you-mean="搜尋 {suggestion}。"
+          data-no-results-found-did-you-mean="找不到符合 {query} 的相關結果。您是否要找的是{suggestion}？"
+          data-results-found="找到 {hitCount} 筆結果"
+          data-error-message="We're sorry, an issue occurred when fetching your results. Please try again."
+          data-error-reset="Reset Search"
           data-sk-es-pf-indexes=""
           data-flavor=""></div>
           <button class="n-property-bar__search-toggle-button" type="button">
@@ -936,7 +964,7 @@
           <h1 class="n-doc__component-detail-heading">Astra Control Service文件</h1>
         </div>
         <section class="n-band__section">
-  <p>Astra Control Service is a NetApp-managed service that provides application-aware data management of Kubernetes clusters in Google Kubernetes Engine (GKE) and Azure Kubernetes Service (AKS). Go to the docs for Astra Control Center if you need to manage Kubernetes apps running in your on-premises environment.</p>
+  <p>Astra Control Service is a NetApp-managed service that provides application-aware data management of Kubernetes clusters in multiple cloud environments. Go to the docs for Astra Control Center if you need to manage Kubernetes apps running in your on-premises environment.</p>
 </section><div class="n-band__content">
   <div class="n-layout-flex" data-ntap-layout="4">
     

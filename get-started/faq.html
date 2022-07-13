@@ -169,7 +169,33 @@
   
   <!-- Start Page Toolbar -->
   
-  <div class="page-nav-toolbar"><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/astra-control-service/issues/new?body=Page%3A%20[Astra Control Service的常見問題集](https://docs.netapp.com/zh-tw/astra-control-service/get-started/faq.html)" class="page-nav-contribute-link" role="button"><img src="/zh-tw/astra-control-service/images/discuss-sm.svg" alt="" class="github-icon" />要求變更文件</a><a target="_blank" href="https://github.com/NetAppDocs/astra-control-service/blob/main/get-started/faq.adoc" class="page-nav-contribute-link" role="button"><img src="/zh-tw/astra-control-service/images/edit-sm.svg" alt="" class="github-icon" />編輯此頁面</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/zh-tw/astra-control-service/images/article-sm.svg" alt="" class="github-icon" />瞭解如何作出貢獻</a></div>
+  <div class="page-nav-toolbar">
+<div id="flavor-dropdown" class="custom-dropdown" data-url="/zh-tw/astra-control-service/get-started/faq.html">
+  
+  <div class="custom-dropdown-select unselected" title="所有雲端供應商">
+    <label>雲端供應商</label>
+    <span>所有雲端供應商</span>
+    <img src="/zh-tw/astra-control-service/images/filter.svg" class="custom-icon" alt="" />
+  </div>
+  
+
+  <ul class="custom-dropdown-menu">
+    
+    
+    <li data-value="gcp" data-url="/zh-tw/astra-control-service/gcp/get-started/faq.html">
+      <img alt="" src="/zh-tw/astra-control-service/images/gcp-ico.svg" onerror="this.src='/zh-tw/astra-control-service/images/blank-ico.png'" class="custom-icon" />Google Cloud
+    </li>
+    
+    
+    
+    <li data-value="azure" data-url="/zh-tw/astra-control-service/azure/get-started/faq.html">
+      <img alt="" src="/zh-tw/astra-control-service/images/azure-ico.svg" onerror="this.src='/zh-tw/astra-control-service/images/blank-ico.png'" class="custom-icon" />Microsoft Azure
+    </li>
+    
+    
+  </ul>
+</div>
+<div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/astra-control-service/issues/new?body=Page%3A%20[Astra Control Service的常見問題集](https://docs.netapp.com/zh-tw/astra-control-service/get-started/faq.html)" class="page-nav-contribute-link" role="button"><img src="/zh-tw/astra-control-service/images/discuss-sm.svg" alt="" class="github-icon" />要求變更文件</a><a target="_blank" href="https://github.com/NetAppDocs/astra-control-service/blob/main/get-started/faq.adoc" class="page-nav-contribute-link" role="button"><img src="/zh-tw/astra-control-service/images/edit-sm.svg" alt="" class="github-icon" />編輯此頁面</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/zh-tw/astra-control-service/images/article-sm.svg" alt="" class="github-icon" />瞭解如何作出貢獻</a></div>
     <div class="page-nav-container">
       <nav class="page-nav-fixed">
         <div class="page-nav-title">在此頁面上</div>
@@ -258,11 +284,13 @@
           <div id="react-search" 
           data-search-html="/zh-tw/astra-control-service/search.html"
           data-type="widget" 
-          data-placeholder="搜尋文件" 
-          data-no-results-found="找不到符合 {query} 的相關結果。" 
-          data-did-you-mean="搜尋 {suggestion}。" 
-          data-no-results-found-did-you-mean="找不到符合 {query} 的相關結果。您是否要找的是{suggestion}？" 
-          data-results-found="找到 {hitCount} 筆結果"  
+          data-placeholder="搜尋文件"
+          data-no-results-found="找不到符合 {query} 的相關結果。"
+          data-did-you-mean="搜尋 {suggestion}。"
+          data-no-results-found-did-you-mean="找不到符合 {query} 的相關結果。您是否要找的是{suggestion}？"
+          data-results-found="找到 {hitCount} 筆結果"
+          data-error-message="We're sorry, an issue occurred when fetching your results. Please try again."
+          data-error-reset="Reset Search"
           data-sk-es-pf-indexes=""
           data-flavor=""></div>
           <button class="n-property-bar__search-toggle-button" type="button">
@@ -937,7 +965,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-05-11 14:47:07 +0000">05/11/2022</time>
+    <time datetime="2022-07-13 17:00:46 +0000">07/13/2022</time>
     
   
 
@@ -955,7 +983,7 @@
 <h2 id="總覽">總覽</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Astra Control旨在簡化Kubernetes原生應用程式的應用程式資料生命週期管理作業。Astra Control Service支援在Google Kubernetes Engine（GKE）和Azure Kubernetes Service（KS）上執行的Kubernetes叢集。</p>
+<p>Astra Control旨在簡化Kubernetes原生應用程式的應用程式資料生命週期管理作業。Astra Control Service支援在多個雲端供應商環境中執行的Kubernetes叢集。</p>
 </div>
 <div class="paragraph">
 <p>以下各節提供使用Astra Control時可能會遇到的其他問題解答。如需進一步的說明、<a href="mailto:請聯絡astra.feedback@netapp.com">請聯絡astra.feedback@netapp.com</a></p>
@@ -1005,7 +1033,7 @@
 <p><strong>我正在使用免費方案、我是否會收到持續大量報銷的費用？</strong></p>
 </div>
 <div class="paragraph">
-<p>是的、您需要支付來自Cloud Volumes Service VMware的持續Volume的費用、這些磁碟由VMware的VMware叢集用於Google Cloud、或Azure NetApp Files 是由來自VMware的高峰叢集使用。</p>
+<p>是的、您將會從雲端供應商收取叢集所使用的「持續磁碟區」費用。</p>
 </div>
 </div>
 </div>
@@ -1016,7 +1044,7 @@
 <p><strong>在將叢集新增至Astra Control Service之前、我是否需要在叢集上安裝SCSI驅動程式？</strong></p>
 </div>
 <div class="paragraph">
-<p>不可以當您的叢集新增至Astra Control時、該服務會自動在Kubernetes叢集上安裝NetApp的Trident Container Storage Interface（SCSI）驅動程式。此「csi」驅動程式可用於為採用NetApp Cloud Volumes Service 支援的GKE叢集、Google Cloud和Azure NetApp Files 以「支援」技術為後盾的高點叢集、配置持續的Volume。</p>
+<p>不可以當您的叢集新增至Astra Control時、該服務會自動在Kubernetes叢集上安裝NetApp的Trident Container Storage Interface（SCSI）驅動程式。此驅動程式可用於為雲端供應商所支援的叢集配置持續磁碟區。</p>
 </div>
 <div class="paragraph">
 <p><strong>新增Astra Control Service之後、我需要將工作節點新增至叢集。我該怎麼辦？</strong></p>
