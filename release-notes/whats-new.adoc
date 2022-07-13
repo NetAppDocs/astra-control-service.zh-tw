@@ -27,6 +27,8 @@ Astra Control Service現在支援將命名空間限制指派給成員或檢視�
 
 link:../learn/user-roles-namespaces.html["命名空間角色型存取控制（RBAC）"]。
 
+ifdef::azure[]
+
 
 
 === Azure Active Directory支援
@@ -42,6 +44,8 @@ link:../get-started/add-first-cluster.html["從Astra Control Service開始管理
 您現在可以管理使用私有IP位址的高效能叢集。
 
 link:../get-started/add-first-cluster.html["從Astra Control Service開始管理Kubernetes叢集"]。
+
+endif::azure[]
 
 
 
@@ -61,9 +65,17 @@ link:../use/manage-buckets.html["移除貯體"]。
 
 === 新的儲存後端選項
 
-Astra Control Service現在支援Google持續磁碟和Azure託管磁碟做為儲存後端選項。
+Astra Control Service現在支援Azure託管磁碟做為儲存後端選項。
 
-link:../get-started/set-up-google-cloud.html["設定Google Cloud"]。link:../get-started/set-up-microsoft-azure-with-amd.html["使用Azure託管磁碟來設定Microsoft Azure"]。
+link:../get-started/set-up-microsoft-azure-with-amd.html["使用Azure託管磁碟來設定Microsoft Azure"]。
+
+endif::gcp[]
+
+Astra Control Service現在支援Google持續磁碟做為儲存後端選項。
+
+link:../get-started/set-up-google-cloud.html["設定Google Cloud"]。
+
+endif::azure[]
 
 
 
@@ -89,6 +101,8 @@ link:../use/manage-app-execution-hooks.html["管理應用程式執行掛勾"]。
 
 link:../use/manage-apps.html#app-management-requirements["開始管理應用程式"]。
 
+ifdef::azure[]
+
 
 
 === 具有資源群組範圍的服務主體
@@ -96,6 +110,8 @@ link:../use/manage-apps.html#app-management-requirements["開始管理應用程�
 Astra Control Service現在支援使用資源群組範圍的服務主體。
 
 link:../get-started/set-up-microsoft-azure-with-anf.html#create-an-azure-service-principal-2["建立Azure服務主體"]。
+
+endif::azure[]
 
 
 
@@ -123,6 +139,8 @@ link:../use/manage-buckets.html["深入瞭解如何管理貯體"]。
 
 == 2021年6月2日
 
+ifdef::gcp[]
+
 此版本包含錯誤修正、以及Google Cloud支援的下列增強功能。
 
 
@@ -147,11 +165,15 @@ link:../learn/choose-class-and-size.html["瞭解Astra Control Service如何使�
 
 link:../get-started/set-up-google-cloud.html#gke-cluster-requirements["深入瞭解GKE叢集需求"]。
 
+endif::gcp[]
+
 
 
 == 2021年4月15日
 
 此版本包含下列新功能與增強功能。
+
+ifdef::azure[]
 
 
 
@@ -160,6 +182,8 @@ link:../get-started/set-up-google-cloud.html#gke-cluster-requirements["深入瞭
 Astra Control Service現在可以管理Azure Kubernetes Service（KS）中受管理Kubernetes叢集上執行的應用程式。
 
 link:../get-started/set-up-microsoft-azure-with-anf.html["瞭解如何開始使用"]。
+
+endif::azure[]
 
 
 
@@ -216,11 +240,15 @@ link:../use/view-account-activity.html["深入瞭解如何檢視您的帳戶活�
 
 == 2021年3月1日
 
+ifdef::gcp[]
+
 Astra Control Service現在支援 https://cloud.google.com/solutions/partners/netapp-cloud-volumes/service-types["_CVS_服務類型"^] 使用適用於Google Cloud的Cloud Volumes Service除了已支援_CVs-Performance_服務類型之外、提醒您、Astra Control Service使用Cloud Volumes Service 支援Google Cloud的功能、做為持續磁碟區的儲存後端。
 
 這項增強功能表示Astra Control Service現在可以管理在_any中執行之Kubernetes叢集的應用程式資料 https://cloud.netapp.com/cloud-volumes-global-regions#cvsGcp["支援支援的Google Cloud地區Cloud Volumes Service"^]。
 
 如果您可以在Google Cloud區域之間靈活選擇、您可以根據效能需求選擇CVS或CVS效能。 link:../learn/choose-class-and-size.html["深入瞭解如何選擇服務類型"]。
+
+endif::gcp[]
 
 
 

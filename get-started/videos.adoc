@@ -13,6 +13,8 @@ summary: 本文件網站上的許多頁面都包含影片、說明如何使用As
 
 本文件網站上的許多頁面都包含影片、說明如何完成Astra Control Service的工作。如果您只對影片感興趣、我們會在單一頁面上收集所有影片（例如播放清單）、讓您輕鬆完成這項工作。
 
+ifdef::gcp[]
+
 
 
 == 設定Google Cloud的影片
@@ -40,6 +42,8 @@ video::get-started/video-create-gcp-service-account.mp4[width=848,height=480]
 Astra Control Service使用服務帳戶金鑰來建立您剛設定的服務帳戶身分。下列影片說明如何從Google Cloud主控台建立服務帳戶金鑰。 link:set-up-google-cloud.html#create-a-service-account-key-2["深入瞭解如何建立服務帳戶金鑰"]。
 
 video::get-started/video-create-gcp-service-account-key.mp4[width=848,height=480]
+endif::gcp[]
+
 
 
 == 使用Astra Control的影片

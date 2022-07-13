@@ -17,6 +17,8 @@ summary: 只要幾個步驟、就能開始使用Astra Control Service。
 
 == 設定您的雲端供應商
 
+ifdef::gcp[]
+
 . Google Cloud：
 +
 ** 檢閱Google Kubernetes Engine叢集需求。
@@ -28,6 +30,12 @@ summary: 只要幾個步驟、就能開始使用Astra Control Service。
 link:set-up-google-cloud.html["深入瞭解Google Cloud需求"]。
 
 
+
+
+
+endif::gcp[]
+
+ifdef::azure[]
 
 . Microsoft Azure：
 +
@@ -41,6 +49,8 @@ link:set-up-microsoft-azure-with-amd.html["深入瞭解Microsoft Azure和Azure�
 
 
 
+
+endif::azure[]
 
 
 

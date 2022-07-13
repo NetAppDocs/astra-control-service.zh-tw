@@ -31,6 +31,8 @@ summary: 已知限制指出本產品版本不支援的平台、裝置或功能�
 
 當您在Postgres Pod上執行作業時、不應直接在Pod內連線以使用psql命令。Astra Control Service需要psql存取權限才能凍結及解出資料庫。如果有預先存在的連線、則快照、備份或複製都會失敗。
 
+ifdef::gcp[]
+
 
 
 == GKE叢集的管理限制
@@ -50,6 +52,8 @@ Astra Control Service支援一個Google Cloud Platform專案和一個服務帳�
 NetApp尚未驗證從Google Marketplace部署的應用程式。有些使用者報告在探索或備份從Google Marketplace部署的PostgreSQL、MariaDB和MySQL應用程式時發生問題。
 
 無論您使用哪種類型的應用程式搭配Astra Control Service使用、您都應該自行測試備份與還原工作流程、以確保符合災難恢復需求。
+
+endif::gcp[]
 
 
 

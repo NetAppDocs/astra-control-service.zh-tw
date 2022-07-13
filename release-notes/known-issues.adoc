@@ -22,8 +22,14 @@ summary: 已知問題可識別可能導致您無法成功使用本產品版本�
 .備份、還原及複製
 * <<Restore of an app results in PV size larger than original PV>>
 * <<App clones fail using a specific version of PostgreSQL>>
+
+
+ifdef::azure[]
+
 * <<Azure backup buckets use LRS redundancy by default>>
 
+
+endif::azure[]
 
 .其他問題
 * <<Snapshots eventually begin to fail when using external-snapshotter version 4.2.0>>
@@ -48,6 +54,8 @@ summary: 已知問題可識別可能導致您無法成功使用本產品版本�
 
 同一個叢集內的應用程式複製作業、會持續失敗、並顯示Bitnami PostgreSQL 11.5.0圖表。若要成功複製、請使用舊版或更新版本的圖表。
 
+ifdef::azure[]
+
 
 
 == Azure備份鏟斗預設使用LRS備援
@@ -57,6 +65,8 @@ summary: 已知問題可識別可能導致您無法成功使用本產品版本�
 * link:../get-started/set-up-microsoft-azure-with-amd.html["使用Azure託管磁碟來設定Microsoft Azure"]
 * link:../get-started/set-up-microsoft-azure-with-anf.html["使用Azure NetApp Files 更新功能來設定Microsoft Azure"]
 
+
+endif::azure[]
 
 
 

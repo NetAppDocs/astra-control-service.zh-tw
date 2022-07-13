@@ -17,7 +17,7 @@ summary: 如果您只是想要快速回答問題、這個常見問題集就能�
 
 == 總覽
 
-Astra Control旨在簡化Kubernetes原生應用程式的應用程式資料生命週期管理作業。Astra Control Service支援在Google Kubernetes Engine（GKE）和Azure Kubernetes Service（KS）上執行的Kubernetes叢集。
+Astra Control旨在簡化Kubernetes原生應用程式的應用程式資料生命週期管理作業。Astra Control Service支援在多個雲端供應商環境中執行的Kubernetes叢集。
 
 以下各節提供使用Astra Control時可能會遇到的其他問題解答。如需進一步的說明、請聯絡astra.feedback@netapp.com
 
@@ -51,7 +51,7 @@ Astra Control要求您在就職部分提供準確的客戶資訊。如果您提�
 
 *我正在使用免費方案、我是否會收到持續大量報銷的費用？*
 
-是的、您需要支付來自Cloud Volumes Service VMware的持續Volume的費用、這些磁碟由VMware的VMware叢集用於Google Cloud、或Azure NetApp Files 是由來自VMware的高峰叢集使用。
+是的、您將會從雲端供應商收取叢集所使用的「持續磁碟區」費用。
 
 
 
@@ -59,11 +59,13 @@ Astra Control要求您在就職部分提供準確的客戶資訊。如果您提�
 
 *在將叢集新增至Astra Control Service之前、我是否需要在叢集上安裝SCSI驅動程式？*
 
-不可以當您的叢集新增至Astra Control時、該服務會自動在Kubernetes叢集上安裝NetApp的Trident Container Storage Interface（SCSI）驅動程式。此「csi」驅動程式可用於為採用NetApp Cloud Volumes Service 支援的GKE叢集、Google Cloud和Azure NetApp Files 以「支援」技術為後盾的高點叢集、配置持續的Volume。
+不可以當您的叢集新增至Astra Control時、該服務會自動在Kubernetes叢集上安裝NetApp的Trident Container Storage Interface（SCSI）驅動程式。此驅動程式可用於為雲端供應商所支援的叢集配置持續磁碟區。
 
 *新增Astra Control Service之後、我需要將工作節點新增至叢集。我該怎麼辦？*
 
 新的工作節點可新增至現有資源池、或只要是Ubuntu映像類型、就能建立新資源池。Astra Control會自動探索這些功能。如果在Astra Control中看不到新節點、請檢查新的工作節點是否執行支援的映像類型。您也可以使用「kubectl Get nodes」命令來驗證新工作節點的健全狀況。
+
+ifdef::azure[]
 
 
 
@@ -76,6 +78,10 @@ Astra Control要求您在就職部分提供準確的客戶資訊。如果您提�
 *我可以使用Active Directory來管理高效能叢集的驗證嗎？*
 
 是的、您可以將您的高效能叢集設定為使用Azure Active Directory（Azure AD）進行驗證和身分識別管理。建立叢集時、請遵循中的指示 https://docs.microsoft.com/en-us/azure/aks/managed-aad["正式文件"^] 設定叢集使用Azure AD。您必須確保叢集符合高峰管理Azure AD整合的要求。
+
+endif::azure[]
+
+ifdef::gcp[]
 
 
 
@@ -101,6 +107,8 @@ Astra Control要求您在就職部分提供準確的客戶資訊。如果您提�
 
 否、這不是支援的組態。僅支援單一GCP專案。
 
+endif::gcp[]
+
 
 
 == 移除叢集
@@ -117,8 +125,12 @@ Astra Control要求您在就職部分提供準確的客戶資訊。如果您提�
 
 從Astra Control移除叢集不會對叢集的組態（應用程式和持續儲存）進行任何變更。在該叢集上執行的任何Astra Control快照或應用程式備份都無法還原。儲存在儲存後端內的Volume Snapshot資料將不會移除。由Astra Control所建立的持續儲存備份仍會保留在雲端供應商的物件存放區內、但無法還原。
 
+ifdef::gcp[]
+
 
 WARNING: 透過GCP刪除叢集之前、請務必先從Astra Control移除叢集。在GCP中刪除叢集時、如果叢集仍由Astra Control進行管理、可能會對Astra Control帳戶造成問題。
+
+endif::gcp[]
 
 *從Astra Control移除叢集時、是否會解除安裝Astra Trident？*
 
@@ -140,6 +152,8 @@ Astra Control不會部署應用程式。應用程式必須部署在Astra Control
 
 不可以雖然Astra Control可以探索使用非NetApp儲存設備的應用程式、但它無法管理使用非NetApp儲存設備的應用程式。
 
+ifdef::gcp[]
+
 *我看不到任何應用程式的PVCS都綁定到GCP CVS。錯誤為何？*
 
 Astra Trident操作員成功新增至Astra Control之後、將預設儲存類別設為「NetApp-CVs-perf-perf-pPremium」。當應用程式的PVCS不受限於Cloud Volumes Service Google Cloud的功能時、您可以採取幾個步驟：
@@ -148,6 +162,8 @@ Astra Trident操作員成功新增至Astra Control之後、將預設儲存類別
 * 檢查用於部署應用程式的yaml檔案或Helm圖表、查看是否定義了不同的儲存類別。
 * 請檢查以確定工作節點映像類型為Ubuntu、且NFS掛載成功。
 
+
+endif::gcp[]
 
 *停止從Astra Control管理應用程式之後、應用程式會發生什麼事？*
 

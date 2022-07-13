@@ -41,6 +41,8 @@ Astra Control Service提供三項計畫：
 
 您可以隨時升級至優質方案。升級後、Astra Control會開始向您收取帳戶中受管理的_all_應用程式的費用。前10個應用程式不會留在「免費方案」中。
 
+ifdef::gcp[]
+
 
 
 === Google Cloud帳單
@@ -54,6 +56,10 @@ Astra Control Service提供三項計畫：
 * https://cloud.google.com/storage/pricing["檢視Google Cloud儲存桶的定價詳細資料"^]。
 
 
+endif::gcp[]
+
+ifdef::azure[]
+
 
 
 === Microsoft Azure帳單
@@ -63,6 +69,8 @@ Astra Control Service提供三項計畫：
 * https://azure.microsoft.com/en-us/pricing/details/netapp["檢視Azure NetApp Files 報價詳細資料以供參考"^]。
 * https://azure.microsoft.com/en-us/pricing/details/storage/blobs["檢視Microsoft Azure Blob儲存設備的定價詳細資料"^]。
 
+
+endif::azure[]
 
 
 

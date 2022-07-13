@@ -36,7 +36,7 @@ Astra Control會持續監控您的運算狀態變更、因此您可以隨時掌�
 
 Astra Control提供兩種部署模式：
 
-* * Astra Control Service*：NetApp管理的服務、可在Google Kubernetes Engine（GKE）和Azure Kubernetes Service（KS）中、提供Kubernetes叢集的應用程式感知資料管理功能。
+* * Astra Control Service*：NetApp託管服務、可在多個雲端供應商環境中、為Kubernetes叢集提供應用程式感知資料管理功能。
 * * Astra Control Center*：自我管理的軟體、可針對在內部部署環境中執行的Kubernetes叢集、提供應用程式感知資料管理功能。
 
 
@@ -93,26 +93,43 @@ Astra Control Service是NetApp託管的雲端服務、隨時可用最新功能�
 Astra Control Service的高層級運作方式如下：
 
 * 您可以設定雲端供應商並註冊Astra帳戶、開始使用Astra Control Service。
-+
-** 對於GKE叢集、Astra Control Service使用 https://cloud.netapp.com/cloud-volumes-service-for-gcp["適用於Cloud Volumes Service Google Cloud的NetApp解決方案"^] 或Google持續磁碟做為持續磁碟區的儲存後端。
-** 對於高峰叢集、Astra Control Service使用 https://cloud.netapp.com/azure-netapp-files["Azure NetApp Files"^] 或Azure Disk Storage做為持續磁碟區的儲存後端。
 
+
+ifdef::gcp[]
+
++*適用於GKE叢集、Astra Control Service使用 https://cloud.netapp.com/cloud-volumes-service-for-gcp["適用於Cloud Volumes Service Google Cloud的NetApp解決方案"^] 或Google持續磁碟做為持續磁碟區的儲存後端。
+
+endif::gcp[]
+
+ifdef::azure[]
+
++*對於高峰叢集、Astra Control Service使用 https://cloud.netapp.com/azure-netapp-files["Azure NetApp Files"^] 或Azure Disk Storage做為持續磁碟區的儲存後端。
+
+endif::azure[]
 
 * 您將第一部Kubernetes運算新增至Astra Control Service。Astra Control Service接著會執行下列作業：
 +
 ** 在雲端供應商帳戶中建立物件存放區、以儲存備份複本。
+
+
+
+
+ifdef::azure[]
+
++在Azure中、Astra Control Service也會為Blob容器建立資源群組、儲存帳戶和金鑰。
+
+endif::azure[]
+
+* 在叢集上建立新的管理員角色和Kubernetes服務帳戶。
+* 使用新的管理員角色進行安裝 https://docs.netapp.com/us-en/trident/index.html["Astra Trident"^] 在叢集上建立一個或多個儲存類別。
+* 如果您使用雲端供應商儲存服務做為儲存後端、Astra Control Service會使用Astra Trident來為應用程式配置持續的磁碟區。
 +
-在Azure中、Astra Control Service也會為Blob容器建立資源群組、儲存帳戶和金鑰。
-
-** 在叢集上建立新的管理員角色和Kubernetes服務帳戶。
-** 使用新的管理員角色進行安裝 https://docs.netapp.com/us-en/trident/index.html["Astra Trident"^] 在叢集上建立一個或多個儲存類別。
-** 如果您使用Azure NetApp Files 適用於Cloud Volumes Service Google Cloud的支援功能作為儲存後端、Astra Control Service會使用Astra Trident來為應用程式配置持續的磁碟區。
-
-
-* 此時、您可以將應用程式新增至叢集。將在新的預設儲存類別上配置持續磁碟區。
-* 然後使用Astra Control Service來管理這些應用程式、並開始建立快照、備份和複製。
+** 此時、您可以將應用程式新增至叢集。將在新的預設儲存類別上配置持續磁碟區。
+** 然後使用Astra Control Service來管理這些應用程式、並開始建立快照、備份和複製。
 +
 Astra Control Service會持續監控您的運算狀態變更、因此您可以隨時掌握新增的應用程式。
+
+
 
 
 
