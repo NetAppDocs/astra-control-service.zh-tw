@@ -65,11 +65,23 @@ Astra Control要求您在就職部分提供準確的客戶資訊。如果您提�
 
 新的工作節點可新增至現有資源池、或只要是Ubuntu映像類型、就能建立新資源池。Astra Control會自動探索這些功能。如果在Astra Control中看不到新節點、請檢查新的工作節點是否執行支援的映像類型。您也可以使用「kubectl Get nodes」命令來驗證新工作節點的健全狀況。
 
+ifdef::aws[]
+
+
+
+== 登錄Elastic Kubernetes Service（EKS）叢集
+
+*我可以將私有EKS叢集新增至Astra Control Service嗎？*
+
+目前Astra Control Service不支援私有EKS叢集。
+
+endif::aws[]
+
 ifdef::azure[]
 
 
 
-== 登錄高效能叢集
+== 註冊Azure Kubernetes Service（KS）叢集
 
 *我可以將私有的高層叢集新增至Astra Control Service嗎？*
 
@@ -85,11 +97,11 @@ ifdef::gcp[]
 
 
 
-== 正在登錄GKE叢集
+== 註冊Google Kubernetes Engine（GKE）叢集
 
 *我可以將私有GKE叢集新增至Astra Control Service嗎？*
 
-是的、您可以將私有GKE叢集新增至Astra Control Service。若要建立Google Kubernetes Engine（GKE）私有叢集、 https://kb.netapp.com/Advice_and_Troubleshooting/Cloud_Services/Project_Astra/How_to_create_a_private_GKE_cluster_to_work_with_project_Astra["請依照此知識庫文章中的指示操作"^]。
+是的、您可以將私有GKE叢集新增至Astra Control Service。若要建立私有GKE叢集、 https://kb.netapp.com/Advice_and_Troubleshooting/Cloud_Services/Project_Astra/How_to_create_a_private_GKE_cluster_to_work_with_project_Astra["請依照此知識庫文章中的指示操作"^]。
 
 私有叢集必須具有 https://cloud.google.com/kubernetes-engine/docs/concepts/private-cluster-concept["授權網路"^] 設定為允許Astra控制IP位址：
 
@@ -134,7 +146,7 @@ endif::gcp[]
 
 *從Astra Control移除叢集時、是否會解除安裝Astra Trident？*
 
-從Astra Control移除Astra Trident時、不會從叢集解除安裝Astra Trident。
+從Astra Control移除叢集時、不會從叢集解除安裝Astra Trident。
 
 
 
@@ -143,10 +155,6 @@ endif::gcp[]
 * Astra Control是否能部署應用程式？*
 
 Astra Control不會部署應用程式。應用程式必須部署在Astra Control之外。
-
-*「探索到的應用程式」清單中未顯示「我的應用程式」。我可以檢查哪些項目來識別問題？*
-
-當*探索應用程式*中未列出應用程式時、請執行「kubectl Get pod -A | grep [pod name]」來檢查Kubernetes pod的狀態和健全狀況。如果Pod正常運作、請檢查應用程式是否列在*忽略應用程式*之下。
 
 * Astra Control能否管理非NetApp儲存設備上的應用程式？*
 

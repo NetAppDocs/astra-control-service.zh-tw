@@ -72,6 +72,19 @@ ifdef::azure[]
 
 endif::azure[]
 
+ifdef::aws[]
+
+
+
+=== Amazon Web Services帳單
+
+使用Astra Control Service管理AWS叢集時、持續磁碟區會以EBS或FSXfor NetApp為後盾ONTAP 、而應用程式的備份則儲存在AWS儲存區中。
+
+* https://aws.amazon.com/eks/pricing/["檢視Amazon Web Services的價格詳細資料"^]。
+
+
+endif::aws[]
+
 
 
 == 重要注意事項

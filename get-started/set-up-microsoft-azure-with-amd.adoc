@@ -24,7 +24,7 @@ summary: 您必須先採取幾個步驟來準備Microsoft Azure訂閱、才能�
 === 檢閱Azure Kubernetes服務的Astra Control Service要求
 
 [role="quick-margin-para"]
-確保叢集正常運作、並執行Kubernetes 1.21/x至1.23版、確保節點集區處於線上狀態並執行* Linux *等功能。 <<Azure Kubernetes Service cluster requirements,深入瞭解此步驟>>。
+確保叢集正常運作、並執行受支援版本的Kubernetes、確保節點集區已上線並執行Linux等。 <<Azure Kubernetes Service cluster requirements,深入瞭解此步驟>>。
 
 
 
@@ -60,7 +60,7 @@ summary: 您必須先採取幾個步驟來準備Microsoft Azure訂閱、才能�
 
 Kubernetes叢集必須符合下列需求、才能從Astra Control Service進行探索和管理。
 
-Kubernetes版本:: 叢集必須執行Kubernetes 1.21/x至1.23版。
+Kubernetes版本:: 叢集必須執行Kubernetes 1.21至1.24版。
 映像類型:: 所有節點集區的映像類型必須是Linux。
 叢集狀態:: 叢集必須以正常狀態執行、且至少有一個線上工作者節點、且在故障狀態下沒有工作節點。
 Azure地區:: 最佳實務做法是、您應該選擇一個支援Azure NetApp Files 此功能的區域、即使您不將其用作儲存後端。如此一Azure NetApp Files 來、如果您的效能需求改變、就能更輕鬆地將VMware用作儲存後端。 https://azure.microsoft.com/en-us/global-infrastructure/services/?products=netapp["依地區檢視Azure產品"^]。
@@ -154,7 +154,7 @@ az ad sp create-for-rbac --name service-principal-name --role contributor --scop
 az login --service-principal --username APP-ID-SERVICEPRINCIPAL --password PASSWORD --tenant TENANT-ID
 az group list --subscription SUBSCRIPTION-ID
 az aks list --subscription SUBSCRIPTION-ID
-az storage container list --subscription SUBSCRIPTION-ID
+az storage container list --account-name STORAGE-ACCOUNT-NAME
 ----
 +
 .資源群組範圍

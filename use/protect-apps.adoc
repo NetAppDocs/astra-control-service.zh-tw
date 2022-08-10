@@ -11,7 +11,7 @@ summary: 使用自動保護原則或臨機操作、拍攝快照和備份資料�
 :imagesdir: ../media/use/
 
 
-使用自動保護原則或臨機操作、拍攝快照和備份資料、保護您的應用程式。
+使用自動保護原則或臨機操作、拍攝快照和備份資料、保護您的應用程式。您可以使用Astra UI或 https://docs.netapp.com/us-en/astra-automation/index.html["Astra Control API"^] 保護應用程式。
 
 
 
@@ -23,6 +23,20 @@ _snapshot是應用程式的時間點複本、儲存在與應用程式相同的�
 
 
 CAUTION: _您必須等到最近進行備份之後、才能獲得完整保護_。這很重要、因為備份儲存在遠離持續磁碟區的物件存放區中。如果故障或意外損壞叢集及其持續儲存設備、則需要備份才能恢復。快照無法讓您恢復。
+
+
+NOTE: 如果您執行快照或備份、但作業失敗並顯示錯誤「由於內部伺服器問題而未建立資源」、請檢查以確定您使用的儲存後端已安裝正確的驅動程式。有些儲存後端需要Container Storage Interface（SCSI）驅動程式、有些則需要外部快照控制器。
+
+您可以執行下列與保護應用程式資料相關的工作：
+
+* <<Configure a protection policy>>
+* <<Create a snapshot>>
+* <<Create a backup>>
+* <<View snapshots and backups>>
+* <<Delete snapshots>>
+* <<Cancel backups>>
+* <<Delete backups>>
+
 
 
 
@@ -120,6 +134,23 @@ Astra Control會建立應用程式的備份。
 
 
 Astra Control會刪除快照。
+
+
+
+== 取消備份
+
+您可以取消進行中的備份。
+
+
+TIP: 若要取消備份、備份必須處於執行中狀態。您無法取消處於「擱置中」狀態的備份。
+
+.步驟
+. 選取*應用程式*、然後選取應用程式名稱。
+. 選擇*資料保護*。
+. 選擇*備份*。
+. 在所需備份*「Actions」（動作）*欄的「Options」（選項）功能表中、選取*「Cancel*」（取消*）。
+. 輸入「cancel」一詞以確認刪除、然後選擇「* Yes、cancel backup*（是、取消備份*）」。
+
 
 
 

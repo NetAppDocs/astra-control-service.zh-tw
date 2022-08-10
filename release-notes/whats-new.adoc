@@ -15,6 +15,66 @@ NetApp會定期更新Astra Control Service、為您提供新功能、增強功�
 
 
 
+== 2022年8月10日
+
+此版本包含下列新功能與增強功能。
+
+
+
+=== 改善應用程式管理工作流程
+
+改善的應用程式管理工作流程可在定義由Astra Control管理的應用程式時提供更高的靈活度。
+
+link:../use/manage-apps.html#manage-apps["管理應用程式"]。
+
+ifdef::aws[]
+
+
+
+=== 支援Amazon Web Services叢集
+
+Astra Control Service現在可以管理在Amazon Elastic Kubernetes服務主控叢集上執行的應用程式。您可以將叢集設定為使用Amazon Elastic Block Store或Amazon FSXfor NetApp ONTAP 支援作為儲存後端。
+
+link:../get-started/set-up-amazon-web-services.html["設定Amazon Web Services"]。
+
+endif::aws[]
+
+
+
+=== 增強的執行掛勾功能
+
+除了快照前及快照後執行掛勾之外、您現在還可以設定下列類型的執行掛勾：
+
+* 預先備份
+* 備份後
+* 還原後
+
+
+Astra Control現在支援使用相同的指令碼來處理多個執行掛勾、這是其他改善項目之一。
+
+
+NOTE: NetApp針對特定應用程式提供的預設快照前及後執行掛勾已在此版本中移除。如果您沒有提供自己的快照執行掛勾、Astra Control Service只會從2022年8月4日開始、擷取損毀一致的快照。請造訪 https://github.com/NetApp/Verda["NetApp Verda GitHub儲存庫"^] 以取得執行攔截指令碼的範例、您可以根據環境進行修改。
+
+link:../use/manage-app-execution-hooks.html["管理應用程式執行掛勾"]。
+
+ifdef::azure[]
+
+
+
+=== Azure Marketplace支援
+
+您現在可以透過Azure Marketplace註冊Astra Control Service。
+
+endif::azure[]
+
+
+
+=== 雲端供應商選擇
+
+閱讀Astra Control Service文件時、您現在可以在頁面右上角選取雲端供應商。您將會看到僅與所選雲端供應商相關的文件。
+
+
+
 == 2022年4月26日
 
 此版本包含下列新功能與增強功能。

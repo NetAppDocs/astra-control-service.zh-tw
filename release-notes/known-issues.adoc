@@ -17,11 +17,14 @@ summary: 已知問題可識別可能導致您無法成功使用本產品版本�
 
 .應用程式
 * <<App clones fail after an application is deployed with a set storage class>>
+* <<Applications page loads forever when trying to restore a deleted application>>
+* <<Unable to define an app on a namespace that has been deleted and recreated>>
 
 
 .備份、還原及複製
 * <<Restore of an app results in PV size larger than original PV>>
 * <<App clones fail using a specific version of PostgreSQL>>
+* <<App backups and snapshots fail if the volumesnapshotclass is added after a cluster is managed>>
 
 
 ifdef::azure[]
@@ -44,6 +47,18 @@ endif::azure[]
 
 
 
+== 嘗試還原刪除的應用程式時、應用程式頁面會永久載入
+
+當您嘗試使用「應用程式」頁面從刪除的叢集還原應用程式時、「應用程式」頁面永遠不會完成載入。因應措施是從應用程式清單中的應用程式「動作」功能表還原應用程式。
+
+
+
+== 無法在已刪除和重新建立的命名空間上定義應用程式
+
+如果您使用命名空間定義應用程式、刪除命名空間、然後將應用程式重新安裝到同一個命名空間、則作業會失敗並顯示錯誤代碼為409。若要使用重新建立的命名空間定義應用程式、請先刪除舊的應用程式執行個體。
+
+
+
 == 還原應用程式會導致PV大小大於原始PV
 
 如果您在建立備份之後調整持續磁碟區的大小、然後從該備份還原、則持續磁碟區大小將會與PV的新大小相符、而非使用備份的大小。
@@ -53,6 +68,12 @@ endif::azure[]
 == 使用特定版本的PostgreSQL時、應用程式複製失敗
 
 同一個叢集內的應用程式複製作業、會持續失敗、並顯示Bitnami PostgreSQL 11.5.0圖表。若要成功複製、請使用舊版或更新版本的圖表。
+
+
+
+== 如果在管理叢集之後新增volumesnapshotClass、則應用程式備份和快照將會失敗
+
+在此案例中、備份與快照會失敗、並顯示UI 500錯誤。因應措施是重新整理應用程式清單。
 
 ifdef::azure[]
 

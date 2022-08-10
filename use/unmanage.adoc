@@ -71,14 +71,4 @@ Astra Control停止管理叢集。
 
 使用上述方法之一、將會從叢集刪除對應的PV。刪除叢集之前、請先確定叢集上的NetApp儲存類別上沒有任何PV。
 
-ifdef::azure[]
-
-如果您在刪除叢集之前沒有刪除持續的磁碟區、則需要手動從Azure NetApp Files 停止功能中刪除後端磁碟區。
-
-endif::azure[]
-
-ifdef::gcp[]
-
-如果您在刪除叢集之前沒有刪除持續的磁碟區、則需要從Cloud Volumes Service 適用於Google Cloud的功能區手動刪除後端磁碟區。
-
-endif::gcp[]
+如果您在刪除叢集之前未刪除持續磁碟區、則需要從雲端供應商手動刪除後端磁碟區。

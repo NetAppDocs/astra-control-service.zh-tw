@@ -10,6 +10,9 @@ entries:
   url: "/get-started/quick-start.html"
 - title: 設定您的雲端供應商
   entries:
+  - title: 設定Amazon Web Services
+    flavor: aws
+    url: "/get-started/set-up-amazon-web-services.html"
   - title: 設定Google Cloud
     flavor: gcp
     url: "/get-started/set-up-google-cloud.html"

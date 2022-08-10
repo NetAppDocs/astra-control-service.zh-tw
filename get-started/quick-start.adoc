@@ -35,6 +35,25 @@ link:set-up-google-cloud.html["深入瞭解Google Cloud需求"]。
 
 endif::gcp[]
 
+ifdef::aws[]
+
+. Amazon網路服務：
++
+** 檢閱Amazon Web Services叢集需求。
+** 建立Amazon帳戶。
+** 安裝Amazon Web Services CLI。
+** 建立IAM使用者。
+** 建立及附加權限原則。
+** 儲存IAM使用者的認證資料。
++
+link:set-up-amazon-web-services.html["深入瞭解Amazon Web Services需求"]。
+
+
+
+
+
+endif::aws[]
+
 ifdef::azure[]
 
 . Microsoft Azure：

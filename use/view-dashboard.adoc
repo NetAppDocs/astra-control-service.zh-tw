@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: use/view-dashboard.html 
-keywords: dashboard, cluster health, unhealthy apps, protected apps, discovered apps 
+keywords: dashboard, cluster health, unhealthy apps, protected apps, managed apps 
 summary: 按一下儀表板、即可查看應用程式、叢集及其健全狀況的高層級檢視。 
 ---
 = 檢視應用程式與叢集健全狀況的摘要
@@ -19,10 +19,6 @@ summary: 按一下儀表板、即可查看應用程式、叢集及其健全狀�
 * 您目前管理的應用程式數量。
 * 這些託管應用程式是否健全。
 * 應用程式是否受到完整保護（如果有最近的備份可用、則會受到保護）。
-* 已探索但尚未管理的應用程式數量。
-+
-理想情況下、這個數字會是零、因為您會在發現應用程式之後管理或忽略這些應用程式。然後、您可以監控儀表板上探索到的應用程式數量、以識別開發人員何時將新應用程式新增至叢集。
-
 
 
 請注意、這些不只是數字或狀態、您可以從每個位置深入瞭解。例如、如果應用程式未受到完整保護、您可以將游標停留在圖示上、以識別哪些應用程式未受到完整保護、這也是原因之一。

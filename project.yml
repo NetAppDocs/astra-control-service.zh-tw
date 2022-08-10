@@ -11,12 +11,16 @@ settings:
     label: 雲端供應商
     default: 所有雲端供應商
     options:
+    - name: Amazon Web Services
+      alias: Amazon Web Services
+      id: aws
     - name: Google Cloud
       alias: Google Cloud
       id: gcp
     - name: Microsoft Azure
       alias: Azure
       id: azure
+  rss_page: release-notes/whats-new.html
   langs: zh-tw,us-en,ja-jp,zh-cn,ko-kr
 sidebar:
   entries:
@@ -28,7 +32,6 @@ sidebar:
   - title: 利用Astra Control REST API實現自動化
     url: "/automation.html"
   - section: learn
-  - section: solutions
   - section: support
   - title: 法律聲明
     url: "/legal-notices.html"
@@ -64,14 +67,6 @@ homepage:
     links:
     - title: Astra Control Service影片
       url: "/get-started/videos.html"
-    - title: 部署Jenkins
-      url: "/solutions/jenkins-deploy-from-helm-chart.html"
-    - title: 部署MariaDB
-      url: "/solutions/mariadb-deploy-from-helm-chart.html"
-    - title: 部署MySQL
-      url: "/solutions/mysql-deploy-from-helm-chart.html"
-    - title: 部署Postgres
-      url: "/solutions/postgres-deploy-from-helm-chart.html"
   - title: Astra控制中心
     links:
     - title: Astra Control Center簡介

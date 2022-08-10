@@ -4,15 +4,16 @@ title: 概念
 entries:
 - title: 架構與元件
   url: "/learn/architecture.html"
+- title: AWS叢集的儲存設備
+  flavor: aws
+  url: "/learn/aws-storage.html"
 - title: 適用於高峰叢集的儲存設備
   flavor: azure
   url: "/learn/azure-storage.html"
 - title: GKE叢集儲存設備
   flavor: gcp
   url: "/learn/choose-class-and-size.html"
-- title: 已驗證的應用程式與標準應用程式比較
-  url: "/learn/validated-vs-standard.html"
-- title: 定義自訂應用程式
-  url: "/learn/define-custom-app.html"
+- title: 瞭解應用程式管理
+  url: "/learn/app-management.html"
 - title: 使用者角色和命名空間
   url: "/learn/user-roles-namespaces.html"
