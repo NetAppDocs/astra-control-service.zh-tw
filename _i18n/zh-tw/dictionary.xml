@@ -1543,12 +1543,9 @@
   <block id="879701946bb2bc7241d0f85fd843455a" category="paragraph">endif::azure[]</block>
   <block id="310c228207a0f8446bbe4c5d16978cb7" category="paragraph">endif::gcp[]</block>
   <block id="6e1e9c83b80f4d22d34cbdf60a71383b" category="paragraph">ifdef::gcp[]</block>
-  <block id="fd047d25a2a9b2ef34ee24ff5c9ea9bf" category="list-text"><block ref="09fabaad32e4dddeaea039f6573c7c2c" category="inline-xref-macro-rx"></block></block>
   <block id="f71e012ed046328c8d64aaabfb2eaac1" category="list-text"><block ref="cbe527e26a3f74a21725a85c9fa46b07" category="inline-xref-macro-rx"></block></block>
   <block id="f4c36c8148a1c2baf23d917e226d50fa" category="list-text"><block ref="703e5962f4e6c982183fbea5d4a0ed0f" category="inline-xref-macro-rx"></block></block>
   <block id="ea9063ae1f93b97201fb6f5157ef64b8" category="paragraph">在以明確設定的儲存類別（例如「helm install ...-set globe.storageClass = NetApp-CVs-perf-Extreme」）部署應用程式之後、後續嘗試複製應用程式時、必須讓目標叢集擁有原本指定的儲存類別。將具有明確設定儲存類別的應用程式複製到沒有相同儲存類別的叢集、將會失敗。在此案例中沒有任何恢復步驟。</block>
-  <block id="b0db64e4be5840028b999177c14ba4c0" category="section-title">嘗試還原刪除的應用程式時、應用程式頁面會永久載入</block>
-  <block id="078b19fac0594ce7699c6bd310d7010f" category="paragraph">當您嘗試使用「應用程式」頁面從刪除的叢集還原應用程式時、「應用程式」頁面永遠不會完成載入。因應措施是從應用程式清單中的應用程式「動作」功能表還原應用程式。</block>
   <block id="bc2727235d82d8b7c78a69fd565295f3" category="section-title">無法在已刪除和重新建立的命名空間上定義應用程式</block>
   <block id="586ace51c405474a5c0172b8c1cf7afd" category="paragraph">如果您使用命名空間定義應用程式、刪除命名空間、然後將應用程式重新安裝到同一個命名空間、則作業會失敗並顯示錯誤代碼為409。若要使用重新建立的命名空間定義應用程式、請先刪除舊的應用程式執行個體。</block>
   <block id="3460be97ad18de8f927ac029b73aea1e" category="section-title">如果在管理叢集之後新增volumesnapshotClass、則應用程式備份和快照將會失敗</block>
@@ -1903,4 +1900,7 @@
   <block id="b45f0d80639ec80f5586318d3c5bd31d" category="sidebar">AWS叢集的儲存設備</block>
   <block id="5a81378cdc7edd9ea960cf02d6ca78d2" category="paragraph">ifdef::aws[]</block>
   <block id="6beb2fa01dc121194547db1bfbe03408" category="paragraph">endif::aws[]</block>
+  <block id="868ecbbbd8b1e28b5199c1b1690c500b" category="list-text"><block ref="9db9aa8838c1418469991d8a206fd28d" category="inline-xref-macro-rx"></block></block>
+  <block id="e43994c24bb8c97f2a5c5d923ac69298" category="section-title">當嘗試還原屬於刪除叢集的應用程式時、應用程式頁面會永久載入</block>
+  <block id="f578c128901fc5a492793e5a929e4673" category="paragraph">當您嘗試從「應用程式」頁面刪除的叢集還原應用程式時、「應用程式」頁面永遠不會完成載入。因應措施是從應用程式清單頁面的應用程式「動作」功能表還原應用程式。</block>
 </blocks>

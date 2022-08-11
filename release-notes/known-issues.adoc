@@ -17,7 +17,7 @@ summary: 已知問題可識別可能導致您無法成功使用本產品版本�
 
 .應用程式
 * <<App clones fail after an application is deployed with a set storage class>>
-* <<Applications page loads forever when trying to restore a deleted application>>
+* <<Applications page loads forever when trying to restore an application belonging to a deleted cluster>>
 * <<Unable to define an app on a namespace that has been deleted and recreated>>
 
 
@@ -47,9 +47,9 @@ endif::azure[]
 
 
 
-== 嘗試還原刪除的應用程式時、應用程式頁面會永久載入
+== 當嘗試還原屬於刪除叢集的應用程式時、應用程式頁面會永久載入
 
-當您嘗試使用「應用程式」頁面從刪除的叢集還原應用程式時、「應用程式」頁面永遠不會完成載入。因應措施是從應用程式清單中的應用程式「動作」功能表還原應用程式。
+當您嘗試從「應用程式」頁面刪除的叢集還原應用程式時、「應用程式」頁面永遠不會完成載入。因應措施是從應用程式清單頁面的應用程式「動作」功能表還原應用程式。
 
 
 
