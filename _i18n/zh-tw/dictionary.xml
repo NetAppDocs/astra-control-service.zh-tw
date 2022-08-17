@@ -1878,4 +1878,6 @@
   <block id="a13f2262ff8b5ec001ba8f41398e1a6c" category="list-text">使用者介面增強功能資料保護精靈已經過強化、易於使用。例如、我們將「保護原則」精靈精簡、以便在您定義保護排程時、更輕鬆地檢視保護排程。</block>
   <block id="aad7f3d472e654aef7d2a492a3d54210" category="list-text">活動強化我們讓您更輕鬆地檢視Astra Control帳戶中活動的詳細資料。</block>
   <block id="ca0a782901da0ca119f401851ac90842" category="paragraph"><block ref="78b785a9e2d028de12ce9f3f40284661" category="inline-link-macro-rx"></block>。</block>
+  <block id="3fc3ba3c5f20ea640e5be46d8c9ca467" category="inline-link">NetApp Astra產品系列文件</block>
+  <block id="c5bc786725b0b61976497d5d0c73be96" category="list-text"><block ref="c5bc786725b0b61976497d5d0c73be96" category="inline-link-rx"></block></block>
 </blocks>

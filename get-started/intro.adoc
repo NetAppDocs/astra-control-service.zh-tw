@@ -187,6 +187,7 @@ Astra Control Center能：
 
 == 以取得更多資訊
 
+* https://docs.netapp.com/us-en/astra-family/["NetApp Astra產品系列文件"^]
 * https://docs.netapp.com/us-en/astra/index.html["Astra Control Service文件"^]
 * https://docs.netapp.com/us-en/astra-control-center/index.html["Astra Control Center文件"^]
 * https://docs.netapp.com/us-en/astra-data-store/index.html["Astra Data Store文件"]
