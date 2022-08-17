@@ -111,6 +111,8 @@ ifdef::aws[]
 
 +*：Amazon EKS叢集、Astra Control Service使用 https://docs.aws.amazon.com/ebs/["Amazon彈性區塊存放區"^] 或 https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/what-is-fsx-ontap.html["Amazon FSX for NetApp ONTAP 產品"^] 作為持續磁碟區的儲存後端。
 
+endif::aws[]
+
 * 您將第一部Kubernetes運算新增至Astra Control Service。Astra Control Service接著會執行下列作業：
 +
 ** 在雲端供應商帳戶中建立物件存放區、以儲存備份複本。
