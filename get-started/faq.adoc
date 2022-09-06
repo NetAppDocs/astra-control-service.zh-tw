@@ -156,10 +156,6 @@ endif::gcp[]
 
 Astra Control不會部署應用程式。應用程式必須部署在Astra Control之外。
 
-* Astra Control能否管理非NetApp儲存設備上的應用程式？*
-
-不可以雖然Astra Control可以探索使用非NetApp儲存設備的應用程式、但它無法管理使用非NetApp儲存設備的應用程式。
-
 ifdef::gcp[]
 
 *我看不到任何應用程式的PVCS都綁定到GCP CVS。錯誤為何？*
