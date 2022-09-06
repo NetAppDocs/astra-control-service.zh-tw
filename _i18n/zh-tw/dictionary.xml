@@ -50,7 +50,6 @@
   <block id="d96b5fa4d8229bcf45a5dfba3e784078" category="list-text">身為NetApp的新客戶、您也需要建立NetApp支援網站（NSS）使用者帳戶、以便日後啟用支援服務、以及存取技術支援聊天室和網路票證的支援入口網站。</block>
   <block id="fbf62905ff14cf2944029e8b9424e045" category="inline-link">NetApp支援註冊網站</block>
   <block id="16500b4d92d7fea9aad49ef87d065ae4" category="paragraph">前往<block ref="bfa0ac78a1dd2e12daae29042efd9e49" category="inline-link-rx"></block> 以執行此工作。您可以提供新註冊的Astra Control序號、以加速程序。</block>
-  <block id="5bc8792f4d0618bc7421137123233c68" category="summary">NetApp以多種方式支援Astra Control。我們全年無休提供豐富的免費自助支援選項、例如知識庫（KB）文章和Slack通路。您的Astra Control帳戶透過網路票證提供遠端技術支援。</block>
   <block id="fabfc25ef8996fd90836e58a4c0b26b6" category="doc">取得協助</block>
   <block id="9f1a9252fa8e7cccfce329f81193d946" category="inline-link-macro">啟動NetApp序號支援</block>
   <block id="bc81d4a64e11b988c024ee890e91e099" category="paragraph">您必須優先 <block ref="50b527056876367f64e162872389171b" category="inline-link-macro-rx"></block> 以使用這些非自助服務支援選項。需要NetApp支援網站（NSS）SSO帳戶才能進行聊天和網路票證、以及案例管理。</block>
@@ -62,9 +61,6 @@
   <block id="1cd3b87947307e63f017eb7a59b02313" category="paragraph">搜尋與Astra Control相關的文章、常見問題集或中斷修復資訊。</block>
   <block id="5b6cf869265c13af8566f192b4ab3d2a" category="list-text">文件</block>
   <block id="9a4d3fdb6af496c18bc70f14153f8c4f" category="paragraph">這是您目前正在檢視的文件網站。</block>
-  <block id="3561f3a3c5576e2ce0dc0d1e268bb9b2" category="inline-link">可寬延</block>
-  <block id="935d650ae57bf919ec511d8f5c18b480" category="list-text"><block ref="935d650ae57bf919ec511d8f5c18b480" category="inline-link-rx"></block></block>
-  <block id="7e8d8ed6b8d09e924666569bac3e7749" category="paragraph">前往Pub工作區中的Container通路、與同儕和專家交流。</block>
   <block id="9945b7c9f8a0452d5794aa8f1b4132db" category="list-text">意見反應電子郵件</block>
   <block id="ddcadc1ed2a47b8718aecd096c744e15" category="paragraph">傳送電子郵件至astra.feedback@netapp.com、讓我們知道您的想法、想法或疑慮。</block>
   <block id="8db3548aa0cf9e934fb9643f28ae8058" category="section-title">訂閱支援</block>
@@ -1187,13 +1183,10 @@
   <block id="ef8ee09fa3337e5d951394563bcf6ba8" category="summary">以下概述Astra Control環境的各個元件。</block>
   <block id="9282ad3aef7e124a3b2b9c7eab52b33d" category="doc">架構與元件</block>
   <block id="60f694f21643599c137f6c610e48124e" category="paragraph">以下概述Astra Control環境的各個元件。</block>
-  <block id="2325c645f4d2112a8e96b127fbad7bf2" category="inline-image-macro">Astra Control架構圖與元件</block>
-  <block id="28f3b0cd697bf5f33c7eab89e20baff4" category="paragraph"><block ref="28f3b0cd697bf5f33c7eab89e20baff4" category="inline-image-macro-rx" type="image"></block></block>
   <block id="51d249216b03414f10b242b851af7951" category="section-title">Astra控制元件</block>
   <block id="a8d77bbb11d2e1a349811767d194e9ba" category="list-text">* Kubernetes叢集*：Kubernetes是可攜式、可擴充的開放原始碼平台、可用於管理容器化工作負載與服務、同時促進宣告式組態與自動化。Astra為Kubernetes叢集中託管的應用程式提供管理服務。</block>
   <block id="b11f09eb1179914138fa8f5a15ba016a" category="list-text">* Astra Trident *：Trident是完全受支援的開放原始碼儲存資源配置程式、由NetApp維護、可讓您為Docker和Kubernetes所管理的容器化應用程式建立儲存磁碟區。當您部署Astra Control Center時、Trident包含已設定ONTAP 的整套儲存後端、也支援Astra Data Store做為儲存後端。</block>
   <block id="951fe18cc6e59e05fca3c0ca7de399fa" category="list-text">*儲存後端*：</block>
-  <block id="69a0ead95fc9c4c42592c123ebbf437a" category="list-text">Astra Data Store儲存後端</block>
   <block id="fc8adf6067b9e369fbebc9abf2891bce" category="list-text">不再是儲存後端。ONTAP AFF FAS作為儲存軟體與硬體平台ONTAP 、支援核心儲存服務、支援多種儲存存取傳輸協定、以及快照與鏡射等儲存管理功能。</block>
   <block id="415ba7b6a21fb373d9c5b72207313c1c" category="list-text">*《NetApp雲端基礎架構監控工具》《支援VMware技術》*《支援架構監控工具》、可讓您監控由Astra Control Center管理的Kubernetes叢集的效能與使用率。Cloud Insights Cloud Insights可將儲存使用量與工作負載建立關聯。Cloud Insights當您在Cloud Insights Astra控制中心啟用「支援不中斷連線」時、遙測資訊會顯示在Astra控制中心UI頁面中。</block>
   <block id="de0c45e94d4b178203631d55e65d1b62" category="section-title">Astra控制介面</block>
@@ -1395,7 +1388,6 @@
   <block id="b1cb177a36a717434db632021b6d91bc" category="sidebar">MySQL DBaaas搭配Astra Control</block>
   <block id="332153f6f1b31602ac3418cdf4d18170" category="sidebar">簡化Jenkins生命週期管理</block>
   <block id="813011e2103649bb71f124adedcc10ea" category="sidebar">部落格社群</block>
-  <block id="b97c82950a650a87db9198b9545b1715" category="sidebar">可寬延的「容器」通道</block>
   <block id="36910a95584c53fdc9ed97782ef3965c" category="sidebar">Astra Control部落格</block>
   <block id="dbfc769b7e821664736a653f70155476" category="sidebar">Astra Control：簡化混合雲的應用程式資料管理</block>
   <block id="a984dc296b5a86b8097f515731aee987" category="sidebar">雲端中心的Kubernetes Hub</block>
@@ -1880,4 +1872,9 @@
   <block id="ca0a782901da0ca119f401851ac90842" category="paragraph"><block ref="78b785a9e2d028de12ce9f3f40284661" category="inline-link-macro-rx"></block>。</block>
   <block id="3fc3ba3c5f20ea640e5be46d8c9ca467" category="inline-link">NetApp Astra產品系列文件</block>
   <block id="c5bc786725b0b61976497d5d0c73be96" category="list-text"><block ref="c5bc786725b0b61976497d5d0c73be96" category="inline-link-rx"></block></block>
+  <block id="1c90591655cdfe7d885b02ed72ae2509" category="summary">NetApp以多種方式支援Astra Control。我們全年無休提供豐富的免費自助支援選項、例如知識庫（KB）文章和不和管道。您的Astra Control帳戶透過網路票證提供遠端技術支援。</block>
+  <block id="693cb2bb220908f09f97aaa6a8b56df7" category="inline-link">透過不和取得協助</block>
+  <block id="2f51207f8c21afcb21d10ae77181f276" category="list-text"><block ref="2f51207f8c21afcb21d10ae77181f276" category="inline-link-rx"></block></block>
+  <block id="157f95d9b7b20cbe9d3c3c22ffdfbe18" category="paragraph">前往「Pub」類別的Astra、與同儕和專家交流。</block>
+  <block id="d1b9bd0c14af2ff8d25891d12987a68b" category="sidebar">Astra不和通路</block>
 </blocks>

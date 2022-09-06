@@ -87,8 +87,8 @@ homepage:
       url: https://cloud.netapp.com/hubfs/SB-4100-Jenkins%20(2).pdf
   - title: 部落格社群
     links:
-    - title: 可寬延的「容器」通道
-      url: https://netapp.io/slack
+    - title: Astra不和通路
+      url: https://discord.gg/NetApp
     - title: Astra Control部落格
       url: https://cloud.netapp.com/blog/topic/astra
     - title: Astra Control：簡化混合雲的應用程式資料管理
