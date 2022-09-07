@@ -1028,8 +1028,6 @@
   <block id="f75d983d4bc87e1a244c894a4357e93a" category="section-title">管理應用程式</block>
   <block id="eaeb56aabe324b7270ae7355bb58edcb" category="paragraph">* Astra Control是否能部署應用程式？*</block>
   <block id="48df7f09a242df239385ebae869133b8" category="paragraph">Astra Control不會部署應用程式。應用程式必須部署在Astra Control之外。</block>
-  <block id="b3d3212b84b66c52decacb83fca1191d" category="paragraph">* Astra Control能否管理非NetApp儲存設備上的應用程式？*</block>
-  <block id="43c9583c5f06b5003113b84316a2a65c" category="paragraph">不可以雖然Astra Control可以探索使用非NetApp儲存設備的應用程式、但它無法管理使用非NetApp儲存設備的應用程式。</block>
   <block id="395007096dc9e0b54c09749dc82a8941" category="paragraph">*我看不到任何應用程式的PVCS都綁定到GCP CVS。錯誤為何？*</block>
   <block id="a90204b381b7967a04938156531da34e" category="paragraph">Astra Trident操作員成功新增至Astra Control之後、將預設儲存類別設為「NetApp-CVs-perf-perf-pPremium」。當應用程式的PVCS不受限於Cloud Volumes Service Google Cloud的功能時、您可以採取幾個步驟：</block>
   <block id="baaf63e6e2361e11fa4ae44151218b4e" category="list-text">執行「kubectl Get SC」、然後檢查預設的儲存類別。</block>
@@ -1285,19 +1283,15 @@
   <block id="bea0a641d1ced5fe318717eadebe7ab8" category="section-title">具有命名空間限制的成員使用者、必須先將命名空間新增至限制、才能存取複製或還原的應用程式</block>
   <block id="598d6fe4e43f08217f8edf064d9a7fa3" category="summary">NetApp會定期更新Astra Control Service、為您提供新功能、增強功能和錯誤修復。</block>
   <block id="124d123607fcd1192a3750d68c2110f7" category="doc">Astra Control Service的新功能</block>
-  <block id="67dec75e07f11637dbb129889d6bf6ae" category="section-title">2022年4月26日</block>
   <block id="40bde2f2e0e627e3fcf147169d6d315a" category="paragraph">此版本包含下列新功能與增強功能。</block>
   <block id="0097e428776046ceb8cd1fcde6d6fa2e" category="section-title">命名空間角色型存取控制（RBAC）</block>
-  <block id="d3af82049064083c07416b3ed040dba2" category="section-title">2021年12月14日</block>
   <block id="8f82aca9abb16b6ff389726d5fbe355a" category="section-title">新的儲存後端選項</block>
-  <block id="1ccff085c8843e6df85f630c0b00453e" category="section-title">2021年8月5日</block>
   <block id="40e5c10855fbafbea8290f73a6d04f70" category="section-title">2021年6月2日</block>
   <block id="0f71f0ee6bed3d528b8e76714ee6a81d" category="paragraph">此版本包含錯誤修正、以及Google Cloud支援的下列增強功能。</block>
   <block id="8527c0ab84fa8956acb7ba13d5e3ad9d" category="inline-link-macro">瞭解Astra Control Service如何使用Cloud Volumes Service 支援Google Cloud的功能作為持續磁碟區的儲存後端</block>
   <block id="033c399986bd3d9b7ef54b989611f70b" category="paragraph"><block ref="ae94f8298ace086e6c054e879241557e" category="inline-link-macro-rx"></block>。</block>
   <block id="33b49ba36195927db2411b412cfe0b4c" category="inline-link-macro">深入瞭解GKE叢集需求</block>
   <block id="94aa6fa7719fbfefbbd46c4b08c22b4b" category="paragraph"><block ref="c3bd8fba045cfa6e89cf51e6e5781d5d" category="inline-link-macro-rx"></block>。</block>
-  <block id="d969bda7dc53cca4ba270eee303936b3" category="section-title">2021年4月15日</block>
   <block id="7d782479a41a3941b57cc7c2b60d318a" category="inline-link-macro">瞭解如何開始使用</block>
   <block id="a916818021b3f228baef189d6dcd5538" category="paragraph"><block ref="bc25b49e1030874d11222c9fe6a36711" category="inline-link-macro-rx"></block>。</block>
   <block id="d0c288db47307237677ead5ae8dbf32b" category="inline-link">瞭解如何使用REST API來自動化應用程式資料生命週期管理</block>
@@ -1316,14 +1310,12 @@
   <block id="ed9548dfd7d1dc91cfcaf2dcc939a60a" category="list-text">將您的Astra Control帳戶活動下載至CSV檔案。</block>
   <block id="2dd8ae234b96a1455259ff84939f6f55" category="list-text">選取叢集或應用程式後、直接從「叢集」頁面或「應用程式」頁面檢視活動。</block>
   <block id="44a04d6eee1ac7c339c8312bc5e23831" category="inline-link-macro">深入瞭解如何檢視您的帳戶活動</block>
-  <block id="be80b8547cba74eaaaa246128e9f505b" category="section-title">2021年3月1日</block>
   <block id="176950460e5100915fe78bc4e6ffe82b" category="inline-link">_CVS_服務類型</block>
   <block id="2c86b251dbdee05a59434e44da5fb462" category="paragraph">Astra Control Service現在支援<block ref="1760b78b440a877c4a7a7d217ccc8ada" category="inline-link-rx"></block> 使用適用於Google Cloud的Cloud Volumes Service除了已支援_CVs-Performance_服務類型之外、提醒您、Astra Control Service使用Cloud Volumes Service 支援Google Cloud的功能、做為持續磁碟區的儲存後端。</block>
   <block id="429b81900737e151eef475ff31869fa3" category="inline-link">支援支援的Google Cloud地區Cloud Volumes Service</block>
   <block id="28d262f7686b19b993c8250943518a7f" category="paragraph">這項增強功能表示Astra Control Service現在可以管理在_any中執行之Kubernetes叢集的應用程式資料<block ref="69fa08b6ef6184ae8dd1a91cecb10b56" category="inline-link-rx"></block>。</block>
   <block id="b536aa5bb92e93036b2454d38b99f56f" category="inline-link-macro">深入瞭解如何選擇服務類型</block>
   <block id="7a5679db41601d3fecb409a68ce4c9b2" category="paragraph">如果您可以在Google Cloud區域之間靈活選擇、您可以根據效能需求選擇CVS或CVS效能。 <block ref="89000b13767f1a83f8086c1cc2e31c7d" category="inline-link-macro-rx"></block>。</block>
-  <block id="6be34d6a2ee1ffb3d4e2e46cce282f44" category="section-title">2021年1月25日</block>
   <block id="d13993f9f9e60a93ba268e59c921381d" category="paragraph">我們很高興宣布Astra Control Service現在已全面推出。我們採納了許多從試用版獲得的意見反應、並做了一些其他值得注意的增強功能。</block>
   <block id="f1b3e68a6481f423fd5c59659b18560d" category="inline-link-macro">深入瞭解帳單</block>
   <block id="964a70c45a61f521ea1c4cb06403d4ee" category="list-text">現在可以使用帳單、讓您從免費方案移至優質方案。 <block ref="2e7d11d76129cc6bc66120b2bffcd33e" category="inline-link-macro-rx"></block>。</block>
@@ -1332,7 +1324,6 @@
   <block id="f0823272d746557a316d9b1a6fcb7c28" category="list-text">您現在可以自行建立及刪除帳戶。</block>
   <block id="acf41b9e4222ac75667601aca8b7f0c3" category="list-text">Astra Control Service無法再存取Kubernetes叢集時、我們已改善通知功能。</block>
   <block id="80e17306b4086e61c6dfce35aec5d447" category="paragraph">這些通知非常重要、因為Astra Control Service無法管理已中斷連線叢集的應用程式。</block>
-  <block id="73980d377c8b298a2609da3a955bc2e8" category="section-title">2020年12月17日（試用版更新）</block>
   <block id="b23449f655e47c7a7c436fa04f6dda52" category="paragraph">我們主要著重於修正錯誤、以改善您的使用體驗、但我們也做了一些其他值得注意的增強功能：</block>
   <block id="1a1973d9db3099685cb4f302f3120000" category="list-text">當您將第一個Kubernetes運算新增至Astra Control Service時、物件存放區現在會建立在叢集所在的地理區中。</block>
   <block id="0f46ccf25e283000bdf73f5292b4b20e" category="list-text">當您在運算層級檢視儲存詳細資料時、現在可以取得持續磁碟區的詳細資料。</block>
@@ -1493,7 +1484,6 @@
   <block id="2628d7b5cc84b024c4b920441addcb86" category="section-title">不支援使用憑證管理程式之應用程式的就地還原作業</block>
   <block id="0d7cda4c63f06aa1eaf0682a607c5601" category="paragraph">此版Astra Control Service不支援與憑證管理員進行就地還原應用程式。支援將作業還原至不同的命名空間和複製作業。</block>
   <block id="33e9a46dfde5bb0f5a8b8327623cb998" category="paragraph">任何具有命名空間名稱/ID之RBAC限制的「成員」使用者、都可以將應用程式複製或還原到同一個叢集上的新命名空間、或是組織帳戶中的任何其他叢集。不過、相同的使用者無法存取新命名空間中的複製或還原應用程式。在複製或還原作業建立新命名空間之後、帳戶管理員/擁有者可以編輯「成員」使用者帳戶、並更新受影響使用者的角色限制、以授予新命名空間的存取權。</block>
-  <block id="99715e391085188513c21fdab4ee4d3f" category="section-title">2022年8月10日</block>
   <block id="d55b05877d0dd6743f47d3442323323e" category="inline-link-macro">設定Amazon Web Services</block>
   <block id="0a2055495a94f091655a2e4d421cffe2" category="list-text">預先備份</block>
   <block id="cf6e97e89c4b36c29252fcb7b0728d2f" category="list-text">備份後</block>
@@ -1877,4 +1867,14 @@
   <block id="2f51207f8c21afcb21d10ae77181f276" category="list-text"><block ref="2f51207f8c21afcb21d10ae77181f276" category="inline-link-rx"></block></block>
   <block id="157f95d9b7b20cbe9d3c3c22ffdfbe18" category="paragraph">前往「Pub」類別的Astra、與同儕和專家交流。</block>
   <block id="d1b9bd0c14af2ff8d25891d12987a68b" category="sidebar">Astra不和通路</block>
+  <block id="bc820d3a1aae6d8ead4b69263979fc38" category="section-title">2022年9月7日</block>
+  <block id="511d4d523a06b0375a96d77287f62ee1" category="paragraph">此版本包含Astra Control Service基礎架構的穩定性和恢復能力增強功能。</block>
+  <block id="d682eef4b137af2945bc67775777a9ae" category="section-title">2022年8月10日</block>
+  <block id="ae4d5046a6cc232f0a797ff6885ed980" category="section-title">2022年4月26日</block>
+  <block id="574a814695667d43e14497d0d18ea597" category="section-title">2021年12月14日</block>
+  <block id="bf2952986042f5403c53bded609c0d9b" category="section-title">2021年8月5日</block>
+  <block id="12b25d2d9c1a5b6acd85bf6a54697871" category="section-title">2021年4月15日</block>
+  <block id="f0f3d2a56548b1d53077b0b5eff5bb54" category="section-title">2021年3月1日</block>
+  <block id="3bdf2e1f16a21b037f1f56168c9e298b" category="section-title">2021年1月25日</block>
+  <block id="c8b4516515e1372ec542880d39c0b12d" category="section-title">2020年12月17日（試用版更新）</block>
 </blocks>

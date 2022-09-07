@@ -15,6 +15,12 @@ NetApp會定期更新Astra Control Service、為您提供新功能、增強功�
 
 
 
+== 2022年9月7日
+
+此版本包含Astra Control Service基礎架構的穩定性和恢復能力增強功能。
+
+
+
 == 2022年8月10日
 
 此版本包含下列新功能與增強功能。
