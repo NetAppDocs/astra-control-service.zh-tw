@@ -1877,4 +1877,6 @@
   <block id="f0f3d2a56548b1d53077b0b5eff5bb54" category="section-title">2021年3月1日</block>
   <block id="3bdf2e1f16a21b037f1f56168c9e298b" category="section-title">2021年1月25日</block>
   <block id="c8b4516515e1372ec542880d39c0b12d" category="section-title">2020年12月17日（試用版更新）</block>
+  <block id="2325c645f4d2112a8e96b127fbad7bf2" category="inline-image-macro">Astra Control架構圖與元件</block>
+  <block id="98918f261da964e04189c67d73791199" category="paragraph"><block ref="98918f261da964e04189c67d73791199" category="inline-image-macro-rx" type="image"></block></block>
 </blocks>
