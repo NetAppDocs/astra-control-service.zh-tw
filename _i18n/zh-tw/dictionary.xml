@@ -1459,7 +1459,6 @@
   <block id="c5e2734ed937951c4604f55129ebf6bb" category="list-text">Azure託管磁碟：不提供價格、效能或恢復能力資訊</block>
   <block id="26816f4f023579253517240a64829a70" category="list-text">* Astra Control Service*：NetApp託管服務、可在多個雲端供應商環境中、為Kubernetes叢集提供應用程式感知資料管理功能。</block>
   <block id="368def07c6bfa29b38f6913d1a01d925" category="paragraph">+*適用於GKE叢集、Astra Control Service使用<block ref="33441d63a8e7ace6860eab2024320819" category="inline-link-rx"></block> 或Google持續磁碟做為持續磁碟區的儲存後端。</block>
-  <block id="020ac10d47f71d04e485e8c8328f7cdf" category="paragraph">+*對於高峰叢集、Astra Control Service使用<block ref="16e1ab965c1d673c5cb3b5a28e77c1c1" category="inline-link-rx"></block> 或Azure Disk Storage做為持續磁碟區的儲存後端。</block>
   <block id="eb1ac977ae8f3dc0832dd982e309d50b" category="paragraph">+在Azure中、Astra Control Service也會為Blob容器建立資源群組、儲存帳戶和金鑰。</block>
   <block id="a3927a5a13e226c44dac47ff649fa5fa" category="list-text">如果您使用雲端供應商儲存服務做為儲存後端、Astra Control Service會使用Astra Trident來為應用程式配置持續的磁碟區。</block>
   <block id="47de31b9013ca59e1620936759a1c481" category="paragraph">Astra Control旨在簡化Kubernetes原生應用程式的應用程式資料生命週期管理作業。Astra Control Service支援在多個雲端供應商環境中執行的Kubernetes叢集。</block>
@@ -1882,4 +1881,5 @@
   <block id="0e7f3e02eec3115e69bf39331337aa40" category="list-text">*儲存帳戶*（僅限Azure）：輸入Azure儲存帳戶的名稱。此儲存區必須屬於名為_Astra備份rg-_的資源群組。</block>
   <block id="46c53b029194c1de2930d506c617135a" category="inline-link">Amazon文件</block>
   <block id="67923dd978919e4cfb6eefb99c5e9b2b" category="list-text">* S3伺服器名稱或IP位址*（僅限AWS）：輸入與您所在地區對應的S3端點完整網域名稱、不含「https：//」。請參閱<block ref="398d47c523652edc934ec11e2f213d87" category="inline-link-rx"></block> 以取得更多資訊。</block>
+  <block id="00aad21491943f355fbfdfc6d4402aab" category="paragraph">+*對於高峰叢集、Astra Control Service使用<block ref="16e1ab965c1d673c5cb3b5a28e77c1c1" category="inline-link-rx"></block> 或Azure託管磁碟做為持續磁碟區的儲存後端。</block>
 </blocks>

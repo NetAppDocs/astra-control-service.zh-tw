@@ -128,7 +128,7 @@ TIP: 舉例來說、您可能想要為每週有節奏的「Maria」設定備份�
 
 .您需要的是 #8217 ；需要的是什麼
 * 將Kubernetes叢集新增至Astra Control。
-* 叢集上已安裝一或多個應用程式。 <<Supported app installation methods,深入瞭解支援的應用程式安裝方法>>。
+* 叢集上已安裝一或多個應用程式。  app installation methods,深入瞭解支援的應用程式安裝方法。
 * 一個或多個作用中的Pod。
 * 在您新增至Astra Control的Kubernetes叢集上指定的命名空間。
 * （選用）Kubernetes標籤 link:../use/manage-apps.html#app-management-requirements["支援的Kubernetes資源"]。
@@ -141,8 +141,8 @@ TIP: 標籤是可指派給Kubernetes物件以供識別的金鑰/值配對。標�
 在開始之前、您也應該瞭解 link:../use/manage-apps.html#what-about-system-namespaces["管理標準和系統命名空間"]。如需如何使用Astra Control API管理應用程式的指示、請參閱 link:https://docs.netapp.com/us-en/astra-automation/["Astra Automation和API資訊"^]。
 
 .應用程式管理選項
-* <<Define resources to manage as an app>>
-* <<Define a namespace to manage as an app>>
+*  resources to manage as an app
+*  a namespace to manage as an app
 
 
 

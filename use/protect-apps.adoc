@@ -29,13 +29,13 @@ NOTE: 如果您執行快照或備份、但作業失敗並顯示錯誤「由於�
 
 您可以執行下列與保護應用程式資料相關的工作：
 
-* <<Configure a protection policy>>
-* <<Create a snapshot>>
-* <<Create a backup>>
-* <<View snapshots and backups>>
-* <<Delete snapshots>>
-* <<Cancel backups>>
-* <<Delete backups>>
+*  a protection policy
+*  a snapshot
+*  a backup
+*  snapshots and backups
+*  snapshots
+*  backups
+*  backups
 
 
 

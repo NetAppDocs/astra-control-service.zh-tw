@@ -103,7 +103,7 @@ endif::gcp[]
 
 ifdef::azure[]
 
-+*對於高峰叢集、Astra Control Service使用 https://cloud.netapp.com/azure-netapp-files["Azure NetApp Files"^] 或Azure Disk Storage做為持續磁碟區的儲存後端。
++*對於高峰叢集、Astra Control Service使用 https://cloud.netapp.com/azure-netapp-files["Azure NetApp Files"^] 或Azure託管磁碟做為持續磁碟區的儲存後端。
 
 endif::azure[]
 

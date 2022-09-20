@@ -24,21 +24,21 @@ summary: 您必須先採取幾個步驟來準備Amazon Web Services專案、才�
 === 檢閱Amazon Web Services的Astra Control Service要求
 
 [role="quick-margin-para"]
-確保叢集正常運作、並執行受支援版本的Kubernetes、工作節點上線並執行Linux或Windows等。 <<EKS cluster requirements,深入瞭解此步驟>>。
+確保叢集正常運作、並執行受支援版本的Kubernetes、工作節點上線並執行Linux或Windows等。  cluster requirements,深入瞭解此步驟。
 
 
 
 === 建立Amazon帳戶
 
 [role="quick-margin-para"]
-如果您還沒有Amazon帳戶、則需要建立帳戶、以便使用EKS。 <<Create an Amazon account,深入瞭解此步驟>>。
+如果您還沒有Amazon帳戶、則需要建立帳戶、以便使用EKS。  an Amazon account,深入瞭解此步驟。
 
 
 
 === 安裝Amazon Web Services CLI
 
 [role="quick-margin-para"]
-安裝AWS CLI、以便從命令列管理AWS。 <<Install the Amazon Web Services CLI,請依照逐步指示操作>>。
+安裝AWS CLI、以便從命令列管理AWS。  the Amazon Web Services CLI,請依照逐步指示操作。
 
 
 
@@ -48,7 +48,7 @@ summary: 您必須先採取幾個步驟來準備Amazon Web Services專案、才�
 建立Amazon身分識別與存取管理（IAM）使用者。您也可以跳過此步驟、將現有的IAM使用者與Astra Control Service搭配使用。
 
 [role="quick-margin-para"]
-<<Optional: Create an IAM user,閱讀逐步指示>>。
+ Create an IAM user,閱讀逐步指示。
 
 
 
@@ -58,7 +58,7 @@ summary: 您必須先採取幾個步驟來準備Amazon Web Services專案、才�
 建立具有Astra Control Service與AWS帳戶互動所需權限的原則。
 
 [role="quick-margin-para"]
-<<Create and attach a permissions policy,閱讀逐步指示>>。
+ and attach a permissions policy,閱讀逐步指示。
 
 
 
@@ -68,7 +68,7 @@ summary: 您必須先採取幾個步驟來準備Amazon Web Services專案、才�
 儲存IAM使用者的認證資料、以便將認證資料匯入Astra Control Service。
 
 [role="quick-margin-para"]
-<<Save the credentials for the IAM user,閱讀逐步指示>>。
+ the credentials for the IAM user,閱讀逐步指示。
 
 
 

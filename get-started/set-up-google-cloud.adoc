@@ -27,14 +27,14 @@ NOTE: 如果您並未開始使用Google Cloud Volumes Service for Google Cloud�
 === 檢閱Google Kubernetes Engine的Astra Control Service要求
 
 [role="quick-margin-para"]
-確保叢集正常運作、並執行支援的Kubernetes版本、工作節點上線並執行Container最佳化作業系統或Ubuntu等。 <<GKE cluster requirements,深入瞭解此步驟>>。
+確保叢集正常運作、並執行支援的Kubernetes版本、工作節點上線並執行Container最佳化作業系統或Ubuntu等。  cluster requirements,深入瞭解此步驟。
 
 
 
 === （選用）：購買Cloud Volumes Service 適用於Google Cloud的產品
 
 [role="quick-margin-para"]
-如果您打算將Cloud Volumes Service 適用於Google Cloud的解決方案用作儲存後端、請前往Cloud Volumes Service Google Cloud Marketplace的NetApp資訊頁面、然後選取「購買」。 <<Optional: Purchase Cloud Volumes Service for Google Cloud,深入瞭解此步驟>>。
+如果您打算將Cloud Volumes Service 適用於Google Cloud的解決方案用作儲存後端、請前往Cloud Volumes Service Google Cloud Marketplace的NetApp資訊頁面、然後選取「購買」。  Purchase Cloud Volumes Service for Google Cloud,深入瞭解此步驟。
 
 
 
@@ -60,7 +60,7 @@ NOTE: 如果您並未開始使用Google Cloud Volumes Service for Google Cloud�
 
 
 [role="quick-margin-para"]
-<<Enable APIs in your project,請依照逐步指示操作>>。
+ APIs in your project,請依照逐步指示操作。
 
 
 
@@ -82,21 +82,21 @@ NOTE: 如果您並未開始使用Google Cloud Volumes Service for Google Cloud�
 
 
 [role="quick-margin-para"]
-<<Create a service account,閱讀逐步指示>>。
+ a service account,閱讀逐步指示。
 
 
 
 === 建立服務帳戶金鑰
 
 [role="quick-margin-para"]
-為服務帳戶建立金鑰、並將金鑰檔案儲存在安全的位置。 <<Create a service account key,請依照逐步指示操作>>。
+為服務帳戶建立金鑰、並將金鑰檔案儲存在安全的位置。  a service account key,請依照逐步指示操作。
 
 
 
 === （選用）：為VPC設定網路對等關係
 
 [role="quick-margin-para"]
-如果您計畫將Cloud Volumes Service 適用於Google Cloud的功能用作儲存後端、請設定從VPC到Cloud Volumes Service 適用於Google Cloud的功能區之間的網路對等關係。 <<Optional: Set up network peering for your VPC,請依照逐步指示操作>>。
+如果您計畫將Cloud Volumes Service 適用於Google Cloud的功能用作儲存後端、請設定從VPC到Cloud Volumes Service 適用於Google Cloud的功能區之間的網路對等關係。  Set up network peering for your VPC,請依照逐步指示操作。
 
 
 
@@ -116,7 +116,7 @@ Kubernetes版本:: 叢集必須執行的Kubernetes版本範圍為1.20到1.23。
 --
 叢集狀態:: 叢集必須以正常狀態執行、且至少有一個線上工作者節點、且在故障狀態下沒有工作節點。
 Google Cloud區域:: 如果您計畫將Cloud Volumes Service 適用於Google Cloud的功能作為儲存後端、叢集必須在中執行 https://cloud.netapp.com/cloud-volumes-global-regions#cvsGc["支援Google Cloud的支援功能的Google Cloud區域Cloud Volumes Service 。"] 請注意、Astra Control Service支援CVS和CVS效能這兩種服務類型。最佳實務做法是、您應該選擇支援Cloud Volumes Service 適用於Google Cloud的地區、即使您不將其用作儲存後端。如果Cloud Volumes Service 效能需求有所改變、那麼在未來、將VMware for Google Cloud用作儲存後端、將會變得更容易。
-網路:: 如果您打算將Cloud Volumes Service for Google Cloud用作儲存後端、則叢集必須位於VPC中、且VPC必須與Cloud Volumes Service 適用於Google Cloud的不同步。 <<Optional: Set up network peering for your VPC,此步驟如下所述>>。
+網路:: 如果您打算將Cloud Volumes Service for Google Cloud用作儲存後端、則叢集必須位於VPC中、且VPC必須與Cloud Volumes Service 適用於Google Cloud的不同步。  Set up network peering for your VPC,此步驟如下所述。
 私有叢集:: 如果叢集為私有、則為 https://cloud.google.com/kubernetes-engine/docs/concepts/private-cluster-concept["授權網路"^] 必須允許Astra控制服務IP位址：
 +
 --
