@@ -1,0 +1,93 @@
+---
+sidebar: sidebar 
+permalink: get-started/manage-private-cluster.html 
+keywords: discover private cluster, add cluster, add kubernetes cluster, private, discover kubernetes cluster, add private cluster 
+summary: 設定環境之後、您就可以建立Kubernetes叢集、然後將其新增至Astra Control Service。 
+---
+= 從Astra Control Service管理私有叢集
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/get-started/
+
+
+[role="lead"]
+您可以使用Astra Control Service來管理私有的高可用性叢集。這些指示假設您已建立私有的高效能叢集、並準備好安全的方法來遠端存取；如需建立及存取私有高效能叢集的詳細資訊、請參閱 https://docs.microsoft.com/azure/aks/private-clusters["Azure文件"^]。
+
+*  the Astra Connector operator
+*  up persistent storage
+*  the private cluster to Astra Control Service
+
+
+
+
+== 安裝Astra Connector運算子
+
+您需要在私有的Astra叢集上安裝Astra Connector運算子。如果您使用的是堡壘主機、請從堡壘主機的命令列發出這些命令。
+
+.步驟
+. 複製Astra Connector運算子GitHub儲存庫：
++
+[source, sh]
+----
+git clone https://github.com/NetApp/astra-connector-operator.git
+----
+. 將目錄變更為解壓縮的運算子套件的最上層、以便使用「ls」命令查看「astraconnecor_opiler.yaml」檔案。
+. 為Astra Connector運算子建立命名空間。
++
+[source, sh]
+----
+kubectl create ns astra-connector-operator
+----
+. 將「astraconnecor_toper.yaml」檔案套用到運算子命名空間。
++
+[source, sh]
+----
+kubectl apply -f astraconnector_operator.yaml -n astra-connector-operator
+----
+. 為私有叢集元件建立命名空間。
++
+[source, sh]
+----
+kubectl create ns astra-connector
+----
+. 使用中的指示產生Astra Control API權杖 https://docs.netapp.com/us-en/astra-automation/get-started/get_api_token.html["Astra Automation文件"^]。
+. 修改Astra Connector運算程式儲存庫組態/範例目錄中的範例組態檔、以符合您的需求。
+. 套用Astra Connector自訂資源定義（CRD）。
++
+[source, sh]
+----
+kubectl apply -f config/samples/astraconnector_v1.yaml -n astra-connector
+----
+. 檢查Astra Connector的狀態。
++
+[source, sh]
+----
+kubectl get astraconnector astra-connector -n astra-connector
+----
++
+您應該會看到類似下列的輸出：
+
++
+[source, sh]
+----
+NAME              REGISTERED   ASTRACONNECTORID
+astra-connector   true         22b839aa-8b85-445a-85dd-0b1f53b5ea19
+----
+
+
+
+
+== 設定持續儲存
+
+設定叢集的持續儲存設備。您可以使用Azure NetApp Files 由NetApp或Azure管理的磁碟。如需使用下列選項設定Azure的詳細資訊、請參閱入門文件：
+
+* https://docs.netapp.com/us-en/astra-control-service/get-started/set-up-microsoft-azure-with-anf.html["使用Azure NetApp Files 更新功能來設定Microsoft Azure"]
+* https://docs.netapp.com/us-en/astra-control-service/get-started/set-up-microsoft-azure-with-amd.html["使用Azure託管磁碟來設定Microsoft Azure"]
+
+
+
+
+== 將私有叢集新增至Astra Control Service
+
+您現在可以將私有的Astra叢集新增至Astra Control Service。遵循標準工作流程、將叢集新增至Astra Control Service： https://docs.netapp.com/us-en/astra-control-service/get-started/add-first-cluster.html["從Astra Control Service開始管理Kubernetes叢集"]。

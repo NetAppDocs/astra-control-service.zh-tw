@@ -63,7 +63,7 @@ Astra Control具備下列應用程式管理需求：
 
 * *資訊清單檔案*：Astra Control支援使用KUbectl從資訊清單檔案安裝的應用程式。例如：
 +
-[listing]
+[source, sh]
 ----
 kubectl apply -f myapp.yaml
 ----

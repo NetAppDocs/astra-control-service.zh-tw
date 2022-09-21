@@ -18,13 +18,6 @@ summary: 設定環境之後、您就可以建立Kubernetes叢集、然後將其�
 *  managing Kubernetes clusters
 
 
-ifdef::azure[]
-
-*  a private cluster
-
-
-endif::azure[]
-
 ifdef::aws[]
 
 *  cluster access to other users
@@ -219,58 +212,6 @@ endif::aws[]
 
 Astra Control Service會在合格的叢集上建立物件存放區以供應用程式備份、在叢集上建立管理員帳戶、並設定您指定的預設儲存類別。此程序可能需要5分鐘的時間。
 
-ifdef::azure[]
-
-
-
-== 管理私有叢集
-
-您可以使用Astra Control Service來管理私有的高可用性叢集。若要這麼做、您必須在私有的Astra服務叢集上安裝Astra Connector運算子。您可以在新增叢集以進行管理之前、或在系統提示時新增叢集的過程中完成此步驟。
-
-.步驟
-. 為Astra Connector運算子建立命名空間。
-+
-[listing]
-----
-kubectl create ns astra-connector-operator
-----
-. 將「astraconnecor_toper.yaml」檔案套用到運算子命名空間。
-+
-[listing]
-----
-kubectl apply -f astraconnector_operator.yaml -n astra-connector-operator
-----
-. 為私有叢集元件建立命名空間。
-+
-[listing]
-----
-kubectl create ns astra-connector
-----
-. 套用Astra Connector自訂資源定義（CRD）。
-+
-[listing]
-----
-kubectl apply -f config/samples/astraconnector_v1.yaml -n astra-connector
-----
-. 檢查Astra Connector的狀態。
-+
-[listing]
-----
-kubectl get astraconnector astra-connector -n astra-connector
-----
-+
-您應該會看到類似下列的輸出：
-
-+
-[listing]
-----
-NAME              REGISTERED   ASTRACONNECTORID
-astra-connector   true         22b839aa-8b85-445a-85dd-0b1f53b5ea19
-----
-
-
-endif::azure[]
-
 ifdef::aws[]
 
 
@@ -297,3 +238,14 @@ endif::aws[]
 . 針對您要設為預設的儲存類別、選取「*動作*」功能表。
 . 選擇*設為預設*。
 
+
+ifdef::azure[]
+
+
+
+== 以取得更多資訊
+
+* link:manage-private-cluster.html["管理私有叢集"]
+
+
+endif::azure[]

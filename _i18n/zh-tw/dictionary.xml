@@ -654,7 +654,6 @@
   <block id="dfcef21edccf773f1b20e5811f0fb5ba" category="list-text">*審查與核准*：檢閱組態詳細資料、然後選取*新增叢集*。</block>
   <block id="e58ad76e34d50bf44f9e038d674c2fb9" category="paragraph">Astra Control Service會在合格的叢集上建立物件存放區以供應用程式備份、在叢集上建立管理員帳戶、並設定您指定的預設儲存類別。此程序可能需要5分鐘的時間。</block>
   <block id="e2422705f78eff49e43f16a31a8f0847" category="section-title">管理私有叢集</block>
-  <block id="e3b8879cdcd728379544300db10524e6" category="paragraph">您可以使用Astra Control Service來管理私有的高可用性叢集。若要這麼做、您必須在私有的Astra服務叢集上安裝Astra Connector運算子。您可以在新增叢集以進行管理之前、或在系統提示時新增叢集的過程中完成此步驟。</block>
   <block id="37d0b0adf169e682e19c955d0cd73c29" category="list-text">為Astra Connector運算子建立命名空間。</block>
   <block id="38da14ec20cf0841c7dc45fab0adbf07" category="list-text">將「astraconnecor_toper.yaml」檔案套用到運算子命名空間。</block>
   <block id="48812784c9e7b02bc76402c5a0c3ca10" category="list-text">為私有叢集元件建立命名空間。</block>
@@ -1492,7 +1491,6 @@
   <block id="26ae3a5d2c5a3a4f3c4f0b04cfffc752" category="admonition">NetApp針對特定應用程式提供的預設快照前及後執行掛勾已在此版本中移除。如果您沒有提供自己的快照執行掛勾、Astra Control Service只會從2022年8月4日開始、擷取損毀一致的快照。請造訪<block ref="69dbcb4811fc57c117bef8c6ba2044f3" category="inline-link-rx"></block> 以取得執行攔截指令碼的範例、您可以根據環境進行修改。</block>
   <block id="adabbba2cda50397a2a91db015a0fb30" category="list-text"><block ref="f2d47b38ed223b066a7a87406f2f9770" category="inline-xref-macro-rx"></block></block>
   <block id="d78023f397f8f2b4e5064ff5b049c27d" category="list-text"><block ref="fedf37c1e98889c2b8f08b9cf9723656" category="inline-xref-macro-rx"></block></block>
-  <block id="b298fe033ee9c6e6fa6b70e12da0ba4c" category="list-text"><block ref="4acbdba125acbc504ebdea4084fa75ab" category="inline-xref-macro-rx"></block></block>
   <block id="ed7291e973c048296182e3f6f96d78cc" category="list-text"><block ref="1ec2d3ec46ffecb37d7f6e133c4431da" category="inline-xref-macro-rx"></block></block>
   <block id="5f058e70cc3d142ad7669a7f04b97b31" category="list-text"><block ref="5b6a21e2a1084a5e4b159e62f7829741" category="inline-xref-macro-rx"></block></block>
   <block id="630a415dcb42ff22d041d168cc5afc59" category="inline-link-macro">Amazon Elastic Kubernetes服務（EKS）的Astra控制服務要求</block>
@@ -1882,4 +1880,25 @@
   <block id="46c53b029194c1de2930d506c617135a" category="inline-link">Amazon文件</block>
   <block id="67923dd978919e4cfb6eefb99c5e9b2b" category="list-text">* S3伺服器名稱或IP位址*（僅限AWS）：輸入與您所在地區對應的S3端點完整網域名稱、不含「https：//」。請參閱<block ref="398d47c523652edc934ec11e2f213d87" category="inline-link-rx"></block> 以取得更多資訊。</block>
   <block id="00aad21491943f355fbfdfc6d4402aab" category="paragraph">+*對於高峰叢集、Astra Control Service使用<block ref="16e1ab965c1d673c5cb3b5a28e77c1c1" category="inline-link-rx"></block> 或Azure託管磁碟做為持續磁碟區的儲存後端。</block>
+  <block id="2e0924d60f841b17b95f6a2808bdd804" category="doc">從Astra Control Service管理私有叢集</block>
+  <block id="3cedfb797d3e1bc073ba2b0b4d2502cf" category="inline-link">Azure文件</block>
+  <block id="c8fcc51aeb3108d7803f70ec023b3a68" category="paragraph">您可以使用Astra Control Service來管理私有的高可用性叢集。這些指示假設您已建立私有的高效能叢集、並準備好安全的方法來遠端存取；如需建立及存取私有高效能叢集的詳細資訊、請參閱<block ref="bfdd887fc5c3338c9209fd10a121cfd7" category="inline-link-rx"></block>。</block>
+  <block id="9e4605ceac83f35027fa891eaf2bb9eb" category="list-text"><block ref="05078d418bde535da37d6932b80e8a20" category="inline-xref-macro-rx"></block></block>
+  <block id="e8ce2464bf37469ae2c62738acfbb711" category="list-text"><block ref="5e32b52882fb881cccde1bbea6854039" category="inline-xref-macro-rx"></block></block>
+  <block id="4279e57b0ffd5584ad9180bad366d154" category="list-text"><block ref="a43da73cfccd4e57608242913dee505f" category="inline-xref-macro-rx"></block></block>
+  <block id="18b73e29f7da6f9330f1f9e4d3b28341" category="section-title">安裝Astra Connector運算子</block>
+  <block id="3538cec9c84a6b7ba08b5071675736bd" category="paragraph">您需要在私有的Astra叢集上安裝Astra Connector運算子。如果您使用的是堡壘主機、請從堡壘主機的命令列發出這些命令。</block>
+  <block id="756856619863426af3279d53a81b018d" category="list-text">複製Astra Connector運算子GitHub儲存庫：</block>
+  <block id="a968d335ed6555127f3fbdb020cecd5f" category="list-text">將目錄變更為解壓縮的運算子套件的最上層、以便使用「ls」命令查看「astraconnecor_opiler.yaml」檔案。</block>
+  <block id="e36d851dc2ff79e16c7cfbbb4e4fbe97" category="inline-link">Astra Automation文件</block>
+  <block id="e9c498c38ce73fcff282ff152abd7d47" category="list-text">使用中的指示產生Astra Control API權杖<block ref="c02899be0babfb1350e3b2576a6e8c97" category="inline-link-rx"></block>。</block>
+  <block id="70160237033add78fccb2b80be4b76e6" category="list-text">修改Astra Connector運算程式儲存庫組態/範例目錄中的範例組態檔、以符合您的需求。</block>
+  <block id="61ddd26ba79b5e63c1e52be1beb28889" category="section-title">設定持續儲存</block>
+  <block id="238fef6639bfc4fa1851b172d5f2391f" category="paragraph">設定叢集的持續儲存設備。您可以使用Azure NetApp Files 由NetApp或Azure管理的磁碟。如需使用下列選項設定Azure的詳細資訊、請參閱入門文件：</block>
+  <block id="395e3e6bfbbde5a5e2d5c7679dcc81e9" category="list-text"><block ref="395e3e6bfbbde5a5e2d5c7679dcc81e9" category="inline-link-rx"></block></block>
+  <block id="19d863b4572c9f53c276383bbf2540e0" category="list-text"><block ref="19d863b4572c9f53c276383bbf2540e0" category="inline-link-rx"></block></block>
+  <block id="1cef3f8b6a3670bf3c09d6cab3c3c3d1" category="section-title">將私有叢集新增至Astra Control Service</block>
+  <block id="d33c63b2eec196ebbb8a7cfc84258759" category="paragraph">您現在可以將私有的Astra叢集新增至Astra Control Service。遵循標準工作流程、將叢集新增至Astra Control Service：<block ref="240044c611ecbc1dfa48c963d44f13ca" category="inline-link-rx"></block>。</block>
+  <block id="e722e71a936852b8a6cd89cd5c31feb9" category="list-text"><block ref="e722e71a936852b8a6cd89cd5c31feb9" category="inline-link-macro-rx"></block></block>
+  <block id="b0a64c8dbe133ff5b49120ddb00f788a" category="sidebar">管理私有叢集</block>
 </blocks>

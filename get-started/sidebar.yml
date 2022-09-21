@@ -26,6 +26,8 @@ entries:
   url: "/get-started/register.html"
 - title: 管理叢集
   url: "/get-started/add-first-cluster.html"
+- title: 管理私有叢集
+  url: "/get-started/manage-private-cluster.html"
 - title: 接下來呢？
   url: "/get-started/whats-next.html"
 - title: 影片
