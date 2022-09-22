@@ -98,3 +98,4 @@ homepage:
 product-family:
   name: Astra
   repo: astra-family
+  sidebar_label: 所有Astra文件

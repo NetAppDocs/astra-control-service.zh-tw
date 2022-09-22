@@ -1901,4 +1901,5 @@
   <block id="d33c63b2eec196ebbb8a7cfc84258759" category="paragraph">您現在可以將私有的Astra叢集新增至Astra Control Service。遵循標準工作流程、將叢集新增至Astra Control Service：<block ref="240044c611ecbc1dfa48c963d44f13ca" category="inline-link-rx"></block>。</block>
   <block id="e722e71a936852b8a6cd89cd5c31feb9" category="list-text"><block ref="e722e71a936852b8a6cd89cd5c31feb9" category="inline-link-macro-rx"></block></block>
   <block id="b0a64c8dbe133ff5b49120ddb00f788a" category="sidebar">管理私有叢集</block>
+  <block id="f21f22dde0e0692333a7a28cce456b08" category="sidebar">所有Astra文件</block>
 </blocks>
