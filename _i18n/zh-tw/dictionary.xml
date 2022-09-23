@@ -1875,7 +1875,6 @@
   <block id="3bdf2e1f16a21b037f1f56168c9e298b" category="section-title">2021年1月25日</block>
   <block id="c8b4516515e1372ec542880d39c0b12d" category="section-title">2020年12月17日（試用版更新）</block>
   <block id="2325c645f4d2112a8e96b127fbad7bf2" category="inline-image-macro">Astra Control架構圖與元件</block>
-  <block id="98918f261da964e04189c67d73791199" category="paragraph"><block ref="98918f261da964e04189c67d73791199" category="inline-image-macro-rx" type="image"></block></block>
   <block id="0e7f3e02eec3115e69bf39331337aa40" category="list-text">*儲存帳戶*（僅限Azure）：輸入Azure儲存帳戶的名稱。此儲存區必須屬於名為_Astra備份rg-_的資源群組。</block>
   <block id="46c53b029194c1de2930d506c617135a" category="inline-link">Amazon文件</block>
   <block id="67923dd978919e4cfb6eefb99c5e9b2b" category="list-text">* S3伺服器名稱或IP位址*（僅限AWS）：輸入與您所在地區對應的S3端點完整網域名稱、不含「https：//」。請參閱<block ref="398d47c523652edc934ec11e2f213d87" category="inline-link-rx"></block> 以取得更多資訊。</block>
@@ -1902,4 +1901,5 @@
   <block id="e722e71a936852b8a6cd89cd5c31feb9" category="list-text"><block ref="e722e71a936852b8a6cd89cd5c31feb9" category="inline-link-macro-rx"></block></block>
   <block id="b0a64c8dbe133ff5b49120ddb00f788a" category="sidebar">管理私有叢集</block>
   <block id="f21f22dde0e0692333a7a28cce456b08" category="sidebar">所有Astra文件</block>
+  <block id="3b21110a90480d802de559fc751fede8" category="paragraph"><block ref="3b21110a90480d802de559fc751fede8" category="inline-image-macro-rx" type="image"></block></block>
 </blocks>
