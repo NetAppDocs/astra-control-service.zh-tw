@@ -1,0 +1,34 @@
+---
+sidebar: sidebar 
+permalink: use/monitor-running-tasks.html 
+keywords: activity, log, activities, running, tasks, monitor, status, state 
+summary: 您可以檢視Astra Control中執行工作的詳細資料。例如、當您執行快照、備份或複製時。 
+---
+= 監控執行中的工作
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/use/
+
+
+[role="lead"]
+您可以在Astra Control中檢視過去24小時內已完成、失敗或已取消的執行工作和工作詳細資料。例如、您可以檢視執行中備份、還原或複製作業的狀態、並查看完成百分比和預估剩餘時間等詳細資料。您可以檢視已執行的排程作業或手動啟動的作業狀態。
+
+檢視執行中或完成的工作時、您可以展開工作詳細資料、以查看每個子工作的狀態。工作進度列會顯示綠色、代表進行中或已完成的工作、藍色代表已取消的工作、紅色代表因錯誤而失敗的工作。
+
+
+NOTE: 對於複製作業、工作子任務包含快照和快照還原作業。
+
+如需失敗工作的詳細資訊、請參閱 link:monitor-account-activity.html["監控帳戶活動"]。
+
+.步驟
+. 當工作正在執行時、請前往*應用程式*。
+. 從清單中選取應用程式名稱。
+. 在應用程式的詳細資料中、選取*工作*索引標籤。
++
+您可以檢視目前或過去工作的詳細資料、並依工作狀態篩選。
+
+
+
+
+NOTE: 工作會保留在*工作*清單中長達24小時。您可以使用設定此限制和其他工作監控設定 https://docs.netapp.com/us-en/astra-automation/["Astra Control API"^]。

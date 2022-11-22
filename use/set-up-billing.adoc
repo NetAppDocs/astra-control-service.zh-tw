@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: use/set-up-billing.html 
 keywords: billing, set up billing, payments, set up payments, credit card, update credit card, change credit card, free plan, free trial, premium, premium plan 
-summary: Astra Control的免費方案可讓您管理帳戶中最多10個應用程式。如果您想要管理10個以上的應用程式、則必須將「免費方案」升級為「優質方案」、以設定帳單。 
+summary: Astra Control Service提供兩種命名空間計費方式。免費方案可讓您管理帳戶中最多10個應用程式。如果您想要管理10個以上的命名空間、則需要從「免費方案」升級至「優質方案」、以設定帳單。或者、您也可以透過Azure或AWS市場來管理Azure或AWS的帳單。 
 ---
 = 設定帳單
 :hardbreaks:
@@ -11,7 +11,10 @@ summary: Astra Control的免費方案可讓您管理帳戶中最多10個應用�
 :imagesdir: ../media/use/
 
 
-Astra Control的免費方案可讓您管理帳戶中最多10個應用程式。如果您想要管理10個以上的應用程式、則必須將「免費方案」升級為「優質方案」、以設定帳單。
+[role="lead"]
+您可以使用多種方法來管理Astra Control Service帳戶帳單。如果您使用Azure或Amazon AWS、可以透過Microsoft Azure Marketplace或AWS Marketplace訂閱Astra Control Service方案。執行此動作時、您可以透過Marketplace管理帳單詳細資料。或者、您也可以直接向NetApp訂閱。如果您直接向NetApp訂閱、您可以透過Astra Control Service管理帳單詳細資料。如果您在未訂閱的情況下使用Astra Control Service、系統會自動訂閱免費方案。
+
+Astra Control Service Free Plan可讓您管理帳戶中最多10個命名空間。如果您想要管理10個以上的命名空間、則必須從「免費方案」升級至「優質方案」、或透過Azure Marketplace或AWS Marketplace訂閱、以設定帳單。
 
 
 
@@ -25,9 +28,9 @@ Astra Control的免費方案可讓您管理帳戶中最多10個應用程式。�
 
 Astra Control Service提供三項計畫：
 
-免費方案:: 免費管理最多10個應用程式。
-優質PayGo:: 管理無限數量的應用程式、每個應用程式每分鐘收費$.005。
-優質訂閱:: 以折扣價預先付款、每年訂閱一次、可讓您管理每個應用程式套件最多10個應用程式。請聯絡NetApp銷售人員、視組織需求購買任意數量的套件、例如購買3個套件、即可從Astra Control Service管理30個應用程式。如果您管理的應用程式數量超過年度訂閱所允許的數量、則每個應用程式的超額使用率將高達每分鐘$0.005（與Premium PayGo相同）。
+免費方案:: 免費管理最多10個命名空間。
+優質PayGo:: 以每小時特定的速率、每個命名空間管理無限數量的命名空間。
+優質訂閱:: 以折扣率預先付費、每年訂閱一次、每個_namespace Pack_最多可管理10個命名空間。請聯絡NetApp銷售人員、以根據貴組織的需求購買任意數量的套件。例如、從Astra Control Service購買3個套件來管理30個命名空間。如果您管理的命名空間超過一年訂閱所允許的數量、則您將依照訂閱相依的超額使用率（每個額外命名空間）收取費用。
 +
 --
 如果您還沒有Astra Control帳戶、購買Premium訂閱會自動為您建立Astra Control帳戶。如果您有現有的免費方案、系統會自動將您轉換為「優質訂閱」。
@@ -35,11 +38,11 @@ Astra Control Service提供三項計畫：
 --
 
 
-當您建立Astra Control帳戶時、系統會自動為您註冊免費方案。Astra Control的儀表板顯示您目前在10個免費應用程式中管理的應用程式數量。
+當您建立Astra Control帳戶時、系統會自動訂閱免費方案。Astra Control的儀表板會顯示您目前在允許的10個可用命名空間中管理多少個命名空間。當管理第一個包含命名空間的應用程式時、就會開始為命名空間計費、當包含命名空間的最後一個應用程式未受管理時、就會停止為該命名空間計費。
 
-如果您嘗試管理第11個應用程式、Astra Control會通知您已達到「免費方案」的上限。接著會提示您從「免費方案」升級至「優質方案」。
+如果您嘗試管理第11個命名空間、Astra Control會通知您已達到Free Plan的上限。接著會提示您從「免費方案」升級至「優質方案」。每個額外命名空間的訂閱相依超額率將會對您收費。
 
-您可以隨時升級至優質方案。升級後、Astra Control會開始向您收取帳戶中受管理的_all_應用程式的費用。前10個應用程式不會留在「免費方案」中。
+您可以隨時升級至優質方案。升級後、Astra Control會開始為帳戶中的_all_命名空間收取費用。前10個命名空間未納入免費方案。
 
 ifdef::gcp[]
 
@@ -87,25 +90,39 @@ endif::aws[]
 
 
 
-== 重要注意事項
+== 在Azure Marketplace訂閱Astra Control服務
 
-* 您的計費計畫依Astra Control帳戶計算。
-+
-如果您有多個帳戶、則每個帳戶都有自己的計費計畫。
+您可以使用Azure Marketplace訂閱Astra Control Service。您的帳戶和帳單詳細資料可透過Marketplace進行管理。
 
-* 您的Astra Control費用包含管理Kubernetes應用程式的費用。您需要由雲端供應商另行付費、以取得持續磁碟區的儲存後端。
-+
-link:../get-started/intro.html["深入瞭解Astra Control定價"]。
-
-* 每個計費期間都會在每月的最後一天結束。
-* 您無法從優質方案降級為免費方案。
+.步驟
+. 前往 https://azuremarketplace.microsoft.com/en-us/marketplace/apps/netapp.netapp-astra-acs?tab=Overview["Azure Marketplace"^]。
+. 選擇*立即取得*。
+. 請依照指示訂閱計畫。
 
 
 
 
-== 從「免費方案」升級至「優質PayGo方案」
+== 在AWS Marketplace訂閱Astra Control服務
 
-隨時升級您的計費計畫、即可開始使用Astra Control管理10多個應用程式、而且您可以隨需付費。您只需要一張有效的信用卡。
+您可以使用AWS Marketplace訂閱Astra Control Service。您的帳戶和帳單詳細資料可透過Marketplace進行管理。
+
+.步驟
+. 前往 https://aws.amazon.com/marketplace/["AWS Marketplace"^]。
+. 選擇*繼續訂閱*。
+. 請依照指示訂閱計畫。
+
+
+
+
+== 直接向NetApp訂閱Astra Control Service
+
+您可以從Astra Control Service UI或聯絡NetApp銷售人員、訂閱Astra Control Service。
+
+
+
+=== 從「免費方案」升級至「優質PayGo方案」
+
+隨時升級您的計費計畫、開始使用隨付隨付的方式、從Astra Control管理10個以上的命名空間。您只需要一張有效的信用卡。
 
 .步驟
 . 選擇* Account（帳戶）*、然後選擇* Billing（計費）*。
@@ -117,11 +134,11 @@ NOTE: 若信用卡即將到期、Astra Control將會寄送電子郵件給您。
 
 
 
-您現在可以管理10多個應用程式。Astra Control開始為您目前管理的_all_應用程式充電。
+您現在可以管理10個以上的命名空間。Astra Control開始為您目前管理的_all_命名空間充電。
 
 
 
-== 從「免費方案」升級至「優質訂閱」
+=== 從「免費方案」升級至「優質訂閱」
 
 請聯絡NetApp銷售人員、以每年訂閱的折扣率預付費用。
 
@@ -131,22 +148,22 @@ NOTE: 若信用卡即將到期、Astra Control將會寄送電子郵件給您。
 . 請提供詳細資料給銷售團隊、以開始流程。
 
 
-NetApp銷售代表將與您聯絡、以處理您的訂單。訂單完成後、Astra Control會在「帳單」索引標籤上反映您目前的計畫。
+NetApp銷售代表將與您聯絡、以處理您的訂單。訂單完成後、Astra Control會在* Billing（計費）*標籤上反映您目前的計畫。
 
 
 
 == 檢視您目前的成本和帳單記錄
 
-Astra Control會顯示您目前的每月成本、以及應用程式的詳細帳單記錄。
+Astra Control會顯示您目前的每月成本、以及命名空間的詳細帳單記錄。如果您透過Marketplace訂閱計畫、則不會顯示計費記錄（但您可以登入Marketplace來檢視）。
 
 .步驟
 . 選擇* Account（帳戶）*、然後選擇* Billing（計費）*。
 +
 您目前的成本會顯示在帳單總覽下方。
 
-. 若要依應用程式檢視帳單記錄、請選取*帳單記錄*。
+. 若要依命名空間檢視帳單記錄、請選取*帳單記錄*。
 +
-Astra Control會顯示每個應用程式的使用時間和成本。使用分鐘數是指在計費期間、Astra Control管理您應用程式的分鐘數。
+Astra Control會顯示每個命名空間的使用時間和成本。使用分鐘數是指在計費期間、Astra Control管理命名空間的分鐘數。
 
 . 選取下拉式清單以選取上個月。
 
@@ -161,4 +178,20 @@ Astra Control會顯示每個應用程式的使用時間和成本。使用分鐘�
 . 選擇*帳戶>帳單>付款方式*。
 . 選取「組態」圖示。
 . 修改信用卡。
+
+
+
+
+== 重要注意事項
+
+* 您的計費計畫依Astra Control帳戶計算。
++
+如果您有多個帳戶、則每個帳戶都有自己的計費計畫。
+
+* 您的Astra Control帳單包含管理命名空間的費用。您的雲端供應商會為持續磁碟區的儲存後端另行收費。
++
+link:../get-started/intro.html["深入瞭解Astra Control定價"]。
+
+* 每個計費期間都會在每月的最後一天結束。
+* 您無法從優質方案降級為免費方案。
 

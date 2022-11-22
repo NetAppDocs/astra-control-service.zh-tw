@@ -18,11 +18,11 @@ summary: 說明Astra Control中的託管應用程式類型。
 +
 image:diagram-managed-app1.png["顯示Astra管理命名空間中所有資源的概念性映像。"]
 
-* 部署在命名空間內的個別應用程式（本範例使用Helm 3）
+* 部署在一個或多個命名空間內的個別應用程式（本範例使用Helm 3）
 +
 image:diagram-managed-app2.png["顯示Astra管理部署在包含其他應用程式之命名空間中的個別應用程式的概念性映像。"]
 
-* 命名空間內Kubernetes標籤所識別的一組資源
+* 一組資源、由一個或多個命名空間內的Kubernetes標籤識別
 +
 image:diagram-managed-app3.png["顯示Astra根據Kubernetes標籤管理自訂應用程式的概念性映像。"]
 

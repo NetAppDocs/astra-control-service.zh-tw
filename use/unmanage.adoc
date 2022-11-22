@@ -11,6 +11,7 @@ summary: 從Astra Control移除不再需要管理的任何應用程式或叢集�
 :imagesdir: ../media/use/
 
 
+[role="lead"]
 從Astra Control移除不再需要管理的任何應用程式或叢集。
 
 
@@ -19,15 +20,19 @@ summary: 從Astra Control移除不再需要管理的任何應用程式或叢集�
 
 停止管理不再想從Astra Control備份、快照或複製的應用程式。
 
+當您取消管理應用程式時：
+
 * 任何現有的備份與快照都會刪除。
 * 應用程式與資料仍可繼續使用。
 
 
 .步驟
-. 選擇*應用程式*。
-. 選取您不想再管理的應用程式核取方塊。
-. 選取* Action"下拉式清單、然後選取* UnManage application/s*。
-. 確認您要取消管理應用程式、然後選取*是、取消管理應用程式*。
+. 從左側導覽列選取*應用程式*。
+. 選取應用程式。
+. 從「動作」欄的「選項」功能表中、選取*「取消管理」*。
+. 檢閱資訊。
+. 輸入「unManage（取消管理）」以確認。
+. 選擇*是、取消管理應用程式*。
 
 
 Astra Control停止管理應用程式。
@@ -40,9 +45,14 @@ Astra Control停止管理應用程式。
 
 ifdef::gcp[]
 
+
+NOTE: 在取消管理叢集之前、您應該取消管理與叢集相關的應用程式。
+
 最佳實務做法是、建議您在透過GCP刪除叢集之前、先從Astra Control中移除叢集。
 
 endif::gcp[]
+
+當您取消管理叢集時：
 
 * 此動作會使叢集無法由Astra Control管理。它不會對叢集的組態進行任何變更、也不會刪除叢集。
 * Astra Trident不會從叢集解除安裝。 https://docs.netapp.com/us-en/trident/trident-managing-k8s/uninstall-trident.html["瞭解如何解除安裝Astra Trident"^]。
@@ -51,11 +61,11 @@ endif::gcp[]
 .步驟
 . 選擇*叢集*。
 . 選取您不想再管理之叢集的核取方塊。
-. 選取「*動作*」下拉式清單、然後選取「*取消管理*」。
+. 從「*動作*」欄的「選項」功能表中、選取「*取消管理*」。
 . 確認您要取消管理叢集、然後選取*是、取消管理叢集*。
 
 
-Astra Control停止管理叢集。
+叢集的狀態會變更為*移除*。之後、叢集就會從「*叢集*」頁面移除、而且不再由Astra Control Center管理。
 
 
 

@@ -11,6 +11,7 @@ summary: 瞭解Astra Control Center中可用的資料保護類型、以及如何
 :imagesdir: ../media/learn/
 
 
+[role="lead"]
 瞭解Astra Control中的使用者角色和命名空間、以及如何使用這些角色和命名空間來控制組織中的資源存取。
 
 
@@ -37,4 +38,5 @@ summary: 瞭解Astra Control Center中可用的資料保護類型、以及如何
 
 == 如需詳細資訊、請參閱
 
-link:../use/manage-roles.html["管理角色"]
+* link:../use/manage-roles.html["管理角色"]
+

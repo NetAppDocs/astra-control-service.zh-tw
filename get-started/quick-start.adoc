@@ -11,6 +11,7 @@ summary: 只要幾個步驟、就能開始使用Astra Control Service。
 :imagesdir: ../media/get-started/
 
 
+[role="lead"]
 本頁提供您開始使用Astra Control Service所需完成步驟的高階概覽。每個步驟中的連結都會帶您前往提供更多詳細資料的頁面。
 
 
@@ -70,6 +71,8 @@ link:set-up-microsoft-azure-with-amd.html["深入瞭解Microsoft Azure和Azure�
 
 
 endif::azure[]
+
+如果您要管理自己的叢集、但叢集並非由雲端供應商代管、請檢閱自我管理叢集的需求。link:add-first-cluster.html#start-managing-kubernetes-clusters["深入瞭解自我管理的叢集需求"]。
 
 
 

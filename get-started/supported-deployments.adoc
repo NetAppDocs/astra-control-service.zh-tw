@@ -11,11 +11,12 @@ summary: Astra Control Service可管理雲端供應商環境中受管理Kubernet
 :imagesdir: ../media/get-started/
 
 
-Astra Control Service可管理Amazon Elastic Kubernetes Service（EKS）中受管理Kubernetes叢集上執行的應用程式。
+[role="lead"]
+Astra Control Service可管理Amazon Elastic Kubernetes Service（EKS）中受管理Kubernetes叢集上執行的應用程式、以及您自己管理的叢集。
 
-Astra Control Service可管理在Google Kubernetes Engine（GKE）的託管Kubernetes叢集上執行的應用程式。
+Astra Control Service可管理在Google Kubernetes Engine（GKE）的託管Kubernetes叢集上執行的應用程式、以及您自行管理的叢集。
 
-Astra Control Service可管理Azure Kubernetes Service（KS）中受管理Kubernetes叢集上執行的應用程式。
+Astra Control Service可管理Azure Kubernetes Service（KS）中受管理Kubernetes叢集上執行的應用程式、以及您自行管理的叢集。
 
 ifdef::aws[]
 
@@ -38,3 +39,6 @@ ifdef::azure[]
 
 
 endif::azure[]
+
+* link:add-first-cluster.html#start-managing-kubernetes-clusters["瞭解如何在將自我管理的叢集新增至Astra Control Service之前、先做好準備"]。
+

@@ -11,6 +11,7 @@ summary: 尋找常見問題的疑難排解秘訣。
 :imagesdir: ../media/support/
 
 
+[role="lead"]
 瞭解如何解決您可能遇到的一些常見問題。
 
 https://kb.netapp.com/Advice_and_Troubleshooting/Cloud_Services/Astra[]

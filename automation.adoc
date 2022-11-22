@@ -11,6 +11,7 @@ summary: Astra Control有REST API、可讓您使用程式語言或程式（例�
 :imagesdir: ../media/get-started/
 
 
+[role="lead"]
 Astra Control有REST API、可讓您使用程式語言或程式（例如Curl）直接存取Astra Control功能。您也可以使用Ansible和其他自動化技術來管理Astra Control部署。
 
 若要深入瞭解、 https://docs.netapp.com/us-en/astra-automation["前往Astra自動化文件"^]。

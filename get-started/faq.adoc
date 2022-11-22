@@ -11,6 +11,7 @@ summary: 如果您只是想要快速回答問題、這個常見問題集就能�
 :imagesdir: ../media/
 
 
+[role="lead"]
 如果您只是想要快速回答問題、這個常見問題集就能幫上忙。
 
 
@@ -41,9 +42,9 @@ Astra Control要求您在就職部分提供準確的客戶資訊。如果您提�
 
 請他們查看垃圾郵件資料夾中是否有來自do-not-reply@netapp.com的電子郵件、或在收件匣中搜尋「邀請」。 您也可以移除使用者並嘗試重新新增。
 
-*我從免費方案升級至優質PayGO方案。前10個應用程式的費用是否會扣除？*
+*我從免費方案升級至優質PayGO方案。我會為前10個命名空間付費嗎？*
 
-是的。在升級至優質方案之後、Astra Control會開始為您帳戶中的所有託管應用程式收取費用。
+是的。升級至Premium Plan之後、Astra Control會開始為您帳戶中的所有託管命名空間收取費用。
 
 *我在一個月內升級至Premium PayGO方案。我會收取整個月的費用嗎？*
 
@@ -63,7 +64,7 @@ Astra Control要求您在就職部分提供準確的客戶資訊。如果您提�
 
 *新增Astra Control Service之後、我需要將工作節點新增至叢集。我該怎麼辦？*
 
-新的工作節點可新增至現有資源池、或只要是Ubuntu映像類型、就能建立新資源池。Astra Control會自動探索這些功能。如果在Astra Control中看不到新節點、請檢查新的工作節點是否執行支援的映像類型。您也可以使用「kubectl Get nodes」命令來驗證新工作節點的健全狀況。
+新的工作者節點可以新增至現有的資源池、或只要新的資源池是、就能建立新的資源池 `COS_CONTAINERD` 映像類型。Astra Control會自動探索這些功能。如果在Astra Control中看不到新節點、請檢查新的工作節點是否執行支援的映像類型。您也可以使用驗證新工作節點的健全狀況 `kubectl get nodes` 命令。
 
 ifdef::aws[]
 
@@ -164,7 +165,7 @@ Astra Trident操作員成功新增至Astra Control之後、將預設儲存類別
 
 * 執行「kubectl Get SC」、然後檢查預設的儲存類別。
 * 檢查用於部署應用程式的yaml檔案或Helm圖表、查看是否定義了不同的儲存類別。
-* 請檢查以確定工作節點映像類型為Ubuntu、且NFS掛載成功。
+* GKE 1.24版及更新版本不支援Docker型節點映像。檢查以確定GKE中的工作節點映像類型為 `COS_CONTAINERD` 而且NFS掛載成功。
 
 
 endif::gcp[]

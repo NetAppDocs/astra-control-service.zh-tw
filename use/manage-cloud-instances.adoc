@@ -1,0 +1,54 @@
+---
+sidebar: sidebar 
+permalink: use/manage-cloud-instances.html 
+keywords: cloud, instance, manage, delete, remove, edit 
+summary: 管理新增叢集時新增的雲端執行個體。 
+---
+= 管理雲端執行個體
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/use/
+
+
+[role="lead"]
+雲端執行個體是雲端供應商內部的獨特網域。您可以為每個雲端供應商建立多個雲端執行個體、而且每個雲端執行個體都有自己的名稱、認證資料及相關的叢集。
+
+當您將新叢集新增至Astra Control時、就會建立雲端執行個體。您可以使用Astra Control UI編輯雲端執行個體以變更其名稱或預設儲存區、並使用Astra Control API對雲端執行個體執行其他動作。
+
+
+
+== 新增雲端執行個體
+
+您可以在將新叢集新增至Astra Control時新增雲端執行個體。請參閱 link:../add-first-cluster.html["從Astra Control Service開始管理Kubernetes叢集"] 以取得更多資訊。
+
+
+
+== 編輯雲端執行個體
+
+您可以修改雲端供應商的現有雲端執行個體。
+
+.步驟
+. 轉至* Cloud Instances *。
+. 在雲端執行個體清單中、針對您要編輯的雲端執行個體選取*「動作*」功能表。
+. 選擇*編輯*。
++
+在此頁面上、您可以更新雲端執行個體的名稱和預設儲存區。
+
++
+
+NOTE: Astra Control中的每個雲端執行個體都必須有唯一的名稱。
+
+
+
+
+
+== 旋轉雲端執行個體的認證資料
+
+您可以使用Astra Control API來旋轉雲端執行個體的認證資料。若要深入瞭解、 https://docs.netapp.com/us-en/astra-automation["前往Astra自動化文件"^]。
+
+
+
+== 移除雲端執行個體
+
+您可以使用Astra Control API從雲端供應商移除雲端執行個體。若要深入瞭解、 https://docs.netapp.com/us-en/astra-automation["前往Astra自動化文件"^]。

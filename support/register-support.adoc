@@ -11,6 +11,7 @@ summary: Astra Control會在您設定帳戶時、嘗試自動登錄您的帳戶�
 :imagesdir: ../media/support/
 
 
+[role="lead"]
 Astra Control會在您設定帳戶時、嘗試自動登錄您的帳戶以取得支援。如果無法、您可以自行手動註冊以取得支援。需要註冊支援、才能從NetApp技術支援取得協助。
 
 

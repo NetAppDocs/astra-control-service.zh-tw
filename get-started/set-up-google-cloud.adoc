@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: get-started/set-up-google-cloud.html 
-keywords: google cloud, google cloud platform, gcp, set up google cloud, set up gcp, set up service account, create service account, project, gcp project, permissions gcp permissions, service account permissions, key, service account key, json, key json, roles, service account roles, gcp roles, cvs, cvs for aws, cloud volumes service apis, apis, networking, cvs networking, cloud volumes service networking, private service access, kubernetes cluster, cluster requirements, version requirements, supported versions, supported regions, google cloud regions, gcp regions, kubernetes version, ubuntu, image type, networking, container os 
+keywords: google cloud, google cloud platform, gcp, set up google cloud, set up gcp, set up service account, create service account, project, gcp project, permissions gcp permissions, service account permissions, key, service account key, json, key json, roles, service account roles, gcp roles, cvs, cvs for aws, cloud volumes service apis, apis, networking, cvs networking, cloud volumes service networking, private service access, kubernetes cluster, cluster requirements, version requirements, supported versions, supported regions, google cloud regions, gcp regions, kubernetes version, image type, networking, container os 
 summary: 您必須先採取幾個步驟來準備Google Cloud專案、才能使用Astra Control Service來管理Google Kubernetes Engine叢集。 
 ---
 = 設定Google Cloud
@@ -11,6 +11,7 @@ summary: 您必須先採取幾個步驟來準備Google Cloud專案、才能使�
 :imagesdir: ../media/get-started/
 
 
+[role="lead"]
 您必須先採取幾個步驟來準備Google Cloud專案、才能使用Astra Control Service來管理Google Kubernetes Engine叢集。
 
 
@@ -27,7 +28,7 @@ NOTE: 如果您並未開始使用Google Cloud Volumes Service for Google Cloud�
 === 檢閱Google Kubernetes Engine的Astra Control Service要求
 
 [role="quick-margin-para"]
-確保叢集正常運作、並執行支援的Kubernetes版本、工作節點上線並執行Container最佳化作業系統或Ubuntu等。  cluster requirements,深入瞭解此步驟。
+確保叢集正常運作、並執行支援的Kubernetes版本、讓工作節點上線並執行支援的映像類型等。  cluster requirements,深入瞭解此步驟。
 
 
 
@@ -104,16 +105,8 @@ NOTE: 如果您並未開始使用Google Cloud Volumes Service for Google Cloud�
 
 Kubernetes叢集必須符合下列需求、才能從Astra Control Service進行探索和管理。請注意、部分需求僅適用於打算Cloud Volumes Service 將for Google Cloud用作儲存後端的情況。
 
-Kubernetes版本:: 叢集必須執行的Kubernetes版本範圍為1.20到1.23。
-映像類型:: 每個工作節點的映像類型必須是下列其中一種：
-+
---
-* 容器最佳化的作業系統
-* 容器最佳化作業系統搭配Docker
-* 使用Docker的Ubuntu
-
-
---
+Kubernetes版本:: 叢集必須執行介於1.22到1.24之間的Kubernetes版本。
+映像類型:: 每個工作節點的映像類型必須是 `COS_CONTAINERD`。
 叢集狀態:: 叢集必須以正常狀態執行、且至少有一個線上工作者節點、且在故障狀態下沒有工作節點。
 Google Cloud區域:: 如果您計畫將Cloud Volumes Service 適用於Google Cloud的功能作為儲存後端、叢集必須在中執行 https://cloud.netapp.com/cloud-volumes-global-regions#cvsGc["支援Google Cloud的支援功能的Google Cloud區域Cloud Volumes Service 。"] 請注意、Astra Control Service支援CVS和CVS效能這兩種服務類型。最佳實務做法是、您應該選擇支援Cloud Volumes Service 適用於Google Cloud的地區、即使您不將其用作儲存後端。如果Cloud Volumes Service 效能需求有所改變、那麼在未來、將VMware for Google Cloud用作儲存後端、將會變得更容易。
 網路:: 如果您打算將Cloud Volumes Service for Google Cloud用作儲存後端、則叢集必須位於VPC中、且VPC必須與Cloud Volumes Service 適用於Google Cloud的不同步。  Set up network peering for your VPC,此步驟如下所述。

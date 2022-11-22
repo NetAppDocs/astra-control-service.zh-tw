@@ -11,6 +11,7 @@ summary: 本文件網站上的許多頁面都包含影片、說明如何使用As
 :imagesdir: ../media/
 
 
+[role="lead"]
 本文件網站上的許多頁面都包含影片、說明如何完成Astra Control Service的工作。如果您只對影片感興趣、我們會在單一頁面上收集所有影片（例如播放清單）、讓您輕鬆完成這項工作。
 
 ifdef::gcp[]

@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: use/manage-apps.html 
-keywords: manage app, discover app, ignore app 
-summary: 將Kubernetes叢集新增至Astra Control之後、您可以在該叢集（Astra Control之外）上安裝應用程式、然後前往Astra Control中的「應用程式」頁面開始管理應用程式。 
+keywords: manage app, discover app, how to manage kubernetes apps, astra control, astra 
+summary: 將Kubernetes叢集新增至Astra Control之後、即可在該叢集（Astra Control以外）上安裝應用程式、然後前往Astra Control中的「應用程式」頁面開始管理應用程式。 
 ---
 = 開始管理應用程式
 :hardbreaks:
@@ -11,7 +11,8 @@ summary: 將Kubernetes叢集新增至Astra Control之後、您可以在該叢集
 :imagesdir: ../media/use/
 
 
-您先請 link:../get-started/add-first-cluster.html["將Kubernetes叢集新增至Astra Control"]、您可以在叢集上安裝應用程式（Astra Control之外）、然後前往Astra Control的「應用程式」頁面、開始管理應用程式。
+[role="lead"]
+您先請 link:../get-started/add-first-cluster.html["將Kubernetes叢集新增至Astra Control"]、您可以在叢集上安裝應用程式（Astra Control之外）、然後前往Astra Control中的「應用程式」頁面來定義應用程式。
 
 
 
@@ -19,12 +20,11 @@ summary: 將Kubernetes叢集新增至Astra Control之後、您可以在該叢集
 
 Astra Control具備下列應用程式管理需求：
 
-* *授權*：若要使用Astra Control Center管理應用程式、您需要Astra Control Center授權。
-* *命名空間*：Astra Control要求應用程式不超過一個命名空間、但命名空間可以包含多個應用程式。
+* *授權*：若要管理10個以上的命名空間、您需要訂閱Astra Control Center。
+* *命名空間*：應用程式可以使用Astra Control在單一叢集的一個或多個指定命名空間內定義。應用程式可包含橫跨同一個叢集內多個命名空間的資源。Astra Control不支援跨多個叢集定義應用程式的功能。
 * * StorageClass *：如果您安裝的應用程式已明確設定StorageClass、且需要複製應用程式、則複製作業的目標叢集必須具有原本指定的StorageClass。將具有明確設定StorageClass的應用程式複製到沒有相同StorageClass的叢集、將會失敗。
 * * Kubernetes資源*：使用未由Astra Control收集的Kubernetes資源的應用程式、可能沒有完整的應用程式資料管理功能。Astra Control會收集下列Kubernetes資源：
-
-
++
 [cols="1,1,1"]
 |===
 
@@ -32,19 +32,19 @@ Astra Control具備下列應用程式管理需求：
 | 叢集角色 | ClusterRoleBinding | 組態對應 
 
 
-| CustomResourceDesDefinition | CustomResource | 可關係工作 
+| 可關係工作 | CustomResourceDesDefinition | CustomResource 
 
 
-| 示範 | HorizontalPodAutoscaler | 入侵 
+| 示範 | 部署組態 | HorizontalPodAutoscaler 
 
 
-| 部署組態 | 互鎖Webhook | PeristentVolume Claim 
+| 入侵 | 互鎖Webhook | 網路原則 
 
 
-| Pod | Podcast中斷預算 | Podcast範本 
+| PeristentVolume Claim | Pod | Podcast中斷預算 
 
 
-| 網路原則 | ReplicaSet | 角色 
+| Podcast範本 | ReplicaSet | 角色 
 
 
 | 角色繫結 | 路由 | 秘密 
@@ -57,13 +57,15 @@ Astra Control具備下列應用程式管理需求：
 |===
 
 
-=== 支援的應用程式安裝方法
 
-您可以使用下列方法安裝想要使用Astra Control管理的應用程式：
+
+== 支援的應用程式安裝方法
+
+Astra Control支援下列應用程式安裝方法：
 
 * *資訊清單檔案*：Astra Control支援使用KUbectl從資訊清單檔案安裝的應用程式。例如：
 +
-[source, sh]
+[source, console]
 ----
 kubectl apply -f myapp.yaml
 ----
@@ -82,17 +84,18 @@ NOTE: 對於K8ssandra、支援就地還原作業。若要還原新命名空間�
 ** https://github.com/percona/percona-xtradb-cluster-operator["Percona XtraDB叢集"^]
 
 
-
-
++
 Astra Control可能無法複製以「傳遞參考」架構設計的操作員（例如CockroachDB操作員）。在這些類型的複製作業中、複製的操作員會嘗試從來源操作員參考Kubernetes機密、儘管在複製程序中有自己的新秘密。由於Astra Control不知道來源營運者的Kubernetes機密資料、因此複製作業可能會失敗。
+
+
 
 
 
 == 在叢集上安裝應用程式
 
-您先請 link:../get-started/add-first-cluster.html["新增叢集"] 若要使用Astra Control、您可以在叢集上安裝應用程式或管理現有的應用程式。任何範圍只限於單一命名空間的應用程式都可以管理。
+您先請 link:../get-started/add-first-cluster.html["新增叢集"] 若要使用Astra Control、您可以在叢集上安裝應用程式或管理現有的應用程式。範圍為一或多個命名空間的任何應用程式都可以管理。
 
-Astra Control只有在儲存設備位於由Astra Control安裝的儲存類別時、才會管理狀態化應用程式。
+Astra Control只有在儲存設備位於Astra Control所支援的儲存類別時、才會管理狀態化應用程式。Astra Control Service支援任何由Astra Trident或通用的SCSI驅動程式所支援的儲存類別。
 
 ifdef::gcp[]
 
@@ -117,11 +120,11 @@ endif::aws[]
 
 
 
-== 管理應用程式
+== 定義應用程式
 
-Astra Control在叢集上探索命名空間之後、您可以定義要管理的應用程式。您可以選擇 link:../learn/app-management.html["以單一應用程式的形式管理整個命名空間、或個別管理命名空間中的一或多個應用程式"]。所有這些都達到資料保護作業所需的精細度。
+Astra Control在叢集上探索命名空間之後、您可以定義要管理的應用程式。您可以選擇  resources to manage as an app,管理橫跨一或多個命名空間的應用程式 或  a namespace to manage as an app,將整個命名空間當作單一應用程式來管理。所有這些都達到資料保護作業所需的精細度。
 
-雖然Astra Control可讓您分別管理階層的兩個層級（命名空間和命名空間中的應用程式）、但最佳實務做法是選擇其中一個。如果在命名空間和應用程式層級同時執行動作、則Astra Control中所採取的動作可能會失敗。
+雖然Astra Control可讓您分別管理階層的兩個層級（命名空間和該命名空間或擴充命名空間中的應用程式）、但最佳實務做法是選擇其中一個。如果在命名空間和應用程式層級同時執行動作、則Astra Control中所採取的動作可能會失敗。
 
 
 TIP: 舉例來說、您可能想要為每週有節奏的「Maria」設定備份原則、但您可能需要比這更頻繁地備份「MariaDB」（位於同一個命名空間中）。根據這些需求、您需要分別管理應用程式、而非單一命名空間應用程式。
@@ -130,15 +133,19 @@ TIP: 舉例來說、您可能想要為每週有節奏的「Maria」設定備份�
 * 將Kubernetes叢集新增至Astra Control。
 * 叢集上已安裝一或多個應用程式。  app installation methods,深入瞭解支援的應用程式安裝方法。
 * 一個或多個作用中的Pod。
-* 在您新增至Astra Control的Kubernetes叢集上指定的命名空間。
-* （選用）Kubernetes標籤 link:../use/manage-apps.html#app-management-requirements["支援的Kubernetes資源"]。
+* 您新增至Astra Control的Kubernetes叢集上現有的命名空間。
+* （選用）任何產品上都有Kubernetes標籤 link:../use/manage-apps.html#app-management-requirements["支援的Kubernetes資源"]。
 +
 
 TIP: 標籤是可指派給Kubernetes物件以供識別的金鑰/值配對。標籤可讓您更輕鬆地排序、組織及尋找Kubernetes物件。若要深入瞭解Kubernetes標籤、 https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/["請參閱Kubernetes官方文件"^]。
 
 
 
-在開始之前、您也應該瞭解 link:../use/manage-apps.html#what-about-system-namespaces["管理標準和系統命名空間"]。如需如何使用Astra Control API管理應用程式的指示、請參閱 link:https://docs.netapp.com/us-en/astra-automation/["Astra Automation和API資訊"^]。
+.關於這項工作
+* 在開始之前、您也應該瞭解 link:../use/manage-apps.html#what-about-system-namespaces["管理標準和系統命名空間"]。
+* 如果您打算在Astra Control中使用多個命名空間搭配應用程式、請考慮 link:../use/manage-roles.html["修改具有命名空間限制的使用者角色"] 定義應用程式之前。
+* 如需如何使用Astra Control API管理應用程式的指示、請參閱 link:https://docs.netapp.com/us-en/astra-automation/["Astra Automation和API資訊"^]。
+
 
 .應用程式管理選項
 *  resources to manage as an app
@@ -156,6 +163,40 @@ TIP: 標籤是可指派給Kubernetes物件以供識別的金鑰/值配對。標�
 
 WARNING: 在定義應用程式時、請確保不將Kubernetes資源納入具有保護原則的多個應用程式中。Kubernetes資源上的保護原則重疊、可能會造成資料衝突。
 
+
+CAUTION: 在與其他應用程式共用資源的應用程式上執行就地還原作業、可能會產生非預期的結果。
+
+.關於將叢集範圍的資源新增至應用程式命名空間的功能介紹</strong> <strong> 。
+====
+除了自動包含的Astra Control之外、您也可以匯入與命名資源相關聯的叢集資源。您可以新增規則、其中包含特定群組的資源、種類、版本及選擇性的標籤。如果Astra Control沒有自動包含資源、您可能會想要這麼做。
+
+您無法排除由Astra Control自動包含的任何叢集範圍資源。
+
+您可以新增下列項目 `apiVersions` （與API版本結合的群組）：
+
+[cols="1h,2d"]
+|===
+| 資源種類 | 每個版本（群組+版本） 
+
+
+| `ClusterRole` | rbac.authorization.k8s.io/v1 
+
+
+| `ClusterRoleBinding` | rbac.authorization.k8s.io/v1 
+
+
+| `CustomResource` | apiextensions.k8s.io/v1、apiextensions.k8s.io/v1bet1 
+
+
+| `CustomResourceDefinition` | apiextensions.k8s.io/v1、apiextensions.k8s.io/v1bet1 
+
+
+| `MutatingWebhookConfiguration` | 可受理的registration.k8s.io/v1 
+
+
+| `ValidatingWebhookConfiguration` | 可受理的registration.k8s.io/v1 
+|===
+====
 .步驟
 . 從「應用程式」頁面選取*定義*。
 . 在*定義應用程式*視窗中、輸入應用程式名稱。
@@ -163,17 +204,35 @@ WARNING: 在定義應用程式時、請確保不將Kubernetes資源納入具有�
 . 從「*命名空間*」下拉式清單中選擇應用程式的命名空間。
 +
 
-NOTE: 應用程式只能在單一叢集的指定命名空間內定義。Astra Control不支援應用程式跨越多個命名空間或叢集的能力。
+NOTE: 應用程式可以使用Astra Control在單一叢集上的一個或多個指定命名空間內定義。應用程式可包含橫跨同一個叢集內多個命名空間的資源。Astra Control不支援跨多個叢集定義應用程式的功能。
 
-. 輸入應用程式和命名空間的標籤。您可以指定單一標籤或標籤選取器準則（查詢）。
+. （選用）在每個命名空間中輸入Kubernetes資源的標籤。您可以指定單一標籤或標籤選取器準則（查詢）。
 +
 
 TIP: 若要深入瞭解Kubernetes標籤、 https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/["請參閱Kubernetes官方文件"^]。
 
+. （選用）選取*新增命名空間*並從下拉式清單中選擇命名空間、即可新增應用程式的其他命名空間。
+. （選用）針對您新增的任何其他命名空間、輸入單一標籤或標籤選取器條件。
+. （可選）要包括除Astra Control自動包含的資源之外的叢集範圍資源、請勾選*包含其他叢集範圍資源*、然後完成下列步驟：
++
+.. 選取*新增包含規則*。
+.. *群組*：從下拉式清單中、選取API資源群組。
+.. *種類*：從下拉式清單中、選取物件架構的名稱。
+.. *版本*：輸入API版本。
+.. *標籤選取器*：選擇性地加入要新增至規則的標籤。此標籤僅用於擷取符合此標籤的資源。如果您未提供標籤、Astra Control會收集為該叢集指定之資源種類的所有執行個體。
+.. 根據您的輸入項目來檢閱建立的規則。
+.. 選取*「Add*」。
++
+
+TIP: 您可以根據需要建立任意數量的叢集範圍資源規則。這些規則會出現在「定義應用程式摘要」中。
+
+
+
+. 選擇*定義*。
 . 選取*定義*之後、視需要為其他應用程式重複此程序。
 
 
-定義完應用程式之後、應用程式會出現在應用程式頁面的應用程式清單中。您現在可以複製並建立備份與快照。
+定義完應用程式之後、應用程式會出現在中 `Healthy` 請在應用程式頁面的應用程式清單中說明。您現在可以複製並建立備份與快照。
 
 
 NOTE: 您剛新增的應用程式可能會在「受保護的」欄下顯示警告圖示、表示尚未備份且尚未排程備份。
@@ -181,11 +240,13 @@ NOTE: 您剛新增的應用程式可能會在「受保護的」欄下顯示警�
 
 TIP: 若要查看特定應用程式的詳細資料、請選取應用程式名稱。
 
+若要查看新增至此應用程式的資源、請選取*資源*索引標籤。在「資源」欄中選取資源名稱後的數字、或在「搜尋」中輸入資源名稱、以查看所包含的其他叢集範圍資源。
+
 
 
 === 定義要以應用程式形式管理的命名空間
 
-您可以將命名空間中的所有Kubernetes資源新增至Astra Control管理、方法是將該命名空間的資源定義為應用程式。如果您打算以類似的方式、以相同的時間間隔來管理及保護特定命名空間中的所有資源、則此方法較適合個別定義應用程式。
+您可以將命名空間中的所有Kubernetes資源新增至Astra Control管理、方法是將該命名空間的資源定義為應用程式。如果您需要、這種方法最好是個別定義應用程式 link:../learn/app-management.html["打算管理及保護特定命名空間中的所有資源"] 以類似的方式、並以相同的時間間隔進行。
 
 .步驟
 . 從「叢集」頁面中選取叢集。
@@ -193,7 +254,7 @@ TIP: 若要查看特定應用程式的詳細資料、請選取應用程式名稱
 . 選取包含您要管理之應用程式資源的命名空間「動作」功能表、然後選取*「定義為應用程式*」。
 +
 
-TIP: 如果要管理多個命名空間、請選取命名空間、然後選取左上角的*「Actions」（動作）*按鈕、然後選取*「Manage」（管理）*。
+TIP: 如果要定義多個應用程式、請從命名空間清單中選取、然後選取左上角的*「Actions」（動作）*按鈕、然後選取*「define as application*」（定義為應用程式*）。這會在個別命名空間中定義多個個別應用程式。如需多命名空間應用程式、請參閱  resources to manage as an app。
 
 +
 

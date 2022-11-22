@@ -11,7 +11,52 @@ summary: NetApp會定期更新Astra Control Service、為您提供新功能、�
 :imagesdir: ../media/release-notes/
 
 
+[role="lead"]
 NetApp會定期更新Astra Control Service、為您提供新功能、增強功能和錯誤修復。
+
+
+
+== 2022年11月22日
+
+.新功能與支援
+* 支援橫跨多個命名空間的應用程式。
++
+link:../use/manage-apps.html["定義應用程式"]
+
+* 支援將叢集資源納入應用程式定義。
++
+link:../use/manage-apps.html["定義應用程式"]
+
+* 增強備份、還原及複製作業的進度報告功能。
++
+link:../use/monitor-running-tasks.html["監控執行中的工作"]
+
+* 支援管理已安裝相容版本Astra Trident的叢集。
++
+link:../get-started/add-first-cluster.html["從Astra Control Service開始管理Kubernetes叢集"]
+
+* 支援在單一Astra Control Service帳戶中管理多個雲端供應商訂閱。
++
+link:../use/manage-cloud-instances.html["管理雲端執行個體"]
+
+* 支援將自我管理的Kubernetes叢集新增至Astra Control Service。
++
+link:../get-started/add-first-cluster.html["從Astra Control Service開始管理Kubernetes叢集"]
+
+* Astra Control Service的帳單現在會依命名空間進行計量、而非依應用程式進行計費。
++
+link:../use/set-up-billing.html["設定帳單"]
+
+* 支援透過AWS Marketplace訂閱Astra Control Service定期方案。
++
+link:../use/set-up-billing.html["設定帳單"]
+
+
+
+.已知問題與限制
+* link:../release-notes/known-issues.html["此版本的已知問題"]
+* link:../release-notes/known-limitations.html["此版本的已知限制"]
+
 
 
 
@@ -27,7 +72,7 @@ NetApp會定期更新Astra Control Service、為您提供新功能、增強功�
 
 * 改善的應用程式管理工作流程改善的應用程式管理工作流程、可在定義由Astra Control管理的應用程式時提供更高的靈活度。
 +
-link:../use/manage-apps.html#manage-apps["管理應用程式"]
+link:../use/manage-apps.html#define-apps["管理應用程式"]
 
 
 

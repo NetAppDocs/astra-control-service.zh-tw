@@ -11,6 +11,7 @@ summary: 您必須先採取幾個步驟來準備Microsoft Azure訂閱、才能�
 :imagesdir: ../media/get-started/
 
 
+[role="lead"]
 您必須先採取幾個步驟來準備Microsoft Azure訂閱、才能使用Astra Control Service管理Azure Kubernetes服務叢集。如果您計畫將Azure NetApp Files 功能區用作儲存後端、請遵循下列指示。
 
 
@@ -81,7 +82,7 @@ summary: 您必須先採取幾個步驟來準備Microsoft Azure訂閱、才能�
 
 Kubernetes叢集必須符合下列需求、才能從Astra Control Service進行探索和管理。
 
-Kubernetes版本:: 叢集必須執行Kubernetes 1.21至1.24版。
+Kubernetes版本:: 叢集必須執行Kubernetes 1.23至1.25版。
 映像類型:: 所有節點集區的映像類型必須是Linux。
 叢集狀態:: 叢集必須以正常狀態執行、且至少有一個線上工作者節點、且在故障狀態下沒有工作節點。
 Azure地區:: 叢集必須位於Azure NetApp Files 提供了功能的區域。 https://azure.microsoft.com/en-us/global-infrastructure/services/?products=netapp["依地區檢視Azure產品"^]。
@@ -103,57 +104,6 @@ Vnet:: 請考慮下列vnet需求：
 
 
 --
-
-
-外部Volume Snapshot控制器:: 叢集必須安裝一個csi Volume Snapshot控制器。此控制器預設為從K8s 1.21版開始安裝、但您需要檢查執行1.19和1.20版的叢集。 https://docs.netapp.com/us-en/trident/trident-use/vol-snapshots.html["深入瞭解適用於隨需磁碟區快照的外部快照控制器"^]。
-
-
-
-
-=== 安裝一個csi Volume Snapshot控制器
-
-如中所述  Kubernetes Service cluster requirements、Kubernetes叢集必須安裝一個csi Volume Snapshot控制器。請遵循下列步驟、在叢集上安裝控制器。
-
-.K8s版本1.19的步驟
-. 安裝Volume Snapshot客戶需求日。
-+
-[source, kubectl]
-----
-kubectl apply -f https://raw.githubusercontent.com/kubernetes-csi/external-snapshotter/release-3.0/client/config/crd/snapshot.storage.k8s.io_volumesnapshotclasses.yaml
-kubectl apply -f https://raw.githubusercontent.com/kubernetes-csi/external-snapshotter/release-3.0/client/config/crd/snapshot.storage.k8s.io_volumesnapshotcontents.yaml
-kubectl apply -f https://raw.githubusercontent.com/kubernetes-csi/external-snapshotter/release-3.0/client/config/crd/snapshot.storage.k8s.io_volumesnapshots.yaml
-----
-. 建立Snapshot控制器。
-+
-如果您希望快照控制器位於特定命名空間、請先下載並編輯下列檔案、再套用這些檔案。
-
-+
-[source, kubectl]
-----
-kubectl apply -f https://raw.githubusercontent.com/kubernetes-csi/external-snapshotter/release-3.0/deploy/kubernetes/snapshot-controller/rbac-snapshot-controller.yaml
-kubectl apply -f https://raw.githubusercontent.com/kubernetes-csi/external-snapshotter/release-3.0/deploy/kubernetes/snapshot-controller/setup-snapshot-controller.yaml
-----
-
-
-.K8s版本1.20的步驟
-. 安裝Volume Snapshot客戶需求日。
-+
-[source, kubectl]
-----
-kubectl apply -f https://raw.githubusercontent.com/kubernetes-csi/external-snapshotter/v4.0.0/client/config/crd/snapshot.storage.k8s.io_volumesnapshotclasses.yaml
-kubectl apply -f https://raw.githubusercontent.com/kubernetes-csi/external-snapshotter/v4.0.0/client/config/crd/snapshot.storage.k8s.io_volumesnapshotcontents.yaml
-kubectl apply -f https://raw.githubusercontent.com/kubernetes-csi/external-snapshotter/v4.0.0/client/config/crd/snapshot.storage.k8s.io_volumesnapshots.yaml
-----
-. 建立Snapshot控制器。
-+
-如果您希望快照控制器位於特定命名空間、請先下載並編輯下列檔案、再套用這些檔案。
-
-+
-[source, kubectl]
-----
-kubectl apply -f https://raw.githubusercontent.com/kubernetes-csi/external-snapshotter/v4.0.0/deploy/kubernetes/snapshot-controller/rbac-snapshot-controller.yaml
-kubectl apply -f https://raw.githubusercontent.com/kubernetes-csi/external-snapshotter/v4.0.0/deploy/kubernetes/snapshot-controller/setup-snapshot-controller.yaml
-----
 
 
 

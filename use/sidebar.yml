@@ -29,6 +29,8 @@ entries:
     url: "/use/view-apps.html"
 - title: 管理儲存庫
   url: "/use/manage-buckets.html"
+- title: 監控執行中的工作
+  url: "/use/monitor-running-tasks.html"
 - title: 管理您的帳戶
   entries:
   - title: 設定帳單
@@ -45,5 +47,7 @@ entries:
     url: "/use/manage-notifications.html"
   - title: 關閉您的帳戶
     url: "/use/close-account.html"
+- title: 管理雲端執行個體
+  url: "/use/manage-cloud-instances.html"
 - title: 取消管理應用程式和叢集
   url: "/use/unmanage.html"

@@ -11,6 +11,7 @@ summary: NetApp以多種方式支援Astra Control。我們全年無休提供豐�
 :imagesdir: ../media/support/
 
 
+[role="lead"]
 NetApp以多種方式支援Astra Control。我們全年無休提供豐富的免費自助支援選項、例如知識庫（KB）文章和不和管道。您的Astra Control帳戶透過網路票證提供遠端技術支援。
 
 您必須優先 link:register-support.html["啟動NetApp序號支援"] 以使用這些非自助服務支援選項。需要NetApp支援網站（NSS）SSO帳戶才能進行聊天和網路票證、以及案例管理。

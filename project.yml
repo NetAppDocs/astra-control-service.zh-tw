@@ -28,10 +28,10 @@ sidebar:
     url: "/index.html"
   - section: release-notes
   - section: get-started
+  - section: learn
   - section: use
   - title: 利用Astra Control REST API實現自動化
     url: "/automation.html"
-  - section: learn
   - section: support
   - title: 法律聲明
     url: "/legal-notices.html"
