@@ -21,7 +21,7 @@ image:astra-architecture-diagram-v5.png["Astra Control架構圖與元件"]
 == Astra控制元件
 
 * * Kubernetes叢集*：Kubernetes是可攜式、可擴充的開放原始碼平台、可用於管理容器化工作負載與服務、同時促進宣告式組態與自動化。Astra為Kubernetes叢集中託管的應用程式提供管理服務。
-* * Astra Trident *：Trident是完全受支援的開放原始碼儲存資源配置程式、由NetApp維護、可讓您為Docker和Kubernetes所管理的容器化應用程式建立儲存磁碟區。當您部署Astra Control Center時、Trident包含已設定ONTAP 的整套儲存後端、也支援Astra Data Store做為儲存後端。
+* * Astra Trident *：Astra Trident *是完全受支援的開放原始碼儲存資源配置程式、由NetApp維護、可讓您為Docker和Kubernetes所管理的容器化應用程式建立儲存磁碟區。Astra Trident部署於Astra Control Center時、包含已設定ONTAP 的整套儲存後端。
 * *儲存後端*：
 +
 ** Astra控制服務的用途 https://www.netapp.com/cloud-services/azure-netapp-files/["Azure NetApp Files"^] 或Azure託管磁碟做為高峰叢集的儲存後端。
