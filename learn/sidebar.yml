@@ -13,7 +13,7 @@ entries:
 - title: GKE叢集儲存設備
   flavor: gcp
   url: "/learn/choose-class-and-size.html"
-- title: 瞭解應用程式管理
+- title: 應用程式管理
   url: "/learn/app-management.html"
 - title: 使用者角色和命名空間
   url: "/learn/user-roles-namespaces.html"

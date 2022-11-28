@@ -1480,7 +1480,6 @@
   <block id="1574db16d74f7537711f20b07293065e" category="list-text">Astra控制服務的用途<block ref="a65cb6c91d35e755c3763fe01aedac72" category="inline-link-rx"></block> 和<block ref="789fe92e2b55f108a4e50dd78da73d71" category="inline-link-rx"></block> 作為EKS叢集的儲存後端。</block>
   <block id="dd069ab6d74011bb108bf219e092a2d0" category="list-text">Astra Control Center使用下列儲存後端：</block>
   <block id="a7da53d86332105dcae80a12f3e8b7a5" category="summary">說明Astra Control中的託管應用程式類型。</block>
-  <block id="0aec310f3808bce2063a2292e6052cf8" category="doc">瞭解應用程式管理</block>
   <block id="848f207b3c4594754aa82fd21b5fc5e0" category="paragraph">當Astra Control探索叢集時、這些叢集上的應用程式將無法管理、直到您選擇要管理的方式為止。Astra Control中的託管應用程式可以是下列任一項：</block>
   <block id="594284cddefbf771912acc53c31ca2b3" category="list-text">提供反映Kubernetes應用程式狀態的狀態。</block>
   <block id="07eb1eefb9996b52d1fdfe23101a2b03" category="paragraph">Astra Control具備下列應用程式管理需求：</block>
@@ -2043,4 +2042,5 @@
   <block id="400b9c72badfc397898ae034a400c0f8" category="section-title">移除雲端執行個體</block>
   <block id="f4e39691a17b55519cdcd9b3fe953c77" category="paragraph">您可以使用Astra Control API從雲端供應商移除雲端執行個體。若要深入瞭解、<block ref="bfa33a3653b9adb3eeffbdd741a1c8dc" category="inline-link-rx"></block>。</block>
   <block id="2af1f66f8f47d8339a96c1cd543cd3a8" category="list-text">* Astra Trident *：Astra Trident *是完全受支援的開放原始碼儲存資源配置程式、由NetApp維護、可讓您為Docker和Kubernetes所管理的容器化應用程式建立儲存磁碟區。Astra Trident部署於Astra Control Center時、包含已設定ONTAP 的整套儲存後端。</block>
+  <block id="934c5edffa8e732ecb866cb319c8454a" category="doc">應用程式管理</block>
 </blocks>
