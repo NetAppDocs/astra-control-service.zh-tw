@@ -28,13 +28,6 @@ summary: 已知問題可識別可能導致您無法成功使用本產品版本�
 *  backups and snapshots fail if the volumesnapshotclass is added after a cluster is managed
 
 
-ifdef::azure[]
-
-*  backup buckets use LRS redundancy by default
-
-
-endif::azure[]
-
 .其他問題
 *  eventually begin to fail when using external-snapshotter version 4.2.0
 *  data management operations fail with Internal Service Error (500) when Astra Trident is offline
@@ -75,20 +68,6 @@ endif::azure[]
 == 如果在管理叢集之後新增volumesnapshotClass、則應用程式備份和快照將會失敗
 
 在此案例中、備份與快照會失敗、並顯示UI 500錯誤。因應措施是重新整理應用程式清單。
-
-ifdef::azure[]
-
-
-
-== Azure備份鏟斗預設使用LRS備援
-
-根據預設、Astra Control Service用來儲存Azure Kubernetes服務備份的儲存區使用本機備援儲存設備（LRS）備援選項。若要為Azure鏟斗使用更持久的備援選項、請參閱Azure雲端供應商設定說明中的選用步驟：
-
-* link:../get-started/set-up-microsoft-azure-with-amd.html["使用Azure託管磁碟來設定Microsoft Azure"]
-* link:../get-started/set-up-microsoft-azure-with-anf.html["使用Azure NetApp Files 更新功能來設定Microsoft Azure"]
-
-
-endif::azure[]
 
 
 
