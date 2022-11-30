@@ -944,7 +944,6 @@
   <block id="053d6e036cc8c9d7a8c57234d6bfc574" category="list-text">從正式作業到接移、輕鬆複製應用程式</block>
   <block id="1c26e7db082840fcbfcd87527c92e1aa" category="list-text">視覺化應用程式健全狀況與保護狀態</block>
   <block id="3e09a55ad40337db37927865855151a9" category="list-text">使用使用者介面或API來實作備份與移轉工作流程</block>
-  <block id="894b9b2b2a66efc8393eed6013d32a66" category="paragraph">Astra Control會持續監控您的運算狀態變更、因此您可以隨時掌握新增的應用程式。</block>
   <block id="6762973af9b127d271f0d2b2aea0bc96" category="section-title">部署模式</block>
   <block id="db1905d057dd6fde6f8b7bd6afe60e41" category="paragraph">Astra Control提供兩種部署模式：</block>
   <block id="ddbf9f0ee6e908772df862b9cb9312d3" category="list-text">* Astra Control Center*：自我管理的軟體、可針對在內部部署環境中執行的Kubernetes叢集、提供應用程式感知資料管理功能。</block>
@@ -961,7 +960,6 @@
   <block id="cef5c6ab0b7d20ab7cd426689afb9fa5" category="cell">什麼是應用程式資料管理功能？</block>
   <block id="1598aaab2cb9865732925d064c6978c2" category="cell">這兩種平台的功能相同、但儲存後端或外部服務除外</block>
   <block id="c1d5f7fc5daa2ea9189ee2df5ca15da2" category="cell">什麼是儲存後端支援？</block>
-  <block id="d1c86529e5adfef0855455a2e0bd54bd" category="cell">NetApp雲端服務產品</block>
   <block id="d6fc0eb1930e7e56affc953c237c5514" category="list-text">NetApp ONTAP AFF 的功能與FAS 功能</block>
   <block id="570fa99ce4fbf8deb198b97a6931d63a" category="list-text">儲存後端Cloud Volumes ONTAP</block>
   <block id="5f4b9e6660ba4e73dc9c6aa214e60cde" category="section-title">Astra Control Service的運作方式</block>
@@ -979,7 +977,6 @@
   <block id="a7eb0ba32f9706a479c6037bea16e1ca" category="paragraph">Astra Control Service會持續監控您的運算狀態變更、因此您可以隨時掌握新增的應用程式。</block>
   <block id="b714fdd25acef8e71be758de7ff02f0b" category="section-title">Astra控制中心的運作方式</block>
   <block id="90d397f2aa31c2e6d9f5dfda5d12adca" category="paragraph">Astra Control Center可在您自己的私有雲端本機執行。</block>
-  <block id="51269e2584d26b04961877ec77db6da7" category="paragraph">在雲端連線的環境中、Astra Control Center使用Cloud Insights 「資訊中心」來提供進階的監控和遙測功能。若缺乏Cloud Insights 支援鏈接、Astra Control Center可提供有限（7天數據）的監控與遙測功能、並透過開放式指標端點匯出至Kubernetes原生監控工具（例如Prometheus和Grafana）。</block>
   <block id="ea2708b459fc0cad6936ec216bd9405e" category="paragraph">Astra Control Center已完全整合AutoSupport 至整套的功能、可Active IQ 為使用者和NetApp支援人員提供疑難排解和使用資訊。</block>
   <block id="b4851e92b19af0c5c82447fc0937709d" category="inline-link">需求</block>
   <block id="e63cc3795b9216d59b085bd3111a248d" category="paragraph">若要安裝及使用Astra Control Center、您必須符合特定需求<block ref="bdde32b2c988689d803729c06660acb4" category="inline-link-rx"></block>。</block>
@@ -1135,7 +1132,6 @@
   <block id="b9f8e20735440b893e92df9f8f191ee9" category="paragraph">當您在Postgres Pod上執行作業時、不應直接在Pod內連線以使用psql命令。Astra Control Service需要psql存取權限才能凍結及解出資料庫。如果有預先存在的連線、則快照、備份或複製都會失敗。</block>
   <block id="6bfe142cec74b24abd2888a936579280" category="section-title">GKE叢集的管理限制</block>
   <block id="3265b2231bbb5d69811830c739f49e98" category="paragraph">以下限制適用於Google Kubernetes Engine（GKE）中Kubernetes叢集的管理。</block>
-  <block id="df9a18dc00ea6a1c967125aba394e84f" category="section-title">支援一個GCP專案和一個服務帳戶</block>
   <block id="339effc40f2ec827523a251742b3ca79" category="section-title">Google Marketplace應用程式尚未通過驗證</block>
   <block id="bd0e1e2eb280afdefcb2b4c6f1a09515" category="paragraph">NetApp尚未驗證從Google Marketplace部署的應用程式。有些使用者報告在探索或備份從Google Marketplace部署的PostgreSQL、MariaDB和MySQL應用程式時發生問題。</block>
   <block id="43056e2e7b2e99afa90bfb5acff55921" category="paragraph">無論您使用哪種類型的應用程式搭配Astra Control Service使用、您都應該自行測試備份與還原工作流程、以確保符合災難恢復需求。</block>
@@ -1291,11 +1287,6 @@
   <block id="2dd2a1bdae3516df1950c153f6135366" category="paragraph">*我可以使用Active Directory來管理高效能叢集的驗證嗎？*</block>
   <block id="e4b4463df81090495a7820578ac936d9" category="paragraph">是的、您可以將您的高效能叢集設定為使用Azure Active Directory（Azure AD）進行驗證和身分識別管理。建立叢集時、請遵循中的指示<block ref="ba1ce5a57a4d347a0e1e2ecf2a2c91ba" category="inline-link-rx"></block> 設定叢集使用Azure AD。您必須確保叢集符合高峰管理Azure AD整合的要求。</block>
   <block id="35766360770e699f50fa8f51d1c6ff36" category="doc">瞭解Astra Control</block>
-  <block id="7a224873743ae07878fa35eb8d081112" category="list-text"><block ref="3286c558b43bd6d377809c21300aee77" category="inline-xref-macro-rx"></block></block>
-  <block id="8100875d88782acfb46a30b4101b2280" category="section-title">Azure備份鏟斗預設使用LRS備援</block>
-  <block id="7b51ea6a21b6966c72987eb0afc24995" category="paragraph">根據預設、Astra Control Service用來儲存Azure Kubernetes服務備份的儲存區使用本機備援儲存設備（LRS）備援選項。若要為Azure鏟斗使用更持久的備援選項、請參閱Azure雲端供應商設定說明中的選用步驟：</block>
-  <block id="22e9bb5a03504aaee4ab910d594c8096" category="list-text"><block ref="22e9bb5a03504aaee4ab910d594c8096" category="inline-link-macro-rx"></block></block>
-  <block id="864e3787d69e889ea2ae67aeb999effd" category="list-text"><block ref="864e3787d69e889ea2ae67aeb999effd" category="inline-link-macro-rx"></block></block>
   <block id="87e0c6ecd728fb0d791237540ebc2d13" category="section-title">選用：為Azure備份儲存區設定備援</block>
   <block id="e6870002b2d5d13ce9775b063bc8ba38" category="paragraph">根據預設、Astra Control Service用來儲存Azure Kubernetes服務備份的儲存區使用本機備援儲存設備（LRS）備援選項。您可選擇為Azure鏟斗設定更持久的備援層級、作為選用步驟。 <block ref="01e018c18178f59acc7c2fe24b863d36" category="inline-xref-macro-rx"></block>。</block>
   <block id="59007fdeff44241e1503f2d5988af0c3" category="list-text">執行下列命令以確保變更已傳播：</block>
@@ -1322,7 +1313,6 @@
   <block id="26816f4f023579253517240a64829a70" category="list-text">* Astra Control Service*：NetApp託管服務、可在多個雲端供應商環境中、為Kubernetes叢集提供應用程式感知資料管理功能。</block>
   <block id="368def07c6bfa29b38f6913d1a01d925" category="paragraph">+*適用於GKE叢集、Astra Control Service使用<block ref="33441d63a8e7ace6860eab2024320819" category="inline-link-rx"></block> 或Google持續磁碟做為持續磁碟區的儲存後端。</block>
   <block id="eb1ac977ae8f3dc0832dd982e309d50b" category="paragraph">+在Azure中、Astra Control Service也會為Blob容器建立資源群組、儲存帳戶和金鑰。</block>
-  <block id="a3927a5a13e226c44dac47ff649fa5fa" category="list-text">如果您使用雲端供應商儲存服務做為儲存後端、Astra Control Service會使用Astra Trident來為應用程式配置持續的磁碟區。</block>
   <block id="47de31b9013ca59e1620936759a1c481" category="paragraph">Astra Control旨在簡化Kubernetes原生應用程式的應用程式資料生命週期管理作業。Astra Control Service支援在多個雲端供應商環境中執行的Kubernetes叢集。</block>
   <block id="121738f88be5081da60af30c2d97627d" category="paragraph">是的、您將會從雲端供應商收取叢集所使用的「持續磁碟區」費用。</block>
   <block id="e38d8867cf0f53988fd0376aa2e1f81d" category="paragraph">不可以當您的叢集新增至Astra Control時、該服務會自動在Kubernetes叢集上安裝NetApp的Trident Container Storage Interface（SCSI）驅動程式。此驅動程式可用於為雲端供應商所支援的叢集配置持續磁碟區。</block>
@@ -1821,7 +1811,6 @@
   <block id="e9ca84d66f1908e5a75b18227ca36fe4" category="paragraph">Astra Control的免費方案可讓您管理帳戶中最多10個命名空間。如果您想要管理10個以上的命名空間、則需要從「免費方案」升級至「優質方案」、以設定帳單。</block>
   <block id="9fec972e16132554b3f6d7a367b20c12" category="paragraph">Astra Control Center支援Kubernetes叢集、採用Trident型儲存類別、ONTAP 並具備一套更新版本的更新版儲存後端。</block>
   <block id="46d0a394f0b8bd48b4ad9f07551cc671" category="paragraph">您可以使用90天試用版授權試用Astra Control Center。評估版本可透過電子郵件和社群選項來支援。此外、您也可以從產品內的支援儀表板存取知識庫文章和文件。</block>
-  <block id="7bdf577f01fcd7e69831589d7d8fd532" category="paragraph">您可以將應用程式新增至叢集。或者、如果叢集中已有一些應用程式正在管理中、您可以使用Astra Control Center來管理這些應用程式。然後、使用Astra Control Center建立快照、備份、複製及複寫關係。</block>
   <block id="4ab09e6ec2618aab5b687375bc8af5e3" category="paragraph">Astra Control Service可管理Amazon Elastic Kubernetes Service（EKS）中受管理Kubernetes叢集上執行的應用程式、以及您自己管理的叢集。</block>
   <block id="216024a83a2e1678233eed10a91e734b" category="paragraph">Astra Control Service可管理在Google Kubernetes Engine（GKE）的託管Kubernetes叢集上執行的應用程式、以及您自行管理的叢集。</block>
   <block id="6ec207aab97232ca1415b850644d8db1" category="paragraph">Astra Control Service可管理Azure Kubernetes Service（KS）中受管理Kubernetes叢集上執行的應用程式、以及您自行管理的叢集。</block>
@@ -1829,7 +1818,6 @@
   <block id="c379fb5d3471815ca5903618ec9a0127" category="list-text"><block ref="38f602f93892997d8d639af2e6194620" category="inline-link-macro-rx"></block>。</block>
   <block id="f9f340044ba2c8e439d738fbf950f528" category="paragraph">確保叢集正常運作、並執行支援的Kubernetes版本、讓工作節點上線並執行支援的映像類型等。 <block ref="e5d6d79c6a6c0b51cbb3547ebf53c7a2" category="inline-xref-macro-rx"></block>。</block>
   <block id="7799e999430ad853dc7956148b19c972" category="list-text">每個工作節點的映像類型必須是<block ref="bba3d88d28186b91a2b3165d6143a600" prefix=" " category="inline-code"></block>。</block>
-  <block id="b4a8cd3b4b16dd62a142b1e0c101cb76" category="paragraph">Astra Control Service支援一個Google Cloud Platform專案和一個服務帳戶。您不應將多個服務帳戶新增至Astra Control Service、也不應旋轉服務帳戶認證資料。</block>
   <block id="871723f146538bf56de3fff54b4d80e5" category="section-title">使用相同命名空間的多個應用程式無法一起還原至不同的命名空間</block>
   <block id="2a19d8753285e180b79dd3712e6973e6" category="paragraph">如果您管理多個使用相同命名空間的應用程式（在Astra Control中建立多個應用程式定義）、則無法將所有應用程式還原至不同的單一命名空間。您需要將每個應用程式還原至各自獨立的命名空間。</block>
   <block id="c100d276c1827c4f44d955c38bd1a856" category="section-title">Astra Control不會自動指派雲端執行個體的預設值區段</block>
@@ -2043,4 +2031,10 @@
   <block id="f4e39691a17b55519cdcd9b3fe953c77" category="paragraph">您可以使用Astra Control API從雲端供應商移除雲端執行個體。若要深入瞭解、<block ref="bfa33a3653b9adb3eeffbdd741a1c8dc" category="inline-link-rx"></block>。</block>
   <block id="2af1f66f8f47d8339a96c1cd543cd3a8" category="list-text">* Astra Trident *：Astra Trident *是完全受支援的開放原始碼儲存資源配置程式、由NetApp維護、可讓您為Docker和Kubernetes所管理的容器化應用程式建立儲存磁碟區。Astra Trident部署於Astra Control Center時、包含已設定ONTAP 的整套儲存後端。</block>
   <block id="934c5edffa8e732ecb866cb319c8454a" category="doc">應用程式管理</block>
+  <block id="eb7e7a3aeccca526c3baa843ca15c287" category="paragraph">Astra Control會持續監控您的運算狀態變更、因此您可以隨時掌握新增的應用程式。</block>
+  <block id="516729a7c0562425406a22cfe6a2c163" category="list-text">Amazon EBS</block>
+  <block id="79c9c43a409053927cc323915dbf1c06" category="list-text">Azure託管磁碟</block>
+  <block id="55a5776613a7a49b0fb7fc4800c3065f" category="list-text">如果您使用NetApp雲端服務儲存產品做為儲存後端、Astra Control Service會使用Astra Trident來為應用程式配置持續的磁碟區。如果您使用Amazon EBS或Azure託管磁碟做為儲存後端、則需要安裝供應商專屬的SCSI驅動程式。安裝說明請參閱 <block ref="ebf2a7f1b6295b0b8e4d97b888cb809e" category="inline-link-macro-rx"></block> 和 <block ref="1938f6af50a8259a0bb98bac4f34eeeb" category="inline-link-macro-rx"></block>。</block>
+  <block id="43e71b094d6e4df1d87b41898754d340" category="paragraph">在雲端連線的環境中、Astra Control Center使用Cloud Insights 「資訊中心」來提供進階的監控和遙測功能。若缺乏Cloud Insights 支援鏈接、Astra Control Center可提供有限（7天數據）的監控與遙測功能、並透過開放式指標端點匯出至Kubernetes原生監控工具（例如Prometheus和Grafana）。</block>
+  <block id="736df34727d37ee0029df106be139889" category="paragraph">您可以將應用程式新增至叢集。或者、如果叢集中已有一些應用程式正在管理中、您可以使用Astra Control Center來管理這些應用程式。然後、使用Astra Control Center建立快照、備份、複製及複寫關係。</block>
 </blocks>

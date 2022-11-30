@@ -46,6 +46,7 @@ NOTE: Astra Control Service支援使用Azure Active Directory（Azure AD）進�
 登入Astra Control Service之後、您的第一步就是開始管理叢集。您可以新增由雲端供應商管理的叢集、或是自行管理的叢集。將叢集新增至Astra Control Service之前、您必須執行特定工作、並確保叢集符合特定需求。
 
 .您的需求是什麼？#8217；需要由雲端供應商管理的叢集
+[%collapsible]
 ====
 ifdef::aws[]
 
@@ -75,6 +76,7 @@ endif::azure[]
 
 ====
 .您的#8217；需要自行管理的叢集
+[%collapsible]
 ====
 您的叢集必須符合下列需求：
 

@@ -66,7 +66,27 @@ Astra Control提供兩種部署模式：
 
 
 
-| 什麼是儲存後端支援？ | NetApp雲端服務產品  a| 
+| 什麼是儲存後端支援？  a| 
+* Amazon網路服務：
++
+** Amazon EBS
+** Amazon FSX for NetApp ONTAP 產品
+
+
+* Google Cloud：
++
+** Google持續磁碟
+** NetApp Cloud Volumes Service
+
+
+* Microsoft Azure：
++
+** Azure託管磁碟
+** Azure NetApp Files
+
+
+
+ a| 
 * NetApp ONTAP AFF 的功能與FAS 功能
 * 儲存後端Cloud Volumes ONTAP
 
@@ -116,7 +136,7 @@ endif::azure[]
 
 * 在叢集上建立新的管理員角色和Kubernetes服務帳戶。
 * 使用新的管理員角色進行安裝 https://docs.netapp.com/us-en/trident/index.html["Astra Trident"^] 在叢集上建立一個或多個儲存類別。
-* 如果您使用雲端供應商儲存服務做為儲存後端、Astra Control Service會使用Astra Trident來為應用程式配置持續的磁碟區。
+* 如果您使用NetApp雲端服務儲存產品做為儲存後端、Astra Control Service會使用Astra Trident來為應用程式配置持續的磁碟區。如果您使用Amazon EBS或Azure託管磁碟做為儲存後端、則需要安裝供應商專屬的SCSI驅動程式。安裝說明請參閱 link:set-up-amazon-web-services.html["設定Amazon Web Services"^] 和 link:set-up-microsoft-azure-with-amd.html["使用Azure託管磁碟來設定Microsoft Azure"^]。
 +
 ** 此時、您可以將應用程式新增至叢集。將在新的預設儲存類別上配置持續磁碟區。
 ** 然後使用Astra Control Service來管理這些應用程式、並開始建立快照、備份和複製。

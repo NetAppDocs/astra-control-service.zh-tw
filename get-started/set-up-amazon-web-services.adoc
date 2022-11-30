@@ -88,6 +88,7 @@ Amazon Elastic Block Store（EBS）適用的SCSI驅動程式:: 如果您使用Am
 --
 請參閱詳細資料以取得安裝csi驅動程式的指示。
 
+[%collapsible%open]
 ====
 .安裝外部快照
 . 建立Volume Snapshot客戶需求日。
