@@ -22,54 +22,54 @@ summary: 您必須先採取幾個步驟來準備Amazon Web Services專案、才�
 
 
 
-=== 檢閱Amazon Web Services的Astra Control Service要求
+=== image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["一"] 檢閱Amazon Web Services的Astra Control Service要求
 
 [role="quick-margin-para"]
-確保叢集正常運作、並執行受支援版本的Kubernetes、工作節點上線並執行Linux或Windows等。  cluster requirements,深入瞭解此步驟。
+確保叢集正常運作、並執行受支援版本的Kubernetes、工作節點上線並執行Linux或Windows等。 <<EKS叢集需求,深入瞭解此步驟>>。
 
 
 
-=== 建立Amazon帳戶
-
-[role="quick-margin-para"]
-如果您還沒有Amazon帳戶、則需要建立帳戶、以便使用EKS。  an Amazon account,深入瞭解此步驟。
-
-
-
-=== 安裝Amazon Web Services CLI
+=== image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["二"] 建立Amazon帳戶
 
 [role="quick-margin-para"]
-安裝AWS CLI、以便從命令列管理AWS。  the Amazon Web Services CLI,請依照逐步指示操作。
+如果您還沒有Amazon帳戶、則需要建立帳戶、以便使用EKS。 <<建立Amazon帳戶,深入瞭解此步驟>>。
 
 
 
-=== 選用：建立IAM使用者
+=== image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["三"] 安裝Amazon Web Services CLI
+
+[role="quick-margin-para"]
+安裝AWS CLI、以便從命令列管理AWS。 <<安裝Amazon Web Services CLI,請依照逐步指示操作>>。
+
+
+
+=== image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["四"] 選用：建立IAM使用者
 
 [role="quick-margin-para"]
 建立Amazon身分識別與存取管理（IAM）使用者。您也可以跳過此步驟、將現有的IAM使用者與Astra Control Service搭配使用。
 
 [role="quick-margin-para"]
- Create an IAM user,閱讀逐步指示。
+<<選用：建立IAM使用者,閱讀逐步指示>>。
 
 
 
-=== 建立及附加權限原則
+=== image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["五"] 建立及附加權限原則
 
 [role="quick-margin-para"]
 建立具有Astra Control Service與AWS帳戶互動所需權限的原則。
 
 [role="quick-margin-para"]
- and attach a permissions policy,閱讀逐步指示。
+<<建立及附加權限原則,閱讀逐步指示>>。
 
 
 
-=== 儲存IAM使用者的認證資料
+=== image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-6.png["六"] 儲存IAM使用者的認證資料
 
 [role="quick-margin-para"]
 儲存IAM使用者的認證資料、以便將認證資料匯入Astra Control Service。
 
 [role="quick-margin-para"]
- the credentials for the IAM user,閱讀逐步指示。
+<<儲存IAM使用者的認證資料,閱讀逐步指示>>。
 
 
 
@@ -86,7 +86,7 @@ Astra Trident for Amazon FSX for NetApp ONTAP 解決方案:: 如果您使用Amaz
 Amazon Elastic Block Store（EBS）適用的SCSI驅動程式:: 如果您使用Amazon EBS儲存後端、則需要安裝EBS的Container Storage Interface（Container Storage Interface、簡稱csi）驅動程式（不會自動安裝）。
 +
 --
-請參閱詳細資料以取得安裝csi驅動程式的指示。
+請參閱詳細資料、以取得安裝csi驅動程式的指示。
 
 [%collapsible%open]
 ====
@@ -279,4 +279,5 @@ aws iam create-access-key --user-name <IAM-USER-NAME> --output json > credential
 ----
 
 
+.結果
 隨即建立「認證資料.json」檔案、您可以將認證資料匯入Astra Control Service。

@@ -16,10 +16,11 @@ summary: 只要幾個步驟、就能開始使用Astra Control Service。
 
 
 
-== 設定您的雲端供應商
+== image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["一"] 設定您的雲端供應商
 
 ifdef::gcp[]
 
+[role="quick-margin-list"]
 . Google Cloud：
 +
 ** 檢閱Google Kubernetes Engine叢集需求。
@@ -76,8 +77,9 @@ endif::azure[]
 
 
 
-== 完成Astra Control登錄
+== image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["二"] 完成Astra Control登錄
 
+[role="quick-margin-list"]
 . 建立 https://cloud.netapp.com["NetApp Cloud Central"^] 帳戶。
 . 建立Astra Control帳戶時、請指定您的NetApp Cloud Central電子郵件ID https://cloud.netapp.com/astra["從Astra產品頁面"^]。
 
@@ -87,7 +89,7 @@ link:register.html["深入瞭解註冊程序"]。
 
 
 
-== 將叢集新增至Astra Control
+== image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["三"] 將叢集新增至Astra Control
 
 [role="quick-margin-para"]
 登入後、選取*新增叢集*以使用Astra Control開始管理叢集。

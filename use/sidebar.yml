@@ -16,9 +16,6 @@ entries:
     url: "/use/clone-apps.html"
   - title: 管理應用程式執行掛勾
     url: "/use/manage-app-execution-hooks.html"
-    entries:
-    - title: 執行攔截範例
-      url: "/use/execution-hook-examples.html"
 - title: 檢視應用程式與運算健全狀況
   entries:
   - title: 儀表板摘要

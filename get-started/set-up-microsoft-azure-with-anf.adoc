@@ -22,59 +22,59 @@ summary: 您必須先採取幾個步驟來準備Microsoft Azure訂閱、才能�
 
 
 
-=== 檢閱Azure Kubernetes服務的Astra Control Service要求
+=== image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["一"] 檢閱Azure Kubernetes服務的Astra Control Service要求
 
 [role="quick-margin-para"]
-確保叢集正常運作、並執行受支援版本的Kubernetes、確保節點集區已上線並執行Linux等。  Kubernetes Service cluster requirements,深入瞭解此步驟。
+確保叢集正常運作、並執行受支援版本的Kubernetes、確保節點集區已上線並執行Linux等。 <<Azure Kubernetes服務叢集需求,深入瞭解此步驟>>。
 
 
 
-=== 註冊Microsoft Azure
-
-[role="quick-margin-para"]
-建立Microsoft Azure帳戶。  up for Microsoft Azure,深入瞭解此步驟。
-
-
-
-=== 註冊Azure NetApp Files 以供使用
+=== image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["二"] 註冊Microsoft Azure
 
 [role="quick-margin-para"]
-註冊NetApp資源供應商。  for Azure NetApp Files,深入瞭解此步驟。
+建立Microsoft Azure帳戶。 <<註冊Microsoft Azure,深入瞭解此步驟>>。
 
 
 
-=== 建立NetApp帳戶
-
-[role="quick-margin-para"]
-前往Azure NetApp Files Azure入口網站的「解決方案」、建立NetApp帳戶。  a NetApp account,深入瞭解此步驟。
-
-
-
-=== 設定容量資源池
+=== image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["三"] 註冊Azure NetApp Files 以供使用
 
 [role="quick-margin-para"]
-為您的持續磁碟區設定一個或多個容量集區。  up a capacity pool,深入瞭解此步驟。
+註冊NetApp資源供應商。 <<註冊Azure NetApp Files 以供使用,深入瞭解此步驟>>。
 
 
 
-=== 將子網路委派Azure NetApp Files 給
-
-[role="quick-margin-para"]
-將子網路委派Azure NetApp Files 給支援中心、以便Astra Control Service在該子網路中建立持續的磁碟區。  a subnet to Azure NetApp Files,深入瞭解此步驟。
-
-
-
-=== 建立Azure服務主體
+=== image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["四"] 建立NetApp帳戶
 
 [role="quick-margin-para"]
-建立具備「貢獻者」角色的Azure服務主體。  an Azure service principal,深入瞭解此步驟。
+前往Azure NetApp Files Azure入口網站的「解決方案」、建立NetApp帳戶。 <<建立NetApp帳戶,深入瞭解此步驟>>。
 
 
 
-=== 選用：為Azure備份儲存區設定備援
+=== image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["五"] 設定容量資源池
 
 [role="quick-margin-para"]
-根據預設、Astra Control Service用來儲存Azure Kubernetes服務備份的儲存區使用本機備援儲存設備（LRS）備援選項。您可選擇為Azure鏟斗設定更持久的備援層級、作為選用步驟。  Configure redundancy for Azure backup buckets,深入瞭解此步驟。
+為您的持續磁碟區設定一個或多個容量集區。 <<設定容量資源池,深入瞭解此步驟>>。
+
+
+
+=== image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-6.png["六"] 將子網路委派Azure NetApp Files 給
+
+[role="quick-margin-para"]
+將子網路委派Azure NetApp Files 給支援中心、以便Astra Control Service在該子網路中建立持續的磁碟區。 <<將子網路委派Azure NetApp Files 給,深入瞭解此步驟>>。
+
+
+
+=== image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-7.png["七"] 建立Azure服務主體
+
+[role="quick-margin-para"]
+建立具備「貢獻者」角色的Azure服務主體。 <<建立Azure服務主體,深入瞭解此步驟>>。
+
+
+
+=== image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-8.png["八"] 選用：為Azure備份儲存區設定備援
+
+[role="quick-margin-para"]
+根據預設、Astra Control Service用來儲存Azure Kubernetes服務備份的儲存區使用本機備援儲存設備（LRS）備援選項。您可選擇為Azure鏟斗設定更持久的備援層級、作為選用步驟。 <<選用：為Azure備份儲存區設定備援,深入瞭解此步驟>>。
 
 
 
@@ -86,11 +86,11 @@ Kubernetes版本:: 叢集必須執行Kubernetes 1.23至1.25版。
 映像類型:: 所有節點集區的映像類型必須是Linux。
 叢集狀態:: 叢集必須以正常狀態執行、且至少有一個線上工作者節點、且在故障狀態下沒有工作節點。
 Azure地區:: 叢集必須位於Azure NetApp Files 提供了功能的區域。 https://azure.microsoft.com/en-us/global-infrastructure/services/?products=netapp["依地區檢視Azure產品"^]。
-訂購:: 叢集必須位在Azure NetApp Files 啟用了支援功能的訂購中。您可以在何時選擇訂閱  for Azure NetApp Files,註冊Azure NetApp Files 以供使用。
+訂購:: 叢集必須位在Azure NetApp Files 啟用了支援功能的訂購中。您可以在何時選擇訂閱 <<註冊Azure NetApp Files 以供使用,註冊Azure NetApp Files 以供使用>>。
 Vnet:: 請考慮下列vnet需求：
 +
 --
-* 叢集必須位於能夠直接存取Azure NetApp Files 由某個位址委派的子網路的vnet中。  a subnet to Azure NetApp Files,瞭解如何設定委派的子網路。
+* 叢集必須位於能夠直接存取Azure NetApp Files 由某個位址委派的子網路的vnet中。 <<將子網路委派Azure NetApp Files 給,瞭解如何設定委派的子網路>>。
 * 如果您的Kubernetes叢集位於vnet中、且該vnet連接至Azure NetApp Files 位於另一個vnet中的委派子網路、則對等連線的兩端都必須處於線上狀態。
 * 請注意、vnet（包括立即處理的VNets）中使用Azure NetApp Files 的IP數量預設上限為1、000。 https://docs.microsoft.com/en-us/azure/azure-netapp-files/azure-netapp-files-resource-limits["查看Azure NetApp Files 資源限制"^]。
 +
@@ -177,6 +177,7 @@ link:../learn/azure-storage.html["深入瞭Azure NetApp Files 解適用於NetApp
 . https://docs.microsoft.com/en-us/azure/azure-netapp-files/azure-netapp-files-delegate-subnet["請遵循Azure NetApp Files 《支持》文件將子網路委派Azure NetApp Files 給《支持》"^]。
 
 
+.完成後
 請等待約10分鐘、再探索在委派子網路中執行的叢集。
 
 

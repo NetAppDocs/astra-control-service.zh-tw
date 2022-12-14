@@ -22,38 +22,38 @@ summary: 您必須先採取幾個步驟來準備Microsoft Azure訂閱、才能�
 
 
 
-=== 檢閱Azure Kubernetes服務的Astra Control Service要求
+=== image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["一"] 檢閱Azure Kubernetes服務的Astra Control Service要求
 
 [role="quick-margin-para"]
-確保叢集正常運作、並執行受支援版本的Kubernetes、確保節點集區已上線並執行Linux等。  Kubernetes Service cluster requirements,深入瞭解此步驟。
+確保叢集正常運作、並執行受支援版本的Kubernetes、確保節點集區已上線並執行Linux等。 <<Azure Kubernetes服務叢集需求,深入瞭解此步驟>>。
 
 
 
-=== 註冊Microsoft Azure
-
-[role="quick-margin-para"]
-建立Microsoft Azure帳戶。  up for Microsoft Azure,深入瞭解此步驟。
-
-
-
-=== 建立Azure服務主體
+=== image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["二"] 註冊Microsoft Azure
 
 [role="quick-margin-para"]
-建立具備「貢獻者」角色的Azure服務主體。  an Azure service principal,深入瞭解此步驟。
+建立Microsoft Azure帳戶。 <<註冊Microsoft Azure,深入瞭解此步驟>>。
 
 
 
-=== 設定Container Storage介面（SCSI）驅動程式詳細資料
-
-[role="quick-margin-para"]
-您必須設定Azure訂閱和叢集、才能搭配使用csi驅動程式。  Container Storage Interface (CSI) driver details,深入瞭解此步驟。
-
-
-
-=== 選用：為Azure備份儲存區設定備援
+=== image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["三"] 建立Azure服務主體
 
 [role="quick-margin-para"]
-根據預設、Astra Control Service用來儲存Azure Kubernetes服務備份的儲存區使用本機備援儲存設備（LRS）備援選項。您可選擇為Azure鏟斗設定更持久的備援層級、作為選用步驟。  Configure redundancy for Azure backup buckets,深入瞭解此步驟。
+建立具備「貢獻者」角色的Azure服務主體。 <<建立Azure服務主體,深入瞭解此步驟>>。
+
+
+
+=== image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png["四"] 設定Container Storage介面（SCSI）驅動程式詳細資料
+
+[role="quick-margin-para"]
+您必須設定Azure訂閱和叢集、才能搭配使用csi驅動程式。 <<設定Container Storage介面（SCSI）驅動程式詳細資料,深入瞭解此步驟>>。
+
+
+
+=== image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-5.png["五"] 選用：為Azure備份儲存區設定備援
+
+[role="quick-margin-para"]
+根據預設、Astra Control Service用來儲存Azure Kubernetes服務備份的儲存區使用本機備援儲存設備（LRS）備援選項。您可選擇為Azure鏟斗設定更持久的備援層級、作為選用步驟。 <<選用：為Azure備份儲存區設定備援,深入瞭解此步驟>>。
 
 
 

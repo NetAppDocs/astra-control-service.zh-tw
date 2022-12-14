@@ -14,9 +14,9 @@ summary: 設定環境之後、您就可以建立Kubernetes叢集、然後將其�
 [role="lead"]
 您可以使用Astra Control Service來管理私有的高可用性叢集。這些指示假設您已建立私有的高效能叢集、並準備好安全的方法來遠端存取；如需建立及存取私有高效能叢集的詳細資訊、請參閱 https://docs.microsoft.com/azure/aks/private-clusters["Azure文件"^]。
 
-*  the Astra Connector operator
-*  up persistent storage
-*  the private cluster to Astra Control Service
+* <<安裝Astra Connector運算子>>
+* <<設定持續儲存>>
+* <<將私有叢集新增至Astra Control Service>>
 
 
 
@@ -66,7 +66,7 @@ kubectl apply -f config/samples/astraconnector_v1.yaml -n astra-connector
 kubectl get astraconnector astra-connector -n astra-connector
 ----
 +
-您應該會看到類似下列的輸出：
+您應該參考類似下列的輸出：
 
 +
 [source, console]

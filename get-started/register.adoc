@@ -70,6 +70,7 @@ image:screenshot-cloud-central-signup.gif["Cloud Central註冊頁面的快照、
 . 當電子郵件送達時、請選取電子郵件中的連結以驗證您的電子郵件地址。
 
 
+.結果
 您現在擁有作用中的 Cloud Central 使用者登入權限。
 
 現在您已經註冊、您可以使用的Cloud Central認證、直接存取Astra Control Service https://astra.netapp.io[]。
