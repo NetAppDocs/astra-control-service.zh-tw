@@ -1791,7 +1791,6 @@
   <block id="e1392cd5a84b9e2661cec2830d5c10bf" category="list-text">從您要還原之快照或備份的「*動作*」欄中的「選項」功能表中、選取「*還原應用程式*」。</block>
   <block id="8d7c216bc17d281838efafaa3704677b" category="list-text">選擇還原類型：</block>
   <block id="90d21d98503ddae05ddf0a1a34b7d790" category="list-text">*還原至原始命名空間*：使用此程序可將應用程式就地還原至原始叢集。</block>
-  <block id="d6163245aff1d495d4414480b1d33f38" category="admonition">在與其他應用程式共用資源的應用程式上執行就地還原作業、可能會產生非預期的結果。</block>
   <block id="eb543a53c7bc9830323c1e31b5a68dc4" category="list-text">選取要用來就地還原應用程式的快照、此快照會將應用程式還原為舊版本身。</block>
   <block id="e6cd86d61f4639c8a27006c6c29b3e9f" category="list-text">選擇*下一步*。</block>
   <block id="3b015c7e8b671c5a6b88a902ad59e853" category="list-text">檢閱還原動作的詳細資料、輸入「還原」、然後選取*還原*。</block>
@@ -2049,4 +2048,5 @@
   <block id="edb74efc05972c268b6cccf83996ac3e" category="section-title">變更使用者角色</block>
   <block id="bfba5acdae4cf2cfa2c86cce302038d4" category="paragraph">隨時從帳戶移除認證資料。您只能在之後移除認證 <block ref="7193f1b7f27bd5505d89cc1e5724fb4b" category="inline-link-macro-rx"></block>、除非您正在輪詢認證資料（請參閱 <block ref="029b7394eded829c95ca3b86c4cd802d" category="inline-xref-macro-rx"></block>）。</block>
   <block id="df1dd0475d7e25b9e368f8f45f636062" category="list-text">* S3伺服器名稱或IP位址*（僅限AWS）：輸入S3端點的完整網域名稱、此名稱對應於您所在的地區、不需要<block ref="f8eae6750519389e078e1eb1bcb3d708" prefix=" " category="inline-code"></block>。請參閱<block ref="398d47c523652edc934ec11e2f213d87" category="inline-link-rx"></block> 以取得更多資訊。</block>
+  <block id="ce461936438c7221ad2aecef67b1e35b" category="paragraph">在與其他應用程式共用資源的應用程式上執行就地還原作業、可能會產生非預期的結果。在其中一個應用程式上執行就地還原時、應用程式之間共享的任何資源都會被取代。</block>
 </blocks>
