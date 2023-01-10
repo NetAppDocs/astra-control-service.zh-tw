@@ -253,9 +253,7 @@
   <block id="5d2bbbb5e8eadfe7beda56382db3b48e" category="paragraph">顯示Astra Control Service可用的貯體清單。</block>
   <block id="97051796d8399cbd22e680d3212aa1c0" category="section-title">新增額外的儲存庫</block>
   <block id="9c6ebb12d9cd173ee88e3b73cabe77b4" category="paragraph">在雲端供應商開始管理叢集之後、您可以隨時新增其他資源庫。這可讓您在建立保護原則時、在儲存區之間進行選擇、並變更臨機操作備份與複製的預設儲存區。</block>
-  <block id="59eaa325284587d87d8a183c0fcffbdf" category="paragraph">請注意、Astra Control Service無法讓您在新增後移除庫位。</block>
   <block id="dd6354a9b0182f27b3ea1d07811a3bdd" category="list-text">雲端供應商中現有儲存庫的名稱。</block>
-  <block id="69655d7e1814b014798597363d3d2639" category="list-text">如果您的儲存庫位於Azure、則必須屬於名為_Astra備份rg-_的資源群組。</block>
   <block id="b21aa3a75aa9fe5b7c4320c651dd6004" category="list-text">選擇*「Add」（新增）*、然後依照提示新增儲存區。</block>
   <block id="833eb3b04501929e168dbcfe3328a358" category="list-text">*類型*：選擇您的雲端供應商。</block>
   <block id="3cb658c17327b8e0fdf35e63798291f2" category="paragraph">您的雲端供應商只有在Astra Control Service開始管理在該雲端供應商中執行的叢集之後、才能使用。</block>
@@ -2049,4 +2047,7 @@
   <block id="bfba5acdae4cf2cfa2c86cce302038d4" category="paragraph">隨時從帳戶移除認證資料。您只能在之後移除認證 <block ref="7193f1b7f27bd5505d89cc1e5724fb4b" category="inline-link-macro-rx"></block>、除非您正在輪詢認證資料（請參閱 <block ref="029b7394eded829c95ca3b86c4cd802d" category="inline-xref-macro-rx"></block>）。</block>
   <block id="df1dd0475d7e25b9e368f8f45f636062" category="list-text">* S3伺服器名稱或IP位址*（僅限AWS）：輸入S3端點的完整網域名稱、此名稱對應於您所在的地區、不需要<block ref="f8eae6750519389e078e1eb1bcb3d708" prefix=" " category="inline-code"></block>。請參閱<block ref="398d47c523652edc934ec11e2f213d87" category="inline-link-rx"></block> 以取得更多資訊。</block>
   <block id="ce461936438c7221ad2aecef67b1e35b" category="paragraph">在與其他應用程式共用資源的應用程式上執行就地還原作業、可能會產生非預期的結果。在其中一個應用程式上執行就地還原時、應用程式之間共享的任何資源都會被取代。</block>
+  <block id="e13d6ee2f9c34bcf7366950e0434777b" category="list-text">如果您的儲存庫位於Azure：</block>
+  <block id="49030d2f464d7bb39691809e5ab16174" category="list-text">此儲存區必須屬於名為_Astra備份rg-_的資源群組。</block>
+  <block id="88bdaf7536fdf70e3c93df4a9b10bb82" category="list-text">如果Azure儲存帳戶執行個體效能設定設為「Premium」、則「Premium帳戶類型」設定必須設為「區塊區塊區塊」。</block>
 </blocks>
