@@ -2050,4 +2050,6 @@
   <block id="e13d6ee2f9c34bcf7366950e0434777b" category="list-text">如果您的儲存庫位於Azure：</block>
   <block id="49030d2f464d7bb39691809e5ab16174" category="list-text">此儲存區必須屬於名為_Astra備份rg-_的資源群組。</block>
   <block id="88bdaf7536fdf70e3c93df4a9b10bb82" category="list-text">如果Azure儲存帳戶執行個體效能設定設為「Premium」、則「Premium帳戶類型」設定必須設為「區塊區塊區塊」。</block>
+  <block id="ceeca391c3348d53722ec9783ba88430" category="inline-link">NetApp TV</block>
+  <block id="b504b02d5498a8b09080b1e621f4d1aa" category="admonition">若要觀看Azure Marketplace訂閱程序的逐步解說影片、請造訪<block ref="bfd2f59ca3f14f5fb5037b1bda5b7515" category="inline-link-rx"></block>。</block>
 </blocks>
