@@ -16,38 +16,53 @@ NetApp會定期更新Astra Control Service、為您提供新功能、增強功�
 
 
 
+== 2023年1月17日
+
+.新功能與支援
+* 更強大的執行掛勾功能、提供更多篩選選項
++
+link:../use/manage-app-execution-hooks.html["管理應用程式執行掛勾"]
+
+* 支援NetApp Cloud Volumes ONTAP 作為儲存後端（正式支援Microsoft Azure和Google Cloud平台）
++
+link:../learn/architecture.html#astra-control-components["架構與元件"]
+
+
+
+
+
 == 2022年11月22日
 
 .新功能與支援
-* 支援橫跨多個命名空間的應用程式。
+* 支援橫跨多個命名空間的應用程式
 +
 link:../use/manage-apps.html["定義應用程式"]
 
-* 支援將叢集資源納入應用程式定義。
+* 支援將叢集資源納入應用程式定義
 +
 link:../use/manage-apps.html["定義應用程式"]
 
-* 增強備份、還原及複製作業的進度報告功能。
+* 增強備份、還原及複製作業的進度報告功能
 +
 link:../use/monitor-running-tasks.html["監控執行中的工作"]
 
-* 支援管理已安裝相容版本Astra Trident的叢集。
+* 支援管理已安裝相容版本Astra Trident的叢集
 +
 link:../get-started/add-first-cluster.html["從Astra Control Service開始管理Kubernetes叢集"]
 
-* 支援在單一Astra Control Service帳戶中管理多個雲端供應商訂閱。
+* 支援在單一Astra Control Service帳戶中管理多個雲端供應商訂閱
 +
 link:../use/manage-cloud-instances.html["管理雲端執行個體"]
 
-* 支援將自我管理的Kubernetes叢集新增至Astra Control Service。
+* 支援將自我管理的Kubernetes叢集新增至Astra Control Service
 +
 link:../get-started/add-first-cluster.html["從Astra Control Service開始管理Kubernetes叢集"]
 
-* Astra Control Service的帳單現在會依命名空間進行計量、而非依應用程式進行計費。
+* Astra Control Service的帳單現在會依命名空間進行計量、而非依應用程式進行計費
 +
 link:../use/set-up-billing.html["設定帳單"]
 
-* 支援透過AWS Marketplace訂閱Astra Control Service定期方案。
+* 支援透過AWS Marketplace訂閱Astra Control Service定期方案
 +
 link:../use/set-up-billing.html["設定帳單"]
 

@@ -24,20 +24,18 @@ image:astra-architecture-diagram-v5.png["Astra Control架構圖與元件"]
 * * Astra Trident *：Astra Trident *是完全受支援的開放原始碼儲存資源配置程式、由NetApp維護、可讓您為Docker和Kubernetes所管理的容器化應用程式建立儲存磁碟區。Astra Trident部署於Astra Control Center時、包含已設定ONTAP 的整套儲存後端。
 * *儲存後端*：
 +
-** Astra控制服務的用途 https://www.netapp.com/cloud-services/azure-netapp-files/["Azure NetApp Files"^] 或Azure託管磁碟做為高峰叢集的儲存後端。
-** Astra控制服務的用途 https://www.netapp.com/cloud-services/cloud-volumes-service-for-google-cloud/["適用於Cloud Volumes Service Google Cloud的NetApp解決方案"^] 或Google持續磁碟做為GKE叢集的儲存後端。
-** Astra控制服務的用途 https://docs.aws.amazon.com/ebs/["Amazon彈性區塊存放區"^] 和 https://docs.aws.amazon.com/fsx/["Amazon FSX for NetApp ONTAP 產品"^] 作為EKS叢集的儲存後端。
+** Astra控制服務的用途 https://www.netapp.com/cloud-services/azure-netapp-files/["Azure NetApp Files"^]、Azure託管磁碟、及 https://www.netapp.com/cloud-services/cloud-volumes-ontap/what-is-cloud-volumes/["NetApp Cloud Volumes ONTAP"] 做為高效能叢集的儲存後端。
+** Astra控制服務的用途 https://www.netapp.com/cloud-services/cloud-volumes-service-for-google-cloud/["適用於Cloud Volumes Service Google Cloud的NetApp解決方案"^]、Google持續磁碟和 https://www.netapp.com/cloud-services/cloud-volumes-ontap/what-is-cloud-volumes/["NetApp Cloud Volumes ONTAP"] 做為GKE叢集的儲存後端。
+** Astra控制服務的用途 https://docs.aws.amazon.com/ebs/["Amazon彈性區塊存放區"^] 和 https://docs.aws.amazon.com/fsx/["Amazon FSX for NetApp ONTAP 產品"^] 做為AWS叢集的儲存後端。
 ** Astra Control Center使用下列儲存後端：
-
-
-
-
-* 不再是儲存後端。ONTAP AFF FAS作為儲存軟體與硬體平台ONTAP 、支援核心儲存服務、支援多種儲存存取傳輸協定、以及快照與鏡射等儲存管理功能。
-* 儲存後端Cloud Volumes ONTAP
 +
-** *《NetApp雲端基礎架構監控工具》《支援VMware技術》*《支援架構監控工具》、可讓您監控由Astra Control Center管理的Kubernetes叢集的效能與使用率。Cloud Insights Cloud Insights可將儲存使用量與工作負載建立關聯。Cloud Insights當您在Cloud Insights Astra控制中心啟用「支援不中斷連線」時、遙測資訊會顯示在Astra控制中心UI頁面中。
+*** 不再是儲存後端。ONTAP AFF FAS作為儲存軟體與硬體平台ONTAP 、支援核心儲存服務、支援多種儲存存取傳輸協定、以及快照與鏡射等儲存管理功能。
+*** 儲存後端Cloud Volumes ONTAP
 
 
+
+
+* *《NetApp雲端基礎架構監控工具》《支援VMware技術》*《支援架構監控工具》、可讓您監控由Astra Control Center管理的Kubernetes叢集的效能與使用率。Cloud Insights Cloud Insights可將儲存使用量與工作負載建立關聯。Cloud Insights當您在Cloud Insights Astra控制中心啟用「支援不中斷連線」時、遙測資訊會顯示在Astra控制中心UI頁面中。
 
 
 

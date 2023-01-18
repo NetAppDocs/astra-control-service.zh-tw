@@ -465,7 +465,6 @@
   <block id="c45dea86b5befe190795d48755984936" category="section-title">建立自訂執行掛勾</block>
   <block id="4069b8bd7c11bc17efc85c9bb6d794c1" category="list-text">輸入掛機的唯一名稱。</block>
   <block id="cc56ac336e2ae46c348055eabdb31910" category="list-text">（選用）輸入執行期間要傳遞至掛機的任何引數、並在您輸入的每個引數之後按Enter鍵以記錄每個引數。</block>
-  <block id="bdc506e89ee9aec709d8e40132db20f3" category="list-text">在「* Container images"（* Container映像*）區域中、如果掛勾應針對應用程式中包含的所有容器映像執行、請啟用「* Apply to all Container images"（*套用至所有容器映像*）核取方塊。如果掛機只能對一個或多個指定的容器映像起作用、請在「*要比對的容器映像名稱*」欄位中輸入容器映像名稱。</block>
   <block id="1144b2f2ea8eccb66bf20cdea686b3d2" category="list-text">在*指令碼*區域中、執行下列其中一項：</block>
   <block id="489a27c3b545dfadcd33d3ce67932718" category="list-text">上傳自訂指令碼。</block>
   <block id="e3f243bc33219b29c2a12b59c90be96c" category="list-text">選取*上傳檔案*選項。</block>
@@ -474,7 +473,6 @@
   <block id="7ecdb873e1239bfeaf5c617b779dd434" category="list-text">（選用）輸入其他系統管理員應該知道的任何指令碼附註。</block>
   <block id="c1b97a456b241d38af9df8418fe93955" category="list-text">從剪貼簿貼入自訂指令碼。</block>
   <block id="1a71cd2313095cebe3a5bf76adff4cae" category="list-text">選取文字欄位、然後將指令碼文字貼到欄位中。</block>
-  <block id="6d4a5ef582e95d5022946acc47ce0f2e" category="list-text">選取*新增攔截*。</block>
   <block id="12bf76ea0a88e9814b22daef0831337b" category="section-title">停用執行掛勾</block>
   <block id="df61c20b7e6ebb23392c4395835c3e51" category="paragraph">如果您想要暫時避免在應用程式快照之前或之後執行、可以停用執行掛勾。您需要擁有擁有擁有者、管理員或成員權限、才能停用執行掛勾。</block>
   <block id="dbf8ea65a71d9e2042b03a97a0da4095" category="list-text">選擇*停用*。</block>
@@ -985,7 +983,6 @@
   <block id="0175163d6395e694e3b8efa4f3884e4d" category="paragraph">若要深入瞭解、<block ref="bfa33a3653b9adb3eeffbdd741a1c8dc" category="inline-link-rx"></block>。</block>
   <block id="2938a5725f8de8bc6cfbe9bdd59f796f" category="summary">Astra Control Service使用Azure NetApp Files 支援功能作為Azure Kubernetes Service（KS）叢集的儲存後端。您應該瞭解如何選擇儲存類別和持續磁碟區大小、以協助您達成效能目標。</block>
   <block id="7aaaeb3c621282cab2d3ea9432c3fbe0" category="doc">適用於高峰叢集的儲存類別和PV大小</block>
-  <block id="b2cd1a47d11cab60dfbd0e59e1c5cdaa" category="paragraph">Astra Control Service支援Azure NetApp Files 以支援以支援以支援功能不全或Azure託管磁碟做為Azure Kubernetes Service（KS）叢集的儲存後端。</block>
   <block id="45f2ca5e315e585458c55fea41d5b448" category="paragraph">Astra Control Service支援Azure NetApp Files 將支援用作Azure Kubernetes Service（KS）叢集的儲存後端。您應該瞭解如何選擇儲存類別和持續磁碟區大小、以協助您達成效能目標。</block>
   <block id="45b76beee2cc117208c893ba100df166" category="section-title">服務層級與儲存類別</block>
   <block id="a7f0656645b67b8a1643aaf6bdb03159" category="paragraph">支援三種服務層級：超儲存設備、優質儲存設備和標準儲存設備。Azure NetApp Files每個服務層級都是針對不同的效能需求而設計：</block>
@@ -1033,7 +1030,6 @@
   <block id="73b2ad293eda73ca2acff9008e7ac0e8" category="paragraph"><block ref="73b2ad293eda73ca2acff9008e7ac0e8" category="inline-link-macro-rx"></block></block>
   <block id="bd5cde8fc544622a3633d73962bcd705" category="summary">Astra Control Service使用Cloud Volumes Service 支援Google Cloud的功能、做為持續磁碟區的儲存後端。您應該瞭解如何選擇服務層級、儲存類別和持續容量、以協助您達成效能目標。</block>
   <block id="afd5c3412d8aaa89e4ade2ddff8cac9b" category="doc">GKE叢集的服務類型、儲存類別和PV大小</block>
-  <block id="9a2e6b3f1f716d445d67874207aea6af" category="paragraph">Astra Control Service支援Cloud Volumes Service 以支援VMware for Google Cloud或Google持續磁碟作為持續磁碟區的儲存後端選項。</block>
   <block id="2cafdb551953c7afd397b12eee1ce505" category="paragraph">Astra Control Service可以Cloud Volumes Service 使用適用於Google Cloud的功能、做為持續磁碟區的儲存後端。您應該瞭解如何選擇服務類型、儲存類別和持續Volume大小、以協助您達成效能目標。</block>
   <block id="244763a8bcf1786e84650aa8b0aeeb25" category="paragraph">適用於Google Cloud的支援提供兩種服務類型：_CVS_和_CVs-Performance。Cloud Volumes Service這些服務類型在特定的Google Cloud地區均受到支援。<block ref="6fccf359b538aaaeb2b6ee13ea815763" category="inline-link-rx"></block> 識別叢集所在的Google Cloud區域所支援的服務類型。</block>
   <block id="d3f5696e3e2a02aef97b3ec088f9f1bb" category="paragraph">如果Kubernetes叢集必須位於特定區域、則您將使用該區域所支援的服務類型。</block>
@@ -1314,7 +1310,6 @@
   <block id="4d82a1ec1af02725042c8c785564ee7a" category="inline-link">Amazon FSX for NetApp ONTAP 產品</block>
   <block id="6a2736fcbb5755dd03d114a5153506eb" category="list-text"><block ref="6a2736fcbb5755dd03d114a5153506eb" category="inline-link-rx"></block></block>
   <block id="37cb798eeadd3da7723607246ebf2339" category="inline-link-macro">Amazon Web Services叢集的儲存類別</block>
-  <block id="516e3f0030567c9bbad612df88d2db95" category="paragraph">+深入瞭解 <block ref="669f060d339cad3efcb29baff91fd410" category="inline-link-macro-rx"></block>。深入瞭解 <block ref="b4547358b744ca3b28812f444dc5a38f" category="inline-link-macro-rx"></block>。深入瞭解 <block ref="fd0a3bed584d87df18438d86772a2aaf" category="inline-link-macro-rx"></block>。</block>
   <block id="457022d51f2e6150dfa70037b30d57b5" category="section-title">為其他使用者提供叢集存取</block>
   <block id="436e78c3dd196f680aab83eb69543658" category="paragraph">您可以選擇性地將叢集的「kubecl」命令存取權提供給不是叢集建立者的其他IAM使用者。</block>
   <block id="043e32602230f742d954f613b7b5ce25" category="inline-link">如何在Amazon EKS中建立叢集後、提供其他IAM使用者和角色的存取權限？</block>
@@ -1414,9 +1409,6 @@
   <block id="978b82e4298231e68c6ac005c5e649aa" category="inline-link">Amazon EBS定價</block>
   <block id="bc4bb24d5e702fb79be623b84e7cf47e" category="inline-link">Amazon FSX提供NetApp ONTAP 的效能</block>
   <block id="86305be6273e5fd50120867e93897613" category="inline-link">Amazon FSX for NetApp ONTAP 的定價</block>
-  <block id="64871be4acf54750c11b07ff3203cf03" category="list-text">Astra控制服務的用途<block ref="9e2d15731749abbc242896b41a1be2ef" category="inline-link-rx"></block> 或Azure託管磁碟做為高峰叢集的儲存後端。</block>
-  <block id="bc808c2dc319f0278e897f16cfe24a95" category="list-text">Astra控制服務的用途<block ref="d804c793f302b1f3285300e6253aaac6" category="inline-link-rx"></block> 或Google持續磁碟做為GKE叢集的儲存後端。</block>
-  <block id="1574db16d74f7537711f20b07293065e" category="list-text">Astra控制服務的用途<block ref="a65cb6c91d35e755c3763fe01aedac72" category="inline-link-rx"></block> 和<block ref="789fe92e2b55f108a4e50dd78da73d71" category="inline-link-rx"></block> 作為EKS叢集的儲存後端。</block>
   <block id="dd069ab6d74011bb108bf219e092a2d0" category="list-text">Astra Control Center使用下列儲存後端：</block>
   <block id="a7da53d86332105dcae80a12f3e8b7a5" category="summary">說明Astra Control中的託管應用程式類型。</block>
   <block id="848f207b3c4594754aa82fd21b5fc5e0" category="paragraph">當Astra Control探索叢集時、這些叢集上的應用程式將無法管理、直到您選擇要管理的方式為止。Astra Control中的託管應用程式可以是下列任一項：</block>
@@ -1481,7 +1473,6 @@
   <block id="ea63117998199b7febd9cbf694fff31a" category="section-title">取消備份</block>
   <block id="11ea61a300036053e79076bf8d2a27d0" category="paragraph">您可以取消進行中的備份。</block>
   <block id="5a74785c1f7b64991b4e6c1995f2e049" category="list-text">在所需備份*「Actions」（動作）*欄的「Options」（選項）功能表中、選取*「Cancel*」（取消*）。</block>
-  <block id="d77a72056cdc02124a845066bec0d946" category="paragraph">執行攔截是一種自訂動作、可設定搭配託管應用程式的資料保護作業一起執行。例如、如果您有資料庫應用程式、您可以使用執行掛勾來暫停快照之前的所有資料庫交易、並在快照完成後繼續交易。如此可確保應用程式一致的快照。</block>
   <block id="83fbf1604bedff410ea11872b40ab9f0" category="section-title">執行掛勾的類型</block>
   <block id="2e0239d0ab48ff8e287445ee24093e64" category="paragraph">Astra Control支援下列類型的執行掛勾、視執行時間而定：</block>
   <block id="9c6a9cc04a4d5840a5d237b232190a35" category="list-text">快照前</block>
@@ -1492,7 +1483,6 @@
   <block id="7fdb6925e171ac617262d69ebf119664" category="list-text">Astra Control使用執行掛勾設定及任何符合條件、來判斷哪些掛勾適用於快照、備份或還原作業。</block>
   <block id="71bd0199539278d83c2eb3eaf817b710" category="list-text">所有執行掛機故障都是軟性故障、即使掛機故障、仍會嘗試其他掛機和資料保護作業。但是、當掛機失敗時、會在*活動*頁面事件記錄中記錄警告事件。</block>
   <block id="7b1a9d930edd4676e6aca05c81245d86" category="list-text">對於Adhoc*資料保護作業、所有Hook事件都會產生並儲存在*活動*頁面事件記錄中。不過、對於排程的資料保護作業、事件記錄中只會記錄攔截故障事件（排程資料保護作業本身所產生的事件仍會記錄下來）。</block>
-  <block id="e44e874b44364a30ee06654e352ede59" category="paragraph">由於執行掛勾通常會減少或完全停用執行中應用程式的功能、因此您應該一律盡量縮短自訂執行掛勾執行所需的時間。如果您以相關的執行掛勾開始備份或快照作業、但隨後取消它、則如果備份或快照作業已經開始、仍允許掛勾執行。這表示備份後執行掛勾無法假設備份已完成。</block>
   <block id="a9f57378169166a88acf61a71442e5fb" category="section-title">執行順序</block>
   <block id="e8132483e0cae3565c87c193b3fd8f57" category="paragraph">執行資料保護作業時、執行掛機事件會依照下列順序發生：</block>
   <block id="4a6ccf1757fd10978b3fb28d81187dcc" category="list-text">任何適用的自訂操作前執行掛勾都會在適當的容器上執行。您可以視需要建立及執行任意數量的自訂操作前掛勾、但在作業之前執行這些掛勾的順序既不保證也無法設定。</block>
@@ -1544,14 +1534,12 @@
   <block id="d3d9446802a44259755d38e6d163e820" category="cell">10.</block>
   <block id="6512bd43d9caa6e02c990b0a82652dca" category="cell">11.</block>
   <block id="d77b4a468fb488142be1db1cb4f3b30a" category="paragraph">您可以檢視應用程式的現有自訂執行掛勾。</block>
-  <block id="f8394306e8105b9804b880be5da4e874" category="paragraph">您可以在結果清單中檢視所有已啟用或已停用的執行掛勾。您可以查看某個掛機的狀態、來源、以及其執行時間（作業前或作業後）。若要檢視執行掛起的相關事件記錄、請前往左側導覽區域的*活動*頁面。</block>
   <block id="348d9142b6e812d430105231b6b22f7b" category="section-title">檢視現有的指令碼</block>
   <block id="9a25c0423497a3b78185a1dcbd83ee56" category="paragraph">您可以檢視現有上傳的指令碼。您也可以在此頁面上查看使用中的指令碼、以及使用這些指令碼的攔截器。</block>
   <block id="9847e9d0ad4bd0b4ebd33ef807c5de85" category="list-text">前往*帳戶*。</block>
   <block id="38f83cc7b29ed2a740a9c8456659a293" category="list-text">選取*指令碼*索引標籤。</block>
   <block id="8c9fd3633020b4d6c051241f7be9c138" category="paragraph">您可以在此頁面上看到現有上傳指令碼的清單。「*使用者*」欄會顯示每個指令碼使用的執行掛勾。</block>
   <block id="6efeb013da42bda9a0b005c8fb3d9e7b" category="section-title">新增指令碼</block>
-  <block id="52bf2b6b8ab697098c999c634d60de41" category="paragraph">您可以新增一個或多個執行掛勾可以參考的指令碼。許多執行掛勾可以參照相同的指令碼、只要變更一個指令碼、就能更新許多執行掛勾。</block>
   <block id="fa12509cfb8e8ccded16e2a254e988c4" category="list-text">選取*「Add*」。</block>
   <block id="365d382b2d9ecca9b0d40171c69b38ff" category="list-text">執行下列其中一項：</block>
   <block id="99df3a53037c83c9f94b22e58d038498" category="list-text">選取*儲存指令碼*。</block>
@@ -1562,7 +1550,6 @@
   <block id="85dd64e22968350ca681ba621d4bc560" category="list-text">選擇要移除的指令碼、然後在*「Actions」（動作）*欄中選取功能表。</block>
   <block id="9dd5d4388456b71f9b71c1021d390f06" category="admonition">如果指令碼與一個或多個執行掛勾相關聯、則無法使用*刪除*動作。若要刪除指令碼、請先編輯相關的執行掛勾、然後將其與其他指令碼建立關聯。</block>
   <block id="88cf147ac90a429c61c32e7ab09e79bd" category="admonition">當您建立自訂Shell指令碼作為執行掛勾時、請記得在檔案開頭指定適當的Shell、除非您執行特定命令或提供執行檔的完整路徑。</block>
-  <block id="646a0acc29f56871519ed10b81ce1989" category="list-text">在「*勾選詳細資料*」區域中、從*操作*下拉式功能表中選取作業類型、以決定掛機的執行時間。</block>
   <block id="be22134446ec0047c1f901e0ef639bba" category="list-text">新增指令碼。</block>
   <block id="8b7f83d064fa53247eb45928442a6628" category="list-text">從清單中選取現有的指令碼。</block>
   <block id="35517af1363cb45c60a97af004151365" category="paragraph">這會指示執行掛勾使用此指令碼。</block>
@@ -1763,20 +1750,12 @@
   <block id="a54ffcf601d3cad8846bb3488b0fc812" category="admonition">在複製作業期間、需要IngresClass資源或Webhooks才能正常運作的應用程式、不得在目的地叢集上定義這些資源。</block>
   <block id="d187001d501dee0ac96f1c4520418b01" category="section-title">2022年11月22日</block>
   <block id="9ed67fb9a4ad2ebd97ca13fe2eb81541" category="list-title">新功能與支援</block>
-  <block id="8a839dbb28e85696069bbc2c4085cb75" category="list-text">支援橫跨多個命名空間的應用程式。</block>
   <block id="4eba5ba43cc624385f276658a22c51a8" category="inline-link-macro">定義應用程式</block>
   <block id="615bfdde03d6ca17ceb25db1da7a8950" category="paragraph"><block ref="615bfdde03d6ca17ceb25db1da7a8950" category="inline-link-macro-rx"></block></block>
-  <block id="fbed0a0742c59aa2f0516e302eb19172" category="list-text">支援將叢集資源納入應用程式定義。</block>
-  <block id="a75cc842b54759877cde075e6d7b123b" category="list-text">增強備份、還原及複製作業的進度報告功能。</block>
   <block id="92131ec58f7cefa34d38f2fee2e98c42" category="inline-link-macro">監控執行中的工作</block>
   <block id="7ae618b5d6c1a9768cb0ddc2627b32d0" category="paragraph"><block ref="7ae618b5d6c1a9768cb0ddc2627b32d0" category="inline-link-macro-rx"></block></block>
-  <block id="ffcef21176963cb229c78971c4867b5e" category="list-text">支援管理已安裝相容版本Astra Trident的叢集。</block>
-  <block id="0c26609d927c6fd9f0a23dd079134b80" category="list-text">支援在單一Astra Control Service帳戶中管理多個雲端供應商訂閱。</block>
   <block id="e0b7652da21db7cd16f8155afc64e87b" category="inline-link-macro">管理雲端執行個體</block>
   <block id="9df52d082eaf22280b9667a382b64298" category="paragraph"><block ref="9df52d082eaf22280b9667a382b64298" category="inline-link-macro-rx"></block></block>
-  <block id="8800f5d275e5928d65cbcb5f023cb6a8" category="list-text">支援將自我管理的Kubernetes叢集新增至Astra Control Service。</block>
-  <block id="c34eb65732649a4231a17e2623c9a979" category="list-text">Astra Control Service的帳單現在會依命名空間進行計量、而非依應用程式進行計費。</block>
-  <block id="ebd7baa8bca4e519b3b1dcc85e15069b" category="list-text">支援透過AWS Marketplace訂閱Astra Control Service定期方案。</block>
   <block id="3a3b7ac2e39541ea05707ccd6eb054d4" category="list-title">已知問題與限制</block>
   <block id="740eb4189d3efee5546cc5fba4fded77" category="inline-link-macro">此版本的已知問題</block>
   <block id="d1dd5fb317ad23b395c8c846c80e0e5f" category="list-text"><block ref="d1dd5fb317ad23b395c8c846c80e0e5f" category="inline-link-macro-rx"></block></block>
@@ -2052,4 +2031,58 @@
   <block id="88bdaf7536fdf70e3c93df4a9b10bb82" category="list-text">如果Azure儲存帳戶執行個體效能設定設為「Premium」、則「Premium帳戶類型」設定必須設為「區塊區塊區塊」。</block>
   <block id="ceeca391c3348d53722ec9783ba88430" category="inline-link">NetApp TV</block>
   <block id="b504b02d5498a8b09080b1e621f4d1aa" category="admonition">若要觀看Azure Marketplace訂閱程序的逐步解說影片、請造訪<block ref="bfd2f59ca3f14f5fb5037b1bda5b7515" category="inline-link-rx"></block>。</block>
+  <block id="ccd62d676165e34c2e9c6d088c06e70f" category="paragraph">執行攔截是一種自訂動作、可設定搭配託管應用程式的資料保護作業一起執行。例如、如果您有資料庫應用程式、您可以使用執行掛勾來暫停快照之前的所有資料庫交易、並在快照完成後繼續交易。如此可確保應用程式一致的快照。</block>
+  <block id="99dc882fc0f61d1db87631ed9f156913" category="section-title">執行攔截篩選器</block>
+  <block id="d335f82eb07728e66330e5d345123e4e" category="paragraph">當您新增或編輯應用程式的執行掛勾時、可以將篩選器新增至執行掛勾、以管理掛勾將相符的容器。篩選器對於在所有容器上使用相同容器映像的應用程式來說非常實用、但可能會將每個映像用於不同的用途（例如Elasticsearch）。篩選器可讓您建立執行掛鉤在部分相同容器上執行的案例、但不一定全部執行。如果您為單一執行掛勾建立多個篩選器、這些篩選器會與邏輯和運算子結合使用。每個執行掛機最多可有10個作用中篩選器。</block>
+  <block id="1f7268b251b886be0fbed048e85fcbae" category="paragraph">您新增至執行掛勾的每個篩選器都會使用規則運算式來比對叢集中的容器。當掛機符合容器時、掛機會在該容器上執行其相關的指令碼。</block>
+  <block id="8f00b1ba5cf1b5159598a4201b24c485" category="admonition">篩選器的規則運算式使用規則運算式2（RE2）語法、不支援建立篩選器、將容器從相符項目清單中排除。</block>
+  <block id="7caae75448dbc59fcadd621099e170b3" category="inline-link">規則運算式2（RE2）語法支援</block>
+  <block id="348be7b5ea322b3d9f3cc7f3638347e8" category="paragraph">如需Astra Control在執行攔截篩選器中支援規則運算式的語法資訊、請參閱<block ref="d4d0dd655d04b2dc5b031206e1febd50" category="inline-link-rx"></block>。</block>
+  <block id="a00c0d5dc029d521b5d82eba2c9f84ec" category="paragraph">由於執行掛勾通常會減少或完全停用執行中應用程式的功能、因此您應該一律盡量縮短自訂執行掛勾執行所需的時間。如果您以相關的執行掛勾開始備份或快照作業、但隨後取消它、則如果備份或快照作業已經開始、仍允許掛勾執行。這表示備份後執行掛勾中使用的邏輯無法假設備份已完成。</block>
+  <block id="ad06e01fed5c441edb22a5ad730a28c4" category="paragraph">您可以在結果清單中檢視所有已啟用或已停用的執行掛勾。您可以查看某個掛機的狀態、相符的容器數量、建立時間、以及何時執行（作業前或作業後）。您可以選取<block ref="26b17225b626fb9238849fd60eabdf60" prefix=" " category="inline-code"></block> 勾號名稱旁的圖示、可展開要執行的容器清單。若要檢視與此應用程式執行掛勾相關的事件記錄、請前往*活動*索引標籤。</block>
+  <block id="fdccfeac6686fcf9ef3545d27c98ebd9" category="paragraph">每個執行攔截都必須使用指令碼來執行動作。您可以新增一個或多個執行掛勾可以參考的指令碼。許多執行掛勾可以參照相同的指令碼、只要變更一個指令碼、就能更新許多執行掛勾。</block>
+  <block id="730e56f4151d257d4be9b69d500491b1" category="list-text">在「*勾號詳細資料*」區域中：</block>
+  <block id="754306132541c264b899699072715a8d" category="list-text">從「*作業*」下拉式功能表中選取作業類型、以判斷掛機應在何時執行。</block>
+  <block id="b3bf4b7c4fe4ab9fd4c927146b958c29" category="list-text">（可選）在*勾選篩選器詳細資料*區域中、您可以新增篩選器來控制執行勾點所在的容器：</block>
+  <block id="26e5ad6aeb15088310dc7f5f94ac6b1c" category="list-text">選取*新增篩選器*。</block>
+  <block id="046bbeb096523a6c2a52a82b7a1a144a" category="list-text">在*勾選篩選類型*欄中、從下拉式功能表中選擇要篩選的屬性。</block>
+  <block id="7f5c33cf7bc03894aef7093b46c50ba3" category="inline-link">規則運算式2（RE2）regex語法</block>
+  <block id="40bf80a4152341fe23b78ee81bdae830" category="list-text">在* Regex*欄中、輸入要做為篩選器的規則運算式。Astra Control使用<block ref="5a0c17cee4b408e519a995b1f313a559" category="inline-link-rx"></block>。</block>
+  <block id="f3ed8a73ba34dec99a6dc46c809c190b" category="admonition">如果您篩選的是屬性的確切名稱（例如pod名稱）、而規則運算式欄位中沒有其他文字、則會執行子字串比對。若要完全符合名稱及名稱、請使用確切的字串相符語法（例如、<block ref="008d171d630f0108aa5ebd55b36c9d01" prefix=" " category="inline-code"></block>）。</block>
+  <block id="f587a978a9522295d00811bafac25b74" category="list-text">若要新增更多篩選條件、請選取*新增篩選條件*。</block>
+  <block id="e45aa7d1b7841e860b561b3f17ed3626" category="admonition">執行掛勾的多個篩選器會與邏輯和運算子結合使用。每個執行掛機最多可有10個作用中篩選器。</block>
+  <block id="d3b15dd314c60647e826dddaf876252c" category="list-text">完成後、選取*下一步*。</block>
+  <block id="245ac12acb7bc3829b2f5656f25ce8f9" category="list-text">檢閱執行掛機組態。</block>
+  <block id="e7e278b27ed2ba8a9f0a89cea227a0aa" category="section-title">編輯執行掛勾</block>
+  <block id="48077e8945995c9af9cf3beb5a95e222" category="paragraph">如果您想要變更執行掛勾的屬性、篩選器或所使用的指令碼、您可以編輯執行掛勾。您需要擁有擁有擁有者、管理員或成員權限、才能編輯執行掛勾。</block>
+  <block id="1dbaed14db949844ab67cca7fa804ec9" category="list-text">在「*動作*」欄中選取「選項」功能表、以選取您要編輯的掛勾。</block>
+  <block id="d6b31513755644b14ff0352ed78ee5d0" category="list-text">完成每個區段後、請選擇*下一步*進行任何必要的變更。</block>
+  <block id="4c5848fdf558a402deead01b3a7267ca" category="list-text">在產生的對話方塊中、輸入「DELETE」進行確認。</block>
+  <block id="4bc73956dcf3b9d92b687a0e41330027" category="list-text">選擇*是、刪除執行勾點*。</block>
+  <block id="cd9365bcc5200e0100ab1291e25e536a" category="section-title">2023年1月17日</block>
+  <block id="dc76043b82b478d28285ae514fece7b7" category="list-text">更強大的執行掛勾功能、提供更多篩選選項</block>
+  <block id="a02fef9177dafc1ed65c31506043a788" category="list-text">支援NetApp Cloud Volumes ONTAP 作為儲存後端（正式支援Microsoft Azure和Google Cloud平台）</block>
+  <block id="9873d3282f5b305c09e3384bd4cc642f" category="paragraph"><block ref="9873d3282f5b305c09e3384bd4cc642f" category="inline-link-macro-rx"></block></block>
+  <block id="3aed836d77f6857f6adf310ab3a489e9" category="list-text">支援橫跨多個命名空間的應用程式</block>
+  <block id="71e6b5ca832527695b724cd4030ff69f" category="list-text">支援將叢集資源納入應用程式定義</block>
+  <block id="d57729d6a002792bd1640f00b3c60a6d" category="list-text">增強備份、還原及複製作業的進度報告功能</block>
+  <block id="ee22ee616d03d0b788bbae8035a8d53d" category="list-text">支援管理已安裝相容版本Astra Trident的叢集</block>
+  <block id="22289318dae293d59005c72969da78c0" category="list-text">支援在單一Astra Control Service帳戶中管理多個雲端供應商訂閱</block>
+  <block id="16522d4241295dd4aacfffd076bdab35" category="list-text">支援將自我管理的Kubernetes叢集新增至Astra Control Service</block>
+  <block id="340fb7807661130b471c746bcb32778d" category="list-text">Astra Control Service的帳單現在會依命名空間進行計量、而非依應用程式進行計費</block>
+  <block id="7c560ce667e00f7fb7277e3e40274958" category="list-text">支援透過AWS Marketplace訂閱Astra Control Service定期方案</block>
+  <block id="1825b9e766e0b0cdba1d02a62126146f" category="section-title">NetApp Cloud Volumes ONTAP 不正式支援Amazon Web Services</block>
+  <block id="06a37277cf290af4d70f99c3def289f6" category="paragraph">截至2023年1月17日、Astra Control Service發行時、Cloud Volumes ONTAP 尚未正式支援Amazon Web Services的NetApp功能。</block>
+  <block id="0bf305437e764438b0cefa4feeab361a" category="paragraph">Astra Control Service支援Cloud Volumes Service 以支援VMware for Google Cloud、Google持續磁碟或NetApp Cloud Volumes ONTAP 支援的功能、做為持續磁碟區的儲存後端選項。</block>
+  <block id="0f0b99ea2f70cd363c2c6a279f74e760" category="section-title">NetApp Cloud Volumes ONTAP</block>
+  <block id="e472e0844cec8046d5a3eed1d37de0ed" category="inline-link">NetApp Cloud Volumes ONTAP 產品文件</block>
+  <block id="b311f4f89f8edf2c494c59166cea789e" category="paragraph">如需設定NetApp Cloud Volumes ONTAP 產品的詳細資訊、包括效能建議、請造訪<block ref="c94772fe83b69960a6ebea80e6f83cf2" category="inline-link-rx"></block>。</block>
+  <block id="1da547253b2bff6a97f16457ba6c7659" category="list-text">Astra控制服務的用途<block ref="9e2d15731749abbc242896b41a1be2ef" category="inline-link-rx"></block>、Azure託管磁碟、及<block ref="3d43fd73820648564776fa140e465af6" category="inline-link-rx"></block> 做為高效能叢集的儲存後端。</block>
+  <block id="068755ba9601ac78582444cf9563d28b" category="list-text">Astra控制服務的用途<block ref="d804c793f302b1f3285300e6253aaac6" category="inline-link-rx"></block>、Google持續磁碟和<block ref="3d43fd73820648564776fa140e465af6" category="inline-link-rx"></block> 做為GKE叢集的儲存後端。</block>
+  <block id="9ff64e735ff169bd9cc9554b0d5d8108" category="list-text">Astra控制服務的用途<block ref="a65cb6c91d35e755c3763fe01aedac72" category="inline-link-rx"></block> 和<block ref="789fe92e2b55f108a4e50dd78da73d71" category="inline-link-rx"></block> 做為AWS叢集的儲存後端。</block>
+  <block id="88ede18f1c4b4384b20f2ce56a75bd80" category="paragraph">Astra Control Service支援Azure NetApp Files 以支援以支援功能為基礎的功能、Azure託管磁碟或NetApp Cloud Volumes ONTAP 支援以儲存後端方式、作為Azure Kubernetes Service（KS）叢集的儲存後端。</block>
+  <block id="2281a4480d392ba38bb5a7a535c3d0a6" category="list-text">支援的儲存後端（Azure和Google Cloud平台正式支援Cloud Volumes ONTAP ）</block>
+  <block id="cf2023b42357e47bef18c127980bd1c6" category="list-text">NetApp Cloud Volumes ONTAP 產品：不提供價格、效能或恢復能力資訊</block>
+  <block id="d52e07d1d595c838fa6dd650fe711cd0" category="list-text"><block ref="d52e07d1d595c838fa6dd650fe711cd0" category="inline-link-rx"></block></block>
+  <block id="ec9e8ebd4a4bf176cd70f6a24863b17a" category="paragraph">深入瞭解 <block ref="669f060d339cad3efcb29baff91fd410" category="inline-link-macro-rx"></block>。深入瞭解 <block ref="b4547358b744ca3b28812f444dc5a38f" category="inline-link-macro-rx"></block>。深入瞭解 <block ref="fd0a3bed584d87df18438d86772a2aaf" category="inline-link-macro-rx"></block>。</block>
 </blocks>

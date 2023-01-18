@@ -12,7 +12,7 @@ summary: Astra Control Service使用Azure NetApp Files 支援功能作為Azure K
 
 
 [role="lead"]
-Astra Control Service支援Azure NetApp Files 以支援以支援以支援功能不全或Azure託管磁碟做為Azure Kubernetes Service（KS）叢集的儲存後端。
+Astra Control Service支援Azure NetApp Files 以支援以支援功能為基礎的功能、Azure託管磁碟或NetApp Cloud Volumes ONTAP 支援以儲存後端方式、作為Azure Kubernetes Service（KS）叢集的儲存後端。
 
 
 
@@ -56,3 +56,9 @@ Astra Control Service會使用最小100 GiB的磁碟區大小來配置持續磁�
 Astra Control Service支援Azure託管磁碟做為儲存後端選項。此服務提供由Azure管理的區塊層級儲存設備。
 
 https://docs.microsoft.com/en-us/azure/virtual-machines/managed-disks-overview["深入瞭解Azure託管磁碟"^]。
+
+
+
+== NetApp Cloud Volumes ONTAP
+
+如需設定NetApp Cloud Volumes ONTAP 產品的詳細資訊、包括效能建議、請造訪 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/["NetApp Cloud Volumes ONTAP 產品文件"^]。

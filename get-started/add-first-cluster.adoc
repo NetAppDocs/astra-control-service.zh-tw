@@ -433,6 +433,9 @@ ifdef::aws[]
 
 endif::aws[]
 
+** NetApp Cloud Volumes ONTAP 產品：不提供價格、效能或恢復能力資訊
+
+
 ====
 +
 每個儲存類別都可以使用下列其中一項服務：
@@ -463,9 +466,14 @@ ifdef::aws[]
 
 endif::aws[]
 
-+深入瞭解 link:../learn/aws-storage.html["Amazon Web Services叢集的儲存類別"]。深入瞭解 link:../learn/azure-storage.html["適用於高效能叢集的儲存類別"]。深入瞭解 link:../learn/choose-class-and-size.html["GKE叢集的儲存類別"]。
+* https://www.netapp.com/cloud-services/cloud-volumes-ontap/what-is-cloud-volumes/["NetApp Cloud Volumes ONTAP"^]
++
+深入瞭解 link:../learn/aws-storage.html["Amazon Web Services叢集的儲存類別"]。深入瞭解 link:../learn/azure-storage.html["適用於高效能叢集的儲存類別"]。深入瞭解 link:../learn/choose-class-and-size.html["GKE叢集的儲存類別"]。
 
-. *審查與核准*：檢閱組態詳細資料、然後選取*新增叢集*。
++
+.. *審查與核准*：檢閱組態詳細資料、然後選取*新增叢集*。
+
+
 
 
 .結果

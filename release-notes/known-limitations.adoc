@@ -32,6 +32,16 @@ summary: 已知限制指出本產品版本不支援的平台、裝置或功能�
 
 當您在Postgres Pod上執行作業時、不應直接在Pod內連線以使用psql命令。Astra Control Service需要psql存取權限才能凍結及解出資料庫。如果有預先存在的連線、則快照、備份或複製都會失敗。
 
+ifdef::aws[]
+
+
+
+=== NetApp Cloud Volumes ONTAP 不正式支援Amazon Web Services
+
+截至2023年1月17日、Astra Control Service發行時、Cloud Volumes ONTAP 尚未正式支援Amazon Web Services的NetApp功能。
+
+endif::aws[]
+
 ifdef::gcp[]
 
 
