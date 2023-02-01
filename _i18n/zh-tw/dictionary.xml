@@ -911,7 +911,6 @@
   <block id="091f846d60c1037c90ba7580f37ef9fa" category="paragraph">您可以管理任何更新</block>
   <block id="cef5c6ab0b7d20ab7cd426689afb9fa5" category="cell">什麼是應用程式資料管理功能？</block>
   <block id="d6fc0eb1930e7e56affc953c237c5514" category="list-text">NetApp ONTAP AFF 的功能與FAS 功能</block>
-  <block id="570fa99ce4fbf8deb198b97a6931d63a" category="list-text">儲存後端Cloud Volumes ONTAP</block>
   <block id="5f4b9e6660ba4e73dc9c6aa214e60cde" category="section-title">Astra Control Service的運作方式</block>
   <block id="972dbc054c14df6a8a668ad2c71b9afa" category="paragraph">Astra Control Service是NetApp託管的雲端服務、隨時可用最新功能進行更新。它利用多個元件來實現應用程式資料生命週期管理。</block>
   <block id="29346571353a36c4c8e378195149db77" category="paragraph">Astra Control Service的高層級運作方式如下：</block>
@@ -998,8 +997,6 @@
   <block id="60f694f21643599c137f6c610e48124e" category="paragraph">以下概述Astra Control環境的各個元件。</block>
   <block id="51d249216b03414f10b242b851af7951" category="section-title">Astra控制元件</block>
   <block id="a8d77bbb11d2e1a349811767d194e9ba" category="list-text">* Kubernetes叢集*：Kubernetes是可攜式、可擴充的開放原始碼平台、可用於管理容器化工作負載與服務、同時促進宣告式組態與自動化。Astra為Kubernetes叢集中託管的應用程式提供管理服務。</block>
-  <block id="951fe18cc6e59e05fca3c0ca7de399fa" category="list-text">*儲存後端*：</block>
-  <block id="fc8adf6067b9e369fbebc9abf2891bce" category="list-text">不再是儲存後端。ONTAP AFF FAS作為儲存軟體與硬體平台ONTAP 、支援核心儲存服務、支援多種儲存存取傳輸協定、以及快照與鏡射等儲存管理功能。</block>
   <block id="415ba7b6a21fb373d9c5b72207313c1c" category="list-text">*《NetApp雲端基礎架構監控工具》《支援VMware技術》*《支援架構監控工具》、可讓您監控由Astra Control Center管理的Kubernetes叢集的效能與使用率。Cloud Insights Cloud Insights可將儲存使用量與工作負載建立關聯。Cloud Insights當您在Cloud Insights Astra控制中心啟用「支援不中斷連線」時、遙測資訊會顯示在Astra控制中心UI頁面中。</block>
   <block id="de0c45e94d4b178203631d55e65d1b62" category="section-title">Astra控制介面</block>
   <block id="d015aca78df45458ee1d6533c5246919" category="paragraph">您可以使用不同的介面來完成工作：</block>
@@ -1393,7 +1390,6 @@
   <block id="978b82e4298231e68c6ac005c5e649aa" category="inline-link">Amazon EBS定價</block>
   <block id="bc4bb24d5e702fb79be623b84e7cf47e" category="inline-link">Amazon FSX提供NetApp ONTAP 的效能</block>
   <block id="86305be6273e5fd50120867e93897613" category="inline-link">Amazon FSX for NetApp ONTAP 的定價</block>
-  <block id="dd069ab6d74011bb108bf219e092a2d0" category="list-text">Astra Control Center使用下列儲存後端：</block>
   <block id="a7da53d86332105dcae80a12f3e8b7a5" category="summary">說明Astra Control中的託管應用程式類型。</block>
   <block id="848f207b3c4594754aa82fd21b5fc5e0" category="paragraph">當Astra Control探索叢集時、這些叢集上的應用程式將無法管理、直到您選擇要管理的方式為止。Astra Control中的託管應用程式可以是下列任一項：</block>
   <block id="594284cddefbf771912acc53c31ca2b3" category="list-text">提供反映Kubernetes應用程式狀態的狀態。</block>
@@ -2049,9 +2045,6 @@
   <block id="0f0b99ea2f70cd363c2c6a279f74e760" category="section-title">NetApp Cloud Volumes ONTAP</block>
   <block id="e472e0844cec8046d5a3eed1d37de0ed" category="inline-link">NetApp Cloud Volumes ONTAP 產品文件</block>
   <block id="b311f4f89f8edf2c494c59166cea789e" category="paragraph">如需設定NetApp Cloud Volumes ONTAP 產品的詳細資訊、包括效能建議、請造訪<block ref="c94772fe83b69960a6ebea80e6f83cf2" category="inline-link-rx"></block>。</block>
-  <block id="1da547253b2bff6a97f16457ba6c7659" category="list-text">Astra控制服務的用途<block ref="9e2d15731749abbc242896b41a1be2ef" category="inline-link-rx"></block>、Azure託管磁碟、及<block ref="3d43fd73820648564776fa140e465af6" category="inline-link-rx"></block> 做為高效能叢集的儲存後端。</block>
-  <block id="068755ba9601ac78582444cf9563d28b" category="list-text">Astra控制服務的用途<block ref="d804c793f302b1f3285300e6253aaac6" category="inline-link-rx"></block>、Google持續磁碟和<block ref="3d43fd73820648564776fa140e465af6" category="inline-link-rx"></block> 做為GKE叢集的儲存後端。</block>
-  <block id="9ff64e735ff169bd9cc9554b0d5d8108" category="list-text">Astra控制服務的用途<block ref="a65cb6c91d35e755c3763fe01aedac72" category="inline-link-rx"></block> 和<block ref="789fe92e2b55f108a4e50dd78da73d71" category="inline-link-rx"></block> 做為AWS叢集的儲存後端。</block>
   <block id="88ede18f1c4b4384b20f2ce56a75bd80" category="paragraph">Astra Control Service支援Azure NetApp Files 以支援以支援功能為基礎的功能、Azure託管磁碟或NetApp Cloud Volumes ONTAP 支援以儲存後端方式、作為Azure Kubernetes Service（KS）叢集的儲存後端。</block>
   <block id="cf2023b42357e47bef18c127980bd1c6" category="list-text">NetApp Cloud Volumes ONTAP 產品：不提供價格、效能或恢復能力資訊</block>
   <block id="d52e07d1d595c838fa6dd650fe711cd0" category="list-text"><block ref="d52e07d1d595c838fa6dd650fe711cd0" category="inline-link-rx"></block></block>
@@ -2086,4 +2079,11 @@
   <block id="a3060d8563d84f399ad045a8f074e953" category="cell">支援的儲存後端有哪些？</block>
   <block id="117bdbda976fe8b3212bc3b6327a0a1b" category="list-text">Cloud Volumes ONTAP</block>
   <block id="e76d01158a51318d708ef8185fb06b2d" category="list-text">此時、您可以從叢集定義應用程式。將透過新的預設儲存類別、在儲存後端配置持續磁碟區。</block>
+  <block id="38e3b2d02a57ef89462103f8dcf36ab0" category="list-text"><block ref="38e3b2d02a57ef89462103f8dcf36ab0" category="inline-link-rx"></block></block>
+  <block id="ab819072ff4cb02cb39723b20e2ec373" category="list-text"><block ref="ab819072ff4cb02cb39723b20e2ec373" category="inline-link-rx"></block></block>
+  <block id="55b6146ebe43b01a290a7aad48a66943" category="list-text">自我管理叢集：</block>
+  <block id="ec2e9418f579c84a41733c6bb0adb789" category="list-text"><block ref="ec2e9418f579c84a41733c6bb0adb789" category="inline-link-rx"></block></block>
+  <block id="1bdec68ba7ba69d1cfefb7e18a857ef4" category="inline-link">設定文件</block>
+  <block id="e7f7ae1f9423fb8774a02e2ae647e158" category="list-text">如果您計畫將NetApp Cloud Volumes ONTAP 支援作為儲存後端、則需要設定Cloud Volumes ONTAP 支援功能以搭配Microsoft Azure使用。請參閱Cloud Volumes ONTAP 《The》<block ref="8bd14818004729c0926343811de7e4e9" category="inline-link-rx"></block>。</block>
+  <block id="d75122947e3b2c3b0a4b44dfa3966432" category="list-text">如果您打算將NetApp Cloud Volumes ONTAP 支援作為儲存後端、則需要設定Cloud Volumes ONTAP 支援功能以搭配Google Cloud使用。請參閱Cloud Volumes ONTAP 《The》<block ref="3a89728ad1d2dcbb16e661d8af8129b1" category="inline-link-rx"></block>。</block>
 </blocks>

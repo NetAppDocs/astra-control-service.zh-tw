@@ -72,24 +72,46 @@ Astra Control提供兩種部署模式：
 ** Amazon FSX for NetApp ONTAP 產品
 
 
+
+
+endif::aws[]
+
+ifdef::gcp[]
+
 * Google Cloud：
 +
 ** Google持續磁碟
 ** NetApp Cloud Volumes Service
-** Cloud Volumes ONTAP
+** https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-getting-started-gcp.html["Cloud Volumes ONTAP"^]
 
+
+
+
+endif::gcp[]
+
+ifdef::azure[]
 
 * Microsoft Azure：
 +
 ** Azure託管磁碟
 ** Azure NetApp Files
-** Cloud Volumes ONTAP
+** https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-getting-started-azure.html["Cloud Volumes ONTAP"^]
+
+
+
+
+endif::azure[]
+
+* 自我管理叢集：
++
+** NetApp ONTAP AFF 的功能與FAS 功能
+** https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/["Cloud Volumes ONTAP"^]
 
 
 
  a| 
 * NetApp ONTAP AFF 的功能與FAS 功能
-* Cloud Volumes ONTAP
+* https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/["Cloud Volumes ONTAP"^]
 
 
 |===

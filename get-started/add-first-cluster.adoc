@@ -57,6 +57,7 @@ ifdef::azure[]
 如果您未將Azure訂閱ID新增至Json檔案、您也需要Azure訂閱ID。
 
 * 如需私有的高效能叢集、請參閱 link:manage-private-cluster.html["從Astra Control Service管理私有叢集"^]。
+* 如果您計畫將NetApp Cloud Volumes ONTAP 支援作為儲存後端、則需要設定Cloud Volumes ONTAP 支援功能以搭配Microsoft Azure使用。請參閱Cloud Volumes ONTAP 《The》 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-getting-started-azure.html["設定文件"^]。
 
 
 endif::azure[]
@@ -65,6 +66,7 @@ ifdef::gcp[]
 
 .Google Cloud
 * 您應該擁有具有所需權限之服務帳戶的服務帳戶金鑰檔。 link:../get-started/set-up-google-cloud.html#create-a-service-account["瞭解如何設定服務帳戶"]。
+* 如果您打算將NetApp Cloud Volumes ONTAP 支援作為儲存後端、則需要設定Cloud Volumes ONTAP 支援功能以搭配Google Cloud使用。請參閱Cloud Volumes ONTAP 《The》 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-getting-started-gcp.html["設定文件"^]。
 
 
 endif::gcp[]
