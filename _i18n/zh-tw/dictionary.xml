@@ -909,7 +909,6 @@
   <block id="a564f860d9dd9df279c4ea80b08d026a" category="cell">如何更新？</block>
   <block id="b2929741e98ca2c366d8d7dfda36e2b9" category="cell">由NetApp管理</block>
   <block id="091f846d60c1037c90ba7580f37ef9fa" category="paragraph">您可以管理任何更新</block>
-  <block id="cef5c6ab0b7d20ab7cd426689afb9fa5" category="cell">什麼是應用程式資料管理功能？</block>
   <block id="d6fc0eb1930e7e56affc953c237c5514" category="list-text">NetApp ONTAP AFF 的功能與FAS 功能</block>
   <block id="5f4b9e6660ba4e73dc9c6aa214e60cde" category="section-title">Astra Control Service的運作方式</block>
   <block id="972dbc054c14df6a8a668ad2c71b9afa" category="paragraph">Astra Control Service是NetApp託管的雲端服務、隨時可用最新功能進行更新。它利用多個元件來實現應用程式資料生命週期管理。</block>
@@ -922,7 +921,6 @@
   <block id="086e6c16e3fe8e13c336612ef636aa02" category="inline-link">Astra Trident</block>
   <block id="51fbabc51080a419e6a5019a1c169ab4" category="list-text">使用新的管理員角色進行安裝<block ref="0ff0cd427dac64ddc62afadc9a52e9d0" category="inline-link-rx"></block> 在叢集上建立一個或多個儲存類別。</block>
   <block id="67d2a2db6f77778acc532b68658f63cc" category="list-text">然後使用Astra Control Service來管理這些應用程式、並開始建立快照、備份和複製。</block>
-  <block id="a7eb0ba32f9706a479c6037bea16e1ca" category="paragraph">Astra Control Service會持續監控您的運算狀態變更、因此您可以隨時掌握新增的應用程式。</block>
   <block id="b714fdd25acef8e71be758de7ff02f0b" category="section-title">Astra控制中心的運作方式</block>
   <block id="90d397f2aa31c2e6d9f5dfda5d12adca" category="paragraph">Astra Control Center可在您自己的私有雲端本機執行。</block>
   <block id="ea2708b459fc0cad6936ec216bd9405e" category="paragraph">Astra Control Center已完全整合AutoSupport 至整套的功能、可Active IQ 為使用者和NetApp支援人員提供疑難排解和使用資訊。</block>
@@ -1648,7 +1646,6 @@
   <block id="a30241413c2751b1ad5c5a00e914e0a1" category="paragraph">登入Astra Control Service之後、您的第一步就是開始管理叢集。您可以新增由雲端供應商管理的叢集、或是自行管理的叢集。將叢集新增至Astra Control Service之前、您必須執行特定工作、並確保叢集符合特定需求。</block>
   <block id="75cea9c777f72349fb550387eafc09c1" category="example-title">您的需求是什麼？#8217；需要由雲端供應商管理的叢集</block>
   <block id="9eecb04f40bc3e3811b2fcfff6ea5b4f" category="example-title">您的#8217；需要自行管理的叢集</block>
-  <block id="46805ef7b4802d7324462bf8ddc43dd9" category="inline-link-macro">由Astra Control Service支援</block>
   <block id="f658d356d0697be75622e7d5d6d94798" category="inline-link">部署Astra Trident</block>
   <block id="e9f0d7eb2b9e30339763cb7819bdf45e" category="inline-link">支援的前端、後端及主機組態</block>
   <block id="3c172a48713bf18882de70235bb9b4ee" category="admonition">您可以<block ref="ec89e21f8106b8624273185ce464dfb2" category="inline-link-rx"></block> 使用Trident運算子（手動或使用Helm圖表）或<block ref="c67fd1b99934afa248dfeb285a9a4191" prefix=" " category="inline-code"></block>。在安裝或升級Astra Trident之前、請先檢閱<block ref="c11537a174ec95a098cfff995b6e8b14" category="inline-link-rx"></block>。</block>
@@ -2062,20 +2059,17 @@
   <block id="c965062d34f97b8a807d6043b0889aa4" category="paragraph">您的自我管理叢集必須符合下列需求：</block>
   <block id="58585810a4337be95bcfebedb828d056" category="list-text">叢集必須可透過網際網路存取。</block>
   <block id="834a9cd206312978cd28b32979a72bf7" category="list-text">如果您使用或打算使用已啟用SCSI驅動程式的儲存設備、則叢集上必須安裝適當的SCSI驅動程式。如需使用SCSI驅動程式來整合儲存設備的詳細資訊、請參閱儲存服務的說明文件。</block>
-  <block id="b8c13df983b97ca354ad7d646939f14d" category="list-text">如果您使用或打算使用NetApp儲存設備、請確定您已安裝Astra Trident的版本 <block ref="3298582a629556efb23ae4ef06c101a7" category="inline-link-macro-rx"></block>：</block>
   <block id="1aec847a00d9758f901c82fc829ba738" category="list-text">*可存取的Kubeconfig *：您可以存取 <block ref="5c481c89be9c4fdcaa80bfd3c3829692" category="inline-xref-macro-rx"></block> 這只包含一個內容元素。</block>
   <block id="1a6b6e95b95a8e0de09a6566562ea376" category="paragraph-title">建立管理角色Kubeconfig（適用於執行Rancher、OpenShift和上游Kubernetes的叢集）</block>
   <block id="17fc42c08affacba5657de8d171ed30e" category="list-text">* Cloud instance name*（適用於供應商管理的叢集）：為新增此叢集時所建立的新雲端執行個體提供名稱。深入瞭解 <block ref="32e60ef2ecbf9cc1dffc20ea8b07ceea" category="inline-link-macro-rx"></block>。</block>
   <block id="1fe883570039bf797197aff2f9905e79" category="list-text">（選用）* Storage *：選取要將Kubernetes應用程式部署至此叢集的儲存類別、預設為使用。</block>
   <block id="a0652b7f26bfa45b4a805218ab132fd2" category="paragraph">*對於供應商管理的叢集*：如果這是您為此雲端供應商新增的第一個叢集、Astra Control Service會為雲端供應商建立物件存放區、以便備份在合格叢集上執行的應用程式。（當您新增此雲端供應商的後續叢集時、不會再建立其他物件存放區。）如果您指定預設儲存類別、Astra Control Service會設定您指定的預設儲存類別。對於在Amazon Web Services或Google Cloud Platform中管理的叢集、Astra Control Service也會在叢集上建立管理員帳戶。這些動作可能需要幾分鐘的時間。</block>
   <block id="f22cb7c9b8713326a930c00edca70cee" category="list-text">從接移到正式作業、複製應用程式</block>
-  <block id="5ec023826f488423d711ac0df1d9f4c5" category="list-text">使用NetApp SnapMirror技術將應用程式複寫到遠端系統</block>
   <block id="6c4ff7542dcef16bc12bbbab0c160e9a" category="list-text">使用Web UI或API來實作備份與移轉工作流程</block>
   <block id="662f909cd182f2c19a1b5da86174d75f" category="list-text">* Astra Control Service*：NetApp管理的服務、可在多個雲端供應商環境中、以及自行管理的Kubernetes叢集、提供Kubernetes叢集的應用程式感知資料管理功能。</block>
   <block id="a301d7b978ad27dd47b48aac714d81ef" category="list-text">* Astra Control Center*：自我管理的軟體、可針對在內部部署環境中執行的Kubernetes叢集、提供應用程式感知資料管理功能。Astra Control Center也可安裝在多個雲端供應商環境中、採用NetApp Cloud Volumes ONTAP 的解決方案儲存後端。</block>
   <block id="8b9e0c5eab1aafdd0008e7d94a979a00" category="paragraph">可下載、安裝及管理的軟體</block>
   <block id="384c577b472799aa8cd781ce64f2bb34" category="paragraph">在您自己的Kubernetes叢集上</block>
-  <block id="a9cfaa106aeba8d791f3fcc6358b3523" category="cell">這兩種平台的功能相同、但儲存後端或外部服務除外（請參閱 <block ref="b220d1e640409729fcaa15aadea51a52" category="inline-xref-macro-rx"></block>）</block>
   <block id="a3060d8563d84f399ad045a8f074e953" category="cell">支援的儲存後端有哪些？</block>
   <block id="117bdbda976fe8b3212bc3b6327a0a1b" category="list-text">Cloud Volumes ONTAP</block>
   <block id="e76d01158a51318d708ef8185fb06b2d" category="list-text">此時、您可以從叢集定義應用程式。將透過新的預設儲存類別、在儲存後端配置持續磁碟區。</block>
@@ -2086,4 +2080,5 @@
   <block id="1bdec68ba7ba69d1cfefb7e18a857ef4" category="inline-link">設定文件</block>
   <block id="e7f7ae1f9423fb8774a02e2ae647e158" category="list-text">如果您計畫將NetApp Cloud Volumes ONTAP 支援作為儲存後端、則需要設定Cloud Volumes ONTAP 支援功能以搭配Microsoft Azure使用。請參閱Cloud Volumes ONTAP 《The》<block ref="8bd14818004729c0926343811de7e4e9" category="inline-link-rx"></block>。</block>
   <block id="d75122947e3b2c3b0a4b44dfa3966432" category="list-text">如果您打算將NetApp Cloud Volumes ONTAP 支援作為儲存後端、則需要設定Cloud Volumes ONTAP 支援功能以搭配Google Cloud使用。請參閱Cloud Volumes ONTAP 《The》<block ref="3a89728ad1d2dcbb16e661d8af8129b1" category="inline-link-rx"></block>。</block>
+  <block id="cac25a8107e0ae4e458a81d1cd3dc8d2" category="list-text">如果您使用或打算使用NetApp儲存設備、請確定您已安裝最新版的Astra Trident：</block>
 </blocks>
