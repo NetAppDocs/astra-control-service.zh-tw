@@ -21,7 +21,7 @@ settings:
       alias: Azure
       id: azure
   rss_page: release-notes/whats-new.html
-  langs: zh-tw,us-en,ja-jp,ko-kr,zh-cn,de-de,fr-fr
+  langs: zh-tw,us-en,ja-jp,ko-kr,zh-cn,de-de,es-es,fr-fr
 sidebar:
   entries:
   - title: Astra Control Service文件
