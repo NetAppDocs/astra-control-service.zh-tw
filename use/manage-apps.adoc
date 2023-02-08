@@ -22,38 +22,38 @@ Astra Control具備下列應用程式管理需求：
 
 * *授權*：若要管理10個以上的命名空間、您需要訂閱Astra Control Center。
 * *命名空間*：應用程式可以使用Astra Control在單一叢集的一個或多個指定命名空間內定義。應用程式可包含橫跨同一個叢集內多個命名空間的資源。Astra Control不支援跨多個叢集定義應用程式的功能。
-* * StorageClass *：如果您安裝的應用程式已明確設定StorageClass、且需要複製應用程式、則複製作業的目標叢集必須具有原本指定的StorageClass。將具有明確設定StorageClass的應用程式複製到沒有相同StorageClass的叢集、將會失敗。
+* *儲存類別*：如果您安裝的應用程式已明確設定儲存類別、而且需要複製應用程式、則複製作業的目標叢集必須具有原本指定的儲存類別。將具有明確設定儲存類別的應用程式複製到沒有相同儲存類別的叢集、將會失敗。
 * * Kubernetes資源*：使用未由Astra Control收集的Kubernetes資源的應用程式、可能沒有完整的應用程式資料管理功能。Astra Control會收集下列Kubernetes資源：
 +
 [cols="1,1,1"]
 |===
 
 
-| 叢集角色 | ClusterRoleBinding | 組態對應 
+| `ClusterRole` | `ClusterRoleBinding` | `ConfigMap` 
 
 
-| 可關係工作 | CustomResourceDesDefinition | CustomResource 
+| `CronJob` | `CustomResourceDefinition` | `CustomResource` 
 
 
-| 示範 | 部署組態 | HorizontalPodAutoscaler 
+| `DaemonSet` | `DeploymentConfig` | `HorizontalPodAutoscaler` 
 
 
-| 入侵 | 互鎖Webhook | 網路原則 
+| `Ingress` | `MutatingWebhook` | `NetworkPolicy` 
 
 
-| PeristentVolume Claim | Pod | Podcast中斷預算 
+| `PersistentVolumeClaim` | `Pod` | `PodDisruptionBudget` 
 
 
-| Podcast範本 | ReplicaSet | 角色 
+| `PodTemplate` | `ReplicaSet` | `Role` 
 
 
-| 角色繫結 | 路由 | 秘密 
+| `RoleBinding` | `Route` | `Secret` 
 
 
-| 服務 | 服務帳戶 | 狀態集 
+| `Service` | `ServiceAccount` | `StatefulSet` 
 
 
-| 驗證Webhook |  |  
+| `ValidatingWebhook` |  |  
 |===
 
 
@@ -168,10 +168,10 @@ WARNING: 在定義應用程式時、請確保不將Kubernetes資源納入具有�
 在與其他應用程式共用資源的應用程式上執行就地還原作業、可能會產生非預期的結果。在其中一個應用程式上執行就地還原時、應用程式之間共享的任何資源都會被取代。
 
 ====
-.關於將叢集範圍的資源新增至應用程式命名空間的功能介紹</strong> <strong> 。
+.深入瞭解如何將叢集範圍的資源新增至應用程式命名空間。
 [%collapsible]
 ====
-除了自動包含的Astra Control之外、您也可以匯入與命名資源相關聯的叢集資源。您可以新增規則、其中包含特定群組的資源、種類、版本及選擇性的標籤。如果Astra Control沒有自動包含資源、您可能會想要這麼做。
+除了自動包含的Astra Control之外、您也可以匯入與命名空間資源相關聯的叢集資源。您可以新增規則、其中包含特定群組的資源、種類、版本及選擇性的標籤。如果Astra Control沒有自動包含資源、您可能會想要這麼做。
 
 您無法排除由Astra Control自動包含的任何叢集範圍資源。
 
