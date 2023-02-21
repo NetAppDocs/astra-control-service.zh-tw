@@ -2077,4 +2077,5 @@
   <block id="dcb9a5ddd39d8514ddcd5a64c129a6b0" category="example-title">深入瞭解如何將叢集範圍的資源新增至應用程式命名空間。</block>
   <block id="9497a649f72a465537e088cd33f63b26" category="paragraph">除了自動包含的Astra Control之外、您也可以匯入與命名空間資源相關聯的叢集資源。您可以新增規則、其中包含特定群組的資源、種類、版本及選擇性的標籤。如果Astra Control沒有自動包含資源、您可能會想要這麼做。</block>
   <block id="b9e5ceb3ee51c79795e57043d65ace4f" category="list-text">*明確的儲存類別*：如果您部署的應用程式已明確設定儲存類別、而且需要複製應用程式、則目標叢集必須具有原本指定的儲存類別。將具有明確設定儲存類別的應用程式複製到沒有相同儲存類別的叢集、將會失敗。</block>
+  <block id="2fae9bf7af2c006788415b299aad1207" category="admonition">當您對使用NetApp ONTAP 還原的應用程式執行就地還原時、還原的應用程式所使用的空間可能會加倍。執行就地還原之後、請從還原的應用程式中移除任何不想要的快照、以釋放儲存空間。</block>
 </blocks>
