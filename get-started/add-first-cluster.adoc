@@ -76,7 +76,7 @@ endif::gcp[]
 .您的#8217；需要自行管理的叢集
 [%collapsible]
 ====
-您的自我管理叢集可以使用Astra Trident來與NetApp儲存服務建立連結、也可以使用Container Storage介面（Container Storage Interface、簡稱csi）驅動程式來與其他儲存服務建立連結。
+您的自我管理叢集可以使用Astra Trident來與NetApp儲存服務建立連結、也可以使用Container Storage介面（SCSI）驅動程式來與Amazon Elastic Block Store（EBS）、Azure託管磁碟和Google持續磁碟建立連結。
 
 Astra Control Service使用下列Kubernetes發佈版本來支援自我管理的叢集：
 

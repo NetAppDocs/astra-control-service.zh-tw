@@ -961,7 +961,6 @@
   <block id="1c4c03fddfe9018e07fad3e8219a1aae" category="paragraph">如上所述、每個服務層級的處理量是以已配置容量的1 TiB為單位。這表示較大的磁碟區可提供較佳的效能。因此、您在配置磁碟區時、應同時考量容量和效能需求。</block>
   <block id="c6df6edd45599b3322119a1d34838b64" category="section-title">最小Volume大小</block>
   <block id="73d58bce64935ac37f26ef1b6d250e13" category="paragraph">Astra Control Service會使用最小100 GiB的磁碟區大小來配置持續磁碟區、即使PVC要求較小的磁碟區大小也一樣。例如、如果Helm圖表中的永久虛擬磁碟要求6 GiB、Astra Control Service會自動配置100 GiB磁碟區。</block>
-  <block id="a78513acd713c2d45f9956aec22c3e19" category="paragraph">Astra Control Service支援Azure託管磁碟做為儲存後端選項。此服務提供由Azure管理的區塊層級儲存設備。</block>
   <block id="9c92b8240042e913292ad9bea8c7698f" category="inline-link">深入瞭解Azure託管磁碟</block>
   <block id="ff42fb74ba93da15d304e42948c0b518" category="paragraph"><block ref="250fe5b998dd6cb4de09bf9afa3806e9" category="inline-link-rx"></block>。</block>
   <block id="ef8ee09fa3337e5d951394563bcf6ba8" category="summary">以下概述Astra Control環境的各個元件。</block>
@@ -1031,7 +1030,6 @@
   <block id="0b2a13280de2b46e33104100d18d8945" category="paragraph">CVS服務類型允許的頻寬是以已配置容量的GiB為單位。這表示較大的磁碟區將提供較佳的效能。</block>
   <block id="a5f0d81b6dacdc3d6dd4b5e1957fc397" category="paragraph">Astra Control Service會以最低300 GiB的磁碟區大小來配置持續磁碟區、並搭配CVS服務類型、即使該PVC要求較小的磁碟區大小也沒問題。例如、如果要求20 GiB、Astra Control Service會自動配置300 GiB磁碟區。</block>
   <block id="a6970f67086975857f95d5d598afacd7" category="paragraph">由於限制、如果某個PVC要求的Volume介於700-999 GiB之間、Astra Control Service會自動配置1000 GiB的Volume大小。</block>
-  <block id="5165c93eed8a6988e2abc470bf4d0bbe" category="paragraph">Astra Control Service支援Google持續磁碟做為儲存後端選項。此服務提供由Google管理的區塊層級儲存設備。</block>
   <block id="c533b58a8522da4b56509ffdf8f54226" category="inline-link">深入瞭解Google持續磁碟</block>
   <block id="39c44ccf09904735b47f23a89ee2e724" category="paragraph"><block ref="055a60e2d0748ea0284ea572aa51a82d" category="inline-link-rx"></block>。</block>
   <block id="a314ef41007da089aa4ae498f35e3a10" category="inline-link">深入瞭解不同的Google持續磁碟效能等級</block>
@@ -1939,7 +1937,6 @@
   <block id="adb43c383a88e1f2946ab2e72ac03918" category="section-title"><block ref="05b2444faffd66d76e88602ea7dd353f" category="inline-image-macro-rx" type="image"></block> 建立Azure服務主體</block>
   <block id="115d465e8b862905dee97dfc00687f80" category="section-title"><block ref="beadfa85a2fdca06b91edc1131c603e6" category="inline-image-macro-rx" type="image"></block> 設定Container Storage介面（SCSI）驅動程式詳細資料</block>
   <block id="4ba43802facfe67533d744cbe8965137" category="section-title"><block ref="99e8b2f00e172bfcff96afdce69907bc" category="inline-image-macro-rx" type="image"></block> 選用：為Azure備份儲存區設定備援</block>
-  <block id="c969f450a50c240b276b1959fc3eb534" category="paragraph">使用EBS做為EKS叢集的儲存後端時、您可以設定一些儲存類別參數。如需參數的意義及設定方法的詳細資訊、請參閱<block ref="efa17ec338493b6d9caef44d32a8989a" category="inline-link-rx"></block>。</block>
   <block id="37a9edbcd89980d7a6ec52943de6e692" category="paragraph">如需每種磁碟區類型及其效能的詳細資訊、請參閱<block ref="7ac340f30d3ddae2dcb4baa266ef78ba" category="inline-link-rx"></block>。如需定價資訊、請參閱<block ref="7729091ef10325fb607ffe76c346cfed" category="inline-link-rx"></block>。</block>
   <block id="573eae71a4ffbba9a137bcf0add56e46" category="paragraph">當您將FSXfor NetApp ONTAP 支援為AWS叢集的儲存後端時、I/O效能取決於檔案系統的組態和工作負載的特性。如需有關FSX for NetApp ONTAP 效能的詳細資訊、請參閱<block ref="45a884cbefaf34ae6fd7defa1c6be8c3" category="inline-link-rx"></block>。如需定價資訊、請參閱<block ref="1fe52440a36dc241abcf36facca2f97a" category="inline-link-rx"></block>。</block>
   <block id="676a48d63ffa9fc8110c816cc1f05f58" category="section-title">Astra Trident不會從叢集解除安裝</block>
@@ -2018,7 +2015,6 @@
   <block id="bb17f0baba089b794a1fc9ae3b93d1ea" category="list-text">（選用）如果您需要提供<block ref="0f12ee5c9f1dd90158580f1c292b0d37" prefix=" " category="inline-code"></block> 叢集的命令存取功能可讓其他不是叢集建立者的IAM使用者存取、請參閱中的指示<block ref="47c83e7583e126455b2245655ede1c60" category="inline-link-rx"></block>。</block>
   <block id="aeb77ff86c2121f885bfa9ef656948a5" category="list-text">建立服務主體時、您應該擁有包含Azure CLI輸出的Json檔案。 <block ref="63026405246b8ab97c47baaea735ffe8" category="inline-link-macro-rx"></block>。</block>
   <block id="2419fe48841fc722c6b0c9167faf2fb9" category="list-text">您應該擁有具有所需權限之服務帳戶的服務帳戶金鑰檔。 <block ref="9215258f7e020d0c05367a1a3bfd0982" category="inline-link-macro-rx"></block>。</block>
-  <block id="ac3bb3e8177657e75082233c58971d93" category="paragraph">您的自我管理叢集可以使用Astra Trident來與NetApp儲存服務建立連結、也可以使用Container Storage介面（Container Storage Interface、簡稱csi）驅動程式來與其他儲存服務建立連結。</block>
   <block id="3b9c73125ae4cc5ab9bb00104b4598d8" category="paragraph">Astra Control Service使用下列Kubernetes發佈版本來支援自我管理的叢集：</block>
   <block id="fd89bb4228981d3b22187eb451421cd6" category="list-text">Red Hat OpenShift Container Platform</block>
   <block id="bbd7c7ef752c876494ec0af98dd0b63a" category="list-text">Rancher Kubernetes引擎</block>
@@ -2078,4 +2074,8 @@
   <block id="afe823403603f8e45a82a192de4f1f39" category="paragraph"><block ref="afe823403603f8e45a82a192de4f1f39" category="inline-link-macro-rx"></block></block>
   <block id="43f10e14cfc78f2dccf4af9115390a26" category="list-text"><block ref="43f10e14cfc78f2dccf4af9115390a26" category="inline-link-rx"></block></block>
   <block id="aa2317f5569d30b7aac1b41dd02ffe97" category="list-text">如果您計畫將NetApp Cloud Volumes ONTAP 支援作為儲存後端、則需要設定Cloud Volumes ONTAP 支援以搭配Amazon Web Services使用的功能。請參閱Cloud Volumes ONTAP 《The》<block ref="c40ff22452592aa319388d1d94a0a32e" category="inline-link-rx"></block>。</block>
+  <block id="892bb983e85684c863a4bf11d26d064e" category="paragraph">Astra Control Service可以使用Container Storage Interface（SCSI）驅動程式、將Azure託管磁碟當作儲存後端來進行介面。此服務提供由Azure管理的區塊層級儲存設備。</block>
+  <block id="46625131314080c123c1a23c969aa3a8" category="paragraph">Astra Control Service可以使用Container Storage介面（SCSI）驅動程式、將Google持續磁碟當作儲存後端來進行介面。此服務提供由Google管理的區塊層級儲存設備。</block>
+  <block id="4d2a3e63d994334eaa09e7217ed0d01d" category="paragraph">您的叢集可使用Container Storage介面（Container Storage Interface、簡稱csi）驅動程式與EBS進行介面。使用EBS做為EKS叢集的儲存後端時、您可以設定一些儲存類別參數。如需參數的意義及設定方法的詳細資訊、請參閱<block ref="efa17ec338493b6d9caef44d32a8989a" category="inline-link-rx"></block>。</block>
+  <block id="4c59c334ed6b80e6cd8237e6f14cf9cb" category="paragraph">您的自我管理叢集可以使用Astra Trident來與NetApp儲存服務建立連結、也可以使用Container Storage介面（SCSI）驅動程式來與Amazon Elastic Block Store（EBS）、Azure託管磁碟和Google持續磁碟建立連結。</block>
 </blocks>

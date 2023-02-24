@@ -53,7 +53,7 @@ Astra Control Service會使用最小100 GiB的磁碟區大小來配置持續磁�
 
 == Azure託管磁碟
 
-Astra Control Service支援Azure託管磁碟做為儲存後端選項。此服務提供由Azure管理的區塊層級儲存設備。
+Astra Control Service可以使用Container Storage Interface（SCSI）驅動程式、將Azure託管磁碟當作儲存後端來進行介面。此服務提供由Azure管理的區塊層級儲存設備。
 
 https://docs.microsoft.com/en-us/azure/virtual-machines/managed-disks-overview["深入瞭解Azure託管磁碟"^]。
 

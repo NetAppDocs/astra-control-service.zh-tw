@@ -113,7 +113,7 @@ Astra Control Service會以最低300 GiB的磁碟區大小來配置持續磁碟�
 
 == Google持續磁碟
 
-Astra Control Service支援Google持續磁碟做為儲存後端選項。此服務提供由Google管理的區塊層級儲存設備。
+Astra Control Service可以使用Container Storage介面（SCSI）驅動程式、將Google持續磁碟當作儲存後端來進行介面。此服務提供由Google管理的區塊層級儲存設備。
 
 https://cloud.google.com/persistent-disk/["深入瞭解Google持續磁碟"^]。
 
