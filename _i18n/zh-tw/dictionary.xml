@@ -1997,8 +1997,6 @@
   <block id="4bc73956dcf3b9d92b687a0e41330027" category="list-text">選擇*是、刪除執行勾點*。</block>
   <block id="cd9365bcc5200e0100ab1291e25e536a" category="section-title">2023年1月17日</block>
   <block id="dc76043b82b478d28285ae514fece7b7" category="list-text">更強大的執行掛勾功能、提供更多篩選選項</block>
-  <block id="a02fef9177dafc1ed65c31506043a788" category="list-text">支援NetApp Cloud Volumes ONTAP 作為儲存後端（正式支援Microsoft Azure和Google Cloud平台）</block>
-  <block id="9873d3282f5b305c09e3384bd4cc642f" category="paragraph"><block ref="9873d3282f5b305c09e3384bd4cc642f" category="inline-link-macro-rx"></block></block>
   <block id="3aed836d77f6857f6adf310ab3a489e9" category="list-text">支援橫跨多個命名空間的應用程式</block>
   <block id="71e6b5ca832527695b724cd4030ff69f" category="list-text">支援將叢集資源納入應用程式定義</block>
   <block id="d57729d6a002792bd1640f00b3c60a6d" category="list-text">增強備份、還原及複製作業的進度報告功能</block>
@@ -2007,8 +2005,6 @@
   <block id="16522d4241295dd4aacfffd076bdab35" category="list-text">支援將自我管理的Kubernetes叢集新增至Astra Control Service</block>
   <block id="340fb7807661130b471c746bcb32778d" category="list-text">Astra Control Service的帳單現在會依命名空間進行計量、而非依應用程式進行計費</block>
   <block id="7c560ce667e00f7fb7277e3e40274958" category="list-text">支援透過AWS Marketplace訂閱Astra Control Service定期方案</block>
-  <block id="1825b9e766e0b0cdba1d02a62126146f" category="section-title">NetApp Cloud Volumes ONTAP 不正式支援Amazon Web Services</block>
-  <block id="06a37277cf290af4d70f99c3def289f6" category="paragraph">截至2023年1月17日、Astra Control Service發行時、Cloud Volumes ONTAP 尚未正式支援Amazon Web Services的NetApp功能。</block>
   <block id="0bf305437e764438b0cefa4feeab361a" category="paragraph">Astra Control Service支援Cloud Volumes Service 以支援VMware for Google Cloud、Google持續磁碟或NetApp Cloud Volumes ONTAP 支援的功能、做為持續磁碟區的儲存後端選項。</block>
   <block id="0f0b99ea2f70cd363c2c6a279f74e760" category="section-title">NetApp Cloud Volumes ONTAP</block>
   <block id="e472e0844cec8046d5a3eed1d37de0ed" category="inline-link">NetApp Cloud Volumes ONTAP 產品文件</block>
@@ -2078,4 +2074,8 @@
   <block id="9497a649f72a465537e088cd33f63b26" category="paragraph">除了自動包含的Astra Control之外、您也可以匯入與命名空間資源相關聯的叢集資源。您可以新增規則、其中包含特定群組的資源、種類、版本及選擇性的標籤。如果Astra Control沒有自動包含資源、您可能會想要這麼做。</block>
   <block id="b9e5ceb3ee51c79795e57043d65ace4f" category="list-text">*明確的儲存類別*：如果您部署的應用程式已明確設定儲存類別、而且需要複製應用程式、則目標叢集必須具有原本指定的儲存類別。將具有明確設定儲存類別的應用程式複製到沒有相同儲存類別的叢集、將會失敗。</block>
   <block id="2fae9bf7af2c006788415b299aad1207" category="admonition">當您對使用NetApp ONTAP 還原的應用程式執行就地還原時、還原的應用程式所使用的空間可能會加倍。執行就地還原之後、請從還原的應用程式中移除任何不想要的快照、以釋放儲存空間。</block>
+  <block id="9bef1d9bf218ed752be76e1c92b4e716" category="list-text">支援NetApp Cloud Volumes ONTAP 功能作為儲存後端</block>
+  <block id="afe823403603f8e45a82a192de4f1f39" category="paragraph"><block ref="afe823403603f8e45a82a192de4f1f39" category="inline-link-macro-rx"></block></block>
+  <block id="43f10e14cfc78f2dccf4af9115390a26" category="list-text"><block ref="43f10e14cfc78f2dccf4af9115390a26" category="inline-link-rx"></block></block>
+  <block id="aa2317f5569d30b7aac1b41dd02ffe97" category="list-text">如果您計畫將NetApp Cloud Volumes ONTAP 支援作為儲存後端、則需要設定Cloud Volumes ONTAP 支援以搭配Amazon Web Services使用的功能。請參閱Cloud Volumes ONTAP 《The》<block ref="c40ff22452592aa319388d1d94a0a32e" category="inline-link-rx"></block>。</block>
 </blocks>

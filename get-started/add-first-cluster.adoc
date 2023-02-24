@@ -45,6 +45,7 @@ ifdef::aws[]
 * 您應該擁有Json檔案、其中包含建立叢集的IAM使用者認證。 link:../get-started/set-up-amazon-web-services.html#create-an-iam-user["瞭解如何建立IAM使用者"]。
 * Amazon FSX for NetApp ONTAP Sfa需要Astra Trident。如果您計畫將Amazon FSX for NetApp ONTAP 功能用作EKS叢集的儲存後端、請參閱中的Astra Trident資訊 link:set-up-amazon-web-services.html#eks-cluster-requirements["EKS叢集需求"]。
 * （選用）如果您需要提供 `kubectl` 叢集的命令存取功能可讓其他不是叢集建立者的IAM使用者存取、請參閱中的指示 https://aws.amazon.com/premiumsupport/knowledge-center/amazon-eks-cluster-access/["如何在Amazon EKS中建立叢集後、提供其他IAM使用者和角色的存取權限？"^]。
+* 如果您計畫將NetApp Cloud Volumes ONTAP 支援作為儲存後端、則需要設定Cloud Volumes ONTAP 支援以搭配Amazon Web Services使用的功能。請參閱Cloud Volumes ONTAP 《The》 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-getting-started-aws.html["設定文件"^]。
 
 
 endif::aws[]

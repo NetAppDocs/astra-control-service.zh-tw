@@ -23,9 +23,9 @@ NetApp會定期更新Astra Control Service、為您提供新功能、增強功�
 +
 link:../use/manage-app-execution-hooks.html["管理應用程式執行掛勾"]
 
-* 支援NetApp Cloud Volumes ONTAP 作為儲存後端（正式支援Microsoft Azure和Google Cloud平台）
+* 支援NetApp Cloud Volumes ONTAP 功能作為儲存後端
 +
-link:../learn/architecture.html#astra-control-components["架構與元件"]
+link:../get-started/intro.html["瞭解Astra Control"]
 
 
 
