@@ -54,7 +54,7 @@ link:../get-started/add-first-cluster.html["從Astra Control Service開始管理
 +
 link:../use/manage-cloud-instances.html["管理雲端執行個體"]
 
-* 支援將自我管理的Kubernetes叢集新增至Astra Control Service
+* 支援將公有雲環境中的自我管理Kubernetes叢集新增至Astra Control Service
 +
 link:../get-started/add-first-cluster.html["從Astra Control Service開始管理Kubernetes叢集"]
 
