@@ -1773,7 +1773,6 @@
   <block id="dec3469ee6690fc78725637f5f9ea5f5" category="paragraph">您可以將命名空間中的所有Kubernetes資源新增至Astra Control管理、方法是將該命名空間的資源定義為應用程式。如果您需要、這種方法最好是個別定義應用程式 <block ref="94b1a34d6d3c751b2fbc11fdaaa51f20" category="inline-link-macro-rx"></block> 以類似的方式、並以相同的時間間隔進行。</block>
   <block id="0aac11ed4d1a1befcac30cb330cd159e" category="paragraph">您可以複製現有的應用程式、在相同的Kubernetes叢集或其他叢集上建立複製的應用程式。當Astra Control複製應用程式時、會建立應用程式組態和持續儲存的複本。</block>
   <block id="43448f8497139ffbc9a461d85db8c731" category="paragraph">如果您需要將應用程式和儲存設備從一個Kubernetes叢集移至另一個叢集、複製作業將有助於您。例如、您可能想要透過CI/CD傳輸途徑和Kubernetes命名空間來移動工作負載。</block>
-  <block id="7d754e7d4f4a324710302cf0fc4d80c2" category="list-text">若要將應用程式複製到不同的叢集、您必須確保包含來源和目的地叢集（如果它們不同）的雲端執行個體具有預設的儲存區。您必須為每個雲端執行個體指派預設儲存區。</block>
   <block id="81eb21a03d5ee9fbe847337ca76b57dc" category="list-title">複製限制</block>
   <block id="d32d7bd30d168502b9d4ee99b9925378" category="list-text">* Clone與使用者限制*：任何具有命名空間名稱/ ID或命名空間標籤限制的成員使用者、都可以將應用程式複製或還原至同一叢集上的新命名空間、或是組織帳戶中的任何其他叢集。不過、相同的使用者無法存取新命名空間中的複製或還原應用程式。在複製或還原作業建立新命名空間之後、帳戶管理員/擁有者可以編輯成員使用者帳戶、並更新受影響使用者的角色限制、以便授予新命名空間的存取權。</block>
   <block id="c65bdc145f9acf12c31ad3d52e08fe52" category="list-text">* Clones使用預設值區段*：</block>
@@ -2086,4 +2085,5 @@
   <block id="21f6901f1009f7b8fc1d4c9d614493d7" category="paragraph">Astra Control Service新增儲存庫。您現在可以在建立保護原則或執行臨機操作備份時選擇此儲存區。您也可以將此儲存區設為雲端執行個體的預設儲存區。</block>
   <block id="68a2953dae168f957410960ed303cfe1" category="paragraph">您可以變更雲端執行個體的預設儲存區。Astra Control Service預設會將此儲存區用於備份與複製。每個雲端執行個體都有自己的預設儲存區。</block>
   <block id="7c68315054de23a17c2a6febe9d9d149" category="sidebar">Astra Control：簡化混合雲的應用程式資料管理</block>
+  <block id="aa396af981d56ce9483fdf506c608dee" category="list-text">若要將應用程式複製到不同的叢集、您必須確定已為包含來源叢集的雲端執行個體指派預設儲存區。如果來源雲端執行個體沒有預設的儲存區集、跨叢集複製作業將會失敗。</block>
 </blocks>
