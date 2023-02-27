@@ -1143,7 +1143,6 @@
   <block id="332153f6f1b31602ac3418cdf4d18170" category="sidebar">簡化Jenkins生命週期管理</block>
   <block id="813011e2103649bb71f124adedcc10ea" category="sidebar">部落格社群</block>
   <block id="36910a95584c53fdc9ed97782ef3965c" category="sidebar">Astra Control部落格</block>
-  <block id="dbfc769b7e821664736a653f70155476" category="sidebar">Astra Control：簡化混合雲的應用程式資料管理</block>
   <block id="a984dc296b5a86b8097f515731aee987" category="sidebar">雲端中心的Kubernetes Hub</block>
   <block id="0adc03eac86772ad2c75c8f140be417e" category="sidebar">知識與支援</block>
   <block id="bffe9a3c9a7e00ba00a11749e022d911" category="sidebar">登入</block>
@@ -2086,4 +2085,5 @@
   <block id="8640a7c7370301ca0c61fe2e7d0e5170" category="list-text">*選取認證資料*：輸入提供Astra Control Service管理儲存庫所需權限的認證資料。您需要提供的資訊會因儲存區類型而異。</block>
   <block id="21f6901f1009f7b8fc1d4c9d614493d7" category="paragraph">Astra Control Service新增儲存庫。您現在可以在建立保護原則或執行臨機操作備份時選擇此儲存區。您也可以將此儲存區設為雲端執行個體的預設儲存區。</block>
   <block id="68a2953dae168f957410960ed303cfe1" category="paragraph">您可以變更雲端執行個體的預設儲存區。Astra Control Service預設會將此儲存區用於備份與複製。每個雲端執行個體都有自己的預設儲存區。</block>
+  <block id="7c68315054de23a17c2a6febe9d9d149" category="sidebar">Astra Control：簡化混合雲的應用程式資料管理</block>
 </blocks>
