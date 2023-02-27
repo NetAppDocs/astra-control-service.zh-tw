@@ -207,35 +207,23 @@
   <block id="b50343ac8865ee6508570846230e18d5" category="list-text">選擇是要從現有的快照或備份建立複本。如果您未選取此選項、Astra Control會從應用程式的目前狀態建立複本。</block>
   <block id="5dfe25ebe8ed6ed27f2613aa48ba8e44" category="summary">透過新增其他儲存區、以及變更雲端供應商叢集的預設儲存區、來管理Astra用於備份與複製的儲存區。</block>
   <block id="79aa9197dc185dded5eb383a683a5219" category="doc">管理儲存庫</block>
-  <block id="701fefec60508e3dfbab28e42cc34eec" category="paragraph">只有管理員可以新增及修改儲存區。</block>
   <block id="281b980af7a696eab76fe5424a68e4d7" category="section-title">Astra Control如何使用鏟斗</block>
-  <block id="7235bf4965aea4d7801668a2ba85f9bd" category="paragraph">當您開始管理第一個Kubernetes叢集時、Astra Control Service會在與受管理叢集相同的地理區域中、為您的雲端供應商建立預設儲存區。</block>
-  <block id="2a84d8a5024fb227d8832c858544bc54" category="paragraph">Astra Control Service使用此預設儲存區來進行您所建立的備份與複製。然後、您可以使用備份來還原及複製叢集之間的應用程式。</block>
-  <block id="29de4658324b1b89cfc8d2758855b3af" category="paragraph">如果您在Astra Control Service中新增其他儲存庫、則可在建立保護原則時從這些儲存庫中選取。您也可以變更Astra Control Service用於臨機操作備份與複製的預設儲存區。您無法將儲存庫從一個雲端供應商複製到另一個雲端供應商。若要將資料從一個雲端供應商移轉至另一個雲端供應商、請改為複製相關的應用程式。</block>
   <block id="1c5f75566062a39b61ef6696a869091d" category="admonition">Astra Control Service會在開始備份或實體複本之前、先檢查目標儲存區是否可供存取。</block>
   <block id="29e296e0892cf7d05ecaa6f006dc0cfe" category="section-title">檢視現有的貯體</block>
-  <block id="6565a5299bf8c25c8e365589000e2011" category="paragraph">檢視Astra Control Service可用的庫存箱清單、以判斷其狀態、並識別雲端供應商的預設庫存箱。</block>
   <block id="43d755e706daf2d2de44fad5f4d40c32" category="paragraph">桶可能具有下列任一狀態：</block>
   <block id="2d13df6f8b5e4c5af9f87e0dc39df69d" category="list-text">擱置中</block>
-  <block id="7cd977582dd42dece1bfe950a66ada8d" category="list-text">新增儲存區之後、它會從擱置狀態開始、而Astra Control則會第一次查看它。</block>
   <block id="78945de8de090e90045d299651a68a9b" category="list-text">可用</block>
   <block id="b929c2e306e0e2ca8ce456f7f94f1faa" category="list-text">此鏟斗可供Astra Control使用。</block>
   <block id="93f07b720ebf7d1246512569761a5804" category="list-text">已移除</block>
   <block id="b41363ff8976fae49b049f0329b8f1ba" category="list-text">鏟斗目前無法運作。將滑鼠游標暫留在狀態圖示上、以找出問題所在。</block>
   <block id="3ad229e98a040883d52a865d289709ef" category="paragraph">如果某個儲存區處於「已移除」狀態、您仍可將其設為預設儲存區、並將其指派給保護排程。但如果儲存區在資料保護作業開始時未處於可用狀態、則該作業將會失敗。</block>
   <block id="48c7c41b72e1d678923ce3571aa65b2d" category="list-title">步驟</block>
-  <block id="5d2bbbb5e8eadfe7beda56382db3b48e" category="paragraph">顯示Astra Control Service可用的貯體清單。</block>
   <block id="97051796d8399cbd22e680d3212aa1c0" category="section-title">新增額外的儲存庫</block>
-  <block id="9c6ebb12d9cd173ee88e3b73cabe77b4" category="paragraph">在雲端供應商開始管理叢集之後、您可以隨時新增其他資源庫。這可讓您在建立保護原則時、在儲存區之間進行選擇、並變更臨機操作備份與複製的預設儲存區。</block>
-  <block id="dd6354a9b0182f27b3ea1d07811a3bdd" category="list-text">雲端供應商中現有儲存庫的名稱。</block>
   <block id="b21aa3a75aa9fe5b7c4320c651dd6004" category="list-text">選擇*「Add」（新增）*、然後依照提示新增儲存區。</block>
   <block id="833eb3b04501929e168dbcfe3328a358" category="list-text">*類型*：選擇您的雲端供應商。</block>
-  <block id="3cb658c17327b8e0fdf35e63798291f2" category="paragraph">您的雲端供應商只有在Astra Control Service開始管理在該雲端供應商中執行的叢集之後、才能使用。</block>
   <block id="48dbd6506b2a3bf46642f68dced2c90f" category="list-text">*現有庫位名稱*：輸入庫位名稱。</block>
   <block id="2748cc7be12db184f15633496762281f" category="list-text">*說明*：選擇性地輸入桶的說明。</block>
-  <block id="833ccc7f60627a26323104a362bc1335" category="list-text">*選取認證資料*：選擇提供Astra Control Service所需權限的認證資料、以管理儲存庫。</block>
   <block id="621fd3eeb2e69c8bf3ab93a1c00d4627" category="list-text">選取*「Add*（新增*）」以新增儲存區。</block>
-  <block id="eca980095ee0892315ee71b705935c75" category="paragraph">Astra Control Service新增額外的儲存庫。您現在可以在建立保護原則時選擇儲存庫。</block>
   <block id="05cec507b249987c2956da6a81ee5bfc" category="section-title">變更預設儲存區</block>
   <block id="a322f45d2fd04fbfd61da44bba143d00" category="list-text">在* Actions *（動作*）欄中選取您要編輯的儲存區的下拉式清單。</block>
   <block id="35165f9b14f6cde03fa7f6f9b03732ba" category="list-text">選擇*更新*。</block>
@@ -1732,10 +1720,7 @@
   <block id="bc044e78d97d319b1d70c1a7d2370e89" category="list-text">確認您要取消管理叢集、然後選取*是、取消管理叢集*。</block>
   <block id="f4d5e36ed4f7235403e25ad1183d2684" category="paragraph">叢集的狀態會變更為*移除*。之後、叢集就會從「*叢集*」頁面移除、而且不再由Astra Control Center管理。</block>
   <block id="4271789f0046cfd66563e8d252266146" category="list-text">尋找您要尋找的資訊：</block>
-  <block id="9af184e84356995ac4c8918f51c7485b" category="paragraph">透過新增其他儲存區、以及變更雲端執行個體中Kubernetes叢集的預設儲存區、來管理Astra用於備份與複製的儲存區。</block>
   <block id="e1758c6f6621a3e5a0bfaa943496e946" category="list-text">移至*鏟斗*。</block>
-  <block id="4a886d9c605f2bf7f4aea900d070fe5d" category="paragraph">變更Astra Control Service用於備份與複製的預設儲存區。每個雲端執行個體都有自己的預設儲存區。</block>
-  <block id="75af845e4fa71c7a41c06c0a3c88b4c9" category="paragraph">Astra Control Service會使用預設儲存區來執行雲端執行個體、以進行臨機操作備份、並在不選擇從現有備份複製時、用於臨機操作複製。</block>
   <block id="38867862280a9a74de68db4ff64b0c99" category="admonition">Astra Control不會自動指派任何雲端執行個體的預設儲存區。您需要手動設定雲端執行個體的預設儲存區、才能在兩個叢集之間執行應用程式複製作業。</block>
   <block id="c8f4356f9cdb6220b5a26c45a1f08f5c" category="list-text">轉至* Cloud Instances *。</block>
   <block id="a12bc220068e139158f916293280d5ca" category="list-text">針對您要編輯的雲端執行個體、在* Actions *（動作*）欄中選取組態功能表。</block>
@@ -1956,9 +1941,7 @@
   <block id="3bbb62d82d2439f5a711823da7c1b762" category="paragraph">如需新增限制的詳細資訊、請參閱 <block ref="f9b0c5590ff6fff298698f3844cae23c" category="inline-link-macro-rx"></block>。</block>
   <block id="edb74efc05972c268b6cccf83996ac3e" category="section-title">變更使用者角色</block>
   <block id="bfba5acdae4cf2cfa2c86cce302038d4" category="paragraph">隨時從帳戶移除認證資料。您只能在之後移除認證 <block ref="7193f1b7f27bd5505d89cc1e5724fb4b" category="inline-link-macro-rx"></block>、除非您正在輪詢認證資料（請參閱 <block ref="029b7394eded829c95ca3b86c4cd802d" category="inline-xref-macro-rx"></block>）。</block>
-  <block id="df1dd0475d7e25b9e368f8f45f636062" category="list-text">* S3伺服器名稱或IP位址*（僅限AWS）：輸入S3端點的完整網域名稱、此名稱對應於您所在的地區、不需要<block ref="f8eae6750519389e078e1eb1bcb3d708" prefix=" " category="inline-code"></block>。請參閱<block ref="398d47c523652edc934ec11e2f213d87" category="inline-link-rx"></block> 以取得更多資訊。</block>
   <block id="ce461936438c7221ad2aecef67b1e35b" category="paragraph">在與其他應用程式共用資源的應用程式上執行就地還原作業、可能會產生非預期的結果。在其中一個應用程式上執行就地還原時、應用程式之間共享的任何資源都會被取代。</block>
-  <block id="e13d6ee2f9c34bcf7366950e0434777b" category="list-text">如果您的儲存庫位於Azure：</block>
   <block id="49030d2f464d7bb39691809e5ab16174" category="list-text">此儲存區必須屬於名為_Astra備份rg-_的資源群組。</block>
   <block id="88bdaf7536fdf70e3c93df4a9b10bb82" category="list-text">如果Azure儲存帳戶執行個體效能設定設為「Premium」、則「Premium帳戶類型」設定必須設為「區塊區塊區塊」。</block>
   <block id="ceeca391c3348d53722ec9783ba88430" category="inline-link">NetApp TV</block>
@@ -2080,4 +2063,27 @@
   <block id="8a69b368bc97dc428e1c6ae2e1c9127a" category="paragraph">自我管理的叢集是您直接進行資源配置與管理的叢集。Astra Control Service支援在公有雲環境中執行的自我管理叢集。您的自我管理叢集可以使用Astra Trident來與NetApp儲存服務建立連結、也可以使用Container Storage介面（SCSI）驅動程式來與Amazon Elastic Block Store（EBS）、Azure託管磁碟和Google持續磁碟建立連結。</block>
   <block id="84f2be4894042bb275e318dfd8a0a200" category="paragraph">Astra Control Service支援使用下列Kubernetes發佈版本的自我管理叢集：</block>
   <block id="285cc7142d57c8f6e6a93562de77e160" category="list-text">叢集無法裝載在內部部署網路中、必須裝載在公有雲環境中。</block>
+  <block id="640efa26f79993654952b993dc173913" category="paragraph">您可以管理Astra用於備份與複製的儲存區。您可以在雲端執行個體中新增其他儲存區、移除現有的儲存區、以及變更Kubernetes叢集的預設儲存區。</block>
+  <block id="dc84232f20d32b91962832143f003245" category="paragraph">只有擁有者和管理員可以管理儲存區。</block>
+  <block id="7848032099422e8ae377c985c3705168" category="inline-link-macro">雲端執行個體</block>
+  <block id="bf0bf04063e1cb468dd2fb54de6873a5" category="paragraph">當您開始管理雲端執行個體的第一個Kubernetes叢集時、Astra Control Service會為其建立初始儲存庫 <block ref="bdf25979e5bbf85e72ec962a155a6460" category="inline-link-macro-rx"></block>。</block>
+  <block id="aa0c2d75f93fb0c2505fd3e861c58f2b" category="paragraph">您可以手動將儲存區指定為雲端執行個體的預設儲存區。如果您這麼做、Astra Control Service預設會將此儲存區用於您在該雲端執行個體的任何託管叢集上所建立的備份與複本（您可以選取不同的儲存庫進行備份）。如果您從雲端執行個體中的任一託管叢集執行應用程式的即時複製到另一個叢集、Astra Control Service會使用來源雲端執行個體的預設儲存區來執行複製作業。</block>
+  <block id="040c36c32cc16921a0d8e76864205f97" category="paragraph">您可以為多個雲端執行個體設定相同的儲存區作為預設儲存區。</block>
+  <block id="9cdc08c74979b53d19e32179009aee53" category="paragraph">您可以在建立保護原則或啟動臨機操作備份時、從任何儲存區中進行選擇。</block>
+  <block id="51cb52f23ae88bfed8fd836ebbd95b20" category="paragraph">檢視Astra Control Service可用的儲存庫清單、以判斷其狀態、並識別雲端執行個體的預設儲存庫（若已定義）。</block>
+  <block id="e0fea9249f8803684ddfc8a69358dae3" category="list-text">新增儲存區之後、它會從擱置狀態開始、而Astra Control會發現它。</block>
+  <block id="ebbb38114e12d2cf2a64401d66e59ee5" category="paragraph">隨即顯示Astra Control Service可用的貯體清單。</block>
+  <block id="b92c43f0ea0738d58f6db69143cc92c2" category="paragraph">您可以隨時新增其他庫位。這可讓您在建立保護原則或啟動臨機操作備份時、在儲存區之間進行選擇、並可讓您變更雲端執行個體使用的預設儲存區。</block>
+  <block id="a2bebd837e70248fe12869981cf1dc7a" category="paragraph">您可以新增下列類型的貯體：</block>
+  <block id="b2aa71ee04e531f0b6d1f084ba45f52f" category="list-text">一般S3</block>
+  <block id="5c9ef0d871938dccceb29ee63fad8ddb" category="list-text">Google Cloud Platform</block>
+  <block id="df2c24964ca3e99761acc48b2c8a75c9" category="list-text">NetApp ONTAP 產品S3</block>
+  <block id="ddcd79fba6592bc379dfa1df9f804760" category="list-text">NetApp StorageGRID 產品S3</block>
+  <block id="6672ccc56ea3c90a45c58fe80c9b4ffb" category="list-text">現有桶的名稱。</block>
+  <block id="318c639fce992245cde7b30e3ffd90cc" category="list-text">提供Astra Control Service所需權限來管理儲存庫的儲存庫認證。</block>
+  <block id="4405fa3b4f1902a766c5e3c5f421f98f" category="list-text">如果您的目標是在Microsoft Azure：</block>
+  <block id="637233086f906601c1bf3c43f9e1503a" category="list-text">* S3伺服器名稱或IP位址*（僅限AWS和S3儲存區類型）：輸入S3端點的完整網域名稱、此名稱對應於您所在的地區、不需要<block ref="f8eae6750519389e078e1eb1bcb3d708" prefix=" " category="inline-code"></block>。請參閱<block ref="398d47c523652edc934ec11e2f213d87" category="inline-link-rx"></block> 以取得更多資訊。</block>
+  <block id="8640a7c7370301ca0c61fe2e7d0e5170" category="list-text">*選取認證資料*：輸入提供Astra Control Service管理儲存庫所需權限的認證資料。您需要提供的資訊會因儲存區類型而異。</block>
+  <block id="21f6901f1009f7b8fc1d4c9d614493d7" category="paragraph">Astra Control Service新增儲存庫。您現在可以在建立保護原則或執行臨機操作備份時選擇此儲存區。您也可以將此儲存區設為雲端執行個體的預設儲存區。</block>
+  <block id="68a2953dae168f957410960ed303cfe1" category="paragraph">您可以變更雲端執行個體的預設儲存區。Astra Control Service預設會將此儲存區用於備份與複製。每個雲端執行個體都有自己的預設儲存區。</block>
 </blocks>

@@ -12,19 +12,21 @@ summary: 透過新增其他儲存區、以及變更雲端供應商叢集的預�
 
 
 [role="lead"]
-透過新增其他儲存區、以及變更雲端執行個體中Kubernetes叢集的預設儲存區、來管理Astra用於備份與複製的儲存區。
+您可以管理Astra用於備份與複製的儲存區。您可以在雲端執行個體中新增其他儲存區、移除現有的儲存區、以及變更Kubernetes叢集的預設儲存區。
 
-只有管理員可以新增及修改儲存區。
+只有擁有者和管理員可以管理儲存區。
 
 
 
 == Astra Control如何使用鏟斗
 
-當您開始管理第一個Kubernetes叢集時、Astra Control Service會在與受管理叢集相同的地理區域中、為您的雲端供應商建立預設儲存區。
+當您開始管理雲端執行個體的第一個Kubernetes叢集時、Astra Control Service會為其建立初始儲存庫 link:manage-cloud-instances.html["雲端執行個體"^]。
 
-Astra Control Service使用此預設儲存區來進行您所建立的備份與複製。然後、您可以使用備份來還原及複製叢集之間的應用程式。
+您可以手動將儲存區指定為雲端執行個體的預設儲存區。如果您這麼做、Astra Control Service預設會將此儲存區用於您在該雲端執行個體的任何託管叢集上所建立的備份與複本（您可以選取不同的儲存庫進行備份）。如果您從雲端執行個體中的任一託管叢集執行應用程式的即時複製到另一個叢集、Astra Control Service會使用來源雲端執行個體的預設儲存區來執行複製作業。
 
-如果您在Astra Control Service中新增其他儲存庫、則可在建立保護原則時從這些儲存庫中選取。您也可以變更Astra Control Service用於臨機操作備份與複製的預設儲存區。您無法將儲存庫從一個雲端供應商複製到另一個雲端供應商。若要將資料從一個雲端供應商移轉至另一個雲端供應商、請改為複製相關的應用程式。
+您可以為多個雲端執行個體設定相同的儲存區作為預設儲存區。
+
+您可以在建立保護原則或啟動臨機操作備份時、從任何儲存區中進行選擇。
 
 
 TIP: Astra Control Service會在開始備份或實體複本之前、先檢查目標儲存區是否可供存取。
@@ -33,11 +35,11 @@ TIP: Astra Control Service會在開始備份或實體複本之前、先檢查目
 
 == 檢視現有的貯體
 
-檢視Astra Control Service可用的庫存箱清單、以判斷其狀態、並識別雲端供應商的預設庫存箱。
+檢視Astra Control Service可用的儲存庫清單、以判斷其狀態、並識別雲端執行個體的預設儲存庫（若已定義）。
 
 桶可能具有下列任一狀態：
 
-擱置中:: 新增儲存區之後、它會從擱置狀態開始、而Astra Control則會第一次查看它。
+擱置中:: 新增儲存區之後、它會從擱置狀態開始、而Astra Control會發現它。
 可用:: 此鏟斗可供Astra Control使用。
 已移除:: 鏟斗目前無法運作。將滑鼠游標暫留在狀態圖示上、以找出問題所在。
 +
@@ -50,7 +52,7 @@ TIP: Astra Control Service會在開始備份或實體複本之前、先檢查目
 .步驟
 . 移至*鏟斗*。
 +
-顯示Astra Control Service可用的貯體清單。
+隨即顯示Astra Control Service可用的貯體清單。
 
 
 
@@ -58,15 +60,26 @@ TIP: Astra Control Service會在開始備份或實體複本之前、先檢查目
 
 == 新增額外的儲存庫
 
-在雲端供應商開始管理叢集之後、您可以隨時新增其他資源庫。這可讓您在建立保護原則時、在儲存區之間進行選擇、並變更臨機操作備份與複製的預設儲存區。
+您可以隨時新增其他庫位。這可讓您在建立保護原則或啟動臨機操作備份時、在儲存區之間進行選擇、並可讓您變更雲端執行個體使用的預設儲存區。
+
+您可以新增下列類型的貯體：
+
+* Amazon Web Services
+* 一般S3
+* Google Cloud Platform
+* Microsoft Azure
+* NetApp ONTAP 產品S3
+* NetApp StorageGRID 產品S3
+
 
 .您需要的產品
-* 雲端供應商中現有儲存庫的名稱。
+* 現有桶的名稱。
+* 提供Astra Control Service所需權限來管理儲存庫的儲存庫認證。
 
 
 ifdef::azure[]
 
-* 如果您的儲存庫位於Azure：
+* 如果您的目標是在Microsoft Azure：
 +
 ** 此儲存區必須屬於名為_Astra備份rg-_的資源群組。
 ** 如果Azure儲存帳戶執行個體效能設定設為「Premium」、則「Premium帳戶類型」設定必須設為「區塊區塊區塊」。
@@ -81,9 +94,6 @@ endif::azure[]
 . 選擇*「Add」（新增）*、然後依照提示新增儲存區。
 +
 ** *類型*：選擇您的雲端供應商。
-+
-您的雲端供應商只有在Astra Control Service開始管理在該雲端供應商中執行的叢集之後、才能使用。
-
 ** *現有庫位名稱*：輸入庫位名稱。
 ** *說明*：選擇性地輸入桶的說明。
 
@@ -99,12 +109,12 @@ endif::azure[]
 
 ifdef::aws[]
 
-* * S3伺服器名稱或IP位址*（僅限AWS）：輸入S3端點的完整網域名稱、此名稱對應於您所在的地區、不需要 `https://`。請參閱 https://docs.aws.amazon.com/general/latest/gr/s3.html["Amazon文件"^] 以取得更多資訊。
+* * S3伺服器名稱或IP位址*（僅限AWS和S3儲存區類型）：輸入S3端點的完整網域名稱、此名稱對應於您所在的地區、不需要 `https://`。請參閱 https://docs.aws.amazon.com/general/latest/gr/s3.html["Amazon文件"^] 以取得更多資訊。
 
 
 endif::aws[]
 
-* *選取認證資料*：選擇提供Astra Control Service所需權限的認證資料、以管理儲存庫。
+* *選取認證資料*：輸入提供Astra Control Service管理儲存庫所需權限的認證資料。您需要提供的資訊會因儲存區類型而異。
 +
 .. 選取*「Add*（新增*）」以新增儲存區。
 
@@ -112,15 +122,13 @@ endif::aws[]
 
 
 .結果
-Astra Control Service新增額外的儲存庫。您現在可以在建立保護原則時選擇儲存庫。
+Astra Control Service新增儲存庫。您現在可以在建立保護原則或執行臨機操作備份時選擇此儲存區。您也可以將此儲存區設為雲端執行個體的預設儲存區。
 
 
 
 == 變更預設儲存區
 
-變更Astra Control Service用於備份與複製的預設儲存區。每個雲端執行個體都有自己的預設儲存區。
-
-Astra Control Service會使用預設儲存區來執行雲端執行個體、以進行臨機操作備份、並在不選擇從現有備份複製時、用於臨機操作複製。
+您可以變更雲端執行個體的預設儲存區。Astra Control Service預設會將此儲存區用於備份與複製。每個雲端執行個體都有自己的預設儲存區。
 
 
 NOTE: Astra Control不會自動指派任何雲端執行個體的預設儲存區。您需要手動設定雲端執行個體的預設儲存區、才能在兩個叢集之間執行應用程式複製作業。
