@@ -2086,4 +2086,5 @@
   <block id="68a2953dae168f957410960ed303cfe1" category="paragraph">您可以變更雲端執行個體的預設儲存區。Astra Control Service預設會將此儲存區用於備份與複製。每個雲端執行個體都有自己的預設儲存區。</block>
   <block id="7c68315054de23a17c2a6febe9d9d149" category="sidebar">Astra Control：簡化混合雲的應用程式資料管理</block>
   <block id="aa396af981d56ce9483fdf506c608dee" category="list-text">若要將應用程式複製到不同的叢集、您必須確定已為包含來源叢集的雲端執行個體指派預設儲存區。如果來源雲端執行個體沒有預設的儲存區集、跨叢集複製作業將會失敗。</block>
+  <block id="4c004df391027b81952b788a3802e37c" category="list-text">如果您將命名空間篩選器新增至執行掛勾、而執行還原或複製作業之後執行、且還原或複製來源與目的地位於不同的命名空間、則命名空間篩選器只會套用至目的地命名空間。</block>
 </blocks>
