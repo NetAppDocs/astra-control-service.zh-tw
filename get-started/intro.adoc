@@ -99,7 +99,9 @@ endif::azure[]
 
 * 自我管理叢集：
 +
-** NetApp ONTAP AFF 的功能與FAS 功能
+** Amazon EBS
+** Google持續磁碟
+** Azure託管磁碟
 ** https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/["Cloud Volumes ONTAP"^]
 
 
