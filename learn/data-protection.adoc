@@ -1,0 +1,44 @@
+---
+sidebar: sidebar 
+permalink: learn/data-protection.html 
+keywords: backup, back up, backup apps, back up apps, snapshots, snapshot an app, take a snapshot, take a backup, view backups, view snapshots, set policy, set schedule, schedule backups, schedule snapshots, protect data 
+summary: 瞭解Astra Control Service中可用的資料保護類型、以及如何以最佳方式使用這些類型來保護應用程式。 
+---
+= 資料保護
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/learn/
+
+
+[role="lead"]
+瞭解Astra Control Service中可用的資料保護類型、以及如何以最佳方式使用這些類型來保護應用程式。
+
+
+
+== 快照、備份及保護原則
+
+快照和備份都能保護下列類型的資料：
+
+* 應用程式本身
+* 與應用程式相關的任何持續資料磁碟區
+* 屬於應用程式的任何資源成品
+
+
+_snapshot是應用程式的時間點複本、儲存在與應用程式相同的已配置磁碟區上。通常速度很快。您可以使用本機快照、將應用程式還原至較早的時間點。快照對快速複製非常實用；快照包括應用程式的所有Kubernetes物件、包括組態檔案。快照可用於複製或還原同一個叢集內的應用程式。
+
+備份_是以快照為基礎。它儲存在外部物件存放區中、因此相較於本機快照、拍攝速度可能較慢。您可以將應用程式備份還原至同一個叢集、也可以將應用程式備份還原至不同的叢集、藉此移轉應用程式。您也可以選擇較長的備份保留期間。由於備份儲存在外部物件存放區中、因此在伺服器故障或資料遺失的情況下、備份通常比快照提供更好的保護。
+
+_protection policy_is是一種保護應用程式的方法、可根據您為該應用程式定義的排程、自動建立快照、備份或兩者。保護原則也可讓您選擇要在排程中保留多少個快照和備份、並設定不同的排程精細度層級。使用保護原則將備份與快照自動化、是確保每個應用程式都能根據組織和服務層級協議（SLA）需求來保護的最佳方式。
+
+
+CAUTION: _您必須等到最近進行備份之後、才能獲得完整保護_。這很重要、因為備份儲存在遠離持續磁碟區的物件存放區中。如果發生故障或意外、會清除叢集及其相關的持續儲存設備、則需要備份才能恢復。快照無法讓您恢復。
+
+
+NOTE: 如果您執行快照或備份、但作業失敗並顯示錯誤「由於內部伺服器問題而未建立資源」、請檢查以確定您使用的儲存後端已安裝正確的驅動程式。有些儲存後端需要Container Storage Interface（SCSI）驅動程式、有些則需要外部快照控制器。
+
+
+
+== 複製
+
+_clon__是應用程式、其組態及其持續資料磁碟區的完全複製。您可以在相同的Kubernetes叢集或其他叢集上手動建立複本。如果您需要將應用程式和儲存設備從一個Kubernetes叢集移至另一個叢集、複製應用程式就很有用。

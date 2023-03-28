@@ -350,10 +350,6 @@
   <block id="c5c9aadc2e109cc278865f3adfd4773d" category="paragraph">Astra Control會將使用者從帳戶中移除。</block>
   <block id="60487fcdacfcf0e2feb2363106047906" category="summary">使用自動保護原則或臨機操作、拍攝快照和備份資料、保護您的應用程式。</block>
   <block id="c48341950d06dc5b2b657a869930da35" category="doc">利用快照與備份來保護應用程式</block>
-  <block id="a21e997b73eef6d37e2890a1fa07e1a9" category="section-title">快照與備份</block>
-  <block id="703cd4ad217eb545975bc04b7fc26153" category="paragraph">_snapshot是應用程式的時間點複本、儲存在與應用程式相同的已配置磁碟區上。通常速度很快。本機快照可用來將應用程式還原至較早的時間點。</block>
-  <block id="2747db310010aa1d5a7b961fb241fcb0" category="paragraph">備份_儲存在雲端的物件儲存設備上。相較於本機快照、備份速度可能較慢。但可在雲端跨區域存取、以進行應用程式移轉。您也可以選擇較長的備份保留期間。</block>
-  <block id="408410e994005339450ed31eabd8f6af" category="admonition">_您必須等到最近進行備份之後、才能獲得完整保護_。這很重要、因為備份儲存在遠離持續磁碟區的物件存放區中。如果故障或意外損壞叢集及其持續儲存設備、則需要備份才能恢復。快照無法讓您恢復。</block>
   <block id="2b44ed9b51c4c625419cf0a113f71811" category="section-title">設定保護原則</block>
   <block id="592d363442bda9d231d57bf7cf1b36d3" category="inline-link">使用Astra Control REST API建立快照與備份</block>
   <block id="33e0dd7ca49703e72c3862b5ef0de975" category="paragraph">保護原則可在已定義的排程中建立快照、備份或兩者、以保護應用程式。您可以選擇每小時、每天、每週和每月建立快照和備份、也可以指定要保留的複本數量。如果您需要每小時執行一次以上的備份或快照、您可以<block ref="e7190f2033c7866ebb246bbdd297729e" category="inline-link-rx"></block>。</block>
@@ -2087,4 +2083,18 @@
   <block id="7c68315054de23a17c2a6febe9d9d149" category="sidebar">Astra Control：簡化混合雲的應用程式資料管理</block>
   <block id="aa396af981d56ce9483fdf506c608dee" category="list-text">若要將應用程式複製到不同的叢集、您必須確定已為包含來源叢集的雲端執行個體指派預設儲存區。如果來源雲端執行個體沒有預設的儲存區集、跨叢集複製作業將會失敗。</block>
   <block id="4c004df391027b81952b788a3802e37c" category="list-text">如果您將命名空間篩選器新增至執行掛勾、而執行還原或複製作業之後執行、且還原或複製來源與目的地位於不同的命名空間、則命名空間篩選器只會套用至目的地命名空間。</block>
+  <block id="a969ea74e186a4736ce18134eaf42f1a" category="summary">瞭解Astra Control Service中可用的資料保護類型、以及如何以最佳方式使用這些類型來保護應用程式。</block>
+  <block id="646e605e86066bd9485e0c23704757f2" category="section-title">快照、備份及保護原則</block>
+  <block id="cca8aaa6dccaa81bdbc26387b1f1bc63" category="paragraph">快照和備份都能保護下列類型的資料：</block>
+  <block id="adac08ac006f9d65c559347c106461c7" category="list-text">應用程式本身</block>
+  <block id="6c94a6e4d564092b6e6d44dbc8e77b07" category="list-text">與應用程式相關的任何持續資料磁碟區</block>
+  <block id="7dfd52c396a70e3d3406a3363ed74be4" category="list-text">屬於應用程式的任何資源成品</block>
+  <block id="8d2f06a986c63f2706decd28b4e24967" category="paragraph">_snapshot是應用程式的時間點複本、儲存在與應用程式相同的已配置磁碟區上。通常速度很快。您可以使用本機快照、將應用程式還原至較早的時間點。快照對快速複製非常實用；快照包括應用程式的所有Kubernetes物件、包括組態檔案。快照可用於複製或還原同一個叢集內的應用程式。</block>
+  <block id="d3472e0a53fc9484c0dd7ec15e76da1d" category="paragraph">備份_是以快照為基礎。它儲存在外部物件存放區中、因此相較於本機快照、拍攝速度可能較慢。您可以將應用程式備份還原至同一個叢集、也可以將應用程式備份還原至不同的叢集、藉此移轉應用程式。您也可以選擇較長的備份保留期間。由於備份儲存在外部物件存放區中、因此在伺服器故障或資料遺失的情況下、備份通常比快照提供更好的保護。</block>
+  <block id="5becefddd70e438fb63cc4c816b5f6cc" category="paragraph">_protection policy_is是一種保護應用程式的方法、可根據您為該應用程式定義的排程、自動建立快照、備份或兩者。保護原則也可讓您選擇要在排程中保留多少個快照和備份、並設定不同的排程精細度層級。使用保護原則將備份與快照自動化、是確保每個應用程式都能根據組織和服務層級協議（SLA）需求來保護的最佳方式。</block>
+  <block id="33bb9df0e608c1dab17890f54a41a8db" category="admonition">_您必須等到最近進行備份之後、才能獲得完整保護_。這很重要、因為備份儲存在遠離持續磁碟區的物件存放區中。如果發生故障或意外、會清除叢集及其相關的持續儲存設備、則需要備份才能恢復。快照無法讓您恢復。</block>
+  <block id="999cc42b236c7aee1157ff02d6f1bcd5" category="section-title">複製</block>
+  <block id="5d18a3d426ac931bca06d705d79d80cf" category="paragraph">_clon__是應用程式、其組態及其持續資料磁碟區的完全複製。您可以在相同的Kubernetes叢集或其他叢集上手動建立複本。如果您需要將應用程式和儲存設備從一個Kubernetes叢集移至另一個叢集、複製應用程式就很有用。</block>
+  <block id="ed732ea9c1e91d97f98c7332ade8ccdc" category="inline-link-macro">Astra Control的資料保護</block>
+  <block id="efe10d9d842c9e231cc488725ee92859" category="paragraph">深入瞭解 <block ref="0675148237c2e40e6d4648cd7be7bdff" category="inline-link-macro-rx"></block>。</block>
 </blocks>

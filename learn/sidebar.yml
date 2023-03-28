@@ -4,6 +4,8 @@ title: 概念
 entries:
 - title: 架構與元件
   url: "/learn/architecture.html"
+- title: 資料保護
+  url: "/learn/data-protection.html"
 - title: AWS叢集的儲存設備
   flavor: aws
   url: "/learn/aws-storage.html"
