@@ -77,7 +77,7 @@ summary: 您必須先採取幾個步驟來準備Amazon Web Services專案、才�
 
 Kubernetes叢集必須符合下列需求、才能從Astra Control Service進行探索和管理。
 
-Kubernetes版本:: 叢集必須執行介於1.22到1.24之間的Kubernetes版本。
+Kubernetes版本:: 叢集必須執行 1.23 至 1.25 範圍內的 Kubernetes 版本。
 映像類型:: 每個工作節點的映像類型必須是Linux。
 叢集狀態:: 叢集必須以正常狀態執行、且至少有一個線上工作者節點、且在故障狀態下沒有工作節點。
 

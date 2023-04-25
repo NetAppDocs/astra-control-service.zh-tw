@@ -31,7 +31,9 @@ summary: 使用自動保護原則或臨機操作、拍攝快照和備份資料�
 
 == 設定保護原則
 
-保護原則可在已定義的排程中建立快照、備份或兩者、以保護應用程式。您可以選擇每小時、每天、每週和每月建立快照和備份、也可以指定要保留的複本數量。如果您需要每小時執行一次以上的備份或快照、您可以 https://docs.netapp.com/us-en/astra-automation/workflows/workflows_before.html["使用Astra Control REST API建立快照與備份"^]。
+保護原則可在已定義的排程中建立快照、備份或兩者、以保護應用程式。您可以選擇每小時、每天、每週和每月建立快照和備份、也可以指定要保留的複本數量。
+
+如果您需要每小時執行一次以上的備份或快照、您可以 https://docs.netapp.com/us-en/astra-automation/workflows/workflows_before.html["使用Astra Control REST API建立快照與備份"^]。
 
 .步驟
 . 選取*應用程式*、然後選取託管應用程式的名稱。
@@ -78,6 +80,15 @@ Astra Control會使用您定義的排程和保留原則來建立和保留快照�
 == 建立備份
 
 您也可以隨時備份應用程式。
+
+ifdef::azure[]
+
+[NOTE]
+====
+請注意、當您備份託管在 Azure NetApp Files 儲存設備上的應用程式時、儲存空間的處理方式為何。請參閱 link:../learn/azure-storage.html#application-backups["應用程式備份"] 以取得更多資訊。
+
+====
+endif::azure[]
 
 .步驟
 . 選擇*應用程式*。

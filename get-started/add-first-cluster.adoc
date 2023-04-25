@@ -406,6 +406,11 @@ NOTE: 如果您選取標記有「私有」圖示的叢集、則會使用私有IP
 endif::azure[]
 
 . *認證名稱*（適用於自我管理的叢集）：提供您要上傳至Astra Control的自我管理叢集認證名稱。根據預設、認證名稱會自動填入為叢集名稱。
+. （選用） * 私有路由 ID* ：輸入可從 Astra Connector 取得的私有路由識別碼。
++
+
+NOTE: 私有路由 ID 是與 Astra Connector 相關的名稱、可讓 Astra 管理私有 Kubernetes 叢集。在這種情況下、私有叢集是 Kubernetes 叢集、不會將其 API 伺服器暴露於網際網路上。
+
 . （選用）* Storage *：選取要將Kubernetes應用程式部署至此叢集的儲存類別、預設為使用。
 +
 [NOTE]

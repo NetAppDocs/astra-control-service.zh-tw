@@ -16,6 +16,29 @@ NetApp會定期更新Astra Control Service、為您提供新功能、增強功�
 
 
 
+== 2023 年 4 月 25 日
+
+.新功能與支援
+ifdef::azure[]
+
+endif::azure[]
+
+* 支援私有 Red Hat OpenShift 叢集
++
+link:../get-started/manage-private-cluster.html["從Astra Control Service管理私有叢集"]
+
+* 支援在還原作業期間包含或排除應用程式資源
++
+link:../use/restore-apps.html#filter-resources-during-an-application-restore["還原應用程式"]
+
+* 支援管理純資料應用程式
++
+link:../use/manage-apps.html["開始管理應用程式"]
+
+
+
+
+
 == 2023年1月17日
 
 .新功能與支援

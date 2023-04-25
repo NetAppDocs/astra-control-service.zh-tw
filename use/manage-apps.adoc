@@ -20,7 +20,7 @@ summary: 將Kubernetes叢集新增至Astra Control之後、即可在該叢集（
 
 Astra Control具備下列應用程式管理需求：
 
-* *授權*：若要管理10個以上的命名空間、您需要訂閱Astra Control Center。
+* * 授權 * ：若要管理 10 個以上的命名空間、您需要 Astra Control 訂閱。
 * *命名空間*：應用程式可以使用Astra Control在單一叢集的一個或多個指定命名空間內定義。應用程式可包含橫跨同一個叢集內多個命名空間的資源。Astra Control不支援跨多個叢集定義應用程式的功能。
 * *儲存類別*：如果您安裝的應用程式已明確設定儲存類別、而且需要複製應用程式、則複製作業的目標叢集必須具有原本指定的儲存類別。將具有明確設定儲存類別的應用程式複製到沒有相同儲存類別的叢集、將會失敗。
 * * Kubernetes資源*：使用未由Astra Control收集的Kubernetes資源的應用程式、可能沒有完整的應用程式資料管理功能。Astra Control會收集下列Kubernetes資源：
@@ -129,10 +129,9 @@ Astra Control在叢集上探索命名空間之後、您可以定義要管理的�
 
 TIP: 舉例來說、您可能想要為每週有節奏的「Maria」設定備份原則、但您可能需要比這更頻繁地備份「MariaDB」（位於同一個命名空間中）。根據這些需求、您需要分別管理應用程式、而非單一命名空間應用程式。
 
-.您需要的產品
+.開始之前
 * 將Kubernetes叢集新增至Astra Control。
 * 叢集上已安裝一或多個應用程式。 <<支援的應用程式安裝方法,深入瞭解支援的應用程式安裝方法>>。
-* 一個或多個作用中的Pod。
 * 您新增至Astra Control的Kubernetes叢集上現有的命名空間。
 * （選用）任何產品上都有Kubernetes標籤 link:../use/manage-apps.html#app-management-requirements["支援的Kubernetes資源"]。
 +
@@ -163,11 +162,6 @@ TIP: 標籤是可指派給Kubernetes物件以供識別的金鑰/值配對。標�
 
 WARNING: 在定義應用程式時、請確保不將Kubernetes資源納入具有保護原則的多個應用程式中。Kubernetes資源上的保護原則重疊、可能會造成資料衝突。
 
-[CAUTION]
-====
-在與其他應用程式共用資源的應用程式上執行就地還原作業、可能會產生非預期的結果。在其中一個應用程式上執行就地還原時、應用程式之間共享的任何資源都會被取代。
-
-====
 .深入瞭解如何將叢集範圍的資源新增至應用程式命名空間。
 [%collapsible]
 ====

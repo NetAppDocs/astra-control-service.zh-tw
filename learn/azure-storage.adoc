@@ -51,6 +51,14 @@ Astra Control Service會使用最小100 GiB的磁碟區大小來配置持續磁�
 
 
 
+=== 應用程式備份
+
+如果您備份位於 Azure NetApp Files 儲存設備上的應用程式、 Astra Control Service 會自動暫時擴充容量池。備份完成後、 Astra Control Service 會將容量資源池縮減至先前的大小。視您的 Azure 訂閱而定、可能會在發生這種情況時產生儲存費用。您可以在 * 活動 * 頁面事件記錄中查看容量集區調整大小事件的歷程記錄。
+
+如果容量集區超過 Azure 訂閱在調整大小作業期間所允許的最大大小、則備份作業將會失敗、並從 Azure API 觸發警告。
+
+
+
 == Azure託管磁碟
 
 Astra Control Service可以使用Container Storage Interface（SCSI）驅動程式、將Azure託管磁碟當作儲存後端來進行介面。此服務提供由Azure管理的區塊層級儲存設備。

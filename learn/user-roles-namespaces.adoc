@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: learn/user-roles-namespaces.html 
 keywords: users, roles, user roles, namespace, namespaces, account, accounts, permissions, restriction, restrict, constraint 
-summary: 瞭解Astra Control Center中可用的資料保護類型、以及如何以最佳方式使用這些類型來保護應用程式。 
+summary: 瞭解 Astra Control 中可用的資料保護類型、以及如何以最佳方式使用這些類型來保護應用程式。 
 ---
 = 使用者角色和命名空間
 :hardbreaks:
