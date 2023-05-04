@@ -1308,7 +1308,6 @@
   <block id="dec9c7c53517ee828cc79e21b6cf32cd" category="list-text"><block ref="6243c0310ac1403cfb5a2dbb342dc22c" category="inline-link-macro-rx"></block>。</block>
   <block id="97bb7509997a09b9f8fd51521135b2f1" category="summary">Astra Control Service可以使用Amazon Elastic Block Store（EBS）或Amazon FSX for NetApp ONTAP 、做為Elastic Kubernetes Service（EKS）叢集的儲存後端。您應該瞭解如何選擇儲存類別和持續磁碟區大小、以協助您達成效能目標。</block>
   <block id="730956786ac7fa46f11b7f39c5b6e864" category="doc">AWS叢集的儲存類別與效能</block>
-  <block id="d819b60633fd5eee6a163e88aa81da4e" category="paragraph">Astra Control Service可以使用Amazon Elastic Block Store（EBS）或Amazon FSX for NetApp ONTAP 、做為Amazon Elastic Kubernetes Service（EKS）叢集的儲存後端。</block>
   <block id="8e276a5c4eecb9cd5c1fbb0729744eb5" category="section-title">Amazon彈性區塊儲存區（EBS）</block>
   <block id="f83a0018c18787e63139822b6dc279ca" category="inline-link">Kubernetes文件</block>
   <block id="7de084a73e1235e817952e00c38561e0" category="paragraph">您可以搭配EBS使用多種不同類型的磁碟區：</block>
@@ -1933,11 +1932,8 @@
   <block id="22289318dae293d59005c72969da78c0" category="list-text">支援在單一Astra Control Service帳戶中管理多個雲端供應商訂閱</block>
   <block id="340fb7807661130b471c746bcb32778d" category="list-text">Astra Control Service的帳單現在會依命名空間進行計量、而非依應用程式進行計費</block>
   <block id="7c560ce667e00f7fb7277e3e40274958" category="list-text">支援透過AWS Marketplace訂閱Astra Control Service定期方案</block>
-  <block id="0bf305437e764438b0cefa4feeab361a" category="paragraph">Astra Control Service支援Cloud Volumes Service 以支援VMware for Google Cloud、Google持續磁碟或NetApp Cloud Volumes ONTAP 支援的功能、做為持續磁碟區的儲存後端選項。</block>
   <block id="0f0b99ea2f70cd363c2c6a279f74e760" category="section-title">NetApp Cloud Volumes ONTAP</block>
   <block id="e472e0844cec8046d5a3eed1d37de0ed" category="inline-link">NetApp Cloud Volumes ONTAP 產品文件</block>
-  <block id="b311f4f89f8edf2c494c59166cea789e" category="paragraph">如需設定NetApp Cloud Volumes ONTAP 產品的詳細資訊、包括效能建議、請造訪<block ref="c94772fe83b69960a6ebea80e6f83cf2" category="inline-link-rx"></block>。</block>
-  <block id="88ede18f1c4b4384b20f2ce56a75bd80" category="paragraph">Astra Control Service支援Azure NetApp Files 以支援以支援功能為基礎的功能、Azure託管磁碟或NetApp Cloud Volumes ONTAP 支援以儲存後端方式、作為Azure Kubernetes Service（KS）叢集的儲存後端。</block>
   <block id="cf2023b42357e47bef18c127980bd1c6" category="list-text">NetApp Cloud Volumes ONTAP 產品：不提供價格、效能或恢復能力資訊</block>
   <block id="d52e07d1d595c838fa6dd650fe711cd0" category="list-text"><block ref="d52e07d1d595c838fa6dd650fe711cd0" category="inline-link-rx"></block></block>
   <block id="ec9e8ebd4a4bf176cd70f6a24863b17a" category="paragraph">深入瞭解 <block ref="669f060d339cad3efcb29baff91fd410" category="inline-link-macro-rx"></block>。深入瞭解 <block ref="b4547358b744ca3b28812f444dc5a38f" category="inline-link-macro-rx"></block>。深入瞭解 <block ref="fd0a3bed584d87df18438d86772a2aaf" category="inline-link-macro-rx"></block>。</block>
@@ -2129,4 +2125,8 @@
   <block id="89585d1ceafafb8cda53826bc4f4d6cd" category="summary">瞭解 Astra Control 中可用的資料保護類型、以及如何以最佳方式使用這些類型來保護應用程式。</block>
   <block id="677e2027e144a44547f6bccf7a9e8c7b" category="paragraph">如果您備份位於 Azure NetApp Files 儲存設備上的應用程式、 Astra Control Service 會自動暫時擴充容量池。備份完成後、 Astra Control Service 會將容量資源池縮減至先前的大小。視您的 Azure 訂閱而定、可能會在發生這種情況時產生儲存費用。您可以在 * 活動 * 頁面事件記錄中查看容量集區調整大小事件的歷程記錄。</block>
   <block id="e08aa87a09ba379f5b0f9bc3248aa6e4" category="paragraph">如果容量集區超過 Azure 訂閱在調整大小作業期間所允許的最大大小、則備份作業將會失敗、並從 Azure API 觸發警告。</block>
+  <block id="9a8d086014c5bd3e4ccfd14a881f8fcd" category="paragraph">Astra Control Service 可使用 Amazon Elastic Block Store （ EBS ）、 Amazon FSX for NetApp ONTAP 或 NetApp Cloud Volumes ONTAP 作為 Amazon Elastic Kubernetes Service （ EKS ）叢集的儲存後端。</block>
+  <block id="68bd054170816bc3e89c4e00c3a23bfd" category="paragraph">如需設定NetApp Cloud Volumes ONTAP 產品的詳細資訊、包括效能建議、請造訪<block ref="b17f0a969868e5279849aa167864d3ad" category="inline-link-rx"></block>。</block>
+  <block id="5e45edcd9985e188c258e7b6515feeea" category="paragraph">Astra Control Service 支援 Azure NetApp Files 、 Azure 託管磁碟或 NetApp Cloud Volumes ONTAP 作為 Azure Kubernetes 服務（ aks ）叢集的儲存後端。</block>
+  <block id="6bab6ac71f743f37f154b7b0219c56a8" category="paragraph">Astra Control Service 支援 Cloud Volumes Service for Google Cloud 、 Google Persistent Disk 或 NetApp Cloud Volumes ONTAP 作為持續磁碟區的儲存後端選項。</block>
 </blocks>

@@ -12,7 +12,7 @@ summary: Astra Control Service使用Cloud Volumes Service 支援Google Cloud的�
 
 
 [role="lead"]
-Astra Control Service支援Cloud Volumes Service 以支援VMware for Google Cloud、Google持續磁碟或NetApp Cloud Volumes ONTAP 支援的功能、做為持續磁碟區的儲存後端選項。
+Astra Control Service 支援 Cloud Volumes Service for Google Cloud 、 Google Persistent Disk 或 NetApp Cloud Volumes ONTAP 作為持續磁碟區的儲存後端選項。
 
 
 
@@ -123,4 +123,4 @@ https://cloud.google.com/compute/docs/disks/performance["深入瞭解不同的Go
 
 == NetApp Cloud Volumes ONTAP
 
-如需設定NetApp Cloud Volumes ONTAP 產品的詳細資訊、包括效能建議、請造訪 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/["NetApp Cloud Volumes ONTAP 產品文件"^]。
+如需設定NetApp Cloud Volumes ONTAP 產品的詳細資訊、包括效能建議、請造訪 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-performance.html["NetApp Cloud Volumes ONTAP 產品文件"^]。
