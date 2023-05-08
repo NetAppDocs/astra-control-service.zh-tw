@@ -20,7 +20,7 @@ summary: 管理新增叢集時新增的雲端執行個體。
 
 == 新增雲端執行個體
 
-您可以在將新叢集新增至Astra Control時新增雲端執行個體。請參閱 link:../add-first-cluster.html["從Astra Control Service開始管理Kubernetes叢集"] 以取得更多資訊。
+您可以在將新叢集新增至Astra Control時新增雲端執行個體。請參閱 link:../get-started/add-first-cluster.html["從Astra Control Service開始管理Kubernetes叢集"] 以取得更多資訊。
 
 
 

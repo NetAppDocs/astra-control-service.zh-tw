@@ -1880,7 +1880,6 @@
   <block id="307510f97d5f134d0b9ee5ee86d6a53f" category="list-text">如需如何使用Astra Control API管理應用程式的指示、請參閱 <block ref="ef5b26cd6e9ab40377842cc20d2b4ebf" category="inline-link-macro-rx"></block>。</block>
   <block id="b5e44ee7e6c2c0ee0f81c8df96014092" category="admonition">若要深入瞭解Kubernetes標籤、<block ref="6258ba1c56e61c3e07dc318965d7f24b" category="inline-link-rx"></block>。</block>
   <block id="e4b1bae16e2dcbf3661583ef6a1d3b0f" category="admonition">如果要定義多個應用程式、請從命名空間清單中選取、然後選取左上角的*「Actions」（動作）*按鈕、然後選取*「define as application*」（定義為應用程式*）。這會在個別命名空間中定義多個個別應用程式。如需多命名空間應用程式、請參閱 <block ref="7befd9a72212c345f0396ef5748860f3" category="inline-xref-macro-rx"></block>。</block>
-  <block id="f3ed27964ccf64e77e1488f7d2a16145" category="paragraph">您可以在將新叢集新增至Astra Control時新增雲端執行個體。請參閱 <block ref="957d53ce26004606b67720b5be4bf2a4" category="inline-link-macro-rx"></block> 以取得更多資訊。</block>
   <block id="f500108e4498090784d5a65b95413035" category="paragraph">如需失敗工作的詳細資訊、請參閱 <block ref="a18f0b9d9f08915c2171339d482533ca" category="inline-link-macro-rx"></block>。</block>
   <block id="0370124d48bfc5af2def19c48f433283" category="inline-link">NetApp Verda GitHub專案</block>
   <block id="a59e4fa5cc01a3a4bdebbff4cec60b47" category="paragraph">請造訪<block ref="84d9961ef5a89731849bc2055780d0b6" category="inline-link-rx"></block> 可下載熱門應用程式的實際執行掛勾、例如Apache Cassandra和Elasticsearch。您也可以查看範例、瞭解如何建構您自己的自訂執行掛勾。</block>
@@ -2129,4 +2128,5 @@
   <block id="68bd054170816bc3e89c4e00c3a23bfd" category="paragraph">如需設定NetApp Cloud Volumes ONTAP 產品的詳細資訊、包括效能建議、請造訪<block ref="b17f0a969868e5279849aa167864d3ad" category="inline-link-rx"></block>。</block>
   <block id="5e45edcd9985e188c258e7b6515feeea" category="paragraph">Astra Control Service 支援 Azure NetApp Files 、 Azure 託管磁碟或 NetApp Cloud Volumes ONTAP 作為 Azure Kubernetes 服務（ aks ）叢集的儲存後端。</block>
   <block id="6bab6ac71f743f37f154b7b0219c56a8" category="paragraph">Astra Control Service 支援 Cloud Volumes Service for Google Cloud 、 Google Persistent Disk 或 NetApp Cloud Volumes ONTAP 作為持續磁碟區的儲存後端選項。</block>
+  <block id="09a08aa51d9a5d34a5bc6cecdb1f03bf" category="paragraph">您可以在將新叢集新增至Astra Control時新增雲端執行個體。請參閱 <block ref="04d97bec7f4fa11002764129cf40d13a" category="inline-link-macro-rx"></block> 以取得更多資訊。</block>
 </blocks>
