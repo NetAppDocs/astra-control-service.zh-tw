@@ -110,9 +110,9 @@ Kubernetes叢集必須符合下列需求、才能從Astra Control Service進行�
 Kubernetes版本:: 叢集必須執行 1.24 至 1.25 範圍內的 Kubernetes 版本。
 映像類型:: 每個工作節點的映像類型必須是 `COS_CONTAINERD`。
 叢集狀態:: 叢集必須以正常狀態執行、且至少有一個線上工作者節點、且在故障狀態下沒有工作節點。
-Google Cloud區域:: 如果您計畫將Cloud Volumes Service 適用於Google Cloud的功能作為儲存後端、叢集必須在中執行 https://cloud.netapp.com/cloud-volumes-global-regions#cvsGc["支援Google Cloud的支援功能的Google Cloud區域Cloud Volumes Service 。"] 請注意、Astra Control Service支援CVS和CVS效能這兩種服務類型。最佳實務做法是、您應該選擇支援Cloud Volumes Service 適用於Google Cloud的地區、即使您不將其用作儲存後端。如果Cloud Volumes Service 效能需求有所改變、那麼在未來、將VMware for Google Cloud用作儲存後端、將會變得更容易。
+Google Cloud區域:: 如果您計畫將Cloud Volumes Service 適用於Google Cloud的功能作為儲存後端、叢集必須在中執行 https://["支援Google Cloud的支援功能的Google Cloud區域Cloud Volumes Service 。"] 請注意、Astra Control Service支援CVS和CVS效能這兩種服務類型。最佳實務做法是、您應該選擇支援Cloud Volumes Service 適用於Google Cloud的地區、即使您不將其用作儲存後端。如果Cloud Volumes Service 效能需求有所改變、那麼在未來、將VMware for Google Cloud用作儲存後端、將會變得更容易。
 網路:: 如果您打算將Cloud Volumes Service for Google Cloud用作儲存後端、則叢集必須位於VPC中、且VPC必須與Cloud Volumes Service 適用於Google Cloud的不同步。 <<選用：為VPC設定網路對等關係,此步驟如下所述>>。
-私有叢集:: 如果叢集為私有、則為 https://cloud.google.com/kubernetes-engine/docs/concepts/private-cluster-concept["授權網路"^] 必須允許Astra控制服務IP位址：
+私有叢集:: 如果叢集為私有、則為 https://["授權網路"^] 必須允許Astra控制服務IP位址：
 +
 --
 52.188.218.166/32
@@ -128,9 +128,9 @@ GKE叢集的操作模式:: 您應該使用「標準」操作模式。目前尚�
 Astra Control Service可以Cloud Volumes Service 使用適用於Google Cloud的功能、做為持續磁碟區的儲存後端。如果您打算使用這項服務、則必須從Cloud Volumes Service Google Cloud Marketplace購買適用於Google Cloud的功能、才能為持續的磁碟區計費。
 
 .步驟
-. 前往 https://console.cloud.google.com/marketplace/product/endpoints/cloudvolumesgcp-api.netapp.com["NetApp Cloud Volumes Service 技術頁面"^] 在Google Cloud Marketplace中、選取* Purchase *、然後依照提示進行。
+. 前往 https://["NetApp Cloud Volumes Service 技術頁面"^] 在Google Cloud Marketplace中、選取* Purchase *、然後依照提示進行。
 +
-https://cloud.google.com/solutions/partners/netapp-cloud-volumes/quickstart#purchase_the_service["請依照Google Cloud文件中的逐步指示來購買及啟用服務"^]。
+https://["請依照Google Cloud文件中的逐步指示來購買及啟用服務"^]。
 
 
 
@@ -141,7 +141,7 @@ https://cloud.google.com/solutions/partners/netapp-cloud-volumes/quickstart#purc
 您的專案需要存取特定Google Cloud API的權限。API可用於與Google Cloud資源互動、例如Google Kubernetes Engine（GKE）叢集和NetApp Cloud Volumes Service 等。
 
 .步驟
-. https://cloud.google.com/endpoints/docs/openapi/enable-api["使用Google Cloud主控台或gclCloud CLI啟用下列API"^]：
+. https://["使用Google Cloud主控台或gclCloud CLI啟用下列API"^]：
 +
 ** Google Kubernetes Engine
 ** 雲端儲存設備
@@ -166,7 +166,7 @@ video::video-enable-gcp-apis.mp4[width=848,height=480]
 Astra Control Service使用Google Cloud服務帳戶、代表您協助Kubernetes應用程式資料管理。
 
 .步驟
-. 前往Google Cloud和 https://cloud.google.com/iam/docs/creating-managing-service-accounts#creating_a_service_account["使用主控台、gCloud命令或其他慣用方法來建立服務帳戶"^]。
+. 前往Google Cloud和 https://["使用主控台、gCloud命令或其他慣用方法來建立服務帳戶"^]。
 . 授予服務帳戶下列角色：
 +
 ** * Kubernetes Engine admin*：用於列出叢集並建立管理存取權限以管理應用程式。
@@ -216,7 +216,7 @@ video::video-create-gcp-service-account.mp4[width=848,height=480]
 您只能在建立金鑰時檢視或下載Json檔案。不過、您可以隨時建立新的金鑰。
 
 .步驟
-. 前往Google Cloud和 https://cloud.google.com/iam/docs/creating-managing-service-account-keys#creating_service_account_keys["使用主控台、gCloud命令或其他慣用方法來建立服務帳戶金鑰"^]。
+. 前往Google Cloud和 https://["使用主控台、gCloud命令或其他慣用方法來建立服務帳戶金鑰"^]。
 . 出現提示時、請將服務帳戶金鑰檔案儲存在安全位置。
 
 
@@ -232,11 +232,11 @@ video::video-create-gcp-service-account-key.mp4[width=848,height=480]
 設定網路對等關係最簡單的方法、就是直接從Cloud Volumes Service 資訊技術取得gCloud命令。建立新的檔案系統時、可從Cloud Volumes Service 功能性資訊獲取命令。
 
 .步驟
-. https://cloud.netapp.com/cloud-volumes-global-regions#cvsGcp["前往NetApp Cloud Central的全球區域地圖"^] 並識別您將在叢集所在的Google Cloud區域中使用的服務類型。
+. https://["前往NetApp Cloud Central的全球區域地圖"^] 並識別您將在叢集所在的Google Cloud區域中使用的服務類型。
 +
-提供兩種服務類型：CVS和CVs-Performance。Cloud Volumes Service https://cloud.google.com/solutions/partners/netapp-cloud-volumes/service-types["深入瞭解這些服務類型"^]。
+提供兩種服務類型：CVS和CVs-Performance。Cloud Volumes Service https://["深入瞭解這些服務類型"^]。
 
-. https://console.cloud.google.com/netapp/cloud-volumes/volumes["前往Google Cloud Platform的Cloud Volumes"^]。
+. https://["前往Google Cloud Platform的Cloud Volumes"^]。
 . 在「* Volumes *」（*磁碟區*）頁面上、選取「* Create*」
 . 在*服務類型*下、選取* CVS或* CVS效能*。
 +
@@ -256,10 +256,10 @@ image:gcp-peering.gif["Google Cloud主控台的快照、畫面上會出現標題
 . 選取按鈕以檢視網路對等設定命令。
 . 複製命令並在Cloud Shell中執行。
 +
-如需使用這些命令的詳細資訊、請參閱 https://cloud.google.com/solutions/partners/netapp-cloud-volumes/quickstart#configure_private_services_access_and_set_up_network_peering["適用於GCP的QuickStart Cloud Volumes Service"^]。
+如需使用這些命令的詳細資訊、請參閱 https://["適用於GCP的QuickStart Cloud Volumes Service"^]。
 
 +
-https://cloud.google.com/solutions/partners/netapp-cloud-volumes/setting-up-private-services-access["深入瞭解如何設定私有服務存取及設定網路對等"^]。
+https://["深入瞭解如何設定私有服務存取及設定網路對等"^]。
 
 . 完成後、您可以在「*建立檔案系統*」頁面上選取「取消」。
 +

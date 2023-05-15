@@ -12,7 +12,7 @@ summary: 使用自動保護原則或臨機操作、拍攝快照和備份資料�
 
 
 [role="lead"]
-使用自動保護原則或臨機操作、拍攝快照和備份資料、保護您的應用程式。您可以使用Astra UI或 https://docs.netapp.com/us-en/astra-automation/index.html["Astra Control API"^] 保護應用程式。
+使用自動保護原則或臨機操作、拍攝快照和備份資料、保護您的應用程式。您可以使用Astra UI或 https://["Astra Control API"^] 保護應用程式。
 
 深入瞭解 link:../learn/data-protection.html["Astra Control的資料保護"^]。
 
@@ -33,7 +33,7 @@ summary: 使用自動保護原則或臨機操作、拍攝快照和備份資料�
 
 保護原則可在已定義的排程中建立快照、備份或兩者、以保護應用程式。您可以選擇每小時、每天、每週和每月建立快照和備份、也可以指定要保留的複本數量。
 
-如果您需要每小時執行一次以上的備份或快照、您可以 https://docs.netapp.com/us-en/astra-automation/workflows/workflows_before.html["使用Astra Control REST API建立快照與備份"^]。
+如果您需要每小時執行一次以上的備份或快照、您可以 https://["使用Astra Control REST API建立快照與備份"^]。
 
 .步驟
 . 選取*應用程式*、然後選取託管應用程式的名稱。

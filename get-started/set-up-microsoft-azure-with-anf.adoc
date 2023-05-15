@@ -85,19 +85,19 @@ Kubernetes叢集必須符合下列需求、才能從Astra Control Service進行�
 Kubernetes版本:: 叢集必須執行Kubernetes 1.23至1.25版。
 映像類型:: 所有節點集區的映像類型必須是Linux。
 叢集狀態:: 叢集必須以正常狀態執行、且至少有一個線上工作者節點、且在故障狀態下沒有工作節點。
-Azure地區:: 叢集必須位於Azure NetApp Files 提供了功能的區域。 https://azure.microsoft.com/en-us/global-infrastructure/services/?products=netapp["依地區檢視Azure產品"^]。
+Azure地區:: 叢集必須位於Azure NetApp Files 提供了功能的區域。 https://["依地區檢視Azure產品"^]。
 訂購:: 叢集必須位在Azure NetApp Files 啟用了支援功能的訂購中。您可以在何時選擇訂閱 <<註冊Azure NetApp Files 以供使用,註冊Azure NetApp Files 以供使用>>。
 Vnet:: 請考慮下列vnet需求：
 +
 --
 * 叢集必須位於能夠直接存取Azure NetApp Files 由某個位址委派的子網路的vnet中。 <<將子網路委派Azure NetApp Files 給,瞭解如何設定委派的子網路>>。
 * 如果您的Kubernetes叢集位於vnet中、且該vnet連接至Azure NetApp Files 位於另一個vnet中的委派子網路、則對等連線的兩端都必須處於線上狀態。
-* 請注意、vnet（包括立即處理的VNets）中使用Azure NetApp Files 的IP數量預設上限為1、000。 https://docs.microsoft.com/en-us/azure/azure-netapp-files/azure-netapp-files-resource-limits["查看Azure NetApp Files 資源限制"^]。
+* 請注意、vnet（包括立即處理的VNets）中使用Azure NetApp Files 的IP數量預設上限為1、000。 https://["查看Azure NetApp Files 資源限制"^]。
 +
 如果您接近極限、您有兩種選擇：
 
 +
-** 您可以 https://docs.microsoft.com/en-us/azure/azure-netapp-files/azure-netapp-files-resource-limits#request-limit-increase-["提交申請以增加上限"^]。如需協助、請聯絡您的NetApp代表。
+** 您可以 https://["提交申請以增加上限"^]。如需協助、請聯絡您的NetApp代表。
 ** 建立新的Amazon Kubernetes Service（aks）叢集時、請為叢集指定新的網路。建立新網路之後、請配置新的子網路、並將子網路委派Azure NetApp Files 給EK。
 
 
@@ -113,7 +113,7 @@ Vnet:: 請考慮下列vnet需求：
 如果您沒有Microsoft Azure帳戶、請先註冊Microsoft Azure。
 
 .步驟
-. 前往 https://azure.microsoft.com/en-us/free/["Azure訂閱頁面"^] 訂閱Azure服務。
+. 前往 https://["Azure訂閱頁面"^] 訂閱Azure服務。
 . 選取計畫、然後依照指示完成訂閱。
 
 
@@ -125,7 +125,7 @@ Vnet:: 請考慮下列vnet需求：
 
 .步驟
 . 登入 Azure 入口網站。
-. https://docs.microsoft.com/en-us/azure/azure-netapp-files/azure-netapp-files-register["請遵循Azure NetApp Files 下列技術文件來註冊NetApp資源供應商"^]。
+. https://["請遵循Azure NetApp Files 下列技術文件來註冊NetApp資源供應商"^]。
 
 
 
@@ -135,7 +135,7 @@ Vnet:: 請考慮下列vnet需求：
 在Azure NetApp Files NetApp建立一個NetApp帳戶。
 
 .步驟
-. https://docs.microsoft.com/en-us/azure/azure-netapp-files/azure-netapp-files-create-netapp-account["請遵循Azure NetApp Files 下列技術文件、從Azure入口網站建立NetApp帳戶"^]。
+. https://["請遵循Azure NetApp Files 下列技術文件、從Azure入口網站建立NetApp帳戶"^]。
 
 
 
@@ -162,7 +162,7 @@ link:../learn/azure-storage.html["深入瞭Azure NetApp Files 解適用於NetApp
 
 
 .步驟
-. https://docs.microsoft.com/en-us/azure/azure-netapp-files/azure-netapp-files-set-up-capacity-pool["請遵循Azure NetApp Files 下列技術文件來設定自動QoS容量資源池"^]。
+. https://["請遵循Azure NetApp Files 下列技術文件來設定自動QoS容量資源池"^]。
 
 
 
@@ -174,7 +174,7 @@ link:../learn/azure-storage.html["深入瞭Azure NetApp Files 解適用於NetApp
 如果您使用的是對等VNets、則對等連線的兩端都必須處於線上狀態：Kubernetes叢集所在的vnet、以及具有Azure NetApp Files 由他人委派子網路的vnet。
 
 .步驟
-. https://docs.microsoft.com/en-us/azure/azure-netapp-files/azure-netapp-files-delegate-subnet["請遵循Azure NetApp Files 《支持》文件將子網路委派Azure NetApp Files 給《支持》"^]。
+. https://["請遵循Azure NetApp Files 《支持》文件將子網路委派Azure NetApp Files 給《支持》"^]。
 
 
 .完成後
@@ -188,7 +188,7 @@ Astra Control Service需要指派「貢獻者」角色的Azure服務主體。Ast
 
 服務主體是專為搭配應用程式、服務和工具使用而建立的身分識別。指派角色給服務主體會限制對特定Azure資源的存取。
 
-請依照下列步驟、使用Azure CLI建立服務主體。您需要將輸出儲存在Json檔案中、稍後再提供給Astra Control Service。 https://docs.microsoft.com/en-us/cli/azure/create-an-azure-service-principal-azure-cli["如需使用CLI的詳細資訊、請參閱Azure文件"^]。
+請依照下列步驟、使用Azure CLI建立服務主體。您需要將輸出儲存在Json檔案中、稍後再提供給Astra Control Service。 https://["如需使用CLI的詳細資訊、請參閱Azure文件"^]。
 
 下列步驟假設您擁有建立服務主體的權限、而且您的機器上已安裝Microsoft Azure SDK（AZ命令）。
 
@@ -271,8 +271,8 @@ az aks list --subscription SUBSCRIPTION-ID --resource-group RESOURCE-GROUP-ID
 您可以為Azure備份桶設定更持久的備援層級。根據預設、Astra Control Service用來儲存Azure Kubernetes服務備份的儲存區使用本機備援儲存設備（LRS）備援選項。若要為Azure鏟斗使用更持久的備援選項、您需要執行下列動作：
 
 .步驟
-. 建立使用所需備援層級的Azure儲存帳戶 https://docs.microsoft.com/en-us/azure/storage/common/storage-account-create?tabs=azure-portal["這些指示"^]。
-. 使用在新的儲存帳戶中建立Azure容器 https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-portal["這些指示"^]。
+. 建立使用所需備援層級的Azure儲存帳戶 https://["這些指示"^]。
+. 使用在新的儲存帳戶中建立Azure容器 https://["這些指示"^]。
 . 將容器新增為Astra Control Service的儲存庫。請參閱 link:../use/manage-buckets.html#add-an-additional-bucket["新增額外的儲存庫"]。
 . （選用）若要將新建立的儲存庫用作Azure備份的預設儲存庫、請將其設為Azure的預設儲存庫。請參閱 link:../use/manage-buckets.html#change-the-default-bucket["變更預設儲存區"]。
 

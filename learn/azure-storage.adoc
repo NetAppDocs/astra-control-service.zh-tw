@@ -35,7 +35,7 @@ Astra Control Service支援Azure NetApp Files 將支援用作Azure Kubernetes Se
 
 Astra Control Service使用這些服務層級做為持續磁碟區的儲存類別。當您將Kubernetes叢集新增至Astra Control Service時、系統會提示您選擇「Ultra」、「Premium」或「Standard」作為預設儲存類別。儲存類別名稱為_NetApp-anf-perf-ulu_、_NetApp-anf-perf-pPremium _和_NetApp-anf-perf-Standard_。
 
-https://docs.microsoft.com/en-us/azure/azure-netapp-files/azure-netapp-files-service-levels["如需深入瞭解Azure NetApp Files 這些服務層級、請參閱《The》（英文）"^]。
+https://["如需深入瞭解Azure NetApp Files 這些服務層級、請參閱《The》（英文）"^]。
 
 
 
@@ -63,10 +63,10 @@ Astra Control Service會使用最小100 GiB的磁碟區大小來配置持續磁�
 
 Astra Control Service可以使用Container Storage Interface（SCSI）驅動程式、將Azure託管磁碟當作儲存後端來進行介面。此服務提供由Azure管理的區塊層級儲存設備。
 
-https://docs.microsoft.com/en-us/azure/virtual-machines/managed-disks-overview["深入瞭解Azure託管磁碟"^]。
+https://["深入瞭解Azure託管磁碟"^]。
 
 
 
 == NetApp Cloud Volumes ONTAP
 
-如需設定NetApp Cloud Volumes ONTAP 產品的詳細資訊、包括效能建議、請造訪 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-performance.html["NetApp Cloud Volumes ONTAP 產品文件"^]。
+如需設定NetApp Cloud Volumes ONTAP 產品的詳細資訊、包括效能建議、請造訪 https://["NetApp Cloud Volumes ONTAP 產品文件"^]。

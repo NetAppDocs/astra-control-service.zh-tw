@@ -24,7 +24,7 @@ summary: 已知限制指出本產品版本不支援的平台、裝置或功能�
 
 === Astra Trident不會從叢集解除安裝
 
-當您從Astra Control Service取消管理叢集時、不會自動從叢集解除安裝Astra Trident。若要解除安裝Astra Trident、您需要 https://docs.netapp.com/us-en/trident/trident-managing-k8s/uninstall-trident.html["請遵循Astra Trident文件中的下列步驟"^]。
+當您從Astra Control Service取消管理叢集時、不會自動從叢集解除安裝Astra Trident。若要解除安裝Astra Trident、您需要 https://["請遵循Astra Trident文件中的下列步驟"^]。
 
 
 
@@ -92,13 +92,13 @@ Astra Control不會自動指派任何雲端執行個體的預設儲存區。您�
 
 Astra Control支援以命名空間範圍運算子安裝的應用程式。這些運算子通常採用「傳遞值」而非「傳遞參照」架構來設計。以下是一些遵循這些模式的營運者應用程式：
 
-* https://github.com/k8ssandra/cass-operator/tree/v1.7.1["Apache K8ssandra"^]
+* https://["Apache K8ssandra"^]
 +
 
 NOTE: 對於K8ssandra、支援就地還原作業。若要還原新命名空間或叢集的作業、必須先關閉應用程式的原始執行個體。這是為了確保傳遞的對等群組資訊不會導致跨執行個體通訊。不支援複製應用程式。
 
-* https://github.com/jenkinsci/kubernetes-operator["Jenkins CI"^]
-* https://github.com/percona/percona-xtradb-cluster-operator["Percona XtraDB叢集"^]
+* https://["Jenkins CI"^]
+* https://["Percona XtraDB叢集"^]
 
 
 請注意、Astra Control可能無法複製以「逐一參考」架構設計的操作員（例如、CockroachDB操作員）。在這些類型的複製作業中、複製的操作員會嘗試從來源操作員參考Kubernetes機密、儘管在複製程序中有自己的新秘密。由於Astra Control不知道來源營運者的Kubernetes機密資料、因此複製作業可能會失敗。
@@ -123,3 +123,18 @@ NOTE: 在複製作業期間、需要IngresClass資源或Webhooks才能正常運�
 === 具有命名空間限制的成員使用者、必須先將命名空間新增至限制、才能存取複製或還原的應用程式
 
 任何具有命名空間名稱/ID之RBAC限制的「成員」使用者、都可以將應用程式複製或還原到同一個叢集上的新命名空間、或是組織帳戶中的任何其他叢集。不過、相同的使用者無法存取新命名空間中的複製或還原應用程式。在複製或還原作業建立新命名空間之後、帳戶管理員/擁有者可以編輯「成員」使用者帳戶、並更新受影響使用者的角色限制、以授予新命名空間的存取權。
+
+
+
+=== Amazon EKS 1.25 或更新版本叢集的快照可能會失敗
+
+Amazon EKS 叢集中 1.25 版或更新版本的快照可能會因為使用不正確的快照控制器而失敗。
+
+因應措施是在升級現有的 EKS 1.25 或更新版本安裝時執行下列動作：
+
+. 移除任何現有的 Snapshot CRD 和任何現有的 Snapshot 控制器。
+. https://["解除安裝Astra Trident"^]。
+. https://["安裝 Snapshot CRD 和 Snapshot 控制器"^]。
+. https://["安裝最新的 Astra Trident 版本"^]。
+. https://["建立 Volume SnapshotClass"^]。
+

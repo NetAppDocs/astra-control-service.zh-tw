@@ -12,7 +12,7 @@ summary: Astra Control可從快照或備份還原應用程式組態和持續儲�
 
 
 [role="lead"]
-Astra Control可以從快照或備份還原應用程式。將應用程式還原至同一個叢集時、從現有的快照還原速度會更快。您可以使用Astra Control UI或 https://docs.netapp.com/us-en/astra-automation/index.html["Astra Control API"^] 以還原應用程式。
+Astra Control可以從快照或備份還原應用程式。將應用程式還原至同一個叢集時、從現有的快照還原速度會更快。您可以使用Astra Control UI或 https://["Astra Control API"^] 以還原應用程式。
 
 
 NOTE: 如果您將命名空間篩選器新增至執行掛勾、而執行還原或複製作業之後執行、且還原或複製來源與目的地位於不同的命名空間、則命名空間篩選器只會套用至目的地命名空間。
@@ -123,7 +123,7 @@ NOTE: 您必須指定至少一個命名空間、標籤或 GVK 。請確保套用
 NOTE: 如果您的應用程式原本包含多個命名空間、而您將其還原至新命名空間、則即使所有命名空間不包含資源、也會建立這些命名空間。
 
 .. （選用）輸入資源名稱。
-.. （選用） * 標籤選取器 * ：包含 A https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#label-selectors["標籤選取器"^] 新增至規則。標籤選取器僅用於篩選符合所選標籤的資源。
+.. （選用） * 標籤選取器 * ：包含 A https://["標籤選取器"^] 新增至規則。標籤選取器僅用於篩選符合所選標籤的資源。
 .. （選用）選取 * 使用設定為篩選資源 * 的 GVK （ GroupVersionKind ）、以取得其他篩選選項。
 +
 

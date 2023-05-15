@@ -14,8 +14,8 @@ summary: 設定環境之後、您就可以建立Kubernetes叢集、然後將其�
 [role="lead"]
 您可以使用 Astra Control Service 來管理私有 Azure Kubernetes Service （ Astra Control Service ）叢集、以及在 AKS 中管理私有 Red Hat OpenShift 叢集。這些指示假設您已建立私有 aks 或 OpenShift 叢集、並準備了安全的方法來遠端存取；如需建立及存取私有 aks 或 OpenShift 叢集的詳細資訊、請參閱下列文件：
 
-* https://docs.microsoft.com/azure/aks/private-clusters["適用於私有 aks 叢集的 Azure 文件"^]
-* https://learn.microsoft.com/en-us/azure/openshift/howto-create-private-cluster-4x["適用於私有 OpenShift 叢集的 Azure 文件"^]
+* https://["適用於私有 aks 叢集的 Azure 文件"^]
+* https://["適用於私有 OpenShift 叢集的 Azure 文件"^]
 
 
 
@@ -50,7 +50,7 @@ kubectl apply -f astraconnector_operator.yaml -n astra-connector-operator
 ----
 kubectl create ns astra-connector
 ----
-. 使用中的指示產生Astra Control API權杖 https://docs.netapp.com/us-en/astra-automation/get-started/get_api_token.html["Astra Automation文件"^]。
+. 使用中的指示產生Astra Control API權杖 https://["Astra Automation文件"^]。
 . 修改 Astra Connector 運算子儲存庫組態 / 範例目錄中的範例組態檔案、以納入 `spec.natssync-client.cloud-bridge-url` 金鑰。例如：
 +
 [listing]
@@ -106,12 +106,12 @@ astra-connector   true         22b839aa-8b85-445a-85dd-0b1f53b5ea19
 
 設定叢集的持續儲存設備。您可以使用Azure NetApp Files 由NetApp或Azure管理的磁碟。如需使用下列選項設定Azure的詳細資訊、請參閱入門文件：
 
-* https://docs.netapp.com/us-en/astra-control-service/get-started/set-up-microsoft-azure-with-anf.html["使用Azure NetApp Files 更新功能來設定Microsoft Azure"]
-* https://docs.netapp.com/us-en/astra-control-service/get-started/set-up-microsoft-azure-with-amd.html["使用Azure託管磁碟來設定Microsoft Azure"]
+* https://["使用Azure NetApp Files 更新功能來設定Microsoft Azure"]
+* https://["使用Azure託管磁碟來設定Microsoft Azure"]
 
 
 
 
 == 將私有叢集新增至Astra Control Service
 
-您現在可以將私有叢集新增至 Astra Control Service 。遵循標準工作流程、將叢集新增至Astra Control Service： https://docs.netapp.com/us-en/astra-control-service/get-started/add-first-cluster.html["從Astra Control Service開始管理Kubernetes叢集"]。
+您現在可以將私有叢集新增至 Astra Control Service 。遵循標準工作流程、將叢集新增至Astra Control Service： https://["從Astra Control Service開始管理Kubernetes叢集"]。

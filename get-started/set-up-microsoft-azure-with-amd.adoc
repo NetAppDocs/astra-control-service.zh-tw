@@ -64,7 +64,7 @@ Kubernetes叢集必須符合下列需求、才能從Astra Control Service進行�
 Kubernetes版本:: 叢集必須執行 Kubernetes 1.24 版至 1.26 版。
 映像類型:: 所有節點集區的映像類型必須是Linux。
 叢集狀態:: 叢集必須以正常狀態執行、且至少有一個線上工作者節點、且在故障狀態下沒有工作節點。
-Azure地區:: 最佳實務做法是、您應該選擇一個支援Azure NetApp Files 此功能的區域、即使您不將其用作儲存後端。如此一Azure NetApp Files 來、如果您的效能需求改變、就能更輕鬆地將VMware用作儲存後端。 https://azure.microsoft.com/en-us/global-infrastructure/services/?products=netapp["依地區檢視Azure產品"^]。
+Azure地區:: 最佳實務做法是、您應該選擇一個支援Azure NetApp Files 此功能的區域、即使您不將其用作儲存後端。如此一Azure NetApp Files 來、如果您的效能需求改變、就能更輕鬆地將VMware用作儲存後端。 https://["依地區檢視Azure產品"^]。
 
 
 csi驅動程式:: 叢集必須安裝適當的SCSI驅動程式。
@@ -77,7 +77,7 @@ csi驅動程式:: 叢集必須安裝適當的SCSI驅動程式。
 如果您沒有Microsoft Azure帳戶、請先註冊Microsoft Azure。
 
 .步驟
-. 前往 https://azure.microsoft.com/en-us/free/["Azure訂閱頁面"^] 訂閱Azure服務。
+. 前往 https://["Azure訂閱頁面"^] 訂閱Azure服務。
 . 選取計畫、然後依照指示完成訂閱。
 
 
@@ -89,7 +89,7 @@ Astra Control Service需要指派「貢獻者」角色的Azure服務主體。Ast
 
 服務主體是專為搭配應用程式、服務和工具使用而建立的身分識別。指派角色給服務主體會限制對特定Azure資源的存取。
 
-請依照下列步驟、使用Azure CLI建立服務主體。您需要將輸出儲存在Json檔案中、稍後再提供給Astra Control Service。 https://docs.microsoft.com/en-us/cli/azure/create-an-azure-service-principal-azure-cli["如需使用CLI的詳細資訊、請參閱Azure文件"^]。
+請依照下列步驟、使用Azure CLI建立服務主體。您需要將輸出儲存在Json檔案中、稍後再提供給Astra Control Service。 https://["如需使用CLI的詳細資訊、請參閱Azure文件"^]。
 
 下列步驟假設您擁有建立服務主體的權限、而且您的機器上已安裝Microsoft Azure SDK（AZ命令）。
 
@@ -214,7 +214,7 @@ az provider register -n Microsoft.ContainerService
 您可以安裝Azure csi驅動程式來完成準備工作。
 
 .步驟
-. 前往 https://docs.microsoft.com/en-us/azure/aks/csi-storage-drivers["Microsoft csi驅動程式文件"^]。
+. 前往 https://["Microsoft csi驅動程式文件"^]。
 . 請依照指示安裝所需的SCSI驅動程式。
 
 
@@ -225,8 +225,8 @@ az provider register -n Microsoft.ContainerService
 您可以為Azure備份桶設定更持久的備援層級。根據預設、Astra Control Service用來儲存Azure Kubernetes服務備份的儲存區使用本機備援儲存設備（LRS）備援選項。若要為Azure鏟斗使用更持久的備援選項、您需要執行下列動作：
 
 .步驟
-. 建立使用所需備援層級的Azure儲存帳戶 https://docs.microsoft.com/en-us/azure/storage/common/storage-account-create?tabs=azure-portal["這些指示"^]。
-. 使用在新的儲存帳戶中建立Azure容器 https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-portal["這些指示"^]。
+. 建立使用所需備援層級的Azure儲存帳戶 https://["這些指示"^]。
+. 使用在新的儲存帳戶中建立Azure容器 https://["這些指示"^]。
 . 將容器新增為Astra Control Service的儲存庫。請參閱 link:../use/manage-buckets.html#add-an-additional-bucket["新增額外的儲存庫"]。
 . （選用）若要將新建立的儲存庫用作Azure備份的預設儲存庫、請將其設為Azure的預設儲存庫。請參閱 link:../use/manage-buckets.html#change-the-default-bucket["變更預設儲存區"]。
 

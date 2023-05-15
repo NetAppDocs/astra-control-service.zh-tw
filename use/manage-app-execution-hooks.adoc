@@ -38,7 +38,7 @@ Astra Control支援下列類型的執行掛勾、視執行時間而定：
 
 NOTE: 篩選器的規則運算式使用規則運算式2（RE2）語法、不支援建立篩選器、將容器從相符項目清單中排除。
 
-如需Astra Control在執行攔截篩選器中支援規則運算式的語法資訊、請參閱 https://github.com/google/re2/wiki/Syntax["規則運算式2（RE2）語法支援"^]。
+如需Astra Control在執行攔截篩選器中支援規則運算式的語法資訊、請參閱 https://["規則運算式2（RE2）語法支援"^]。
 
 
 
@@ -147,7 +147,7 @@ NOTE: 在正式作業環境中啟用執行攔截指令碼之前、請務必先�
 
 == 執行攔截範例
 
-請造訪 https://github.com/NetApp/Verda["NetApp Verda GitHub專案"] 可下載熱門應用程式的實際執行掛勾、例如Apache Cassandra和Elasticsearch。您也可以查看範例、瞭解如何建構您自己的自訂執行掛勾。
+請造訪 https://["NetApp Verda GitHub專案"] 可下載熱門應用程式的實際執行掛勾、例如Apache Cassandra和Elasticsearch。您也可以查看範例、瞭解如何建構您自己的自訂執行掛勾。
 
 
 
@@ -254,7 +254,7 @@ NOTE: 當您建立自訂Shell指令碼作為執行掛勾時、請記得在檔案
 +
 .. 選取*新增篩選器*。
 .. 在*勾選篩選類型*欄中、從下拉式功能表中選擇要篩選的屬性。
-.. 在* Regex*欄中、輸入要做為篩選器的規則運算式。Astra Control使用 https://github.com/google/re2/wiki/Syntax["規則運算式2（RE2）regex語法"^]。
+.. 在* Regex*欄中、輸入要做為篩選器的規則運算式。Astra Control使用 https://["規則運算式2（RE2）regex語法"^]。
 +
 
 NOTE: 如果您篩選的是屬性的確切名稱（例如pod名稱）、而規則運算式欄位中沒有其他文字、則會執行子字串比對。若要完全符合名稱及名稱、請使用確切的字串相符語法（例如、 `^exact_podname$`）。
@@ -386,5 +386,5 @@ NOTE: 執行掛勾的多個篩選器會與邏輯和運算子結合使用。每�
 
 == 以取得更多資訊
 
-* https://github.com/NetApp/Verda["NetApp Verda GitHub專案"]
+* https://["NetApp Verda GitHub專案"]
 

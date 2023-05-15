@@ -64,7 +64,7 @@ Astra Control提供兩種部署模式：
 +
 ** Amazon EBS
 ** Amazon FSX for NetApp ONTAP 產品
-** https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-getting-started-aws.html["Cloud Volumes ONTAP"^]
+** https://["Cloud Volumes ONTAP"^]
 
 
 
@@ -77,7 +77,7 @@ ifdef::gcp[]
 +
 ** Google持續磁碟
 ** NetApp Cloud Volumes Service
-** https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-getting-started-gcp.html["Cloud Volumes ONTAP"^]
+** https://["Cloud Volumes ONTAP"^]
 
 
 
@@ -90,7 +90,7 @@ ifdef::azure[]
 +
 ** Azure託管磁碟
 ** Azure NetApp Files
-** https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-getting-started-azure.html["Cloud Volumes ONTAP"^]
+** https://["Cloud Volumes ONTAP"^]
 
 
 
@@ -102,13 +102,13 @@ endif::azure[]
 ** Amazon EBS
 ** Google持續磁碟
 ** Azure託管磁碟
-** https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/["Cloud Volumes ONTAP"^]
+** https://["Cloud Volumes ONTAP"^]
 
 
 
  a| 
 * NetApp ONTAP AFF 的功能與FAS 功能
-* https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/["Cloud Volumes ONTAP"^]
+* https://["Cloud Volumes ONTAP"^]
 
 
 |===
@@ -125,19 +125,19 @@ Astra Control Service的高層級運作方式如下：
 
 ifdef::gcp[]
 
-+*適用於GKE叢集、Astra Control Service使用 https://cloud.netapp.com/cloud-volumes-service-for-gcp["適用於Cloud Volumes Service Google Cloud的NetApp解決方案"^] 或Google持續磁碟做為持續磁碟區的儲存後端。
++*適用於GKE叢集、Astra Control Service使用 https://["適用於Cloud Volumes Service Google Cloud的NetApp解決方案"^] 或Google持續磁碟做為持續磁碟區的儲存後端。
 
 endif::gcp[]
 
 ifdef::azure[]
 
-+*對於高峰叢集、Astra Control Service使用 https://cloud.netapp.com/azure-netapp-files["Azure NetApp Files"^] 或Azure託管磁碟做為持續磁碟區的儲存後端。
++*對於高峰叢集、Astra Control Service使用 https://["Azure NetApp Files"^] 或Azure託管磁碟做為持續磁碟區的儲存後端。
 
 endif::azure[]
 
 ifdef::aws[]
 
-+*：Amazon EKS叢集、Astra Control Service使用 https://docs.aws.amazon.com/ebs/["Amazon彈性區塊存放區"^] 或 https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/what-is-fsx-ontap.html["Amazon FSX for NetApp ONTAP 產品"^] 作為持續磁碟區的儲存後端。
++*：Amazon EKS叢集、Astra Control Service使用 https://["Amazon彈性區塊存放區"^] 或 https://["Amazon FSX for NetApp ONTAP 產品"^] 作為持續磁碟區的儲存後端。
 
 endif::aws[]
 
@@ -155,7 +155,7 @@ ifdef::azure[]
 endif::azure[]
 
 * 在叢集上建立新的管理員角色和Kubernetes服務帳戶。
-* 使用新的管理員角色進行安裝 https://docs.netapp.com/us-en/trident/index.html["Astra Trident"^] 在叢集上建立一個或多個儲存類別。
+* 使用新的管理員角色進行安裝 https://["Astra Trident"^] 在叢集上建立一個或多個儲存類別。
 * 如果您使用NetApp雲端服務儲存產品做為儲存後端、Astra Control Service會使用Astra Trident來為應用程式配置持續的磁碟區。如果您使用Amazon EBS或Azure託管磁碟做為儲存後端、則需要安裝供應商專屬的SCSI驅動程式。安裝說明請參閱 link:set-up-amazon-web-services.html["設定Amazon Web Services"^] 和 link:set-up-microsoft-azure-with-amd.html["使用Azure託管磁碟來設定Microsoft Azure"^]。
 +
 ** 此時、您可以從叢集定義應用程式。將透過新的預設儲存類別、在儲存後端配置持續磁碟區。
@@ -180,11 +180,11 @@ Astra Control Center已完全整合AutoSupport 至整套的功能、可Active IQ
 
 您可以使用90天試用版授權試用Astra Control Center。評估版本可透過電子郵件和社群選項來支援。此外、您也可以從產品內的支援儀表板存取知識庫文章和文件。
 
-若要安裝及使用Astra Control Center、您必須符合特定需求 https://docs.netapp.com/us-en/astra-control-center/get-started/requirements.html["需求"]。
+若要安裝及使用Astra Control Center、您必須符合特定需求 https://["需求"]。
 
 Astra Control Center的高層級運作方式如下：
 
-* 您可以在本機環境中安裝Astra Control Center。深入瞭解如何操作 https://docs.netapp.com/us-en/astra-control-center/get-started/install_acc.html["安裝Astra Control Center"]。
+* 您可以在本機環境中安裝Astra Control Center。深入瞭解如何操作 https://["安裝Astra Control Center"]。
 * 您可以完成以下設定工作：
 +
 ** 設定授權。
@@ -195,7 +195,7 @@ Astra Control Center的高層級運作方式如下：
 
 
 
-深入瞭解如何操作 https://docs.netapp.com/us-en/astra-control-center/get-started/setup_overview.html["設定Astra控制中心"]。
+深入瞭解如何操作 https://["設定Astra控制中心"]。
 
 您可以將應用程式新增至叢集。或者、如果叢集中已有一些應用程式正在管理中、您可以使用Astra Control Center來管理這些應用程式。然後、使用Astra Control Center建立快照、備份、複製及複寫關係。
 
@@ -203,11 +203,11 @@ Astra Control Center的高層級運作方式如下：
 
 == 以取得更多資訊
 
-* https://docs.netapp.com/us-en/astra-family/["NetApp Astra產品系列文件"^]
-* https://docs.netapp.com/us-en/astra/index.html["Astra Control Service文件"^]
-* https://docs.netapp.com/us-en/astra-control-center/index.html["Astra Control Center文件"^]
-* https://docs.netapp.com/us-en/trident/index.html["Astra Trident文件"^]
-* https://docs.netapp.com/us-en/astra-automation/index.html["使用Astra Control API"^]
-* https://docs.netapp.com/us-en/cloudinsights/["本文檔 Cloud Insights"^]
-* https://docs.netapp.com/us-en/ontap/index.html["本文檔 ONTAP"^]
+* https://["NetApp Astra產品系列文件"^]
+* https://["Astra Control Service文件"^]
+* https://["Astra Control Center文件"^]
+* https://["Astra Trident文件"^]
+* https://["使用Astra Control API"^]
+* https://["本文檔 Cloud Insights"^]
+* https://["本文檔 ONTAP"^]
 

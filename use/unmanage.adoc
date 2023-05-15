@@ -56,7 +56,7 @@ endif::gcp[]
 當您取消管理叢集時：
 
 * 此動作會使叢集無法由Astra Control管理。它不會對叢集的組態進行任何變更、也不會刪除叢集。
-* Astra Trident不會從叢集解除安裝。 https://docs.netapp.com/us-en/trident/trident-managing-k8s/uninstall-trident.html["瞭解如何解除安裝Astra Trident"^]。
+* Astra Trident不會從叢集解除安裝。 https://["瞭解如何解除安裝Astra Trident"^]。
 
 
 .步驟

@@ -14,11 +14,11 @@ summary: 尋找常見問題的疑難排解秘訣。
 [role="lead"]
 瞭解如何解決您可能遇到的一些常見問題。
 
-https://kb.netapp.com/Advice_and_Troubleshooting/Cloud_Services/Astra[]
+https://[]
 
 
 
 == 以取得更多資訊
 
-* https://kb.netapp.com/Advice_and_Troubleshooting/Cloud_Services/Astra["疑難排解"^]
+* https://["疑難排解"^]
 

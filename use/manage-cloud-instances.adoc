@@ -45,10 +45,10 @@ NOTE: Astra Control中的每個雲端執行個體都必須有唯一的名稱。
 
 == 旋轉雲端執行個體的認證資料
 
-您可以使用Astra Control API來旋轉雲端執行個體的認證資料。若要深入瞭解、 https://docs.netapp.com/us-en/astra-automation["前往Astra自動化文件"^]。
+您可以使用Astra Control API來旋轉雲端執行個體的認證資料。若要深入瞭解、 https://["前往Astra自動化文件"^]。
 
 
 
 == 移除雲端執行個體
 
-您可以使用Astra Control API從雲端供應商移除雲端執行個體。若要深入瞭解、 https://docs.netapp.com/us-en/astra-automation["前往Astra自動化文件"^]。
+您可以使用Astra Control API從雲端供應商移除雲端執行個體。若要深入瞭解、 https://["前往Astra自動化文件"^]。

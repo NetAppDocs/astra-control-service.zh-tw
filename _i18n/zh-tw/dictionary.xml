@@ -4,9 +4,7 @@
   <block id="231cf4c70d866b616c21baddaeed0696" category="doc">疑難排解</block>
   <block id="36e2bd9e7950f46d3ea6d2bca4c50ba1" category="paragraph">瞭解如何解決您可能遇到的一些常見問題。</block>
   <block id="d41d8cd98f00b204e9800998ecf8427e" category="inline-link"></block>
-  <block id="79c5785e2761673e59d8eea6f1277fe2" category="paragraph"><block ref="79c5785e2761673e59d8eea6f1277fe2" category="inline-link-rx"></block></block>
   <block id="d13de4a83d7b44c2e65495def8ef1c7b" category="section-title">以取得更多資訊</block>
-  <block id="b35bb2f67f8827a8ec9e7d20a3435980" category="list-text"><block ref="b35bb2f67f8827a8ec9e7d20a3435980" category="inline-link-rx"></block></block>
   <block id="998b5e98a07268d4a8f1fc7afd69c7fc" category="summary">Astra Control會在您設定帳戶時、嘗試自動登錄您的帳戶以取得支援。如果無法、您可以自行手動註冊以取得支援。需要註冊支援、才能從NetApp技術支援取得協助。</block>
   <block id="42748df9eaa0be17ddc5cc1593cf57ab" category="doc">註冊以取得支援</block>
   <block id="afeb71cc4cb6fc5bb0db2f9866b02880" category="section-title">驗證您的支援註冊</block>
@@ -57,7 +55,6 @@
   <block id="07d41912a6ab6b97216f8cf89e93205c" category="section-title">自我支援</block>
   <block id="6b9b3535d917a5890db4ef00a3718361" category="paragraph">這些選項全年無休免費提供：</block>
   <block id="19111351b69b6b15668130b38b7f6038" category="inline-link">知識庫</block>
-  <block id="a6e059ac420affdcffe70328b3d8fa18" category="list-text"><block ref="a6e059ac420affdcffe70328b3d8fa18" category="inline-link-rx"></block></block>
   <block id="1cd3b87947307e63f017eb7a59b02313" category="paragraph">搜尋與Astra Control相關的文章、常見問題集或中斷修復資訊。</block>
   <block id="5b6cf869265c13af8566f192b4ab3d2a" category="list-text">文件</block>
   <block id="9a4d3fdb6af496c18bc70f14153f8c4f" category="paragraph">這是您目前正在檢視的文件網站。</block>
@@ -787,7 +784,6 @@
   <block id="a48e52ca315005bd57971ddff57c7bf1" category="paragraph">*新增Astra Control Service之後、我需要將工作節點新增至叢集。我該怎麼辦？*</block>
   <block id="970cfe22b76fecaa99669dbc6dd2643e" category="paragraph">*我可以將私有的高層叢集新增至Astra Control Service嗎？*</block>
   <block id="af2b33bb637866cca13ababa2653601d" category="paragraph">*我可以將私有GKE叢集新增至Astra Control Service嗎？*</block>
-  <block id="31148e03a9c660c9f706cc9a54e83987" category="inline-link">請依照此知識庫文章中的指示操作</block>
   <block id="51e84df52b4888344ecda584885aaabd" category="paragraph">私有叢集必須具有<block ref="aa255aeede553f15509fbd44536f790e" category="inline-link-rx"></block> 設定為允許Astra控制IP位址：</block>
   <block id="952200664143e727f3f65397759fe5e8" category="paragraph">*我的GKE叢集是否可以位於共用VPC上？*</block>
   <block id="5d346778751cb328795e29ad6aed29a4" category="inline-link-macro">瞭解如何設定Astra服務帳戶以進行共用VPC組態</block>
@@ -1229,7 +1225,6 @@
   <block id="5e580ebcce969330228846574f827aa7" category="paragraph">目前Astra Control Service不支援私有EKS叢集。</block>
   <block id="5802142fb14713d93859bda03cc52eb3" category="section-title">註冊Azure Kubernetes Service（KS）叢集</block>
   <block id="2c932845e362039bca422bb4b59eea27" category="section-title">註冊Google Kubernetes Engine（GKE）叢集</block>
-  <block id="1713462e90117332b2b20b952ba14379" category="paragraph">是的、您可以將私有GKE叢集新增至Astra Control Service。若要建立私有GKE叢集、<block ref="5476475ab72cd9cb8fccc685eb30acef" category="inline-link-rx"></block>。</block>
   <block id="4b3761e466fd28e7b01ae735e989d9ff" category="paragraph">從Astra Control移除叢集時、不會從叢集解除安裝Astra Trident。</block>
   <block id="de67786285afec6fafad0eaf1b94a4b7" category="summary">您必須先採取幾個步驟來準備Amazon Web Services專案、才能使用Astra Control Service來管理Amazon Elastic Kubernetes服務叢集。</block>
   <block id="fb10da4ac3f6d496bf8994feb7a9260a" category="paragraph">您必須先採取幾個步驟來準備Amazon Web Services專案、才能使用Astra Control Service管理Amazon Elastic Kubernetes Service（EKS）叢集。</block>
@@ -1250,18 +1245,9 @@
   <block id="b8cf7b94f9e10f41b2b27123989d36fd" category="paragraph"><block ref="188415ab56d6f15363f3a6d3aeeb528e" category="inline-xref-macro-rx"></block>。</block>
   <block id="4df22842e40c5b16d99c626518e253c3" category="section-title">EKS叢集需求</block>
   <block id="c7bb46dffdc366e91559a5686fc19862" category="list-text">每個工作節點的映像類型必須是Linux。</block>
-  <block id="73faaa1b4bb064878667455dd879f4ba" category="list-text">Astra Trident for Amazon FSX for NetApp ONTAP 解決方案</block>
-  <block id="7c7909b36280dd94e57f2ee6a575a583" category="inline-link">Astra Trident部署總覽</block>
-  <block id="337de5d45c69b1e4dcf87a8e7ec9ff76" category="inline-link">使用Astra Trident搭配Amazon FSX for NetApp ONTAP 解決方案</block>
   <block id="0377220eb132179cb3e77bfec468b6e7" category="list-text">Amazon Elastic Block Store（EBS）適用的SCSI驅動程式</block>
   <block id="45a3701ecc9be7702921ca0e93420bfb" category="list-text">如果您使用Amazon EBS儲存後端、則需要安裝EBS的Container Storage Interface（Container Storage Interface、簡稱csi）驅動程式（不會自動安裝）。</block>
   <block id="ffb90b59a71f73d5ffa61affe6f83805" category="list-title">安裝外部快照</block>
-  <block id="469f7ca16938508b5dcb777767828b70" category="list-text">建立Volume Snapshot客戶需求日。</block>
-  <block id="cb9d6d1ca0b4fda3b1206ae38a007824" category="paragraph">若為Kubernetes 1.20及更新版本、請使用v1 Snapshot CRD搭配v5.0快照元件。</block>
-  <block id="351d6da9c87ca81d91cd4755e4730d82" category="open-title">V5.0元件</block>
-  <block id="65b146df7d5c27b212f54a7c9980960b" category="list-text">在所需的命名空間中建立Snapshot控制器。編輯下方的Yaml清單以修改命名空間。</block>
-  <block id="6b4ca223a0a2bf649306756ade54b043" category="paragraph">對於Kubernetes 1.20及更新版本、請使用5.0版。</block>
-  <block id="5e393c0ca8392e0c84201770c8b544ca" category="open-title">V5.0控制器</block>
   <block id="73db78b82b24968c2e543a8ec1d23c90" category="list-title">將csi驅動程式安裝為Amazon EKS附加元件</block>
   <block id="903f43a25b2e943c7c91a266ae7013f7" category="inline-link">在Amazon文件中</block>
   <block id="f2dc6df6aaa642be8d7b072b32ced652" category="list-text">為服務帳戶建立Amazon EBS SCSI驅動程式IAM角色。請依照指示操作<block ref="c73a2756e5d09198e90fa544bb19a66a" category="inline-link-rx"></block>、使用說明中的AWS CLI命令。</block>
@@ -1866,8 +1852,6 @@
   <block id="de0e0b190913ddd9905dc28e44369b4e" category="section-title"><block ref="beadfa85a2fdca06b91edc1131c603e6" category="inline-image-macro-rx" type="image"></block> 選用：建立IAM使用者</block>
   <block id="c16b65c89a8a5d66f3283ff98e331948" category="section-title"><block ref="99e8b2f00e172bfcff96afdce69907bc" category="inline-image-macro-rx" type="image"></block> 建立及附加權限原則</block>
   <block id="bb6a13b106e48f792ea57b231c6c8429" category="section-title"><block ref="ef78558f80439832e0f51cc22cee8b8c" category="inline-image-macro-rx" type="image"></block> 儲存IAM使用者的認證資料</block>
-  <block id="3ea391c9e6fd8068a48c5105ab95e68f" category="list-text">如果您使用Amazon FSX for NetApp ONTAP 支援NetApp的後端儲存、則需要安裝Astra Trident。如需相關指示、請參閱<block ref="f6fce076fe7d8cd53c920b1f42e7a384" category="inline-link-rx"></block>。如需使用Astra Trident搭配FSX for NetApp ONTAP 的詳細資訊、請參閱<block ref="720d51d7c9f57e4a266e8e3a5ab469c6" category="inline-link-rx"></block>。</block>
-  <block id="20fc0f0b676e68d276bd1ffa1267ac50" category="paragraph">請參閱詳細資料、以取得安裝csi驅動程式的指示。</block>
   <block id="adb43c383a88e1f2946ab2e72ac03918" category="section-title"><block ref="05b2444faffd66d76e88602ea7dd353f" category="inline-image-macro-rx" type="image"></block> 建立Azure服務主體</block>
   <block id="115d465e8b862905dee97dfc00687f80" category="section-title"><block ref="beadfa85a2fdca06b91edc1131c603e6" category="inline-image-macro-rx" type="image"></block> 設定Container Storage介面（SCSI）驅動程式詳細資料</block>
   <block id="4ba43802facfe67533d744cbe8965137" category="section-title"><block ref="99e8b2f00e172bfcff96afdce69907bc" category="inline-image-macro-rx" type="image"></block> 選用：為Azure備份儲存區設定備援</block>
@@ -2129,4 +2113,27 @@
   <block id="5e45edcd9985e188c258e7b6515feeea" category="paragraph">Astra Control Service 支援 Azure NetApp Files 、 Azure 託管磁碟或 NetApp Cloud Volumes ONTAP 作為 Azure Kubernetes 服務（ aks ）叢集的儲存後端。</block>
   <block id="6bab6ac71f743f37f154b7b0219c56a8" category="paragraph">Astra Control Service 支援 Cloud Volumes Service for Google Cloud 、 Google Persistent Disk 或 NetApp Cloud Volumes ONTAP 作為持續磁碟區的儲存後端選項。</block>
   <block id="09a08aa51d9a5d34a5bc6cecdb1f03bf" category="paragraph">您可以在將新叢集新增至Astra Control時新增雲端執行個體。請參閱 <block ref="04d97bec7f4fa11002764129cf40d13a" category="inline-link-macro-rx"></block> 以取得更多資訊。</block>
+  <block id="3151d43bcd1c27b32e26e2270e5f6365" category="inline-link">請依照本知識庫文件中的指示進行</block>
+  <block id="89ee4e626d8ee5cecc8bc20164109dc0" category="paragraph">是的、您可以將私有GKE叢集新增至Astra Control Service。若要建立私有GKE叢集、<block ref="99bba183cf709d565e021b59be5fb393" category="inline-link-rx"></block>。</block>
+  <block id="84810f606cf208e2aa62628838041ba8" category="list-text">Astra Trident 和外部快照控制器是儲存後端作業所必需的。若要安裝、請執行下列步驟：</block>
+  <block id="a9b10c3e99be35f3f8a9c7dc7fadd754" category="inline-link">安裝 Snapshot CRD 和 Snapshot 控制器</block>
+  <block id="fc49eec2e1350c70e0ee83082938896c" category="list-text"><block ref="40a914e8068809539f086034e13549c6" category="inline-link-rx"></block>。</block>
+  <block id="e5b001692c70f874108d4c3517741181" category="inline-link">安裝最新的 Astra Trident 版本</block>
+  <block id="a303c00b0d0d4a1b4adf9ac86b7be2cc" category="list-text"><block ref="6b04d2c2cadce52e000fe64978797f65" category="inline-link-rx"></block>。</block>
+  <block id="48d0b044dd9368b2691ff16393a31d86" category="inline-link">建立 Volume SnapshotClass</block>
+  <block id="0fa487fe8680011a1e8590273692a729" category="list-text"><block ref="7780c580e1dcefaf97af849cafb81d68" category="inline-link-rx"></block>。</block>
+  <block id="7acbd9a679c6d9e0677acd3b0514110d" category="paragraph">如需安裝 CSI 驅動程式的說明、請參閱步驟。</block>
+  <block id="b112804ac2e50d1a247c4e71c3315d8c" category="inline-link">安裝 Snapshot CRD 和 Snapshot 控制器</block>
+  <block id="6c190cb8b2ab4bcec637bcea54946bee" category="paragraph">如果您尚未這麼做、<block ref="0e5afab18fbd6e0f822d02155d04d2bd" category="inline-link-rx"></block>。</block>
+  <block id="9743b1bac661724fbae098bb88f6131d" category="list-text"><block ref="9743b1bac661724fbae098bb88f6131d" category="inline-link-rx"></block></block>
+  <block id="1012a371df8509745561ebc7fb6c67ed" category="paragraph"><block ref="1012a371df8509745561ebc7fb6c67ed" category="inline-link-rx"></block></block>
+  <block id="ed0a05533716082066f8bcf9280a4c5f" category="list-text"><block ref="ed0a05533716082066f8bcf9280a4c5f" category="inline-link-rx"></block></block>
+  <block id="abfeaf5dc3fa1bf4a2a2cba84c5e546c" category="section-title">2023 年 5 月 15 日</block>
+  <block id="7dfc25c1548ba836ed04c79f8fbd1825" category="paragraph">這是次要的 bugfix 版本。</block>
+  <block id="8f80a6bba41c8f2f5d1a9b2f5ff1d87b" category="section-title">Amazon EKS 1.25 或更新版本叢集的快照可能會失敗</block>
+  <block id="b3794e2a706f8946cd7b6e8c2435538f" category="paragraph">Amazon EKS 叢集中 1.25 版或更新版本的快照可能會因為使用不正確的快照控制器而失敗。</block>
+  <block id="bfe0bca35535f01b62abdc5459c6610c" category="paragraph">因應措施是在升級現有的 EKS 1.25 或更新版本安裝時執行下列動作：</block>
+  <block id="d5d53109cd766da789a263c6e2051051" category="list-text">移除任何現有的 Snapshot CRD 和任何現有的 Snapshot 控制器。</block>
+  <block id="43f17763173fe230bdd78477152f5f7d" category="inline-link">解除安裝Astra Trident</block>
+  <block id="478393a7bc00211c00b84b91bd7270e1" category="list-text"><block ref="ae36d1cdd520df7c3eaefc0ce2deb814" category="inline-link-rx"></block>。</block>
 </blocks>
