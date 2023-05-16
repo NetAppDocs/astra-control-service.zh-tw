@@ -82,52 +82,26 @@ Kubernetes版本:: 叢集必須執行 1.23 至 1.25 範圍內的 Kubernetes 版�
 叢集狀態:: 叢集必須以正常狀態執行、且至少有一個線上工作者節點、且在故障狀態下沒有工作節點。
 
 
-73faaa1b4bb064878667455dd879f4ba:: 3ea391c9e6fd8068a48c5105ab95e68f
+Astra Trident:: Astra Trident 和外部快照控制器是儲存後端作業所必需的。若要安裝、請執行下列步驟：
+
+
+[%collapsible%open]
+====
+. https://["安裝 Snapshot CRD 和 Snapshot 控制器"^]。
+. https://["安裝最新的 Astra Trident 版本"^]。
+. https://["建立 Volume SnapshotClass"^]。
+
+
+====
 Amazon Elastic Block Store（EBS）適用的SCSI驅動程式:: 如果您使用Amazon EBS儲存後端、則需要安裝EBS的Container Storage Interface（Container Storage Interface、簡稱csi）驅動程式（不會自動安裝）。
 +
 --
-20fc0f0b676e68d276bd1ffa1267ac50
+如需安裝 CSI 驅動程式的說明、請參閱步驟。
 
 [%collapsible%open]
 ====
 .安裝外部快照
-. 469f7ca16938508b5dcb777767828b70
-+
-cb9d6d1ca0b4fda3b1206ae38a007824
-
-+
-[role="tabbed-block"]
-=====
-.351d6da9c87ca81d91cd4755e4730d82
---
-[source, yaml]
-----
-$ cat snapshot-setup.sh
-#!/bin/bash
-# Create volume snapshot CRDs
-kubectl apply -f https://raw.githubusercontent.com/kubernetes-csi/external-snapshotter/release-5.0/client/config/crd/snapshot.storage.k8s.io_volumesnapshotclasses.yaml
-kubectl apply -f https://raw.githubusercontent.com/kubernetes-csi/external-snapshotter/release-5.0/client/config/crd/snapshot.storage.k8s.io_volumesnapshotcontents.yaml
-kubectl apply -f https://raw.githubusercontent.com/kubernetes-csi/external-snapshotter/release-5.0/client/config/crd/snapshot.storage.k8s.io_volumesnapshots.yaml
-----
---
-=====
-. 65b146df7d5c27b212f54a7c9980960b
-+
-6b4ca223a0a2bf649306756ade54b043
-
-+
-[role="tabbed-block"]
-=====
-.5e393c0ca8392e0c84201770c8b544ca
---
-[source, yaml]
-----
-kubectl apply -f https://raw.githubusercontent.com/kubernetes-csi/external-snapshotter/release-5.0/deploy/kubernetes/snapshot-controller/rbac-snapshot-controller.yaml
-kubectl apply -f https://raw.githubusercontent.com/kubernetes-csi/external-snapshotter/release-5.0/deploy/kubernetes/snapshot-controller/setup-snapshot-controller.yaml
-----
---
-=====
-
+如果您尚未這麼做、 https://["安裝 Snapshot CRD 和 Snapshot 控制器"^]。
 
 .將csi驅動程式安裝為Amazon EKS附加元件
 . 為服務帳戶建立Amazon EBS SCSI驅動程式IAM角色。請依照指示操作 https://["在Amazon文件中"^]、使用說明中的AWS CLI命令。

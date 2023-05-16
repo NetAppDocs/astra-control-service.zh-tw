@@ -100,14 +100,6 @@ ifdef::gcp[]
 
 == 註冊Google Kubernetes Engine（GKE）叢集
 
-*我可以將私有GKE叢集新增至Astra Control Service嗎？*
-
-是的、您可以將私有GKE叢集新增至Astra Control Service。若要建立私有GKE叢集、 https://["請依照本知識庫文件中的指示進行"^]。
-
-私有叢集必須具有 https://["授權網路"^] 設定為允許Astra控制IP位址：
-
-52.188.218.166/32
-
 *我的GKE叢集是否可以位於共用VPC上？*
 
 是的、Astra Control可以管理位於共享VPC中的叢集。 link:set-up-google-cloud.html["瞭解如何設定Astra服務帳戶以進行共用VPC組態"]。

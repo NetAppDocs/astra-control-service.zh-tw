@@ -783,8 +783,6 @@
   <block id="b588fb2a2e55643a23cbafdb1879e478" category="paragraph">*在將叢集新增至Astra Control Service之前、我是否需要在叢集上安裝SCSI驅動程式？*</block>
   <block id="a48e52ca315005bd57971ddff57c7bf1" category="paragraph">*新增Astra Control Service之後、我需要將工作節點新增至叢集。我該怎麼辦？*</block>
   <block id="970cfe22b76fecaa99669dbc6dd2643e" category="paragraph">*我可以將私有的高層叢集新增至Astra Control Service嗎？*</block>
-  <block id="af2b33bb637866cca13ababa2653601d" category="paragraph">*我可以將私有GKE叢集新增至Astra Control Service嗎？*</block>
-  <block id="51e84df52b4888344ecda584885aaabd" category="paragraph">私有叢集必須具有<block ref="aa255aeede553f15509fbd44536f790e" category="inline-link-rx"></block> 設定為允許Astra控制IP位址：</block>
   <block id="952200664143e727f3f65397759fe5e8" category="paragraph">*我的GKE叢集是否可以位於共用VPC上？*</block>
   <block id="5d346778751cb328795e29ad6aed29a4" category="inline-link-macro">瞭解如何設定Astra服務帳戶以進行共用VPC組態</block>
   <block id="bf510b25b9a632dbcb8341bf2bd80920" category="paragraph">是的、Astra Control可以管理位於共享VPC中的叢集。 <block ref="12cc1ce3ba4d58645c4f3bfe8f445bfc" category="inline-link-macro-rx"></block>。</block>
@@ -2113,9 +2111,25 @@
   <block id="5e45edcd9985e188c258e7b6515feeea" category="paragraph">Astra Control Service 支援 Azure NetApp Files 、 Azure 託管磁碟或 NetApp Cloud Volumes ONTAP 作為 Azure Kubernetes 服務（ aks ）叢集的儲存後端。</block>
   <block id="6bab6ac71f743f37f154b7b0219c56a8" category="paragraph">Astra Control Service 支援 Cloud Volumes Service for Google Cloud 、 Google Persistent Disk 或 NetApp Cloud Volumes ONTAP 作為持續磁碟區的儲存後端選項。</block>
   <block id="09a08aa51d9a5d34a5bc6cecdb1f03bf" category="paragraph">您可以在將新叢集新增至Astra Control時新增雲端執行個體。請參閱 <block ref="04d97bec7f4fa11002764129cf40d13a" category="inline-link-macro-rx"></block> 以取得更多資訊。</block>
-  <block id="3151d43bcd1c27b32e26e2270e5f6365" category="inline-link">請依照本知識庫文件中的指示進行</block>
-  <block id="89ee4e626d8ee5cecc8bc20164109dc0" category="paragraph">是的、您可以將私有GKE叢集新增至Astra Control Service。若要建立私有GKE叢集、<block ref="99bba183cf709d565e021b59be5fb393" category="inline-link-rx"></block>。</block>
   <block id="9743b1bac661724fbae098bb88f6131d" category="list-text"><block ref="9743b1bac661724fbae098bb88f6131d" category="inline-link-rx"></block></block>
-  <block id="1012a371df8509745561ebc7fb6c67ed" category="paragraph"><block ref="1012a371df8509745561ebc7fb6c67ed" category="inline-link-rx"></block></block>
-  <block id="ed0a05533716082066f8bcf9280a4c5f" category="list-text"><block ref="ed0a05533716082066f8bcf9280a4c5f" category="inline-link-rx"></block></block>
+  <block id="84810f606cf208e2aa62628838041ba8" category="list-text">Astra Trident 和外部快照控制器是儲存後端作業所必需的。若要安裝、請執行下列步驟：</block>
+  <block id="a9b10c3e99be35f3f8a9c7dc7fadd754" category="inline-link">安裝 Snapshot CRD 和 Snapshot 控制器</block>
+  <block id="fc49eec2e1350c70e0ee83082938896c" category="list-text"><block ref="40a914e8068809539f086034e13549c6" category="inline-link-rx"></block>。</block>
+  <block id="e5b001692c70f874108d4c3517741181" category="inline-link">安裝最新的 Astra Trident 版本</block>
+  <block id="a303c00b0d0d4a1b4adf9ac86b7be2cc" category="list-text"><block ref="6b04d2c2cadce52e000fe64978797f65" category="inline-link-rx"></block>。</block>
+  <block id="48d0b044dd9368b2691ff16393a31d86" category="inline-link">建立 Volume SnapshotClass</block>
+  <block id="0fa487fe8680011a1e8590273692a729" category="list-text"><block ref="7780c580e1dcefaf97af849cafb81d68" category="inline-link-rx"></block>。</block>
+  <block id="7acbd9a679c6d9e0677acd3b0514110d" category="paragraph">如需安裝 CSI 驅動程式的說明、請參閱步驟。</block>
+  <block id="b112804ac2e50d1a247c4e71c3315d8c" category="inline-link">安裝 Snapshot CRD 和 Snapshot 控制器</block>
+  <block id="6c190cb8b2ab4bcec637bcea54946bee" category="paragraph">如果您尚未這麼做、<block ref="0e5afab18fbd6e0f822d02155d04d2bd" category="inline-link-rx"></block>。</block>
+  <block id="de6aa62d63707ee7d0d8147e0441da62" category="paragraph"><block ref="de6aa62d63707ee7d0d8147e0441da62" category="inline-link-rx"></block></block>
+  <block id="bbc78db47a3fe23dc96746668da3d287" category="list-text"><block ref="bbc78db47a3fe23dc96746668da3d287" category="inline-link-rx"></block></block>
+  <block id="abfeaf5dc3fa1bf4a2a2cba84c5e546c" category="section-title">2023 年 5 月 15 日</block>
+  <block id="7dfc25c1548ba836ed04c79f8fbd1825" category="paragraph">這是次要的 bugfix 版本。</block>
+  <block id="5a5355eda2f1cf003d25254ee2c311a3" category="section-title">具有特定快照控制器版本的 Kubernetes 1.25 或更新版本叢集快照可能會失敗</block>
+  <block id="f9f1ea7c0040d9bdb077f9ce68de31e3" category="paragraph">如果叢集上安裝 Snapshot 控制器 API 的 v1beta1 版、執行 1.25 版或更新版本的 Kubernetes 叢集快照可能會失敗。</block>
+  <block id="2ad74d9f76ccccd37e4f9c6cb27f1cbd" category="paragraph">因應措施是在升級現有 Kubernetes 1.25 或更新版本的安裝時執行下列動作：</block>
+  <block id="d5d53109cd766da789a263c6e2051051" category="list-text">移除任何現有的 Snapshot CRD 和任何現有的 Snapshot 控制器。</block>
+  <block id="43f17763173fe230bdd78477152f5f7d" category="inline-link">解除安裝Astra Trident</block>
+  <block id="478393a7bc00211c00b84b91bd7270e1" category="list-text"><block ref="ae36d1cdd520df7c3eaefc0ce2deb814" category="inline-link-rx"></block>。</block>
 </blocks>
