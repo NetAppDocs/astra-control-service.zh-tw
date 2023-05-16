@@ -126,11 +126,11 @@ NOTE: 在複製作業期間、需要IngresClass資源或Webhooks才能正常運�
 
 
 
-=== 具有特定快照控制器版本的 Kubernetes 1.25 或更新版本叢集快照可能會失敗
+=== Amazon EKS 1.25 或更新版本叢集的快照可能會失敗
 
-如果叢集上安裝 Snapshot 控制器 API 的 v1beta1 版、執行 1.25 版或更新版本的 Kubernetes 叢集快照可能會失敗。
+Amazon EKS 叢集中 1.25 版或更新版本的快照可能會因為使用不正確的快照控制器而失敗。
 
-因應措施是在升級現有 Kubernetes 1.25 或更新版本的安裝時執行下列動作：
+因應措施是在升級現有的 EKS 1.25 或更新版本安裝時執行下列動作：
 
 . 移除任何現有的 Snapshot CRD 和任何現有的 Snapshot 控制器。
 . https://["解除安裝Astra Trident"^]。
