@@ -18,7 +18,7 @@ Astra Control Service 可使用 Amazon Elastic Block Store （ EBS ）、 Amazon
 
 == Amazon彈性區塊儲存區（EBS）
 
-您的叢集可使用Container Storage介面（Container Storage Interface、簡稱csi）驅動程式與EBS進行介面。使用EBS做為EKS叢集的儲存後端時、您可以設定一些儲存類別參數。如需參數的意義及設定方法的詳細資訊、請參閱 https://["Kubernetes文件"^]。
+您的叢集可使用Container Storage介面（Container Storage Interface、簡稱csi）驅動程式與EBS進行介面。使用EBS做為EKS叢集的儲存後端時、您可以設定一些儲存類別參數。如需參數的意義及設定方法的詳細資訊、請參閱 https://kubernetes.io/docs/concepts/storage/storage-classes/#aws-ebs["Kubernetes文件"^]。
 
 您可以搭配EBS使用多種不同類型的磁碟區：
 
@@ -27,16 +27,16 @@ Astra Control Service 可使用 Amazon Elastic Block Store （ EBS ）、 Amazon
 * 上一代產品
 
 
-如需每種磁碟區類型及其效能的詳細資訊、請參閱 https://["Amazon EBS文件"^]。如需定價資訊、請參閱 https://["Amazon EBS定價"^]。
+如需每種磁碟區類型及其效能的詳細資訊、請參閱 https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-volume-types.html["Amazon EBS文件"^]。如需定價資訊、請參閱 https://aws.amazon.com/ebs/pricing/["Amazon EBS定價"^]。
 
 
 
 == Amazon FSX for NetApp ONTAP 產品
 
-當您將FSXfor NetApp ONTAP 支援為AWS叢集的儲存後端時、I/O效能取決於檔案系統的組態和工作負載的特性。如需有關FSX for NetApp ONTAP 效能的詳細資訊、請參閱 https://["Amazon FSX提供NetApp ONTAP 的效能"^]。如需定價資訊、請參閱 https://["Amazon FSX for NetApp ONTAP 的定價"^]。
+當您將FSXfor NetApp ONTAP 支援為AWS叢集的儲存後端時、I/O效能取決於檔案系統的組態和工作負載的特性。如需有關FSX for NetApp ONTAP 效能的詳細資訊、請參閱 https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/performance.html["Amazon FSX提供NetApp ONTAP 的效能"^]。如需定價資訊、請參閱 https://aws.amazon.com/fsx/netapp-ontap/pricing/["Amazon FSX for NetApp ONTAP 的定價"^]。
 
 
 
 == NetApp Cloud Volumes ONTAP
 
-如需設定NetApp Cloud Volumes ONTAP 產品的詳細資訊、包括效能建議、請造訪 https://["NetApp Cloud Volumes ONTAP 產品文件"^]。
+如需設定NetApp Cloud Volumes ONTAP 產品的詳細資訊、包括效能建議、請造訪 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-performance.html["NetApp Cloud Volumes ONTAP 產品文件"^]。

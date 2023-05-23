@@ -109,7 +109,7 @@ endif::azure[]
 
 ifdef::aws[]
 
-* * S3伺服器名稱或IP位址*（僅限AWS和S3儲存區類型）：輸入S3端點的完整網域名稱、此名稱對應於您所在的地區、不需要 `https://`。請參閱 https://["Amazon文件"^] 以取得更多資訊。
+* * S3伺服器名稱或IP位址*（僅限AWS和S3儲存區類型）：輸入S3端點的完整網域名稱、此名稱對應於您所在的地區、不需要 `https://`。請參閱 https://docs.aws.amazon.com/general/latest/gr/s3.html["Amazon文件"^] 以取得更多資訊。
 
 
 endif::aws[]
@@ -171,5 +171,5 @@ NOTE: Astra Control會先確保不會有使用儲存庫進行備份的排程原�
 
 == 如需詳細資訊、請參閱
 
-* https://["使用Astra Control API"^]
+* https://docs.netapp.com/us-en/astra-automation/index.html["使用Astra Control API"^]
 

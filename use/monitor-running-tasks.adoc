@@ -31,4 +31,4 @@ NOTE: 對於複製作業、工作子任務包含快照和快照還原作業。
 
 
 
-NOTE: 工作會保留在*工作*清單中長達24小時。您可以使用設定此限制和其他工作監控設定 https://["Astra Control API"^]。
+NOTE: 工作會保留在*工作*清單中長達24小時。您可以使用設定此限制和其他工作監控設定 https://docs.netapp.com/us-en/astra-automation/["Astra Control API"^]。

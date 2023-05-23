@@ -75,13 +75,13 @@ kubectl apply -f myapp.yaml
 以下是一些遵循這些模式的營運者應用程式：
 
 +
-** https://["Apache K8ssandra"^]
+** https://github.com/k8ssandra/cass-operator/tree/v1.7.1["Apache K8ssandra"^]
 +
 
 NOTE: 對於K8ssandra、支援就地還原作業。若要還原新命名空間或叢集的作業、必須先關閉應用程式的原始執行個體。這是為了確保傳遞的對等群組資訊不會導致跨執行個體通訊。不支援複製應用程式。
 
-** https://["Jenkins CI"^]
-** https://["Percona XtraDB叢集"^]
+** https://github.com/jenkinsci/kubernetes-operator["Jenkins CI"^]
+** https://github.com/percona/percona-xtradb-cluster-operator["Percona XtraDB叢集"^]
 
 
 +
@@ -136,7 +136,7 @@ TIP: 舉例來說、您可能想要為每週有節奏的「Maria」設定備份�
 * （選用）任何產品上都有Kubernetes標籤 link:../use/manage-apps.html#app-management-requirements["支援的Kubernetes資源"]。
 +
 
-TIP: 標籤是可指派給Kubernetes物件以供識別的金鑰/值配對。標籤可讓您更輕鬆地排序、組織及尋找Kubernetes物件。若要深入瞭解Kubernetes標籤、 https://["請參閱Kubernetes官方文件"^]。
+TIP: 標籤是可指派給Kubernetes物件以供識別的金鑰/值配對。標籤可讓您更輕鬆地排序、組織及尋找Kubernetes物件。若要深入瞭解Kubernetes標籤、 https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/["請參閱Kubernetes官方文件"^]。
 
 
 
@@ -206,7 +206,7 @@ NOTE: 應用程式可以使用Astra Control在單一叢集上的一個或多個�
 . （選用）在每個命名空間中輸入Kubernetes資源的標籤。您可以指定單一標籤或標籤選取器準則（查詢）。
 +
 
-TIP: 若要深入瞭解Kubernetes標籤、 https://["請參閱Kubernetes官方文件"^]。
+TIP: 若要深入瞭解Kubernetes標籤、 https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/["請參閱Kubernetes官方文件"^]。
 
 . （選用）選取*新增命名空間*並從下拉式清單中選擇命名空間、即可新增應用程式的其他命名空間。
 . （選用）針對您新增的任何其他命名空間、輸入單一標籤或標籤選取器條件。

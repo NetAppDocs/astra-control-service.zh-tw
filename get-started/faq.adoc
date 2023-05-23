@@ -36,7 +36,7 @@ Astra Control要求您在就職部分提供準確的客戶資訊。如果您提�
 
 *什麼是Astra Control Service URL？*
 
-您可以在存取Astra Control Service https://[]。
+您可以在存取Astra Control Service https://astra.netapp.io[]。
 
 *我寄了一封電子郵件邀請函給同事、但他們尚未收到。我該怎麼辦？*
 
@@ -90,7 +90,7 @@ ifdef::azure[]
 
 *我可以使用Active Directory來管理高效能叢集的驗證嗎？*
 
-是的、您可以將您的高效能叢集設定為使用Azure Active Directory（Azure AD）進行驗證和身分識別管理。建立叢集時、請遵循中的指示 https://["正式文件"^] 設定叢集使用Azure AD。您必須確保叢集符合高峰管理Azure AD整合的要求。
+是的、您可以將您的高效能叢集設定為使用Azure Active Directory（Azure AD）進行驗證和身分識別管理。建立叢集時、請遵循中的指示 https://docs.microsoft.com/en-us/azure/aks/managed-aad["正式文件"^] 設定叢集使用Azure AD。您必須確保叢集符合高峰管理Azure AD整合的要求。
 
 endif::azure[]
 
@@ -106,7 +106,7 @@ ifdef::gcp[]
 
 *何處可以找到GCP上的服務帳戶認證資料？*
 
-登入之後 https://["Google Cloud Console"^]、您的服務帳戶詳細資料將會顯示在「* IAM and admin*」區段中。如需詳細資料、請參閱 link:set-up-google-cloud.html["如何設定Google Cloud for Astra Control"]。
+登入之後 https://console.cloud.google.com/["Google Cloud Console"^]、您的服務帳戶詳細資料將會顯示在「* IAM and admin*」區段中。如需詳細資料、請參閱 link:set-up-google-cloud.html["如何設定Google Cloud for Astra Control"]。
 
 *我想新增不同GCP專案的GKE叢集。Astra Control是否支援此功能？*
 

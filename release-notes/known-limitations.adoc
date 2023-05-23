@@ -24,7 +24,7 @@ summary: 已知限制指出本產品版本不支援的平台、裝置或功能�
 
 === Astra Trident不會從叢集解除安裝
 
-當您從Astra Control Service取消管理叢集時、不會自動從叢集解除安裝Astra Trident。若要解除安裝Astra Trident、您需要 https://["請遵循Astra Trident文件中的下列步驟"^]。
+當您從Astra Control Service取消管理叢集時、不會自動從叢集解除安裝Astra Trident。若要解除安裝Astra Trident、您需要 https://docs.netapp.com/us-en/trident/trident-managing-k8s/uninstall-trident.html["請遵循Astra Trident文件中的下列步驟"^]。
 
 
 
@@ -92,13 +92,13 @@ Astra Control不會自動指派任何雲端執行個體的預設儲存區。您�
 
 Astra Control支援以命名空間範圍運算子安裝的應用程式。這些運算子通常採用「傳遞值」而非「傳遞參照」架構來設計。以下是一些遵循這些模式的營運者應用程式：
 
-* https://["Apache K8ssandra"^]
+* https://github.com/k8ssandra/cass-operator/tree/v1.7.1["Apache K8ssandra"^]
 +
 
 NOTE: 對於K8ssandra、支援就地還原作業。若要還原新命名空間或叢集的作業、必須先關閉應用程式的原始執行個體。這是為了確保傳遞的對等群組資訊不會導致跨執行個體通訊。不支援複製應用程式。
 
-* https://["Jenkins CI"^]
-* https://["Percona XtraDB叢集"^]
+* https://github.com/jenkinsci/kubernetes-operator["Jenkins CI"^]
+* https://github.com/percona/percona-xtradb-cluster-operator["Percona XtraDB叢集"^]
 
 
 請注意、Astra Control可能無法複製以「逐一參考」架構設計的操作員（例如、CockroachDB操作員）。在這些類型的複製作業中、複製的操作員會嘗試從來源操作員參考Kubernetes機密、儘管在複製程序中有自己的新秘密。由於Astra Control不知道來源營運者的Kubernetes機密資料、因此複製作業可能會失敗。
@@ -126,15 +126,15 @@ NOTE: 在複製作業期間、需要IngresClass資源或Webhooks才能正常運�
 
 
 
-=== Amazon EKS 1.25 或更新版本叢集的快照可能會失敗
+=== 具有特定快照控制器版本的 Kubernetes 1.25 或更新版本叢集快照可能會失敗
 
-Amazon EKS 叢集中 1.25 版或更新版本的快照可能會因為使用不正確的快照控制器而失敗。
+如果叢集上安裝 Snapshot 控制器 API 的 v1beta1 版、執行 1.25 版或更新版本的 Kubernetes 叢集快照可能會失敗。
 
-因應措施是在升級現有的 EKS 1.25 或更新版本安裝時執行下列動作：
+因應措施是在升級現有 Kubernetes 1.25 或更新版本的安裝時執行下列動作：
 
 . 移除任何現有的 Snapshot CRD 和任何現有的 Snapshot 控制器。
-. https://["解除安裝Astra Trident"^]。
-. https://["安裝 Snapshot CRD 和 Snapshot 控制器"^]。
-. https://["安裝最新的 Astra Trident 版本"^]。
-. https://["建立 Volume SnapshotClass"^]。
+. https://docs.netapp.com/us-en/trident/trident-managing-k8s/uninstall-trident.html["解除安裝Astra Trident"^]。
+. https://docs.netapp.com/us-en/trident/trident-use/vol-snapshots.html#deploying-a-volume-snapshot-controller["安裝 Snapshot CRD 和 Snapshot 控制器"^]。
+. https://docs.netapp.com/us-en/trident/trident-get-started/kubernetes-deploy.html["安裝最新的 Astra Trident 版本"^]。
+. https://docs.netapp.com/us-en/trident/trident-use/vol-snapshots.html#step-1-create-a-volumesnapshotclass["建立 Volume SnapshotClass"^]。
 

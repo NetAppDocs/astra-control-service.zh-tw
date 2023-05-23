@@ -52,11 +52,11 @@ ifdef::gcp[]
 
 當您使用Astra Control Service管理GKE叢集時、NetApp Cloud Volumes Service 支援持續的磁碟區、而應用程式的備份則儲存在Google Cloud Storage儲存庫中。
 
-* https://["檢視Cloud Volumes Service 報價詳細資料以供參考"^]。
+* https://cloud.google.com/solutions/partners/netapp-cloud-volumes/costs["檢視Cloud Volumes Service 報價詳細資料以供參考"^]。
 +
-請注意、Astra Control Service支援所有服務類型和服務層級。您使用的服務類型取決於 https://["Google Cloud區域"^]。
+請注意、Astra Control Service支援所有服務類型和服務層級。您使用的服務類型取決於 https://cloud.netapp.com/cloud-volumes-global-regions#cvsGcp["Google Cloud區域"^]。
 
-* https://["檢視Google Cloud儲存桶的定價詳細資料"^]。
+* https://cloud.google.com/storage/pricing["檢視Google Cloud儲存桶的定價詳細資料"^]。
 
 
 endif::gcp[]
@@ -69,8 +69,8 @@ ifdef::azure[]
 
 當您使用Astra Control Service管理高效能叢集時、持續的磁碟區會以Azure NetApp Files 支援功能為後盾、而應用程式的備份則會儲存在Azure Blob容器中。
 
-* https://["檢視Azure NetApp Files 報價詳細資料以供參考"^]。
-* https://["檢視Microsoft Azure Blob儲存設備的定價詳細資料"^]。
+* https://azure.microsoft.com/en-us/pricing/details/netapp["檢視Azure NetApp Files 報價詳細資料以供參考"^]。
+* https://azure.microsoft.com/en-us/pricing/details/storage/blobs["檢視Microsoft Azure Blob儲存設備的定價詳細資料"^]。
 
 
 endif::azure[]
@@ -83,7 +83,7 @@ ifdef::aws[]
 
 使用Astra Control Service管理AWS叢集時、持續磁碟區會以EBS或FSXfor NetApp為後盾ONTAP 、而應用程式的備份則儲存在AWS儲存區中。
 
-* https://["檢視Amazon Web Services的價格詳細資料"^]。
+* https://aws.amazon.com/eks/pricing/["檢視Amazon Web Services的價格詳細資料"^]。
 
 
 endif::aws[]
@@ -95,10 +95,10 @@ endif::aws[]
 您可以使用Azure Marketplace訂閱Astra Control Service。您的帳戶和帳單詳細資料可透過Marketplace進行管理。
 
 
-NOTE: 若要觀看Azure Marketplace訂閱程序的逐步解說影片、請造訪 https://["NetApp TV"^]。
+NOTE: 若要觀看Azure Marketplace訂閱程序的逐步解說影片、請造訪 https://www.netapp.tv/details/29979["NetApp TV"^]。
 
 .步驟
-. 前往 https://["Azure Marketplace"^]。
+. 前往 https://azuremarketplace.microsoft.com/en-us/marketplace/apps/netapp.netapp-astra-acs?tab=Overview["Azure Marketplace"^]。
 . 選擇*立即取得*。
 . 請依照指示訂閱計畫。
 
@@ -110,7 +110,7 @@ NOTE: 若要觀看Azure Marketplace訂閱程序的逐步解說影片、請造訪
 您可以使用AWS Marketplace訂閱Astra Control Service。您的帳戶和帳單詳細資料可透過Marketplace進行管理。
 
 .步驟
-. 前往 https://["AWS Marketplace"^]。
+. 前往 https://aws.amazon.com/marketplace/["AWS Marketplace"^]。
 . 選擇*繼續訂閱*。
 . 請依照指示訂閱計畫。
 

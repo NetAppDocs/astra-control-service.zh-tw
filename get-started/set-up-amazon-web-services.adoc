@@ -87,9 +87,9 @@ Astra Trident:: Astra Trident 和外部快照控制器是儲存後端作業所�
 
 [%collapsible%open]
 ====
-. https://["安裝 Snapshot CRD 和 Snapshot 控制器"^]。
-. https://["安裝最新的 Astra Trident 版本"^]。
-. https://["建立 Volume SnapshotClass"^]。
+. https://docs.netapp.com/us-en/trident/trident-use/vol-snapshots.html#deploying-a-volume-snapshot-controller["安裝 Snapshot CRD 和 Snapshot 控制器"^]。
+. https://docs.netapp.com/us-en/trident/trident-get-started/kubernetes-deploy.html["安裝最新的 Astra Trident 版本"^]。
+. https://docs.netapp.com/us-en/trident/trident-use/vol-snapshots.html#step-1-create-a-volumesnapshotclass["建立 Volume SnapshotClass"^]。
 
 
 ====
@@ -101,10 +101,10 @@ Amazon Elastic Block Store（EBS）適用的SCSI驅動程式:: 如果您使用Am
 [%collapsible%open]
 ====
 .安裝外部快照
-如果您尚未這麼做、 https://["安裝 Snapshot CRD 和 Snapshot 控制器"^]。
+如果您尚未這麼做、 https://docs.netapp.com/us-en/trident/trident-use/vol-snapshots.html#deploying-a-volume-snapshot-controller["安裝 Snapshot CRD 和 Snapshot 控制器"^]。
 
 .將csi驅動程式安裝為Amazon EKS附加元件
-. 為服務帳戶建立Amazon EBS SCSI驅動程式IAM角色。請依照指示操作 https://["在Amazon文件中"^]、使用說明中的AWS CLI命令。
+. 為服務帳戶建立Amazon EBS SCSI驅動程式IAM角色。請依照指示操作 https://docs.aws.amazon.com/eks/latest/userguide/csi-iam-role.html["在Amazon文件中"^]、使用說明中的AWS CLI命令。
 . 使用下列AWS CLI命令新增Amazon EBS csi附加元件、將方括弧<>中的資訊取代為您環境的特定值。將<driver_role（驅動程式角色）>取代為您在上一個步驟中建立的EBS csi驅動程式角色名稱：
 +
 [source, console]
@@ -158,7 +158,7 @@ kubectl describe storageclass ebs-sc
 如果您尚未擁有Amazon帳戶、則需要建立帳戶、才能啟用Amazon EKS的帳單。
 
 .步驟
-. 前往 https://["Amazon首頁"^] ，選擇右上角的* Sign In（登入）*、然後選取* Start Here（開始於此處）*。
+. 前往 https://www.amazon.com["Amazon首頁"^] ，選擇右上角的* Sign In（登入）*、然後選取* Start Here（開始於此處）*。
 . 依照提示建立帳戶。
 
 
@@ -169,7 +169,7 @@ kubectl describe storageclass ebs-sc
 安裝AWS CLI、以便從命令列管理AWS資源。
 
 .步驟
-. 前往 https://["AWS CLI快速入門"^] 並依照指示安裝CLI。
+. 前往 https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html["AWS CLI快速入門"^] 並依照指示安裝CLI。
 
 
 
@@ -179,7 +179,7 @@ kubectl describe storageclass ebs-sc
 建立IAM使用者、讓您以更高的安全性來使用及管理AWS服務和資源。您也可以跳過此步驟、將現有的IAM使用者與Astra Control Service搭配使用。
 
 .步驟
-. 前往 https://["建立IAM使用者"^] 並依照指示建立IAM使用者。
+. 前往 https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_create.html#id_users_create_cliwpsapi["建立IAM使用者"^] 並依照指示建立IAM使用者。
 
 
 

@@ -141,7 +141,7 @@ Astra Control現在支援使用相同的指令碼來處理多個執行掛勾、�
 
 +
 
-NOTE: NetApp針對特定應用程式提供的預設快照前及後執行掛勾已在此版本中移除。如果您沒有提供自己的快照執行掛勾、Astra Control Service只會從2022年8月4日開始、擷取損毀一致的快照。請造訪 https://["NetApp Verda GitHub儲存庫"^] 以取得執行攔截指令碼的範例、您可以根據環境進行修改。
+NOTE: NetApp針對特定應用程式提供的預設快照前及後執行掛勾已在此版本中移除。如果您沒有提供自己的快照執行掛勾、Astra Control Service只會從2022年8月4日開始、擷取損毀一致的快照。請造訪 https://github.com/NetApp/Verda["NetApp Verda GitHub儲存庫"^] 以取得執行攔截指令碼的範例、您可以根據環境進行修改。
 
 +
 link:../use/manage-app-execution-hooks.html["管理應用程式執行掛勾"]
@@ -240,7 +240,7 @@ endif::azure[]
 
 * Astra Control Center Astra Control現已推出全新部署模式。_Astra Control Center_是您在資料中心安裝及操作的自我管理軟體、可讓您管理內部部署Kubernetes叢集的Kubernetes應用程式生命週期管理。
 +
-若要深入瞭解、 https://["前往Astra Control Center文件"^]。
+若要深入瞭解、 https://docs.netapp.com/us-en/astra-control-center["前往Astra Control Center文件"^]。
 
 * 現在您可以利用自己的儲存庫來管理Astra用於備份和複製的儲存庫、方法是新增其他儲存庫、並變更雲端供應商中Kubernetes叢集的預設儲存庫。
 +
@@ -287,7 +287,7 @@ endif::azure[]
 
 * REST API Astra Control REST API現已可供使用。API以現代技術和目前最佳實務做法為基礎。
 +
-https://["瞭解如何使用REST API來自動化應用程式資料生命週期管理"^]。
+https://docs.netapp.com/us-en/astra-automation["瞭解如何使用REST API來自動化應用程式資料生命週期管理"^]。
 
 * 年度訂閱Astra Control Service現在提供_Premium訂購_。
 +
@@ -328,9 +328,9 @@ link:../use/monitor-account-activity.html["深入瞭解如何檢視您的帳戶�
 
 ifdef::gcp[]
 
-Astra Control Service現在支援 https://["_CVS_服務類型"^] 使用適用於Google Cloud的Cloud Volumes Service除了已支援_CVs-Performance_服務類型之外、提醒您、Astra Control Service使用Cloud Volumes Service 支援Google Cloud的功能、做為持續磁碟區的儲存後端。
+Astra Control Service現在支援 https://cloud.google.com/solutions/partners/netapp-cloud-volumes/service-types["_CVS_服務類型"^] 使用適用於Google Cloud的Cloud Volumes Service除了已支援_CVs-Performance_服務類型之外、提醒您、Astra Control Service使用Cloud Volumes Service 支援Google Cloud的功能、做為持續磁碟區的儲存後端。
 
-這項增強功能表示Astra Control Service現在可以管理在_any中執行之Kubernetes叢集的應用程式資料 https://["支援支援的Google Cloud地區Cloud Volumes Service"^]。
+這項增強功能表示Astra Control Service現在可以管理在_any中執行之Kubernetes叢集的應用程式資料 https://cloud.netapp.com/cloud-volumes-global-regions#cvsGcp["支援支援的Google Cloud地區Cloud Volumes Service"^]。
 
 如果您可以在Google Cloud區域之間靈活選擇、您可以根據效能需求選擇CVS或CVS效能。 link:../learn/choose-class-and-size.html["深入瞭解如何選擇服務類型"]。
 
