@@ -26,8 +26,12 @@ entries:
   url: "/get-started/register.html"
 - title: 管理叢集
   url: "/get-started/add-first-cluster.html"
+  entries:
+  - title: 檢查 Astra Trident 版本
+    url: "/get-started/check-astra-trident-version.html"
+  - title: 建立管理叢集角色 kubeconfig 檔案
+    url: "/get-started/create-kubeconfig.html"
 - title: 管理私有叢集
-  flavor: azure
   url: "/get-started/manage-private-cluster.html"
 - title: 接下來呢？
   url: "/get-started/whats-next.html"

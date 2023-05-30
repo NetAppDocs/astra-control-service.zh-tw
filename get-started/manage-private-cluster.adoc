@@ -12,11 +12,19 @@ summary: 設定環境之後、您就可以建立Kubernetes叢集、然後將其�
 
 
 [role="lead"]
+您可以使用 Astra Control Service 來管理 Astra 中的私有 Azure Kubernetes 服務（ AKS ）和 Red Hat OpenShift 叢集。這些指示假設您已建立私有 aks 或 OpenShift 叢集、並準備了安全的方法來遠端存取；如需建立及存取私有 aks 或 OpenShift 叢集的詳細資訊、請參閱下列文件：
+
+* https://docs.microsoft.com/azure/aks/private-clusters["適用於私有 aks 叢集的 Azure 文件"^]
+* https://learn.microsoft.com/en-us/azure/openshift/howto-create-private-cluster-4x["適用於私有 OpenShift 叢集的 Azure 文件"^]
+
+
 您可以使用 Astra Control Service 來管理私有 Azure Kubernetes Service （ Astra Control Service ）叢集、以及在 AKS 中管理私有 Red Hat OpenShift 叢集。這些指示假設您已建立私有 aks 或 OpenShift 叢集、並準備了安全的方法來遠端存取；如需建立及存取私有 aks 或 OpenShift 叢集的詳細資訊、請參閱下列文件：
 
 * https://docs.microsoft.com/azure/aks/private-clusters["適用於私有 aks 叢集的 Azure 文件"^]
 * https://learn.microsoft.com/en-us/azure/openshift/howto-create-private-cluster-4x["適用於私有 OpenShift 叢集的 Azure 文件"^]
 
+
+您可以使用 Astra Control Service 來管理私有 Amazon Elastic Kubernetes Service （ EKS ）叢集。這些指示假設您已建立私有 EKS 叢集、並準備了安全的方法來遠端存取；如需建立及存取私有 EKS 叢集的詳細資訊、請參閱 https://docs.aws.amazon.com/eks/latest/userguide/private-clusters.html["Amazon EKS 文件"^]。
 
 
 
@@ -51,7 +59,15 @@ kubectl apply -f astraconnector_operator.yaml -n astra-connector-operator
 kubectl create ns astra-connector
 ----
 . 使用中的指示產生Astra Control API權杖 https://docs.netapp.com/us-en/astra-automation/get-started/get_api_token.html["Astra Automation文件"^]。
-. 修改 Astra Connector 運算子儲存庫組態 / 範例目錄中的範例組態檔案、以納入 `spec.natssync-client.cloud-bridge-url` 金鑰。例如：
+. 修改 Astra Connector 運算子儲存庫組態 / 範例目錄中的範例組態檔案、以包含下列機碼的環境特定值：
++
+** `spec.natssync-client.cloud-bridge-url`
+** `spec.astra.token`
+** `spec.astra.clusterName`
+** `spec.astra.accountId`
++
+例如：
+
 +
 [listing]
 ----
@@ -77,6 +93,8 @@ spec:
     accountId: <Astra Control account id>
     acceptEULA: yes
 ----
+
+
 . 套用Astra Connector自訂資源定義（CRD）。
 +
 [source, console]
@@ -90,7 +108,7 @@ kubectl apply -f config/samples/astraconnector_v1.yaml -n astra-connector
 kubectl get astraconnector astra-connector -n astra-connector
 ----
 +
-您應該參考類似下列的輸出：
+您應該會看到類似下列的輸出：
 
 +
 [source, console]
@@ -104,11 +122,7 @@ astra-connector   true         22b839aa-8b85-445a-85dd-0b1f53b5ea19
 
 == 設定持續儲存
 
-設定叢集的持續儲存設備。您可以使用Azure NetApp Files 由NetApp或Azure管理的磁碟。如需使用下列選項設定Azure的詳細資訊、請參閱入門文件：
-
-* https://docs.netapp.com/us-en/astra-control-service/get-started/set-up-microsoft-azure-with-anf.html["使用Azure NetApp Files 更新功能來設定Microsoft Azure"]
-* https://docs.netapp.com/us-en/astra-control-service/get-started/set-up-microsoft-azure-with-amd.html["使用Azure託管磁碟來設定Microsoft Azure"]
-
+設定叢集的持續儲存設備。如需設定持續儲存設備的詳細資訊、請參閱入門文件：
 
 
 

@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: use/clone-apps.html 
-keywords: clone app, clone storage, clone persistent storage, clone data, move workload, clone data, migrate data, data migration, move storage, move application, move data 
+keywords: clone app, clone storage, clone persistent storage, clone data, move workload, clone data, migrate data, data migration, move storage, move application, move data, migrate storage class 
 summary: 複製現有的應用程式、在相同的Kubernetes叢集或其他叢集上建立複製的應用程式。如果您需要將應用程式和儲存設備從一個Kubernetes叢集移至另一個叢集、複製作業將有助於您。例如、您可能想要透過CI CD傳輸途徑和Kubernetes命名空間來移動工作負載。 
 ---
 = 複製及移轉應用程式

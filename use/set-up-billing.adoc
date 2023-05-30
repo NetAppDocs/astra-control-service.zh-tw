@@ -71,6 +71,7 @@ ifdef::azure[]
 
 * https://azure.microsoft.com/en-us/pricing/details/netapp["檢視Azure NetApp Files 報價詳細資料以供參考"^]。
 * https://azure.microsoft.com/en-us/pricing/details/storage/blobs["檢視Microsoft Azure Blob儲存設備的定價詳細資料"^]。
+* https://azuremarketplace.microsoft.com/en-us/marketplace/apps/netapp.netapp-astra-acs?tab=PlansAndPrice["在 Azure Marketplace 中檢視 Astra Control 服務計畫和定價"]
 
 
 endif::azure[]
@@ -110,8 +111,9 @@ NOTE: 若要觀看Azure Marketplace訂閱程序的逐步解說影片、請造訪
 您可以使用AWS Marketplace訂閱Astra Control Service。您的帳戶和帳單詳細資料可透過Marketplace進行管理。
 
 .步驟
-. 前往 https://aws.amazon.com/marketplace/["AWS Marketplace"^]。
-. 選擇*繼續訂閱*。
+. 前往 https://aws.amazon.com/marketplace/pp/prodview-auupmqjoq43ey?sr=0-1&ref_=beagle&applicationId=AWSMPContessa["AWS Marketplace"^]。
+. 選取 * 檢視購買選項 * 。
+. 如果系統提示您這麼做、請登入 AWS 帳戶、或建立新帳戶。
 . 請依照指示訂閱計畫。
 
 

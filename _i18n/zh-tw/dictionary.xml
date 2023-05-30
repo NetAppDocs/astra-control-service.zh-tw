@@ -1533,8 +1533,6 @@
   <block id="e36d851dc2ff79e16c7cfbbb4e4fbe97" category="inline-link">Astra Automation文件</block>
   <block id="e9c498c38ce73fcff282ff152abd7d47" category="list-text">使用中的指示產生Astra Control API權杖<block ref="c02899be0babfb1350e3b2576a6e8c97" category="inline-link-rx"></block>。</block>
   <block id="61ddd26ba79b5e63c1e52be1beb28889" category="section-title">設定持續儲存</block>
-  <block id="395e3e6bfbbde5a5e2d5c7679dcc81e9" category="list-text"><block ref="395e3e6bfbbde5a5e2d5c7679dcc81e9" category="inline-link-rx"></block></block>
-  <block id="19d863b4572c9f53c276383bbf2540e0" category="list-text"><block ref="19d863b4572c9f53c276383bbf2540e0" category="inline-link-rx"></block></block>
   <block id="1cef3f8b6a3670bf3c09d6cab3c3c3d1" category="section-title">將私有叢集新增至Astra Control Service</block>
   <block id="e722e71a936852b8a6cd89cd5c31feb9" category="list-text"><block ref="e722e71a936852b8a6cd89cd5c31feb9" category="inline-link-macro-rx"></block></block>
   <block id="b0a64c8dbe133ff5b49120ddb00f788a" category="sidebar">管理私有叢集</block>
@@ -1555,14 +1553,10 @@
   <block id="e9f0d7eb2b9e30339763cb7819bdf45e" category="inline-link">支援的前端、後端及主機組態</block>
   <block id="3c172a48713bf18882de70235bb9b4ee" category="admonition">您可以<block ref="ec89e21f8106b8624273185ce464dfb2" category="inline-link-rx"></block> 使用Trident運算子（手動或使用Helm圖表）或<block ref="c67fd1b99934afa248dfeb285a9a4191" prefix=" " category="inline-code"></block>。在安裝或升級Astra Trident之前、請先檢閱<block ref="c11537a174ec95a098cfff995b6e8b14" category="inline-link-rx"></block>。</block>
   <block id="48e54afcf03ca45bfe38f6b7ff58764a" category="inline-link">已設定</block>
-  <block id="a0129d46679c1e10fbee3d462fc52fa1" category="list-text">*已設定Trident儲存後端*：至少必須有一個Astra Trident儲存後端<block ref="5225aa45493862e8671db3c546f615ec" category="inline-link-rx"></block> 在叢集上。</block>
-  <block id="83dff6768dc3337083f9e61fb96d773b" category="list-text">*已設定Trident儲存類別*：至少必須有一個Astra Trident儲存類別<block ref="56eee92baaddefbebda4bc1d0011f25b" category="inline-link-rx"></block> 在叢集上。如果已設定預設儲存類別、請確定只有一個儲存類別具有該註釋。</block>
   <block id="73329564760013a7824ff9d5d1af91ff" category="inline-link">已安裝</block>
   <block id="d5158c215f75d40b3dc3a9efd519b60a" category="inline-link">設定</block>
   <block id="6e623f58f3de0088c1a5e9284fd0aba0" category="list-text">*已安裝並設定的Astra Trident Volume Snapshot控制器與Volume Snapshot類別*：Volume Snapshot控制器必須是<block ref="8c0af001953d4be1cc072658538e955b" category="inline-link-rx"></block> 以便在Astra Control中建立快照。至少有一個Astra Trident<block ref="19476662cd814e0aa085eca121de89b8" prefix=" " category="inline-code"></block> 過去了<block ref="75fbdf7a5c036fb3ab281101e48530be" category="inline-link-rx"></block> 由系統管理員執行。</block>
-  <block id="9d9542e5b4db9b70118c8d71a180a912" category="inline-link">叢集管理圖</block>
   <block id="cf6c596a44d2e4c76a3a7da085c47495" category="list-text">*僅限Rancher *：在Rancher環境中管理應用程式叢集時、請在Rancher提供的Kusbeconfig檔案中修改應用程式叢集的預設內容、以使用控制面內容而非Rancher API伺服器內容。如此可減少Rancher API伺服器的負載、並改善效能。</block>
-  <block id="2ed51f16f28e4dd32dfd5df75788423d" category="paragraph">如果叢集使用Astra Trident來提供儲存服務、請確定安裝的Astra Trident版本為最新版本。</block>
   <block id="617eb1530b145e1d6b1e3a0d2ec1478d" category="list-text">檢查Astra Trident版本。</block>
   <block id="296a853ce5b2af1089a92d18fb98dbf2" category="paragraph">如果安裝了Astra Trident、您會看到類似下列的輸出：</block>
   <block id="ffcc0feca3c8cd069d4965c88a5c1ebb" category="paragraph">如果未安裝Astra Trident、您會看到類似下列的輸出：</block>
@@ -1638,7 +1632,6 @@
   <block id="8d7c216bc17d281838efafaa3704677b" category="list-text">選擇還原類型：</block>
   <block id="90d21d98503ddae05ddf0a1a34b7d790" category="list-text">*還原至原始命名空間*：使用此程序可將應用程式就地還原至原始叢集。</block>
   <block id="e6cd86d61f4639c8a27006c6c29b3e9f" category="list-text">選擇*下一步*。</block>
-  <block id="440c25a54f1d6be365d93551da3bc3f9" category="list-text">*還原至新命名空間*：使用此程序可將應用程式還原至其他叢集、或從來源還原具有不同命名空間的叢集。</block>
   <block id="5ffc80657fe4c0bd046f794a0b287613" category="list-text">針對您要還原的應用程式、選擇目的地叢集。</block>
   <block id="2e9b30622dd6f4053fb1f81819061361" category="list-text">為每個與應用程式相關聯的來源命名空間輸入目的地命名空間。</block>
   <block id="bc35b4ce5d7fa04a3a0b91c5621c2022" category="admonition">Astra Control會在此還原選項中建立新的目的地命名空間。您指定的目的地命名空間不得已存在於目的地叢集上。</block>
@@ -1745,8 +1738,6 @@
   <block id="e426491368911ddd627b7404e37bfba5" category="section-title">在AWS Marketplace訂閱Astra Control服務</block>
   <block id="72496bd39fd9ae39a72c45e51248b6ab" category="paragraph">您可以使用AWS Marketplace訂閱Astra Control Service。您的帳戶和帳單詳細資料可透過Marketplace進行管理。</block>
   <block id="cab27dc53edb571cac663ce2e16450dc" category="inline-link">AWS Marketplace</block>
-  <block id="4e0cb716824c5bbf10b6615c5ec77360" category="list-text">前往<block ref="90a631d717728c768cce45f0f9d8f736" category="inline-link-rx"></block>。</block>
-  <block id="9afef6b2e6bfae3c1516f6a5615e147a" category="list-text">選擇*繼續訂閱*。</block>
   <block id="91038e0679273c26bc019c15bd0d5c26" category="section-title">直接向NetApp訂閱Astra Control Service</block>
   <block id="a08810c868c50b2d6d63acd21453e57e" category="paragraph">您可以從Astra Control Service UI或聯絡NetApp銷售人員、訂閱Astra Control Service。</block>
   <block id="efd5332dcf8c11a124fee11aa67e1764" category="paragraph">隨時升級您的計費計畫、開始使用隨付隨付的方式、從Astra Control管理10個以上的命名空間。您只需要一張有效的信用卡。</block>
@@ -1812,7 +1803,6 @@
   <block id="45fa555347c1a658490523d14396d6f7" category="section-title"><block ref="05b2444faffd66d76e88602ea7dd353f" category="inline-image-macro-rx" type="image"></block> 將叢集新增至Astra Control</block>
   <block id="672560be9cf97dc26e5d58123e1236bd" category="list-text">Amazon FSX for NetApp ONTAP Sfa需要Astra Trident。如果您計畫將Amazon FSX for NetApp ONTAP 功能用作EKS叢集的儲存後端、請參閱中的Astra Trident資訊 <block ref="e68d00178a10629977a40b55006d1823" category="inline-link-macro-rx"></block>。</block>
   <block id="055c68f4a4baed3cf8af5f0b817d97aa" category="list-text">如需私有的高效能叢集、請參閱 <block ref="104a7dd39d72f9f66f9cd954ba655942" category="inline-link-macro-rx"></block>。</block>
-  <block id="f18a26b9b45443052e0fe2464848258b" category="paragraph-title">（選用）檢查Astra Trident版本</block>
   <block id="133059778c759500900ac3e31f9124f6" category="admonition">如果未安裝或不是最新的Astra Trident、而且您想要叢集使用Astra Trident來提供儲存服務、則必須先安裝最新版的Astra Trident、才能繼續進行。請參閱<block ref="0a4eeddcb63a166e3ea6149a4a33d4e7" category="inline-link-rx"></block> 以取得相關指示。</block>
   <block id="ceb1396f571b46844bfc0042be1d74da" category="list-text">檢查儲存類別是否使用支援的Astra Trident驅動程式。置備程式名稱應為<block ref="08044207e9f63bb0fd474dab347a776c" prefix=" " category="inline-code"></block>。請參閱下列範例：</block>
   <block id="275b3f11dca994bdaad9403b50379839" category="admonition">如果您自行建立<block ref="deabc6332aa53495b56c51d2e3eca54f" prefix=" " category="inline-code"></block> 檔案中、您應該只定義*一個*內容元素。請參閱<block ref="54676762f2eb4e7149fe4e9996a20b1c" category="inline-link-rx"></block> 以取得有關建立的資訊<block ref="deabc6332aa53495b56c51d2e3eca54f" prefix=" " category="inline-code"></block> 檔案：</block>
@@ -1842,8 +1832,6 @@
   <block id="1d7c1d2f297451f6eaf4e76901db96d2" category="list-text">（選用）若要將新建立的儲存庫用作Azure備份的預設儲存庫、請將其設為Azure的預設儲存庫。請參閱 <block ref="d1523cf11113b501cc0e7216254bf527" category="inline-link-macro-rx"></block>。</block>
   <block id="463f412773d00aae6c4b3709aadd2b57" category="paragraph">是的、您可以將私有的高層叢集新增至Astra Control Service。若要新增私有的高效能叢集、請參閱 <block ref="d51718998c7312025a3cf72e62416cc2" category="inline-link-macro-rx"></block>。</block>
   <block id="0f0939624ea35d3dd7896d9216bee5d4" category="paragraph">*我看不到應用程式的任何PVCS都與GCP CVS綁定。錯誤為何？*</block>
-  <block id="6a1ee7a7d4b8f2fc793568f158af438f" category="paragraph">您應該參考類似下列的輸出：</block>
-  <block id="2497006a3d717fa05f4253255b4682d2" category="paragraph">設定叢集的持續儲存設備。您可以使用Azure NetApp Files 由NetApp或Azure管理的磁碟。如需使用下列選項設定Azure的詳細資訊、請參閱入門文件：</block>
   <block id="0ab04539adb80fe9a1c9f5dc0be183d2" category="section-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block> 檢閱Amazon Web Services的Astra Control Service要求</block>
   <block id="dd8153a2eaefa2ca6b22e74080a45577" category="section-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block> 建立Amazon帳戶</block>
   <block id="d2d49f8b074c326544953d30a666756a" category="section-title"><block ref="05b2444faffd66d76e88602ea7dd353f" category="inline-image-macro-rx" type="image"></block> 安裝Amazon Web Services CLI</block>
@@ -1928,8 +1916,6 @@
   <block id="c965062d34f97b8a807d6043b0889aa4" category="paragraph">您的自我管理叢集必須符合下列需求：</block>
   <block id="58585810a4337be95bcfebedb828d056" category="list-text">叢集必須可透過網際網路存取。</block>
   <block id="834a9cd206312978cd28b32979a72bf7" category="list-text">如果您使用或打算使用已啟用SCSI驅動程式的儲存設備、則叢集上必須安裝適當的SCSI驅動程式。如需使用SCSI驅動程式來整合儲存設備的詳細資訊、請參閱儲存服務的說明文件。</block>
-  <block id="1aec847a00d9758f901c82fc829ba738" category="list-text">*可存取的Kubeconfig *：您可以存取 <block ref="5c481c89be9c4fdcaa80bfd3c3829692" category="inline-xref-macro-rx"></block> 這只包含一個內容元素。</block>
-  <block id="1a6b6e95b95a8e0de09a6566562ea376" category="paragraph-title">建立管理角色Kubeconfig（適用於執行Rancher、OpenShift和上游Kubernetes的叢集）</block>
   <block id="17fc42c08affacba5657de8d171ed30e" category="list-text">* Cloud instance name*（適用於供應商管理的叢集）：為新增此叢集時所建立的新雲端執行個體提供名稱。深入瞭解 <block ref="32e60ef2ecbf9cc1dffc20ea8b07ceea" category="inline-link-macro-rx"></block>。</block>
   <block id="1fe883570039bf797197aff2f9905e79" category="list-text">（選用）* Storage *：選取要將Kubernetes應用程式部署至此叢集的儲存類別、預設為使用。</block>
   <block id="a0652b7f26bfa45b4a805218ab132fd2" category="paragraph">*對於供應商管理的叢集*：如果這是您為此雲端供應商新增的第一個叢集、Astra Control Service會為雲端供應商建立物件存放區、以便備份在合格叢集上執行的應用程式。（當您新增此雲端供應商的後續叢集時、不會再建立其他物件存放區。）如果您指定預設儲存類別、Astra Control Service會設定您指定的預設儲存類別。對於在Amazon Web Services或Google Cloud Platform中管理的叢集、Astra Control Service也會在叢集上建立管理員帳戶。這些動作可能需要幾分鐘的時間。</block>
@@ -1949,7 +1935,6 @@
   <block id="1bdec68ba7ba69d1cfefb7e18a857ef4" category="inline-link">設定文件</block>
   <block id="e7f7ae1f9423fb8774a02e2ae647e158" category="list-text">如果您計畫將NetApp Cloud Volumes ONTAP 支援作為儲存後端、則需要設定Cloud Volumes ONTAP 支援功能以搭配Microsoft Azure使用。請參閱Cloud Volumes ONTAP 《The》<block ref="8bd14818004729c0926343811de7e4e9" category="inline-link-rx"></block>。</block>
   <block id="d75122947e3b2c3b0a4b44dfa3966432" category="list-text">如果您打算將NetApp Cloud Volumes ONTAP 支援作為儲存後端、則需要設定Cloud Volumes ONTAP 支援功能以搭配Google Cloud使用。請參閱Cloud Volumes ONTAP 《The》<block ref="3a89728ad1d2dcbb16e661d8af8129b1" category="inline-link-rx"></block>。</block>
-  <block id="cac25a8107e0ae4e458a81d1cd3dc8d2" category="list-text">如果您使用或打算使用NetApp儲存設備、請確定您已安裝最新版的Astra Trident：</block>
   <block id="972bcf4ffaa6d6b2c50833f0c86517d2" category="list-text">*儲存類別*：如果您安裝的應用程式已明確設定儲存類別、而且需要複製應用程式、則複製作業的目標叢集必須具有原本指定的儲存類別。將具有明確設定儲存類別的應用程式複製到沒有相同儲存類別的叢集、將會失敗。</block>
   <block id="e5de374e1d369bfc7e8ec51b5b744933" category="cell"><block ref="a941f8adb5ae079ebc739cb59407fd30" prefix="" category="inline-code"></block></block>
   <block id="be5e0e20ce0e311437852c90af7c8276" category="cell"><block ref="639125955d3128c08b048bc254433dbf" prefix="" category="inline-code"></block></block>
@@ -2041,7 +2026,6 @@
   <block id="24411cb39fcec9426e23c56d3c9322ae" category="inline-link">適用於私有 OpenShift 叢集的 Azure 文件</block>
   <block id="72eb22c3894670c20dfb331bb6054d14" category="list-text"><block ref="72eb22c3894670c20dfb331bb6054d14" category="inline-link-rx"></block></block>
   <block id="1c485bc46ff352eb7977d1a404cd382e" category="paragraph">您需要在私有叢集上安裝 Astra Connector 運算子。如果您使用的是堡壘主機、請從堡壘主機的命令列發出這些命令。</block>
-  <block id="fe81019bf8ba8d2ac0185cd8a4af1faa" category="list-text">修改 Astra Connector 運算子儲存庫組態 / 範例目錄中的範例組態檔案、以納入<block ref="ee45b718b9170963d4b014935dcf1f92" prefix=" " category="inline-code"></block> 金鑰。例如：</block>
   <block id="ed22187ccd9f4d7245c81d9a6c00b947" category="paragraph">您現在可以將私有叢集新增至 Astra Control Service 。遵循標準工作流程、將叢集新增至Astra Control Service：<block ref="240044c611ecbc1dfa48c963d44f13ca" category="inline-link-rx"></block>。</block>
   <block id="9854a9d6e0852fc6b22871974ea749cf" category="paragraph">不可以當您的叢集新增至 Astra Control 時、服務會自動在 Kubernetes 叢集上安裝 NetApp 的 Trident Container Storage Interface （ CSI ）驅動程式。此驅動程式可用於為雲端供應商所支援的叢集配置持續磁碟區。</block>
   <block id="f8f1ef03f08e7d1c3e62dd87dde91f57" category="paragraph">是的。Astra Control在應用程式上執行的快照作業包括繫結至應用程式PVCS的所有PV快照。</block>
@@ -2109,7 +2093,6 @@
   <block id="9a8d086014c5bd3e4ccfd14a881f8fcd" category="paragraph">Astra Control Service 可使用 Amazon Elastic Block Store （ EBS ）、 Amazon FSX for NetApp ONTAP 或 NetApp Cloud Volumes ONTAP 作為 Amazon Elastic Kubernetes Service （ EKS ）叢集的儲存後端。</block>
   <block id="68bd054170816bc3e89c4e00c3a23bfd" category="paragraph">如需設定NetApp Cloud Volumes ONTAP 產品的詳細資訊、包括效能建議、請造訪<block ref="b17f0a969868e5279849aa167864d3ad" category="inline-link-rx"></block>。</block>
   <block id="5e45edcd9985e188c258e7b6515feeea" category="paragraph">Astra Control Service 支援 Azure NetApp Files 、 Azure 託管磁碟或 NetApp Cloud Volumes ONTAP 作為 Azure Kubernetes 服務（ aks ）叢集的儲存後端。</block>
-  <block id="6bab6ac71f743f37f154b7b0219c56a8" category="paragraph">Astra Control Service 支援 Cloud Volumes Service for Google Cloud 、 Google Persistent Disk 或 NetApp Cloud Volumes ONTAP 作為持續磁碟區的儲存後端選項。</block>
   <block id="09a08aa51d9a5d34a5bc6cecdb1f03bf" category="paragraph">您可以在將新叢集新增至Astra Control時新增雲端執行個體。請參閱 <block ref="04d97bec7f4fa11002764129cf40d13a" category="inline-link-macro-rx"></block> 以取得更多資訊。</block>
   <block id="9743b1bac661724fbae098bb88f6131d" category="list-text"><block ref="9743b1bac661724fbae098bb88f6131d" category="inline-link-rx"></block></block>
   <block id="84810f606cf208e2aa62628838041ba8" category="list-text">Astra Trident 和外部快照控制器是儲存後端作業所必需的。若要安裝、請執行下列步驟：</block>
@@ -2132,4 +2115,47 @@
   <block id="5a5355eda2f1cf003d25254ee2c311a3" category="section-title">具有特定快照控制器版本的 Kubernetes 1.25 或更新版本叢集快照可能會失敗</block>
   <block id="f9f1ea7c0040d9bdb077f9ce68de31e3" category="paragraph">如果叢集上安裝 Snapshot 控制器 API 的 v1beta1 版、執行 1.25 版或更新版本的 Kubernetes 叢集快照可能會失敗。</block>
   <block id="2ad74d9f76ccccd37e4f9c6cb27f1cbd" category="paragraph">因應措施是在升級現有 Kubernetes 1.25 或更新版本的安裝時執行下列動作：</block>
+  <block id="3865e2c640ef43dc8b6cdde8577fdae3" category="summary">對於自行管理的叢集、您可能需要確定使用的是正確的 Astra Trident 版本。</block>
+  <block id="c58984b36e9505bff0dfa89bc0d17033" category="doc">檢查 Astra Trident 版本</block>
+  <block id="190b68a154719afc372800ea3a0b1df0" category="paragraph">若要新增使用 Astra Trident 進行儲存服務的自我管理叢集、請確定 Astra Trident 的安裝版本為最新版本。</block>
+  <block id="03ae56ea52e1d5c8f0588d85da03b245" category="paragraph">您可以使用 Astra Control Service 來管理 Astra 中的私有 Azure Kubernetes 服務（ AKS ）和 Red Hat OpenShift 叢集。這些指示假設您已建立私有 aks 或 OpenShift 叢集、並準備了安全的方法來遠端存取；如需建立及存取私有 aks 或 OpenShift 叢集的詳細資訊、請參閱下列文件：</block>
+  <block id="e35275b4b4a62199b607326f4cc2e619" category="inline-link">Amazon EKS 文件</block>
+  <block id="e0ab955e38e9d09e11bb4ce661de116e" category="paragraph">您可以使用 Astra Control Service 來管理私有 Amazon Elastic Kubernetes Service （ EKS ）叢集。這些指示假設您已建立私有 EKS 叢集、並準備了安全的方法來遠端存取；如需建立及存取私有 EKS 叢集的詳細資訊、請參閱<block ref="25cfe69edfa7c63ce11681ed9b1756b6" category="inline-link-rx"></block>。</block>
+  <block id="74b1e5c348a848bb4ce21d77b42cc99d" category="list-text">修改 Astra Connector 運算子儲存庫組態 / 範例目錄中的範例組態檔案、以包含下列機碼的環境特定值：</block>
+  <block id="68be0da5bed11ebd00d3c25f1c35fd33" category="list-text"><block ref="ee45b718b9170963d4b014935dcf1f92" prefix="" category="inline-code"></block></block>
+  <block id="706df4873c9abebfb12bbbce94eea59e" category="list-text"><block ref="e4906094d39f2d4e06b2ae62d33a367d" prefix="" category="inline-code"></block></block>
+  <block id="5da0e75e632878ad7543a7a3509a3b72" category="list-text"><block ref="1880aaef19ef807bec19563ae1d07a45" prefix="" category="inline-code"></block></block>
+  <block id="27f514d9b9bd32e1adf37803dc94ee77" category="list-text"><block ref="f5030bbb60417bae3aabe8040f9f6de4" prefix="" category="inline-code"></block></block>
+  <block id="506c2c0c7f5b70af3df68c45c46f45a7" category="paragraph">例如：</block>
+  <block id="f30fbd4ef5cb7bea87622409fb60cedc" category="paragraph">設定叢集的持續儲存設備。如需設定持續儲存設備的詳細資訊、請參閱入門文件：</block>
+  <block id="209360388d2327cf0da8f0db9d83d822" category="list-text">儲存資源池</block>
+  <block id="b61e26b74720f596080e0b8b7cc19a51" category="list-text">如果您將 NetApp Cloud Volumes Service 用作 CVS 服務類型的儲存後端、則必須先設定儲存集區、然後才能配置磁碟區。請參閱 <block ref="429770a6434e67b528ee2674b1263f6f" category="inline-link-macro-rx"></block> 以取得更多資訊。</block>
+  <block id="648076d1ba75a7ad5fece7ac72d037cb" category="list-text">您可以存取僅包含一個內容元素的叢集 kubeconfig 檔案。追蹤 <block ref="9d8ee3d0d4f5c967db921af26c4c5a7a" category="inline-link-macro-rx"></block> 產生管理叢集角色 kubeconfig 檔案。</block>
+  <block id="a70a43b113125b1448d1fcb519d36b91" category="inline-link-macro">請檢查以確定其為最新版本</block>
+  <block id="c3c1443d616920fc43d7d7477292d060" category="list-text">* Astra Trident * ：如果您使用或打算使用 NetApp 儲存設備、請確定您已安裝最新版本的 Astra Trident 。如果 Astra Trident 已安裝、 <block ref="331db620f278bf6f4c96acfa252801e6" category="inline-link-macro-rx"></block>。</block>
+  <block id="84333d7ff615717c719381f57406a949" category="list-text">* 已設定 Astra Trident 儲存後端 * ：至少必須有一個 Astra Trident 儲存後端<block ref="5225aa45493862e8671db3c546f615ec" category="inline-link-rx"></block> 在叢集上。</block>
+  <block id="0df1bbdefb6c7ab54388f20e615d6ff6" category="list-text">* 已設定的 Astra Trident 儲存類別 * ：至少必須有一個 Astra Trident 儲存類別<block ref="56eee92baaddefbebda4bc1d0011f25b" category="inline-link-rx"></block> 在叢集上。如果已設定預設儲存類別、請確定只有一個儲存類別具有該註釋。</block>
+  <block id="eddf0b0c77ced4551605b01f9388baea" category="summary">您需要為自我管理的叢集建立管理角色的 kubeconfig 檔案。</block>
+  <block id="9dc913e0573023f0b54d8d304c10a592" category="doc">建立管理叢集角色 kubeconfig 檔案</block>
+  <block id="8737bd0c30a0b2e2c8127074a8e8ff3b" category="paragraph">若要新增自我管理的叢集、您需要建立管理叢集角色 kubeconfig 檔案。</block>
+  <block id="ddc9715607fb981646b02ffaaae9d35b" category="section-title">為 Rancher 、上游 Kubernetes 和 Red Hat OpenShift 叢集建立一個 Kubeconfig 檔案</block>
+  <block id="bacde2d5f8907c39cfce03260081b849" category="section-title">為 Amazon EKS 叢集建立一個 kubeconfig 檔案</block>
+  <block id="b54e0018cc383761560c8cea8c440181" category="paragraph">請依照 Amazon 文件中的指示、為 Amazon EKS 叢集建立 Kribeconfig 檔案：</block>
+  <block id="219018d1a7fc0ccfc7ae0919efd38830" category="inline-link">為 Amazon EKS 叢集建立或更新 Kribeconfig 檔案</block>
+  <block id="5efa640818add52a71a9634fe973dd16" category="paragraph"><block ref="5efa640818add52a71a9634fe973dd16" category="inline-link-rx"></block></block>
+  <block id="0f2007d7b4634d1a7885862c6f181b9a" category="paragraph">Astra Control Service 支援 NetApp Cloud Volumes Service for Google Cloud 、 Google Persistent Disk 或 NetApp Cloud Volumes ONTAP 做為持續磁碟區的儲存後端選項。</block>
+  <block id="2bb207919bf6f4a923276cffca81d5b6" category="inline-link">Cloud Volumes Service 文件</block>
+  <block id="f6badf2ea0b8925a32fd7a8939c49d76" category="admonition">如果您將 CVS 服務類型與 Astra Trident 23.01 或更新版本搭配使用、則必須先設定儲存集區、才能配置磁碟區。如果您在未設定儲存資源池的情況下佈建磁碟區、則磁碟區資源配置將會失敗。請參閱<block ref="c8e96960daef0620d62e613312bed1b3" category="inline-link-rx"></block> 以取得有關建立 Volume 的更多資訊。</block>
+  <block id="fe0e59bea1249a422ae632fb679a3eb4" category="section-title">2023 年 5 月 30 日</block>
+  <block id="a3713717b03d2915f6765e05ed6b1408" category="list-text">支援私有 Amazon EKS 叢集</block>
+  <block id="bc5c44b285a0165e3fe1a37a7fb809b8" category="list-text">支援在還原或複製作業期間選取目的地儲存類別</block>
+  <block id="6b232a7c52529298a8d8659da49a6c55" category="inline-link">在 Azure Marketplace 中檢視 Astra Control 服務計畫和定價</block>
+  <block id="561ecf6f2d051ab4729a8a9277ea7778" category="list-text"><block ref="561ecf6f2d051ab4729a8a9277ea7778" category="inline-link-rx"></block></block>
+  <block id="bcc2e0d21e0f1a00c0be8199d1e80246" category="list-text">前往<block ref="6f6aa6ec8b4edd29e99f72f87495c932" category="inline-link-rx"></block>。</block>
+  <block id="cc5b03fa4f937c63363767c812feeb34" category="list-text">選取 * 檢視購買選項 * 。</block>
+  <block id="7934395fd856fdc8728077a88a0b2b96" category="list-text">如果系統提示您這麼做、請登入 AWS 帳戶、或建立新帳戶。</block>
+  <block id="71cebf6cc339e547055d19b1ebb71cfb" category="list-text">*還原至新命名空間*：使用此程序可將應用程式還原至其他叢集、或從來源還原具有不同命名空間的叢集。您也可以使用此程序將應用程式移轉至不同的儲存類別。</block>
+  <block id="a7a08622ee5c8019b57354b99b7693b2" category="list-text">請選擇下列其中一項：</block>
+  <block id="42f6c62242bb567ac4a309a82717d6e9" category="list-text">* 使用原始儲存類別還原 * ：除非目標叢集上不存在、否則應用程式會使用原本關聯的儲存類別。在這種情況下、將會使用叢集的預設儲存類別。</block>
+  <block id="cc9916e812cf950bc0992213a1e5cc57" category="list-text">* 使用不同的儲存類別還原 * ：選取目標叢集上存在的儲存類別。所有應用程式磁碟區、無論其最初關聯的儲存類別為何、都會移轉到這個不同的儲存類別、作為還原的一部分。</block>
 </blocks>

@@ -119,6 +119,7 @@ Google Cloud區域:: 如果您計畫將Cloud Volumes Service 適用於Google Clo
 
 --
 GKE叢集的操作模式:: 您應該使用「標準」操作模式。目前尚未測試自動引航模式。 link:https://cloud.google.com/kubernetes-engine/docs/concepts/types-of-clusters#modes["深入瞭解操作模式"^]。
+儲存資源池:: 如果您將 NetApp Cloud Volumes Service 用作 CVS 服務類型的儲存後端、則必須先設定儲存集區、然後才能配置磁碟區。請參閱 link:../learn/choose-class-and-size.html#overview["GKE叢集的服務類型、儲存類別和PV大小"^] 以取得更多資訊。
 
 
 
