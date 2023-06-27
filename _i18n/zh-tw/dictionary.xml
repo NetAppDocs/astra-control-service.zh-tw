@@ -1559,8 +1559,6 @@
   <block id="ffcc0feca3c8cd069d4965c88a5c1ebb" category="paragraph">如果未安裝Astra Trident、您會看到類似下列的輸出：</block>
   <block id="6c8bc25bbb383bdd569b3a8b67462c4a" category="list-text">確保Pod正在執行：</block>
   <block id="6d55356ca8cb9b27cfa6e2bb46ebb089" category="paragraph">回應範例：</block>
-  <block id="7e4e5121275b933eab9a9d5689c80875" category="paragraph">在執行步驟之前、請先確定機器上有下列項目：</block>
-  <block id="f6ca4dc4443aea5e0b0f91e229709c7c" category="list-text">已安裝KECV1.19或更新版本</block>
   <block id="ee6257954c2f973cd54453583dc792ca" category="list-text">具有作用中內容叢集管理權限的作用中Kbeconfig</block>
   <block id="5f85438ae0f2c9122a5cf54e8e098c98" category="list-text">建立服務帳戶、如下所示：</block>
   <block id="4ab759267d2877902a521921e10f5f5b" category="list-text">建立名為的服務帳戶檔案<block ref="a22dad5601b31427598f571133fb2aed" prefix=" " category="inline-code"></block>。</block>
@@ -2170,4 +2168,6 @@
   <block id="2b30723c9e7134241d748eae9faa73a6" category="paragraph">請依照下列指示、為 Rancher 、上游 Kubernetes 和 Red Hat OpenShift 叢集建立一個 Kubeconfig 檔案。</block>
   <block id="e6bab5933e86bee96753d8079fcceaed" category="section-title">2023 年 6 月 26 日</block>
   <block id="b77235e640ab8b5a90390081c423e880" category="list-text">Azure Marketplace 訂閱現在以每小時計費、而非每分鐘計費</block>
+  <block id="972d9f8e0e28ff88864515cf37f116b2" category="paragraph">在開始之前、請確定機器上已安裝下列項目：</block>
+  <block id="e518ff6eca9962a9ad470732191bb026" category="list-text">已安裝KECV1.23或更新版本</block>
 </blocks>
