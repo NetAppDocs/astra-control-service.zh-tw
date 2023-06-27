@@ -258,7 +258,6 @@
   <block id="5ddf59442786f24c8da307580d0ef431" category="list-text">優質訂閱</block>
   <block id="b7b192852402c2ca345a411875aaae75" category="paragraph">如果您還沒有Astra Control帳戶、購買Premium訂閱會自動為您建立Astra Control帳戶。如果您有現有的免費方案、系統會自動將您轉換為「優質訂閱」。</block>
   <block id="6b77f6ea2428949be628fe51587bf096" category="section-title">Google Cloud帳單</block>
-  <block id="4edd6e2cac5c4de2dfed17f138966576" category="paragraph">當您使用Astra Control Service管理GKE叢集時、NetApp Cloud Volumes Service 支援持續的磁碟區、而應用程式的備份則儲存在Google Cloud Storage儲存庫中。</block>
   <block id="45f0f10c20d19ddc78bfdf6e608f069a" category="inline-link">檢視Cloud Volumes Service 報價詳細資料以供參考</block>
   <block id="e952d755f5ef5c7803cdfa78e9eadb1a" category="list-text"><block ref="89dd56840eed735019d241a1ba2301aa" category="inline-link-rx"></block>。</block>
   <block id="1e74109ffea9efee081364cbc0ee2939" category="inline-link">Google Cloud區域</block>
@@ -266,7 +265,6 @@
   <block id="ad3fb6b690e4f991f4efd7c6f5faa57e" category="inline-link">檢視Google Cloud儲存桶的定價詳細資料</block>
   <block id="a818db5e8b40448ca77b94e5a5ad28f2" category="list-text"><block ref="eb8eb935c0c14910141318c56c72ab57" category="inline-link-rx"></block>。</block>
   <block id="1a8745ef58feccdedbe914ac98126031" category="section-title">Microsoft Azure帳單</block>
-  <block id="386f63f35c235633bcba30f10411ff68" category="paragraph">當您使用Astra Control Service管理高效能叢集時、持續的磁碟區會以Azure NetApp Files 支援功能為後盾、而應用程式的備份則會儲存在Azure Blob容器中。</block>
   <block id="1658b2532a0c8ef3d1a8919b2adca0b1" category="inline-link">檢視Azure NetApp Files 報價詳細資料以供參考</block>
   <block id="f3cb6a45114448521e0d760118c3450a" category="list-text"><block ref="5b54cd0a32569a83c26d011725a70e8f" category="inline-link-rx"></block>。</block>
   <block id="834f115f891f80f44d1e669ac9431329" category="inline-link">檢視Microsoft Azure Blob儲存設備的定價詳細資料</block>
@@ -1348,7 +1346,6 @@
   <block id="2c1b2aa1361b2b30f079d2afc37936be" category="admonition">Astra Control本身並非標準應用程式、而是「系統應用程式」。 您不應嘗試自行管理Astra Control。依預設、Astra Control本身不會顯示用於管理。</block>
   <block id="f60b3d0d58c083c7ae2804ae31c0e422" category="paragraph">如果您在刪除叢集之前未刪除持續磁碟區、則需要從雲端供應商手動刪除後端磁碟區。</block>
   <block id="3e00312869fede718a42b76c5ee6e2ff" category="section-title">Amazon Web Services帳單</block>
-  <block id="7e2fa2a7770af29cbdd272c113a7fc4e" category="paragraph">使用Astra Control Service管理AWS叢集時、持續磁碟區會以EBS或FSXfor NetApp為後盾ONTAP 、而應用程式的備份則儲存在AWS儲存區中。</block>
   <block id="9e3c019abe231865229584e6f6e502de" category="inline-link">檢視Amazon Web Services的價格詳細資料</block>
   <block id="aa992a3ab98a373e82c93ded62f2d914" category="list-text"><block ref="31ae57f3df84273eeed4bc5214fec458" category="inline-link-rx"></block>。</block>
   <block id="0ea2d3938278fb80f86236d57c1fdd9f" category="paragraph">使用自動保護原則或臨機操作、拍攝快照和備份資料、保護您的應用程式。您可以使用Astra UI或<block ref="c3bdc3d9b521474044010a53b984c85e" category="inline-link-rx"></block> 保護應用程式。</block>
@@ -1724,7 +1721,6 @@
   <block id="d79e72b74c5b67b0661208c31b83584a" category="paragraph">您可以使用多種方法來管理Astra Control Service帳戶帳單。如果您使用Azure或Amazon AWS、可以透過Microsoft Azure Marketplace或AWS Marketplace訂閱Astra Control Service方案。執行此動作時、您可以透過Marketplace管理帳單詳細資料。或者、您也可以直接向NetApp訂閱。如果您直接向NetApp訂閱、您可以透過Astra Control Service管理帳單詳細資料。如果您在未訂閱的情況下使用Astra Control Service、系統會自動訂閱免費方案。</block>
   <block id="f5eb6d3938f47779581da936415d136a" category="paragraph">Astra Control Service Free Plan可讓您管理帳戶中最多10個命名空間。如果您想要管理10個以上的命名空間、則必須從「免費方案」升級至「優質方案」、或透過Azure Marketplace或AWS Marketplace訂閱、以設定帳單。</block>
   <block id="89b4085fdb03b14f69ace6f96236c990" category="list-text">免費管理最多10個命名空間。</block>
-  <block id="c9a3db1f241c40ba4fb01ecd0f5f278c" category="list-text">以每小時特定的速率、每個命名空間管理無限數量的命名空間。</block>
   <block id="2f4b44f727ad34215a2cafb46fe686b5" category="list-text">以折扣率預先付費、每年訂閱一次、每個_namespace Pack_最多可管理10個命名空間。請聯絡NetApp銷售人員、以根據貴組織的需求購買任意數量的套件。例如、從Astra Control Service購買3個套件來管理30個命名空間。如果您管理的命名空間超過一年訂閱所允許的數量、則您將依照訂閱相依的超額使用率（每個額外命名空間）收取費用。</block>
   <block id="651491e55c46a7d045ef58a80fa5e427" category="paragraph">當您建立Astra Control帳戶時、系統會自動訂閱免費方案。Astra Control的儀表板會顯示您目前在允許的10個可用命名空間中管理多少個命名空間。當管理第一個包含命名空間的應用程式時、就會開始為命名空間計費、當包含命名空間的最後一個應用程式未受管理時、就會停止為該命名空間計費。</block>
   <block id="3aa4dd0198751b5007ad998ab156a84c" category="paragraph">如果您嘗試管理第11個命名空間、Astra Control會通知您已達到Free Plan的上限。接著會提示您從「免費方案」升級至「優質方案」。每個額外命名空間的訂閱相依超額率將會對您收費。</block>
@@ -2046,7 +2042,6 @@
   <block id="5f116b62082ad46b96d2b6d9abbcf0ec" category="admonition">如果您選取不同的儲存類別、而此儲存類別在還原時並不存在、則會傳回錯誤。</block>
   <block id="ada8ec5cd268a153424f1f7cb79750a2" category="paragraph">叢集的狀態會變更為*移除*。之後、叢集將從 * 叢集 * 頁面移除、而不再由 Astra Control 管理。</block>
   <block id="85fcb9615339f8f8ea462bcc5faea0c9" category="list-text">* 請先保護應用程式 * ：強烈建議您在還原應用程式之前、先拍攝快照或備份應用程式。這可讓您在還原失敗時、從快照或備份進行複製。</block>
-  <block id="dad130a6ad30a7802e5df566fbf9e7fc" category="list-text">*檢查目的地磁碟區*：如果還原至不同的叢集、請確定叢集使用相同的持續磁碟區存取模式（例如ReadWriteMany）。如果目的地持續磁碟區存取模式不同、還原作業將會失敗。</block>
   <block id="4250100f234fe7960272e070cd21fe6e" category="list-text">* 空間需求規劃 * ：當您對使用 NetApp ONTAP 儲存設備的應用程式執行原位還原時、還原的應用程式所使用的空間可能加倍。執行就地還原之後、請從還原的應用程式中移除任何不想要的快照、以釋放儲存空間。</block>
   <block id="fd09da9cdc1a428192d0b1e00adcc181" category="list-text">從「動作」欄的「選項」功能表中、選取 * 還原 * 。</block>
   <block id="fb43cf9ce5f31c6de66316a29725099b" category="list-text">選取要用來還原應用程式的快照或備份、此應用程式會將應用程式還原為其舊版。</block>
@@ -2137,10 +2132,7 @@
   <block id="0df1bbdefb6c7ab54388f20e615d6ff6" category="list-text">* 已設定的 Astra Trident 儲存類別 * ：至少必須有一個 Astra Trident 儲存類別<block ref="56eee92baaddefbebda4bc1d0011f25b" category="inline-link-rx"></block> 在叢集上。如果已設定預設儲存類別、請確定只有一個儲存類別具有該註釋。</block>
   <block id="eddf0b0c77ced4551605b01f9388baea" category="summary">您需要為自我管理的叢集建立管理角色的 kubeconfig 檔案。</block>
   <block id="9dc913e0573023f0b54d8d304c10a592" category="doc">建立管理叢集角色 kubeconfig 檔案</block>
-  <block id="8737bd0c30a0b2e2c8127074a8e8ff3b" category="paragraph">若要新增自我管理的叢集、您需要建立管理叢集角色 kubeconfig 檔案。</block>
-  <block id="ddc9715607fb981646b02ffaaae9d35b" category="section-title">為 Rancher 、上游 Kubernetes 和 Red Hat OpenShift 叢集建立一個 Kubeconfig 檔案</block>
   <block id="bacde2d5f8907c39cfce03260081b849" category="section-title">為 Amazon EKS 叢集建立一個 kubeconfig 檔案</block>
-  <block id="b54e0018cc383761560c8cea8c440181" category="paragraph">請依照 Amazon 文件中的指示、為 Amazon EKS 叢集建立 Kribeconfig 檔案：</block>
   <block id="219018d1a7fc0ccfc7ae0919efd38830" category="inline-link">為 Amazon EKS 叢集建立或更新 Kribeconfig 檔案</block>
   <block id="5efa640818add52a71a9634fe973dd16" category="paragraph"><block ref="5efa640818add52a71a9634fe973dd16" category="inline-link-rx"></block></block>
   <block id="0f2007d7b4634d1a7885862c6f181b9a" category="paragraph">Astra Control Service 支援 NetApp Cloud Volumes Service for Google Cloud 、 Google Persistent Disk 或 NetApp Cloud Volumes ONTAP 做為持續磁碟區的儲存後端選項。</block>
@@ -2158,4 +2150,24 @@
   <block id="a7a08622ee5c8019b57354b99b7693b2" category="list-text">請選擇下列其中一項：</block>
   <block id="42f6c62242bb567ac4a309a82717d6e9" category="list-text">* 使用原始儲存類別還原 * ：除非目標叢集上不存在、否則應用程式會使用原本關聯的儲存類別。在這種情況下、將會使用叢集的預設儲存類別。</block>
   <block id="cc9916e812cf950bc0992213a1e5cc57" category="list-text">* 使用不同的儲存類別還原 * ：選取目標叢集上存在的儲存類別。所有應用程式磁碟區、無論其最初關聯的儲存類別為何、都會移轉到這個不同的儲存類別、作為還原的一部分。</block>
+  <block id="9d9af3135a71ef374583f995f07a2539" category="list-text">* 檢查目的地 Volume * ：如果您還原至不同的儲存類別、請確定儲存類別使用相同的持續磁碟區存取模式（例如 ReadWriteMany ）。如果目的地持續磁碟區存取模式不同、還原作業將會失敗。</block>
+  <block id="5856d66908e22cf434dbd9afeccf641a" category="list-text">根據命名空間、以特定速率管理無限數量的命名空間。</block>
+  <block id="bf4f678d4a57f18576a93b45fbd878bd" category="paragraph">永久性磁碟區由 NetApp Cloud Volumes Service 備份、應用程式的備份則儲存在 Google Cloud Storage 儲存庫中。</block>
+  <block id="a56e21e29fdc4a1e8ca3d0fe83ad8ec3" category="paragraph">永久性磁碟區由 Azure NetApp Files 備份、而應用程式的備份則儲存在 Azure Blob 容器中。</block>
+  <block id="86a07afa8b9287decc7dfb566c79acd0" category="admonition">Astra Control Service 的 Azure 帳單費率是每小時一次、使用時間結束 29 分鐘後、便會開始新的計費時數。</block>
+  <block id="e981ded0727c1f04fd1694b122e20eaf" category="paragraph">持續磁碟區由 EBS 或 FSX 支援 NetApp ONTAP 、而應用程式的備份則儲存在 AWS 儲存區中。</block>
+  <block id="d4ae639645d553b896abe75ac8b8fb73" category="paragraph">您可以使用 kubeconfig 檔案將叢集新增至 Astra Control Service 。視您要新增的叢集類型而定、您可能需要使用特定步驟手動建立叢集的 kudeconfig 檔案。</block>
+  <block id="0a5ba28570aea2968b693d84884e128b" category="list-text"><block ref="270c1986302e0f0fbc9bdc7d3d446b6f" category="inline-xref-macro-rx"></block></block>
+  <block id="83b7dd6cfece02a28db9f2ac3e288f6b" category="list-text"><block ref="ff6d2cef6da4f3683aa2957d17e520ce" category="inline-xref-macro-rx"></block></block>
+  <block id="f4e3f91ab28afe92afe1b18439c87032" category="paragraph">請依照下列指示、為 Amazon EKS 叢集建立 Kribeconfig 檔案和永久性權杖機密。在 EKS 中託管的叢集需要永久權杖密碼。</block>
+  <block id="86c2623498c303c25d17eef1213b105f" category="list-text">請依照 Amazon 文件中的指示來產生一個 kubeconfig 檔案：</block>
+  <block id="213438247a7298f2d7b9c6cacef2c596" category="paragraph">視需要調整服務帳戶名稱。命名空間<block ref="7396424ab57f5865f0549a6bcf5fcba3" prefix=" " category="inline-code"></block> 為這些步驟所需。如果您在此處變更服務帳戶名稱、您應該在下列步驟中套用相同的變更。</block>
+  <block id="258e85c2b71b211fc9c71a141998a89d" category="list-text">建立名為的服務帳戶權杖秘密檔案<block ref="75341b94414ff18c92f49d4d7c83a188" prefix=" " category="inline-code"></block>。</block>
+  <block id="b73c5900cc67ec3996003ea18742f312" category="list-text">套用權杖密碼：</block>
+  <block id="0c4c0773122e9387cad53cff8068b18b" category="list-text">擷取權杖密碼：</block>
+  <block id="84233ef8b39305d023ce1d5e237bbe9d" category="list-text">更換<block ref="ee11cbb19052e40b07aac0ca060c23ee" prefix=" " category="inline-code"></block> AWS EKS Kubeconfig 檔案的區段與 Token 、如下列範例所示：</block>
+  <block id="393c821bd73b2367663c50c77fd00df6" category="section-title">為其他類型的叢集建立一個 kubeconfig 檔案</block>
+  <block id="2b30723c9e7134241d748eae9faa73a6" category="paragraph">請依照下列指示、為 Rancher 、上游 Kubernetes 和 Red Hat OpenShift 叢集建立一個 Kubeconfig 檔案。</block>
+  <block id="e6bab5933e86bee96753d8079fcceaed" category="section-title">2023 年 6 月 26 日</block>
+  <block id="b77235e640ab8b5a90390081c423e880" category="list-text">Azure Marketplace 訂閱現在以每小時計費、而非每分鐘計費</block>
 </blocks>

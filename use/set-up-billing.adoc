@@ -29,7 +29,7 @@ Astra Control Service Free Plan可讓您管理帳戶中最多10個命名空間�
 Astra Control Service提供三項計畫：
 
 免費方案:: 免費管理最多10個命名空間。
-優質PayGo:: 以每小時特定的速率、每個命名空間管理無限數量的命名空間。
+優質PayGo:: 根據命名空間、以特定速率管理無限數量的命名空間。
 優質訂閱:: 以折扣率預先付費、每年訂閱一次、每個_namespace Pack_最多可管理10個命名空間。請聯絡NetApp銷售人員、以根據貴組織的需求購買任意數量的套件。例如、從Astra Control Service購買3個套件來管理30個命名空間。如果您管理的命名空間超過一年訂閱所允許的數量、則您將依照訂閱相依的超額使用率（每個額外命名空間）收取費用。
 +
 --
@@ -50,7 +50,7 @@ ifdef::gcp[]
 
 === Google Cloud帳單
 
-當您使用Astra Control Service管理GKE叢集時、NetApp Cloud Volumes Service 支援持續的磁碟區、而應用程式的備份則儲存在Google Cloud Storage儲存庫中。
+永久性磁碟區由 NetApp Cloud Volumes Service 備份、應用程式的備份則儲存在 Google Cloud Storage 儲存庫中。
 
 * https://cloud.google.com/solutions/partners/netapp-cloud-volumes/costs["檢視Cloud Volumes Service 報價詳細資料以供參考"^]。
 +
@@ -67,12 +67,15 @@ ifdef::azure[]
 
 === Microsoft Azure帳單
 
-當您使用Astra Control Service管理高效能叢集時、持續的磁碟區會以Azure NetApp Files 支援功能為後盾、而應用程式的備份則會儲存在Azure Blob容器中。
+永久性磁碟區由 Azure NetApp Files 備份、而應用程式的備份則儲存在 Azure Blob 容器中。
 
 * https://azure.microsoft.com/en-us/pricing/details/netapp["檢視Azure NetApp Files 報價詳細資料以供參考"^]。
 * https://azure.microsoft.com/en-us/pricing/details/storage/blobs["檢視Microsoft Azure Blob儲存設備的定價詳細資料"^]。
 * https://azuremarketplace.microsoft.com/en-us/marketplace/apps/netapp.netapp-astra-acs?tab=PlansAndPrice["在 Azure Marketplace 中檢視 Astra Control 服務計畫和定價"]
 
+
+
+NOTE: Astra Control Service 的 Azure 帳單費率是每小時一次、使用時間結束 29 分鐘後、便會開始新的計費時數。
 
 endif::azure[]
 
@@ -82,7 +85,7 @@ ifdef::aws[]
 
 === Amazon Web Services帳單
 
-使用Astra Control Service管理AWS叢集時、持續磁碟區會以EBS或FSXfor NetApp為後盾ONTAP 、而應用程式的備份則儲存在AWS儲存區中。
+持續磁碟區由 EBS 或 FSX 支援 NetApp ONTAP 、而應用程式的備份則儲存在 AWS 儲存區中。
 
 * https://aws.amazon.com/eks/pricing/["檢視Amazon Web Services的價格詳細資料"^]。
 

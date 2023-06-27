@@ -16,6 +16,17 @@ NetApp會定期更新Astra Control Service、為您提供新功能、增強功�
 
 
 
+== 2023 年 6 月 26 日
+
+.新功能與支援
+* Azure Marketplace 訂閱現在以每小時計費、而非每分鐘計費
++
+link:../use/set-up-billing.html["設定帳單"]
+
+
+
+
+
 == 2023 年 5 月 30 日
 
 .新功能與支援
