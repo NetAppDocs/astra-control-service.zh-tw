@@ -2148,7 +2148,6 @@
   <block id="a7a08622ee5c8019b57354b99b7693b2" category="list-text">請選擇下列其中一項：</block>
   <block id="42f6c62242bb567ac4a309a82717d6e9" category="list-text">* 使用原始儲存類別還原 * ：除非目標叢集上不存在、否則應用程式會使用原本關聯的儲存類別。在這種情況下、將會使用叢集的預設儲存類別。</block>
   <block id="cc9916e812cf950bc0992213a1e5cc57" category="list-text">* 使用不同的儲存類別還原 * ：選取目標叢集上存在的儲存類別。所有應用程式磁碟區、無論其最初關聯的儲存類別為何、都會移轉到這個不同的儲存類別、作為還原的一部分。</block>
-  <block id="9d9af3135a71ef374583f995f07a2539" category="list-text">* 檢查目的地 Volume * ：如果您還原至不同的儲存類別、請確定儲存類別使用相同的持續磁碟區存取模式（例如 ReadWriteMany ）。如果目的地持續磁碟區存取模式不同、還原作業將會失敗。</block>
   <block id="5856d66908e22cf434dbd9afeccf641a" category="list-text">根據命名空間、以特定速率管理無限數量的命名空間。</block>
   <block id="bf4f678d4a57f18576a93b45fbd878bd" category="paragraph">永久性磁碟區由 NetApp Cloud Volumes Service 備份、應用程式的備份則儲存在 Google Cloud Storage 儲存庫中。</block>
   <block id="a56e21e29fdc4a1e8ca3d0fe83ad8ec3" category="paragraph">永久性磁碟區由 Azure NetApp Files 備份、而應用程式的備份則儲存在 Azure Blob 容器中。</block>
@@ -2170,4 +2169,7 @@
   <block id="b77235e640ab8b5a90390081c423e880" category="list-text">Azure Marketplace 訂閱現在以每小時計費、而非每分鐘計費</block>
   <block id="972d9f8e0e28ff88864515cf37f116b2" category="paragraph">在開始之前、請確定機器上已安裝下列項目：</block>
   <block id="e518ff6eca9962a9ad470732191bb026" category="list-text">已安裝KECV1.23或更新版本</block>
+  <block id="30136395f01879792198317c11831ea4" category="inline-link">Kubernetes</block>
+  <block id="501a7b3c879675fb528c68e904b076d1" category="list-text">* 檢查目的地 Volume * ：如果您還原至不同的儲存類別、請確定儲存類別使用相同的持續磁碟區存取模式（例如 ReadWriteMany ）。如果目的地持續磁碟區存取模式不同、還原作業將會失敗。例如、如果來源持續性磁碟區使用 rwx 存取模式、請選取無法提供 rwx 的目的地儲存類別、例如 Azure Managed Disks 、 AWS EBS 、 Google Persistent Disk 或<block ref="73a3350a1b91aeb6e2836fdf5975672c" prefix=" " category="inline-code"></block>將導致還原作業失敗。如需持續磁碟區存取模式的詳細資訊、請參閱<block ref="051768f02ea3f9f1a6b86b9d9b060248" category="inline-link-rx"></block> 文件。</block>
+  <block id="0f707c2e2c303edecbc57b2a451ad8a9" category="list-text">* 檢查目的地 Volume * ：如果您複製到不同的儲存類別、請確定儲存類別使用相同的持續磁碟區存取模式（例如 ReadWriteMany ）。如果目的地持續磁碟區存取模式不同、則複製作業將會失敗。例如、如果來源持續性磁碟區使用 rwx 存取模式、請選取無法提供 rwx 的目的地儲存類別、例如 Azure Managed Disks 、 AWS EBS 、 Google Persistent Disk 或<block ref="73a3350a1b91aeb6e2836fdf5975672c" prefix=" " category="inline-code"></block>，將導致克隆操作失敗。如需持續磁碟區存取模式的詳細資訊、請參閱<block ref="051768f02ea3f9f1a6b86b9d9b060248" category="inline-link-rx"></block> 文件。</block>
 </blocks>

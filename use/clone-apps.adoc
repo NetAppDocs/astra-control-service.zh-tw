@@ -20,6 +20,7 @@ summary: 複製現有的應用程式、在相同的Kubernetes叢集或其他叢�
 NOTE: 如果您將命名空間篩選器新增至執行掛勾、而執行還原或複製作業之後執行、且還原或複製來源與目的地位於不同的命名空間、則命名空間篩選器只會套用至目的地命名空間。
 
 .開始之前
+* * 檢查目的地 Volume * ：如果您複製到不同的儲存類別、請確定儲存類別使用相同的持續磁碟區存取模式（例如 ReadWriteMany ）。如果目的地持續磁碟區存取模式不同、則複製作業將會失敗。例如、如果來源持續性磁碟區使用 rwx 存取模式、請選取無法提供 rwx 的目的地儲存類別、例如 Azure Managed Disks 、 AWS EBS 、 Google Persistent Disk 或 `ontap-san`，將導致克隆操作失敗。如需持續磁碟區存取模式的詳細資訊、請參閱 https://kubernetes.io/docs/concepts/storage/persistent-volumes/#access-modes["Kubernetes"^] 文件。
 * 若要將應用程式複製到不同的叢集、您必須確定已為包含來源叢集的雲端執行個體指派預設儲存區。如果來源雲端執行個體沒有預設的儲存區集、跨叢集複製作業將會失敗。
 * 在複製作業期間、需要IngresClass資源或Webhooks才能正常運作的應用程式、不得在目的地叢集上定義這些資源。
 
