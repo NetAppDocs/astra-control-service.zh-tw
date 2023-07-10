@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: get-started/register.html 
 keywords: cloud central, sign up, log in, login, register, register for cloud central, create account, sign up for account, get an account, account, accounts 
-summary: Astra Control Service整合於NetApp Cloud Central的驗證服務中。註冊Cloud Central、即可存取Astra Control Service和NetApp的其他雲端服務。 
+summary: Astra Control Service整合於NetApp Cloud Central的驗證服務中。註冊 Cloud Central 、即可存取 Astra Control Service 和 NetApp 的其他雲端服務。 
 ---
 = 註冊Astra Control Service帳戶
 :hardbreaks:
@@ -46,7 +46,7 @@ image:acs-registration-free-plan.png["註冊表單「選擇計畫」標籤的快
 
 == 註冊 Cloud Central
 
-如果您還沒有NetApp Cloud Central帳戶、請註冊Cloud Central、以便存取Astra Control Service和NetApp的其他雲端服務。Astra Control Service整合於NetApp Cloud Central的驗證服務中。如果您已擁有Cloud Central帳戶並已完成註冊、則可以存取 https://astra.netapp.io["Astra控制服務"^] 直接使用Cloud Central認證資料。
+如果您尚未擁有 NetApp Cloud Central 帳戶、請註冊至 Cloud Central 、以便存取 Astra Control Service 和 NetApp 的其他雲端服務。Astra Control Service整合於NetApp Cloud Central的驗證服務中。如果您已擁有Cloud Central帳戶並已完成註冊、則可以存取 https://astra.netapp.io["Astra控制服務"^] 直接使用Cloud Central認證資料。
 
 
 TIP: 您可以使用單一登入功能、從公司目錄（聯盟身分識別）取得認證資料、登入Cloud Central。若要深入瞭解、請前往 https://cloud.netapp.com/help-center["Cloud Central說明中心"^] 然後選取* Cloud Central登入選項*。

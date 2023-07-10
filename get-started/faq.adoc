@@ -74,7 +74,7 @@ ifdef::aws[]
 
 *我可以將私有EKS叢集新增至Astra Control Service嗎？*
 
-目前Astra Control Service不支援私有EKS叢集。
+可以、您可以將私有 EKS 叢集新增至 Astra Control Service 。若要新增私有 EKS 叢集、請參閱 link:add-first-cluster.html["從Astra Control Service開始管理Kubernetes叢集"]。
 
 endif::aws[]
 
@@ -99,6 +99,14 @@ ifdef::gcp[]
 
 
 == 註冊Google Kubernetes Engine（GKE）叢集
+
+*我可以將私有GKE叢集新增至Astra Control Service嗎？*
+
+是的、您可以將私有GKE叢集新增至Astra Control Service。  若要新增私有 GKE 叢集、請參閱 link:add-first-cluster.html["從Astra Control Service開始管理Kubernetes叢集"]。
+
+私有 GKE 叢集必須具有 https://cloud.google.com/kubernetes-engine/docs/concepts/private-cluster-concept["授權網路"^] 設定為允許Astra控制IP位址：
+
+52.188.218.166/32
 
 *我的GKE叢集是否可以位於共用VPC上？*
 

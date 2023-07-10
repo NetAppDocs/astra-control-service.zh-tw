@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: get-started/whats-next.html 
 keywords: get started, manage apps, manage account 
-summary: 現在您已經登入並新增叢集至Astra Control、就能開始使用Astra Control的應用程式資料管理功能。 
+summary: 現在您已登入並新增叢集至 Astra Control 、就可以開始使用 Astra Control 的應用程式資料管理功能。 
 ---
 = 接下來呢？
 :hardbreaks:
@@ -12,7 +12,7 @@ summary: 現在您已經登入並新增叢集至Astra Control、就能開始使�
 
 
 [role="lead"]
-現在您已經登入Astra Control並新增叢集、就可以開始使用Astra Control的應用程式資料管理功能。
+現在您已登入並新增叢集至 Astra Control 、就可以開始使用 Astra Control 的應用程式資料管理功能。
 
 * link:../use/manage-apps.html["開始管理應用程式"]
 * link:../use/protect-apps.html["保護應用程式"]

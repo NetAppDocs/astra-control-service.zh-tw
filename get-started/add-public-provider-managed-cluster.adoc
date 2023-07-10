@@ -1,0 +1,263 @@
+---
+sidebar: sidebar 
+permalink: get-started/add-public-provider-managed-cluster.html 
+keywords: discover cluster, add cluster, add kubernetes cluster, discover kubernetes cluster, add cluster 
+summary: 設定環境之後、您就可以建立Kubernetes叢集、然後將其新增至Astra Control Service。 
+---
+= 將公有供應商託管的叢集新增至 Astra Control Service
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/get-started/
+
+
+[role="lead"]
+在您設定雲端環境之後、您就可以建立 Kubernetes 叢集、然後將其新增至 Astra Control Service 。
+
+* <<建立Kubernetes叢集>>
+* <<將叢集新增至 Astra Control Service>>
+* <<變更預設儲存類別>>
+
+
+
+
+== 建立Kubernetes叢集
+
+如果您還沒有叢集、可以建立符合的叢集 link:set-up-amazon-web-services.html#eks-cluster-requirements["Amazon Elastic Kubernetes服務（EKS）的Astra控制服務要求"]。如果您還沒有叢集、可以建立符合的叢集 link:set-up-google-cloud.html#gke-cluster-requirements["Google Kubernetes Engine（GKE）的Astra控制服務要求"]。如果您還沒有叢集、可以建立符合的叢集 link:set-up-microsoft-azure-with-anf.html#azure-kubernetes-service-cluster-requirements["Azure Kubernetes Service（含Azure NetApp Files ）的Astra Control Service要求"] 或 link:set-up-microsoft-azure-with-amd.html#azure-kubernetes-service-cluster-requirements["Azure Kubernetes Service（Astra Control Service）與Azure託管磁碟的相關要求"]。
+
+
+NOTE: Astra Control Service支援使用Azure Active Directory（Azure AD）進行驗證與身分識別管理的高峰叢集。建立叢集時、請遵循中的指示 https://docs.microsoft.com/en-us/azure/aks/managed-aad["正式文件"^] 設定叢集使用Azure AD。您必須確保叢集符合高峰管理Azure AD整合的要求。
+
+
+
+== 將叢集新增至 Astra Control Service
+
+登入Astra Control Service之後、您的第一步就是開始管理叢集。將叢集新增至Astra Control Service之前、您必須執行特定工作、並確保叢集符合特定需求。
+
+.開始之前
+[%collapsible]
+====
+ifdef::aws[]
+
+.Amazon Web Services
+* 您應該擁有Json檔案、其中包含建立叢集的IAM使用者認證。 link:../get-started/set-up-amazon-web-services.html#create-an-iam-user["瞭解如何建立IAM使用者"]。
+* Amazon FSX for NetApp ONTAP Sfa需要Astra Trident。如果您計畫將Amazon FSX for NetApp ONTAP 功能用作EKS叢集的儲存後端、請參閱中的Astra Trident資訊 link:set-up-amazon-web-services.html#eks-cluster-requirements["EKS叢集需求"]。
+* （選用）如果您需要提供 `kubectl` 叢集的命令存取功能可讓其他不是叢集建立者的IAM使用者存取、請參閱中的指示 https://aws.amazon.com/premiumsupport/knowledge-center/amazon-eks-cluster-access/["如何在Amazon EKS中建立叢集後、提供其他IAM使用者和角色的存取權限？"^]。
+* 如果您計畫將NetApp Cloud Volumes ONTAP 支援作為儲存後端、則需要設定Cloud Volumes ONTAP 支援以搭配Amazon Web Services使用的功能。請參閱Cloud Volumes ONTAP 《The》 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-getting-started-aws.html["設定文件"^]。
+
+
+endif::aws[]
+
+ifdef::azure[]
+
+.Microsoft Azure
+* 建立服務主體時、您應該擁有包含Azure CLI輸出的Json檔案。 link:../get-started/set-up-microsoft-azure-with-anf.html#create-an-azure-service-principal-2["瞭解如何設定服務主體"]。
++
+如果您未將Azure訂閱ID新增至Json檔案、您也需要Azure訂閱ID。
+
+* 如果您計畫將NetApp Cloud Volumes ONTAP 支援作為儲存後端、則需要設定Cloud Volumes ONTAP 支援功能以搭配Microsoft Azure使用。請參閱Cloud Volumes ONTAP 《The》 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-getting-started-azure.html["設定文件"^]。
+
+
+endif::azure[]
+
+ifdef::gcp[]
+
+.Google Cloud
+* 您應該擁有具有所需權限之服務帳戶的服務帳戶金鑰檔。 link:../get-started/set-up-google-cloud.html#create-a-service-account["瞭解如何設定服務帳戶"]。
+* 如果您打算將NetApp Cloud Volumes ONTAP 支援作為儲存後端、則需要設定Cloud Volumes ONTAP 支援功能以搭配Google Cloud使用。請參閱Cloud Volumes ONTAP 《The》 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-getting-started-gcp.html["設定文件"^]。
+
+
+endif::gcp[]
+
+====
+.步驟
+. 在儀表板上、選取*管理Kubernetes叢集*。
++
+依照提示新增叢集。
+
+. *供應商*：選取您的雲端供應商、然後提供必要的認證資料以建立新的雲端執行個體、或選取要使用的現有雲端執行個體。
+
+
+ifdef::aws[]
+
+. * Amazon Web Services *：上傳Json檔案或從剪貼簿貼上Json檔案的內容、以提供Amazon Web Services IAM使用者帳戶的詳細資料。
++
+Json檔案應包含建立叢集的IAM使用者認證。
+
+
+
+endif::aws[]
+
+ifdef::azure[]
+
+. * Microsoft Azure *：上傳Json檔案或從剪貼簿貼上Json檔案的內容、以提供Azure服務主體的詳細資料。
++
+當您建立服務主體時、Json檔案應包含Azure CLI的輸出。它也可以包含您的訂閱ID、以便自動新增至Astra。否則、您必須在提供Json之後手動輸入ID。
+
+
+
+endif::azure[]
+
+ifdef::gcp[]
+
+. * Google Cloud Platform *：上傳檔案或從剪貼簿貼上內容、以提供服務帳戶金鑰檔案。
++
+Astra Control Service使用服務帳戶來探索在Google Kubernetes Engine中執行的叢集。
+
+
+
+endif::gcp[]
+
+. * 其他 * ：此索引標籤僅適用於自我管理叢集。
++
+.. * Cloud 執行個體名稱 * ：為新增叢集時將建立的新雲端執行個體提供名稱。深入瞭解 link:../use/manage-cloud-instances.html["雲端執行個體"]。
+.. 選擇*下一步*。
++
+Astra Control Service 會顯示您可以選擇的叢集清單。
+
+.. * 叢集 * ：從清單中選取要新增至 Astra Control Service 的叢集。
++
+
+NOTE: 當您從叢集清單中選取時、請注意 *Eligiblity* 欄。如果叢集為「不合格」或「部分合格」、請將游標移至狀態上方、以判斷叢集是否有問題。例如、它可能會識別叢集沒有工作節點。
+
+.. 選擇*下一步*。
+.. （可選） * Storage* ：（可選）選擇您希望 Kubernetes 應用程式部署到此叢集的儲存類別、以供預設使用。
+
+
+. 若要為叢集選取新的預設儲存類別、請啟用 * 指派新的預設儲存類別 * 核取方塊。
+. 從清單中選取新的預設儲存類別。
++
+[NOTE]
+====
+每個雲端供應商的儲存服務都會顯示下列價格、效能和恢復能力資訊：
+
+ifdef::gcp[]
+
+** 適用於Google Cloud的解決方案：價格、效能和恢復能力資訊Cloud Volumes Service
+** Google持續磁碟：沒有可用的價格、效能或恢復能力資訊
+
+
+endif::gcp[]
+
+ifdef::azure[]
+
+** 支援：效能與恢復能力資訊Azure NetApp Files
+** Azure託管磁碟：不提供價格、效能或恢復能力資訊
+
+
+endif::azure[]
+
+ifdef::aws[]
+
+** Amazon Elastic Block Store：沒有可用的價格、效能或恢復能力資訊
+** Amazon FSX for NetApp ONTAP 不提供價格、效能或恢復能力資訊
+
+
+endif::aws[]
+
+** NetApp Cloud Volumes ONTAP 產品：不提供價格、效能或恢復能力資訊
+
+
+====
++
+每個儲存類別都可以使用下列其中一項服務：
+
++
+ifdef::gcp[]
+
++
+** https://cloud.netapp.com/cloud-volumes-service-for-gcp["適用於 Google Cloud Cloud Volumes Service"^]
+** https://cloud.google.com/persistent-disk/["Google持續磁碟"^]
+
+
+
+
+endif::gcp[]
+
+ifdef::azure[]
+
+* https://cloud.netapp.com/azure-netapp-files["Azure NetApp Files"^]
+* https://docs.microsoft.com/en-us/azure/virtual-machines/managed-disks-overview["Azure託管磁碟"^]
+
+
+endif::azure[]
+
+ifdef::aws[]
+
+* https://docs.aws.amazon.com/ebs/["Amazon彈性區塊存放區"^]
+* https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/what-is-fsx-ontap.html["Amazon FSX for NetApp ONTAP 產品"^]
+
+
+endif::aws[]
+
+* https://www.netapp.com/cloud-services/cloud-volumes-ontap/what-is-cloud-volumes/["NetApp Cloud Volumes ONTAP"^]
++
+深入瞭解 link:../learn/aws-storage.html["Amazon Web Services叢集的儲存類別"]。深入瞭解 link:../learn/azure-storage.html["適用於高效能叢集的儲存類別"]。深入瞭解 link:../learn/choose-class-and-size.html["GKE叢集的儲存類別"]。
+
++
+.. 選擇*下一步*。
+.. * 審查與核准 * ：檢閱組態詳細資料。
+.. 選取 * 新增 * 將叢集新增至 Astra Control Service 。
+
+
+
+
+.結果
+如果這是您為此雲端供應商新增的第一個叢集、 Astra Control Service 會為雲端供應商建立物件儲存區、以便備份在合格叢集上執行的應用程式。（當您新增此雲端供應商的後續叢集時、不會再建立其他物件存放區。）如果您指定預設儲存類別、Astra Control Service會設定您指定的預設儲存類別。對於在Amazon Web Services或Google Cloud Platform中管理的叢集、Astra Control Service也會在叢集上建立管理員帳戶。這些動作可能需要幾分鐘的時間。
+
+
+
+== 變更預設儲存類別
+
+您可以變更叢集的預設儲存類別。
+
+
+
+=== 使用Astra Control變更預設儲存類別
+
+您可以從Astra Control中變更叢集的預設儲存類別。如果叢集使用先前安裝的儲存後端服務、您可能無法使用此方法來變更預設儲存類別（*設為預設*動作無法選取）。在這種情況下、您可以 <<使用命令列變更預設儲存類別>>。
+
+.步驟
+. 在Astra Control Service UI中、選取* Clusters*。
+. 在「*叢集*」頁面上、選取您要變更的叢集。
+. 選擇* Storage*（儲存設備）選項卡。
+. 選擇*儲存類別*類別。
+. 針對您要設為預設的儲存類別、選取「*動作*」功能表。
+. 選擇*設為預設*。
+
+
+
+
+=== 使用命令列變更預設儲存類別
+
+您可以使用Kubernetes命令變更叢集的預設儲存類別。無論叢集的組態為何、此方法都能正常運作。
+
+.步驟
+. 登入Kubernetes叢集。
+. 列出叢集中的儲存類別：
++
+[source, console]
+----
+kubectl get storageclass
+----
+. 從預設儲存類別中移除預設指定。以<SC_NAME> 儲存類別的名稱取代支援：
++
+[source, console]
+----
+kubectl patch storageclass <SC_NAME> -p '{"metadata": {"annotations":{"storageclass.kubernetes.io/is-default-class":"false"}}}'
+----
+. 將不同的儲存類別標示為預設。以<SC_NAME> 儲存類別的名稱取代支援：
++
+[source, console]
+----
+kubectl patch storageclass <SC_NAME> -p '{"metadata": {"annotations":{"storageclass.kubernetes.io/is-default-class":"true"}}}'
+----
+. 確認新的預設儲存類別：
++
+[source, console]
+----
+kubectl get storageclass
+----
+
+
+ifdef::azure[]

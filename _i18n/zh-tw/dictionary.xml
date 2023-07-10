@@ -55,7 +55,6 @@
   <block id="07d41912a6ab6b97216f8cf89e93205c" category="section-title">自我支援</block>
   <block id="6b9b3535d917a5890db4ef00a3718361" category="paragraph">這些選項全年無休免費提供：</block>
   <block id="19111351b69b6b15668130b38b7f6038" category="inline-link">知識庫</block>
-  <block id="1cd3b87947307e63f017eb7a59b02313" category="paragraph">搜尋與Astra Control相關的文章、常見問題集或中斷修復資訊。</block>
   <block id="5b6cf869265c13af8566f192b4ab3d2a" category="list-text">文件</block>
   <block id="9a4d3fdb6af496c18bc70f14153f8c4f" category="paragraph">這是您目前正在檢視的文件網站。</block>
   <block id="9945b7c9f8a0452d5794aa8f1b4132db" category="list-text">意見反應電子郵件</block>
@@ -84,7 +83,6 @@
   <block id="bc2c20b558f79bd1d6af82d0f773324f" category="list-text">選擇*叢集*。</block>
   <block id="bbc9aa35732a63162cdf17006a04e715" category="list-text">選取您不想再管理之叢集的核取方塊。</block>
   <block id="15c72501c81a636e9acaf9de197e03da" category="section-title">從雲端供應商刪除叢集</block>
-  <block id="0ecba3cedec1e8d9b411a2ce790080cd" category="paragraph">在刪除Kubernetes叢集之前、如果叢集的NetApp儲存類別中含有持續磁碟區（PV）、您必須先依照下列其中一種方法刪除持續磁碟區宣告（PVc）。刪除叢集之前刪除PVC和PV、可確保您不會收到雲端供應商的非預期帳單。</block>
   <block id="ddf1663ccbe93fbad389abace27b7e96" category="list-text">*方法#1*：從叢集刪除應用程式工作負載命名空間。請勿刪除Trident命名空間。</block>
   <block id="ff4e57e53b65417841ea3ba24cb7ede1" category="list-text">*方法#2*：刪除PVCS和Pod、或是掛載PV的部署。</block>
   <block id="65acd6481734ae302871922c7cda00aa" category="paragraph">使用上述方法之一、將會從叢集刪除對應的PV。刪除叢集之前、請先確定叢集上的NetApp儲存類別上沒有任何PV。</block>
@@ -463,7 +461,6 @@
   <block id="b25e6cbe92376851fb2fc7b4e024274e" category="inline-link-macro">Google Kubernetes Engine（GKE）的Astra控制服務要求</block>
   <block id="61ff50e91bc9118602e803e489f0e42f" category="inline-link-macro">Azure Kubernetes Service（含Azure NetApp Files ）的Astra Control Service要求</block>
   <block id="e2517379d9a14736369ae8b5b851ca0a" category="inline-link-macro">Azure Kubernetes Service（Astra Control Service）與Azure託管磁碟的相關要求</block>
-  <block id="7867ff317e101e02ab5ea31a9b4ff20b" category="section-title">開始管理Kubernetes叢集</block>
   <block id="7bf41fe8e15f6028770c3b7c955f21e9" category="list-text">在儀表板上、選取*管理Kubernetes叢集*。</block>
   <block id="8c40408a36679e38f149928cbae2a380" category="paragraph">依照提示新增叢集。</block>
   <block id="c455f809c2ef97e08167a8b008383167" category="list-text">* Microsoft Azure *：上傳Json檔案或從剪貼簿貼上Json檔案的內容、以提供Azure服務主體的詳細資料。</block>
@@ -481,15 +478,12 @@
   <block id="c6a7824e4b3ef243db20452d107827b3" category="list-text"><block ref="c6a7824e4b3ef243db20452d107827b3" category="inline-link-rx"></block></block>
   <block id="b03ad30a5cf7205451cf9d1c28fb3b46" category="inline-link-macro">GKE叢集的儲存類別</block>
   <block id="388b49ca6772164d2fe62455b28ba25e" category="inline-link-macro">適用於高效能叢集的儲存類別</block>
-  <block id="dfcef21edccf773f1b20e5811f0fb5ba" category="list-text">*審查與核准*：檢閱組態詳細資料、然後選取*新增叢集*。</block>
-  <block id="e2422705f78eff49e43f16a31a8f0847" category="section-title">管理私有叢集</block>
   <block id="37d0b0adf169e682e19c955d0cd73c29" category="list-text">為Astra Connector運算子建立命名空間。</block>
   <block id="38da14ec20cf0841c7dc45fab0adbf07" category="list-text">將「astraconnecor_toper.yaml」檔案套用到運算子命名空間。</block>
   <block id="48812784c9e7b02bc76402c5a0c3ca10" category="list-text">為私有叢集元件建立命名空間。</block>
   <block id="f831baeb7ae8c560addc2916d8b1096e" category="list-text">套用Astra Connector自訂資源定義（CRD）。</block>
   <block id="138db2318815f6b9fc7cc55dd6a6ad32" category="list-text">檢查Astra Connector的狀態。</block>
   <block id="d0848afd8553c34945705222a97a4553" category="paragraph">您應該會看到類似下列的輸出：</block>
-  <block id="c3330d4a796db6418458e6d4faacfbef" category="summary">Astra Control Service整合於NetApp Cloud Central的驗證服務中。註冊Cloud Central、即可存取Astra Control Service和NetApp的其他雲端服務。</block>
   <block id="f02a4f1a1e048f3a6cf64743ff32a880" category="doc">註冊Astra Control Service帳戶</block>
   <block id="ae0c96e1388d462dd723e6dd4f0bd3c4" category="paragraph">若要使用Astra Control Service、您需要與NetApp Cloud Central帳戶相關聯的Astra Control Service帳戶。完成Astra Control Service登錄程序、如果您還沒有Cloud Central帳戶、請註冊Cloud Central以存取Astra Control Service。</block>
   <block id="9f0a6d5d19d9a0882b080bd73f930916" category="section-title">註冊Astra Control帳戶</block>
@@ -509,7 +503,6 @@
   <block id="b623e6ded9a852f4e7cd9765578d0c08" category="list-text">選擇*提交*。</block>
   <block id="186f9f6bf0b85589f8602edb2a2e5c8b" category="section-title">註冊 Cloud Central</block>
   <block id="35b46e301702b6fcb16192f9f4cf4533" category="inline-link">Astra控制服務</block>
-  <block id="a8904a49187fe8beb4dfe8ca2e38e914" category="paragraph">如果您還沒有NetApp Cloud Central帳戶、請註冊Cloud Central、以便存取Astra Control Service和NetApp的其他雲端服務。Astra Control Service整合於NetApp Cloud Central的驗證服務中。如果您已擁有Cloud Central帳戶並已完成註冊、則可以存取<block ref="98c5a70a1a2162b1fc3e4c3e10ba9906" category="inline-link-rx"></block> 直接使用Cloud Central認證資料。</block>
   <block id="f0753d19e203557654cb6c3d4f2d0353" category="admonition">您可以使用單一登入功能、從公司目錄（聯盟身分識別）取得認證資料、登入Cloud Central。若要深入瞭解、請前往<block ref="2c92c928be02227d051a5057c2e57fc6" category="inline-link-rx"></block> 然後選取* Cloud Central登入選項*。</block>
   <block id="f9e7912a258783aeea63e6b8ad7d46ac" category="list-text">前往<block ref="acbb6886c35e57125998fe7d6c5eea1f" category="inline-link-rx"></block>。</block>
   <block id="e4ea5fa0d4fcd14c778ff89db6268aa5" category="list-text">在右上角選取*註冊*。</block>
@@ -586,9 +579,7 @@
   <block id="cec4f0bbb3f7119930f9ff4d721ad21a" category="doc">Astra Control Service影片</block>
   <block id="41d9e1257b3e21add2e59d038938ea94" category="section-title">建立服務帳戶</block>
   <block id="ec0fec1613e760b6689b9fb4990bdb46" category="section-title">建立服務帳戶金鑰</block>
-  <block id="b3786fc8dfd9ef27e069bb2a2e954251" category="summary">現在您已經登入並新增叢集至Astra Control、就能開始使用Astra Control的應用程式資料管理功能。</block>
   <block id="3f297ef15cde0668e93b35f2752fd4fd" category="doc">接下來呢？</block>
-  <block id="cd26568520740fb15191df367ae016f6" category="paragraph">現在您已經登入Astra Control並新增叢集、就可以開始使用Astra Control的應用程式資料管理功能。</block>
   <block id="a4338c4608081cbe5421e9459f9dc53a" category="list-text"><block ref="a4338c4608081cbe5421e9459f9dc53a" category="inline-link-macro-rx"></block></block>
   <block id="3a2448fbaa994c176580cbee02393309" category="inline-link-macro">保護應用程式</block>
   <block id="d039f1c5d582395ea9e16f5202ac00e2" category="list-text"><block ref="d039f1c5d582395ea9e16f5202ac00e2" category="inline-link-macro-rx"></block></block>
@@ -1118,7 +1109,6 @@
   <block id="6381fa3198f7d01b695efd745c982751" category="sidebar">應用程式健全狀況與詳細資料</block>
   <block id="f20e69549fc23f9df431f9511f177e5e" category="sidebar">管理您的帳戶</block>
   <block id="d45294caa04dc2a59a6a9779ecb261e1" category="sidebar">註冊帳戶</block>
-  <block id="0d9029e785d6af991e53b31b279e9aa4" category="sidebar">管理叢集</block>
   <block id="58eaebf972358f1cf03d386a4ade1a0f" category="sidebar">接下來呢？</block>
   <block id="554cfab3938e21d9270bd6b75931f96f" category="sidebar">影片</block>
   <block id="cf270e40d273f9e7fd7c3061729060c3" category="sidebar">訓練</block>
@@ -1201,7 +1191,6 @@
   <block id="be29f0ac9c1734e9dab2565393c4b0f9" category="inline-link">NetApp Verda GitHub儲存庫</block>
   <block id="26ae3a5d2c5a3a4f3c4f0b04cfffc752" category="admonition">NetApp針對特定應用程式提供的預設快照前及後執行掛勾已在此版本中移除。如果您沒有提供自己的快照執行掛勾、Astra Control Service只會從2022年8月4日開始、擷取損毀一致的快照。請造訪<block ref="69dbcb4811fc57c117bef8c6ba2044f3" category="inline-link-rx"></block> 以取得執行攔截指令碼的範例、您可以根據環境進行修改。</block>
   <block id="adabbba2cda50397a2a91db015a0fb30" category="list-text"><block ref="f2d47b38ed223b066a7a87406f2f9770" category="inline-xref-macro-rx"></block></block>
-  <block id="d78023f397f8f2b4e5064ff5b049c27d" category="list-text"><block ref="fedf37c1e98889c2b8f08b9cf9723656" category="inline-xref-macro-rx"></block></block>
   <block id="5f058e70cc3d142ad7669a7f04b97b31" category="list-text"><block ref="5b6a21e2a1084a5e4b159e62f7829741" category="inline-xref-macro-rx"></block></block>
   <block id="630a415dcb42ff22d041d168cc5afc59" category="inline-link-macro">Amazon Elastic Kubernetes服務（EKS）的Astra控制服務要求</block>
   <block id="1c2b5221e36ed5b79e2c2e4262be6072" category="inline-link-macro">瞭解如何建立IAM使用者</block>
@@ -1218,7 +1207,6 @@
   <block id="03505e86c100771649c5c405d210f3de" category="paragraph">+*：Amazon EKS叢集、Astra Control Service使用<block ref="a65cb6c91d35e755c3763fe01aedac72" category="inline-link-rx"></block> 或<block ref="554e81ff0c0b44a91e38efe479d6c57c" category="inline-link-rx"></block> 作為持續磁碟區的儲存後端。</block>
   <block id="9ab46041ac5136f2300b8e64c19f0964" category="section-title">登錄Elastic Kubernetes Service（EKS）叢集</block>
   <block id="cfab7aa3599d78d5f3c56857f2175c5f" category="paragraph">*我可以將私有EKS叢集新增至Astra Control Service嗎？*</block>
-  <block id="5e580ebcce969330228846574f827aa7" category="paragraph">目前Astra Control Service不支援私有EKS叢集。</block>
   <block id="5802142fb14713d93859bda03cc52eb3" category="section-title">註冊Azure Kubernetes Service（KS）叢集</block>
   <block id="2c932845e362039bca422bb4b59eea27" category="section-title">註冊Google Kubernetes Engine（GKE）叢集</block>
   <block id="4b3761e466fd28e7b01ae735e989d9ff" category="paragraph">從Astra Control移除叢集時、不會從叢集解除安裝Astra Trident。</block>
@@ -1344,7 +1332,6 @@
   <block id="09f4b29f83b350072ab3fd258087d43b" category="paragraph">您可以選取「*顯示系統命名空間*」核取方塊、從「命名空間」索引標籤顯示所選叢集的系統命名空間。</block>
   <block id="1ab5b2031e4cdb29b2a4105f364a27c9" category="paragraph"><block ref="1ab5b2031e4cdb29b2a4105f364a27c9" category="inline-image-macro-rx" type="image"></block></block>
   <block id="2c1b2aa1361b2b30f079d2afc37936be" category="admonition">Astra Control本身並非標準應用程式、而是「系統應用程式」。 您不應嘗試自行管理Astra Control。依預設、Astra Control本身不會顯示用於管理。</block>
-  <block id="f60b3d0d58c083c7ae2804ae31c0e422" category="paragraph">如果您在刪除叢集之前未刪除持續磁碟區、則需要從雲端供應商手動刪除後端磁碟區。</block>
   <block id="3e00312869fede718a42b76c5ee6e2ff" category="section-title">Amazon Web Services帳單</block>
   <block id="9e3c019abe231865229584e6f6e502de" category="inline-link">檢視Amazon Web Services的價格詳細資料</block>
   <block id="aa992a3ab98a373e82c93ded62f2d914" category="list-text"><block ref="31ae57f3df84273eeed4bc5214fec458" category="inline-link-rx"></block>。</block>
@@ -1530,9 +1517,6 @@
   <block id="e36d851dc2ff79e16c7cfbbb4e4fbe97" category="inline-link">Astra Automation文件</block>
   <block id="e9c498c38ce73fcff282ff152abd7d47" category="list-text">使用中的指示產生Astra Control API權杖<block ref="c02899be0babfb1350e3b2576a6e8c97" category="inline-link-rx"></block>。</block>
   <block id="61ddd26ba79b5e63c1e52be1beb28889" category="section-title">設定持續儲存</block>
-  <block id="1cef3f8b6a3670bf3c09d6cab3c3c3d1" category="section-title">將私有叢集新增至Astra Control Service</block>
-  <block id="e722e71a936852b8a6cd89cd5c31feb9" category="list-text"><block ref="e722e71a936852b8a6cd89cd5c31feb9" category="inline-link-macro-rx"></block></block>
-  <block id="b0a64c8dbe133ff5b49120ddb00f788a" category="sidebar">管理私有叢集</block>
   <block id="f21f22dde0e0692333a7a28cce456b08" category="sidebar">所有Astra文件</block>
   <block id="6ef5565e71b748d07e8a7b0699a73b5a" category="paragraph"><block ref="6ef5565e71b748d07e8a7b0699a73b5a" category="inline-image-macro-rx" type="image"></block></block>
   <block id="305b39af5cd987a6208b64358f967be3" category="list-text">部署在一個或多個命名空間內的個別應用程式（本範例使用Helm 3）</block>
@@ -1544,8 +1528,6 @@
   <block id="3c7ad3a476ad730cdda13eafe57f371e" category="list-text">GKE 1.24版及更新版本不支援Docker型節點映像。檢查以確定GKE中的工作節點映像類型為<block ref="bba3d88d28186b91a2b3165d6143a600" prefix=" " category="inline-code"></block> 而且NFS掛載成功。</block>
   <block id="da2c085b9d8d021307417125c20d3a83" category="paragraph">若要搭配Astra Control Service使用Azure託管磁碟、您必須安裝必要的SCSI驅動程式。</block>
   <block id="c9be99ba5f72a27dc67b1b94e7b90efd" category="paragraph">如果您還沒有叢集、可以建立符合的叢集 <block ref="e7658a1af56c46ed5b9cdfa6f95bb6cb" category="inline-link-macro-rx"></block>。如果您還沒有叢集、可以建立符合的叢集 <block ref="c14ce2b90a6d517d28f6a149c4e1ddd7" category="inline-link-macro-rx"></block>。如果您還沒有叢集、可以建立符合的叢集 <block ref="6bb2c6a064e406c3dfdba3642f8a72c0" category="inline-link-macro-rx"></block> 或 <block ref="26e75175e6e267eb6426de7596baf82e" category="inline-link-macro-rx"></block>。</block>
-  <block id="75cea9c777f72349fb550387eafc09c1" category="example-title">您的需求是什麼？#8217；需要由雲端供應商管理的叢集</block>
-  <block id="9eecb04f40bc3e3811b2fcfff6ea5b4f" category="example-title">您的#8217；需要自行管理的叢集</block>
   <block id="f658d356d0697be75622e7d5d6d94798" category="inline-link">部署Astra Trident</block>
   <block id="e9f0d7eb2b9e30339763cb7819bdf45e" category="inline-link">支援的前端、後端及主機組態</block>
   <block id="3c172a48713bf18882de70235bb9b4ee" category="admonition">您可以<block ref="ec89e21f8106b8624273185ce464dfb2" category="inline-link-rx"></block> 使用Trident運算子（手動或使用Helm圖表）或<block ref="c67fd1b99934afa248dfeb285a9a4191" prefix=" " category="inline-code"></block>。在安裝或升級Astra Trident之前、請先檢閱<block ref="c11537a174ec95a098cfff995b6e8b14" category="inline-link-rx"></block>。</block>
@@ -1579,9 +1561,6 @@
   <block id="38e2b31fd3dcdd65304ac201efd17f06" category="list-text">*其他*：上傳以提供自我管理叢集的詳細資料<block ref="ea46161c66978a87802bc5b44682cbe0" prefix=" " category="inline-code"></block> 檔案或貼上的內容<block ref="ea46161c66978a87802bc5b44682cbe0" prefix=" " category="inline-code"></block> 檔案。</block>
   <block id="d9348d075dc7b3c91cff99d56dfc327b" category="inline-link">Kubernetes文件</block>
   <block id="9fc84d64f86a2fb623a35c5692c96941" category="inline-link-macro">雲端執行個體</block>
-  <block id="5621ce04305fabeb5c1385e8b31521fa" category="admonition">從叢集清單中選取時、請小心注意「合格」索引標籤。如果出現警告、請將游標暫留在警告上、以判斷叢集是否有問題。例如、它可能會識別叢集沒有工作節點。</block>
-  <block id="26b17225b626fb9238849fd60eabdf60" category="paragraph">+</block>
-  <block id="81fab8b5f502e0434de09d4adc1d85c4" category="list-text">*認證名稱*（適用於自我管理的叢集）：提供您要上傳至Astra Control的自我管理叢集認證名稱。根據預設、認證名稱會自動填入為叢集名稱。</block>
   <block id="4af7310d5b749c4b7d353363bda2d5c4" category="section-title">使用Astra Control變更預設儲存類別</block>
   <block id="ba3f4b327f0b419e726b9ab600a1e987" category="paragraph">您可以從Astra Control中變更叢集的預設儲存類別。如果叢集使用先前安裝的儲存後端服務、您可能無法使用此方法來變更預設儲存類別（*設為預設*動作無法選取）。在這種情況下、您可以 <block ref="f71848a174c79d355f9a074af503a95d" category="inline-xref-macro-rx"></block>。</block>
   <block id="f2fd91e733b2002c4dcef63dcb2e1684" category="section-title">使用命令列變更預設儲存類別</block>
@@ -1642,8 +1621,6 @@
   <block id="e70eee61377e2dd5bf6e1379b113ed7b" category="list-text">選擇*是、取消管理應用程式*。</block>
   <block id="9c95c3fc0f233a0913a6e1f0cff2dcd3" category="admonition">在取消管理叢集之前、您應該取消管理與叢集相關的應用程式。</block>
   <block id="6afdaa2bb224b8126859642c069485d7" category="paragraph">當您取消管理叢集時：</block>
-  <block id="76261f172114b33975a8f2d79841ce74" category="list-text">從「*動作*」欄的「選項」功能表中、選取「*取消管理*」。</block>
-  <block id="bc044e78d97d319b1d70c1a7d2370e89" category="list-text">確認您要取消管理叢集、然後選取*是、取消管理叢集*。</block>
   <block id="4271789f0046cfd66563e8d252266146" category="list-text">尋找您要尋找的資訊：</block>
   <block id="e1758c6f6621a3e5a0bfaa943496e946" category="list-text">移至*鏟斗*。</block>
   <block id="38867862280a9a74de68db4ff64b0c99" category="admonition">Astra Control不會自動指派任何雲端執行個體的預設儲存區。您需要手動設定雲端執行個體的預設儲存區、才能在兩個叢集之間執行應用程式複製作業。</block>
@@ -1796,12 +1773,9 @@
   <block id="ca8a2087e5557e317599344687a57391" category="inline-image-macro">三</block>
   <block id="45fa555347c1a658490523d14396d6f7" category="section-title"><block ref="05b2444faffd66d76e88602ea7dd353f" category="inline-image-macro-rx" type="image"></block> 將叢集新增至Astra Control</block>
   <block id="672560be9cf97dc26e5d58123e1236bd" category="list-text">Amazon FSX for NetApp ONTAP Sfa需要Astra Trident。如果您計畫將Amazon FSX for NetApp ONTAP 功能用作EKS叢集的儲存後端、請參閱中的Astra Trident資訊 <block ref="e68d00178a10629977a40b55006d1823" category="inline-link-macro-rx"></block>。</block>
-  <block id="055c68f4a4baed3cf8af5f0b817d97aa" category="list-text">如需私有的高效能叢集、請參閱 <block ref="104a7dd39d72f9f66f9cd954ba655942" category="inline-link-macro-rx"></block>。</block>
   <block id="133059778c759500900ac3e31f9124f6" category="admonition">如果未安裝或不是最新的Astra Trident、而且您想要叢集使用Astra Trident來提供儲存服務、則必須先安裝最新版的Astra Trident、才能繼續進行。請參閱<block ref="0a4eeddcb63a166e3ea6149a4a33d4e7" category="inline-link-rx"></block> 以取得相關指示。</block>
   <block id="ceb1396f571b46844bfc0042be1d74da" category="list-text">檢查儲存類別是否使用支援的Astra Trident驅動程式。置備程式名稱應為<block ref="08044207e9f63bb0fd474dab347a776c" prefix=" " category="inline-code"></block>。請參閱下列範例：</block>
   <block id="275b3f11dca994bdaad9403b50379839" category="admonition">如果您自行建立<block ref="deabc6332aa53495b56c51d2e3eca54f" prefix=" " category="inline-code"></block> 檔案中、您應該只定義*一個*內容元素。請參閱<block ref="54676762f2eb4e7149fe4e9996a20b1c" category="inline-link-rx"></block> 以取得有關建立的資訊<block ref="deabc6332aa53495b56c51d2e3eca54f" prefix=" " category="inline-code"></block> 檔案：</block>
-  <block id="053447830bdec16f5986aceb9a1d7b50" category="inline-link-macro">請參閱這些指示</block>
-  <block id="a89f4b04c3ea15221d38351ec9978a7f" category="admonition">如果您選取標記有「私有」圖示的叢集、則會使用私有IP位址、而Astra Control則需要Astra Connector來管理叢集。如果您看到一則訊息、指出您需要安裝Astra Connector、 <block ref="fe5ffc6a80a56380f9f1d2cc32d84537" category="inline-link-macro-rx"></block> 安裝Astra Connector並啟用叢集管理。安裝Astra Connector之後、叢集應該符合資格、您可以繼續新增叢集。</block>
   <block id="d5d383f59aff1fd56faf3bc99a5e7447" category="section-title"><block ref="58f667aaf05f87159670e12bd9bc076b" category="inline-image-macro-rx" type="image"></block> 檢閱Google Kubernetes Engine的Astra Control Service要求</block>
   <block id="ca3936801cc983f962aeed971f35e927" category="section-title"><block ref="54f425ce8d89f4ed6b8a546561af5d60" category="inline-image-macro-rx" type="image"></block> （選用）：購買Cloud Volumes Service 適用於Google Cloud的產品</block>
   <block id="4ec76e316010fbd32edca0840bff69ab" category="section-title"><block ref="05b2444faffd66d76e88602ea7dd353f" category="inline-image-macro-rx" type="image"></block> 在Google Cloud專案中啟用API</block>
@@ -1910,9 +1884,6 @@
   <block id="c965062d34f97b8a807d6043b0889aa4" category="paragraph">您的自我管理叢集必須符合下列需求：</block>
   <block id="58585810a4337be95bcfebedb828d056" category="list-text">叢集必須可透過網際網路存取。</block>
   <block id="834a9cd206312978cd28b32979a72bf7" category="list-text">如果您使用或打算使用已啟用SCSI驅動程式的儲存設備、則叢集上必須安裝適當的SCSI驅動程式。如需使用SCSI驅動程式來整合儲存設備的詳細資訊、請參閱儲存服務的說明文件。</block>
-  <block id="17fc42c08affacba5657de8d171ed30e" category="list-text">* Cloud instance name*（適用於供應商管理的叢集）：為新增此叢集時所建立的新雲端執行個體提供名稱。深入瞭解 <block ref="32e60ef2ecbf9cc1dffc20ea8b07ceea" category="inline-link-macro-rx"></block>。</block>
-  <block id="1fe883570039bf797197aff2f9905e79" category="list-text">（選用）* Storage *：選取要將Kubernetes應用程式部署至此叢集的儲存類別、預設為使用。</block>
-  <block id="a0652b7f26bfa45b4a805218ab132fd2" category="paragraph">*對於供應商管理的叢集*：如果這是您為此雲端供應商新增的第一個叢集、Astra Control Service會為雲端供應商建立物件存放區、以便備份在合格叢集上執行的應用程式。（當您新增此雲端供應商的後續叢集時、不會再建立其他物件存放區。）如果您指定預設儲存類別、Astra Control Service會設定您指定的預設儲存類別。對於在Amazon Web Services或Google Cloud Platform中管理的叢集、Astra Control Service也會在叢集上建立管理員帳戶。這些動作可能需要幾分鐘的時間。</block>
   <block id="f22cb7c9b8713326a930c00edca70cee" category="list-text">從接移到正式作業、複製應用程式</block>
   <block id="6c4ff7542dcef16bc12bbbab0c160e9a" category="list-text">使用Web UI或API來實作備份與移轉工作流程</block>
   <block id="662f909cd182f2c19a1b5da86174d75f" category="list-text">* Astra Control Service*：NetApp管理的服務、可在多個雲端供應商環境中、以及自行管理的Kubernetes叢集、提供Kubernetes叢集的應用程式感知資料管理功能。</block>
@@ -1962,9 +1933,6 @@
   <block id="46625131314080c123c1a23c969aa3a8" category="paragraph">Astra Control Service可以使用Container Storage介面（SCSI）驅動程式、將Google持續磁碟當作儲存後端來進行介面。此服務提供由Google管理的區塊層級儲存設備。</block>
   <block id="4d2a3e63d994334eaa09e7217ed0d01d" category="paragraph">您的叢集可使用Container Storage介面（Container Storage Interface、簡稱csi）驅動程式與EBS進行介面。使用EBS做為EKS叢集的儲存後端時、您可以設定一些儲存類別參數。如需參數的意義及設定方法的詳細資訊、請參閱<block ref="efa17ec338493b6d9caef44d32a8989a" category="inline-link-rx"></block>。</block>
   <block id="e250f15b25c098b957582ffccfb8ad32" category="list-text">支援將公有雲環境中的自我管理Kubernetes叢集新增至Astra Control Service</block>
-  <block id="d9e6278e0d2ca01f55d0a29da9caa34f" category="section-title">自我管理的叢集</block>
-  <block id="0e2b07a4ed9acdd8d61a9b4d0ed9ade5" category="paragraph">自我管理的叢集是您直接進行資源配置與管理的叢集。Astra Control Service支援在公有雲環境中執行的自我管理叢集。您可以上傳、將自我管理的叢集新增至Astra Control Service<block ref="ea46161c66978a87802bc5b44682cbe0" prefix=" " category="inline-code"></block> 檔案：您必須確保叢集符合中所述的要求 <block ref="fedf37c1e98889c2b8f08b9cf9723656" category="inline-xref-macro-rx"></block>。</block>
-  <block id="68e3130ad56cb70abd861c843fa28587" category="paragraph">登入Astra Control Service之後、您的第一步就是開始管理叢集。您可以新增由雲端供應商管理的叢集、或是自行管理的叢集。將叢集新增至Astra Control Service之前、您必須執行特定工作、並確保叢集符合特定需求。</block>
   <block id="8a69b368bc97dc428e1c6ae2e1c9127a" category="paragraph">自我管理的叢集是您直接進行資源配置與管理的叢集。Astra Control Service支援在公有雲環境中執行的自我管理叢集。您的自我管理叢集可以使用Astra Trident來與NetApp儲存服務建立連結、也可以使用Container Storage介面（SCSI）驅動程式來與Amazon Elastic Block Store（EBS）、Azure託管磁碟和Google持續磁碟建立連結。</block>
   <block id="84f2be4894042bb275e318dfd8a0a200" category="paragraph">Astra Control Service支援使用下列Kubernetes發佈版本的自我管理叢集：</block>
   <block id="285cc7142d57c8f6e6a93562de77e160" category="list-text">叢集無法裝載在內部部署網路中、必須裝載在公有雲環境中。</block>
@@ -2012,15 +1980,12 @@
   <block id="b9e1d0bf223b6f7300505413ba804bf8" category="paragraph">請查看 NetApp TV 、瞭解 Astra Control Service 的最新影片內容。NetApp TV 包含示範 Astra Control Service 某些功能的影片、或是示範如何完成某些常見工作。</block>
   <block id="7e55cbece21210bf38e3d4b07e57e7d1" category="paragraph"><block ref="7e55cbece21210bf38e3d4b07e57e7d1" category="inline-link-rx"></block></block>
   <block id="9c0394b3c876663f72e19250e1b617f8" category="list-text">叢集必須執行 1.24 至 1.25 範圍內的 Kubernetes 版本。</block>
-  <block id="304dc1ab9be2283a4ae86c5928d2b084" category="list-text">（選用） * 私有路由 ID* ：輸入可從 Astra Connector 取得的私有路由識別碼。</block>
-  <block id="b7c30a87057e8070ad71e28b1daaf0c1" category="admonition">私有路由 ID 是與 Astra Connector 相關的名稱、可讓 Astra 管理私有 Kubernetes 叢集。在這種情況下、私有叢集是 Kubernetes 叢集、不會將其 API 伺服器暴露於網際網路上。</block>
   <block id="316180edc15beeaf2a295663e1d94065" category="paragraph">您可以使用 Astra Control Service 來管理私有 Azure Kubernetes Service （ Astra Control Service ）叢集、以及在 AKS 中管理私有 Red Hat OpenShift 叢集。這些指示假設您已建立私有 aks 或 OpenShift 叢集、並準備了安全的方法來遠端存取；如需建立及存取私有 aks 或 OpenShift 叢集的詳細資訊、請參閱下列文件：</block>
   <block id="1aea4b3a5f6138ad98f153802fc6de6d" category="inline-link">適用於私有 aks 叢集的 Azure 文件</block>
   <block id="cba64c917541f4eafce8c12475f555c6" category="list-text"><block ref="cba64c917541f4eafce8c12475f555c6" category="inline-link-rx"></block></block>
   <block id="24411cb39fcec9426e23c56d3c9322ae" category="inline-link">適用於私有 OpenShift 叢集的 Azure 文件</block>
   <block id="72eb22c3894670c20dfb331bb6054d14" category="list-text"><block ref="72eb22c3894670c20dfb331bb6054d14" category="inline-link-rx"></block></block>
   <block id="1c485bc46ff352eb7977d1a404cd382e" category="paragraph">您需要在私有叢集上安裝 Astra Connector 運算子。如果您使用的是堡壘主機、請從堡壘主機的命令列發出這些命令。</block>
-  <block id="ed22187ccd9f4d7245c81d9a6c00b947" category="paragraph">您現在可以將私有叢集新增至 Astra Control Service 。遵循標準工作流程、將叢集新增至Astra Control Service：<block ref="240044c611ecbc1dfa48c963d44f13ca" category="inline-link-rx"></block>。</block>
   <block id="9854a9d6e0852fc6b22871974ea749cf" category="paragraph">不可以當您的叢集新增至 Astra Control 時、服務會自動在 Kubernetes 叢集上安裝 NetApp 的 Trident Container Storage Interface （ CSI ）驅動程式。此驅動程式可用於為雲端供應商所支援的叢集配置持續磁碟區。</block>
   <block id="f8f1ef03f08e7d1c3e62dd87dde91f57" category="paragraph">是的。Astra Control在應用程式上執行的快照作業包括繫結至應用程式PVCS的所有PV快照。</block>
   <block id="69ed61dec8d3d932d3348b6e66006a07" category="list-text">叢集必須執行 1.23 至 1.25 範圍內的 Kubernetes 版本。</block>
@@ -2111,7 +2076,6 @@
   <block id="3865e2c640ef43dc8b6cdde8577fdae3" category="summary">對於自行管理的叢集、您可能需要確定使用的是正確的 Astra Trident 版本。</block>
   <block id="c58984b36e9505bff0dfa89bc0d17033" category="doc">檢查 Astra Trident 版本</block>
   <block id="190b68a154719afc372800ea3a0b1df0" category="paragraph">若要新增使用 Astra Trident 進行儲存服務的自我管理叢集、請確定 Astra Trident 的安裝版本為最新版本。</block>
-  <block id="03ae56ea52e1d5c8f0588d85da03b245" category="paragraph">您可以使用 Astra Control Service 來管理 Astra 中的私有 Azure Kubernetes 服務（ AKS ）和 Red Hat OpenShift 叢集。這些指示假設您已建立私有 aks 或 OpenShift 叢集、並準備了安全的方法來遠端存取；如需建立及存取私有 aks 或 OpenShift 叢集的詳細資訊、請參閱下列文件：</block>
   <block id="e35275b4b4a62199b607326f4cc2e619" category="inline-link">Amazon EKS 文件</block>
   <block id="e0ab955e38e9d09e11bb4ce661de116e" category="paragraph">您可以使用 Astra Control Service 來管理私有 Amazon Elastic Kubernetes Service （ EKS ）叢集。這些指示假設您已建立私有 EKS 叢集、並準備了安全的方法來遠端存取；如需建立及存取私有 EKS 叢集的詳細資訊、請參閱<block ref="25cfe69edfa7c63ce11681ed9b1756b6" category="inline-link-rx"></block>。</block>
   <block id="74b1e5c348a848bb4ce21d77b42cc99d" category="list-text">修改 Astra Connector 運算子儲存庫組態 / 範例目錄中的範例組態檔案、以包含下列機碼的環境特定值：</block>
@@ -2123,13 +2087,11 @@
   <block id="f30fbd4ef5cb7bea87622409fb60cedc" category="paragraph">設定叢集的持續儲存設備。如需設定持續儲存設備的詳細資訊、請參閱入門文件：</block>
   <block id="209360388d2327cf0da8f0db9d83d822" category="list-text">儲存資源池</block>
   <block id="b61e26b74720f596080e0b8b7cc19a51" category="list-text">如果您將 NetApp Cloud Volumes Service 用作 CVS 服務類型的儲存後端、則必須先設定儲存集區、然後才能配置磁碟區。請參閱 <block ref="429770a6434e67b528ee2674b1263f6f" category="inline-link-macro-rx"></block> 以取得更多資訊。</block>
-  <block id="648076d1ba75a7ad5fece7ac72d037cb" category="list-text">您可以存取僅包含一個內容元素的叢集 kubeconfig 檔案。追蹤 <block ref="9d8ee3d0d4f5c967db921af26c4c5a7a" category="inline-link-macro-rx"></block> 產生管理叢集角色 kubeconfig 檔案。</block>
   <block id="a70a43b113125b1448d1fcb519d36b91" category="inline-link-macro">請檢查以確定其為最新版本</block>
   <block id="c3c1443d616920fc43d7d7477292d060" category="list-text">* Astra Trident * ：如果您使用或打算使用 NetApp 儲存設備、請確定您已安裝最新版本的 Astra Trident 。如果 Astra Trident 已安裝、 <block ref="331db620f278bf6f4c96acfa252801e6" category="inline-link-macro-rx"></block>。</block>
   <block id="84333d7ff615717c719381f57406a949" category="list-text">* 已設定 Astra Trident 儲存後端 * ：至少必須有一個 Astra Trident 儲存後端<block ref="5225aa45493862e8671db3c546f615ec" category="inline-link-rx"></block> 在叢集上。</block>
   <block id="0df1bbdefb6c7ab54388f20e615d6ff6" category="list-text">* 已設定的 Astra Trident 儲存類別 * ：至少必須有一個 Astra Trident 儲存類別<block ref="56eee92baaddefbebda4bc1d0011f25b" category="inline-link-rx"></block> 在叢集上。如果已設定預設儲存類別、請確定只有一個儲存類別具有該註釋。</block>
   <block id="eddf0b0c77ced4551605b01f9388baea" category="summary">您需要為自我管理的叢集建立管理角色的 kubeconfig 檔案。</block>
-  <block id="9dc913e0573023f0b54d8d304c10a592" category="doc">建立管理叢集角色 kubeconfig 檔案</block>
   <block id="bacde2d5f8907c39cfce03260081b849" category="section-title">為 Amazon EKS 叢集建立一個 kubeconfig 檔案</block>
   <block id="219018d1a7fc0ccfc7ae0919efd38830" category="inline-link">為 Amazon EKS 叢集建立或更新 Kribeconfig 檔案</block>
   <block id="5efa640818add52a71a9634fe973dd16" category="paragraph"><block ref="5efa640818add52a71a9634fe973dd16" category="inline-link-rx"></block></block>
@@ -2172,4 +2134,95 @@
   <block id="30136395f01879792198317c11831ea4" category="inline-link">Kubernetes</block>
   <block id="501a7b3c879675fb528c68e904b076d1" category="list-text">* 檢查目的地 Volume * ：如果您還原至不同的儲存類別、請確定儲存類別使用相同的持續磁碟區存取模式（例如 ReadWriteMany ）。如果目的地持續磁碟區存取模式不同、還原作業將會失敗。例如、如果來源持續性磁碟區使用 rwx 存取模式、請選取無法提供 rwx 的目的地儲存類別、例如 Azure Managed Disks 、 AWS EBS 、 Google Persistent Disk 或<block ref="73a3350a1b91aeb6e2836fdf5975672c" prefix=" " category="inline-code"></block>將導致還原作業失敗。如需持續磁碟區存取模式的詳細資訊、請參閱<block ref="051768f02ea3f9f1a6b86b9d9b060248" category="inline-link-rx"></block> 文件。</block>
   <block id="0f707c2e2c303edecbc57b2a451ad8a9" category="list-text">* 檢查目的地 Volume * ：如果您複製到不同的儲存類別、請確定儲存類別使用相同的持續磁碟區存取模式（例如 ReadWriteMany ）。如果目的地持續磁碟區存取模式不同、則複製作業將會失敗。例如、如果來源持續性磁碟區使用 rwx 存取模式、請選取無法提供 rwx 的目的地儲存類別、例如 Azure Managed Disks 、 AWS EBS 、 Google Persistent Disk 或<block ref="73a3350a1b91aeb6e2836fdf5975672c" prefix=" " category="inline-code"></block>，將導致克隆操作失敗。如需持續磁碟區存取模式的詳細資訊、請參閱<block ref="051768f02ea3f9f1a6b86b9d9b060248" category="inline-link-rx"></block> 文件。</block>
+  <block id="a6c02bceb9754a343a62ee6831e410ff" category="paragraph">可以、您可以將私有 EKS 叢集新增至 Astra Control Service 。若要新增私有 EKS 叢集、請參閱 <block ref="d51718998c7312025a3cf72e62416cc2" category="inline-link-macro-rx"></block>。</block>
+  <block id="af2b33bb637866cca13ababa2653601d" category="paragraph">*我可以將私有GKE叢集新增至Astra Control Service嗎？*</block>
+  <block id="db505d04c170c2a88252c0e932180a35" category="paragraph">是的、您可以將私有GKE叢集新增至Astra Control Service。  若要新增私有 GKE 叢集、請參閱 <block ref="d51718998c7312025a3cf72e62416cc2" category="inline-link-macro-rx"></block>。</block>
+  <block id="6622fcb5d45cfc45bd9176f732c6ff48" category="paragraph">私有 GKE 叢集必須具有<block ref="aa255aeede553f15509fbd44536f790e" category="inline-link-rx"></block> 設定為允許Astra控制IP位址：</block>
+  <block id="cfc5109ab7ff42dc4040fd043f178632" category="summary">現在您已登入並新增叢集至 Astra Control 、就可以開始使用 Astra Control 的應用程式資料管理功能。</block>
+  <block id="9a0ee0d50da1e4f3e59551eb08363dfe" category="paragraph">現在您已登入並新增叢集至 Astra Control 、就可以開始使用 Astra Control 的應用程式資料管理功能。</block>
+  <block id="74a86f488b18fefd82f106b9311eb19d" category="doc">將公用自我管理叢集新增至 Astra Control Service</block>
+  <block id="eb2daccdd535169ce91bc787f992d1ae" category="paragraph">自我管理的叢集是您直接進行資源配置與管理的叢集。Astra Control Service支援在公有雲環境中執行的自我管理叢集。您可以上傳、將自我管理的叢集新增至Astra Control Service<block ref="ea46161c66978a87802bc5b44682cbe0" prefix=" " category="inline-code"></block> 檔案：您必須確保叢集符合此處列出的需求。</block>
+  <block id="56dc36d3b7b27a5b2a9658e201a8fbb4" category="section-title">支援的 Kubernetes 發佈</block>
+  <block id="2217ba8a52de4d6a9862994a9287aa48" category="paragraph">您可以使用 Astra Control Service 來管理下列類型的公用、自我管理叢集：</block>
+  <block id="c52ee6d695c3236a2b8bf5b454bac3cb" category="cell">Kubernetes 配送</block>
+  <block id="2e5d14f7919ff3c6138e7845aec4f915" category="cell">支援的版本</block>
+  <block id="22ec69733e61456fac578b2f6fcc2856" category="cell">Azure Stack HCI 上的 Azure Kubernetes 服務</block>
+  <block id="cd96805b6007cc4c2282c90a414e97f3" category="cell">Azure Stack HCI 21H2 和 22H2 、含 aks 1.23 和 1.24</block>
+  <block id="1c4dff0a00340691e103ef63154df371" category="cell">Google Anthos</block>
+  <block id="ef3097a00ac9ce5987c57fb2eedf104c" category="cell">1.12 至 1.14</block>
+  <block id="0770a54f3635e09a4e4ff53a035b9979" category="cell">Kubernetes （上游）</block>
+  <block id="4863c0e3b29248649240a69b9df08e1e" category="cell">1.24 至 1.26 （ Kubernetes 1.25 或更新版本需要 Astra Trident 22.10 或更新版本）</block>
+  <block id="8c95b632875261344eb6365459feffd0" category="cell">Rancher Kubernetes引擎（RKE）</block>
+  <block id="86742721bf4e412fd236371e22eea76b" category="cell">RKE 1.3 搭配 Rancher 2.6
+RKE 1.4 搭配 Rancher 2.7
+RKE 2 （ v1.23.x ）搭配 Rancher 2.6
+RKE 2 （ v1.24.x ）搭配 Rancher 2.7</block>
+  <block id="2fc3e0590f5be49e12616e7785d1d1d8" category="cell">4.10 至 4.12</block>
+  <block id="a56837df79ae6671b6b511c330431135" category="cell">VMware Tanzu Kubernetes Grid</block>
+  <block id="4341447b6ad78bf4d7eb59ebb5a53d63" category="cell">1.6.</block>
+  <block id="a1c1bb4994628000cfe61563bf4ff4f5" category="cell">VMware Tanzu Kubernetes Grid整合版</block>
+  <block id="4700f2869a38df0fa4d3a207c4048f3d" category="cell">1.14 和 1.15</block>
+  <block id="bd0c68687ae6337e2436da35c9876b3a" category="paragraph">這些指示假設您已建立自我管理的叢集。</block>
+  <block id="f1e065a4705616b4a33e38f8a6c9d9b0" category="list-text"><block ref="a250d079edf413d7ab6b80bd41f1a440" category="inline-xref-macro-rx"></block></block>
+  <block id="16b1f7f08468f13997b2fdd4f721c9a4" category="section-title">將叢集新增至 Astra Control Service</block>
+  <block id="bdc7cd6bff9d1eb5fd0eaf5e1ca677b8" category="paragraph">登入Astra Control Service之後、您的第一步就是開始管理叢集。將叢集新增至Astra Control Service之前、您必須執行特定工作、並確保叢集符合特定需求。</block>
+  <block id="ed7dc9118c0a600063c09d9c4b1e4056" category="list-text">您可以存取僅包含一個內容元素的叢集 kubeconfig 檔案。追蹤 <block ref="9d8ee3d0d4f5c967db921af26c4c5a7a" category="inline-link-macro-rx"></block> 以產生 kubeconfig 檔案。</block>
+  <block id="be9ee69990f66d4b09b395086857a8ce" category="list-text">* 提供者 * ：選取 * 其他 * 索引標籤以新增自我管理叢集的詳細資料。</block>
+  <block id="d96bdeefb5327882b80c5a0c005efc44" category="list-text">* 認證名稱 * ：為您上傳至 Astra Control 的自我管理叢集認證提供名稱。根據預設、認證名稱會自動填入為叢集名稱。</block>
+  <block id="480d071b2016f0e29882e77b5e440605" category="list-text">* 私有路由識別碼 * ：此欄位僅適用於私有叢集。</block>
+  <block id="983d9724e3261eb276b0dcf55ae43b30" category="list-text">（可選） * Storage* ：（可選）選擇您希望 Kubernetes 應用程式部署到此叢集的儲存類別、以供預設使用。</block>
+  <block id="282d8d8209314bd6acb1a4f3cd389cc7" category="list-text">若要為叢集選取新的預設儲存類別、請啟用 * 指派新的預設儲存類別 * 核取方塊。</block>
+  <block id="fd26273c7d75d972b745eec4221e8efe" category="list-text">從清單中選取新的預設儲存類別。</block>
+  <block id="c64cf4788bc7450dff6daa68683d4343" category="list-text">* 審查與核准 * ：檢閱組態詳細資料。</block>
+  <block id="0ba2b921163bf76c3f2db2b32777af19" category="list-text">選取 * 新增 * 將叢集新增至 Astra Control Service 。</block>
+  <block id="4726c7566c1ac66ead98e25690915c22" category="doc">將私有提供者管理的叢集新增至 Astra Control Service</block>
+  <block id="27669593ea2617107497ab1a90dac227" category="paragraph">您可以使用 Astra Control Service 來管理私有 Google Kubernetes Engine （ GKE ）叢集。這些指示假設您已建立私有 aks 或 OpenShift 叢集、並準備了安全的方法來遠端存取；如需建立及存取私有 aks 或 OpenShift 叢集的詳細資訊、請參閱下列文件：</block>
+  <block id="050928c40f2df5d67d523c2ceb55358c" category="paragraph">您必須執行下列工作、才能將您的私有叢集新增至 Astra Control Service ：</block>
+  <block id="9e4605ceac83f35027fa891eaf2bb9eb" category="list-text"><block ref="05078d418bde535da37d6932b80e8a20" category="inline-xref-macro-rx"></block></block>
+  <block id="e8ce2464bf37469ae2c62738acfbb711" category="list-text"><block ref="5e32b52882fb881cccde1bbea6854039" category="inline-xref-macro-rx"></block></block>
+  <block id="994c3aa5e52d7106f76b82ae619351f8" category="list-text"><block ref="47ee58c50268ba05031b033ebced64b7" category="inline-xref-macro-rx"></block></block>
+  <block id="7c7cfc28704c9f59a6e762426c61d3e1" category="admonition"><block ref="1880aaef19ef807bec19563ae1d07a45" prefix="" category="inline-code"></block> 只有在您匯入私有磁碟叢集、但未將 Kribeconfig 檔案提供給 Astra Control Service 時才需要。如果情況並非如此、請移除此行。</block>
+  <block id="8ecf0f59134b3a2ed7181ead76e12f3d" category="list-text"><block ref="8ecf0f59134b3a2ed7181ead76e12f3d" category="inline-link-macro-rx"></block></block>
+  <block id="1938f6af50a8259a0bb98bac4f34eeeb" category="list-text"><block ref="1938f6af50a8259a0bb98bac4f34eeeb" category="inline-link-macro-rx"></block></block>
+  <block id="ebf2a7f1b6295b0b8e4d97b888cb809e" category="list-text"><block ref="ebf2a7f1b6295b0b8e4d97b888cb809e" category="inline-link-macro-rx"></block></block>
+  <block id="aa4c3c05db25a319b0bebc15ee103855" category="list-text"><block ref="aa4c3c05db25a319b0bebc15ee103855" category="inline-link-macro-rx"></block></block>
+  <block id="237901df44ee12144e3c24dc8baa995f" category="section-title">將私有提供者管理的叢集新增至 Astra Control Service</block>
+  <block id="9963684340f2ca34fc5833ad22aa72e8" category="paragraph">您現在可以將私有叢集新增至 Astra Control Service 。</block>
+  <block id="9ad8b9db4ceeb7a92698fcbccf9602db" category="list-text">* 其他 * ：此索引標籤僅適用於自我管理叢集。</block>
+  <block id="6cd57cf0133cc1b724cc201428b5722b" category="list-text">* Cloud 執行個體名稱 * ：為新增叢集時將建立的新雲端執行個體提供名稱。深入瞭解 <block ref="32e60ef2ecbf9cc1dffc20ea8b07ceea" category="inline-link-macro-rx"></block>。</block>
+  <block id="a2da9fcba23edcdb09d2ce3393fc1218" category="paragraph">Astra Control Service 會顯示您可以選擇的叢集清單。</block>
+  <block id="a6671dc4c0a07b9b3022b432377da456" category="list-text">* 叢集 * ：從清單中選取要新增至 Astra Control Service 的叢集。</block>
+  <block id="bbd711f61d4950c90118b59d8868bc9b" category="admonition">當您從叢集清單中選取時、請注意 *Eligiblity* 欄。如果叢集為「不合格」或「部分合格」、請將游標移至狀態上方、以判斷叢集是否有問題。例如、它可能會識別叢集沒有工作節點。</block>
+  <block id="a3ada951b0d1c6790b7cbff74fe17f05" category="paragraph">如果這是您為此雲端供應商新增的第一個叢集、 Astra Control Service 會為雲端供應商建立物件儲存區、以便備份在合格叢集上執行的應用程式。（當您新增此雲端供應商的後續叢集時、不會再建立其他物件存放區。）如果您指定預設儲存類別、Astra Control Service會設定您指定的預設儲存類別。對於在Amazon Web Services或Google Cloud Platform中管理的叢集、Astra Control Service也會在叢集上建立管理員帳戶。這些動作可能需要幾分鐘的時間。</block>
+  <block id="2fd1c2062fdb568c6af4e096461d0e49" category="doc">將叢集新增至 Astra Control Service</block>
+  <block id="26da82cbc7a8df7fcbbe49a3e9e6fccc" category="paragraph">設定環境之後、您就可以建立Kubernetes叢集、然後將其新增至Astra Control Service。這可讓您使用 Astra Control Service 來保護叢集上的應用程式。</block>
+  <block id="0914d481112203d4b911ebed1757a9a1" category="paragraph">視您需要新增至 Astra Control Service 的叢集類型而定、您需要使用不同的步驟來新增叢集。</block>
+  <block id="acd3bbdaffab27a739eb40deb287d21e" category="inline-link-macro">將公有供應商託管的叢集新增至 Astra Control Service</block>
+  <block id="d379fafb661242cff57a1d60daa277b9" category="list-text"><block ref="b43ecd8048352a5880f9f84427e8daca" category="inline-link-macro-rx"></block>：請使用以下步驟來新增具有公有 IP 位址且由雲端供應商管理的叢集。您需要雲端供應商的服務主體帳戶、服務帳戶或使用者帳戶。</block>
+  <block id="bebc9e9010d861d525ad3775e329f807" category="list-text"><block ref="fe9c34dc9cb6c64f8544aab14e75a731" category="inline-link-macro-rx"></block>：請使用以下步驟來新增具有私有 IP 位址且由雲端供應商管理的叢集。您需要雲端供應商的服務主體帳戶、服務帳戶或使用者帳戶。</block>
+  <block id="fa284fde8f808c2bf96fb8b2694c1b18" category="list-text"><block ref="7e51a1163687d8496c2dfe28fa2708ea" category="inline-link-macro-rx"></block>：請使用以下步驟來新增具有公用 IP 位址且由組織管理的叢集。您需要為想要新增的叢集建立一個 kubeconfig 檔案。</block>
+  <block id="98998eb35c3d37be560e3dec31b28dad" category="inline-link-macro">將私有自我管理叢集新增至 Astra Control Service</block>
+  <block id="7877d63dd49e40fba2cdf45bae3ddabf" category="list-text"><block ref="5aca0624ca97ad5d564218355ddaf378" category="inline-link-macro-rx"></block>：請使用以下步驟來新增具有私有 IP 位址且由組織管理的叢集。您需要為想要新增的叢集建立一個 kubeconfig 檔案。</block>
+  <block id="e8099fa5b05fda76fc716be5fdf33f25" category="paragraph">您可以使用 Astra Control Service 來管理下列類型的私有、自我管理叢集：</block>
+  <block id="02d418da46e3afcc1d18c2d2a41e9c01" category="paragraph">這些指示假設您已經建立了私有叢集、並準備了安全的方法來遠端存取它。</block>
+  <block id="445376e98d0efe7729af9dd1fb361ee5" category="list-text"><block ref="eb3f61bcb8e86fdb25ef394d0f81f67c" category="inline-xref-macro-rx"></block></block>
+  <block id="d83fe03b30cfc16e1bd2f6475cc46eb5" category="section-title">將私有自我管理叢集新增至 Astra Control Service</block>
+  <block id="6f559b75d7116d94b01b017d82cc3cdb" category="list-text">* 私有路由識別碼 * ：輸入可從 Astra Connector 取得的私有路由識別碼。如果您透過查詢 Astra Connector<block ref="97e3c70d146c2d68eb7994d527d015db" prefix=" " category="inline-code"></block> 命令時、私有路由識別碼稱為<block ref="6205f02991df9d45acb59ccb61d7a0cb" prefix=" " category="inline-code"></block>。</block>
+  <block id="d67f163e5fdc875f6e2e27c3ed0cdf01" category="admonition">私有路由識別碼是與 Astra Connector 相關的名稱、可讓 Astra 管理私有 Kubernetes 叢集。在這種情況下、私有叢集是 Kubernetes 叢集、不會將其 API 伺服器暴露於網際網路上。</block>
+  <block id="1cbe758d6bc054731023778d3ae61f63" category="summary">Astra Control Service整合於NetApp Cloud Central的驗證服務中。註冊 Cloud Central 、即可存取 Astra Control Service 和 NetApp 的其他雲端服務。</block>
+  <block id="5889ed9e6b0222b99068c361f05d9603" category="paragraph">如果您尚未擁有 NetApp Cloud Central 帳戶、請註冊至 Cloud Central 、以便存取 Astra Control Service 和 NetApp 的其他雲端服務。Astra Control Service整合於NetApp Cloud Central的驗證服務中。如果您已擁有Cloud Central帳戶並已完成註冊、則可以存取<block ref="98c5a70a1a2162b1fc3e4c3e10ba9906" category="inline-link-rx"></block> 直接使用Cloud Central認證資料。</block>
+  <block id="d35cb258bf38db8a375c6b851aef5d80" category="doc">建立Kbeconfig檔案</block>
+  <block id="a2d93681918875d2089986e58a2ef85f" category="paragraph">在您設定雲端環境之後、您就可以建立 Kubernetes 叢集、然後將其新增至 Astra Control Service 。</block>
+  <block id="81cbd312a10cad3230cda33b84ee9321" category="paragraph">搜尋與Astra Control相關的文章、常見問題集或中斷修復資訊。</block>
+  <block id="bd6934bfa84725ff5583917a59872b56" category="list-text">從 * 動作 * 欄的選項功能表中、選取 * 取消管理 * 。</block>
+  <block id="684bcf0e2f2b77dc69e60ed526092957" category="list-text">確認您要取消管理叢集、然後選取 * 是、取消管理 * 。</block>
+  <block id="a860445dcee2989243278cacdebe7fa7" category="paragraph">在刪除Kubernetes叢集之前、如果叢集的NetApp儲存類別中含有持續磁碟區（PV）、您必須先依照下列其中一種方法刪除持續磁碟區宣告（PVc）。刪除叢集之前刪除 PVC 和 PV 、可確保您不會收到雲端供應商的非預期帳單。</block>
+  <block id="489dbe1492b79596be92eea2fad90205" category="paragraph">如果您在刪除叢集之前未刪除持續磁碟區、則需要從雲端供應商手動刪除後端磁碟區。</block>
+  <block id="013a127f643228c21ab6c9baf558cef5" category="sidebar">新增叢集</block>
+  <block id="53a409d42a4df9c661f7f257a7826a35" category="sidebar">新增由供應商管理的叢集</block>
+  <block id="36833d9677ea7172e8d298d54620b02e" category="sidebar">新增由公用提供者管理的叢集</block>
+  <block id="6119368ac8c672080f6c4a4dab30e3d5" category="sidebar">新增私有提供者管理的叢集</block>
+  <block id="01b0983b96350d7c328b2bdc55473ec9" category="sidebar">新增自我管理的叢集</block>
+  <block id="df0d5dfa45e4a1cfa039e5d18dfb9d2d" category="sidebar">新增公用自我管理叢集</block>
+  <block id="3746d0f382f4e7553ff621fded87d97c" category="sidebar">新增私有自我管理叢集</block>
 </blocks>

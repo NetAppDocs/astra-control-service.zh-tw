@@ -24,15 +24,25 @@ entries:
     url: "/get-started/set-up-microsoft-azure-with-amd.html"
 - title: 註冊帳戶
   url: "/get-started/register.html"
-- title: 管理叢集
+- title: 新增叢集
   url: "/get-started/add-first-cluster.html"
   entries:
-  - title: 檢查 Astra Trident 版本
-    url: "/get-started/check-astra-trident-version.html"
-  - title: 建立管理叢集角色 kubeconfig 檔案
-    url: "/get-started/create-kubeconfig.html"
-- title: 管理私有叢集
-  url: "/get-started/manage-private-cluster.html"
+  - title: 新增由供應商管理的叢集
+    entries:
+    - title: 新增由公用提供者管理的叢集
+      url: "/get-started/add-public-provider-managed-cluster.html"
+    - title: 新增私有提供者管理的叢集
+      url: "/get-started/add-private-provider-managed-cluster.html"
+  - title: 新增自我管理的叢集
+    entries:
+    - title: 新增公用自我管理叢集
+      url: "/get-started/add-public-self-managed-cluster.html"
+    - title: 新增私有自我管理叢集
+      url: "/get-started/add-private-self-managed-cluster.html"
+    - title: 檢查 Astra Trident 版本
+      url: "/get-started/check-astra-trident-version.html"
+    - title: 建立Kbeconfig檔案
+      url: "/get-started/create-kubeconfig.html"
 - title: 接下來呢？
   url: "/get-started/whats-next.html"
 - title: 影片
