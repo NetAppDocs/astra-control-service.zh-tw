@@ -199,7 +199,6 @@
   <block id="bb2ac0b8da1f64a3498af147ba43fc10" category="inline-link-macro">還原</block>
   <block id="9de0e2b17d7e1e2da6c0ce7e9dc6e377" category="list-text">選擇* Clone（克隆）*。</block>
   <block id="e78b0b14ef505bb78e615dad8a884310" category="list-text">選擇要複製的目的地叢集。</block>
-  <block id="b50343ac8865ee6508570846230e18d5" category="list-text">選擇是要從現有的快照或備份建立複本。如果您未選取此選項、Astra Control會從應用程式的目前狀態建立複本。</block>
   <block id="5dfe25ebe8ed6ed27f2613aa48ba8e44" category="summary">透過新增其他儲存區、以及變更雲端供應商叢集的預設儲存區、來管理Astra用於備份與複製的儲存區。</block>
   <block id="79aa9197dc185dded5eb383a683a5219" category="doc">管理儲存庫</block>
   <block id="281b980af7a696eab76fe5424a68e4d7" category="section-title">Astra Control如何使用鏟斗</block>
@@ -999,7 +998,6 @@
   <block id="5b06c01df203c0160efefa98ada2bcc1" category="paragraph">下列限制適用於Astra Control限制使用者存取資源或功能的方式。</block>
   <block id="66ba81be546d7a5973fa02b72f2d22d7" category="section-title">具有命名空間RBAC限制的使用者可以新增及取消管理叢集</block>
   <block id="6d70905dce5a2e1f37d99d5fa5a0fca9" category="paragraph">不應允許具有命名空間RBAC限制的使用者新增或取消管理叢集。由於目前的限制、Astra無法防止此類使用者取消管理叢集。</block>
-  <block id="bea0a641d1ced5fe318717eadebe7ab8" category="section-title">具有命名空間限制的成員使用者、必須先將命名空間新增至限制、才能存取複製或還原的應用程式</block>
   <block id="598d6fe4e43f08217f8edf064d9a7fa3" category="summary">NetApp會定期更新Astra Control Service、為您提供新功能、增強功能和錯誤修復。</block>
   <block id="124d123607fcd1192a3750d68c2110f7" category="doc">Astra Control Service的新功能</block>
   <block id="40bde2f2e0e627e3fcf147169d6d315a" category="paragraph">此版本包含下列新功能與增強功能。</block>
@@ -1008,19 +1006,14 @@
   <block id="40e5c10855fbafbea8290f73a6d04f70" category="section-title">2021年6月2日</block>
   <block id="0f71f0ee6bed3d528b8e76714ee6a81d" category="paragraph">此版本包含錯誤修正、以及Google Cloud支援的下列增強功能。</block>
   <block id="8527c0ab84fa8956acb7ba13d5e3ad9d" category="inline-link-macro">瞭解Astra Control Service如何使用Cloud Volumes Service 支援Google Cloud的功能作為持續磁碟區的儲存後端</block>
-  <block id="033c399986bd3d9b7ef54b989611f70b" category="paragraph"><block ref="ae94f8298ace086e6c054e879241557e" category="inline-link-macro-rx"></block>。</block>
   <block id="33b49ba36195927db2411b412cfe0b4c" category="inline-link-macro">深入瞭解GKE叢集需求</block>
-  <block id="94aa6fa7719fbfefbbd46c4b08c22b4b" category="paragraph"><block ref="c3bd8fba045cfa6e89cf51e6e5781d5d" category="inline-link-macro-rx"></block>。</block>
   <block id="7d782479a41a3941b57cc7c2b60d318a" category="inline-link-macro">瞭解如何開始使用</block>
-  <block id="a916818021b3f228baef189d6dcd5538" category="paragraph"><block ref="bc25b49e1030874d11222c9fe6a36711" category="inline-link-macro-rx"></block>。</block>
   <block id="d0c288db47307237677ead5ae8dbf32b" category="inline-link">瞭解如何使用REST API來自動化應用程式資料生命週期管理</block>
   <block id="9a4e809cf5b98aab76642ac595e658d8" category="paragraph"><block ref="d96242c4026b1863ec2b29df005dc070" category="inline-link-rx"></block>。</block>
   <block id="9908394cca5993b5d280b7ec9749f2d1" category="paragraph">以折扣價預先付款、每年訂閱一次、可讓您管理每個應用程式套件最多10個應用程式。請聯絡NetApp銷售人員、視組織需求購買任意數量的套件、例如購買3個套件、即可從Astra Control Service管理30個應用程式。</block>
   <block id="2a5cf8d74e69ce024c7b1a65f9caeaf7" category="paragraph">如果您管理的應用程式數量超過年度訂閱所允許的數量、則每個應用程式的超額使用率將高達每分鐘$0.005（與Premium PayGo相同）。</block>
   <block id="e59328f35d0a769573f1f66bb3b269cf" category="inline-link-macro">深入瞭解Astra Control服務定價</block>
-  <block id="2691bc250518e01fc8a64e87887765c4" category="paragraph"><block ref="3315f5b8eeab7eb8e59fe4f651ae450a" category="inline-link-macro-rx"></block>。</block>
   <block id="7056b3684820e2ba6827e9d27c85715f" category="inline-link-macro">深入瞭解如何管理應用程式</block>
-  <block id="5ee8d4e880da1ab6adf2ef58cad52bc3" category="paragraph"><block ref="b64ad29284518b0972171e8bbb41ea75" category="inline-link-macro-rx"></block>。</block>
   <block id="58a37706ad29b91b5ea0febd18591e9e" category="inline-image-macro">「應用程式」頁面的快照、其中已選取「探索」索引標籤。</block>
   <block id="dc52ad8a88f5c9ee3cb4fe055db4e1dc" category="paragraph"><block ref="dc52ad8a88f5c9ee3cb4fe055db4e1dc" category="inline-image-macro-rx" type="image"></block></block>
   <block id="159d293f53335411fd6cc5fe00714c00" category="inline-image-macro">「設定保護原則」對話方塊的快照、可讓您啟用每小時、每日、每週及每月排程。</block>
@@ -1034,10 +1027,8 @@
   <block id="429b81900737e151eef475ff31869fa3" category="inline-link">支援支援的Google Cloud地區Cloud Volumes Service</block>
   <block id="28d262f7686b19b993c8250943518a7f" category="paragraph">這項增強功能表示Astra Control Service現在可以管理在_any中執行之Kubernetes叢集的應用程式資料<block ref="69fa08b6ef6184ae8dd1a91cecb10b56" category="inline-link-rx"></block>。</block>
   <block id="b536aa5bb92e93036b2454d38b99f56f" category="inline-link-macro">深入瞭解如何選擇服務類型</block>
-  <block id="7a5679db41601d3fecb409a68ce4c9b2" category="paragraph">如果您可以在Google Cloud區域之間靈活選擇、您可以根據效能需求選擇CVS或CVS效能。 <block ref="89000b13767f1a83f8086c1cc2e31c7d" category="inline-link-macro-rx"></block>。</block>
   <block id="d13993f9f9e60a93ba268e59c921381d" category="paragraph">我們很高興宣布Astra Control Service現在已全面推出。我們採納了許多從試用版獲得的意見反應、並做了一些其他值得注意的增強功能。</block>
   <block id="f1b3e68a6481f423fd5c59659b18560d" category="inline-link-macro">深入瞭解帳單</block>
-  <block id="964a70c45a61f521ea1c4cb06403d4ee" category="list-text">現在可以使用帳單、讓您從免費方案移至優質方案。 <block ref="2e7d11d76129cc6bc66120b2bffcd33e" category="inline-link-macro-rx"></block>。</block>
   <block id="ebb4cef6e957a3f3db21c2430ef1de91" category="list-text">Astra Control Service現在使用CVS效能服務類型時、會建立最小大小為100 GiB的持續磁碟區。</block>
   <block id="00d8253290bc1791dbe2e2f5445579ca" category="list-text">Astra Control Service現在可以更快探索應用程式。</block>
   <block id="f0823272d746557a316d9b1a6fcb7c28" category="list-text">您現在可以自行建立及刪除帳戶。</block>
@@ -1058,22 +1049,14 @@
   <block id="95dc0391ce7b396d7dd5622284e8fc3e" category="doc">已知問題</block>
   <block id="825cc355a6b503245e0d84d26f0e16d1" category="paragraph">下列已知問題會影響目前的版本：</block>
   <block id="a6f00c82b6eb55a13a1f242313aaf9c9" category="list-title">應用程式</block>
-  <block id="b9cce366a2d9d759915518e851cf0665" category="list-text"><block ref="16c16afb381b877e03025eb37da25b48" category="inline-xref-macro-rx"></block></block>
   <block id="82e978ba92c76493cce02201d1b04355" category="list-title">備份、還原及複製</block>
-  <block id="b24e23005ed2cadfce9c683ec2b754c5" category="list-text"><block ref="213007433d1a45330875fe1630ec15fa" category="inline-xref-macro-rx"></block></block>
   <block id="d3e9aa65af62841e4f76b512ae2f0bc6" category="list-text"><block ref="b3245371f9a4420028b8568536aa8ffb" category="inline-xref-macro-rx"></block></block>
   <block id="c44dd49a83e18cbd27c250a656ebf16d" category="list-title">其他問題</block>
-  <block id="70349fbabd47d30bbfa25bf8e3755abd" category="list-text"><block ref="cc32903e451bee2b84a8f72fefa8ee63" category="inline-xref-macro-rx"></block></block>
   <block id="440441988db4dd1a631f18e5ce228880" category="list-text"><block ref="4791c8debe5295c527a6dd0dc7f0957f" category="inline-xref-macro-rx"></block></block>
   <block id="1af0576f77189b1c71e1d3a9eade995a" category="section-title">應用程式複製在以設定的儲存類別部署應用程式之後失敗</block>
   <block id="99dd9758763fdd9d63c8172bb77a83e6" category="paragraph">在以明確設定的儲存類別（例如「helm install ...-set globe.storageClass = NetApp-CVs-perf-Extreme」）部署應用程式之後、後續嘗試複製應用程式時、必須讓目標叢集擁有原本指定的儲存類別。將具有明確設定儲存類別的應用程式複製到沒有相同儲存類別的叢集、將會失敗。在此案例中沒有任何恢復步驟。</block>
-  <block id="ca318d6b4eed133149be28dcaf9203ab" category="section-title">還原應用程式會導致PV大小大於原始PV</block>
-  <block id="c1ab420107ece0814547044cc11d2689" category="paragraph">如果您在建立備份之後調整持續磁碟區的大小、然後從該備份還原、則持續磁碟區大小將會與PV的新大小相符、而非使用備份的大小。</block>
   <block id="cbe80683ce886af66ccaaa3c0870a530" category="section-title">使用特定版本的PostgreSQL時、應用程式複製失敗</block>
   <block id="70fc1bae36d48b09899dc323f7fbc3b4" category="paragraph">同一個叢集內的應用程式複製作業、會持續失敗、並顯示Bitnami PostgreSQL 11.5.0圖表。若要成功複製、請使用舊版或更新版本的圖表。</block>
-  <block id="277d303328081a08d224ba1791474f8c" category="section-title">使用外部Snapshotter 4.2.0版時、快照最終會開始失敗</block>
-  <block id="989f15ab4fafcbe33b5c793f7c17921f" category="inline-link">支援的版本</block>
-  <block id="b07ba4d88165e7d28588bdffecc7b23e" category="paragraph">使用Kubernetes Snapshot-Controller（也稱為exter-snapshotter）4.2.0版搭配Kubernetes 1.20或1.21時、快照最終可能會開始失敗。若要避免這種情況發生、請使用不同的<block ref="4a7fe4e7f109667d1c8972a591d16348" category="inline-link-rx"></block> Kubernetes版本1.20或1.21的外部快照功能（例如4.2.1版）。</block>
   <block id="f64cab133147d09d35d2708459ada555" category="section-title">當Astra Trident離線時、應用程式資料管理作業會因內部服務錯誤（500）而失敗</block>
   <block id="5ffd50b83740bc0749b40034cddea615" category="paragraph">如果應用程式叢集上的Astra Trident離線（並重新連線）、而且在嘗試應用程式資料管理時遇到500個內部服務錯誤、請重新啟動應用程式叢集中的所有Kubernetes節點、以還原功能。</block>
   <block id="8486df515c0b656873dd95e4d3416d37" category="sidebar">Astra Control Service文件</block>
@@ -1175,14 +1158,12 @@
   <block id="6e1e9c83b80f4d22d34cbdf60a71383b" category="paragraph">ifdef::gcp[]</block>
   <block id="f71e012ed046328c8d64aaabfb2eaac1" category="list-text"><block ref="cbe527e26a3f74a21725a85c9fa46b07" category="inline-xref-macro-rx"></block></block>
   <block id="f4c36c8148a1c2baf23d917e226d50fa" category="list-text"><block ref="703e5962f4e6c982183fbea5d4a0ed0f" category="inline-xref-macro-rx"></block></block>
-  <block id="ea9063ae1f93b97201fb6f5157ef64b8" category="paragraph">在以明確設定的儲存類別（例如「helm install ...-set globe.storageClass = NetApp-CVs-perf-Extreme」）部署應用程式之後、後續嘗試複製應用程式時、必須讓目標叢集擁有原本指定的儲存類別。將具有明確設定儲存類別的應用程式複製到沒有相同儲存類別的叢集、將會失敗。在此案例中沒有任何恢復步驟。</block>
   <block id="bc2727235d82d8b7c78a69fd565295f3" category="section-title">無法在已刪除和重新建立的命名空間上定義應用程式</block>
   <block id="586ace51c405474a5c0172b8c1cf7afd" category="paragraph">如果您使用命名空間定義應用程式、刪除命名空間、然後將應用程式重新安裝到同一個命名空間、則作業會失敗並顯示錯誤代碼為409。若要使用重新建立的命名空間定義應用程式、請先刪除舊的應用程式執行個體。</block>
   <block id="3460be97ad18de8f927ac029b73aea1e" category="section-title">如果在管理叢集之後新增volumesnapshotClass、則應用程式備份和快照將會失敗</block>
   <block id="671f168669b50eaf41bbc6e57d130fd1" category="paragraph">在此案例中、備份與快照會失敗、並顯示UI 500錯誤。因應措施是重新整理應用程式清單。</block>
   <block id="2628d7b5cc84b024c4b920441addcb86" category="section-title">不支援使用憑證管理程式之應用程式的就地還原作業</block>
   <block id="0d7cda4c63f06aa1eaf0682a607c5601" category="paragraph">此版Astra Control Service不支援與憑證管理員進行就地還原應用程式。支援將作業還原至不同的命名空間和複製作業。</block>
-  <block id="33e9a46dfde5bb0f5a8b8327623cb998" category="paragraph">任何具有命名空間名稱/ID之RBAC限制的「成員」使用者、都可以將應用程式複製或還原到同一個叢集上的新命名空間、或是組織帳戶中的任何其他叢集。不過、相同的使用者無法存取新命名空間中的複製或還原應用程式。在複製或還原作業建立新命名空間之後、帳戶管理員/擁有者可以編輯「成員」使用者帳戶、並更新受影響使用者的角色限制、以授予新命名空間的存取權。</block>
   <block id="d55b05877d0dd6743f47d3442323323e" category="inline-link-macro">設定Amazon Web Services</block>
   <block id="0a2055495a94f091655a2e4d421cffe2" category="list-text">預先備份</block>
   <block id="cf6e97e89c4b36c29252fcb7b0728d2f" category="list-text">備份後</block>
@@ -1448,37 +1429,25 @@
   <block id="b45f0d80639ec80f5586318d3c5bd31d" category="sidebar">AWS叢集的儲存設備</block>
   <block id="5a81378cdc7edd9ea960cf02d6ca78d2" category="paragraph">ifdef::aws[]</block>
   <block id="6beb2fa01dc121194547db1bfbe03408" category="paragraph">endif::aws[]</block>
-  <block id="868ecbbbd8b1e28b5199c1b1690c500b" category="list-text"><block ref="9db9aa8838c1418469991d8a206fd28d" category="inline-xref-macro-rx"></block></block>
-  <block id="e43994c24bb8c97f2a5c5d923ac69298" category="section-title">當嘗試還原屬於刪除叢集的應用程式時、應用程式頁面會永久載入</block>
-  <block id="f578c128901fc5a492793e5a929e4673" category="paragraph">當您嘗試從「應用程式」頁面刪除的叢集還原應用程式時、「應用程式」頁面永遠不會完成載入。因應措施是從應用程式清單頁面的應用程式「動作」功能表還原應用程式。</block>
   <block id="b6a9320279ef3d24bad38497af1f9eb9" category="list-text">改善的應用程式管理工作流程改善的應用程式管理工作流程、可在定義由Astra Control管理的應用程式時提供更高的靈活度。</block>
   <block id="177b32024bced380eccf349123cd8965" category="list-text">支援Amazon Web Services叢集Astra Control Service現在可管理在Amazon Elastic Kubernetes Service託管叢集上執行的應用程式。您可以將叢集設定為使用Amazon Elastic Block Store或Amazon FSXfor NetApp ONTAP 支援作為儲存後端。</block>
-  <block id="e0b52dea31d68bd0cdc1c14efa59da85" category="paragraph"><block ref="e0b52dea31d68bd0cdc1c14efa59da85" category="inline-link-macro-rx"></block></block>
   <block id="1dbb809aab63af6c10fa08a732739c10" category="list-text">除了快照前及快照後執行掛勾之外、您現在還可以設定下列類型的執行掛勾：</block>
-  <block id="708d69a9cfe8326e5c6ce3c8ad6ac757" category="paragraph"><block ref="708d69a9cfe8326e5c6ce3c8ad6ac757" category="inline-link-macro-rx"></block></block>
   <block id="518c2494a2c756dd2dd87536a60d5143" category="list-text">Azure Marketplace支援您現在可以透過Azure Marketplace註冊Astra Control Service。</block>
   <block id="9c9f134c049ff9c2a442218abf4331d1" category="list-text">在閱讀Astra Control Service文件時、您可以選擇雲端供應商、現在您可以在頁面右上角選擇雲端供應商。您將會看到僅與所選雲端供應商相關的文件。</block>
   <block id="15e9aaa51586aa57547422044c2341dc" category="inline-image-macro">雲端供應商下拉式功能表的快照、您可以在其中選取雲端供應商的特定文件。</block>
   <block id="de50b13f47ea18120714d7459edc3ba7" category="paragraph"><block ref="de50b13f47ea18120714d7459edc3ba7" category="inline-image-macro-rx" type="image"></block></block>
   <block id="48bb90ecaac353cdb16c91a6a455b560" category="list-text">命名空間角色型存取控制（RBAC）Astra Control Service現在支援指派命名空間限制給成員或檢視器使用者。</block>
-  <block id="24c3dfd752dd86b23d8384546f638c63" category="paragraph"><block ref="24c3dfd752dd86b23d8384546f638c63" category="inline-link-macro-rx"></block></block>
   <block id="2221301e5f320330a2ff23a7f92dae75" category="list-text">Azure Active Directory支援Astra Control Service支援使用Azure Active Directory進行驗證和身分識別管理的高峰叢集。</block>
-  <block id="04d97bec7f4fa11002764129cf40d13a" category="paragraph"><block ref="04d97bec7f4fa11002764129cf40d13a" category="inline-link-macro-rx"></block></block>
   <block id="2db9c37d1e2c8254e3a6c338f50945e5" category="list-text">支援私有的高效能叢集您現在可以管理使用私有IP位址的高效能叢集。</block>
   <block id="971c8f5be55b8948fecdbae5902f8226" category="list-text">從Astra Control移除鏟斗現在您可以從Astra Control Service移除鏟斗。</block>
-  <block id="aac55694044199d5b6c6c57c331459cc" category="paragraph"><block ref="aac55694044199d5b6c6c57c331459cc" category="inline-link-macro-rx"></block></block>
   <block id="6375b2643d0c645e023d1f597c848293" category="list-text">就地應用程式還原您現在可以還原至相同的叢集和命名空間、還原已備份的應用程式快照、複製或備份。</block>
-  <block id="57b180faef2287140b0abcde93ffc94f" category="paragraph"><block ref="57b180faef2287140b0abcde93ffc94f" category="inline-link-macro-rx"></block></block>
   <block id="461f26d1f3faec3478ece1e0d794f9cc" category="list-text">指令碼事件搭配執行掛勾Astra Control、可支援自訂指令碼、以便在擷取應用程式快照之前或之後執行。這可讓您執行暫停資料庫交易等工作、使資料庫應用程式的快照保持一致。</block>
   <block id="a20299ad7f2e64a95e7cc3284a9906a5" category="list-text">由營運者部署的應用程式Astra Control可支援與營運者一起部署的部分應用程式。</block>
-  <block id="2ea11a36f6164d1bd0f8d6a42682dfb9" category="paragraph"><block ref="2ea11a36f6164d1bd0f8d6a42682dfb9" category="inline-link-macro-rx"></block></block>
   <block id="d64b4db98e014f5440d1f843fea08e3e" category="list-text">具有資源群組範圍的服務主體Astra Control Service現在支援使用資源群組範圍的服務主體。</block>
-  <block id="e654c32bea1b21fec8de7bcafdd49dec" category="paragraph"><block ref="e654c32bea1b21fec8de7bcafdd49dec" category="inline-link-macro-rx"></block></block>
   <block id="d965fac9eadc89088435d79a0e46882b" category="list-text">Astra Control Center Astra Control現已推出全新部署模式。_Astra Control Center_是您在資料中心安裝及操作的自我管理軟體、可讓您管理內部部署Kubernetes叢集的Kubernetes應用程式生命週期管理。</block>
   <block id="1966afd91050d7e96fceb59f9fd13f32" category="inline-link">前往Astra Control Center文件</block>
   <block id="80bfdf6309549a7797f10098e05bccc1" category="paragraph">若要深入瞭解、<block ref="ba5556fa094f10e77f4fa7086cec4749" category="inline-link-rx"></block>。</block>
   <block id="eb98a9a286b93bcf890e03ce1c9063eb" category="list-text">現在您可以利用自己的儲存庫來管理Astra用於備份和複製的儲存庫、方法是新增其他儲存庫、並變更雲端供應商中Kubernetes叢集的預設儲存庫。</block>
-  <block id="b8e0d8248d4ced7bc854879cb8922db8" category="paragraph"><block ref="b8e0d8248d4ced7bc854879cb8922db8" category="inline-link-macro-rx"></block></block>
   <block id="590485080b61fb4aa0eecd594141c835" category="list-text">支援共享的VPC您現在可以使用共享的VPC網路組態、在GCP專案中管理GKE叢集。</block>
   <block id="3ac7bce9a68f7416551081de0fb809db" category="list-text">在使用CVS服務類型時、CVS服務類型Astra Control Service的持續磁碟區大小現在會建立最小大小為300 GiB的持續磁碟區。</block>
   <block id="0bf2090aa53a447008516a1f0e59ef29" category="list-text">GKE工作節點現在支援Container Optimized OS Container Optimized OS。這是支援Ubuntu的附加功能。</block>
@@ -1488,7 +1457,6 @@
   <block id="a5691fb92ce2acabdd947ea4e3dfaa70" category="list-text">命名空間與應用程式視覺化我們增強了「探索到的應用程式」頁面、以更清楚地顯示命名空間與應用程式之間的階層關係。只要擴充命名空間即可查看該命名空間中所含的應用程式。</block>
   <block id="a13f2262ff8b5ec001ba8f41398e1a6c" category="list-text">使用者介面增強功能資料保護精靈已經過強化、易於使用。例如、我們將「保護原則」精靈精簡、以便在您定義保護排程時、更輕鬆地檢視保護排程。</block>
   <block id="aad7f3d472e654aef7d2a492a3d54210" category="list-text">活動強化我們讓您更輕鬆地檢視Astra Control帳戶中活動的詳細資料。</block>
-  <block id="ca0a782901da0ca119f401851ac90842" category="paragraph"><block ref="78b785a9e2d028de12ce9f3f40284661" category="inline-link-macro-rx"></block>。</block>
   <block id="3fc3ba3c5f20ea640e5be46d8c9ca467" category="inline-link">NetApp Astra產品系列文件</block>
   <block id="c5bc786725b0b61976497d5d0c73be96" category="list-text"><block ref="c5bc786725b0b61976497d5d0c73be96" category="inline-link-rx"></block></block>
   <block id="1c90591655cdfe7d885b02ed72ae2509" category="summary">NetApp以多種方式支援Astra Control。我們全年無休提供豐富的免費自助支援選項、例如知識庫（KB）文章和不和管道。您的Astra Control帳戶透過網路票證提供遠端技術支援。</block>
@@ -1591,17 +1559,11 @@
   <block id="d187001d501dee0ac96f1c4520418b01" category="section-title">2022年11月22日</block>
   <block id="9ed67fb9a4ad2ebd97ca13fe2eb81541" category="list-title">新功能與支援</block>
   <block id="4eba5ba43cc624385f276658a22c51a8" category="inline-link-macro">定義應用程式</block>
-  <block id="615bfdde03d6ca17ceb25db1da7a8950" category="paragraph"><block ref="615bfdde03d6ca17ceb25db1da7a8950" category="inline-link-macro-rx"></block></block>
   <block id="92131ec58f7cefa34d38f2fee2e98c42" category="inline-link-macro">監控執行中的工作</block>
-  <block id="7ae618b5d6c1a9768cb0ddc2627b32d0" category="paragraph"><block ref="7ae618b5d6c1a9768cb0ddc2627b32d0" category="inline-link-macro-rx"></block></block>
   <block id="e0b7652da21db7cd16f8155afc64e87b" category="inline-link-macro">管理雲端執行個體</block>
-  <block id="9df52d082eaf22280b9667a382b64298" category="paragraph"><block ref="9df52d082eaf22280b9667a382b64298" category="inline-link-macro-rx"></block></block>
   <block id="3a3b7ac2e39541ea05707ccd6eb054d4" category="list-title">已知問題與限制</block>
   <block id="740eb4189d3efee5546cc5fba4fded77" category="inline-link-macro">此版本的已知問題</block>
-  <block id="d1dd5fb317ad23b395c8c846c80e0e5f" category="list-text"><block ref="d1dd5fb317ad23b395c8c846c80e0e5f" category="inline-link-macro-rx"></block></block>
   <block id="609952cd5d8fde0dfe3b1b884bf14558" category="inline-link-macro">此版本的已知限制</block>
-  <block id="9ce2124f29dc4cc07281ecd767336d13" category="list-text"><block ref="9ce2124f29dc4cc07281ecd767336d13" category="inline-link-macro-rx"></block></block>
-  <block id="0a118569e0f55e95cf56c6a9d02d982b" category="paragraph"><block ref="0a118569e0f55e95cf56c6a9d02d982b" category="inline-link-macro-rx"></block></block>
   <block id="bbe48fb854ea022537208eeeff822f91" category="list-title">關於這項工作</block>
   <block id="8d7c216bc17d281838efafaa3704677b" category="list-text">選擇還原類型：</block>
   <block id="90d21d98503ddae05ddf0a1a34b7d790" category="list-text">*還原至原始命名空間*：使用此程序可將應用程式就地還原至原始叢集。</block>
@@ -1688,7 +1650,6 @@
   <block id="dd74de0d68eefd1c10bd1501afbc8b46" category="list-text">輸入名稱。</block>
   <block id="0e4d685dee3fd3a3e1633f70aaeb2691" category="list-text">輸入複本的目的地命名空間。與應用程式相關聯的每個來源命名空間都會對應至目的地命名空間。</block>
   <block id="411a48d6c0de4b9fbde3de65ac433663" category="admonition">Astra Control會在複製作業中建立新的目的地命名空間。您指定的目的地命名空間不得已存在於目的地叢集上。</block>
-  <block id="d0e721bec5fc1bc7c2e9064111e136f3" category="list-text">如果您選擇從現有的快照或備份複製、請選擇您要使用的快照或備份。</block>
   <block id="b92d91ea83b6fa7710918e0aa9c334a7" category="list-text">檢閱有關複本的資訊、然後選取* Clone（複製）*。</block>
   <block id="388750beff3f33d3945072066707b581" category="paragraph">Astra Control會根據您提供的資訊來複製應用程式。當有新的應用程式複製時、複製作業會成功完成<block ref="396d45b57c2fbe3318e7b93272a2686b" prefix=" " category="inline-code"></block> 請在「*應用程式*」頁面上說明。</block>
   <block id="f661390a0d28c238ffbca34027c731cc" category="paragraph">在複製或還原作業建立新命名空間之後、帳戶管理員/擁有者可以編輯成員使用者帳戶、並更新受影響使用者的角色限制、以便授予新命名空間的存取權。</block>
@@ -1926,7 +1887,6 @@
   <block id="9497a649f72a465537e088cd33f63b26" category="paragraph">除了自動包含的Astra Control之外、您也可以匯入與命名空間資源相關聯的叢集資源。您可以新增規則、其中包含特定群組的資源、種類、版本及選擇性的標籤。如果Astra Control沒有自動包含資源、您可能會想要這麼做。</block>
   <block id="b9e5ceb3ee51c79795e57043d65ace4f" category="list-text">*明確的儲存類別*：如果您部署的應用程式已明確設定儲存類別、而且需要複製應用程式、則目標叢集必須具有原本指定的儲存類別。將具有明確設定儲存類別的應用程式複製到沒有相同儲存類別的叢集、將會失敗。</block>
   <block id="9bef1d9bf218ed752be76e1c92b4e716" category="list-text">支援NetApp Cloud Volumes ONTAP 功能作為儲存後端</block>
-  <block id="afe823403603f8e45a82a192de4f1f39" category="paragraph"><block ref="afe823403603f8e45a82a192de4f1f39" category="inline-link-macro-rx"></block></block>
   <block id="43f10e14cfc78f2dccf4af9115390a26" category="list-text"><block ref="43f10e14cfc78f2dccf4af9115390a26" category="inline-link-rx"></block></block>
   <block id="aa2317f5569d30b7aac1b41dd02ffe97" category="list-text">如果您計畫將NetApp Cloud Volumes ONTAP 支援作為儲存後端、則需要設定Cloud Volumes ONTAP 支援以搭配Amazon Web Services使用的功能。請參閱Cloud Volumes ONTAP 《The》<block ref="c40ff22452592aa319388d1d94a0a32e" category="inline-link-rx"></block>。</block>
   <block id="892bb983e85684c863a4bf11d26d064e" category="paragraph">Astra Control Service可以使用Container Storage Interface（SCSI）驅動程式、將Azure託管磁碟當作儲存後端來進行介面。此服務提供由Azure管理的區塊層級儲存設備。</block>
@@ -1991,9 +1951,7 @@
   <block id="69ed61dec8d3d932d3348b6e66006a07" category="list-text">叢集必須執行 1.23 至 1.25 範圍內的 Kubernetes 版本。</block>
   <block id="d5e69ef71e099319f8f69f91e01d0e41" category="section-title">2023 年 4 月 25 日</block>
   <block id="031a85a49fb1af20498d8b05e9ab9eb2" category="list-text">支援私有 Red Hat OpenShift 叢集</block>
-  <block id="d17303ee723b020bbbbfc1cd5577456b" category="paragraph"><block ref="d17303ee723b020bbbbfc1cd5577456b" category="inline-link-macro-rx"></block></block>
   <block id="e230abda83cb11e7b7ac9992ed62766e" category="list-text">支援在還原作業期間包含或排除應用程式資源</block>
-  <block id="ffff33c395d25303894a11efaf1b01aa" category="paragraph"><block ref="ffff33c395d25303894a11efaf1b01aa" category="inline-link-macro-rx"></block></block>
   <block id="b909803838dd775bd8b8dcfbaf82fb87" category="list-text">支援管理純資料應用程式</block>
   <block id="5b8f884e708de51fd4946164326e802c" category="section-title">「活動」頁面最多可顯示 100 、 000 個活動</block>
   <block id="676bd50e0f10e6725dc7a68e3041cfed" category="inline-link-macro">Astra Control REST API</block>
@@ -2066,7 +2024,6 @@
   <block id="de6aa62d63707ee7d0d8147e0441da62" category="paragraph"><block ref="de6aa62d63707ee7d0d8147e0441da62" category="inline-link-rx"></block></block>
   <block id="bbc78db47a3fe23dc96746668da3d287" category="list-text"><block ref="bbc78db47a3fe23dc96746668da3d287" category="inline-link-rx"></block></block>
   <block id="abfeaf5dc3fa1bf4a2a2cba84c5e546c" category="section-title">2023 年 5 月 15 日</block>
-  <block id="7dfc25c1548ba836ed04c79f8fbd1825" category="paragraph">這是次要的 bugfix 版本。</block>
   <block id="d5d53109cd766da789a263c6e2051051" category="list-text">移除任何現有的 Snapshot CRD 和任何現有的 Snapshot 控制器。</block>
   <block id="43f17763173fe230bdd78477152f5f7d" category="inline-link">解除安裝Astra Trident</block>
   <block id="478393a7bc00211c00b84b91bd7270e1" category="list-text"><block ref="ae36d1cdd520df7c3eaefc0ce2deb814" category="inline-link-rx"></block>。</block>
@@ -2225,4 +2182,35 @@ RKE 2 （ v1.24.x ）搭配 Rancher 2.7</block>
   <block id="01b0983b96350d7c328b2bdc55473ec9" category="sidebar">新增自我管理的叢集</block>
   <block id="df0d5dfa45e4a1cfa039e5d18dfb9d2d" category="sidebar">新增公用自我管理叢集</block>
   <block id="3746d0f382f4e7553ff621fded87d97c" category="sidebar">新增私有自我管理叢集</block>
+  <block id="bcceca8869689ff6b9a64bbe278abd0c" category="section-title">2023 年 7 月 27 日</block>
+  <block id="d6b8f34be835c5143119e2110314903c" category="list-text">Clone 作業現在僅支援即時複製（託管應用程式的目前狀態）。若要從快照或備份複製、請使用還原工作流程。</block>
+  <block id="3a8adf0100989b88b4f6945c96e17134" category="paragraph"><block ref="3a8adf0100989b88b4f6945c96e17134" category="inline-link-macro-rx"></block></block>
+  <block id="78059069f50fc7337ebe6e58e00d6f76" category="paragraph"><block ref="78059069f50fc7337ebe6e58e00d6f76" category="inline-link-macro-rx"></block></block>
+  <block id="8e93cfe6b3f3a84b64a6523ae8cccea3" category="paragraph"><block ref="8e93cfe6b3f3a84b64a6523ae8cccea3" category="inline-link-macro-rx"></block></block>
+  <block id="fcfe20aef6d913878ab9ad13252b4886" category="paragraph">這是次要的錯誤修正版本。</block>
+  <block id="48127f9248c9afe5c8d6c85fe8b5ac8c" category="paragraph"><block ref="48127f9248c9afe5c8d6c85fe8b5ac8c" category="inline-link-macro-rx"></block></block>
+  <block id="1e86fa1c9e64183a87c8b72a8e927899" category="paragraph"><block ref="1e86fa1c9e64183a87c8b72a8e927899" category="inline-link-macro-rx"></block></block>
+  <block id="af6c8806f70a0231b2093b895ebc672c" category="paragraph"><block ref="af6c8806f70a0231b2093b895ebc672c" category="inline-link-macro-rx"></block></block>
+  <block id="d12350e462849507eeabdb08cb7776d0" category="paragraph"><block ref="d12350e462849507eeabdb08cb7776d0" category="inline-link-macro-rx"></block></block>
+  <block id="45cad2be488e432d792310b7d080cf00" category="paragraph"><block ref="45cad2be488e432d792310b7d080cf00" category="inline-link-macro-rx"></block></block>
+  <block id="275488d5bcb2b9e9af730e47d4740160" category="paragraph"><block ref="275488d5bcb2b9e9af730e47d4740160" category="inline-link-macro-rx"></block></block>
+  <block id="252d50f7e54eea40b30d8d14645cb492" category="paragraph"><block ref="252d50f7e54eea40b30d8d14645cb492" category="inline-link-macro-rx"></block></block>
+  <block id="65fd6614e1532540539a961087820a98" category="paragraph"><block ref="65fd6614e1532540539a961087820a98" category="inline-link-macro-rx"></block></block>
+  <block id="d42b75fe19dabf326e6063949f271820" category="list-text"><block ref="d42b75fe19dabf326e6063949f271820" category="inline-link-macro-rx"></block></block>
+  <block id="15f99de9fca4a87464f86c86d87cfca2" category="list-text"><block ref="15f99de9fca4a87464f86c86d87cfca2" category="inline-link-macro-rx"></block></block>
+  <block id="cb3c51843787890aaa87089f7bdb08f5" category="paragraph"><block ref="cb3c51843787890aaa87089f7bdb08f5" category="inline-link-macro-rx"></block></block>
+  <block id="c8f2cca68cde6f95fb2b8b711e37e65a" category="paragraph"><block ref="c8f2cca68cde6f95fb2b8b711e37e65a" category="inline-link-macro-rx"></block></block>
+  <block id="0d1390555a2169c822a86ca918b21b0f" category="paragraph"><block ref="0d1390555a2169c822a86ca918b21b0f" category="inline-link-macro-rx"></block></block>
+  <block id="048441a1433026f2d36f05c5940169c9" category="paragraph"><block ref="048441a1433026f2d36f05c5940169c9" category="inline-link-macro-rx"></block></block>
+  <block id="11d074237c052361a78d2013830a962f" category="paragraph"><block ref="11d074237c052361a78d2013830a962f" category="inline-link-macro-rx"></block></block>
+  <block id="980998f6472b1a8c9d73efb67dabafe1" category="paragraph"><block ref="980998f6472b1a8c9d73efb67dabafe1" category="inline-link-macro-rx"></block></block>
+  <block id="1e94f2e45dee621ae84f1a7b7c552a70" category="paragraph"><block ref="1e94f2e45dee621ae84f1a7b7c552a70" category="inline-link-macro-rx"></block></block>
+  <block id="972ef63b5c8121c2ac56c48029e25d34" category="paragraph"><block ref="cb94ef005338594c3c497df12c52626a" category="inline-link-macro-rx"></block>。</block>
+  <block id="bf177cc423c13a2a2b2c54e1fb65a7c1" category="paragraph"><block ref="489b409456c0f7bc458435cc853fa427" category="inline-link-macro-rx"></block>。</block>
+  <block id="ee37072224861228e5c0a3dd998234a5" category="paragraph"><block ref="5a02f44ba8c8e8e5387f6065f61f0da8" category="inline-link-macro-rx"></block>。</block>
+  <block id="dec5a46bd6cfa5c43e6553e520a0a69c" category="paragraph"><block ref="166107bbd72cf794988ebaebd1c8e8c2" category="inline-link-macro-rx"></block>。</block>
+  <block id="bfdc6d12952fad78facd1e94852759a3" category="paragraph"><block ref="a14820bea7a397e6be2434a9d285faab" category="inline-link-macro-rx"></block>。</block>
+  <block id="c673cd380fd204c071fbbe9ab6093305" category="paragraph"><block ref="4696e5fb4ee6218a3f53515814eb28d8" category="inline-link-macro-rx"></block>。</block>
+  <block id="e9cea3220da1647df30dfb6a29eb4de1" category="paragraph">如果您可以在Google Cloud區域之間靈活選擇、您可以根據效能需求選擇CVS或CVS效能。 <block ref="3e4123586ab28c1a84ca430e681220b3" category="inline-link-macro-rx"></block>。</block>
+  <block id="3dde386e52ee79140b11e62252e39b49" category="list-text">現在可以使用帳單、讓您從免費方案移至優質方案。 <block ref="b344195451ae2e57f0e32003c4f1a80b" category="inline-link-macro-rx"></block>。</block>
 </blocks>

@@ -16,12 +16,23 @@ NetApp會定期更新Astra Control Service、為您提供新功能、增強功�
 
 
 
+== 2023 年 7 月 27 日
+
+.新功能與支援
+* Clone 作業現在僅支援即時複製（託管應用程式的目前狀態）。若要從快照或備份複製、請使用還原工作流程。
++
+link:../use/restore-apps.html["還原應用程式"^]
+
+
+
+
+
 == 2023 年 6 月 26 日
 
 .新功能與支援
 * Azure Marketplace 訂閱現在以每小時計費、而非每分鐘計費
 +
-link:../use/set-up-billing.html["設定帳單"]
+link:../use/set-up-billing.html["設定帳單"^]
 
 
 
@@ -32,11 +43,11 @@ link:../use/set-up-billing.html["設定帳單"]
 .新功能與支援
 * 支援私有 Amazon EKS 叢集
 +
-link:../get-started/manage-private-cluster.html["從Astra Control Service管理私有叢集"]
+link:../get-started/manage-private-cluster.html["從Astra Control Service管理私有叢集"^]
 
 * 支援在還原或複製作業期間選取目的地儲存類別
 +
-link:../use/restore-apps.html["還原應用程式"]
+link:../use/restore-apps.html["還原應用程式"^]
 
 
 
@@ -45,7 +56,7 @@ link:../use/restore-apps.html["還原應用程式"]
 == 2023 年 5 月 15 日
 
 .新功能與支援
-這是次要的 bugfix 版本。
+這是次要的錯誤修正版本。
 
 
 
@@ -58,15 +69,15 @@ endif::azure[]
 
 * 支援私有 Red Hat OpenShift 叢集
 +
-link:../get-started/manage-private-cluster.html["從Astra Control Service管理私有叢集"]
+link:../get-started/manage-private-cluster.html["從Astra Control Service管理私有叢集"^]
 
 * 支援在還原作業期間包含或排除應用程式資源
 +
-link:../use/restore-apps.html#filter-resources-during-an-application-restore["還原應用程式"]
+link:../use/restore-apps.html#filter-resources-during-an-application-restore["還原應用程式"^]
 
 * 支援管理純資料應用程式
 +
-link:../use/manage-apps.html["開始管理應用程式"]
+link:../use/manage-apps.html["開始管理應用程式"^]
 
 
 
@@ -77,11 +88,11 @@ link:../use/manage-apps.html["開始管理應用程式"]
 .新功能與支援
 * 更強大的執行掛勾功能、提供更多篩選選項
 +
-link:../use/manage-app-execution-hooks.html["管理應用程式執行掛勾"]
+link:../use/manage-app-execution-hooks.html["管理應用程式執行掛勾"^]
 
 * 支援NetApp Cloud Volumes ONTAP 功能作為儲存後端
 +
-link:../get-started/intro.html["瞭解Astra Control"]
+link:../get-started/intro.html["瞭解Astra Control"^]
 
 
 
@@ -92,41 +103,41 @@ link:../get-started/intro.html["瞭解Astra Control"]
 .新功能與支援
 * 支援橫跨多個命名空間的應用程式
 +
-link:../use/manage-apps.html["定義應用程式"]
+link:../use/manage-apps.html["定義應用程式"^]
 
 * 支援將叢集資源納入應用程式定義
 +
-link:../use/manage-apps.html["定義應用程式"]
+link:../use/manage-apps.html["定義應用程式"^]
 
 * 增強備份、還原及複製作業的進度報告功能
 +
-link:../use/monitor-running-tasks.html["監控執行中的工作"]
+link:../use/monitor-running-tasks.html["監控執行中的工作"^]
 
 * 支援管理已安裝相容版本Astra Trident的叢集
 +
-link:../get-started/add-first-cluster.html["從Astra Control Service開始管理Kubernetes叢集"]
+link:../get-started/add-first-cluster.html["從Astra Control Service開始管理Kubernetes叢集"^]
 
 * 支援在單一Astra Control Service帳戶中管理多個雲端供應商訂閱
 +
-link:../use/manage-cloud-instances.html["管理雲端執行個體"]
+link:../use/manage-cloud-instances.html["管理雲端執行個體"^]
 
 * 支援將公有雲環境中的自我管理Kubernetes叢集新增至Astra Control Service
 +
-link:../get-started/add-first-cluster.html["從Astra Control Service開始管理Kubernetes叢集"]
+link:../get-started/add-first-cluster.html["從Astra Control Service開始管理Kubernetes叢集"^]
 
 * Astra Control Service的帳單現在會依命名空間進行計量、而非依應用程式進行計費
 +
-link:../use/set-up-billing.html["設定帳單"]
+link:../use/set-up-billing.html["設定帳單"^]
 
 * 支援透過AWS Marketplace訂閱Astra Control Service定期方案
 +
-link:../use/set-up-billing.html["設定帳單"]
+link:../use/set-up-billing.html["設定帳單"^]
 
 
 
 .已知問題與限制
-* link:../release-notes/known-issues.html["此版本的已知問題"]
-* link:../release-notes/known-limitations.html["此版本的已知限制"]
+* link:../release-notes/known-issues.html["此版本的已知問題"^]
+* link:../release-notes/known-limitations.html["此版本的已知限制"^]
 
 
 
@@ -143,7 +154,7 @@ link:../use/set-up-billing.html["設定帳單"]
 
 * 改善的應用程式管理工作流程改善的應用程式管理工作流程、可在定義由Astra Control管理的應用程式時提供更高的靈活度。
 +
-link:../use/manage-apps.html#define-apps["管理應用程式"]
+link:../use/manage-apps.html#define-apps["管理應用程式"^]
 
 
 
@@ -151,7 +162,7 @@ ifdef::aws[]
 
 * 支援Amazon Web Services叢集Astra Control Service現在可管理在Amazon Elastic Kubernetes Service託管叢集上執行的應用程式。您可以將叢集設定為使用Amazon Elastic Block Store或Amazon FSXfor NetApp ONTAP 支援作為儲存後端。
 +
-link:../get-started/set-up-amazon-web-services.html["設定Amazon Web Services"]
+link:../get-started/set-up-amazon-web-services.html["設定Amazon Web Services"^]
 
 
 
@@ -170,7 +181,7 @@ Astra Control現在支援使用相同的指令碼來處理多個執行掛勾、�
 NOTE: NetApp針對特定應用程式提供的預設快照前及後執行掛勾已在此版本中移除。如果您沒有提供自己的快照執行掛勾、Astra Control Service只會從2022年8月4日開始、擷取損毀一致的快照。請造訪 https://github.com/NetApp/Verda["NetApp Verda GitHub儲存庫"^] 以取得執行攔截指令碼的範例、您可以根據環境進行修改。
 
 +
-link:../use/manage-app-execution-hooks.html["管理應用程式執行掛勾"]
+link:../use/manage-app-execution-hooks.html["管理應用程式執行掛勾"^]
 
 
 
@@ -197,7 +208,7 @@ image:select-cloud-provider.png["雲端供應商下拉式功能表的快照、�
 
 * 命名空間角色型存取控制（RBAC）Astra Control Service現在支援指派命名空間限制給成員或檢視器使用者。
 +
-link:../learn/user-roles-namespaces.html["命名空間角色型存取控制（RBAC）"]
+link:../learn/user-roles-namespaces.html["命名空間角色型存取控制（RBAC）"^]
 
 
 
@@ -205,11 +216,11 @@ ifdef::azure[]
 
 * Azure Active Directory支援Astra Control Service支援使用Azure Active Directory進行驗證和身分識別管理的高峰叢集。
 +
-link:../get-started/add-first-cluster.html["從Astra Control Service開始管理Kubernetes叢集"]
+link:../get-started/add-first-cluster.html["從Astra Control Service開始管理Kubernetes叢集"^]
 
 * 支援私有的高效能叢集您現在可以管理使用私有IP位址的高效能叢集。
 +
-link:../get-started/add-first-cluster.html["從Astra Control Service開始管理Kubernetes叢集"]
+link:../get-started/add-first-cluster.html["從Astra Control Service開始管理Kubernetes叢集"^]
 
 
 
@@ -217,7 +228,7 @@ endif::azure[]
 
 * 從Astra Control移除鏟斗現在您可以從Astra Control Service移除鏟斗。
 +
-link:../use/manage-buckets.html["移除貯體"]
+link:../use/manage-buckets.html["移除貯體"^]
 
 
 
@@ -236,15 +247,15 @@ endif::azure[]
 
 * 就地應用程式還原您現在可以還原至相同的叢集和命名空間、還原已備份的應用程式快照、複製或備份。
 +
-link:../use/restore-apps.html["還原應用程式"]
+link:../use/restore-apps.html["還原應用程式"^]
 
 * 指令碼事件搭配執行掛勾Astra Control、可支援自訂指令碼、以便在擷取應用程式快照之前或之後執行。這可讓您執行暫停資料庫交易等工作、使資料庫應用程式的快照保持一致。
 +
-link:../use/manage-app-execution-hooks.html["管理應用程式執行掛勾"]
+link:../use/manage-app-execution-hooks.html["管理應用程式執行掛勾"^]
 
 * 由營運者部署的應用程式Astra Control可支援與營運者一起部署的部分應用程式。
 +
-link:../use/manage-apps.html#app-management-requirements["開始管理應用程式"]
+link:../use/manage-apps.html#app-management-requirements["開始管理應用程式"^]
 
 
 
@@ -252,7 +263,7 @@ ifdef::azure[]
 
 * 具有資源群組範圍的服務主體Astra Control Service現在支援使用資源群組範圍的服務主體。
 +
-link:../get-started/set-up-microsoft-azure-with-anf.html#create-an-azure-service-principal-2["建立Azure服務主體"]
+link:../get-started/set-up-microsoft-azure-with-anf.html#create-an-azure-service-principal-2["建立Azure服務主體"^]
 
 
 
@@ -270,7 +281,7 @@ endif::azure[]
 
 * 現在您可以利用自己的儲存庫來管理Astra用於備份和複製的儲存庫、方法是新增其他儲存庫、並變更雲端供應商中Kubernetes叢集的預設儲存庫。
 +
-link:../use/manage-buckets.html["管理儲存庫"]
+link:../use/manage-buckets.html["管理儲存庫"^]
 
 
 
@@ -285,11 +296,11 @@ ifdef::gcp[]
 * 支援共享的VPC您現在可以使用共享的VPC網路組態、在GCP專案中管理GKE叢集。
 * 在使用CVS服務類型時、CVS服務類型Astra Control Service的持續磁碟區大小現在會建立最小大小為300 GiB的持續磁碟區。
 +
-link:../learn/choose-class-and-size.html["瞭解Astra Control Service如何使用Cloud Volumes Service 支援Google Cloud的功能作為持續磁碟區的儲存後端"]。
+link:../learn/choose-class-and-size.html["瞭解Astra Control Service如何使用Cloud Volumes Service 支援Google Cloud的功能作為持續磁碟區的儲存後端"^]。
 
 * GKE工作節點現在支援Container Optimized OS Container Optimized OS。這是支援Ubuntu的附加功能。
 +
-link:../get-started/set-up-google-cloud.html#gke-cluster-requirements["深入瞭解GKE叢集需求"]。
+link:../get-started/set-up-google-cloud.html#gke-cluster-requirements["深入瞭解GKE叢集需求"^]。
 
 
 
@@ -305,7 +316,7 @@ ifdef::azure[]
 
 * 支援Astra叢集Astra Control Service現在可管理Azure Kubernetes Service（KS）中受管理Kubernetes叢集上執行的應用程式。
 +
-link:../get-started/set-up-microsoft-azure-with-anf.html["瞭解如何開始使用"]。
+link:../get-started/set-up-microsoft-azure-with-anf.html["瞭解如何開始使用"^]。
 
 
 
@@ -323,11 +334,11 @@ https://docs.netapp.com/us-en/astra-automation["瞭解如何使用REST API來自
 如果您管理的應用程式數量超過年度訂閱所允許的數量、則每個應用程式的超額使用率將高達每分鐘$0.005（與Premium PayGo相同）。
 
 +
-link:../get-started/intro.html#pricing["深入瞭解Astra Control服務定價"]。
+link:../get-started/intro.html#pricing["深入瞭解Astra Control服務定價"^]。
 
 * 命名空間與應用程式視覺化我們增強了「探索到的應用程式」頁面、以更清楚地顯示命名空間與應用程式之間的階層關係。只要擴充命名空間即可查看該命名空間中所含的應用程式。
 +
-link:../use/manage-apps.html["深入瞭解如何管理應用程式"]。
+link:../use/manage-apps.html["深入瞭解如何管理應用程式"^]。
 
 +
 image:screenshot-group.gif["「應用程式」頁面的快照、其中已選取「探索」索引標籤。"]
@@ -342,7 +353,7 @@ image:screenshot-protection-policy.gif["「設定保護原則」對話方塊的�
 ** 將您的Astra Control帳戶活動下載至CSV檔案。
 ** 選取叢集或應用程式後、直接從「叢集」頁面或「應用程式」頁面檢視活動。
 +
-link:../use/monitor-account-activity.html["深入瞭解如何檢視您的帳戶活動"]。
+link:../use/monitor-account-activity.html["深入瞭解如何檢視您的帳戶活動"^]。
 
 
 
@@ -358,7 +369,7 @@ Astra Control Service現在支援 https://cloud.google.com/solutions/partners/ne
 
 這項增強功能表示Astra Control Service現在可以管理在_any中執行之Kubernetes叢集的應用程式資料 https://cloud.netapp.com/cloud-volumes-global-regions#cvsGcp["支援支援的Google Cloud地區Cloud Volumes Service"^]。
 
-如果您可以在Google Cloud區域之間靈活選擇、您可以根據效能需求選擇CVS或CVS效能。 link:../learn/choose-class-and-size.html["深入瞭解如何選擇服務類型"]。
+如果您可以在Google Cloud區域之間靈活選擇、您可以根據效能需求選擇CVS或CVS效能。 link:../learn/choose-class-and-size.html["深入瞭解如何選擇服務類型"^]。
 
 endif::gcp[]
 
@@ -368,7 +379,7 @@ endif::gcp[]
 
 我們很高興宣布Astra Control Service現在已全面推出。我們採納了許多從試用版獲得的意見反應、並做了一些其他值得注意的增強功能。
 
-* 現在可以使用帳單、讓您從免費方案移至優質方案。 link:../use/set-up-billing.html["深入瞭解帳單"]。
+* 現在可以使用帳單、讓您從免費方案移至優質方案。 link:../use/set-up-billing.html["深入瞭解帳單"^]。
 * Astra Control Service現在使用CVS效能服務類型時、會建立最小大小為100 GiB的持續磁碟區。
 * Astra Control Service現在可以更快探索應用程式。
 * 您現在可以自行建立及刪除帳戶。
