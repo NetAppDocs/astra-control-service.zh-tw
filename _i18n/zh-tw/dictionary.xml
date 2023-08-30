@@ -867,15 +867,11 @@
   <block id="e9c44bbfd795a5d63d74c6a77afee70d" category="summary">法律聲明提供版權聲明、商標、專利等存取權限。</block>
   <block id="30d965eef5ba25c6b9998ae38270b43e" category="doc">法律聲明</block>
   <block id="6016a2b341113bf496b719905398ecd2" category="section-title">版權</block>
-  <block id="09e95b77ffe81fe465a83ba99efad5c8" category="paragraph"><block ref="09e95b77ffe81fe465a83ba99efad5c8" category="inline-link-rx"></block></block>
   <block id="126a02652da6de02962cf1b654fd6376" category="section-title">商標</block>
   <block id="c4ce4761e466527d26b3e3d5ed1006fd" category="paragraph">NetApp 、 NetApp 標誌及 NetApp 商標頁面上列出的標章均為 NetApp 、 Inc. 的商標。其他公司與產品名稱可能為其各自所有者的商標。</block>
-  <block id="7aa531e9acfe2b98e34d2c92fe9846ff" category="paragraph"><block ref="7aa531e9acfe2b98e34d2c92fe9846ff" category="inline-link-rx"></block></block>
   <block id="be89498d2f8a22ce47c02ba9795fe2af" category="section-title">專利</block>
   <block id="d0b19d36be2c5f16e9aef46c8a452d3d" category="paragraph">如需最新的 NetApp 擁有專利清單、請參閱：</block>
-  <block id="d7f1fbcf9ce4e42f705add574d262b2c" category="paragraph"><block ref="d7f1fbcf9ce4e42f705add574d262b2c" category="inline-link-rx"></block></block>
   <block id="56c34c6410dd45c5cec44149ad0ce037" category="section-title">隱私權政策</block>
-  <block id="fc248f74f5e36542f7f5627b8610e9a3" category="paragraph"><block ref="fc248f74f5e36542f7f5627b8610e9a3" category="inline-link-rx"></block></block>
   <block id="c0227cef6f07a8cd2ac72f2945b031aa" category="section-title">開放原始碼</block>
   <block id="9b73989307c1975dfa4d5e1581e4afe8" category="paragraph">通知檔案提供有關 NetApp 軟體所使用之協力廠商版權與授權的資訊。</block>
   <block id="fbd3ad11889bebf7ba34d30c64465dc9" category="inline-link-macro">Astra注意事項</block>
@@ -2215,4 +2211,18 @@ RKE 2 （ v1.24.x ）搭配 Rancher 2.7</block>
   <block id="3dde386e52ee79140b11e62252e39b49" category="list-text">現在可以使用帳單、讓您從免費方案移至優質方案。 <block ref="b344195451ae2e57f0e32003c4f1a80b" category="inline-link-macro-rx"></block>。</block>
   <block id="bea0a641d1ced5fe318717eadebe7ab8" category="section-title">具有命名空間限制的成員使用者、必須先將命名空間新增至限制、才能存取複製或還原的應用程式</block>
   <block id="33e9a46dfde5bb0f5a8b8327623cb998" category="paragraph">任何<block ref="aa08769cdcb26674c6706093503ff0a3" prefix=" " category="inline-code"></block> 具有命名空間名稱/ID之RBAC限制的使用者、可以將應用程式複製或還原至同一叢集上的新命名空間、或是組織帳戶中的任何其他叢集。不過、相同的使用者無法存取新命名空間中的複製或還原應用程式。在複製或還原作業建立新命名空間之後、帳戶管理員/擁有者即可編輯<block ref="aa08769cdcb26674c6706093503ff0a3" prefix=" " category="inline-code"></block> 使用者帳戶和更新角色限制、讓受影響的使用者能夠授予新命名空間的存取權。</block>
+  <block id="02e2841c6dc4823eaf981952fd28de5e" category="paragraph">當您管理 Azure Kubernetes Service 和 Google Kubernetes Engine 叢集時、請注意 Astra Trident 的安裝和生命週期管理有兩個選項：</block>
+  <block id="5764dae31663c1902496bfcba4c25c93" category="list-text">您可以使用 Astra Control Service 來自動管理 Astra Trident 的生命週期。為達成此目的、請確定 Astra Trident 未安裝在您要使用 Astra Control Service 管理的叢集上。在這種情況下、 Astra Trident 會在您開始管理叢集時自動安裝 Astra Trident 、而 Astra Trident 升級則會自動處理。</block>
+  <block id="26a8bbf329806efed3129a837ea8f4ca" category="list-text">您可以自行管理 Astra Trident 的生命週期。若要執行此作業、請先在叢集上安裝 Astra Trident 、然後再使用 Astra Control Service 管理叢集。在這種情況下、 Astra Control Service 會偵測到 Astra Trident 已經安裝、而且不會重新安裝或管理 Astra Trident 升級。請參閱<block ref="0a4eeddcb63a166e3ea6149a4a33d4e7" category="inline-link-rx"></block> 以取得安裝指示。</block>
+  <block id="377a03900879b1a147cfef86a55b4b7b" category="paragraph">當您使用 Astra Control Service 管理 Amazon Web Services 叢集時、如果您需要 Astra Trident 啟用的儲存後端、則必須先在叢集上手動安裝 Astra Trident 、然後才能使用 Astra Control Service 進行管理。請參閱<block ref="0a4eeddcb63a166e3ea6149a4a33d4e7" category="inline-link-rx"></block> 以取得安裝指示。</block>
+  <block id="9036e11904e29e25ddfcd878beff46e6" category="list-text">（選用）如果您要新增 Amazon EKS 叢集、或想要自行管理 Astra Trident 的安裝與升級、請在叢集上安裝 Astra Trident 。請參閱<block ref="0a4eeddcb63a166e3ea6149a4a33d4e7" category="inline-link-rx"></block> 以取得安裝指示。</block>
+  <block id="03349a266f78934afc86e52b232cdc6d" category="list-text">在瀏覽器中開啟 Astra Control Service Web UI 。</block>
+  <block id="52009bb7ee17227f566cd26a02caee56" category="inline-link-macro"><block ref="52009bb7ee17227f566cd26a02caee56" category="inline-link-rx"></block></block>
+  <block id="a1a9afcf552a769c282769271829889a" category="paragraph"><block ref="a1a9afcf552a769c282769271829889a" category="inline-link-macro-rx"></block></block>
+  <block id="f99aa604031e5049799e73b5c3748a98" category="inline-link-macro"><block ref="f99aa604031e5049799e73b5c3748a98" category="inline-link-rx"></block></block>
+  <block id="5d545fe5152641e2ebe654e336e520e5" category="paragraph"><block ref="5d545fe5152641e2ebe654e336e520e5" category="inline-link-macro-rx"></block></block>
+  <block id="88e5eabd3917048b6927c42496b98f86" category="inline-link-macro"><block ref="88e5eabd3917048b6927c42496b98f86" category="inline-link-rx"></block></block>
+  <block id="dd38f906b37d412de7d1c1dcf4cbf31c" category="paragraph"><block ref="dd38f906b37d412de7d1c1dcf4cbf31c" category="inline-link-macro-rx"></block></block>
+  <block id="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-macro"><block ref="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-rx"></block></block>
+  <block id="2352c4e1f4d0024ade0869e00e6243f4" category="paragraph"><block ref="2352c4e1f4d0024ade0869e00e6243f4" category="inline-link-macro-rx"></block></block>
 </blocks>

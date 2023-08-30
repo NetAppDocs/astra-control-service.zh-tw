@@ -163,6 +163,14 @@ endif::gcp[]
 
 您現在可以將私有叢集新增至 Astra Control Service 。
 
+當您管理 Azure Kubernetes Service 和 Google Kubernetes Engine 叢集時、請注意 Astra Trident 的安裝和生命週期管理有兩個選項：
+
+* 您可以使用 Astra Control Service 來自動管理 Astra Trident 的生命週期。為達成此目的、請確定 Astra Trident 未安裝在您要使用 Astra Control Service 管理的叢集上。在這種情況下、 Astra Trident 會在您開始管理叢集時自動安裝 Astra Trident 、而 Astra Trident 升級則會自動處理。
+* 您可以自行管理 Astra Trident 的生命週期。若要執行此作業、請先在叢集上安裝 Astra Trident 、然後再使用 Astra Control Service 管理叢集。在這種情況下、 Astra Control Service 會偵測到 Astra Trident 已經安裝、而且不會重新安裝或管理 Astra Trident 升級。請參閱 https://docs.netapp.com/us-en/trident/trident-get-started/kubernetes-deploy.html["Astra Trident文件"^] 以取得安裝指示。
+
+
+當您使用 Astra Control Service 管理 Amazon Web Services 叢集時、如果您需要 Astra Trident 啟用的儲存後端、則必須先在叢集上手動安裝 Astra Trident 、然後才能使用 Astra Control Service 進行管理。請參閱 https://docs.netapp.com/us-en/trident/trident-get-started/kubernetes-deploy.html["Astra Trident文件"^] 以取得安裝指示。
+
 .開始之前
 [%collapsible%open]
 ====
@@ -206,6 +214,8 @@ endif::gcp[]
 
 ====
 .步驟
+. （選用）如果您要新增 Amazon EKS 叢集、或想要自行管理 Astra Trident 的安裝與升級、請在叢集上安裝 Astra Trident 。請參閱 https://docs.netapp.com/us-en/trident/trident-get-started/kubernetes-deploy.html["Astra Trident文件"^] 以取得安裝指示。
+. 在瀏覽器中開啟 Astra Control Service Web UI 。
 . 在儀表板上、選取*管理Kubernetes叢集*。
 +
 依照提示新增叢集。
