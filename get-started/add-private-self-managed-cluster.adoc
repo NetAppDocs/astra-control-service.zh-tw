@@ -72,19 +72,13 @@ RKE 2 （ v1.24.x ）搭配 Rancher 2.7
 git clone https://github.com/NetApp/astra-connector-operator.git
 ----
 . 將目錄變更為解壓縮的運算子套件的最上層、以便使用「ls」命令查看「astraconnecor_opiler.yaml」檔案。
-. 為Astra Connector運算子建立命名空間。
+. 套用 `astraconnector_operator.yaml` 檔案：執行此命令時、會建立 Astra Connector 運算子的正確命名空間、並將組態套用至命名空間：
 +
 [source, console]
 ----
-kubectl create ns astra-connector-operator
+kubectl apply -f astraconnector_operator.yaml
 ----
-. 將「astraconnecor_toper.yaml」檔案套用到運算子命名空間。
-+
-[source, console]
-----
-kubectl apply -f astraconnector_operator.yaml -n astra-connector-operator
-----
-. 為私有叢集元件建立命名空間。
+. 為私有叢集元件建立命名空間：
 +
 [source, console]
 ----
@@ -131,13 +125,13 @@ spec:
 ----
 
 
-. 套用Astra Connector自訂資源定義（CRD）。
+. 套用 Astra Connector 自訂資源定義（ CRD ）：
 +
 [source, console]
 ----
 kubectl apply -f config/samples/astraconnector_v1.yaml -n astra-connector
 ----
-. 檢查Astra Connector的狀態。
+. 檢查 Astra Connector 的狀態：
 +
 [source, console]
 ----

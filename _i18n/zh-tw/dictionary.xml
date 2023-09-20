@@ -477,11 +477,6 @@
   <block id="c6a7824e4b3ef243db20452d107827b3" category="list-text"><block ref="c6a7824e4b3ef243db20452d107827b3" category="inline-link-rx"></block></block>
   <block id="b03ad30a5cf7205451cf9d1c28fb3b46" category="inline-link-macro">GKE叢集的儲存類別</block>
   <block id="388b49ca6772164d2fe62455b28ba25e" category="inline-link-macro">適用於高效能叢集的儲存類別</block>
-  <block id="37d0b0adf169e682e19c955d0cd73c29" category="list-text">為Astra Connector運算子建立命名空間。</block>
-  <block id="38da14ec20cf0841c7dc45fab0adbf07" category="list-text">將「astraconnecor_toper.yaml」檔案套用到運算子命名空間。</block>
-  <block id="48812784c9e7b02bc76402c5a0c3ca10" category="list-text">為私有叢集元件建立命名空間。</block>
-  <block id="f831baeb7ae8c560addc2916d8b1096e" category="list-text">套用Astra Connector自訂資源定義（CRD）。</block>
-  <block id="138db2318815f6b9fc7cc55dd6a6ad32" category="list-text">檢查Astra Connector的狀態。</block>
   <block id="d0848afd8553c34945705222a97a4553" category="paragraph">您應該會看到類似下列的輸出：</block>
   <block id="f02a4f1a1e048f3a6cf64743ff32a880" category="doc">註冊Astra Control Service帳戶</block>
   <block id="ae0c96e1388d462dd723e6dd4f0bd3c4" category="paragraph">若要使用Astra Control Service、您需要與NetApp Cloud Central帳戶相關聯的Astra Control Service帳戶。完成Astra Control Service登錄程序、如果您還沒有Cloud Central帳戶、請註冊Cloud Central以存取Astra Control Service。</block>
@@ -2225,4 +2220,8 @@ RKE 2 （ v1.24.x ）搭配 Rancher 2.7</block>
   <block id="dd38f906b37d412de7d1c1dcf4cbf31c" category="paragraph"><block ref="dd38f906b37d412de7d1c1dcf4cbf31c" category="inline-link-macro-rx"></block></block>
   <block id="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-macro"><block ref="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-rx"></block></block>
   <block id="2352c4e1f4d0024ade0869e00e6243f4" category="paragraph"><block ref="2352c4e1f4d0024ade0869e00e6243f4" category="inline-link-macro-rx"></block></block>
+  <block id="3c873407a87c44620e1fc922d17cba7d" category="list-text">套用<block ref="f101e04500a8c699d435a8cc7d56f891" prefix=" " category="inline-code"></block> 檔案：執行此命令時、會建立 Astra Connector 運算子的正確命名空間、並將組態套用至命名空間：</block>
+  <block id="40fcdcafdc66ab23541a6bf36b499c0f" category="list-text">為私有叢集元件建立命名空間：</block>
+  <block id="f285f679ba0c90d91ce807d87ad3a50e" category="list-text">套用 Astra Connector 自訂資源定義（ CRD ）：</block>
+  <block id="c642f3e0823bc0255f23532494f80829" category="list-text">檢查 Astra Connector 的狀態：</block>
 </blocks>
