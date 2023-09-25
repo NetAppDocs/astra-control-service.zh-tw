@@ -200,6 +200,12 @@ Astra Control Service支援使用下列Kubernetes發佈版本的自我管理叢�
 * 叢集無法裝載在內部部署網路中、必須裝載在公有雲環境中。
 * 如果您使用或打算使用已啟用SCSI驅動程式的儲存設備、則叢集上必須安裝適當的SCSI驅動程式。如需使用SCSI驅動程式來整合儲存設備的詳細資訊、請參閱儲存服務的說明文件。
 * 您可以存取僅包含一個內容元素的叢集 kubeconfig 檔案。追蹤 link:create-kubeconfig.html["這些指示"^] 以產生 kubeconfig 檔案。
+* 如果您要使用參考私有憑證授權單位（ CA ）的 kubeconfig 檔案來新增叢集、請將下列行新增至 `cluster` kubeconfig 檔案的一節。這可讓 Astra Control 新增叢集：
++
+[listing]
+----
+insecure-skip-tls-verify: true
+----
 * *僅限Rancher *：在Rancher環境中管理應用程式叢集時、請在Rancher提供的Kusbeconfig檔案中修改應用程式叢集的預設內容、以使用控制面內容而非Rancher API伺服器內容。如此可減少Rancher API伺服器的負載、並改善效能。
 * * Astra Trident * ：如果您使用或打算使用 NetApp 儲存設備、請確定您已安裝最新版本的 Astra Trident 。如果 Astra Trident 已安裝、 link:check-astra-trident-version.html["請檢查以確定其為最新版本"^]。
 +

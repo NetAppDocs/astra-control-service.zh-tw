@@ -2224,4 +2224,5 @@ RKE 2 （ v1.24.x ）搭配 Rancher 2.7</block>
   <block id="40fcdcafdc66ab23541a6bf36b499c0f" category="list-text">為私有叢集元件建立命名空間：</block>
   <block id="f285f679ba0c90d91ce807d87ad3a50e" category="list-text">套用 Astra Connector 自訂資源定義（ CRD ）：</block>
   <block id="c642f3e0823bc0255f23532494f80829" category="list-text">檢查 Astra Connector 的狀態：</block>
+  <block id="dce58385777428b5d9a30460fe36730a" category="list-text">如果您要使用參考私有憑證授權單位（ CA ）的 kubeconfig 檔案來新增叢集、請將下列行新增至<block ref="06b2d4b91b5c9eaa8c20a1c270f95b3c" prefix=" " category="inline-code"></block> kubeconfig 檔案的一節。這可讓 Astra Control 新增叢集：</block>
 </blocks>
