@@ -1499,22 +1499,18 @@
   <block id="ffcc0feca3c8cd069d4965c88a5c1ebb" category="paragraph">如果未安裝Astra Trident、您會看到類似下列的輸出：</block>
   <block id="6c8bc25bbb383bdd569b3a8b67462c4a" category="list-text">確保Pod正在執行：</block>
   <block id="6d55356ca8cb9b27cfa6e2bb46ebb089" category="paragraph">回應範例：</block>
-  <block id="ee6257954c2f973cd54453583dc792ca" category="list-text">具有作用中內容叢集管理權限的作用中Kbeconfig</block>
   <block id="5f85438ae0f2c9122a5cf54e8e098c98" category="list-text">建立服務帳戶、如下所示：</block>
   <block id="4ab759267d2877902a521921e10f5f5b" category="list-text">建立名為的服務帳戶檔案<block ref="a22dad5601b31427598f571133fb2aed" prefix=" " category="inline-code"></block>。</block>
   <block id="210c5331ab46caa141e6ac9d5aeb1bee" category="paragraph">視需要調整名稱和命名空間。如果在此處進行變更、您應該在下列步驟中套用相同的變更。</block>
   <block id="605443509a67749999ab3b0d3ba43e8b" category="list-text">套用服務帳戶：</block>
-  <block id="b01a13e2cbe1b4af2c39de81232bb23b" category="list-text">授予叢集管理權限、如下所示：</block>
   <block id="b29afe741178d8d4966c07c97f9892db" category="list-text">建立<block ref="e866afd8290d5c73cda6260e04e6eef0" prefix=" " category="inline-code"></block> 檔案已呼叫<block ref="79e1486667eff2c5e1915f58701f3a18" prefix=" " category="inline-code"></block>。</block>
   <block id="51980eaff0de60f578593fb8ae77f9b3" category="paragraph">視需要在建立服務帳戶時調整任何已修改的名稱和命名空間。</block>
   <block id="c6c2bc2133c73ae2516508de9a2b5869" category="list-text">套用叢集角色繫結：</block>
   <block id="b6e00a7dda090ccd5afd1c904d80548c" category="list-text">列出取代的服務帳戶機密<block ref="af16c4db277e0498b5fa9e30613367f1" prefix=" " category="inline-code"></block> 正確的安裝環境：</block>
   <block id="f087976277d273660b942918b43af841" category="paragraph">輸出的結尾應類似於下列內容：</block>
-  <block id="65c0a05d8c47a658174fbed46d46f8e7" category="paragraph">中每個元素的索引<block ref="7de38f3c3d3baa7ca58a366f09577586" prefix=" " category="inline-code"></block> 陣列開頭為0。在上述範例中、索引為<block ref="d7cef0644ef6c1b98dc15826f46e6da0" prefix=" " category="inline-code"></block> 將為0、索引則為<block ref="38a262a6f1757c3b70ab7cea5bf29ad9" prefix=" " category="inline-code"></block> 應該是1。在輸出中、記下含有「權杖」一詞的服務帳戶名稱索引。</block>
   <block id="d3727d544efa902d0381ec79cec3d488" category="list-text">產生以下的Kbeconfig：</block>
   <block id="ed6be01d66e94b422222a328f085d0bc" category="list-text">建立<block ref="3d3f9b7a5974a7898593a3d2f5549f15" prefix=" " category="inline-code"></block> 檔案：更換<block ref="089d02fba2ffcdb49a91320ff506dfa3" prefix=" " category="inline-code"></block> 在下列指令碼開頭、使用正確的值。</block>
   <block id="7d164f3971b504d6203cf274cc77dd35" category="list-text">請輸入命令以將其套用至Kubernetes叢集。</block>
-  <block id="a4d7f999745cce675903247e4db00f3f" category="list-text">（選用）將Kbeconfig重新命名為有意義的叢集名稱。保護您的叢集認證資料。</block>
   <block id="aae2bc70406cacace4dfa6be8d857f2c" category="list-text">*供應商*：選取您的雲端供應商、然後提供必要的認證資料以建立新的雲端執行個體、或選取要使用的現有雲端執行個體。</block>
   <block id="38e2b31fd3dcdd65304ac201efd17f06" category="list-text">*其他*：上傳以提供自我管理叢集的詳細資料<block ref="ea46161c66978a87802bc5b44682cbe0" prefix=" " category="inline-code"></block> 檔案或貼上的內容<block ref="ea46161c66978a87802bc5b44682cbe0" prefix=" " category="inline-code"></block> 檔案。</block>
   <block id="d9348d075dc7b3c91cff99d56dfc327b" category="inline-link">Kubernetes文件</block>
@@ -2077,7 +2073,6 @@
   <block id="e6bab5933e86bee96753d8079fcceaed" category="section-title">2023 年 6 月 26 日</block>
   <block id="b77235e640ab8b5a90390081c423e880" category="list-text">Azure Marketplace 訂閱現在以每小時計費、而非每分鐘計費</block>
   <block id="972d9f8e0e28ff88864515cf37f116b2" category="paragraph">在開始之前、請確定機器上已安裝下列項目：</block>
-  <block id="e518ff6eca9962a9ad470732191bb026" category="list-text">已安裝KECV1.23或更新版本</block>
   <block id="30136395f01879792198317c11831ea4" category="inline-link">Kubernetes</block>
   <block id="501a7b3c879675fb528c68e904b076d1" category="list-text">* 檢查目的地 Volume * ：如果您還原至不同的儲存類別、請確定儲存類別使用相同的持續磁碟區存取模式（例如 ReadWriteMany ）。如果目的地持續磁碟區存取模式不同、還原作業將會失敗。例如、如果來源持續性磁碟區使用 rwx 存取模式、請選取無法提供 rwx 的目的地儲存類別、例如 Azure Managed Disks 、 AWS EBS 、 Google Persistent Disk 或<block ref="73a3350a1b91aeb6e2836fdf5975672c" prefix=" " category="inline-code"></block>將導致還原作業失敗。如需持續磁碟區存取模式的詳細資訊、請參閱<block ref="051768f02ea3f9f1a6b86b9d9b060248" category="inline-link-rx"></block> 文件。</block>
   <block id="0f707c2e2c303edecbc57b2a451ad8a9" category="list-text">* 檢查目的地 Volume * ：如果您複製到不同的儲存類別、請確定儲存類別使用相同的持續磁碟區存取模式（例如 ReadWriteMany ）。如果目的地持續磁碟區存取模式不同、則複製作業將會失敗。例如、如果來源持續性磁碟區使用 rwx 存取模式、請選取無法提供 rwx 的目的地儲存類別、例如 Azure Managed Disks 、 AWS EBS 、 Google Persistent Disk 或<block ref="73a3350a1b91aeb6e2836fdf5975672c" prefix=" " category="inline-code"></block>，將導致克隆操作失敗。如需持續磁碟區存取模式的詳細資訊、請參閱<block ref="051768f02ea3f9f1a6b86b9d9b060248" category="inline-link-rx"></block> 文件。</block>
@@ -2225,4 +2220,23 @@ RKE 2 （ v1.24.x ）搭配 Rancher 2.7</block>
   <block id="c642f3e0823bc0255f23532494f80829" category="list-text">檢查 Astra Connector 的狀態：</block>
   <block id="dce58385777428b5d9a30460fe36730a" category="list-text">如果您要使用參考私有憑證授權單位（ CA ）的 kubeconfig 檔案來新增叢集、請將下列行新增至<block ref="06b2d4b91b5c9eaa8c20a1c270f95b3c" prefix=" " category="inline-code"></block> kubeconfig 檔案的一節。這可讓 Astra Control 新增叢集：</block>
   <block id="f4228b9bf977f4c9a1952ea84926975f" category="section-title">2023 年 10 月 2 日</block>
+  <block id="33a97eec462a14258b6a1fe63f943ec5" category="list-text">kubectl v1.25 或更新版本已安裝</block>
+  <block id="3b34edb55fd85d9b0636e2533b140b9f" category="list-text">利用Astra Control Center來存取您要新增及管理的叢集</block>
+  <block id="d5b7f62a909e346c0e1cd08be571c54f" category="admonition">在此程序中、您不需要透過KECBECVL存取執行Astra Control Center的叢集。</block>
+  <block id="c49be33f592950e78d23dd417a4a75e5" category="list-text">使用叢集管理權限來管理作用中內容的叢集的作用中KECBEConfig</block>
+  <block id="565bfe8a9451afd10f3c41fe9fa4cf22" category="list-text">建立服務帳戶：</block>
+  <block id="5a20342984ee9d605acb505095dbcd0a" category="list-text">為要由 Astra Control 管理的叢集建立具有足夠權限的下列叢集角色之一：</block>
+  <block id="0b696bdc9519b9e33f740fc665813fa2" category="list-text">* 有限叢集角色 * ：此角色包含由 Astra Control 管理叢集所需的最低權限：</block>
+  <block id="00b512051a8fb53936e77b3e435be5d9" category="example-title">展開步驟</block>
+  <block id="d2c5b496305d8a36011fc2b1e55dcde3" category="list-text">建立<block ref="d7d354d0f9d0780e168c895c92a32c24" prefix=" " category="inline-code"></block> 例如、<block ref="b7bb4a27d91c967fbba0bb19f36a3533" prefix=" " category="inline-code"></block>。</block>
+  <block id="929489f64fa726fbcdd3058dc505444e" category="list-text">（僅適用於 OpenShift 叢集）如果您要為 OpenShift 叢集建立 kubeconfig 、請取消註解中的最後幾行<block ref="b7bb4a27d91c967fbba0bb19f36a3533" prefix=" " category="inline-code"></block> 之後的檔案<block ref="7da59f03b6be2daf1bf5fd19ecc78050" prefix=" " category="inline-code"></block> 區段：</block>
+  <block id="d2f7aa8c006dd5e0b027cb6e32926a4e" category="list-text">套用叢集角色：</block>
+  <block id="558249c196c0445933dcab3f8c5ccf78" category="list-text">* 擴充叢集角色 * ：此角色包含 Astra Control 所管理叢集的擴充權限。如果您使用多個內容範圍、且無法使用安裝期間設定的預設 Astra Control Kbeconfig 、或是具有單一內容的有限角色無法在您的環境中運作、則可以使用此角色：</block>
+  <block id="5e2febea168e23172b29251a6258dec8" category="admonition">以下內容<block ref="d7d354d0f9d0780e168c895c92a32c24" prefix=" " category="inline-code"></block> 步驟是 Kubernetes 的一般範例。請參閱 Kubernetes 散佈文件、以取得特定於您環境的指示。</block>
+  <block id="a30ca90c640932dfa98b3ac560bb10ab" category="list-text">建立叢集角色與服務帳戶的叢集角色繫結：</block>
+  <block id="c1865e8db7245bcc1648e67fb250eba4" category="list-text">建立並套用權杖密碼：</block>
+  <block id="11afc91177361b2eafbbec4287518195" category="list-text">建立一個稱為的權杖秘密檔案<block ref="7cdd7450df0359169a360b93d3cb369f" prefix=" " category="inline-code"></block>。</block>
+  <block id="9c8324622cc9e060ba0702fa13261b48" category="list-text">將權杖密碼新增至服務帳戶、將其名稱新增至<block ref="7de38f3c3d3baa7ca58a366f09577586" prefix=" " category="inline-code"></block> Array （以下範例中的最後一行）：</block>
+  <block id="4dc4c64180b058c5c9c94b6a7886e5f1" category="paragraph">中每個元素的索引<block ref="7de38f3c3d3baa7ca58a366f09577586" prefix=" " category="inline-code"></block> 陣列開頭為0。在上述範例中、索引為<block ref="b91e4862bb487ade8bbd4f9eefe0618e" prefix=" " category="inline-code"></block> 將為0、索引則為<block ref="ce8dd462bb623b9902ba4f0151eb2f1b" prefix=" " category="inline-code"></block> 應該是1。在輸出中、記下服務帳戶密碼的索引編號。您在下一個步驟中需要此索引編號。</block>
+  <block id="28f4058b3debe49781dd1cccb1354c1e" category="list-text">（選用）將Kbeconfig重新命名為有意義的叢集名稱。</block>
 </blocks>
