@@ -2162,9 +2162,6 @@ RKE 2 （ v1.24.x ）搭配 Rancher 2.7</block>
   <block id="2352c4e1f4d0024ade0869e00e6243f4" category="paragraph"><block ref="2352c4e1f4d0024ade0869e00e6243f4" category="inline-link-macro-rx"></block></block>
   <block id="dce58385777428b5d9a30460fe36730a" category="list-text">如果您要使用參考私有憑證授權單位（ CA ）的 kubeconfig 檔案來新增叢集、請將下列行新增至<block ref="06b2d4b91b5c9eaa8c20a1c270f95b3c" prefix=" " category="inline-code"></block> kubeconfig 檔案的一節。這可讓 Astra Control 新增叢集：</block>
   <block id="f4228b9bf977f4c9a1952ea84926975f" category="section-title">2023 年 10 月 2 日</block>
-  <block id="33a97eec462a14258b6a1fe63f943ec5" category="list-text">kubectl v1.25 或更新版本已安裝</block>
-  <block id="3b34edb55fd85d9b0636e2533b140b9f" category="list-text">利用Astra Control Center來存取您要新增及管理的叢集</block>
-  <block id="d5b7f62a909e346c0e1cd08be571c54f" category="admonition">在此程序中、您不需要透過KECBECVL存取執行Astra Control Center的叢集。</block>
   <block id="c49be33f592950e78d23dd417a4a75e5" category="list-text">使用叢集管理權限來管理作用中內容的叢集的作用中KECBEConfig</block>
   <block id="565bfe8a9451afd10f3c41fe9fa4cf22" category="list-text">建立服務帳戶：</block>
   <block id="5a20342984ee9d605acb505095dbcd0a" category="list-text">為要由 Astra Control 管理的叢集建立具有足夠權限的下列叢集角色之一：</block>
@@ -2555,4 +2552,5 @@ RKE 2 （ v1.26.x ）搭配 Rancher 2.7</block>
   <block id="b518803a746e06a4f19197ae81406970" category="paragraph">如果您在貯體保留原則過期後刪除應用程式的不可變備份、則備份會從 Astra Control 刪除、但不會從貯體中刪除。因應措施是、如果您需要刪除應用程式的最新備份或所有備份、請從儲存後端手動移除備份。</block>
   <block id="f318002a693e78e0cf366be52609a528" category="admonition">如果應用程式有多個備份、請移除最新的備份或應用程式的所有備份。如果您移除任何中間增量備份、您將無法從最新備份中恢復應用程式。</block>
   <block id="03281739854e4951c0f98529e54a24f2" category="sidebar">使用 Astra Control Provisioner</block>
+  <block id="49219ed727d5145cd828958ebce847fa" category="list-text">kubectl v1.26 或更新版本已安裝</block>
 </blocks>
