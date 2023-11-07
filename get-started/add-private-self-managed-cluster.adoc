@@ -26,127 +26,40 @@ summary: 設定環境之後、您就可以建立Kubernetes叢集、然後將其�
 | Kubernetes 配送 | 支援的版本 
 
 
-| Azure Stack HCI 上的 Azure Kubernetes 服務 | Azure Stack HCI 21H2 和 22H2 、含 aks 1.23 和 1.24 
+| Azure Stack HCI 上的 Azure Kubernetes 服務 | Azure Stack HCI 21H2 和 22H2 、含 1.24.x 和 1.5.x 
 
 
-| Google Anthos | 1.12 至 1.14 
+| Google Anthos | 1.15 至 1.16 
 
 
-| Kubernetes （上游） | 1.24 至 1.26 （ Kubernetes 1.25 或更新版本需要 Astra Trident 22.10 或更新版本） 
+| Kubernetes （上游） | 1.26 至 1.28 
 
 
-| Rancher Kubernetes引擎（RKE） | RKE 1.3 搭配 Rancher 2.6
-RKE 1.4 搭配 Rancher 2.7
-RKE 2 （ v1.23.x ）搭配 Rancher 2.6
-RKE 2 （ v1.24.x ）搭配 Rancher 2.7 
+| Rancher Kubernetes引擎（RKE） | RKE 1.3 搭配 Rancher Manager 2.6
+RKE 1.4 搭配 Rancher Manager 2.7
+RKE 2 （ v1.24.x ）搭配 Rancher 2.6
+RKE 2 （ v1.26.x ）搭配 Rancher 2.7 
 
 
-| Red Hat OpenShift Container Platform | 4.10 至 4.12 
+| Red Hat OpenShift Container Platform | 4.11 至 4.13 
 
 
-| VMware Tanzu Kubernetes Grid | 1.6. 
-
-
-| VMware Tanzu Kubernetes Grid整合版 | 1.14 和 1.15 
+| VMware Tanzu Kubernetes Grid整合版 | 1.16.x 
 |===
 這些指示假設您已經建立了私有叢集、並準備了安全的方法來遠端存取它。
 
 您必須執行下列工作、才能將您的私有叢集新增至 Astra Control Service ：
 
-* <<安裝Astra Connector運算子>>
-* <<設定持續儲存>>
-* <<將私有自我管理叢集新增至 Astra Control Service>>
+. <<安裝 Astra Connector>>
+. <<設定持續儲存>>
+. <<將私有自我管理叢集新增至 Astra Control Service>>
 
 
 
 
-== 安裝Astra Connector運算子
+== 安裝 Astra Connector
 
-您需要在私有叢集上安裝 Astra Connector 運算子。如果您使用的是堡壘主機、請從堡壘主機的命令列發出這些命令。
-
-.步驟
-. 複製Astra Connector運算子GitHub儲存庫：
-+
-[source, console]
-----
-git clone https://github.com/NetApp/astra-connector-operator.git
-----
-. 將目錄變更為解壓縮的運算子套件的最上層、以便使用「ls」命令查看「astraconnecor_opiler.yaml」檔案。
-. 套用 `astraconnector_operator.yaml` 檔案：執行此命令時、會建立 Astra Connector 運算子的正確命名空間、並將組態套用至命名空間：
-+
-[source, console]
-----
-kubectl apply -f astraconnector_operator.yaml
-----
-. 為私有叢集元件建立命名空間：
-+
-[source, console]
-----
-kubectl create ns astra-connector
-----
-. 使用中的指示產生Astra Control API權杖 https://docs.netapp.com/us-en/astra-automation/get-started/get_api_token.html["Astra Automation文件"^]。
-. 修改 Astra Connector 運算子儲存庫組態 / 範例目錄中的範例組態檔案、以包含下列機碼的環境特定值：
-+
-** `spec.natssync-client.cloud-bridge-url`
-** `spec.astra.token`
-** `spec.astra.clusterName`
-+
-
-NOTE: `spec.astra.clusterName` 只有在您匯入私有磁碟叢集、但未將 Kribeconfig 檔案提供給 Astra Control Service 時才需要。如果情況並非如此、請移除此行。
-
-** `spec.astra.accountId`
-+
-例如：
-
-+
-[listing]
-----
-apiVersion: netapp.astraconnector.com/v1
-kind: AstraConnector
-metadata:
-  name: astra-connector
-spec:
-  natssync-client:
-    image: natssync-client:2.0
-    cloud-bridge-url: https://<your.astra.control.service.url>
-  nats:
-    image: nats:2.6.1-alpine3.14
-  httpproxy-client:
-    image: httpproxylet:2.0
-  echo-client:
-    image: echo-proxylet:2.0
-  imageRegistry:
-    name: theotw
-  astra:
-    token: <Astra Control API token>
-    clusterName: <your-private-AKS-cluster-name>
-    accountId: <Astra Control account id>
-    acceptEULA: yes
-----
-
-
-. 套用 Astra Connector 自訂資源定義（ CRD ）：
-+
-[source, console]
-----
-kubectl apply -f config/samples/astraconnector_v1.yaml -n astra-connector
-----
-. 檢查 Astra Connector 的狀態：
-+
-[source, console]
-----
-kubectl get astraconnector astra-connector -n astra-connector
-----
-+
-您應該會看到類似下列的輸出：
-
-+
-[source, console]
-----
-NAME              REGISTERED   ASTRACONNECTORID
-astra-connector   true         22b839aa-8b85-445a-85dd-0b1f53b5ea19
-----
-
+在新增私有叢集之前、您需要在叢集上安裝 Astra Connector 、以便 Astra Control 能夠與其通訊。請參閱 link:install-astra-connector.html["安裝 Astra Connector for Private 叢集"] 以取得相關指示。
 
 
 
@@ -197,7 +110,6 @@ Astra Control Service支援使用下列Kubernetes發佈版本的自我管理叢�
 您的自我管理叢集必須符合下列需求：
 
 * 叢集必須可透過網際網路存取。
-* 叢集無法裝載在內部部署網路中、必須裝載在公有雲環境中。
 * 如果您使用或打算使用已啟用SCSI驅動程式的儲存設備、則叢集上必須安裝適當的SCSI驅動程式。如需使用SCSI驅動程式來整合儲存設備的詳細資訊、請參閱儲存服務的說明文件。
 * 您可以存取僅包含一個內容元素的叢集 kubeconfig 檔案。追蹤 link:create-kubeconfig.html["這些指示"^] 以產生 kubeconfig 檔案。
 * 如果您要使用參考私有憑證授權單位（ CA ）的 kubeconfig 檔案來新增叢集、請將下列行新增至 `cluster` kubeconfig 檔案的一節。這可讓 Astra Control 新增叢集：
@@ -213,7 +125,7 @@ insecure-skip-tls-verify: true
 NOTE: 您可以 https://docs.netapp.com/us-en/trident/trident-get-started/kubernetes-deploy.html#choose-the-deployment-method["部署Astra Trident"^] 使用Trident運算子（手動或使用Helm圖表）或 `tridentctl`。在安裝或升級Astra Trident之前、請先檢閱 https://docs.netapp.com/us-en/trident/trident-get-started/requirements.html["支援的前端、後端及主機組態"^]。
 
 +
-** * 已設定 Astra Trident 儲存後端 * ：至少必須有一個 Astra Trident 儲存後端 https://docs.netapp.com/us-en/trident/trident-get-started/kubernetes-postdeployment.html#step-1-create-a-backend["已設定"^] 在叢集上。
+** * 已設定 Astra Trident 儲存後端 * ：至少必須有一個 Astra Trident 儲存後端 https://docs.netapp.com/us-en/trident/trident-use/backends.html["已設定"^] 在叢集上。
 ** * 已設定的 Astra Trident 儲存類別 * ：至少必須有一個 Astra Trident 儲存類別 https://docs.netapp.com/us-en/trident/trident-use/manage-stor-class.html["已設定"^] 在叢集上。如果已設定預設儲存類別、請確定只有一個儲存類別具有該註釋。
 ** *已安裝並設定的Astra Trident Volume Snapshot控制器與Volume Snapshot類別*：Volume Snapshot控制器必須是 https://docs.netapp.com/us-en/trident/trident-use/vol-snapshots.html#deploying-a-volume-snapshot-controller["已安裝"^] 以便在Astra Control中建立快照。至少有一個Astra Trident `VolumeSnapshotClass` 過去了 https://docs.netapp.com/us-en/trident/trident-use/vol-snapshots.html#step-1-set-up-a-volumesnapshotclass["設定"^] 由系統管理員執行。
 
@@ -221,6 +133,9 @@ NOTE: 您可以 https://docs.netapp.com/us-en/trident/trident-get-started/kubern
 
 
 ====
+* * Astra Control Provisioner* ：若要使用 Astra Control Provisioner 進階管理和儲存資源配置功能、而 Astra Control 使用者只能存取這些功能、您必須安裝 Astra Trident 23.10 或更新版本並啟用 link:../use/enable-acp.html["Astra Control Provisioner 功能"]。
+
+
 .步驟
 . 在儀表板上、選取*管理Kubernetes叢集*。
 +
@@ -233,7 +148,7 @@ NOTE: 您可以 https://docs.netapp.com/us-en/trident/trident-get-started/kubern
 NOTE: 如果您自行建立 `kubeconfig` 檔案中、您應該只定義*一個*內容元素。請參閱 https://kubernetes.io/docs/concepts/configuration/organize-cluster-access-kubeconfig/["Kubernetes文件"^] 以取得有關建立的資訊 `kubeconfig` 檔案：
 
 . * 認證名稱 * ：為您上傳至 Astra Control 的自我管理叢集認證提供名稱。根據預設、認證名稱會自動填入為叢集名稱。
-. * 私有路由識別碼 * ：輸入可從 Astra Connector 取得的私有路由識別碼。如果您透過查詢 Astra Connector `kubectl get` 命令時、私有路由識別碼稱為 `ASTRACONNECTORID`。
+. * 私有路由識別碼 * ：輸入可從 Astra Connector 取得的私有路由識別碼。如果您透過查詢 Astra Connector `kubectl get astraconnector -n astra-connector` 命令時、私有路由識別碼稱為 `ASTRACONNECTORID`。
 +
 
 NOTE: 私有路由識別碼是與 Astra Connector 相關的名稱、可讓 Astra 管理私有 Kubernetes 叢集。在這種情況下、私有叢集是 Kubernetes 叢集、不會將其 API 伺服器暴露於網際網路上。

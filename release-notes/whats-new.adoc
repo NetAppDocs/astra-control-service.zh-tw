@@ -4,7 +4,7 @@ permalink: release-notes/whats-new.html
 keywords: 'what"s new, bugs, bug fixes, new features, enhancements' 
 summary: NetApp會定期更新Astra Control Service、為您提供新功能、增強功能和錯誤修復。 
 ---
-= Astra Control Service的新功能
+= Astra Control Service 的新功能
 :hardbreaks:
 :allow-uri-read: 
 :icons: font
@@ -13,6 +13,44 @@ summary: NetApp會定期更新Astra Control Service、為您提供新功能、�
 
 [role="lead"]
 NetApp會定期更新Astra Control Service、為您提供新功能、增強功能和錯誤修復。
+
+
+
+== 2023 年 11 月 7 日
+
+[[nas-eco-backup-restore]]
+.新功能與支援
+* * 使用 ONTAP NAS 經濟型驅動程式備份儲存後端 * 為應用程式提供備份與還原功能：為啟用備份與還原作業 `ontap-nas-economy` 有些 link:../use/protect-apps.html#enable-backup-and-restore-for-ontap-nas-economy-operations["簡單步驟"^]。
+* * Astra Control Service 支援內部部署 Red Hat OpenShift Container Platform 叢集 *
++
+link:../use/restore-apps.html["新增叢集"^]
+
+* * 不可變備份 * ： Astra Control 現在支援 link:../concepts/data-protection.html#immutable-backups["不可更改的唯讀備份"^] 成為可抵禦惡意軟體和其他威脅的額外安全層。
+* * Astra Control Provisioner 簡介 *
++
+在 23.10 版本中、 Astra Control 引進了一種稱為 Astra Control Provisioner 的新軟體元件、可供所有獲授權的 Astra Control 使用者使用。Astra Control Provisioner 可存取 Astra Trident 所提供的進階管理和儲存資源配置功能。所有 Astra Control 客戶均可免費使用這些功能。
+
++
+** * 開始使用 Astra Control Provisioner*
+您可以 link:../use/enable-acp.html["啟用 Astra Control Provisioner"^] 如果您已安裝並設定環境以使用 Astra Trident 23.10 。
+** * Astra Control Provisioner 功能 *
++
+Astra Control Provisioner 23.10 版本提供下列功能：
+
++
+*** * 使用 Kerberos 5 加密技術增強儲存後端安全性 * ：您可以藉由改善儲存安全性 link:../use-acp/configure-storage-backend-encryption.html["啟用加密"^] 用於託管叢集與儲存後端之間的流量。Astra Control Provisioner 支援透過 NFSv4.1 連線、從 Red Hat OpenShift 叢集到 Azure NetApp Files 和內部部署 ONTAP 磁碟區的 Kerberos 5 加密。
+*** * 使用 SnapShot 恢復資料 * ： Astra Control Provisioner 使用從快照提供快速的原位磁碟區還原 `TridentActionSnapshotRestore` （ TASR ） CR 。
+*** * 應用程式的備份與還原功能 `ontap-nas-economy` 驅動程式備份儲存後端 * ：如所述 <<nas-eco-backup-restore,以上>>。
+
+
+
+
+* * Astra Control Service 支援 AWS （ ROSA ）叢集上的 Red Hat OpenShift 服務 *
++
+link:../use/restore-apps.html["新增叢集"^]
+
+* * 依預設關閉執行攔截器 * ：從本版本開始、執行攔截器功能就可以 link:../use/manage-app-execution-hooks.html#enable-the-execution-hooks-feature["已啟用"] 或停用以提高安全性（預設為停用）。如果您尚未建立用於 Astra Control 的執行攔截器、則需要 link:../use/manage-app-execution-hooks.html#enable-the-execution-hooks-feature["啟用執行攔截功能"^] 開始建立攔截器。如果您在此版本之前建立了執行攔截器、則執行攔截器功能會保持啟用狀態、您可以像平常一樣使用攔截器。
+
 
 
 

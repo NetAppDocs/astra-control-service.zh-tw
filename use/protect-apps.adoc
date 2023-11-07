@@ -21,6 +21,8 @@ summary: 使用自動保護原則或臨機操作、拍攝快照和備份資料�
 * <<設定保護原則>>
 * <<建立快照>>
 * <<建立備份>>
+* <<啟用 ONTAP NAS 經濟營運的備份與還原>>
+* <<建立不可變的備份>>
 * <<檢視快照與備份>>
 * <<刪除快照>>
 * <<取消備份>>
@@ -34,6 +36,9 @@ summary: 使用自動保護原則或臨機操作、拍攝快照和備份資料�
 保護原則可在已定義的排程中建立快照、備份或兩者、以保護應用程式。您可以選擇每小時、每天、每週和每月建立快照和備份、也可以指定要保留的複本數量。
 
 如果您需要每小時執行一次以上的備份或快照、您可以 https://docs.netapp.com/us-en/astra-automation/workflows/workflows_before.html["使用Astra Control REST API建立快照與備份"^]。
+
+
+NOTE: 如果您定義的保護原則會建立不可變的備份、以便在多次讀取（ WORM ）貯體時寫入資料、請確保備份的保留時間不會短於為該貯體設定的保留時間。
 
 .步驟
 . 選取*應用程式*、然後選取託管應用程式的名稱。
@@ -65,6 +70,9 @@ Astra Control會使用您定義的排程和保留原則來建立和保留快照�
 
 您可以隨時建立隨需快照。
 
+
+IMPORTANT: 如果您的應用程式使用以作為後盾的儲存類別 `ontap-nas-economy` 驅動程式、無法建立快照。使用替代的儲存類別來執行快照。
+
 .步驟
 . 選擇*應用程式*。
 . 在所需應用程式*「Actions」（動作）欄的「Options」（選項）功能表中、選取*「Snapshot」（快照）*。
@@ -90,6 +98,11 @@ ifdef::azure[]
 ====
 endif::azure[]
 
+.關於這項工作
+Astra Control 中的貯體不會報告可用容量。在備份或複製 Astra Control 所管理的應用程式之前、請先在適當的儲存管理系統中檢查貯體資訊。
+
+如果您的應用程式使用以作為後盾的儲存類別 `ontap-nas-economy` 您需要的是驅動程式 <<啟用 ONTAP NAS 經濟營運的備份與還原,啟用備份與還原>> 功能。請確定您已定義 `backendType` 中的參數 https://docs.netapp.com/us-en/trident/trident-reference/objects.html#kubernetes-storageclass-objects["Kubernetes 儲存物件"^] 值為 `ontap-nas-economy` 執行任何保護作業之前。
+
 .步驟
 . 選擇*應用程式*。
 . 在所需應用程式*「Actions」（動作）欄的「Options」（選項）功能表中、選取*「Back up」（備份）*。
@@ -103,14 +116,135 @@ endif::azure[]
 .結果
 Astra Control會建立應用程式的備份。
 
+[NOTE]
+====
+* 如果您的網路中斷或異常緩慢、備份作業可能會逾時。這會導致備份失敗。
+* 如果您需要取消執行中的備份、請依照中的指示操作 <<取消備份>>。若要刪除備份、請等到備份完成後再依照中的指示進行 <<刪除備份>>。
+* 資料保護作業（複製、備份、還原）及後續持續調整磁碟區大小之後、UI中會顯示新的磁碟區大小、延遲最多20分鐘。資料保護作業只需幾分鐘就能成功完成、您可以使用儲存後端的管理軟體來確認磁碟區大小的變更。
 
-NOTE: 如果您需要取消執行中的備份、請依照中的指示操作 <<取消備份>>。若要刪除備份、請等到備份完成後再依照中的指示進行 <<刪除備份>>。
 
+====
+
+
+== 啟用 ONTAP NAS 經濟營運的備份與還原
+
+Astra Control Provisioner 提供備份與還原功能、可啟用以供使用的儲存後端使用 `ontap-nas-economy` 儲存類別：
+
+.開始之前
+* 您已啟用 Astra Control Provisioner 。
+* 您已在 Astra Control 中定義應用程式。在您完成此程序之前、此應用程式的保護功能有限。
+* 您有 `ontap-nas-economy` 已選取為儲存後端的預設儲存類別。
+
+
+.展開以進行組態步驟
+[%collapsible]
+====
+. 在 ONTAP 儲存後端執行下列動作：
++
+.. 尋找裝載的 SVM `ontap-nas-economy`應用程式的基礎磁碟區。
+.. 登入連線至 ONTAP 的終端機、並在其中建立磁碟區。
+.. 隱藏 SVM 的快照目錄：
++
+
+NOTE: 這項變更會影響整個 SVM 。隱藏目錄將繼續可供存取。
+
++
+[source, console]
+----
+nfs modify -vserver <svm name> -v3-hide-snapshot enabled
+----
++
+
+IMPORTANT: 確認 ONTAP 儲存後端上的 Snapshot 目錄已隱藏。若未隱藏此目錄、可能會導致無法存取您的應用程式、尤其是在使用 NFSv3 的情況下。
+
+
+
+. 在 Astra Trident 中執行下列動作：
++
+.. 為每個以 ONTAP NAS 經濟型為基礎且與應用程式相關的 PV 啟用快照目錄：
++
+[source, console]
+----
+tridentctl update volume <pv name> --snapshot-dir=true --pool-level=true -n trident
+----
+.. 確認已為每個相關的 PV 啟用快照目錄：
++
+[source, console]
+----
+tridentctl get volume <pv name> -n trident -o yaml | grep snapshotDir
+----
++
+回應：
+
++
+[listing]
+----
+snapshotDirectory: "true"
+----
+
+
+. 在 Astra Control 中、啟用所有相關的快照目錄之後、請重新整理應用程式、以便 Astra Control 識別變更的值。
+
+
+.結果
+應用程式已準備好使用 Astra Control 進行備份與還原。每個 PVC 也可供其他應用程式用於備份和還原。
+
+====
+
+
+== 建立不可變的備份
+
+只要儲存備份的貯體上的保留原則禁止修改、刪除或覆寫不可變的備份、您可以將應用程式備份至已設定保留原則的儲存區、以建立不可變更的備份。請參閱 link:../learn/data-protection.html#immutable-backups["資料保護"^] 以取得有關使用不可變備份的重要資訊。
+
+.開始之前
+您需要使用保留原則來設定目的地貯體。根據您使用的儲存設備供應商而定、您的做法會有所不同。如需詳細資訊、請參閱儲存供應商文件：
+
+* * Amazon Web Services * ： https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-lock-console.html["建立貯體時啟用 S3 物件鎖定、並設定預設保留期間的「治理」預設保留模式"^]。
+* * Google Cloud * ： https://cloud.google.com/storage/docs/using-bucket-lock["使用保留原則設定貯體、並指定保留期間"^]。
+* * Microsoft Azure * ： https://learn.microsoft.com/en-us/azure/storage/blobs/immutable-policy-configure-container-scope?tabs=azure-portal["在容器層級範圍上設定具有時間型保留原則的 BLOB 儲存貯體"^]。
+* * NetApp StorageGRID * ： https://docs.netapp.com/us-en/storagegrid-117/tenant/creating-s3-bucket.html["建立貯體時啟用 S3 物件鎖定、並設定預設保留期間的「符合」預設保留模式"^]。
+
+
+
+NOTE: Astra Control 中的貯體不會報告可用容量。在備份或複製 Astra Control 所管理的應用程式之前、請先在適當的儲存管理系統中檢查貯體資訊。
+
+
+IMPORTANT: 如果您的應用程式使用以作為後盾的儲存類別 `ontap-nas-economy` 驅動程式、請確定您已定義 `backendType` 中的參數 https://docs.netapp.com/us-en/trident/trident-reference/objects.html#kubernetes-storageclass-objects["Kubernetes 儲存物件"^] 值為 `ontap-nas-economy` 執行任何保護作業之前。
+
+.步驟
+. 選擇*應用程式*。
+. 在所需應用程式*「Actions」（動作）欄的「Options」（選項）功能表中、選取*「Back up」（備份）*。
+. 自訂備份名稱。
+. 選擇是否要從現有的快照備份應用程式。如果選取此選項、您可以從現有快照清單中進行選擇。
+. 從儲存貯體清單中選擇要備份的目的地儲存桶。一次寫入多次讀取（ WORM ）貯體名稱旁會顯示「鎖定」狀態。
++
+
+NOTE: 如果貯體類型不受支援、則會在您將游標暫留在或選取該貯體時指出。
+
+. 選擇*下一步*。
+. 檢閱備份摘要、然後選取*備份*。
+
+
+.結果
+Astra Control 會建立應用程式的不可變備份。
+
+[NOTE]
+====
+* 如果您的網路中斷或異常緩慢、備份作業可能會逾時。這會導致備份失敗。
+* 如果您嘗試同時將同一個應用程式的兩個不可變備份建立到同一個儲存庫、 Astra Control 會防止第二個備份啟動。等到第一個備份完成後再開始另一個備份。
+* 您無法取消執行中的不可變更備份。
+* 資料保護作業（複製、備份、還原）及後續持續調整磁碟區大小之後、UI中會顯示新的磁碟區大小、延遲最多20分鐘。資料保護作業只需幾分鐘就能成功完成、您可以使用儲存後端的管理軟體來確認磁碟區大小的變更。
+
+
+====
 
 
 == 檢視快照與備份
 
 您可以從「資料保護」索引標籤檢視應用程式的快照與備份。
+
+
+NOTE: 不可變的備份會在其所使用的貯體旁邊顯示「鎖定」狀態。
 
 .步驟
 . 選取*應用程式*、然後選取託管應用程式的名稱。
@@ -146,6 +280,9 @@ Astra Control會刪除快照。
 
 TIP: 若要取消備份、備份必須在中 `Running` 州/省。您無法取消中的備份 `Pending` 州/省。
 
+
+NOTE: 您無法取消執行中的不可變更備份。
+
 .步驟
 . 選取*應用程式*、然後選取應用程式名稱。
 . 選擇*資料保護*。
@@ -162,6 +299,9 @@ TIP: 若要取消備份、備份必須在中 `Running` 州/省。您無法取消
 
 
 NOTE: 如果您需要取消執行中的備份、請依照中的指示操作 <<取消備份>>。若要刪除備份、請等到備份完成後再使用這些指示。
+
+
+NOTE: 您無法在保留期間到期之前刪除不可變更的備份。
 
 .步驟
 . 選取*應用程式*、然後選取應用程式名稱。

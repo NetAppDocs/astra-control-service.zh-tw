@@ -1,0 +1,8 @@
+---
+section: use-acp
+title: 使用 Astra Control Provisioner
+entries:
+- title: 設定儲存後端加密
+  url: "/use-acp/configure-storage-backend-encryption.html"
+- title: 使用快照恢復 Volume 資料
+  url: "/use-acp/acp-snap-restore.html"

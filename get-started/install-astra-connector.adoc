@@ -1,0 +1,137 @@
+---
+sidebar: sidebar 
+permalink: get-started/install-astra-connector.html 
+keywords: connector, install, astra connector, manage cluster, add cluster, cluster, add, manage 
+summary: 您可以安裝 Astra Connector 來協助管理私有叢集。 
+---
+= 安裝 Astra Connector for Private 叢集
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/get-started/
+
+
+[role="lead"]
+Astra Control Service 使用 Astra Connector 來啟用 Astra Control Service 與私有叢集之間的通訊。您需要在要管理的私有叢集上安裝 Astra Connector 。
+
+Astra Connector 支援下列類型的私有叢集：
+
+* Amazon Elastic Kubernetes Service （ EKS ）
+* Azure Kubernetes服務（KS）
+* Google Kubernetes Engine（GKE）
+* AWS 上的 Red Hat OpenShift 服務（ ROSA ）
+* ROSA 搭配 AWS Private Link
+* 內部部署 Red Hat OpenShift Container Platform
+
+
+
+
+== 安裝 Astra Connector
+
+.關於這項工作
+* 當您執行這些步驟時、請針對您要使用 Astra Control Service 管理的私有叢集執行這些命令。
+* 如果您使用的是堡壘主機、請從堡壘主機的命令列發出這些命令。
+
+
+.開始之前
+* 您需要存取想要使用 Astra Control Service 管理的私有叢集。
+* 您需要 Kubernetes 管理員權限、才能在叢集上安裝 Astra Connector 運算子。
+
+
+.步驟
+. 在您要使用 Astra Control Service 管理的私有叢集上安裝 Astra Connector 運算子。當您執行此命令時、命名空間 `astra-connector-operator` 已建立並套用組態至命名空間：
++
+[source, console]
+----
+kubectl apply -f https://github.com/NetApp/astra-connector-operator/releases/download/23.07.0-202310251519/astraconnector_operator.yaml
+----
+. 確認操作員已安裝就緒：
++
+[source, console]
+----
+kubectl get all -n astra-connector-operator
+----
+. 從 Astra Control 取得 API 權杖。請參閱 https://docs.netapp.com/us-en/astra-automation/get-started/get_api_token.html["Astra Automation文件"^] 以取得相關指示。
+. 建立 Astra 連接器命名空間：
++
+[source, console]
+----
+kubectl create ns astra-connector
+----
+. 建立 Astra Connector CR 檔案並命名 `astra-connector-cr.yaml`。更新括弧 <> 中的值以符合 Astra Control 環境和叢集組態：
++
+** * <ASTRA_CONTROL_SERVICE_URL> * ： Astra 控制服務的網路 UI URL 。
+** * <ASTRA_CONTROL_SERVICE_API_TOKEN> * ：您在上述步驟中取得的 Astra 控制 API 權杖。
+** * <PRIVATE_AKS_CLUSTER_NAME> * ：（僅限 AKS 叢集） - 私有 Azure Kubernetes 服務叢集的叢集名稱。只有在您要新增私有 aks 叢集時、才取消註解並填入此行。
+** * <ASTRA_CONTROL_ACCOUNT_ID> * ：從 Astra Control 網路 UI 取得。選取頁面右上角的圖示、然後選取 * API 存取 * 。
++
+[source, yaml]
+----
+apiVersion: netapp.astraconnector.com/v1
+kind: AstraConnector
+metadata:
+  name: astra-connector
+  namespace: astra-connector
+spec:
+  natssync-client:
+    cloud-bridge-url: <ASTRA_CONTROL_SERVICE_URL>
+  imageRegistry:
+    name: theotw
+    secret: ""
+  astra:
+    token: <ASTRA_CONTROL_SERVICE_API_TOKEN>
+    #clusterName: <PRIVATE_AKS_CLUSTER_NAME>
+    accountId: <ASTRA_CONTROL_ACCOUNT_ID>
+    acceptEULA: yes
+----
+
+
+. 填入之後 `astra-connector-cr.yaml` 使用正確值的檔案、請套用 CR ：
++
+[source, console]
+----
+kubectl apply -f astra-connector-cr.yaml
+----
+. 確認 Astra Connector 已完全部署：
++
+[source, console]
+----
+kubectl get all -n astra-connector
+----
+. 確認叢集已向 Astra Control 註冊：
++
+[source, console]
+----
+kubectl get astraconnector -n astra-connector
+----
++
+您應該會看到類似下列的輸出：
+
++
+[listing]
+----
+NAME              REGISTERED   ASTRACONNECTORID                       STATUS
+astra-connector   true         be475ae5-1511-4eaa-9b9e-712f09b0d065   Registered with Astra
+----
++
+
+TIP: 記下 ASTRACONECTORID ；將叢集新增至 Astra Control 時、您將需要它。
+
+
+
+
+
+== 接下來呢？
+
+安裝 Astra Connector 之後、您就可以將私有叢集新增至 Astra Control Service 。
+
+* link:add-private-provider-managed-cluster.html["將私有提供者管理的叢集新增至 Astra Control Service"^]：請使用以下步驟來新增具有私有 IP 位址且由雲端供應商管理的叢集。您需要雲端供應商的服務主體帳戶、服務帳戶或使用者帳戶。
+* link:add-private-self-managed-cluster.html["將私有自我管理叢集新增至 Astra Control Service"^]：請使用以下步驟來新增具有私有 IP 位址且由組織管理的叢集。您需要為想要新增的叢集建立一個 kubeconfig 檔案。
+
+
+
+
+== 以取得更多資訊
+
+* link:add-first-cluster.html["新增叢集"^]
+

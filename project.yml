@@ -30,6 +30,7 @@ sidebar:
   - section: get-started
   - section: learn
   - section: use
+  - section: use-acp
   - title: 利用Astra Control REST API實現自動化
     url: "/automation.html"
   - section: support

@@ -22,12 +22,6 @@ summary: 已知限制指出本產品版本不支援的平台、裝置或功能�
 
 
 
-=== Astra Trident不會從叢集解除安裝
-
-當您從Astra Control Service取消管理叢集時、不會自動從叢集解除安裝Astra Trident。若要解除安裝Astra Trident、您需要 https://docs.netapp.com/us-en/trident/trident-managing-k8s/uninstall-trident.html["請遵循Astra Trident文件中的下列步驟"^]。
-
-
-
 === 現有連線至Postgres Pod會導致故障
 
 當您在Postgres Pod上執行作業時、不應直接在Pod內連線以使用psql命令。Astra Control Service需要psql存取權限才能凍結及解出資料庫。如果有預先存在的連線、則快照、備份或複製都會失敗。
@@ -45,14 +39,6 @@ ifdef::gcp[]
 == GKE叢集的管理限制
 
 以下限制適用於Google Kubernetes Engine（GKE）中Kubernetes叢集的管理。
-
-
-
-=== Google Marketplace應用程式尚未通過驗證
-
-NetApp尚未驗證從Google Marketplace部署的應用程式。部分使用者回報從 Google Marketplace 部署的 Postgres 、 MariaDB 和 MySQL 應用程式的探索或備份問題。
-
-無論您使用哪種類型的應用程式搭配Astra Control Service使用、您都應該自行測試備份與還原工作流程、以確保符合災難恢復需求。
 
 endif::gcp[]
 
@@ -122,7 +108,7 @@ NOTE: 在複製作業期間、需要IngresClass資源或Webhooks才能正常運�
 
 === 具有命名空間限制的成員使用者、必須先將命名空間新增至限制、才能存取複製或還原的應用程式
 
-任何 `member` 具有命名空間名稱/ID之RBAC限制的使用者、可以將應用程式複製或還原至同一叢集上的新命名空間、或是組織帳戶中的任何其他叢集。不過、相同的使用者無法存取新命名空間中的複製或還原應用程式。在複製或還原作業建立新命名空間之後、帳戶管理員/擁有者即可編輯 `member` 使用者帳戶和更新角色限制、讓受影響的使用者能夠授予新命名空間的存取權。
+任何 `member` 具有命名空間名稱/ID之RBAC限制的使用者、可以將應用程式複製或還原至同一叢集上的新命名空間、或是組織帳戶中的任何其他叢集。不過、相同的使用者無法存取新命名空間中的複製或還原應用程式。在複製或還原作業建立新命名空間之後、帳戶管理員 / 擁有者可以編輯 `member` 使用者帳戶和更新角色限制、讓受影響的使用者能夠授予新命名空間的存取權。
 
 
 

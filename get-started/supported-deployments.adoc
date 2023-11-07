@@ -40,5 +40,5 @@ ifdef::azure[]
 
 endif::azure[]
 
-* link:add-first-cluster.html#start-managing-kubernetes-clusters["瞭解如何在將自我管理的叢集新增至Astra Control Service之前、先做好準備"]。
+* link:add-first-cluster.html["瞭解如何在將自我管理的叢集新增至Astra Control Service之前、先做好準備"]。
 

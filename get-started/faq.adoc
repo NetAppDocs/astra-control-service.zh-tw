@@ -8,7 +8,7 @@ summary: 如果您只是想要快速回答問題、這個常見問題集就能�
 :hardbreaks:
 :allow-uri-read: 
 :icons: font
-:imagesdir: ../media/
+:imagesdir: ../media/use/
 
 
 [role="lead"]
@@ -48,11 +48,11 @@ Astra Control要求您在就職部分提供準確的客戶資訊。如果您提�
 
 *我在一個月內升級至Premium PayGO方案。我會收取整個月的費用嗎？*
 
-否、從您升級至優質方案開始計費。
+不可以計費從您升級至優質方案開始算起。
 
 *我正在使用免費方案、我是否會收到持續大量報銷的費用？*
 
-是的、您將會從雲端供應商收取叢集所使用的「持續磁碟區」費用。
+是的、您將需要支付雲端供應商叢集使用的持續磁碟區費用。
 
 
 
@@ -102,7 +102,7 @@ ifdef::gcp[]
 
 *我可以將私有GKE叢集新增至Astra Control Service嗎？*
 
-是的、您可以將私有GKE叢集新增至Astra Control Service。  若要新增私有 GKE 叢集、請參閱 link:add-first-cluster.html["從Astra Control Service開始管理Kubernetes叢集"]。
+是的、您可以將私有GKE叢集新增至Astra Control Service。若要新增私有 GKE 叢集、請參閱 link:add-first-cluster.html["從Astra Control Service開始管理Kubernetes叢集"]。
 
 私有 GKE 叢集必須具有 https://cloud.google.com/kubernetes-engine/docs/concepts/private-cluster-concept["授權網路"^] 設定為允許Astra控制IP位址：
 
@@ -110,7 +110,7 @@ ifdef::gcp[]
 
 *我的GKE叢集是否可以位於共用VPC上？*
 
-是的、Astra Control可以管理位於共享VPC中的叢集。 link:set-up-google-cloud.html["瞭解如何設定Astra服務帳戶以進行共用VPC組態"]。
+是的。Astra Control 可以管理位於共享 VPC 中的叢集。 link:set-up-google-cloud.html["瞭解如何設定Astra服務帳戶以進行共用VPC組態"]。
 
 *何處可以找到GCP上的服務帳戶認證資料？*
 
@@ -192,4 +192,78 @@ endif::gcp[]
 
 *我可以直接透過雲端供應商來管理Astra Control拍攝的快照嗎？*
 
-不可以Astra Control所拍攝的快照與備份、只能透過Astra Control進行管理。
+不可以Astra Control 所拍攝的快照和備份只能透過 Astra Control 進行管理。
+
+
+
+== Astra Control 資源配置程式
+
+Astra Control Provisioner 的儲存資源配置功能與 Astra Trident 的儲存資源配置功能有何不同？ *
+
+Astra Control Provisioner 是 Astra Control 的一部分、支援開放原始碼 Astra Trident 中無法使用的儲存資源配置功能超集。這些功能是開放原始碼 Trident 所提供的所有功能之外的附加功能。
+
+* Astra Control 資源配置程式是否取代 Astra Trident ？ *
+
+在即將推出的 Astra Control 更新中、 Astra Control 資源配置程式將取代 Astra Trident 、將其作為 Astra Control 架構中的儲存資源配置程式和 Orchestrator 。因此、強烈建議 Astra Control 使用者使用 link:../use/enable-acp.html["啟用 Astra Control Provisioner"]。Astra Trident 將繼續保持開放原始碼、並以 NetApp 的新 CSI 和其他功能來發行、維護、支援及更新。
+
+* 我必須支付 Astra Trident 的費用嗎？ *
+
+不可以Astra Trident 將繼續是開放原始碼、並可免費下載。
+
+* 我可以在 Astra Control 中使用儲存管理和資源配置功能、而無需安裝和使用所有 Astra Control 嗎？ *
+
+是的、您可以升級至 Astra Trident 23.10 或更新版本、並啟用 Astra Control Provisioner 功能、即使您不想使用完整的 Astra Control 資料管理功能集。
+
+* 如何從現有的 Trident 使用者移轉至 Astra Control 、以使用進階儲存管理與資源配置功能？ *
+
+如果您是現有的 Trident 使用者（這包括公有雲中 Astra Trident 的使用者）、您必須先取得 Astra Control 授權。完成後、您可以下載 Astra Control Provisioner 套件、升級 Astra Trident 、以及 link:../use/enable-acp.html["啟用 Astra Control Provisioner 功能"]。
+
+* 如何知道 Astra Control Provisioner 是否已取代叢集上的 Astra Trident ？ *
+
+安裝 Astra Control Provisioner 之後、 Astra Control UI 中的主機叢集會顯示 `ACP version` 而非 `Trident version` 欄位和目前安裝的版本號碼。
+
+image:ac-acp-version.png["在 UI 中描繪 ACP 版本位置的螢幕擷取畫面"]
+
+如果您無法存取 UI 、可以使用下列方法確認安裝成功：
+
+[role="tabbed-block"]
+====
+.Astra Trident 運算子
+--
+驗證 `trident-acp` 容器正在執行 `acpVersion` 是 `23.10.0` 狀態為 `Installed`：
+
+[listing]
+----
+kubectl get torc -o yaml
+----
+回應：
+
+[listing]
+----
+status:
+  acpVersion: 23.10.0
+  currentInstallationParams:
+    ...
+    acpImage: <my_custom_registry>/trident-acp:v23.10.0
+    enableACP: "true"
+    ...
+  ...
+  status: Installed
+----
+--
+.試用
+--
+確認 Astra Control Provisioner 已啟用：
+
+[listing]
+----
+./tridentctl -n trident version
+----
+回應：
+
+[listing]
+----
++----------------+----------------+-------------+ | SERVER VERSION | CLIENT VERSION | ACP VERSION | +----------------+----------------+-------------+ | 23.10.0 | 23.10.0 | 23.10.0. | +----------------+----------------+-------------+
+----
+--
+====

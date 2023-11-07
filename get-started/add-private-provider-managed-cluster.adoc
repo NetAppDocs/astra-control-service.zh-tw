@@ -28,100 +28,16 @@ summary: 設定環境之後、您就可以建立Kubernetes叢集、然後將其�
 
 您必須執行下列工作、才能將您的私有叢集新增至 Astra Control Service ：
 
-* <<安裝Astra Connector運算子>>
-* <<設定持續儲存>>
-* <<將私有提供者管理的叢集新增至 Astra Control Service>>
+. <<安裝 Astra Connector>>
+. <<設定持續儲存>>
+. <<將私有提供者管理的叢集新增至 Astra Control Service>>
 
 
 
 
-== 安裝Astra Connector運算子
+== 安裝 Astra Connector
 
-您需要在私有叢集上安裝 Astra Connector 運算子。如果您使用的是堡壘主機、請從堡壘主機的命令列發出這些命令。
-
-.步驟
-. 複製Astra Connector運算子GitHub儲存庫：
-+
-[source, console]
-----
-git clone https://github.com/NetApp/astra-connector-operator.git
-----
-. 將目錄變更為解壓縮的運算子套件的最上層、以便使用「ls」命令查看「astraconnecor_opiler.yaml」檔案。
-. 套用 `astraconnector_operator.yaml` 檔案：執行此命令時、會建立 Astra Connector 運算子的正確命名空間、並將組態套用至命名空間：
-+
-[source, console]
-----
-kubectl apply -f astraconnector_operator.yaml
-----
-. 為私有叢集元件建立命名空間：
-+
-[source, console]
-----
-kubectl create ns astra-connector
-----
-. 使用中的指示產生Astra Control API權杖 https://docs.netapp.com/us-en/astra-automation/get-started/get_api_token.html["Astra Automation文件"^]。
-. 修改 Astra Connector 運算子儲存庫組態 / 範例目錄中的範例組態檔案、以包含下列機碼的環境特定值：
-+
-** `spec.natssync-client.cloud-bridge-url`
-** `spec.astra.token`
-** `spec.astra.clusterName`
-+
-
-NOTE: `spec.astra.clusterName` 只有在您匯入私有磁碟叢集、但未將 Kribeconfig 檔案提供給 Astra Control Service 時才需要。如果情況並非如此、請移除此行。
-
-** `spec.astra.accountId`
-+
-例如：
-
-+
-[listing]
-----
-apiVersion: netapp.astraconnector.com/v1
-kind: AstraConnector
-metadata:
-  name: astra-connector
-spec:
-  natssync-client:
-    image: natssync-client:2.0
-    cloud-bridge-url: https://<your.astra.control.service.url>
-  nats:
-    image: nats:2.6.1-alpine3.14
-  httpproxy-client:
-    image: httpproxylet:2.0
-  echo-client:
-    image: echo-proxylet:2.0
-  imageRegistry:
-    name: theotw
-  astra:
-    token: <Astra Control API token>
-    clusterName: <your-private-AKS-cluster-name>
-    accountId: <Astra Control account id>
-    acceptEULA: yes
-----
-
-
-. 套用 Astra Connector 自訂資源定義（ CRD ）：
-+
-[source, console]
-----
-kubectl apply -f config/samples/astraconnector_v1.yaml -n astra-connector
-----
-. 檢查 Astra Connector 的狀態：
-+
-[source, console]
-----
-kubectl get astraconnector astra-connector -n astra-connector
-----
-+
-您應該會看到類似下列的輸出：
-
-+
-[source, console]
-----
-NAME              REGISTERED   ASTRACONNECTORID
-astra-connector   true         22b839aa-8b85-445a-85dd-0b1f53b5ea19
-----
-
+在新增私有叢集之前、您需要在叢集上安裝 Astra Connector 、以便 Astra Control 能夠與其通訊。請參閱 link:install-astra-connector.html["安裝 Astra Connector for Private 叢集"] 以取得相關指示。
 
 
 

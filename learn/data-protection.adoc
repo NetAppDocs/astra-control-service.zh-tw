@@ -39,6 +39,24 @@ NOTE: 如果您執行快照或備份、但作業失敗並顯示錯誤「由於�
 
 
 
+=== 不可變的備份
+
+Astra Control Service 支援使用下列平台和貯體類型建立不可變的備份：
+
+* 使用已設定 S3 物件鎖定的 Amazon S3 儲存區的 Amazon Web Services
+* Microsoft Azure 使用已設定保留原則的 Azure Bucket
+* Google Kubernetes Engine （ GKE ）使用已設定保留原則的 Google Cloud Storage Bucket
+* NetApp StorageGRID 使用已設定 S3 物件鎖定的 S3 儲存區
+
+
+使用不可變備份時請注意下列事項：
+
+* 如果您在不支援的平台或不支援的貯體類型中備份一次寫入多次讀取（ WORM ）貯體、則可能會產生無法預測的結果、例如即使保留時間已過、備份刪除也會失敗。
+* Astra Control 不支援資料生命週期管理原則、也不支援手動刪除用於不可變備份的貯體上的物件。請確定您的儲存後端並未設定為管理 Astra Control 快照或備份資料的生命週期。
+
+
+
+
 == 複製
 
 _clon__是應用程式、其組態及其持續資料磁碟區的完全複製。您可以在相同的Kubernetes叢集或其他叢集上手動建立複本。如果您需要將應用程式和儲存設備從一個Kubernetes叢集移至另一個叢集、複製應用程式就很有用。

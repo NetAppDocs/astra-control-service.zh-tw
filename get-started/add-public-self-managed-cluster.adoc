@@ -76,7 +76,6 @@ Astra Control Service支援使用下列Kubernetes發佈版本的自我管理叢�
 您的自我管理叢集必須符合下列需求：
 
 * 叢集必須可透過網際網路存取。
-* 叢集無法裝載在內部部署網路中、必須裝載在公有雲環境中。
 * 如果您使用或打算使用已啟用SCSI驅動程式的儲存設備、則叢集上必須安裝適當的SCSI驅動程式。如需使用SCSI驅動程式來整合儲存設備的詳細資訊、請參閱儲存服務的說明文件。
 * 您可以存取僅包含一個內容元素的叢集 kubeconfig 檔案。追蹤 link:create-kubeconfig.html["這些指示"^] 以產生 kubeconfig 檔案。
 * 如果您要使用參考私有憑證授權單位（ CA ）的 kubeconfig 檔案來新增叢集、請將下列行新增至 `cluster` kubeconfig 檔案的一節。這可讓 Astra Control 新增叢集：
@@ -92,7 +91,7 @@ insecure-skip-tls-verify: true
 NOTE: 您可以 https://docs.netapp.com/us-en/trident/trident-get-started/kubernetes-deploy.html#choose-the-deployment-method["部署Astra Trident"^] 使用Trident運算子（手動或使用Helm圖表）或 `tridentctl`。在安裝或升級Astra Trident之前、請先檢閱 https://docs.netapp.com/us-en/trident/trident-get-started/requirements.html["支援的前端、後端及主機組態"^]。
 
 +
-** * 已設定 Astra Trident 儲存後端 * ：至少必須有一個 Astra Trident 儲存後端 https://docs.netapp.com/us-en/trident/trident-get-started/kubernetes-postdeployment.html#step-1-create-a-backend["已設定"^] 在叢集上。
+** * 已設定 Astra Trident 儲存後端 * ：至少必須有一個 Astra Trident 儲存後端 https://docs.netapp.com/us-en/trident/trident-use/backends.html["已設定"^] 在叢集上。
 ** * 已設定的 Astra Trident 儲存類別 * ：至少必須有一個 Astra Trident 儲存類別 https://docs.netapp.com/us-en/trident/trident-use/manage-stor-class.html["已設定"^] 在叢集上。如果已設定預設儲存類別、請確定只有一個儲存類別具有該註釋。
 ** *已安裝並設定的Astra Trident Volume Snapshot控制器與Volume Snapshot類別*：Volume Snapshot控制器必須是 https://docs.netapp.com/us-en/trident/trident-use/vol-snapshots.html#deploying-a-volume-snapshot-controller["已安裝"^] 以便在Astra Control中建立快照。至少有一個Astra Trident `VolumeSnapshotClass` 過去了 https://docs.netapp.com/us-en/trident/trident-use/vol-snapshots.html#step-1-set-up-a-volumesnapshotclass["設定"^] 由系統管理員執行。
 
@@ -100,6 +99,9 @@ NOTE: 您可以 https://docs.netapp.com/us-en/trident/trident-get-started/kubern
 
 
 ====
+* * Astra Control Provisioner* ：若要使用 Astra Control Provisioner 進階管理和儲存資源配置功能、而 Astra Control 使用者只能存取這些功能、您必須安裝 Astra Trident 23.10 或更新版本並啟用 link:../use/enable-acp.html["Astra Control Provisioner 功能"]。
+
+
 .步驟
 . 在儀表板上、選取*管理Kubernetes叢集*。
 +

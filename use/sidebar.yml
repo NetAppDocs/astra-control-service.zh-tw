@@ -46,5 +46,7 @@ entries:
     url: "/use/close-account.html"
 - title: 管理雲端執行個體
   url: "/use/manage-cloud-instances.html"
+- title: 啟用 Astra Control Provisioner
+  url: "/use/enable-acp.html"
 - title: 取消管理應用程式和叢集
   url: "/use/unmanage.html"
