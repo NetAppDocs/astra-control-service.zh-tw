@@ -2549,8 +2549,7 @@ RKE 2 （ v1.26.x ）搭配 Rancher 2.7</block>
   <block id="694d3ccd3bafd59fa171259193e6c35c" category="paragraph">當您將應用程式從備份還原至使用 Kerberos 進行中加密的儲存後端時、還原作業可能會失敗。此問題不會影響從快照還原或使用 NetApp SnapMirror 複寫應用程式資料。</block>
   <block id="758aed03fde11e3337f4a8ddce7d4f37" category="admonition">在 NFSv4 磁碟區時使用 Kerberos 進行中加密時、請確定 NFSv4 磁碟區使用的是正確的設定。請參閱的「 NetApp NFSv4 網域組態」一節（第 13 頁）<block ref="fcbfe3012009d21ef9ba8407142f85b6" category="inline-link-rx"></block>。</block>
   <block id="9e586fb8e7af6f105f029bce05abcad4" category="section-title">刪除保留原則過期的貯體後、備份資料仍保留在貯體中</block>
-  <block id="b518803a746e06a4f19197ae81406970" category="paragraph">如果您在貯體保留原則過期後刪除應用程式的不可變備份、則備份會從 Astra Control 刪除、但不會從貯體中刪除。因應措施是、如果您需要刪除應用程式的最新備份或所有備份、請從儲存後端手動移除備份。</block>
-  <block id="f318002a693e78e0cf366be52609a528" category="admonition">如果應用程式有多個備份、請移除最新的備份或應用程式的所有備份。如果您移除任何中間增量備份、您將無法從最新備份中恢復應用程式。</block>
   <block id="03281739854e4951c0f98529e54a24f2" category="sidebar">使用 Astra Control Provisioner</block>
   <block id="49219ed727d5145cd828958ebce847fa" category="list-text">kubectl v1.26 或更新版本已安裝</block>
+  <block id="3c4db63c6115c69942c67f6b04d8e645" category="paragraph">如果您在貯體保留原則過期後刪除應用程式的不可變備份、則備份會從 Astra Control 刪除、但不會從貯體中刪除。此問題將在即將發行的版本中修正。</block>
 </blocks>
