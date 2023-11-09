@@ -2554,4 +2554,6 @@ RKE 2 （ v1.26.x ）搭配 Rancher 2.7</block>
   <block id="3fcb22d3c98c7c79f0727de1eb084b1e" category="list-text">* 不可變備份 * ： Astra Control 現在支援 <block ref="fe44ae92696e57533e10ffb7636ff94a" category="inline-link-macro-rx"></block> 成為可抵禦惡意軟體和其他威脅的額外安全層。</block>
   <block id="ac4da6c6894a7c36281036138b93deac" category="list-text">* 支援管理使用 NVMe / TCP 儲存設備的應用程式 *
 Astra Control 現在可以管理以 NVMe / TCP 連線的持續磁碟區為後盾的應用程式。</block>
+  <block id="d5bd450a47d2497dc5f133703c0fab95" category="list-text">內部叢集：</block>
+  <block id="00ae925249b1dcd734cdb679b48bf8f7" category="list-text">NetApp ONTAP Select</block>
 </blocks>

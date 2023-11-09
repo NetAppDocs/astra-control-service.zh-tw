@@ -105,9 +105,17 @@ endif::azure[]
 ** https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/["Cloud Volumes ONTAP"^]
 
 
+* 內部叢集：
++
+** NetApp ONTAP AFF 的功能與FAS 功能
+** NetApp ONTAP Select
+** Cloud Volumes ONTAP
+
+
 
  a| 
 * NetApp ONTAP AFF 的功能與FAS 功能
+* NetApp ONTAP Select
 * https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/["Cloud Volumes ONTAP"^]
 
 
