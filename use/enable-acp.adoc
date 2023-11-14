@@ -12,7 +12,7 @@ summary: 啟用 Astra Control Provisioner 以存取進階儲存資源配置與�
 
 
 [role="lead"]
-Astra Trident 版本 23.10 及更新版本包含使用 Astra Control Provisioner 的選項、可讓獲授權的 Astra Control 使用者存取進階儲存資源配置功能。Astra Control Provisioner 除了提供標準 Astra Trident CSI 型功能之外、還提供這項延伸功能。
+Astra Trident 版本 23.10 及更新版本包含使用 Astra Control Provisioner 的選項、可讓獲授權的 Astra Control 使用者存取進階儲存資源配置功能。Astra Control Provisioner 除了提供標準 Astra Trident CSI 型功能之外、還提供這項延伸功能。您可以使用此程序來啟用和安裝 Astra Control Provisioner 。
 
 您的 Astra Control Service 訂閱會自動包含 Astra Control Provisioner 使用授權。
 
@@ -38,9 +38,6 @@ image:ac-acp-eligibility.png["在新增叢集工作流程中描述叢集資格�
 * * 確認您的 Astra Trident 版本位於四個版本的視窗 * ：如果 Astra Trident 位於 23.10 版的四個版本視窗內、您可以使用 Astra Control Provisioner 直接升級至 Astra Trident 23.10 。例如、您可以直接從 Astra Trident 22.10 升級至 23.10 。
 * * 確認您的叢集具有 AMD64 系統架構 * ： Astra Control Provisioner 映像同時在 AMD64 和 ARM64 CPU 架構中提供、但 Astra Control 僅支援 AMD64 。
 
-
-.升級至 Astra Control Provisioner 23.10
-如果您將 Astra Trident 升級至版本 23.10 、您可以使用此程序來啟用和安裝 Astra Control Provisioner 。
 
 .步驟
 . 存取 NetApp Astra Control 影像登錄：

@@ -2461,7 +2461,6 @@ RKE 2 （ v1.26.x ）搭配 Rancher 2.7</block>
   <block id="85fb81ab815fcabe32cb17846818c3c1" category="list-text">確保您擁有儲存庫的認證、以便提供 Astra Control 管理儲存庫所需的權限。</block>
   <block id="cb902cabe05f2e75ccb2bfe8f46e3e1d" category="list-text">在儲存庫的雲端供應商保留期間到期之前、您無法移除一次寫入多次讀取（ WORM ）儲存庫。WORM 貯體名稱旁邊會以「鎖定」表示。</block>
   <block id="261f0b7f37f0dd290043aab033357d32" category="summary">啟用 Astra Control Provisioner 以存取進階儲存資源配置與管理功能。</block>
-  <block id="bd748c545b83229576e1ff062aaacf08" category="paragraph">Astra Trident 版本 23.10 及更新版本包含使用 Astra Control Provisioner 的選項、可讓獲授權的 Astra Control 使用者存取進階儲存資源配置功能。Astra Control Provisioner 除了提供標準 Astra Trident CSI 型功能之外、還提供這項延伸功能。</block>
   <block id="fe562808e3d8ddc1360f041ac9ecb065" category="paragraph">您的 Astra Control Service 訂閱會自動包含 Astra Control Provisioner 使用授權。</block>
   <block id="ea513a4deb2445ac25d1082dc1af99e1" category="paragraph">在即將推出的 Astra Control 更新中、 Astra Control 資源配置程式將取代 Astra Trident 、將其作為 Astra Control 架構中的儲存資源配置程式和 Orchestrator 。因此、強烈建議 Astra Control 使用者啟用 Astra Control Provisioner 。Astra Trident 將繼續保持開放原始碼、並以 NetApp 的新 CSI 和其他功能來發行、維護、支援及更新。</block>
   <block id="ef7cd57a49dea042053eb666f78bd5b8" category="paragraph-title">如何知道我是否需要啟用 Astra Control Provisioner ？</block>
@@ -2478,8 +2477,6 @@ RKE 2 （ v1.26.x ）搭配 Rancher 2.7</block>
   <block id="0360a2e5fb08211931ade5b67746abd1" category="paragraph">如果您現有的 Astra Trident 不含 Astra Control Provisioner 、而且想要啟用 Astra Control Provisioner 、請先執行下列步驟：</block>
   <block id="96970ad8b13f688668233173a243a6d7" category="list-text">* 確認您的 Astra Trident 版本位於四個版本的視窗 * ：如果 Astra Trident 位於 23.10 版的四個版本視窗內、您可以使用 Astra Control Provisioner 直接升級至 Astra Trident 23.10 。例如、您可以直接從 Astra Trident 22.10 升級至 23.10 。</block>
   <block id="513c5f0b4153f3c855edd085e129578d" category="list-text">* 確認您的叢集具有 AMD64 系統架構 * ： Astra Control Provisioner 映像同時在 AMD64 和 ARM64 CPU 架構中提供、但 Astra Control 僅支援 AMD64 。</block>
-  <block id="5e12f4a520c19b1613dce3a0e6baee0f" category="paragraph-title">升級至 Astra Control Provisioner 23.10</block>
-  <block id="e6a8e9e99c0090089c402c2a71667c5b" category="paragraph">如果您將 Astra Trident 升級至版本 23.10 、您可以使用此程序來啟用和安裝 Astra Control Provisioner 。</block>
   <block id="cc74ae067ae4451424c2712fd0b0a766" category="list-text">存取 NetApp Astra Control 影像登錄：</block>
   <block id="f16793904b509a3f7a260653784d0c7b" category="list-text">登入 Astra Control Service UI 並記錄 Astra Control 帳戶 ID 。</block>
   <block id="8cbb6fb4fc8e72b38ebb357b93aac0e6" category="list-text">選取頁面右上角的圖示。</block>
@@ -2556,4 +2553,5 @@ RKE 2 （ v1.26.x ）搭配 Rancher 2.7</block>
 Astra Control 現在可以管理以 NVMe / TCP 連線的持續磁碟區為後盾的應用程式。</block>
   <block id="d5bd450a47d2497dc5f133703c0fab95" category="list-text">內部叢集：</block>
   <block id="00ae925249b1dcd734cdb679b48bf8f7" category="list-text">NetApp ONTAP Select</block>
+  <block id="488eba069a2619d48659ff6ffa6f538a" category="paragraph">Astra Trident 版本 23.10 及更新版本包含使用 Astra Control Provisioner 的選項、可讓獲授權的 Astra Control 使用者存取進階儲存資源配置功能。Astra Control Provisioner 除了提供標準 Astra Trident CSI 型功能之外、還提供這項延伸功能。您可以使用此程序來啟用和安裝 Astra Control Provisioner 。</block>
 </blocks>
