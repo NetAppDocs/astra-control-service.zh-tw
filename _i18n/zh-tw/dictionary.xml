@@ -1901,7 +1901,6 @@
   <block id="b909803838dd775bd8b8dcfbaf82fb87" category="list-text">支援管理純資料應用程式</block>
   <block id="5b8f884e708de51fd4946164326e802c" category="section-title">「活動」頁面最多可顯示 100 、 000 個活動</block>
   <block id="676bd50e0f10e6725dc7a68e3041cfed" category="inline-link-macro">Astra Control REST API</block>
-  <block id="474be14e965990f35641a82fd1940bd1" category="paragraph">Astra Control 活動頁面最多可顯示 100,000 個事件。若要檢視所有記錄的事件、請使用擷取事件 <block ref="65b0251af1492433290d52a893eea83e" category="inline-link-macro-rx"></block>。</block>
   <block id="92994eff0d2e1bf73c01841823660ef5" category="list-text">* 授權 * ：若要管理 10 個以上的命名空間、您需要 Astra Control 訂閱。</block>
   <block id="135b308ed83c53f1516b7c754566d1c4" category="list-title">開始之前</block>
   <block id="63d526831e75bdfe2a1b18d7e1752ca3" category="list-text">選擇保留與應用程式相關的原始儲存類別、或選擇不同的儲存類別。</block>
@@ -2554,4 +2553,5 @@ Astra Control 現在可以管理以 NVMe / TCP 連線的持續磁碟區為後盾
   <block id="d5bd450a47d2497dc5f133703c0fab95" category="list-text">內部叢集：</block>
   <block id="00ae925249b1dcd734cdb679b48bf8f7" category="list-text">NetApp ONTAP Select</block>
   <block id="488eba069a2619d48659ff6ffa6f538a" category="paragraph">Astra Trident 版本 23.10 及更新版本包含使用 Astra Control Provisioner 的選項、可讓獲授權的 Astra Control 使用者存取進階儲存資源配置功能。Astra Control Provisioner 除了提供標準 Astra Trident CSI 型功能之外、還提供這項延伸功能。您可以使用此程序來啟用和安裝 Astra Control Provisioner 。</block>
+  <block id="3296ea02e6ef8200a85b529d14dc6282" category="paragraph">Astra Control 活動頁面最多可顯示 100,000 個事件。若要檢視所有記錄的事件、請使用擷取事件<block ref="3f49e9a4af0b49133601252075c9bc37" category="inline-link-rx"></block>。</block>
 </blocks>
