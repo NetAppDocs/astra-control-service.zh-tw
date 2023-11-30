@@ -2557,4 +2557,5 @@ Astra Control 現在可以管理以 NVMe / TCP 連線的持續磁碟區為後盾
   <block id="164fe74cfbca9ef543331e42b891cf2c" category="list-text">NetApp MetroCluster</block>
   <block id="cd27a1715aac859bc2a48a86ed2000c0" category="inline-link">Longhorn</block>
   <block id="1752f949f63eb1f41cea70be24a2a732" category="list-text"><block ref="1752f949f63eb1f41cea70be24a2a732" category="inline-link-rx"></block></block>
+  <block id="8da5e66f477d9799e7fb14fdf498f36a" category="admonition">如果您自行建立<block ref="deabc6332aa53495b56c51d2e3eca54f" prefix=" " category="inline-code"></block> 檔案中、您應該只定義*一個*內容元素。請參閱 <block ref="9d8ee3d0d4f5c967db921af26c4c5a7a" category="inline-link-macro-rx"></block> 以取得有關建立的資訊<block ref="deabc6332aa53495b56c51d2e3eca54f" prefix=" " category="inline-code"></block> 檔案：</block>
 </blocks>

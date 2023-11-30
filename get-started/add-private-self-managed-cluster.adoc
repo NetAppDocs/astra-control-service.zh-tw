@@ -145,7 +145,7 @@ NOTE: 您可以 https://docs.netapp.com/us-en/trident/trident-get-started/kubern
 . *其他*：上傳以提供自我管理叢集的詳細資料 `kubeconfig.yaml` 檔案或貼上的內容 `kubeconfig.yaml` 檔案。
 +
 
-NOTE: 如果您自行建立 `kubeconfig` 檔案中、您應該只定義*一個*內容元素。請參閱 https://kubernetes.io/docs/concepts/configuration/organize-cluster-access-kubeconfig/["Kubernetes文件"^] 以取得有關建立的資訊 `kubeconfig` 檔案：
+NOTE: 如果您自行建立 `kubeconfig` 檔案中、您應該只定義*一個*內容元素。請參閱 link:create-kubeconfig.html["這些指示"^] 以取得有關建立的資訊 `kubeconfig` 檔案：
 
 . * 認證名稱 * ：為您上傳至 Astra Control 的自我管理叢集認證提供名稱。根據預設、認證名稱會自動填入為叢集名稱。
 . * 私有路由識別碼 * ：輸入可從 Astra Connector 取得的私有路由識別碼。如果您透過查詢 Astra Connector `kubectl get astraconnector -n astra-connector` 命令時、私有路由識別碼稱為 `ASTRACONNECTORID`。
