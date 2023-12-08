@@ -24,7 +24,7 @@ Astra Control Service可以Cloud Volumes Service 使用適用於Google Cloud的�
 
 === 總覽
 
-適用於Google Cloud的支援提供兩種服務類型：_CVS_和_CVs-Performance。Cloud Volumes Service這些服務類型在特定的Google Cloud地區均受到支援。 https://cloud.netapp.com/cloud-volumes-global-regions#cvsGcp["前往NetApp Cloud Central的全球區域地圖"^] 識別叢集所在的Google Cloud區域所支援的服務類型。
+適用於Google Cloud的支援提供兩種服務類型：_CVS_和_CVs-Performance。Cloud Volumes Service這些服務類型在特定的Google Cloud地區均受到支援。 https://cloud.netapp.com/cloud-volumes-global-regions#cvsGcp["前往 NetApp BlueXP 全球地區地圖"^] 識別叢集所在的Google Cloud區域所支援的服務類型。
 
 如果Kubernetes叢集必須位於特定區域、則您將使用該區域所支援的服務類型。
 

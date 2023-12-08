@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: use/log-in.html 
-keywords: logging in, log in, sign in, signing in, cloud central, netapp cloud central, user account 
+keywords: logging in, log in, sign in, signing in, BlueXP, netapp BlueXP, user account 
 summary: 前往astra.netapp.io、即可透過SaaS型使用者介面存取Astra Control Service。 
 ---
 = 登入Astra Control Service
@@ -17,10 +17,10 @@ summary: 前往astra.netapp.io、即可透過SaaS型使用者介面存取Astra C
 若要存取Astra Control Service、請前往：透過SaaS型使用者介面 https://astra.netapp.io[]。
 
 
-TIP: 您可以使用單一登入、從公司目錄（聯盟身分識別）使用認證登入。若要深入瞭解、請前往 https://cloud.netapp.com/help-center["Cloud Central說明中心"^] 然後選取* Cloud Central登入選項*。
+TIP: 您可以使用單一登入、從公司目錄（聯盟身分識別）使用認證登入。若要深入瞭解、請前往 https://cloud.netapp.com/help-center["說明中心"^] 然後選取* Cloud Central登入選項*。
 
 .開始之前
-* link:../get-started/register.html["Cloud Central使用者ID"]。
+* link:../get-started/register.html["BlueXP 使用者 ID"]。
 * link:../get-started/register.html["新的Astra Control帳戶"] 或 link:manage-users.html["邀請現有帳戶"]。
 * 支援的網頁瀏覽器。
 +
@@ -30,5 +30,5 @@ Astra Control Service支援最新版本的Firefox、Safari和Chrome、最低解�
 
 .步驟
 . 開啟網頁瀏覽器並前往 https://astra.netapp.io[]。
-. 使用您的 NetApp Cloud Central 認證登入。
+. 使用您的 NetApp BlueXP 認證登入。
 

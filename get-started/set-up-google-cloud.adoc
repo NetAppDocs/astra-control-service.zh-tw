@@ -233,7 +233,7 @@ video::video-create-gcp-service-account-key.mp4[width=848,height=480]
 設定網路對等關係最簡單的方法、就是直接從Cloud Volumes Service 資訊技術取得gCloud命令。建立新的檔案系統時、可從Cloud Volumes Service 功能性資訊獲取命令。
 
 .步驟
-. https://cloud.netapp.com/cloud-volumes-global-regions#cvsGcp["前往NetApp Cloud Central的全球區域地圖"^] 並識別您將在叢集所在的Google Cloud區域中使用的服務類型。
+. https://cloud.netapp.com/cloud-volumes-global-regions#cvsGcp["前往 NetApp BlueXP 全球地區地圖"^] 並識別您將在叢集所在的Google Cloud區域中使用的服務類型。
 +
 提供兩種服務類型：CVS和CVs-Performance。Cloud Volumes Service https://cloud.google.com/solutions/partners/netapp-cloud-volumes/service-types["深入瞭解這些服務類型"^]。
 

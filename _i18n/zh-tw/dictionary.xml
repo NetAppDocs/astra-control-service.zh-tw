@@ -124,17 +124,12 @@
   <block id="1f4796ad66f4408d4598ee58e3831b26" category="summary">前往astra.netapp.io、即可透過SaaS型使用者介面存取Astra Control Service。</block>
   <block id="35664a514c5cd69f2629d976e1d6d8fb" category="doc">登入Astra Control Service</block>
   <block id="606a784ab98942274b8cbba79bae9fca" category="paragraph">若要存取Astra Control Service、請前往：透過SaaS型使用者介面<block ref="8c65d1fc4cf122e461b28ceccd26064c" category="inline-link-rx"></block>。</block>
-  <block id="6294a96fba20202cd9ffb33f93601bb2" category="inline-link">Cloud Central說明中心</block>
-  <block id="46cec497ef09e7a445f6be28e1f76cf9" category="admonition">您可以使用單一登入、從公司目錄（聯盟身分識別）使用認證登入。若要深入瞭解、請前往<block ref="2c92c928be02227d051a5057c2e57fc6" category="inline-link-rx"></block> 然後選取* Cloud Central登入選項*。</block>
-  <block id="50ea1572aa17b37a78e42af39e1e9f1e" category="inline-link-macro">Cloud Central使用者ID</block>
-  <block id="36ea6edc20cebe6cbf3a65832393439e" category="list-text"><block ref="5b719f36d1ae2486570f7f3e89b89a9e" category="inline-link-macro-rx"></block>。</block>
   <block id="cb43b2fc093c6cb51d0a90bbdc907d4e" category="inline-link-macro">新的Astra Control帳戶</block>
   <block id="60ba724b92f7445edcd0b8c39afb0ba9" category="inline-link-macro">邀請現有帳戶</block>
   <block id="6c7f4f015f9428756b99cbe827ee255b" category="list-text"><block ref="ddd413486d575aac18e9405e975354bf" category="inline-link-macro-rx"></block> 或 <block ref="6471d8c89064d68529a2c1844dc462d8" category="inline-link-macro-rx"></block>。</block>
   <block id="4c41a0b1e3e5e7025133c35dc2c24fb1" category="list-text">支援的網頁瀏覽器。</block>
   <block id="bec36ae04e09ae06d7d21288f02669c7" category="paragraph">Astra Control Service支援最新版本的Firefox、Safari和Chrome、最低解析度為1280 x 720。</block>
   <block id="51ec1b336ced75b600ce34c0d8ef2f4f" category="list-text">開啟網頁瀏覽器並前往<block ref="8c65d1fc4cf122e461b28ceccd26064c" category="inline-link-rx"></block>。</block>
-  <block id="465b9d23562359c56377ba35bfcf5c48" category="list-text">使用您的 NetApp Cloud Central 認證登入。</block>
   <block id="32139554c6b5c9a48dcfdd0ff983a9eb" category="doc">開始管理應用程式</block>
   <block id="a41861b6e8134096202b0c039ad91943" category="inline-link-macro">將Kubernetes叢集新增至Astra Control</block>
   <block id="7b7f260c982647b3aee51c681be792ef" category="section-title">應用程式管理需求</block>
@@ -312,13 +307,10 @@
   <block id="9a0112e9326bfb2ebbe8296f89fd4be9" category="paragraph">邀請使用者加入您的Astra Control帳戶、並移除不應再擁有帳戶存取權的使用者。</block>
   <block id="44a72539ab388ef935cc928a8fb1ce85" category="section-title">邀請使用者</block>
   <block id="8e16b174c022e8e7c9d1b7bbbe4b8f7c" category="paragraph">帳戶擁有者和管理員可以邀請其他使用者加入Astra Control帳戶。</block>
-  <block id="ca9f3676b6e8506c212cf99dece548ed" category="inline-link-macro">Cloud Central登入</block>
-  <block id="b5e5ae4cdeabd7d0aa40c62e734c8ac7" category="list-text">請確定使用者擁有 <block ref="e89daa10bb124a7d24c072e7ff177c2a" category="inline-link-macro-rx"></block>。</block>
   <block id="0c3b0202fda7d6831c1b3eebfdf7aeb9" category="list-text">選擇*帳戶*。</block>
   <block id="138a4950d3aca53bd8c1976b5cf5410d" category="list-text">在*使用者*索引標籤中、選取*邀請*。</block>
   <block id="5d9c5f1658440faafefd4248d8e5ee52" category="list-text">輸入使用者名稱、電子郵件地址及其角色。</block>
   <block id="cf3a2d2c139bf5c9cc87fe714bfff3b1" category="paragraph">請注意下列事項：</block>
-  <block id="5a9a54223f08ece3bf609ecd8d391185" category="list-text">電子郵件地址必須與使用者用來註冊Cloud Central的電子郵件地址相符。</block>
   <block id="07bb712636ed13b638d72bb327675777" category="list-text">每個角色都提供下列權限：</block>
   <block id="009fbfbca46589505e571105aa553afd" category="list-text">*擁有者*具有管理權限、可刪除帳戶。</block>
   <block id="bb382507e845750265db4d4c275e9d90" category="list-text">*管理*具有成員權限、可以邀請其他使用者。</block>
@@ -443,10 +435,6 @@
   <block id="163a9a2de2c53fd4caa470a2d7b49ba6" category="paragraph"><block ref="ae585ba9e035dc3bebfa255ad19291f2" category="inline-link-macro-rx"></block>。</block>
   <block id="f2314bb09d0efb96ec542b1e8f42798f" category="inline-link-macro">深入瞭解Microsoft Azure和Azure託管磁碟需求</block>
   <block id="f3ada5ea7cbb146f87a40c9504f78e3b" category="paragraph"><block ref="a30c1b7efa0b121d09606b1ba764054c" category="inline-link-macro-rx"></block>。</block>
-  <block id="49fc376ed35249f3841846ede4dab884" category="inline-link">NetApp Cloud Central</block>
-  <block id="d4e2866a87cb36aa53ac9d94e7402e45" category="list-text">建立<block ref="acbb6886c35e57125998fe7d6c5eea1f" category="inline-link-rx"></block> 帳戶。</block>
-  <block id="ecefaf3209c4e5c804b1d3c466a9d510" category="inline-link">從Astra產品頁面</block>
-  <block id="fdcff977492d72bd4bad80358b5b7d99" category="list-text">建立Astra Control帳戶時、請指定您的NetApp Cloud Central電子郵件ID<block ref="778ba27a5b5fe872bd25f23635cb760f" category="inline-link-rx"></block>。</block>
   <block id="8c14e4dec27dea8a5cc533eb50aa8d6e" category="inline-link-macro">深入瞭解註冊程序</block>
   <block id="f2785b884437a4abfaf84ef4de8f60db" category="paragraph"><block ref="2f8c311f1f0fe130dd944321a6337c35" category="inline-link-macro-rx"></block>。</block>
   <block id="a4a0f2c30880c790b9dbbfa923350694" category="paragraph">登入後、選取*新增叢集*以使用Astra Control開始管理叢集。</block>
@@ -477,37 +465,17 @@
   <block id="388b49ca6772164d2fe62455b28ba25e" category="inline-link-macro">適用於高效能叢集的儲存類別</block>
   <block id="d0848afd8553c34945705222a97a4553" category="paragraph">您應該會看到類似下列的輸出：</block>
   <block id="f02a4f1a1e048f3a6cf64743ff32a880" category="doc">註冊Astra Control Service帳戶</block>
-  <block id="ae0c96e1388d462dd723e6dd4f0bd3c4" category="paragraph">若要使用Astra Control Service、您需要與NetApp Cloud Central帳戶相關聯的Astra Control Service帳戶。完成Astra Control Service登錄程序、如果您還沒有Cloud Central帳戶、請註冊Cloud Central以存取Astra Control Service。</block>
   <block id="9f0a6d5d19d9a0882b080bd73f930916" category="section-title">註冊Astra Control帳戶</block>
   <block id="929a2c8db601f1a0c12d13ab5201ca53" category="paragraph">登入Astra Control Service之前、您必須先完成註冊程序、才能取得Astra Control Service帳戶。</block>
   <block id="8c6baa4592bc515f96faa8a5ebf64958" category="paragraph">當您使用Astra Control Service時、您將從帳戶中管理應用程式。帳戶包括可檢視及管理帳戶內應用程式的使用者、以及您的帳單詳細資料。</block>
-  <block id="c3d2edad004e97ae3aa8859394dc7966" category="inline-link">前往Cloud Central上的Astra Control頁面</block>
-  <block id="3889784207ede468b81664012c11b61c" category="list-text"><block ref="1b7eb0b86e80375179438e28519fc192" category="inline-link-rx"></block>。</block>
-  <block id="26031f2b054a2a1f996995dc1b39cc4e" category="list-text">選擇* Astra Control入門*。</block>
-  <block id="2a48a2be584253c1443571c773960f3a" category="list-text">選取*免費方案*標籤。</block>
-  <block id="411a964e218cfa49e4a8fcf4b29211ce" category="inline-image-macro">註冊表單「選擇計畫」標籤的快照、您需要在其中選取「免費方案」選項。</block>
-  <block id="11dd0e481cc32b1d9468666f07a64381" category="paragraph"><block ref="11dd0e481cc32b1d9468666f07a64381" category="inline-image-macro-rx" type="image"></block></block>
   <block id="5f2575e876c38f49aa892ec0aabae362" category="list-text">在表單中提供必要資訊。</block>
   <block id="9af90bb703b753ebc52e31ad01e6d842" category="paragraph">填寫表單時請注意以下幾點重要事項：</block>
   <block id="b7324677f7d831f32c546a0047ebbc04" category="list-text">您的公司名稱和地址必須準確無誤、因為我們會驗證這些名稱和地址、以符合全球貿易法規遵循的要求。</block>
   <block id="397ba6461bc81007c47830ab967a55c3" category="list-text">「* Astra帳戶名稱*」是貴企業的Astra Control Service帳戶名稱。您會在Astra Control Service使用者介面中看到此名稱。請注意、您可以視需要建立其他帳戶（最多5個）。</block>
-  <block id="2bfc156f7e05d36235d990fe7a177fe6" category="list-text">在*商業電子郵件地址*欄位中、如果您有NetApp Cloud Central帳戶、請在此輸入您用於該帳戶的電子郵件。如果您還沒有NetApp Cloud Central帳戶、請在註冊Cloud Central時使用您在此處輸入的電子郵件地址。</block>
-  <block id="b623e6ded9a852f4e7cd9765578d0c08" category="list-text">選擇*提交*。</block>
-  <block id="186f9f6bf0b85589f8602edb2a2e5c8b" category="section-title">註冊 Cloud Central</block>
   <block id="35b46e301702b6fcb16192f9f4cf4533" category="inline-link">Astra控制服務</block>
-  <block id="f0753d19e203557654cb6c3d4f2d0353" category="admonition">您可以使用單一登入功能、從公司目錄（聯盟身分識別）取得認證資料、登入Cloud Central。若要深入瞭解、請前往<block ref="2c92c928be02227d051a5057c2e57fc6" category="inline-link-rx"></block> 然後選取* Cloud Central登入選項*。</block>
-  <block id="f9e7912a258783aeea63e6b8ad7d46ac" category="list-text">前往<block ref="acbb6886c35e57125998fe7d6c5eea1f" category="inline-link-rx"></block>。</block>
-  <block id="e4ea5fa0d4fcd14c778ff89db6268aa5" category="list-text">在右上角選取*註冊*。</block>
   <block id="ad09bfc9a1feee2f0a3559c8766f8ec2" category="list-text">填寫表單。</block>
-  <block id="15fe50b23999649dcf139788bfea4ca2" category="paragraph">請確認您在此輸入的電話號碼和電子郵件地址與您在前一份免費方案註冊表單中使用的相同。</block>
   <block id="7408a50737fd936622eeec54bbeb439c" category="list-text">選擇*註冊*。</block>
-  <block id="7690d2214676bad5c3634c1fde683484" category="admonition">您在這些表單中輸入的電子郵件地址是NetApp Cloud Central使用者ID。當您註冊新的Astra Control Service帳戶、或Astra Control Service管理員邀請您加入現有的Astra Control Service帳戶時、請使用此Cloud Central使用者ID。</block>
-  <block id="20a69192feaea8c49abf375503565d2c" category="inline-image-macro">Cloud Central註冊頁面的快照、您可在其中輸入電子郵件地址、密碼、姓名、公司及電話號碼（可選）。</block>
-  <block id="59d30c1b368c2a97b0c373c9aadf516f" category="paragraph"><block ref="59d30c1b368c2a97b0c373c9aadf516f" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="01196ab9b910cb225df67b416b3d977b" category="list-text">等待 NetApp Cloud Central 寄送電子郵件。電子郵件來自saas.support@netapp.com的地址、可能需要數分鐘才能送達。請務必檢查您的垃圾郵件資料夾。</block>
   <block id="e721d9b72eb394adc96253d65253d0e6" category="list-text">當電子郵件送達時、請選取電子郵件中的連結以驗證您的電子郵件地址。</block>
-  <block id="079c633ad298feda51d946a3bb2ffee8" category="paragraph">您現在擁有作用中的 Cloud Central 使用者登入權限。</block>
-  <block id="22f598e03124be388e74fc380a10d131" category="paragraph">現在您已經註冊、您可以使用的Cloud Central認證、直接存取Astra Control Service<block ref="8c65d1fc4cf122e461b28ceccd26064c" category="inline-link-rx"></block>。</block>
   <block id="739ea6bf2562737f66933a182c8d0c06" category="summary">您必須先採取幾個步驟來準備Microsoft Azure訂閱、才能使用Astra Control Service管理Azure Kubernetes服務叢集。</block>
   <block id="87716101cfca255da11056a624dbce47" category="doc">使用Azure託管磁碟來設定Microsoft Azure</block>
   <block id="044c3fd83fc36378aaf291c493c120cd" category="paragraph">您必須先採取幾個步驟來準備Microsoft Azure訂閱、才能使用Astra Control Service管理Azure Kubernetes服務叢集。如果您打算將Azure託管磁碟當作儲存後端、請遵循下列指示。</block>
@@ -721,8 +689,6 @@
   <block id="faed92960e59bb817b1acbdbd8b0b826" category="paragraph">下列影片說明如何從Google Cloud主控台建立服務帳戶金鑰。</block>
   <block id="56e799b5e3fdedbd2de0cfa822e137f3" category="paragraph">如果您計畫將Cloud Volumes Service 適用於Google Cloud的解決方案用作儲存後端服務、最後一步是設定網路對等關係、從VPC移至Cloud Volumes Service 適用於Google Cloud的不適用範圍。</block>
   <block id="88893994553bfb7a40c2878fd0c49602" category="paragraph">設定網路對等關係最簡單的方法、就是直接從Cloud Volumes Service 資訊技術取得gCloud命令。建立新的檔案系統時、可從Cloud Volumes Service 功能性資訊獲取命令。</block>
-  <block id="d0c77e6bcdf6b3675b78f5039ab722db" category="inline-link">前往NetApp Cloud Central的全球區域地圖</block>
-  <block id="8bd08d1235473b6f15ecaf6caf36b751" category="list-text"><block ref="d0b43c8067b7c810324d7a4486e6286e" category="inline-link-rx"></block> 並識別您將在叢集所在的Google Cloud區域中使用的服務類型。</block>
   <block id="e44254e6f35fa0a5db487136fbc207c0" category="inline-link">深入瞭解這些服務類型</block>
   <block id="4152b876d3fc46794daaf8cd19007046" category="paragraph">提供兩種服務類型：CVS和CVs-Performance。Cloud Volumes Service<block ref="95599319630e3da52f0ef2b9e68a7f61" category="inline-link-rx"></block>。</block>
   <block id="5c6fda49c3e6aea016c04db2a5f7bd57" category="inline-link">前往Google Cloud Platform的Cloud Volumes</block>
@@ -917,7 +883,6 @@
   <block id="bd5cde8fc544622a3633d73962bcd705" category="summary">Astra Control Service使用Cloud Volumes Service 支援Google Cloud的功能、做為持續磁碟區的儲存後端。您應該瞭解如何選擇服務層級、儲存類別和持續容量、以協助您達成效能目標。</block>
   <block id="afd5c3412d8aaa89e4ade2ddff8cac9b" category="doc">GKE叢集的服務類型、儲存類別和PV大小</block>
   <block id="2cafdb551953c7afd397b12eee1ce505" category="paragraph">Astra Control Service可以Cloud Volumes Service 使用適用於Google Cloud的功能、做為持續磁碟區的儲存後端。您應該瞭解如何選擇服務類型、儲存類別和持續Volume大小、以協助您達成效能目標。</block>
-  <block id="244763a8bcf1786e84650aa8b0aeeb25" category="paragraph">適用於Google Cloud的支援提供兩種服務類型：_CVS_和_CVs-Performance。Cloud Volumes Service這些服務類型在特定的Google Cloud地區均受到支援。<block ref="6fccf359b538aaaeb2b6ee13ea815763" category="inline-link-rx"></block> 識別叢集所在的Google Cloud區域所支援的服務類型。</block>
   <block id="d3f5696e3e2a02aef97b3ec088f9f1bb" category="paragraph">如果Kubernetes叢集必須位於特定區域、則您將使用該區域所支援的服務類型。</block>
   <block id="1db71e1c4d4dbda81703682edf3a6df1" category="paragraph">但如果您有在Google Cloud區域之間選擇的靈活度、我們建議您根據效能需求來執行下列作業：</block>
   <block id="a7033e407548689df90b3b7b5c3fbabd" category="list-text">對於需要中高效能儲存設備的K8s應用程式、請選擇支援CVS-Performance的Google Cloud區域、然後使用Premium或Extreme儲存等級。這類工作負載包括AI / ML管道、CI/CD管道、媒體處理、以及包括關聯式、NoSQL、時間序列等的資料庫</block>
@@ -1063,7 +1028,6 @@
   <block id="332153f6f1b31602ac3418cdf4d18170" category="sidebar">簡化Jenkins生命週期管理</block>
   <block id="813011e2103649bb71f124adedcc10ea" category="sidebar">部落格社群</block>
   <block id="36910a95584c53fdc9ed97782ef3965c" category="sidebar">Astra Control部落格</block>
-  <block id="a984dc296b5a86b8097f515731aee987" category="sidebar">雲端中心的Kubernetes Hub</block>
   <block id="0adc03eac86772ad2c75c8f140be417e" category="sidebar">知識與支援</block>
   <block id="bffe9a3c9a7e00ba00a11749e022d911" category="sidebar">登入</block>
   <block id="29d8161547d1766f58a65cf9746e05fc" category="sidebar">管理及保護應用程式</block>
@@ -2097,8 +2061,6 @@ RKE 2 （ v1.24.x ）搭配 Rancher 2.7</block>
   <block id="445376e98d0efe7729af9dd1fb361ee5" category="list-text"><block ref="eb3f61bcb8e86fdb25ef394d0f81f67c" category="inline-xref-macro-rx"></block></block>
   <block id="d83fe03b30cfc16e1bd2f6475cc46eb5" category="section-title">將私有自我管理叢集新增至 Astra Control Service</block>
   <block id="d67f163e5fdc875f6e2e27c3ed0cdf01" category="admonition">私有路由識別碼是與 Astra Connector 相關的名稱、可讓 Astra 管理私有 Kubernetes 叢集。在這種情況下、私有叢集是 Kubernetes 叢集、不會將其 API 伺服器暴露於網際網路上。</block>
-  <block id="1cbe758d6bc054731023778d3ae61f63" category="summary">Astra Control Service整合於NetApp Cloud Central的驗證服務中。註冊 Cloud Central 、即可存取 Astra Control Service 和 NetApp 的其他雲端服務。</block>
-  <block id="5889ed9e6b0222b99068c361f05d9603" category="paragraph">如果您尚未擁有 NetApp Cloud Central 帳戶、請註冊至 Cloud Central 、以便存取 Astra Control Service 和 NetApp 的其他雲端服務。Astra Control Service整合於NetApp Cloud Central的驗證服務中。如果您已擁有Cloud Central帳戶並已完成註冊、則可以存取<block ref="98c5a70a1a2162b1fc3e4c3e10ba9906" category="inline-link-rx"></block> 直接使用Cloud Central認證資料。</block>
   <block id="d35cb258bf38db8a375c6b851aef5d80" category="doc">建立Kbeconfig檔案</block>
   <block id="a2d93681918875d2089986e58a2ef85f" category="paragraph">在您設定雲端環境之後、您就可以建立 Kubernetes 叢集、然後將其新增至 Astra Control Service 。</block>
   <block id="81cbd312a10cad3230cda33b84ee9321" category="paragraph">搜尋與Astra Control相關的文章、常見問題集或中斷修復資訊。</block>
@@ -2559,4 +2521,37 @@ Astra Control 現在可以管理以 NVMe / TCP 連線的持續磁碟區為後盾
   <block id="1752f949f63eb1f41cea70be24a2a732" category="list-text"><block ref="1752f949f63eb1f41cea70be24a2a732" category="inline-link-rx"></block></block>
   <block id="8da5e66f477d9799e7fb14fdf498f36a" category="admonition">如果您自行建立<block ref="deabc6332aa53495b56c51d2e3eca54f" prefix=" " category="inline-code"></block> 檔案中、您應該只定義*一個*內容元素。請參閱 <block ref="9d8ee3d0d4f5c967db921af26c4c5a7a" category="inline-link-macro-rx"></block> 以取得有關建立的資訊<block ref="deabc6332aa53495b56c51d2e3eca54f" prefix=" " category="inline-code"></block> 檔案：</block>
   <block id="4aa0f8ba3923a0c903137a6f7e329b63" category="paragraph">您可以定義和管理應用程式、包括含有執行 Pod 的儲存資源、或是不含任何執行 Pod 的儲存資源應用程式。沒有執行 Pod 的應用程式稱為純資料應用程式。</block>
+  <block id="e5b03616a083e54ad13519a3154625c1" category="inline-link">前往 NetApp BlueXP 全球地區地圖</block>
+  <block id="65a8a347eaac78adbfa6c17d15af2bf3" category="paragraph">適用於Google Cloud的支援提供兩種服務類型：_CVS_和_CVs-Performance。Cloud Volumes Service這些服務類型在特定的Google Cloud地區均受到支援。<block ref="3a64a480df5bdabeb22306a73210cf12" category="inline-link-rx"></block> 識別叢集所在的Google Cloud區域所支援的服務類型。</block>
+  <block id="cfcba38fe8e116204bd3f0c5ba63b148" category="list-text"><block ref="e567ba8e2897f19575c360fa42b79208" category="inline-link-rx"></block> 並識別您將在叢集所在的Google Cloud區域中使用的服務類型。</block>
+  <block id="96ee83a6112cdf0ed8c7770a293a8925" category="summary">Astra Control Service 整合在 NetApp BlueXP 的驗證服務中。註冊 BlueXP 、即可存取 Astra Control Service 和 NetApp 的其他雲端服務。</block>
+  <block id="d5e7bd562a1697914b02556de3ab3ed4" category="paragraph">若要使用 Astra Control Service 、您需要與 NetApp BlueXP 帳戶相關聯的 Astra Control Service 帳戶。完成 Astra Control Service 註冊程序、如果您尚未擁有 BlueXP 帳戶、請註冊 BlueXP 以存取 Astra Control Service 。</block>
+  <block id="cb8d3bdda7b9debee876b1d74a254edd" category="inline-link">前往 BlueXP 上的 Astra Control 頁面</block>
+  <block id="f4bd6f3a852b8eba4f7007eca1555662" category="list-text"><block ref="f3dcccd17e964be84a1bdd9e03498bc8" category="inline-link-rx"></block>。</block>
+  <block id="5cc8fb97eb2b86cdbdf2617646ff70ca" category="list-text">選擇 * 立即開始 * 。</block>
+  <block id="12d1382b6eedc0055cee8ee4b3fdea31" category="list-text">在 * 商務電子郵件地址 * 欄位中、如果您有 NetApp BlueXP 帳戶、請在此輸入您用於該帳戶的電子郵件。如果您還沒有 NetApp BlueXP 帳戶、請在註冊 BlueXP 時使用您在此輸入的電子郵件地址。</block>
+  <block id="20653d224bca9fb40181f3916e4f643d" category="list-text">選擇*建立帳戶*。</block>
+  <block id="156c302d186fc36d9d944c5d74b971af" category="section-title">註冊BlueXP</block>
+  <block id="9d89fae8ef174b821a65fff74333e4ce" category="paragraph">Astra Control Service 整合在 NetApp BlueXP 的驗證服務中。您可以使用 BlueXP 或 NetApp 支援網站 認證登入 NetApp BlueXP 。如果您尚未擁有 NetApp BlueXP 或 NetApp 支援網站 帳戶、請註冊 BlueXP 、以便存取 Astra Control Service 和 NetApp 的其他雲端服務。如果您已經擁有 BlueXP 或 NetApp 支援網站 帳戶、並且已完成註冊、則可以存取<block ref="98c5a70a1a2162b1fc3e4c3e10ba9906" category="inline-link-rx"></block> 直接使用 BlueXP 或 NetApp 支援網站 認證。</block>
+  <block id="efdaf9f44ce968366fa78277263abc1d" category="inline-link">說明中心</block>
+  <block id="f6cb3bdd70c9389c9b9924f64c738f91" category="admonition">您也可以使用公司目錄（同盟身分識別）的認證、使用單一登入來登入 BlueXP 。若要深入瞭解、請前往<block ref="5f6a58834610a7cc4ed94e6309719ab2" category="inline-link-rx"></block> 然後選取* Cloud Central登入選項*。</block>
+  <block id="1273c8a63109161e6fd1f18d6998523f" category="inline-link">NetApp BlueXP</block>
+  <block id="b6aa2af54493e92b88469d9de2275c3a" category="list-text">前往<block ref="725337a11d1d7a71c9a822037fd82aa8" category="inline-link-rx"></block>。</block>
+  <block id="0b616e301a339c5fa6543e07a4095795" category="list-text">在右上角、選取 * 開始使用 * 。</block>
+  <block id="e8becbe92bbdf8d1721ea0d526cecaa9" category="paragraph">請確定您在此輸入的電話號碼和電子郵件地址與您在前一張 Astra Control 註冊表單中使用的相同。</block>
+  <block id="01212387b6c7166792baddaa928aa84c" category="admonition">您在這些表單中輸入的電子郵件地址適用於您的 NetApp BlueXP 使用者 ID 。當您註冊新的 Astra Control 帳戶、或 Astra Control 管理員邀請您使用現有的 Astra Control 帳戶時、請使用此 BlueXP 使用者 ID 。</block>
+  <block id="f290ad3a115a62d0d49c00d3388bdbcd" category="list-text">等待 NetApp BlueXP 的電子郵件。電子郵件來自saas.support@netapp.com的地址、可能需要數分鐘才能送達。請務必檢查您的垃圾郵件資料夾。</block>
+  <block id="5e15713c876e34835b6fd302dba44361" category="paragraph">您現在可以登入 Active BlueXP 使用者。</block>
+  <block id="33f9315d20002606702d6d72dd70e1b0" category="paragraph">註冊之後、您可以直接從存取 Astra Control<block ref="8c65d1fc4cf122e461b28ceccd26064c" category="inline-link-rx"></block>。</block>
+  <block id="2995ebe04d77ed72eb4b7f8ef7d9dcae" category="list-text">建立<block ref="725337a11d1d7a71c9a822037fd82aa8" category="inline-link-rx"></block> 帳戶。</block>
+  <block id="f4b33e0d486d62d711a4a94b0c788d2a" category="inline-link">從 Astra Control 產品頁面</block>
+  <block id="2de14ccf15a060c6e475d24436a4397e" category="list-text">建立 Astra Control 帳戶時、請指定您的 NetApp BlueXP 電子郵件 ID<block ref="53d06066cd31512993cd987784061d10" category="inline-link-rx"></block>。</block>
+  <block id="79160996ed8489a5cf6613551aa653a7" category="inline-link-macro">BlueXP 登入</block>
+  <block id="dc8c9310bb417e4b1bc9d837d3b96858" category="list-text">請確定使用者擁有 <block ref="2c20ac1459b4b79b440d836f42649dc2" category="inline-link-macro-rx"></block>。</block>
+  <block id="9ca4b3e529f2eeb866005870321534d0" category="list-text">電子郵件地址必須與使用者用來註冊 BlueXP 的電子郵件地址相符。</block>
+  <block id="3234eee61324035465efed06f05dd4e1" category="admonition">您可以使用單一登入、從公司目錄（聯盟身分識別）使用認證登入。若要深入瞭解、請前往<block ref="5f6a58834610a7cc4ed94e6309719ab2" category="inline-link-rx"></block> 然後選取* Cloud Central登入選項*。</block>
+  <block id="3d0abd6a01bb76cab17725c7ac70eb79" category="inline-link-macro">BlueXP 使用者 ID</block>
+  <block id="4ee685f387c020093b35c3bc40e77527" category="list-text"><block ref="4b68967e8d8add3859dd17e793d800ef" category="inline-link-macro-rx"></block>。</block>
+  <block id="13c43592d5afd1d9beed842ae9996863" category="list-text">使用您的 NetApp BlueXP 認證登入。</block>
+  <block id="0988971b31c78f18d65b944937534087" category="sidebar">BlueXP 上的 Kubernetes Hub</block>
 </blocks>
