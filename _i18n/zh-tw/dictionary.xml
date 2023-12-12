@@ -2190,7 +2190,6 @@ RKE 2 （ v1.24.x ）搭配 Rancher 2.7</block>
   <block id="de2197712ea8457243c4dd6357e2765e" category="list-text">從 Astra Control 取得 API 權杖。請參閱<block ref="c02899be0babfb1350e3b2576a6e8c97" category="inline-link-rx"></block> 以取得相關指示。</block>
   <block id="9606554dacabd47ad1eea6bf025ec9f2" category="list-text">建立 Astra 連接器命名空間：</block>
   <block id="16b505831d63f11efedc20586388506e" category="list-text">建立 Astra Connector CR 檔案並命名<block ref="180438293f7afaed3b9c6ed9bea94668" prefix=" " category="inline-code"></block>。更新括弧 &lt;&gt; 中的值以符合 Astra Control 環境和叢集組態：</block>
-  <block id="801e0bf06c1dd33312759ce41f2322a9" category="list-text">* &lt;ASTRA_CONTROL_SERVICE_URL&gt; * ： Astra 控制服務的網路 UI URL 。</block>
   <block id="25d61d35c6fbaed671d75883c5c128b6" category="list-text">* &lt;ASTRA_CONTROL_SERVICE_API_TOKEN&gt; * ：您在上述步驟中取得的 Astra 控制 API 權杖。</block>
   <block id="eb2f033e26873cd0fdf05bd8a92819df" category="list-text">* &lt;PRIVATE_AKS_CLUSTER_NAME&gt; * ：（僅限 AKS 叢集） - 私有 Azure Kubernetes 服務叢集的叢集名稱。只有在您要新增私有 aks 叢集時、才取消註解並填入此行。</block>
   <block id="3226c850ebbc28cb203319eea9e985a6" category="list-text">* &lt;ASTRA_CONTROL_ACCOUNT_ID&gt; * ：從 Astra Control 網路 UI 取得。選取頁面右上角的圖示、然後選取 * API 存取 * 。</block>
@@ -2445,7 +2444,6 @@ RKE 2 （ v1.26.x ）搭配 Rancher 2.7</block>
   <block id="054eff009cdf03269a420a2370e7dea5" category="list-text">記下您的帳戶 ID 。</block>
   <block id="247c4bd908bc1de2fd5a809200d877d2" category="list-text">從同一頁面選取 * 產生 API 權杖 * 、然後將 API 權杖字串複製到剪貼簿、並將其儲存在編輯器中。</block>
   <block id="98720da814dca1d713a7ea34c223cc71" category="list-text">使用您偏好的方法登入 Astra Control 登錄：</block>
-  <block id="504f7722d368dc922a957e7f67a889b9" category="list-text">依照您偏好的方法步驟、將映像移至自訂登錄。如果您不使用登錄，請依照 Trident 運算子的步驟來設定密碼。</block>
   <block id="be1ad1396eeb1a14ec670f22fa8db431" category="admonition">您可以使用 Podman 而非 Docker 來執行下列命令。如果您使用的是 Windows 環境、建議您使用 PowerShell 。</block>
   <block id="c5fd214cdd0d2b3b4272e73b022ba5c2" category="open-title">Docker</block>
   <block id="dfd1625b65bec1b019b2006f2a2d6f7f" category="list-text">從登錄中拉出 Astra Control Provisioner 映像：</block>
@@ -2454,21 +2452,12 @@ RKE 2 （ v1.26.x ）搭配 Rancher 2.7</block>
   <block id="1bfe2fd1955082292d7e5903ef66a782" category="list-text">將映像推送至自訂登錄：</block>
   <block id="91c18a5dec9cf1fbb20ffffd101409cd" category="open-title">起重機</block>
   <block id="1165b577af138b2a4ee1e0d044eea398" category="list-text">將 Astra Control Provisioner 資訊清單複製到您的自訂登錄：</block>
-  <block id="6bfac0d4d60794ceed5540ed9c92b46a" category="list-text">確認 Docker 組態中存在此區塊：</block>
-  <block id="07f6b362fad08add2146df68c7293231" category="list-text">[[lull 機密 ]] 在中建立秘密<block ref="47cb44be55a0dffa15dfc900a4c687be" prefix=" " category="inline-code"></block> 命名空間：</block>
-  <block id="68cf8879a7fec166cec9837ca39b81d7" category="list-text">將機密加入到 Torc （ Astra Trident Orchestrator ）：</block>
   <block id="b948a23f0cbc4ea95e165a5489a3b7ce" category="inline-link">運算子（手動或使用 Helm ）或 &lt;block ref="c67fd1b99934afa248dfeb285a9a4191" pref="" class='ine-code'/&gt;</block>
   <block id="55b03f72140649802821ee27f611f93d" category="list-text">判斷原始 Astra Trident 安裝方法是否使用<block ref="a1a09c66ad6b9d6162d6a0a2aaef123f" category="inline-link-rx"></block>。</block>
   <block id="77786aa5158c2dd5c43d9bc74844fffd" category="admonition">請勿使用 Helm 來啟用 Astra Control Provisioner 。如果您使用 Helm 進行原始安裝、並且要升級至 23.10 、則必須使用 Trident 運算子或 tridentctl 來執行 Astra Control Provisioner 啟用。</block>
   <block id="531dc1bead45003a393e1e227a07b0fa" category="list-text">編輯 TridentOrchestrator CR 並進行下列編輯：</block>
-  <block id="1dc3b7297d43967b1df8cc5f4718d2b7" category="list-text">啟用 Astra Control Provisioner <block ref="b146a884950a14beaf7f7c32ccceea96" prefix="(" category="inline-code"></block>）</block>
-  <block id="0d93f0d7110c6fcd946df3239a7be503" category="list-text">設定 Astra Control Provisioner 映像的登錄位置 <block ref="334c0a9162c18d888fae4c3071edcbf0" prefix="(" category="inline-code"></block>）。</block>
   <block id="9f28a023f26c22c040e88a7f3791d0ed" category="inline-xref">影像拉出秘密</block>
-  <block id="32c8b1c79820bf7dfd85518c9c748641" category="admonition">如果您已建立 <block ref="565c9dfc4921fbeccbde323bc8a44cad" category="inline-xref-macro-rx"></block> 在本程序稍早的部分、您可以在這裡使用它們 <block ref="ce73ad6af69d89f0704d72b9000c5650" prefix="(" category="inline-code"></block>）</block>
-  <block id="e18f4edbf8631aa163538dd1929aba1d" category="list-text">套用變更：</block>
-  <block id="aef1a8f8ac300bc418eb75e7e1e3c426" category="list-text">更新 Astra Trident 組態、讓新的<block ref="49c9f6c98d04c8c76aee7448fd9136ed" prefix=" " category="inline-code"></block> 已部署容器：</block>
   <block id="84b3a17dd4da0cadee9516d2c742e8e1" category="admonition">對於執行 Kubernetes 1.24 或更早版本的叢集、請使用<block ref="bd2cc8575fe69c7f775292759380c838" prefix=" " category="inline-code"></block>。對於執行 Kubernetes 1.25 或更新版本的叢集、請使用<block ref="5a02ebff4889c2de0379a0fb10bed282" prefix=" " category="inline-code"></block>。</block>
-  <block id="806742cccf8380250ffb871d582a0a03" category="list-text">確認已建立運算子、部署和複本集。</block>
   <block id="a770ca95121cc795b602f9af6af024fb" category="admonition">Kubernetes叢集中只應有*一個運算子執行個體*。請勿建立Trident營運者的多個部署。</block>
   <block id="0addb2f750cfe9f186eca6774f14ac69" category="list-text"><block ref="ecb96b3444d2267901d021f818e6535e" category="inline-link-rx"></block>。</block>
   <block id="5dcdd9d11fd62dd1ee60a5366592f2c7" category="list-text">在啟用 Astra Control Provisioner 的情況下、再次安裝 Astra Trident <block ref="87d6b9737ff6f9e44e3dd25c182cf495" prefix="(" category="inline-code"></block>）：</block>
@@ -2554,4 +2543,22 @@ Astra Control 現在可以管理以 NVMe / TCP 連線的持續磁碟區為後盾
   <block id="4ee685f387c020093b35c3bc40e77527" category="list-text"><block ref="4b68967e8d8add3859dd17e793d800ef" category="inline-link-macro-rx"></block>。</block>
   <block id="13c43592d5afd1d9beed842ae9996863" category="list-text">使用您的 NetApp BlueXP 認證登入。</block>
   <block id="0988971b31c78f18d65b944937534087" category="sidebar">BlueXP 上的 Kubernetes Hub</block>
+  <block id="b4b56d524fd9fb3baa93c3fd4037527d" category="list-text">* &lt;ASTRA_CONTROL_SERVICE_URL&gt; * ： Astra 控制服務的網路 UI URL 。例如：</block>
+  <block id="cbad356d2a2c08e20ea2766c2d78305f" category="inline-xref">下一節</block>
+  <block id="e7202f4359a7a5bb666f3f91a540d6ea" category="list-text">如果您有自訂登錄、請依照下列步驟、將映像移至自訂登錄。如果您未使用登錄 , 請遵循中的 Trident 運算子步驟 <block ref="d433543a9de56c735bd2827329689b0d" category="inline-xref-macro-rx"></block>。</block>
+  <block id="81eeab9506186e2dca8faefa78d54067" category="paragraph">範例：</block>
+  <block id="40c27dbe238031119a79044564707195" category="list-text">[[non-register]] 如果您從原始部署中移除運算子、請再次建立 Astra Trident Orchestrator CRD ：</block>
+  <block id="c5ef2e8ef77f84391fa266f923ba567f" category="inline-link">下載並解壓縮安裝程式</block>
+  <block id="bfae990a3fa05e9fc309d9270c1b0bdf" category="list-text"><block ref="1762ff5119022dd6aa9e3a3693ff4c9a" category="inline-link-rx"></block>。</block>
+  <block id="6dfb05d57e00d495a2626742c5794d45" category="list-text">再次建立客戶需求日：</block>
+  <block id="74e1b3ec60a1e85ea67710e2dc1cd343" category="list-text">建立<block ref="47cb44be55a0dffa15dfc900a4c687be" prefix=" " category="inline-code"></block> 如有需要、請重新命名空間：</block>
+  <block id="f2b891f09ee711b58bdd7005fd757210" category="list-text">將 Astra Trident 更新為 23.10.0 ：</block>
+  <block id="4cf0920f58032b65295d4d0255354879" category="list-text">確認 Astra Trident 正在執行：</block>
+  <block id="70da7fdb746f99191502821d5d3b6d53" category="list-text">[[Pull 機密 ]] 如果您有使用機密的登錄、請建立秘密來拉出 Astra Control Provisioner 映像：</block>
+  <block id="611316b2831d2091db014867dff4dbb5" category="list-text">為 Astra Trident 映像設定自訂登錄位置、或從 Astra Control 登錄中拉出 <block ref="c38ea817861c4f6d81ef59a478e24f43" prefix="(" category="inline-code"></block> 或<block ref="178c284f8a84efb70436e676da8ba21e" prefix=" " category="inline-code"></block>）。</block>
+  <block id="8b1959e0a8b41248dad790a861dbfdd9" category="list-text">啟用 Astra Control Provisioner <block ref="b146a884950a14beaf7f7c32ccceea96" prefix="(" category="inline-code"></block>）。</block>
+  <block id="1a7a4d068f08c144a6e5d715290a1623" category="list-text">設定 Astra Control Provisioner 映像的自訂登錄位置、或從 Astra Control 登錄中拉出映像 <block ref="20edfaac0850c3e3743b65fa227b6f0b" prefix="(" category="inline-code"></block> 或<block ref="d1885d745ce46027d5b7a7684a69fd31" prefix=" " category="inline-code"></block>）。</block>
+  <block id="f3a11fe989360f45110df3758e7f0641" category="list-text">如果您已建立 <block ref="565c9dfc4921fbeccbde323bc8a44cad" category="inline-xref-macro-rx"></block> 在本程序稍早的部分、您可以在此設定 <block ref="bafdae7aa6abb1556ef1b0d17efe7509" prefix="(" category="inline-code"></block>）。請使用您在先前步驟中建立的相同名稱密碼名稱。</block>
+  <block id="aa3ae8b6c1e4a29f9314a8bbc401330f" category="list-text">儲存並結束檔案。部署程序將會自動開始。</block>
+  <block id="4f27e6f7f8f95f32f55540801c5f6db0" category="list-text">確認已建立運算子、部署和複本集。</block>
 </blocks>

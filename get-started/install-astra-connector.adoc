@@ -60,7 +60,12 @@ kubectl create ns astra-connector
 ----
 . 建立 Astra Connector CR 檔案並命名 `astra-connector-cr.yaml`。更新括弧 <> 中的值以符合 Astra Control 環境和叢集組態：
 +
-** * <ASTRA_CONTROL_SERVICE_URL> * ： Astra 控制服務的網路 UI URL 。
+** * <ASTRA_CONTROL_SERVICE_URL> * ： Astra 控制服務的網路 UI URL 。例如：
++
+[listing]
+----
+https://astra.netapp.io
+----
 ** * <ASTRA_CONTROL_SERVICE_API_TOKEN> * ：您在上述步驟中取得的 Astra 控制 API 權杖。
 ** * <PRIVATE_AKS_CLUSTER_NAME> * ：（僅限 AKS 叢集） - 私有 Azure Kubernetes 服務叢集的叢集名稱。只有在您要新增私有 aks 叢集時、才取消註解並填入此行。
 ** * <ASTRA_CONTROL_ACCOUNT_ID> * ：從 Astra Control 網路 UI 取得。選取頁面右上角的圖示、然後選取 * API 存取 * 。

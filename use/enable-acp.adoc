@@ -67,7 +67,7 @@ crane auth login cr.astra.netapp.io -u <account-id> -p <api-token>
 
 
 ====
-. 依照您偏好的方法步驟、將映像移至自訂登錄。如果您不使用登錄，請依照 Trident 運算子的步驟來設定密碼。
+. 如果您有自訂登錄、請依照下列步驟、將映像移至自訂登錄。如果您未使用登錄 , 請遵循中的 Trident 運算子步驟 <<no-registry,下一節>>。
 +
 
 NOTE: 您可以使用 Podman 而非 Docker 來執行下列命令。如果您使用的是 Windows 環境、建議您使用 PowerShell 。
@@ -85,7 +85,15 @@ NOTE: 所擷取的映像不支援多個平台、而且僅支援與擷取映像�
 +
 [source, console]
 ----
-docker pull cr.astra.netapp.io/astra/trident-acp:23.10.0
+docker pull cr.astra.netapp.io/astra/trident-acp:23.10.0 --platform <cluster platform>
+----
++
+範例：
+
++
+[listing]
+----
+docker pull cr.astra.netapp.io/astra/trident-acp:23.10.0 --platform linux/amd64
 ----
 .. 標記影像：
 +
@@ -106,49 +114,9 @@ docker push <my_custom_registry>/trident-acp:23.10.0
 --
 .. 將 Astra Control Provisioner 資訊清單複製到您的自訂登錄：
 +
-[listing]
+[source, crane]
 ----
 crane copy cr.astra.netapp.io/astra/trident-acp:23.10.0 <my_custom_registry>/trident-acp:23.10.0
-----
-
-
---
-.Astra Trident 運算子
---
-.. 確認 Docker 組態中存在此區塊：
-+
-[listing]
-----
-{
-    "auths": {
-        "https://cr.astra.netapp.io/": {
-            "auth": "c3R...zE2"
-        }
-    }
-}
-----
-.. [[lull 機密 ]] 在中建立秘密 `trident` 命名空間：
-+
-[listing]
-----
-kubectl create secret -n <trident namespace> generic <secret name> \
-    --from-file=.dockerconfigjson=<path/to/.docker/config.json> \
-    --type=kubernetes.io/dockerconfigjson
-----
-.. 將機密加入到 Torc （ Astra Trident Orchestrator ）：
-+
-[listing]
-----
-apiVersion: trident.netapp.io/v1
-kind: TridentOrchestrator
-metadata:
-  name: trident
-spec:
-  debug: true
-  namespace: trident
-  tridentImage: netapp/trident:23.10.0
-  imagePullSecrets:
-  - <secret name>
 ----
 
 
@@ -164,14 +132,65 @@ WARNING: 請勿使用 Helm 來啟用 Astra Control Provisioner 。如果您使�
 ====
 .Astra Trident 運算子
 --
+.. [[non-register]] 如果您從原始部署中移除運算子、請再次建立 Astra Trident Orchestrator CRD ：
++
+... https://docs.netapp.com/us-en/trident/trident-get-started/kubernetes-deploy-operator.html#step-1-download-the-trident-installer-package["下載並解壓縮安裝程式"^]。
+... 再次建立客戶需求日：
++
+[source, console]
+----
+kubectl create -f deploy/crds/trident.netapp.io_tridentorchestrators_crd_post1.16.yaml
+----
+... 建立 `trident` 如有需要、請重新命名空間：
++
+[source, console]
+----
+kubectl create namespace trident
+----
+
+
+.. 將 Astra Trident 更新為 23.10.0 ：
++
+
+NOTE: 對於執行 Kubernetes 1.24 或更早版本的叢集、請使用 `bundle_pre_1_25.yaml`。對於執行 Kubernetes 1.25 或更新版本的叢集、請使用 `bundle_post_1_25.yaml`。
+
++
+[source, console]
+----
+kubectl -n trident apply -f trident-installer-23.10.0/deploy/<bundle-name.yaml>
+----
+.. 確認 Astra Trident 正在執行：
++
+[source, console]
+----
+kubectl get torc -n trident
+----
++
+回應：
+
++
+[listing]
+----
+NAME      AGE
+trident   21m
+----
+.. [[Pull 機密 ]] 如果您有使用機密的登錄、請建立秘密來拉出 Astra Control Provisioner 映像：
++
+[source, console]
+----
+kubectl create secret docker-registry <secret_name> -n trident --docker-server=<my_custom_registry> --docker-username=<username> --docker-password=<token>
+----
 .. 編輯 TridentOrchestrator CR 並進行下列編輯：
 +
-*** 啟用 Astra Control Provisioner (`enableACP: true`）
-*** 設定 Astra Control Provisioner 映像的登錄位置 (`acpImage: <my_custom_registry>/trident-acp:v23.10.0`）。
+[source, console]
+----
+kubectl edit torc trident
+----
 +
-
-NOTE: 如果您已建立 <<pull-secrets,影像拉出秘密>> 在本程序稍早的部分、您可以在這裡使用它們 (`cr.astra.netapp.io/astra/trident-acp:23.10.0 imagePullSecrets: - <secret name>`）
-
+... 為 Astra Trident 映像設定自訂登錄位置、或從 Astra Control 登錄中拉出 (`tridentImage: <my_custom_registry>/trident:23.10.0` 或 `tridentImage: netapp/trident:23.10.0`）。
+... 啟用 Astra Control Provisioner (`enableACP: true`）。
+... 設定 Astra Control Provisioner 映像的自訂登錄位置、或從 Astra Control 登錄中拉出映像 (`acpImage: <my_custom_registry>/trident-acp:23.10.0` 或 `acpImage: cr.astra.netapp.io/astra/trident-acp:23.10.0`）。
+... 如果您已建立 <<pull-secrets,影像拉出秘密>> 在本程序稍早的部分、您可以在此設定 (`imagePullSecrets: - <secret_name>`）。請使用您在先前步驟中建立的相同名稱密碼名稱。
 
 
 +
@@ -184,30 +203,18 @@ metadata:
 spec:
   debug: true
   namespace: trident
+  *tridentImage: <registry>/trident:23.10.0*
   *enableACP: true*
-  *acpImage: <my_custom_registry>/trident-acp:v23.10.0*
+  *acpImage: <registry>/trident-acp:23.10.0*
+  *imagePullSecrets:
+  - <secret_name>*
 ----
-.. 套用變更：
-+
-[listing]
-----
-kubectl -n trident apply -f tridentorchestrator_cr.yaml
-----
-.. 更新 Astra Trident 組態、讓新的 `trident-acp` 已部署容器：
-+
-
-NOTE: 對於執行 Kubernetes 1.24 或更早版本的叢集、請使用 `bundle_pre_1_25.yaml`。對於執行 Kubernetes 1.25 或更新版本的叢集、請使用 `bundle_post_1_25.yaml`。
-
-+
-[listing]
-----
-kubectl -n trident apply -f trident-installer-23.10.0/deploy/<bundle-name.yaml>
-----
+.. 儲存並結束檔案。部署程序將會自動開始。
 .. 確認已建立運算子、部署和複本集。
 +
-[listing]
+[source, console]
 ----
-kubectl get all -n <operator-namespace>
+kubectl get all -n trident
 ----
 +
 
@@ -215,7 +222,7 @@ IMPORTANT: Kubernetes叢集中只應有*一個運算子執行個體*。請勿建
 
 .. 驗證 `trident-acp` 容器正在執行 `acpVersion` 是 `23.10.0` 狀態為 `Installed`：
 +
-[listing]
+[source, console]
 ----
 kubectl get torc -o yaml
 ----
@@ -229,7 +236,7 @@ status:
   acpVersion: 23.10.0
   currentInstallationParams:
     ...
-    acpImage: <my_custom_registry>/trident-acp:v23.10.0
+    acpImage: <registry>/trident-acp:v23.10.0
     enableACP: "true"
     ...
   ...
@@ -243,13 +250,13 @@ status:
 .. https://docs.netapp.com/us-en/trident/trident-managing-k8s/upgrade-tridentctl.html["解除安裝Astra Trident"^]。
 .. 在啟用 Astra Control Provisioner 的情況下、再次安裝 Astra Trident (`--enable-acp=true`）：
 +
-[listing]
+[source, console]
 ----
 ./tridentctl -n trident install --enable-acp=true --acp-image=mycustomregistry/trident-acp:v23.10
 ----
 .. 確認 Astra Control Provisioner 已啟用：
 +
-[listing]
+[source, console]
 ----
 ./tridentctl -n trident version
 ----
