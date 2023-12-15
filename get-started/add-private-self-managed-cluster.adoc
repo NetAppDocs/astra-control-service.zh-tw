@@ -26,12 +26,6 @@ summary: 設定環境之後、您就可以建立Kubernetes叢集、然後將其�
 | Kubernetes 配送 | 支援的版本 
 
 
-| Azure Stack HCI 上的 Azure Kubernetes 服務 | Azure Stack HCI 21H2 和 22H2 、含 1.24.x 和 1.5.x 
-
-
-| Google Anthos | 1.15 至 1.16 
-
-
 | Kubernetes （上游） | 1.26 至 1.28 
 
 
@@ -42,9 +36,6 @@ RKE 2 （ v1.26.x ）搭配 Rancher 2.7
 
 
 | Red Hat OpenShift Container Platform | 4.11 至 4.13 
-
-
-| VMware Tanzu Kubernetes Grid整合版 | 1.16.x 
 |===
 這些指示假設您已經建立了私有叢集、並準備了安全的方法來遠端存取它。
 
