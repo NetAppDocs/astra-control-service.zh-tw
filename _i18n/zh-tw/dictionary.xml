@@ -2001,10 +2001,6 @@
   <block id="2217ba8a52de4d6a9862994a9287aa48" category="paragraph">您可以使用 Astra Control Service 來管理下列類型的公用、自我管理叢集：</block>
   <block id="c52ee6d695c3236a2b8bf5b454bac3cb" category="cell">Kubernetes 配送</block>
   <block id="2e5d14f7919ff3c6138e7845aec4f915" category="cell">支援的版本</block>
-  <block id="22ec69733e61456fac578b2f6fcc2856" category="cell">Azure Stack HCI 上的 Azure Kubernetes 服務</block>
-  <block id="cd96805b6007cc4c2282c90a414e97f3" category="cell">Azure Stack HCI 21H2 和 22H2 、含 aks 1.23 和 1.24</block>
-  <block id="1c4dff0a00340691e103ef63154df371" category="cell">Google Anthos</block>
-  <block id="ef3097a00ac9ce5987c57fb2eedf104c" category="cell">1.12 至 1.14</block>
   <block id="0770a54f3635e09a4e4ff53a035b9979" category="cell">Kubernetes （上游）</block>
   <block id="4863c0e3b29248649240a69b9df08e1e" category="cell">1.24 至 1.26 （ Kubernetes 1.25 或更新版本需要 Astra Trident 22.10 或更新版本）</block>
   <block id="8c95b632875261344eb6365459feffd0" category="cell">Rancher Kubernetes引擎（RKE）</block>
@@ -2013,10 +2009,6 @@ RKE 1.4 搭配 Rancher 2.7
 RKE 2 （ v1.23.x ）搭配 Rancher 2.6
 RKE 2 （ v1.24.x ）搭配 Rancher 2.7</block>
   <block id="2fc3e0590f5be49e12616e7785d1d1d8" category="cell">4.10 至 4.12</block>
-  <block id="a56837df79ae6671b6b511c330431135" category="cell">VMware Tanzu Kubernetes Grid</block>
-  <block id="4341447b6ad78bf4d7eb59ebb5a53d63" category="cell">1.6.</block>
-  <block id="a1c1bb4994628000cfe61563bf4ff4f5" category="cell">VMware Tanzu Kubernetes Grid整合版</block>
-  <block id="4700f2869a38df0fa4d3a207c4048f3d" category="cell">1.14 和 1.15</block>
   <block id="bd0c68687ae6337e2436da35c9876b3a" category="paragraph">這些指示假設您已建立自我管理的叢集。</block>
   <block id="f1e065a4705616b4a33e38f8a6c9d9b0" category="list-text"><block ref="a250d079edf413d7ab6b80bd41f1a440" category="inline-xref-macro-rx"></block></block>
   <block id="16b1f7f08468f13997b2fdd4f721c9a4" category="section-title">將叢集新增至 Astra Control Service</block>
@@ -2211,15 +2203,11 @@ RKE 2 （ v1.24.x ）搭配 Rancher 2.7</block>
   <block id="a46411d662ebd15db7079553439dbcdc" category="paragraph">中每個元素的索引<block ref="7de38f3c3d3baa7ca58a366f09577586" prefix=" " category="inline-code"></block> 陣列開頭為0。在上述範例中、索引為<block ref="5bb15412e9504feb0711be74d8c6ed33" prefix=" " category="inline-code"></block> 將為0、索引則為<block ref="ce8dd462bb623b9902ba4f0151eb2f1b" prefix=" " category="inline-code"></block> 應該是1。在輸出中、記下服務帳戶密碼的索引編號。您在下一個步驟中需要此索引編號。</block>
   <block id="ca492be8d9c67f790505b17ed0272fa9" category="list-text"><block ref="43d42a1bad9233e3772b4daeb39d1495" category="inline-xref-macro-rx"></block></block>
   <block id="8ab37db051796602226f25a5530aeaca" category="paragraph">在新增私有叢集之前、您需要在叢集上安裝 Astra Connector 、以便 Astra Control 能夠與其通訊。請參閱 <block ref="5c81995f6b8f1946f7d874c3b5f608ab" category="inline-link-macro-rx"></block> 以取得相關指示。</block>
-  <block id="61790943e1aa3906439ccf28814ccf38" category="cell">Azure Stack HCI 21H2 和 22H2 、含 1.24.x 和 1.5.x</block>
-  <block id="b0f76ba96d59d2ec008421d62cbd51d1" category="cell">1.15 至 1.16</block>
   <block id="81648ba2efc6c3bc5c076713f631b3d6" category="cell">1.26 至 1.28</block>
   <block id="e55f71014c1486e673587737ba45e41e" category="cell">RKE 1.3 搭配 Rancher Manager 2.6
 RKE 1.4 搭配 Rancher Manager 2.7
 RKE 2 （ v1.24.x ）搭配 Rancher 2.6
 RKE 2 （ v1.26.x ）搭配 Rancher 2.7</block>
-  <block id="7a1e78fd1adb53e6f4397fb295df4f23" category="cell">4.11 至 4.13</block>
-  <block id="6a11c0289f3527c7d689f620d79b2d2c" category="cell">1.16.x</block>
   <block id="8bc31dadfb63e8fd7f63080c53baf314" category="list-text">* 已設定 Astra Trident 儲存後端 * ：至少必須有一個 Astra Trident 儲存後端<block ref="fb143b34c64ee02a36db37ee7717ee44" category="inline-link-rx"></block> 在叢集上。</block>
   <block id="c421985a7d31a3a4aea2acb15d610b59" category="inline-link-macro">Astra Control Provisioner 功能</block>
   <block id="243cb370b04d1b3f44b5bfb5881e4c02" category="list-text">* Astra Control Provisioner* ：若要使用 Astra Control Provisioner 進階管理和儲存資源配置功能、而 Astra Control 使用者只能存取這些功能、您必須安裝 Astra Trident 23.10 或更新版本並啟用 <block ref="c34557907158b24c5eddb9109f719b54" category="inline-link-macro-rx"></block>。</block>
@@ -2563,4 +2551,5 @@ Astra Control 現在可以管理以 NVMe / TCP 連線的持續磁碟區為後盾
   <block id="a65211330b142f51904ccfb3741cc124" category="inline-link">如果您有現有的 Astra Trident 、請將其從裝載它的叢集上解除安裝</block>
   <block id="00c4331aab8ed2101088511f96b6af8e" category="list-text"><block ref="f21e19b64d79b0da0ff48729d1b28669" category="inline-link-rx"></block>。</block>
   <block id="005a56f182fe268e9f6977b39114eab8" category="list-text">在啟用 Astra Control Provisioner 的情況下安裝 Astra Trident <block ref="87d6b9737ff6f9e44e3dd25c182cf495" prefix="(" category="inline-code"></block>）：</block>
+  <block id="89de75d28b7402eb7cc9790aa9e4f669" category="cell">4.11 至 4.14</block>
 </blocks>

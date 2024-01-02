@@ -35,7 +35,7 @@ RKE 2 （ v1.24.x ）搭配 Rancher 2.6
 RKE 2 （ v1.26.x ）搭配 Rancher 2.7 
 
 
-| Red Hat OpenShift Container Platform | 4.11 至 4.13 
+| Red Hat OpenShift Container Platform | 4.11 至 4.14 
 |===
 這些指示假設您已經建立了私有叢集、並準備了安全的方法來遠端存取它。
 
