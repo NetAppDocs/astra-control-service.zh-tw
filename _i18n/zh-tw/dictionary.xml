@@ -2214,13 +2214,11 @@ RKE 2 （ v1.26.x ）搭配 Rancher 2.7</block>
   <block id="258c9b2ecd2a4147777d96a2577bb01d" category="list-text">* 私有路由識別碼 * ：輸入可從 Astra Connector 取得的私有路由識別碼。如果您透過查詢 Astra Connector<block ref="e29c11c68aee82b23845c3b2bf3ce544" prefix=" " category="inline-code"></block> 命令時、私有路由識別碼稱為<block ref="6205f02991df9d45acb59ccb61d7a0cb" prefix=" " category="inline-code"></block>。</block>
   <block id="1d740d5e28f5ec526ba0e21bd2c042ae" category="list-text"><block ref="d19f65bb3040b630d929eb2fd73ae249" category="inline-link-macro-rx"></block>。</block>
   <block id="615193f2c37d9fd054a61bf78b73ad01" category="section-title">不可變的備份</block>
-  <block id="213c28884ce4a2a71120000c783fcf82" category="paragraph">Astra Control Service 支援使用下列平台和貯體類型建立不可變的備份：</block>
   <block id="10c409f776da63661445303239e693a2" category="list-text">使用已設定 S3 物件鎖定的 Amazon S3 儲存區的 Amazon Web Services</block>
   <block id="beef1143f09010f8bcfdc72a883e9c08" category="list-text">Microsoft Azure 使用已設定保留原則的 Azure Bucket</block>
   <block id="a497c37cc42f059834689ec0fba7374a" category="list-text">Google Kubernetes Engine （ GKE ）使用已設定保留原則的 Google Cloud Storage Bucket</block>
   <block id="2068f70db106b56bd996eac3699fdfcf" category="list-text">NetApp StorageGRID 使用已設定 S3 物件鎖定的 S3 儲存區</block>
   <block id="81a25fa8f10fc7cec301084797002d71" category="paragraph">使用不可變備份時請注意下列事項：</block>
-  <block id="582c23d1f9cff824030194a7519dc569" category="list-text">如果您在不支援的平台或不支援的貯體類型中備份一次寫入多次讀取（ WORM ）貯體、則可能會產生無法預測的結果、例如即使保留時間已過、備份刪除也會失敗。</block>
   <block id="046b0dc975ab97773b3ec3307b750bf6" category="list-text">Astra Control 不支援資料生命週期管理原則、也不支援手動刪除用於不可變備份的貯體上的物件。請確定您的儲存後端並未設定為管理 Astra Control 快照或備份資料的生命週期。</block>
   <block id="67fc69d0bf35fe0124a1937122bf3aec" category="summary">您可以設定加密、以保護 Astra Control 和儲存後端之間的流量。</block>
   <block id="341784bc72164a9576c48141a8457786" category="doc">設定儲存後端加密</block>
@@ -2552,4 +2550,7 @@ Astra Control 現在可以管理以 NVMe / TCP 連線的持續磁碟區為後盾
   <block id="00c4331aab8ed2101088511f96b6af8e" category="list-text"><block ref="f21e19b64d79b0da0ff48729d1b28669" category="inline-link-rx"></block>。</block>
   <block id="005a56f182fe268e9f6977b39114eab8" category="list-text">在啟用 Astra Control Provisioner 的情況下安裝 Astra Trident <block ref="87d6b9737ff6f9e44e3dd25c182cf495" prefix="(" category="inline-code"></block>）：</block>
   <block id="89de75d28b7402eb7cc9790aa9e4f669" category="cell">4.11 至 4.14</block>
+  <block id="ab25e566dd860edad27ef68f7ef5b9e7" category="paragraph">不可變備份是指在指定期間內無法變更或刪除的備份。當您建立不可變的備份時、 Astra Control 會檢查您所使用的貯體是否為一次寫入多次讀取（ WORM ）貯體、如果是、則可確保從 Astra Control 中進行不可變的備份。
+Astra Control Service 支援使用下列平台和貯體類型建立不可變的備份：</block>
+  <block id="2d0336a0c7896d90ad095dbc30578198" category="list-text">如果您在不受支援的平台上備份至 WORM 儲存庫、或是備份至不受支援的儲存庫類型、則可能會產生無法預測的結果、例如即使保留時間已過、備份刪除也會失敗。</block>
 </blocks>
