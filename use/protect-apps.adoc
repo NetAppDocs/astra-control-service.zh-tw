@@ -70,6 +70,14 @@ Astra Control會使用您定義的排程和保留原則來建立和保留快照�
 
 您可以隨時建立隨需快照。
 
+.關於這項工作
+Astra Control 支援使用下列驅動程式所支援的儲存類別來建立快照：
+
+* `ontap-nas`
+* `ontap-san`
+* `ontap-san-economy`
+
+
 
 IMPORTANT: 如果您的應用程式使用以作為後盾的儲存類別 `ontap-nas-economy` 驅動程式、無法建立快照。使用替代的儲存類別來執行快照。
 
@@ -98,6 +106,17 @@ ifdef::azure[]
 ====
 endif::azure[]
 
+[NOTE]
+====
+Astra Control 支援使用下列驅動程式所支援的儲存類別來建立備份：
+
+* `ontap-nas`
+* `ontap-nas-economy`
+* `ontap-san`
+* `ontap-san-economy`
+
+
+====
 .關於這項工作
 Astra Control 中的貯體不會報告可用容量。在備份或複製 Astra Control 所管理的應用程式之前、請先在適當的儲存管理系統中檢查貯體資訊。
 

@@ -2553,4 +2553,11 @@ Astra Control 現在可以管理以 NVMe / TCP 連線的持續磁碟區為後盾
   <block id="ab25e566dd860edad27ef68f7ef5b9e7" category="paragraph">不可變備份是指在指定期間內無法變更或刪除的備份。當您建立不可變的備份時、 Astra Control 會檢查您所使用的貯體是否為一次寫入多次讀取（ WORM ）貯體、如果是、則可確保從 Astra Control 中進行不可變的備份。
 Astra Control Service 支援使用下列平台和貯體類型建立不可變的備份：</block>
   <block id="2d0336a0c7896d90ad095dbc30578198" category="list-text">如果您在不受支援的平台上備份至 WORM 儲存庫、或是備份至不受支援的儲存庫類型、則可能會產生無法預測的結果、例如即使保留時間已過、備份刪除也會失敗。</block>
+  <block id="2b298e0fe3f26bd15bd0a6fde1cc37ca" category="paragraph">Astra Control 支援使用下列驅動程式所支援的儲存類別來建立快照：</block>
+  <block id="00055dac2ba112b87a95a368075b9561" category="list-text"><block ref="8321592ce24c8a122ecf26a63cfca407" prefix="" category="inline-code"></block></block>
+  <block id="cd17e7ed84c40a0ff5ecb8b625b1f186" category="list-text"><block ref="73a3350a1b91aeb6e2836fdf5975672c" prefix="" category="inline-code"></block></block>
+  <block id="73b781a615cea2647a87ff2035e296b1" category="list-text"><block ref="3016c12c1db45f14c80c9c1731b9c26a" prefix="" category="inline-code"></block></block>
+  <block id="7699a29541e69341e6490b2f436f651b" category="paragraph">Astra Control 支援使用下列驅動程式所支援的儲存類別來建立備份：</block>
+  <block id="cecdaed309330a9e7dea16b2076957ee" category="list-text"><block ref="caafdf62a2c609bfa5316118231a1007" prefix="" category="inline-code"></block></block>
+  <block id="d5011d1ec3e5cf71761411134c41a9cd" category="list-text">* 支援的儲存類別驅動程式 * ： Astra Control 支援使用下列驅動程式所支援的儲存類別還原備份：</block>
 </blocks>
