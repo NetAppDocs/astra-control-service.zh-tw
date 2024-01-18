@@ -247,7 +247,6 @@
   <block id="42e4ae99b1c75f246e10097db7c80bb8" category="list-text">免費方案</block>
   <block id="862788c3bb11330575081aed95a87221" category="list-text">優質PayGo</block>
   <block id="5ddf59442786f24c8da307580d0ef431" category="list-text">優質訂閱</block>
-  <block id="b7b192852402c2ca345a411875aaae75" category="paragraph">如果您還沒有Astra Control帳戶、購買Premium訂閱會自動為您建立Astra Control帳戶。如果您有現有的免費方案、系統會自動將您轉換為「優質訂閱」。</block>
   <block id="6b77f6ea2428949be628fe51587bf096" category="section-title">Google Cloud帳單</block>
   <block id="45f0f10c20d19ddc78bfdf6e608f069a" category="inline-link">檢視Cloud Volumes Service 報價詳細資料以供參考</block>
   <block id="e952d755f5ef5c7803cdfa78e9eadb1a" category="list-text"><block ref="89dd56840eed735019d241a1ba2301aa" category="inline-link-rx"></block>。</block>
@@ -1582,7 +1581,6 @@
   <block id="d79e72b74c5b67b0661208c31b83584a" category="paragraph">您可以使用多種方法來管理Astra Control Service帳戶帳單。如果您使用Azure或Amazon AWS、可以透過Microsoft Azure Marketplace或AWS Marketplace訂閱Astra Control Service方案。執行此動作時、您可以透過Marketplace管理帳單詳細資料。或者、您也可以直接向NetApp訂閱。如果您直接向NetApp訂閱、您可以透過Astra Control Service管理帳單詳細資料。如果您在未訂閱的情況下使用Astra Control Service、系統會自動訂閱免費方案。</block>
   <block id="f5eb6d3938f47779581da936415d136a" category="paragraph">Astra Control Service Free Plan可讓您管理帳戶中最多10個命名空間。如果您想要管理10個以上的命名空間、則必須從「免費方案」升級至「優質方案」、或透過Azure Marketplace或AWS Marketplace訂閱、以設定帳單。</block>
   <block id="89b4085fdb03b14f69ace6f96236c990" category="list-text">免費管理最多10個命名空間。</block>
-  <block id="2f4b44f727ad34215a2cafb46fe686b5" category="list-text">以折扣率預先付費、每年訂閱一次、每個_namespace Pack_最多可管理10個命名空間。請聯絡NetApp銷售人員、以根據貴組織的需求購買任意數量的套件。例如、從Astra Control Service購買3個套件來管理30個命名空間。如果您管理的命名空間超過一年訂閱所允許的數量、則您將依照訂閱相依的超額使用率（每個額外命名空間）收取費用。</block>
   <block id="651491e55c46a7d045ef58a80fa5e427" category="paragraph">當您建立Astra Control帳戶時、系統會自動訂閱免費方案。Astra Control的儀表板會顯示您目前在允許的10個可用命名空間中管理多少個命名空間。當管理第一個包含命名空間的應用程式時、就會開始為命名空間計費、當包含命名空間的最後一個應用程式未受管理時、就會停止為該命名空間計費。</block>
   <block id="3aa4dd0198751b5007ad998ab156a84c" category="paragraph">如果您嘗試管理第11個命名空間、Astra Control會通知您已達到Free Plan的上限。接著會提示您從「免費方案」升級至「優質方案」。每個額外命名空間的訂閱相依超額率將會對您收費。</block>
   <block id="2bcc45d362c387d8f1c6cec1c1721572" category="paragraph">您可以隨時升級至優質方案。升級後、Astra Control會開始為帳戶中的_all_命名空間收取費用。前10個命名空間未納入免費方案。</block>
@@ -2560,4 +2558,5 @@ Astra Control Service 支援使用下列平台和貯體類型建立不可變的�
   <block id="7699a29541e69341e6490b2f436f651b" category="paragraph">Astra Control 支援使用下列驅動程式所支援的儲存類別來建立備份：</block>
   <block id="cecdaed309330a9e7dea16b2076957ee" category="list-text"><block ref="caafdf62a2c609bfa5316118231a1007" prefix="" category="inline-code"></block></block>
   <block id="d5011d1ec3e5cf71761411134c41a9cd" category="list-text">* 支援的儲存類別驅動程式 * ： Astra Control 支援使用下列驅動程式所支援的儲存類別還原備份：</block>
+  <block id="55a8ef29f75e55b9790167d340f9b10a" category="list-text">每年訂閱可讓您以折扣價預先支付費用、每個命名空間套件最多可管理 20 個命名空間。請聯絡NetApp銷售人員、以根據貴組織的需求購買任意數量的套件。例如、購買 3 個套件來管理 Astra Control Service 的 60 個命名空間。如果您管理的命名空間超過一年訂閱所允許的數量、則您將依照訂閱相依的超額使用率（每個額外命名空間）收取費用。如果您還沒有Astra Control帳戶、購買Premium訂閱會自動為您建立Astra Control帳戶。如果您有現有的免費方案、系統會自動將您轉換為「優質訂閱」。</block>
 </blocks>
