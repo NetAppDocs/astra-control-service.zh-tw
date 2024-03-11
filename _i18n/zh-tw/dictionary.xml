@@ -2000,13 +2000,11 @@
   <block id="c52ee6d695c3236a2b8bf5b454bac3cb" category="cell">Kubernetes 配送</block>
   <block id="2e5d14f7919ff3c6138e7845aec4f915" category="cell">支援的版本</block>
   <block id="0770a54f3635e09a4e4ff53a035b9979" category="cell">Kubernetes （上游）</block>
-  <block id="4863c0e3b29248649240a69b9df08e1e" category="cell">1.24 至 1.26 （ Kubernetes 1.25 或更新版本需要 Astra Trident 22.10 或更新版本）</block>
   <block id="8c95b632875261344eb6365459feffd0" category="cell">Rancher Kubernetes引擎（RKE）</block>
   <block id="86742721bf4e412fd236371e22eea76b" category="cell">RKE 1.3 搭配 Rancher 2.6
 RKE 1.4 搭配 Rancher 2.7
 RKE 2 （ v1.23.x ）搭配 Rancher 2.6
 RKE 2 （ v1.24.x ）搭配 Rancher 2.7</block>
-  <block id="2fc3e0590f5be49e12616e7785d1d1d8" category="cell">4.10 至 4.12</block>
   <block id="bd0c68687ae6337e2436da35c9876b3a" category="paragraph">這些指示假設您已建立自我管理的叢集。</block>
   <block id="f1e065a4705616b4a33e38f8a6c9d9b0" category="list-text"><block ref="a250d079edf413d7ab6b80bd41f1a440" category="inline-xref-macro-rx"></block></block>
   <block id="16b1f7f08468f13997b2fdd4f721c9a4" category="section-title">將叢集新增至 Astra Control Service</block>
@@ -2559,4 +2557,5 @@ Astra Control Service 支援使用下列平台和貯體類型建立不可變的�
   <block id="cecdaed309330a9e7dea16b2076957ee" category="list-text"><block ref="caafdf62a2c609bfa5316118231a1007" prefix="" category="inline-code"></block></block>
   <block id="d5011d1ec3e5cf71761411134c41a9cd" category="list-text">* 支援的儲存類別驅動程式 * ： Astra Control 支援使用下列驅動程式所支援的儲存類別還原備份：</block>
   <block id="55a8ef29f75e55b9790167d340f9b10a" category="list-text">每年訂閱可讓您以折扣價預先支付費用、每個命名空間套件最多可管理 20 個命名空間。請聯絡NetApp銷售人員、以根據貴組織的需求購買任意數量的套件。例如、購買 3 個套件來管理 Astra Control Service 的 60 個命名空間。如果您管理的命名空間超過一年訂閱所允許的數量、則您將依照訂閱相依的超額使用率（每個額外命名空間）收取費用。如果您還沒有Astra Control帳戶、購買Premium訂閱會自動為您建立Astra Control帳戶。如果您有現有的免費方案、系統會自動將您轉換為「優質訂閱」。</block>
+  <block id="b55edf29fb10e1f082aaf76e7d14a0e5" category="cell">1.26 至 1.28 （使用 Astra Trident 23.04 或更新版本）</block>
 </blocks>
