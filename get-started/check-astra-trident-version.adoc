@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: get-started/check-astra-trident-version.html 
-keywords: astra trident, check, version 
+keywords: astra trident, check, version, astra control provisioner 
 summary: 對於自行管理的叢集、您可能需要確定使用的是正確的 Astra Trident 版本。 
 ---
 = 檢查 Astra Trident 版本
@@ -12,10 +12,10 @@ summary: 對於自行管理的叢集、您可能需要確定使用的是正確�
 
 
 [role="lead"]
-若要新增使用 Astra Trident 進行儲存服務的自我管理叢集、請確定 Astra Trident 的安裝版本為最新版本。
+若要新增使用 Astra Control Provisioner 或 Astra Trident 進行儲存服務的自我管理叢集、請確定 Astra Trident 的安裝版本為 23.10 或最新版本。
 
 .步驟
-. 檢查Astra Trident版本。
+. 判斷您正在執行的 Astra Trident 版本：
 +
 [source, console]
 ----
@@ -28,7 +28,7 @@ kubectl get tridentversions -n trident
 [listing]
 ----
 NAME      VERSION
-trident   22.10.0
+trident   24.02.0
 ----
 +
 如果未安裝Astra Trident、您會看到類似下列的輸出：
@@ -38,9 +38,11 @@ trident   22.10.0
 ----
 error: the server doesn't have a resource type "tridentversions"
 ----
+. 執行下列其中一項：
 +
+** 如果您執行的是 Astra Trident 23.01 或更早版本、請使用這些項目 https://docs.netapp.com/us-en/trident/trident-managing-k8s/upgrade-trident.html["說明"^] 在升級至 Astra Control Provisioner 之前、先升級至較新版本的 Astra Trident 。您可以 link:../use/enable-acp.html["執行直接升級"] 如果您的 Astra Trident 位於 24.02 版的四個版本視窗內、則為 Astra Control Provisioner 24.02 。例如、您可以直接從 Astra Trident 23.04 升級至 Astra Control Provisioner 24.02 。
+** 如果您執行的是 Astra Trident 23.10 或更新版本、請確認 Astra Control Provisioner 已完成 link:../use/faq.html#running-acp-check["已啟用"]。Astra Control Provisioner 無法搭配 23.10 之前的 Astra Control Center 版本使用。 link:../get-started/enable-acp.html["升級 Astra Control Provisioner"] 因此它與您要升級以存取最新功能的 Astra Control Center 版本相同。
 
-NOTE: 如果未安裝或不是最新的Astra Trident、而且您想要叢集使用Astra Trident來提供儲存服務、則必須先安裝最新版的Astra Trident、才能繼續進行。請參閱 https://docs.netapp.com/us-en/trident/trident-get-started/kubernetes-deploy.html["Astra Trident文件"^] 以取得相關指示。
 
 . 確保Pod正在執行：
 +

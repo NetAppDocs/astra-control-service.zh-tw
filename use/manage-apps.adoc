@@ -97,7 +97,7 @@ Astra Control可能無法複製以「傳遞參考」架構設計的操作員（�
 
 您先請 link:../get-started/add-first-cluster.html["新增叢集"] 若要使用Astra Control、您可以在叢集上安裝應用程式或管理現有的應用程式。範圍為一或多個命名空間的任何應用程式都可以管理。
 
-Astra Control只有在儲存設備位於Astra Control所支援的儲存類別時、才會管理狀態化應用程式。Astra Control Service支援任何由Astra Trident或通用的SCSI驅動程式所支援的儲存類別。
+Astra Control只有在儲存設備位於Astra Control所支援的儲存類別時、才會管理狀態化應用程式。Astra Control Service 支援 Astra Control Provisioner 或一般 CSI 驅動程式所支援的任何儲存類別。
 
 ifdef::gcp[]
 

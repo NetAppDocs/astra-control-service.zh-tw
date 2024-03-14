@@ -150,7 +150,7 @@ Astra Control會建立應用程式的備份。
 Astra Control Provisioner 提供備份與還原功能、可啟用以供使用的儲存後端使用 `ontap-nas-economy` 儲存類別：
 
 .開始之前
-* 您已啟用 Astra Control Provisioner 。
+* 您已啟用 Astra Control Provisioner 或 Astra Trident 。
 * 您已在 Astra Control 中定義應用程式。在您完成此程序之前、此應用程式的保護功能有限。
 * 您有 `ontap-nas-economy` 已選取為儲存後端的預設儲存類別。
 
@@ -178,7 +178,7 @@ IMPORTANT: 確認 ONTAP 儲存後端上的 Snapshot 目錄已隱藏。若未隱�
 
 
 
-. 在 Astra Trident 中執行下列動作：
+. 請在 Astra Control Provisioner 或 Astra Trident 中執行下列動作：
 +
 .. 為每個以 ONTAP NAS 經濟型為基礎且與應用程式相關的 PV 啟用快照目錄：
 +

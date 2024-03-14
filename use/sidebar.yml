@@ -50,3 +50,5 @@ entries:
   url: "/use/enable-acp.html"
 - title: 取消管理應用程式和叢集
   url: "/use/unmanage.html"
+- title: 部署自我管理的 Astra Control 執行個體
+  url: "/use/deploy-astra-control-center.html"

@@ -21,4 +21,5 @@ summary: 現在您已登入並新增叢集至 Astra Control 、就可以開始�
 * link:../use/manage-users.html["邀請及管理使用者"]
 * link:../use/manage-credentials.html["管理雲端供應商認證資料"]
 * link:../use/manage-notifications.html["管理通知"]
+* link:../use/deploy-astra-control-center.html["部署自我管理的 Astra Control 執行個體"]
 

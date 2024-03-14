@@ -77,18 +77,18 @@ summary: 您必須先採取幾個步驟來準備Amazon Web Services專案、才�
 
 Kubernetes叢集必須符合下列需求、才能從Astra Control Service進行探索和管理。
 
-Kubernetes版本:: 叢集必須執行 1.23 至 1.25 範圍內的 Kubernetes 版本。
+Kubernetes版本:: 叢集必須執行 1.25 至 1.28 範圍內的 Kubernetes 版本。
 映像類型:: 每個工作節點的映像類型必須是Linux。
 叢集狀態:: 叢集必須以正常狀態執行、且至少有一個線上工作者節點、且在故障狀態下沒有工作節點。
 
 
-Astra Trident:: Astra Trident 和外部快照控制器是儲存後端作業所必需的。若要安裝、請執行下列步驟：
+Astra Control 資源配置程式:: Astra Control Provisioner 和外部快照控制器是儲存後端作業所需的。若要啟用這些作業、請執行下列步驟：
 
 
 [%collapsible%open]
 ====
-. https://docs.netapp.com/us-en/trident/trident-use/vol-snapshots.html#deploying-a-volume-snapshot-controller["安裝 Snapshot CRD 和 Snapshot 控制器"^]。
-. https://docs.netapp.com/us-en/trident/trident-get-started/kubernetes-deploy.html["安裝最新的 Astra Trident 版本"^]。
+. https://docs.netapp.com/us-en/trident/trident-use/vol-snapshots.html#deploy-a-volume-snapshot-controller["安裝 Snapshot CRD 和 Snapshot 控制器"^]。
+. link:../use/enable-acp.html["啟用 Astra Control Provisioner"]。
 . https://docs.netapp.com/us-en/trident/trident-use/vol-snapshots.html#step-1-create-a-volumesnapshotclass["建立 Volume SnapshotClass"^]。
 
 
@@ -101,7 +101,7 @@ Amazon Elastic Block Store（EBS）適用的SCSI驅動程式:: 如果您使用Am
 [%collapsible%open]
 ====
 .安裝外部快照
-如果您尚未這麼做、 https://docs.netapp.com/us-en/trident/trident-use/vol-snapshots.html#deploying-a-volume-snapshot-controller["安裝 Snapshot CRD 和 Snapshot 控制器"^]。
+如果您尚未這麼做、 https://docs.netapp.com/us-en/trident/trident-use/vol-snapshots.html#deploy-a-volume-snapshot-controller["安裝 Snapshot CRD 和 Snapshot 控制器"^]。
 
 .將csi驅動程式安裝為Amazon EKS附加元件
 . 為服務帳戶建立Amazon EBS SCSI驅動程式IAM角色。請依照指示操作 https://docs.aws.amazon.com/eks/latest/userguide/csi-iam-role.html["在Amazon文件中"^]、使用說明中的AWS CLI命令。

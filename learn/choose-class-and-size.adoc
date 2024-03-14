@@ -35,7 +35,7 @@ Astra Control Service可以Cloud Volumes Service 使用適用於Google Cloud的�
 
 
 
-NOTE: 如果您將 CVS 服務類型與 Astra Trident 23.01 或更新版本搭配使用、則必須先設定儲存集區、才能配置磁碟區。如果您在未設定儲存資源池的情況下佈建磁碟區、則磁碟區資源配置將會失敗。請參閱 https://cloud.google.com/architecture/partners/netapp-cloud-volumes/quickstart#create_a_volume_of_the_cvs_service_type["Cloud Volumes Service 文件"^] 以取得有關建立 Volume 的更多資訊。
+NOTE: 如果您將 CVS 服務類型與 Astra Control Provisioner 搭配使用、則必須先設定儲存資源池、才能配置磁碟區。如果您在未設定儲存資源池的情況下佈建磁碟區、則磁碟區資源配置將會失敗。請參閱 https://cloud.google.com/architecture/partners/netapp-cloud-volumes/quickstart#create_a_volume_of_the_cvs_service_type["Cloud Volumes Service 文件"^] 以取得有關建立 Volume 的更多資訊。
 
 下表提供本頁所述資訊的快速比較。
 

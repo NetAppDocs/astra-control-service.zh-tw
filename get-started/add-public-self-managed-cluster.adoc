@@ -27,16 +27,15 @@ summary: 設定環境之後、您就可以建立Kubernetes叢集、然後將其�
 | Kubernetes 配送 | 支援的版本 
 
 
-| Kubernetes （上游） | 1.26 至 1.28 （使用 Astra Trident 23.04 或更新版本） 
+| Kubernetes （上游） | 1.27 至 1.29 
 
 
-| Rancher Kubernetes引擎（RKE） | RKE 1.3 搭配 Rancher 2.6
-RKE 1.4 搭配 Rancher 2.7
-RKE 2 （ v1.23.x ）搭配 Rancher 2.6
-RKE 2 （ v1.24.x ）搭配 Rancher 2.7 
+| Rancher Kubernetes引擎（RKE） | RKE 1 ：採用 Rancher Manager 2.7.9 的版本 1.24.17 、 1.25.13 、 1.26.8
+RKE 2 ：版本 1.23.16 和 1.24.13 搭配 Rancher Manager 2.6.13
+RKE 2 ：採用 Rancher Manager 2.7.9 的版本 1.24.17 、 1.25.14 、 1.26.9 
 
 
-| Red Hat OpenShift Container Platform | 4.11 至 4.14 
+| Red Hat OpenShift Container Platform | 4.12 至 4.14 
 |===
 這些指示假設您已建立自我管理的叢集。
 
@@ -53,7 +52,7 @@ RKE 2 （ v1.24.x ）搭配 Rancher 2.7
 .開始之前
 [%collapsible%open]
 ====
-自我管理的叢集是您直接進行資源配置與管理的叢集。Astra Control Service支援在公有雲環境中執行的自我管理叢集。您的自我管理叢集可以使用Astra Trident來與NetApp儲存服務建立連結、也可以使用Container Storage介面（SCSI）驅動程式來與Amazon Elastic Block Store（EBS）、Azure託管磁碟和Google持續磁碟建立連結。
+自我管理的叢集是您直接進行資源配置與管理的叢集。Astra Control Service支援在公有雲環境中執行的自我管理叢集。您的自我管理叢集可以使用 Astra Control Provisioner 與 NetApp 儲存服務進行介面、或是使用 Container Storage Interface （ CSI ）驅動程式與 Amazon Elastic Block Store （ EBS ）、 Azure Managed Disks 及 Google Persistent Disk 進行介面。
 
 Astra Control Service支援使用下列Kubernetes發佈版本的自我管理叢集：
 
@@ -74,23 +73,18 @@ Astra Control Service支援使用下列Kubernetes發佈版本的自我管理叢�
 insecure-skip-tls-verify: true
 ----
 * *僅限Rancher *：在Rancher環境中管理應用程式叢集時、請在Rancher提供的Kusbeconfig檔案中修改應用程式叢集的預設內容、以使用控制面內容而非Rancher API伺服器內容。如此可減少Rancher API伺服器的負載、並改善效能。
-* * Astra Trident * ：如果您使用或打算使用 NetApp 儲存設備、請確定您已安裝最新版本的 Astra Trident 。如果 Astra Trident 已安裝、 link:check-astra-trident-version.html["請檢查以確定其為最新版本"^]。
+* * Astra Control Provisioner 需求 * ：您應該擁有正確設定的 Astra Control 資源配置程式、包括其 Astra Trident 元件、來管理叢集。
 +
-
-NOTE: 您可以 https://docs.netapp.com/us-en/trident/trident-get-started/kubernetes-deploy.html#choose-the-deployment-method["部署Astra Trident"^] 使用Trident運算子（手動或使用Helm圖表）或 `tridentctl`。在安裝或升級Astra Trident之前、請先檢閱 https://docs.netapp.com/us-en/trident/trident-get-started/requirements.html["支援的前端、後端及主機組態"^]。
-
-+
-** * 已設定 Astra Trident 儲存後端 * ：至少必須有一個 Astra Trident 儲存後端 https://docs.netapp.com/us-en/trident/trident-use/backends.html["已設定"^] 在叢集上。
-** * 已設定的 Astra Trident 儲存類別 * ：至少必須有一個 Astra Trident 儲存類別 https://docs.netapp.com/us-en/trident/trident-use/manage-stor-class.html["已設定"^] 在叢集上。如果已設定預設儲存類別、請確定只有一個儲存類別具有該註釋。
-** *已安裝並設定的Astra Trident Volume Snapshot控制器與Volume Snapshot類別*：Volume Snapshot控制器必須是 https://docs.netapp.com/us-en/trident/trident-use/vol-snapshots.html#deploying-a-volume-snapshot-controller["已安裝"^] 以便在Astra Control中建立快照。至少有一個Astra Trident `VolumeSnapshotClass` 過去了 https://docs.netapp.com/us-en/trident/trident-use/vol-snapshots.html#step-1-set-up-a-volumesnapshotclass["設定"^] 由系統管理員執行。
+** * 檢閱 Astra Trident 環境需求 * ：在安裝或升級 Astra Control Provisioner 之前、請檢閱 https://docs.netapp.com/us-en/trident/trident-get-started/requirements.html["支援的前端、後端及主機組態"^]。
+** * 啟用 Astra Control Provisioner 功能 * ：強烈建議您安裝 Astra Trident 23.10 或更新版本並啟用 link:../use/enable-acp.html["Astra Control Provisioner 進階儲存功能"]。在後續版本中、如果 Astra Control 資源配置程式未啟用、 Astra Control 將不支援 Astra Trident 。
+** * 設定儲存後端 * ：至少必須有一個儲存後端 https://docs.netapp.com/us-en/trident/trident-use/backends.html["在 Astra Trident 中設定"^] 在叢集上。
+** * 設定儲存類別 * ：至少必須有一個儲存類別 https://docs.netapp.com/us-en/trident/trident-use/manage-stor-class.html["在 Astra Trident 中設定"^] 在叢集上。如果已設定預設儲存類別、請確定它是具有預設註釋的 * 僅 * 儲存類別。
+** * 設定 Volume Snapshot 控制器並安裝 Volume Snapshot 類別 * ： https://docs.netapp.com/us-en/trident/trident-use/vol-snapshots.html#deploy-a-volume-snapshot-controller["安裝 Volume Snapshot 控制器"] 以便在Astra Control中建立快照。 https://docs.netapp.com/us-en/trident/trident-use/vol-snapshots.html#create-a-volume-snapshot["建立"^] 至少一個 `VolumeSnapshotClass` 使用 Astra Trident 。
 
 
 
 
 ====
-* * Astra Control Provisioner* ：若要使用 Astra Control Provisioner 進階管理和儲存資源配置功能、而 Astra Control 使用者只能存取這些功能、您必須安裝 Astra Trident 23.10 或更新版本並啟用 link:../use/enable-acp.html["Astra Control Provisioner 功能"]。
-
-
 .步驟
 . 在儀表板上、選取*管理Kubernetes叢集*。
 +

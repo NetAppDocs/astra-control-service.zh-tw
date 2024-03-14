@@ -24,7 +24,7 @@ summary: Astra Control Service 整合在 NetApp BlueXP 的驗證服務中。註�
 
 .步驟
 . https://cloud.netapp.com/astra["前往 BlueXP 上的 Astra Control 頁面"^]。
-. 選擇 * 立即開始 * 。
+. 選擇 * 註冊以取得免費方案 * 。
 . 在表單中提供必要資訊。
 +
 填寫表單時請注意以下幾點重要事項：

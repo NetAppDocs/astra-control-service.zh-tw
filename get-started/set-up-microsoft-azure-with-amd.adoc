@@ -61,7 +61,7 @@ summary: 您必須先採取幾個步驟來準備Microsoft Azure訂閱、才能�
 
 Kubernetes叢集必須符合下列需求、才能從Astra Control Service進行探索和管理。
 
-Kubernetes版本:: 叢集必須執行 Kubernetes 1.24 版至 1.26 版。
+Kubernetes版本:: 叢集必須執行 Kubernetes 版本 1.26 至 1.28 。
 映像類型:: 所有節點集區的映像類型必須是Linux。
 叢集狀態:: 叢集必須以正常狀態執行、且至少有一個線上工作者節點、且在故障狀態下沒有工作節點。
 Azure地區:: 最佳實務做法是、您應該選擇一個支援Azure NetApp Files 此功能的區域、即使您不將其用作儲存後端。如此一Azure NetApp Files 來、如果您的效能需求改變、就能更輕鬆地將VMware用作儲存後端。 https://azure.microsoft.com/en-us/global-infrastructure/services/?products=netapp["依地區檢視Azure產品"^]。

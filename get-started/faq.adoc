@@ -60,7 +60,7 @@ Astra Control要求您在就職部分提供準確的客戶資訊。如果您提�
 
 *在將叢集新增至Astra Control Service之前、我是否需要在叢集上安裝SCSI驅動程式？*
 
-不可以當您的叢集新增至 Astra Control 時、服務會自動在 Kubernetes 叢集上安裝 NetApp 的 Trident Container Storage Interface （ CSI ）驅動程式。此驅動程式可用於為雲端供應商所支援的叢集配置持續磁碟區。
+不可以當您的叢集新增至 Astra Control 時、服務會自動在 Kubernetes 叢集上安裝 Astra Trident Container Storage Interface （ CSI ）驅動程式。此驅動程式可用於為雲端供應商所支援的叢集配置持續磁碟區。
 
 *新增Astra Control Service之後、我需要將工作節點新增至叢集。我該怎麼辦？*
 
@@ -145,9 +145,8 @@ WARNING: 透過GCP刪除叢集之前、請務必先從Astra Control移除叢集�
 
 endif::gcp[]
 
-*從Astra Control移除叢集時、是否會解除安裝Astra Trident？*
-
-從Astra Control移除叢集時、不會從叢集解除安裝Astra Trident。
+* 取消管理時 Astra Control Provisioner 是否會自動從叢集解除安裝？ *
+當您從 Astra Control Center 取消管理叢集時、 Astra Control Provisioner 或 Astra Trident 不會自動從叢集中解除安裝。若要解除安裝 Astra Control Provisioner 及其元件或 Astra Trident 、您需要 https://docs.netapp.com/us-en/trident/trident-managing-k8s/uninstall-trident.html["請依照下列步驟、解除安裝內含 Astra Control Provisioner 服務的 Astra Trident 執行個體"^]。
 
 
 
@@ -203,26 +202,21 @@ Astra Control Provisioner 的儲存資源配置功能與 Astra Trident 的儲存
 Astra Control Provisioner 是 Astra Control 的一部分、支援開放原始碼 Astra Trident 中無法使用的儲存資源配置功能超集。這些功能是開放原始碼 Trident 所提供的所有功能之外的附加功能。
 
 * Astra Control 資源配置程式是否取代 Astra Trident ？ *
-
-在即將推出的 Astra Control 更新中、 Astra Control 資源配置程式將取代 Astra Trident 、將其作為 Astra Control 架構中的儲存資源配置程式和 Orchestrator 。因此、強烈建議 Astra Control 使用者使用 link:../use/enable-acp.html["啟用 Astra Control Provisioner"]。Astra Trident 將繼續保持開放原始碼、並以 NetApp 的新 CSI 和其他功能來發行、維護、支援及更新。
+Astra Control Provisioner 取代 Astra Trident 做為 Astra Control 架構中的儲存資源配置程式和 Orchestrator 。Astra Control 使用者應該 link:../use/enable-acp.html["啟用 Astra Control Provisioner"] 使用 Astra Control 。Astra Trident 將繼續在此版本中受到支援、但未來版本將不支援 Astra Trident 。Astra Trident 將維持開放原始碼、並以 NetApp 的新 CSI 和其他功能來發行、維護、支援及更新。不過、只有包含 Astra Trident CSI 功能和擴充儲存管理功能的 Astra Control Provisioner 、才能用於即將推出的 Astra Control 版本。
 
 * 我必須支付 Astra Trident 的費用嗎？ *
 
-不可以Astra Trident 將繼續是開放原始碼、並可免費下載。
+不可以Astra Trident 將繼續是開放原始碼、並可免費下載。Astra Control Provisioner 功能現在需要 Astra Control 授權。
 
 * 我可以在 Astra Control 中使用儲存管理和資源配置功能、而無需安裝和使用所有 Astra Control 嗎？ *
 
-是的、您可以升級至 Astra Trident 23.10 或更新版本、並啟用 Astra Control Provisioner 功能、即使您不想使用完整的 Astra Control 資料管理功能集。
+是的、即使您不想使用完整的 Astra Control 資料管理功能集、也可以升級至 Astra Control Provisioner 並使用其功能。
 
-* 如何從現有的 Trident 使用者移轉至 Astra Control 、以使用進階儲存管理與資源配置功能？ *
-
-如果您是現有的 Trident 使用者（這包括公有雲中 Astra Trident 的使用者）、您必須先取得 Astra Control 授權。完成後、您可以下載 Astra Control Provisioner 套件、升級 Astra Trident 、以及 link:../use/enable-acp.html["啟用 Astra Control Provisioner 功能"]。
-
-* 如何知道 Astra Control Provisioner 是否已取代叢集上的 Astra Trident ？ *
+[Running （執行） -ACP 檢查 ] * 如何知道 Astra 控制項資源配置程式是否已取代叢集上的 Astra Trident ？ *
 
 安裝 Astra Control Provisioner 之後、 Astra Control UI 中的主機叢集會顯示 `ACP version` 而非 `Trident version` 欄位和目前安裝的版本號碼。
 
-image:ac-acp-version.png["在 UI 中描繪 ACP 版本位置的螢幕擷取畫面"]
+image:ac-acp-version.png["在 UI 中描繪 Astra Control Provisioner 版本位置的螢幕擷取畫面"]
 
 如果您無法存取 UI 、可以使用下列方法確認安裝成功：
 
@@ -230,7 +224,7 @@ image:ac-acp-version.png["在 UI 中描繪 ACP 版本位置的螢幕擷取畫面
 ====
 .Astra Trident 運算子
 --
-驗證 `trident-acp` 容器正在執行 `acpVersion` 是 `23.10.0` 狀態為 `Installed`：
+驗證 `trident-acp` 容器正在執行 `acpVersion` 是 `23.10.0` 或更新版本、狀態為 `Installed`：
 
 [listing]
 ----

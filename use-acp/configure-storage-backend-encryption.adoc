@@ -32,7 +32,7 @@ Astra Control Provisioner 支援兩種儲存後端的 Kerberos 加密：
 NOTE: 內部部署 ONTAP 儲存後端的 NFS 流量 Kerberos 加密僅支援使用 `ontap-nas` 儲存驅動程式：
 
 .開始之前
-* 請確定您已在託管叢集上啟用 Astra Control Provisioner 。請參閱 link:../use/enable-acp.html["啟用 Astra Control Provisioner"^] 以取得相關指示。
+* 確保您擁有 link:../use/enable-acp.html["已啟用 Astra Control Provisioner"^] 在託管叢集上。
 * 請確定您可以存取 `tridentctl` 公用程式：
 * 確保您具有 ONTAP 儲存後端的管理員存取權。
 * 確保您知道將從 ONTAP 儲存後端共用的磁碟區名稱。
@@ -196,7 +196,7 @@ kubectl get sc ontap-nas-sc
 +
 [listing]
 ----
-NAME         PROVISIONER             AGE
+NAME            PROVISIONER             AGE
 ontap-nas-sc    csi.trident.netapp.io   15h
 ----
 
@@ -205,7 +205,7 @@ ontap-nas-sc    csi.trident.netapp.io   15h
 
 === 配置 Volume
 
-建立儲存後端和儲存類別之後、您現在可以配置 Volume 。如需相關指示、請參閱 https://docs.netapp.com/us-en/trident/trident-use/vol-provision.html["配置 Volume"^]。
+建立儲存後端和儲存類別之後、您現在可以配置 Volume 。請參閱以下說明 https://docs.netapp.com/us-en/trident/trident-use/vol-provision.html["資源配置"^]。
 
 
 
@@ -390,4 +390,4 @@ anf-sc-nfs    csi.trident.netapp.io   15h
 
 === 配置 Volume
 
-建立儲存後端和儲存類別之後、您現在可以配置 Volume 。如需相關指示、請參閱 https://docs.netapp.com/us-en/trident/trident-use/vol-provision.html["配置 Volume"^]。
+建立儲存後端和儲存類別之後、您現在可以配置 Volume 。請參閱以下說明 https://docs.netapp.com/us-en/trident/trident-use/vol-provision.html["資源配置"^]。

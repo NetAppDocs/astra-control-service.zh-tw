@@ -120,7 +120,7 @@ NOTE: 在複製作業期間、需要IngresClass資源或Webhooks才能正常運�
 
 . 移除任何現有的 Snapshot CRD 和任何現有的 Snapshot 控制器。
 . https://docs.netapp.com/us-en/trident/trident-managing-k8s/uninstall-trident.html["解除安裝Astra Trident"^]。
-. https://docs.netapp.com/us-en/trident/trident-use/vol-snapshots.html#deploying-a-volume-snapshot-controller["安裝 Snapshot CRD 和 Snapshot 控制器"^]。
+. https://docs.netapp.com/us-en/trident/trident-use/vol-snapshots.html#deploy-a-volume-snapshot-controller["安裝 Snapshot CRD 和 Snapshot 控制器"^]。
 . https://docs.netapp.com/us-en/trident/trident-get-started/kubernetes-deploy.html["安裝最新的 Astra Trident 版本"^]。
 . https://docs.netapp.com/us-en/trident/trident-use/vol-snapshots.html#step-1-create-a-volumesnapshotclass["建立 Volume SnapshotClass"^]。
 

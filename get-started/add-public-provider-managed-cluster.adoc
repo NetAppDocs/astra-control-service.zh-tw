@@ -34,13 +34,13 @@ NOTE: Astra Control Service支援使用Azure Active Directory（Azure AD）進�
 
 登入Astra Control Service之後、您的第一步就是開始管理叢集。將叢集新增至Astra Control Service之前、您必須執行特定工作、並確保叢集符合特定需求。
 
-當您管理 Azure Kubernetes Service 和 Google Kubernetes Engine 叢集時、請注意 Astra Trident 的安裝和生命週期管理有兩個選項：
+當您管理 Azure Kubernetes Service 和 Google Kubernetes Engine 叢集時、請注意 Astra Control Provisioner 的安裝和生命週期管理有兩個選項：
 
-* 您可以使用 Astra Control Service 來自動管理 Astra Trident 的生命週期。為達成此目的、請確定 Astra Trident 未安裝在您要使用 Astra Control Service 管理的叢集上。在這種情況下、 Astra Trident 會在您開始管理叢集時自動安裝 Astra Trident 、而 Astra Trident 升級則會自動處理。
-* 您可以自行管理 Astra Trident 的生命週期。若要執行此作業、請先在叢集上安裝 Astra Trident 、然後再使用 Astra Control Service 管理叢集。在這種情況下、 Astra Control Service 會偵測到 Astra Trident 已經安裝、而且不會重新安裝或管理 Astra Trident 升級。請參閱 https://docs.netapp.com/us-en/trident/trident-get-started/kubernetes-deploy.html["Astra Trident文件"^] 以取得安裝指示。
+* 您可以使用 Astra Control Service 來自動管理 Astra Control Provisioner 的生命週期。為達成此目的、請確定未安裝 Astra Trident 、且 Astra Control Provisioner 未在您要使用 Astra Control Service 管理的叢集上啟用。在這種情況下、 Astra Control Service 會在您開始管理叢集時自動啟用 Astra Control Provisioner 、並自動處理 Astra Control Provisioner 升級。
+* 您可以自行管理 Astra Control 資源配置程式的生命週期。若要執行此作業、請先在叢集上啟用 Astra Control Provisioner 、然後再使用 Astra Control Service 管理叢集。在這種情況下、 Astra Control Service 會偵測到 Astra Control Provisioner 已啟用、而且不會重新安裝或管理 Astra Control Provisioner 升級。請參閱 link:../use/enable-acp.html["啟用 Astra Control Provisioner"^] 針對步驟、請啟用 Astra Control Provisioner 。
 
 
-當您使用 Astra Control Service 管理 Amazon Web Services 叢集時、如果您需要 Astra Trident 啟用的儲存後端、則必須先在叢集上手動安裝 Astra Trident 、然後才能使用 Astra Control Service 進行管理。請參閱 https://docs.netapp.com/us-en/trident/trident-get-started/kubernetes-deploy.html["Astra Trident文件"^] 以取得安裝指示。
+當您使用 Astra Control Service 管理 Amazon Web Services 叢集時、如果您需要的儲存後端只能與 Astra Control Provisioner 搭配使用、則必須先在叢集上手動啟用 Astra Control Provisioner 、然後才能使用 Astra Control Service 進行管理。請參閱 link:../use/enable-acp.html["啟用 Astra Control Provisioner"^] 適用於啟用 Astra Control Provisioner 的步驟。
 
 .開始之前
 [%collapsible%open]
@@ -49,7 +49,7 @@ ifdef::aws[]
 
 .Amazon Web Services
 * 您應該擁有Json檔案、其中包含建立叢集的IAM使用者認證。 link:../get-started/set-up-amazon-web-services.html#create-an-iam-user["瞭解如何建立IAM使用者"]。
-* Amazon FSX for NetApp ONTAP Sfa需要Astra Trident。如果您計畫將Amazon FSX for NetApp ONTAP 功能用作EKS叢集的儲存後端、請參閱中的Astra Trident資訊 link:set-up-amazon-web-services.html#eks-cluster-requirements["EKS叢集需求"]。
+* Amazon FSX for NetApp ONTAP 需要 Astra Control Provisioner 。如果您打算將 Amazon FSX for NetApp ONTAP 作為 EKS 叢集的儲存後端、請參閱中的 Astra Control Provisioner 資訊 link:set-up-amazon-web-services.html#eks-cluster-requirements["EKS叢集需求"]。
 * （選用）如果您需要提供 `kubectl` 叢集的命令存取功能可讓其他不是叢集建立者的IAM使用者存取、請參閱中的指示 https://aws.amazon.com/premiumsupport/knowledge-center/amazon-eks-cluster-access/["如何在Amazon EKS中建立叢集後、提供其他IAM使用者和角色的存取權限？"^]。
 * 如果您計畫將NetApp Cloud Volumes ONTAP 支援作為儲存後端、則需要設定Cloud Volumes ONTAP 支援以搭配Amazon Web Services使用的功能。請參閱Cloud Volumes ONTAP 《The》 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-getting-started-aws.html["設定文件"^]。
 
@@ -79,7 +79,7 @@ endif::gcp[]
 
 ====
 .步驟
-. （選用）如果您要新增 Amazon EKS 叢集、或想要自行管理 Astra Trident 的安裝與升級、請在叢集上安裝 Astra Trident 。請參閱 https://docs.netapp.com/us-en/trident/trident-get-started/kubernetes-deploy.html["Astra Trident文件"^] 以取得安裝指示。
+. （選用）如果您要新增 Amazon EKS 叢集、或想要自行管理 Astra Control Provisioner 的安裝與升級、請在叢集上啟用 Astra Control Provisioner 。請參閱 link:../use/enable-acp.html["啟用 Astra Control Provisioner"^] 以瞭解啟用步驟。
 . 在瀏覽器中開啟 Astra Control Service Web UI 。
 . 在儀表板上、選取*管理Kubernetes叢集*。
 +

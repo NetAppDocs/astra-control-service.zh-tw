@@ -107,7 +107,7 @@ NOTE: 如果您並未開始使用Google Cloud Volumes Service for Google Cloud�
 
 Kubernetes叢集必須符合下列需求、才能從Astra Control Service進行探索和管理。請注意、部分需求僅適用於打算Cloud Volumes Service 將for Google Cloud用作儲存後端的情況。
 
-Kubernetes版本:: 叢集必須執行 1.24 至 1.25 範圍內的 Kubernetes 版本。
+Kubernetes版本:: 叢集必須執行 1.26 至 1.28 範圍內的 Kubernetes 版本。
 映像類型:: 每個工作節點的映像類型必須是 `COS_CONTAINERD`。
 叢集狀態:: 叢集必須以正常狀態執行、且至少有一個線上工作者節點、且在故障狀態下沒有工作節點。
 Google Cloud區域:: 如果您計畫將Cloud Volumes Service 適用於Google Cloud的功能作為儲存後端、叢集必須在中執行 https://cloud.netapp.com/cloud-volumes-global-regions#cvsGc["支援Google Cloud的支援功能的Google Cloud區域Cloud Volumes Service 。"] 請注意、Astra Control Service支援CVS和CVS效能這兩種服務類型。最佳實務做法是、您應該選擇支援Cloud Volumes Service 適用於Google Cloud的地區、即使您不將其用作儲存後端。如果Cloud Volumes Service 效能需求有所改變、那麼在未來、將VMware for Google Cloud用作儲存後端、將會變得更容易。
