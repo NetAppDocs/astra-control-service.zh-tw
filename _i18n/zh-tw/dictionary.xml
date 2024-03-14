@@ -2478,7 +2478,6 @@ Astra Control Service 支援使用下列平台和貯體類型建立不可變的�
   <block id="fa11ed24405872fcaff3d72114365e10" category="list-text">* 如果您已安裝 Astra Trident 、請確認其版本位於四個版本的視窗 * ：如果 Astra Trident 位於 24.02 版的四個版本視窗內、您可以使用 Astra Control Provisioner 直接升級至 Astra Trident 24.02 。例如、您可以直接從 Astra Trident 23.04 升級至 24.02 。</block>
   <block id="bc50f89e7547553ce82affde0adc4c76" category="list-text">（僅限自訂登錄）請依照下列步驟將映像移至自訂登錄。如果您未使用登錄 , 請遵循中的 Trident 運算子步驟 <block ref="d433543a9de56c735bd2827329689b0d" category="inline-xref-macro-rx"></block>。</block>
   <block id="635815058628a337f65c0953162ac32e" category="list-text">使用您最初使用的安裝方法、在 Astra Trident 中啟用 Astra Control Provisioner ：</block>
-  <block id="0666804607fefb21e41712e9a96717d0" category="paragraph">&lt;stdin&gt; 中的 unresolved 指令 - 包括： https://raw.githubusercontent.com/NetAppDocs/astra-control-center/main/_include/enable-acp-options-tabbed-block.adoc[]</block>
   <block id="e1e016d44c99ff12155d4c6ec97b954b" category="paragraph">Astra Control Provisioner 功能已啟用、您可以使用任何適用於所執行版本的功能。</block>
   <block id="bd43fc9501d9e9ddb964eda155be38b8" category="section-title">2024 年 3 月 14 日</block>
   <block id="b13f49c3645a7a864544e5ba028ddf46" category="list-text"><block ref="fe976099507f0433932bc4deb8637ad3" category="inline-link-rx"></block>。</block>
@@ -2550,4 +2549,51 @@ Astra Control Provisioner 取代 Astra Trident 做為 Astra Control 架構中的
   <block id="1ee256dec031da4c8764ac0ab9618006" category="list-text"><block ref="1ee256dec031da4c8764ac0ab9618006" category="inline-link-rx"></block></block>
   <block id="98687150a7223edc47d2aeb5f1686527" category="list-text">* Astra Control Provisioner* ： Astra Control Provisioner* 是由 NetApp 維護的完全支援的儲存資源配置程式與協調程式、其中包含 Astra Trident CSI 功能、以及延伸的儲存管理功能、因此 Astra Control Provisioner 可讓您為由 Docker 和 Kubernetes 管理的容器化應用程式建立儲存磁碟區。當與 Astra Control 一起部署時、 Astra Control Provisioner 會包含已設定的 ONTAP 儲存後端。</block>
   <block id="2411d46a6f92e6f14127f5089d27d8fe" category="admonition">如果您將 CVS 服務類型與 Astra Control Provisioner 搭配使用、則必須先設定儲存資源池、才能配置磁碟區。如果您在未設定儲存資源池的情況下佈建磁碟區、則磁碟區資源配置將會失敗。請參閱<block ref="c8e96960daef0620d62e613312bed1b3" category="inline-link-rx"></block> 以取得有關建立 Volume 的更多資訊。</block>
+  <block id="b88c081e2a4b249f94292c6f7bf16bdc" category="inline-link">下載 Astra Trident 安裝程式並將其解壓縮</block>
+  <block id="f1f44f407a364d092b4a3b446d6593b5" category="list-text"><block ref="5512264baa78f7d10bb082092407833c" category="inline-link-rx"></block>。</block>
+  <block id="b53ea1f6729ee2c1c5dc303c5e9bb360" category="list-text">如果您尚未安裝 Astra Trident 、或是從原始 Astra Trident 部署中移除運算子、請完成下列步驟：</block>
+  <block id="1802fc07d2de18110ae52621540f337e" category="list-text">建立客戶需求日：</block>
+  <block id="b19df824e7baecb971d0fdd39542c6d6" category="list-text">建立 Trident 命名空間 <block ref="a40796e67d7096bdb1a461d9369987ae" prefix="(" category="inline-code"></block>）或確認 Trident 命名空間仍然存在 <block ref="929ac53a7aaa18d0ab7bfd29e3b89c45" prefix="(" category="inline-code"></block>）。如果已移除命名空間、請重新建立。</block>
+  <block id="f8eb25c26ac0064b456c26bd4bb1642b" category="list-text">將 Astra Trident 更新為 24.02.0 ：</block>
+  <block id="84b3a17dd4da0cadee9516d2c742e8e1" category="admonition">對於執行 Kubernetes 1.24 或更早版本的叢集、請使用<block ref="bd2cc8575fe69c7f775292759380c838" prefix=" " category="inline-code"></block>。對於執行 Kubernetes 1.25 或更新版本的叢集、請使用<block ref="5a02ebff4889c2de0379a0fb10bed282" prefix=" " category="inline-code"></block>。</block>
+  <block id="4cf0920f58032b65295d4d0255354879" category="list-text">確認 Astra Trident 正在執行：</block>
+  <block id="70da7fdb746f99191502821d5d3b6d53" category="list-text">[[Pull 機密 ]] 如果您有使用機密的登錄、請建立秘密來拉出 Astra Control Provisioner 映像：</block>
+  <block id="531dc1bead45003a393e1e227a07b0fa" category="list-text">編輯 TridentOrchestrator CR 並進行下列編輯：</block>
+  <block id="c88d85553b81a72e9b28005772f27281" category="list-text">為 Astra Trident 映像設定自訂登錄位置、或從 Astra Control 登錄中拉出 <block ref="c063da0c4010a4b533407346a02dd83c" prefix="(" category="inline-code"></block> 或<block ref="cad26ce67501baab70dd72ffd03b01e6" prefix=" " category="inline-code"></block>）。</block>
+  <block id="8b1959e0a8b41248dad790a861dbfdd9" category="list-text">啟用 Astra Control Provisioner <block ref="b146a884950a14beaf7f7c32ccceea96" prefix="(" category="inline-code"></block>）。</block>
+  <block id="1a94316615bc7bfa28020fb176113eb9" category="list-text">設定 Astra Control Provisioner 映像的自訂登錄位置、或從 Astra Control 登錄中拉出映像 <block ref="6fd47d0a38cf5afec555b659aaed6104" prefix="(" category="inline-code"></block> 或<block ref="3a419c3a7ea2390874c7e355a5180c2e" prefix=" " category="inline-code"></block>）。</block>
+  <block id="9f28a023f26c22c040e88a7f3791d0ed" category="inline-xref">影像拉出秘密</block>
+  <block id="f3a11fe989360f45110df3758e7f0641" category="list-text">如果您已建立 <block ref="565c9dfc4921fbeccbde323bc8a44cad" category="inline-xref-macro-rx"></block> 在本程序稍早的部分、您可以在此設定 <block ref="bafdae7aa6abb1556ef1b0d17efe7509" prefix="(" category="inline-code"></block>）。請使用您在先前步驟中建立的相同名稱密碼名稱。</block>
+  <block id="aa3ae8b6c1e4a29f9314a8bbc401330f" category="list-text">儲存並結束檔案。部署程序將會自動開始。</block>
+  <block id="4f27e6f7f8f95f32f55540801c5f6db0" category="list-text">確認已建立運算子、部署和複本集。</block>
+  <block id="6849b59104c35075b063cf35570fde13" category="admonition">Kubernetes叢集中只應有*一個運算子執行個體*。請勿建立 Astra Trident 運算子的多個部署。</block>
+  <block id="faba39ec34eed502aea6d805d792a9ea" category="list-text">驗證<block ref="49c9f6c98d04c8c76aee7448fd9136ed" prefix=" " category="inline-code"></block> 容器正在執行<block ref="507c6bbca2ad57c69e89a97ee8714536" prefix=" " category="inline-code"></block> 是<block ref="50ce33a86e6915635518e9752cf0a12f" prefix=" " category="inline-code"></block> 狀態為<block ref="98dd43dfae05b11befe1f140e0ec787a" prefix=" " category="inline-code"></block>：</block>
+  <block id="6942401e8cfb1a0fc7b82ec1dcda7d32" category="list-text"><block ref="b0e92e3807bd982cc8fd58230062a04f" category="inline-link-rx"></block>。</block>
+  <block id="a65211330b142f51904ccfb3741cc124" category="inline-link">如果您有現有的 Astra Trident 、請將其從裝載它的叢集上解除安裝</block>
+  <block id="00c4331aab8ed2101088511f96b6af8e" category="list-text"><block ref="f21e19b64d79b0da0ff48729d1b28669" category="inline-link-rx"></block>。</block>
+  <block id="005a56f182fe268e9f6977b39114eab8" category="list-text">在啟用 Astra Control Provisioner 的情況下安裝 Astra Trident <block ref="87d6b9737ff6f9e44e3dd25c182cf495" prefix="(" category="inline-code"></block>）：</block>
+  <block id="152090ff5e9a05ea7e1cf0c248449638" category="open-title">掌舵</block>
+  <block id="fe98497efedbe156ecc4b953aea77e07" category="inline-link">解除安裝</block>
+  <block id="e87cd9f9f3f0bdb5a644fb2aa2415f5b" category="list-text">如果您已安裝 Astra Trident 23.07.1 或更早版本、<block ref="956dce94688d94fac89c002857c93b5d" category="inline-link-rx"></block> 操作員和其他元件。</block>
+  <block id="c35a7e0e7f42e740c64a0b6fdade1fe3" category="list-text">如果 Kubernetes 叢集執行 1.24 或更早版本、請刪除 PSP ：</block>
+  <block id="113fbd468c6aaecfbef57e5d1e9b500d" category="list-text">新增Astra Trident Helm儲存庫：</block>
+  <block id="02cc60ae4326121ce3bc2b5fdb24de58" category="list-text">更新 Helm 圖表：</block>
+  <block id="b0f226ab4f18ed3c3dd4ee74affdea76" category="list-text">列出影像：</block>
+  <block id="730022f38a10156cf22189c69dee095d" category="list-text">確保 Trident 操作員 24.02.0 可用：</block>
+  <block id="70b739f3363e6b3cd5f0c896d90af9c6" category="list-text">使用<block ref="0562418e6d9a76d0dd22b2f186a2203d" prefix=" " category="inline-code"></block> 然後執行下列其中一個選項、其中包括這些設定：</block>
+  <block id="9fe27ee3cf7416ee3af4516cf89a2b4c" category="list-text">部署位置的名稱</block>
+  <block id="8d4c721df5c5b813b86a2d1eb619c735" category="list-text">Astra Trident 版本</block>
+  <block id="7dba4177f42e6622145f408eb88b1cba" category="list-text">Astra Control Provisioner 映像的名稱</block>
+  <block id="7b0fc32fdb3c2378c2c39008d29aaa43" category="list-text">啟用資源配置程式的旗標</block>
+  <block id="37ee7516a84d6949e4e0bde03e129758" category="inline-link">Trident 影像</block>
+  <block id="29e638c426512b56521aa694976562ea" category="list-text">（選用）本機登錄路徑。如果您使用的是本機登錄<block ref="97e5914991475a979ee93ba0d709c399" category="inline-link-rx"></block> 可以位於一個登錄或不同的登錄中、但所有的SCSI映像都必須位於同一個登錄中。</block>
+  <block id="4795c928314a82e5be360b646a3a3aac" category="list-text">Trident 命名空間</block>
+  <block id="dae8ace18bdcbcc6ae5aece263e14fe8" category="list-title">選項</block>
+  <block id="804c8c9903e49e8cab0717f41b883f9a" category="list-text">沒有登錄的映像</block>
+  <block id="c4ffea098f78924a9b9331b8f5e9c8b4" category="list-text">一個登錄中的映像</block>
+  <block id="4847c552b2ff9251806e41c8fa907e19" category="list-text">不同登錄中的映像</block>
+  <block id="d75fdc8e85ddcd7e9dc9f367168dec11" category="paragraph">您可以使用<block ref="cd4140d3de30b520500459331d08d2bf" prefix=" " category="inline-code"></block> 若要檢閱安裝詳細資料、例如名稱、命名空間、圖表、狀態、應用程式版本、和修訂編號。</block>
+  <block id="d09a3f23170df63b9065e78b7eb80224" category="paragraph">如果您在使用 Helm 部署 Trident 時遇到任何問題、請執行此命令以完全解除安裝 Astra Trident ：</block>
+  <block id="3897d04922674a762953f58e38463cb0" category="inline-link">完全移除 Astra Trident 客戶需求日</block>
+  <block id="98709e6abe377fa2083cb4a36ba22ddc" category="paragraph">* 請勿 *<block ref="d47e0c203a38c85d577cb0ed29c7fad1" category="inline-link-rx"></block> 在嘗試再次啟用 Astra Control Provisioner 之前、請先將其作為解除安裝的一部分。</block>
 </blocks>
