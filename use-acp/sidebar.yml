@@ -6,3 +6,5 @@ entries:
   url: "/use-acp/configure-storage-backend-encryption.html"
 - title: 使用快照恢復 Volume 資料
   url: "/use-acp/acp-snap-restore.html"
+- title: 使用 SnapMirror 複寫磁碟區
+  url: "/use-acp/acp-volume-replicate.html"
