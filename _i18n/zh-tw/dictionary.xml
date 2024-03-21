@@ -1429,10 +1429,8 @@
   <block id="6d55356ca8cb9b27cfa6e2bb46ebb089" category="paragraph">回應範例：</block>
   <block id="5f85438ae0f2c9122a5cf54e8e098c98" category="list-text">建立服務帳戶、如下所示：</block>
   <block id="4ab759267d2877902a521921e10f5f5b" category="list-text">建立名為的服務帳戶檔案<block ref="a22dad5601b31427598f571133fb2aed" prefix=" " category="inline-code"></block>。</block>
-  <block id="210c5331ab46caa141e6ac9d5aeb1bee" category="paragraph">視需要調整名稱和命名空間。如果在此處進行變更、您應該在下列步驟中套用相同的變更。</block>
   <block id="605443509a67749999ab3b0d3ba43e8b" category="list-text">套用服務帳戶：</block>
   <block id="b29afe741178d8d4966c07c97f9892db" category="list-text">建立<block ref="e866afd8290d5c73cda6260e04e6eef0" prefix=" " category="inline-code"></block> 檔案已呼叫<block ref="79e1486667eff2c5e1915f58701f3a18" prefix=" " category="inline-code"></block>。</block>
-  <block id="51980eaff0de60f578593fb8ae77f9b3" category="paragraph">視需要在建立服務帳戶時調整任何已修改的名稱和命名空間。</block>
   <block id="c6c2bc2133c73ae2516508de9a2b5869" category="list-text">套用叢集角色繫結：</block>
   <block id="f087976277d273660b942918b43af841" category="paragraph">輸出的結尾應類似於下列內容：</block>
   <block id="d3727d544efa902d0381ec79cec3d488" category="list-text">產生以下的Kbeconfig：</block>
@@ -1943,10 +1941,8 @@
   <block id="0c4c0773122e9387cad53cff8068b18b" category="list-text">擷取權杖密碼：</block>
   <block id="84233ef8b39305d023ce1d5e237bbe9d" category="list-text">更換<block ref="ee11cbb19052e40b07aac0ca060c23ee" prefix=" " category="inline-code"></block> AWS EKS Kubeconfig 檔案的區段與 Token 、如下列範例所示：</block>
   <block id="393c821bd73b2367663c50c77fd00df6" category="section-title">為其他類型的叢集建立一個 kubeconfig 檔案</block>
-  <block id="2b30723c9e7134241d748eae9faa73a6" category="paragraph">請依照下列指示、為 Rancher 、上游 Kubernetes 和 Red Hat OpenShift 叢集建立一個 Kubeconfig 檔案。</block>
   <block id="e6bab5933e86bee96753d8079fcceaed" category="section-title">2023 年 6 月 26 日</block>
   <block id="b77235e640ab8b5a90390081c423e880" category="list-text">Azure Marketplace 訂閱現在以每小時計費、而非每分鐘計費</block>
-  <block id="972d9f8e0e28ff88864515cf37f116b2" category="paragraph">在開始之前、請確定機器上已安裝下列項目：</block>
   <block id="30136395f01879792198317c11831ea4" category="inline-link">Kubernetes</block>
   <block id="501a7b3c879675fb528c68e904b076d1" category="list-text">* 檢查目的地 Volume * ：如果您還原至不同的儲存類別、請確定儲存類別使用相同的持續磁碟區存取模式（例如 ReadWriteMany ）。如果目的地持續磁碟區存取模式不同、還原作業將會失敗。例如、如果來源持續性磁碟區使用 rwx 存取模式、請選取無法提供 rwx 的目的地儲存類別、例如 Azure Managed Disks 、 AWS EBS 、 Google Persistent Disk 或<block ref="73a3350a1b91aeb6e2836fdf5975672c" prefix=" " category="inline-code"></block>將導致還原作業失敗。如需持續磁碟區存取模式的詳細資訊、請參閱<block ref="051768f02ea3f9f1a6b86b9d9b060248" category="inline-link-rx"></block> 文件。</block>
   <block id="0f707c2e2c303edecbc57b2a451ad8a9" category="list-text">* 檢查目的地 Volume * ：如果您複製到不同的儲存類別、請確定儲存類別使用相同的持續磁碟區存取模式（例如 ReadWriteMany ）。如果目的地持續磁碟區存取模式不同、則複製作業將會失敗。例如、如果來源持續性磁碟區使用 rwx 存取模式、請選取無法提供 rwx 的目的地儲存類別、例如 Azure Managed Disks 、 AWS EBS 、 Google Persistent Disk 或<block ref="73a3350a1b91aeb6e2836fdf5975672c" prefix=" " category="inline-code"></block>，將導致克隆操作失敗。如需持續磁碟區存取模式的詳細資訊、請參閱<block ref="051768f02ea3f9f1a6b86b9d9b060248" category="inline-link-rx"></block> 文件。</block>
@@ -2067,18 +2063,13 @@
   <block id="c49be33f592950e78d23dd417a4a75e5" category="list-text">使用叢集管理權限來管理作用中內容的叢集的作用中KECBEConfig</block>
   <block id="565bfe8a9451afd10f3c41fe9fa4cf22" category="list-text">建立服務帳戶：</block>
   <block id="5a20342984ee9d605acb505095dbcd0a" category="list-text">為要由 Astra Control 管理的叢集建立具有足夠權限的下列叢集角色之一：</block>
-  <block id="0b696bdc9519b9e33f740fc665813fa2" category="list-text">* 有限叢集角色 * ：此角色包含由 Astra Control 管理叢集所需的最低權限：</block>
-  <block id="00b512051a8fb53936e77b3e435be5d9" category="example-title">展開步驟</block>
   <block id="d2c5b496305d8a36011fc2b1e55dcde3" category="list-text">建立<block ref="d7d354d0f9d0780e168c895c92a32c24" prefix=" " category="inline-code"></block> 例如、<block ref="b7bb4a27d91c967fbba0bb19f36a3533" prefix=" " category="inline-code"></block>。</block>
-  <block id="929489f64fa726fbcdd3058dc505444e" category="list-text">（僅適用於 OpenShift 叢集）如果您要為 OpenShift 叢集建立 kubeconfig 、請取消註解中的最後幾行<block ref="b7bb4a27d91c967fbba0bb19f36a3533" prefix=" " category="inline-code"></block> 之後的檔案<block ref="7da59f03b6be2daf1bf5fd19ecc78050" prefix=" " category="inline-code"></block> 區段：</block>
   <block id="d2f7aa8c006dd5e0b027cb6e32926a4e" category="list-text">套用叢集角色：</block>
-  <block id="558249c196c0445933dcab3f8c5ccf78" category="list-text">* 擴充叢集角色 * ：此角色包含 Astra Control 所管理叢集的擴充權限。如果您使用多個內容範圍、且無法使用安裝期間設定的預設 Astra Control Kbeconfig 、或是具有單一內容的有限角色無法在您的環境中運作、則可以使用此角色：</block>
   <block id="5e2febea168e23172b29251a6258dec8" category="admonition">以下內容<block ref="d7d354d0f9d0780e168c895c92a32c24" prefix=" " category="inline-code"></block> 步驟是 Kubernetes 的一般範例。請參閱 Kubernetes 散佈文件、以取得特定於您環境的指示。</block>
   <block id="a30ca90c640932dfa98b3ac560bb10ab" category="list-text">建立叢集角色與服務帳戶的叢集角色繫結：</block>
   <block id="c1865e8db7245bcc1648e67fb250eba4" category="list-text">建立並套用權杖密碼：</block>
   <block id="11afc91177361b2eafbbec4287518195" category="list-text">建立一個稱為的權杖秘密檔案<block ref="7cdd7450df0359169a360b93d3cb369f" prefix=" " category="inline-code"></block>。</block>
   <block id="9c8324622cc9e060ba0702fa13261b48" category="list-text">將權杖密碼新增至服務帳戶、將其名稱新增至<block ref="7de38f3c3d3baa7ca58a366f09577586" prefix=" " category="inline-code"></block> Array （以下範例中的最後一行）：</block>
-  <block id="4dc4c64180b058c5c9c94b6a7886e5f1" category="paragraph">中每個元素的索引<block ref="7de38f3c3d3baa7ca58a366f09577586" prefix=" " category="inline-code"></block> 陣列開頭為0。在上述範例中、索引為<block ref="b91e4862bb487ade8bbd4f9eefe0618e" prefix=" " category="inline-code"></block> 將為0、索引則為<block ref="ce8dd462bb623b9902ba4f0151eb2f1b" prefix=" " category="inline-code"></block> 應該是1。在輸出中、記下服務帳戶密碼的索引編號。您在下一個步驟中需要此索引編號。</block>
   <block id="28f4058b3debe49781dd1cccb1354c1e" category="list-text">（選用）將Kbeconfig重新命名為有意義的叢集名稱。</block>
   <block id="9c49078ac4ccf12dfc1098df25ab224d" category="paragraph">不可以計費從您升級至優質方案開始算起。</block>
   <block id="c16414f27a3fbc340c306e2dd0fa7d5d" category="paragraph">是的、您將需要支付雲端供應商叢集使用的持續磁碟區費用。</block>
@@ -2399,7 +2390,6 @@
   <block id="758aed03fde11e3337f4a8ddce7d4f37" category="admonition">在 NFSv4 磁碟區時使用 Kerberos 進行中加密時、請確定 NFSv4 磁碟區使用的是正確的設定。請參閱的「 NetApp NFSv4 網域組態」一節（第 13 頁）<block ref="fcbfe3012009d21ef9ba8407142f85b6" category="inline-link-rx"></block>。</block>
   <block id="9e586fb8e7af6f105f029bce05abcad4" category="section-title">刪除保留原則過期的貯體後、備份資料仍保留在貯體中</block>
   <block id="03281739854e4951c0f98529e54a24f2" category="sidebar">使用 Astra Control Provisioner</block>
-  <block id="49219ed727d5145cd828958ebce847fa" category="list-text">kubectl v1.26 或更新版本已安裝</block>
   <block id="3c4db63c6115c69942c67f6b04d8e645" category="paragraph">如果您在貯體保留原則過期後刪除應用程式的不可變備份、則備份會從 Astra Control 刪除、但不會從貯體中刪除。此問題將在即將發行的版本中修正。</block>
   <block id="9d7917a6e561386b201cda34e605d752" category="paragraph"><block ref="9d7917a6e561386b201cda34e605d752" category="inline-link-macro-rx"></block></block>
   <block id="3fcb22d3c98c7c79f0727de1eb084b1e" category="list-text">* 不可變備份 * ： Astra Control 現在支援 <block ref="fe44ae92696e57533e10ffb7636ff94a" category="inline-link-macro-rx"></block> 成為可抵禦惡意軟體和其他威脅的額外安全層。</block>
@@ -2590,8 +2580,6 @@ Astra Control Provisioner 取代 Astra Trident 做為 Astra Control 架構中的
   <block id="4795c928314a82e5be360b646a3a3aac" category="list-text">Trident 命名空間</block>
   <block id="dae8ace18bdcbcc6ae5aece263e14fe8" category="list-title">選項</block>
   <block id="804c8c9903e49e8cab0717f41b883f9a" category="list-text">沒有登錄的映像</block>
-  <block id="c4ffea098f78924a9b9331b8f5e9c8b4" category="list-text">一個登錄中的映像</block>
-  <block id="4847c552b2ff9251806e41c8fa907e19" category="list-text">不同登錄中的映像</block>
   <block id="d75fdc8e85ddcd7e9dc9f367168dec11" category="paragraph">您可以使用<block ref="cd4140d3de30b520500459331d08d2bf" prefix=" " category="inline-code"></block> 若要檢閱安裝詳細資料、例如名稱、命名空間、圖表、狀態、應用程式版本、和修訂編號。</block>
   <block id="d09a3f23170df63b9065e78b7eb80224" category="paragraph">如果您在使用 Helm 部署 Trident 時遇到任何問題、請執行此命令以完全解除安裝 Astra Trident ：</block>
   <block id="3897d04922674a762953f58e38463cb0" category="inline-link">完全移除 Astra Trident 客戶需求日</block>
@@ -2675,4 +2663,24 @@ Astra Control Provisioner 取代 Astra Trident 做為 Astra Control 架構中的
   <block id="4eecab048a7c90cfb92e0f04884686e8" category="section-title">當 ONTAP 離線時更新鏡射關係</block>
   <block id="e3b68b1c19a14af5fcb94e147290aec6" category="paragraph">您可以使用 CRD 來執行 SnapMirror 更新、而無需 Astra Control 直接連線至 ONTAP 叢集。請參閱下列 TridentActionMirrorUpdate 範例格式：</block>
   <block id="bc08468157c4a9e3a30eed7ba64cc309" category="paragraph"><block ref="1f9dfae8a369525bce4996df40963532" prefix="" category="inline-code"></block> 反映 TridentActionMirrorUpdate CRD 的狀態。它可以取自 _sued_ 、 _in progress_ 或 _Failed_ 的值。</block>
+  <block id="3e10c4dd91af2dc1835b50343bc5fbd0" category="list-text">一個或多個登錄中的影像</block>
+  <block id="0c7c921ada3cbbcba19a21fa3f908e76" category="paragraph">請依照下列指示、為 Rancher 、上游 Kubernetes 和 Red Hat OpenShift 叢集建立有限或擴充的角色 kubeconfig 檔案。</block>
+  <block id="da47e8602567190062ec46757d8008b5" category="paragraph">對於使用 kubeconfig 管理的叢集、您可以選擇性地為 Astra Control Service 建立有限權限或擴充權限管理員角色。</block>
+  <block id="68745652f0af53baa161bea4f62fb73c" category="paragraph">如果下列任一情況適用於您的環境、本程序可協助您建立個別的 Kubleconfig ：</block>
+  <block id="78c177d59986391da5ddcec775dfc373" category="list-text">您想要限制其管理叢集的 Astra Control 權限</block>
+  <block id="6d71102c1ab33d36986e4d5b5545a278" category="list-text">您使用多個內容範圍、無法使用安裝期間設定的預設 Astra Control Kbeconfig 、或是具有單一內容的受限角色、都無法在您的環境中運作</block>
+  <block id="2691c8d1f292681c444c4ccb255290d3" category="paragraph">在完成程序步驟之前、請確定您要管理的叢集具備下列項目：</block>
+  <block id="989f15ab4fafcbe33b5c793f7c17921f" category="inline-link-macro">支援的版本</block>
+  <block id="4e83b5c233591816a508994f3e122ee6" category="list-text">答 <block ref="c838ece7714ec2fb9994f5b6fc5dba70" category="inline-link-macro-rx"></block> 已安裝 kubectl 。</block>
+  <block id="0a2bc83852a032a14ba97276f44576a3" category="list-text">使用 Astra Control Service 存取您想要新增及管理的叢集</block>
+  <block id="87c1d3b1af02b76a8ea6cc975f5e9d22" category="admonition">在本程序中、您不需要對執行 Astra Control Service 的叢集進行 kubectl 存取。</block>
+  <block id="821d16d291e1c446281bf26a1f161ce3" category="open-title">有限的叢集角色</block>
+  <block id="22ebdb40791f129f5c31cde00c7f4eab" category="paragraph">此角色包含 Astra Control 管理叢集所需的最低權限：</block>
+  <block id="03af53c262f33cd7a040764e24c068eb" category="list-text">（僅限 OpenShift 叢集）在的結尾處附加下列項目<block ref="b7bb4a27d91c967fbba0bb19f36a3533" prefix=" " category="inline-code"></block> 檔案：</block>
+  <block id="10a5da7af2547b1937abcbf640714c8f" category="open-title">擴充叢集角色</block>
+  <block id="f35854a1b62a4d6417a44ff5456f2776" category="paragraph">此角色包含將由 Astra Control 管理之叢集的擴充權限。如果您使用多個內容範圍、且無法使用安裝期間設定的預設 Astra Control Kbeconfig 、或是具有單一內容的有限角色無法在您的環境中運作、則可以使用此角色：</block>
+  <block id="b6e00a7dda090ccd5afd1c904d80548c" category="list-text">列出取代的服務帳戶機密<block ref="af16c4db277e0498b5fa9e30613367f1" prefix=" " category="inline-code"></block> 正確的安裝環境：</block>
+  <block id="8af6183c9bdfc7399cee2ffcfafecbd2" category="paragraph">中每個元素的索引<block ref="7de38f3c3d3baa7ca58a366f09577586" prefix=" " category="inline-code"></block> 陣列開頭為0。在上述範例中、索引為<block ref="b91e4862bb487ade8bbd4f9eefe0618e" prefix=" " category="inline-code"></block> 將為0、索引則為<block ref="ce8dd462bb623b9902ba4f0151eb2f1b" prefix=" " category="inline-code"></block> 應該是1。在輸出中、記下服務帳戶密碼的索引編號。您在下一個步驟中需要此索引編號。</block>
+  <block id="a40c084314b74a686572312dc71c4738" category="list-text">建立<block ref="3d3f9b7a5974a7898593a3d2f5549f15" prefix=" " category="inline-code"></block> 檔案：</block>
+  <block id="23ed633c6130c18f08608b6efce84dc4" category="list-text">更換<block ref="089d02fba2ffcdb49a91320ff506dfa3" prefix=" " category="inline-code"></block> 在下列指令碼開頭、使用正確的值。</block>
 </blocks>
