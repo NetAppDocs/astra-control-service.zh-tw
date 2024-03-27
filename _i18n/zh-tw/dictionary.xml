@@ -2551,7 +2551,6 @@ Astra Control Provisioner 取代 Astra Trident 做為 Astra Control 架構中的
   <block id="531dc1bead45003a393e1e227a07b0fa" category="list-text">編輯 TridentOrchestrator CR 並進行下列編輯：</block>
   <block id="c88d85553b81a72e9b28005772f27281" category="list-text">為 Astra Trident 映像設定自訂登錄位置、或從 Astra Control 登錄中拉出 <block ref="c063da0c4010a4b533407346a02dd83c" prefix="(" category="inline-code"></block> 或<block ref="cad26ce67501baab70dd72ffd03b01e6" prefix=" " category="inline-code"></block>）。</block>
   <block id="8b1959e0a8b41248dad790a861dbfdd9" category="list-text">啟用 Astra Control Provisioner <block ref="b146a884950a14beaf7f7c32ccceea96" prefix="(" category="inline-code"></block>）。</block>
-  <block id="1a94316615bc7bfa28020fb176113eb9" category="list-text">設定 Astra Control Provisioner 映像的自訂登錄位置、或從 Astra Control 登錄中拉出映像 <block ref="6fd47d0a38cf5afec555b659aaed6104" prefix="(" category="inline-code"></block> 或<block ref="3a419c3a7ea2390874c7e355a5180c2e" prefix=" " category="inline-code"></block>）。</block>
   <block id="9f28a023f26c22c040e88a7f3791d0ed" category="inline-xref">影像拉出秘密</block>
   <block id="f3a11fe989360f45110df3758e7f0641" category="list-text">如果您已建立 <block ref="565c9dfc4921fbeccbde323bc8a44cad" category="inline-xref-macro-rx"></block> 在本程序稍早的部分、您可以在此設定 <block ref="bafdae7aa6abb1556ef1b0d17efe7509" prefix="(" category="inline-code"></block>）。請使用您在先前步驟中建立的相同名稱密碼名稱。</block>
   <block id="aa3ae8b6c1e4a29f9314a8bbc401330f" category="list-text">儲存並結束檔案。部署程序將會自動開始。</block>
@@ -2683,4 +2682,5 @@ Astra Control Provisioner 取代 Astra Trident 做為 Astra Control 架構中的
   <block id="8af6183c9bdfc7399cee2ffcfafecbd2" category="paragraph">中每個元素的索引<block ref="7de38f3c3d3baa7ca58a366f09577586" prefix=" " category="inline-code"></block> 陣列開頭為0。在上述範例中、索引為<block ref="b91e4862bb487ade8bbd4f9eefe0618e" prefix=" " category="inline-code"></block> 將為0、索引則為<block ref="ce8dd462bb623b9902ba4f0151eb2f1b" prefix=" " category="inline-code"></block> 應該是1。在輸出中、記下服務帳戶密碼的索引編號。您在下一個步驟中需要此索引編號。</block>
   <block id="a40c084314b74a686572312dc71c4738" category="list-text">建立<block ref="3d3f9b7a5974a7898593a3d2f5549f15" prefix=" " category="inline-code"></block> 檔案：</block>
   <block id="23ed633c6130c18f08608b6efce84dc4" category="list-text">更換<block ref="089d02fba2ffcdb49a91320ff506dfa3" prefix=" " category="inline-code"></block> 在下列指令碼開頭、使用正確的值。</block>
+  <block id="1e402f84b3c57afa8aaf19779147556d" category="list-text">設定 Astra Control Provisioner 映像的自訂登錄位置、或從 Astra Control 登錄中拉出映像 <block ref="6fd47d0a38cf5afec555b659aaed6104" prefix="(" category="inline-code"></block> 或<block ref="e419be77a3ebdbec678982ec1d2d40b2" prefix=" " category="inline-code"></block>）。</block>
 </blocks>

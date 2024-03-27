@@ -81,7 +81,7 @@ NOTE: 所擷取的映像不支援多個平台、而且僅支援與擷取映像�
 +
 [source, console]
 ----
-docker pull cr.astra.netapp.io/trident-acp:24.02.0 --platform <cluster platform>
+docker pull cr.astra.netapp.io/astra/trident-acp:24.02.0 --platform <cluster platform>
 ----
 +
 範例：
@@ -89,13 +89,13 @@ docker pull cr.astra.netapp.io/trident-acp:24.02.0 --platform <cluster platform>
 +
 [listing]
 ----
-docker pull cr.astra.netapp.io/trident-acp:24.02.0 --platform linux/amd64
+docker pull cr.astra.netapp.io/astra/trident-acp:24.02.0 --platform linux/amd64
 ----
 .. 標記影像：
 +
 [source, console]
 ----
-docker tag cr.astra.netapp.io/trident-acp:24.02.0 <my_custom_registry>/trident-acp:24.02.0
+docker tag cr.astra.netapp.io/astra/trident-acp:24.02.0 <my_custom_registry>/trident-acp:24.02.0
 ----
 .. 將映像推送至自訂登錄：
 +
@@ -112,7 +112,7 @@ docker push <my_custom_registry>/trident-acp:24.02.0
 +
 [source, crane]
 ----
-crane copy cr.astra.netapp.io/trident-acp:24.02.0 <my_custom_registry>/trident-acp:24.02.0
+crane copy cr.astra.netapp.io/astra/trident-acp:24.02.0 <my_custom_registry>/trident-acp:24.02.0
 ----
 
 
@@ -177,7 +177,7 @@ kubectl edit torc trident -n trident
 +
 ... 為 Astra Trident 映像設定自訂登錄位置、或從 Astra Control 登錄中拉出 (`tridentImage: <my_custom_registry>/trident:24.02.0` 或 `tridentImage: netapp/trident:24.02.0`）。
 ... 啟用 Astra Control Provisioner (`enableACP: true`）。
-... 設定 Astra Control Provisioner 映像的自訂登錄位置、或從 Astra Control 登錄中拉出映像 (`acpImage: <my_custom_registry>/trident-acp:24.02.0` 或 `acpImage: cr.astra.netapp.io/trident-acp:24.02.0`）。
+... 設定 Astra Control Provisioner 映像的自訂登錄位置、或從 Astra Control 登錄中拉出映像 (`acpImage: <my_custom_registry>/trident-acp:24.02.0` 或 `acpImage: cr.astra.netapp.io/astra/trident-acp:24.02.0`）。
 ... 如果您已建立 <<pull-secrets,影像拉出秘密>> 在本程序稍早的部分、您可以在此設定 (`imagePullSecrets: - <secret_name>`）。請使用您在先前步驟中建立的相同名稱密碼名稱。
 
 
@@ -345,7 +345,7 @@ netapp-trident/trident-operator 100.2402.0      24.02.0         A
 
 [listing]
 ----
-helm install trident netapp-trident/trident-operator --version 100.2402.0 --set acpImage=cr.astra.netapp.io/trident-acp:24.02.0 --set enableACP=true --set operatorImage=netapp/trident-operator:24.02.0 --set tridentAutosupportImage=docker.io/netapp/trident-autosupport:24.02 --set tridentImage=netapp/trident:24.02.0 --namespace trident
+helm install trident netapp-trident/trident-operator --version 100.2402.0 --set acpImage=cr.astra.netapp.io/astra/trident-acp:24.02.0 --set enableACP=true --set operatorImage=netapp/trident-operator:24.02.0 --set tridentAutosupportImage=docker.io/netapp/trident-autosupport:24.02 --set tridentImage=netapp/trident:24.02.0 --namespace trident
 ----
 ** 一個或多個登錄中的影像
 
