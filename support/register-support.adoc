@@ -27,7 +27,7 @@ Astra Control包含「Support Status（支援狀態）」欄位、可讓您確�
 「支援狀態」會從「未登錄」開始、然後移至「進行中」、最後在完成後移至「已登錄」。
 
 +
-此支援登錄狀態每15分鐘輪詢一次。新的NetApp客戶可能需要下一個營業日才能完成就職與支援註冊。如果序號在48小時內未顯示「已登錄」、您可以使用astra.feedback@netapp.com聯絡NetApp、或從手動登錄 https://register.netapp.com[]。
+此支援登錄狀態每15分鐘輪詢一次。新的 NetApp 客戶可能需要等到下一個營業日才能完成就職與支援註冊。如果序號在48小時內未顯示「已登錄」、您可以使用astra.feedback@netapp.com聯絡NetApp、或從手動登錄 https://register.netapp.com[]。
 
 
 
@@ -56,21 +56,19 @@ NetApp序號代表您的Astra Control帳戶。開啟網路票證時、您需要�
 === 選項1：目前擁有現有NetApp支援網站（NSS）帳戶的NetApp客戶
 
 .步驟
-. 瀏覽至 https://register.netapp.com["雲端資料服務支援註冊"^] 頁面以建立一個新的nss.
+. 瀏覽至 https://register.netapp.com["雲端資料服務支援註冊"^] 頁面。
 . 選擇*我已註冊為NetApp客戶*。
 . 輸入您的NetApp支援網站認證資料以登入。
 +
-此時會顯示「現有客戶註冊」頁面。
-
-+
-image:screenshot-existing-registration.gif["現有客戶註冊表"]
+此時將顯示現有的客戶註冊頁面。
 
 . 填寫表單上的必要資訊：
 +
 .. 輸入您的姓名、公司和電子郵件地址。
-.. 選擇* Astra *作為產品線。
+.. 選擇 * Astra Control Service* 作為產品線。
+.. 選擇帳單供應商。
 .. 輸入您的序號。
-.. 選擇*提交註冊*。
+.. 選擇*提交*。
 
 
 
@@ -85,20 +83,20 @@ image:screenshot-existing-registration.gif["現有客戶註冊表"]
 === 選項2：沒有現有NetApp支援網站（NSS）帳戶的新NetApp客戶
 
 .步驟
-. 瀏覽至 https://register.netapp.com["雲端資料服務支援註冊"^] 頁面以建立一個新的nss.
+. 瀏覽至 https://register.netapp.com["雲端資料服務支援註冊"^] 頁面。
 . 選擇*我不是NetApp註冊客戶*。
 +
 隨即顯示「新客戶註冊」頁面。
 
-+
-image:screenshot-new-registration.gif["新客戶註冊表"]
-
 . 填寫表單上的必要資訊：
 +
-.. 輸入您的姓名和公司資訊。
-.. 選擇* Astra *作為產品線。
+.. 輸入您的姓名、公司資訊和聯絡詳細資料。
+.. 選擇 * Astra Control Service* 作為產品線。
+.. 選擇帳單供應商。
 .. 輸入您的序號。
-.. 選擇*提交註冊*。
+.. 輸入 captcha 值。
+.. 選取核取方塊以確認您已閱讀 NetApp 隱私權政策。
+.. 選擇*提交*。
 +
 您將收到您提交的註冊確認電子郵件。如果沒有發生錯誤、您將會被重新導向至「已成功提交登錄」頁面。您也會在一小時內收到一封電子郵件、指出「您的產品現在已符合支援資格」。
 
