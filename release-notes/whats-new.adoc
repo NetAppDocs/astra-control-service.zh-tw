@@ -329,7 +329,8 @@ endif::azure[]
 
 此版本包含下列新功能與增強功能。
 
-* Astra Control Center Astra Control現已推出全新部署模式。_Astra Control Center_是您在資料中心安裝及操作的自我管理軟體、可讓您管理內部部署Kubernetes叢集的Kubernetes應用程式生命週期管理。
+* Astra控制中心
+Astra Control現已推出新的部署模式。_Astra Control Center_ 是自行管理的軟體、可在資料中心內安裝及運作、以便管理 Kubernetes 應用程式生命週期管理、以供內部部署 Kubernetes 叢集使用。
 +
 若要深入瞭解、 https://docs.netapp.com/us-en/astra-control-center["前往Astra Control Center文件"^]。
 
