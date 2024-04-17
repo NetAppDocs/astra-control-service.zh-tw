@@ -1,0 +1,63 @@
+---
+sidebar: sidebar 
+permalink: use/back-up-full-cluster.html 
+keywords: backup, back up, backup apps, back up apps, take a backup, schedule backups, full, full backup, cluster backup, cluster, namespace, label, labels, namespaces 
+summary: 透過排程完整叢集備份來保護您的應用程式、以保護叢集上的所有命名空間。 
+---
+= [ 技術預覽 ] 保護整個叢集
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/use/
+
+
+[role="lead"]
+您可以在叢集上建立任何或所有未受管理命名空間的排程自動備份。這些工作流程是由 NetApp 提供、以 Kubernetes 服務帳戶、角色繫結和 cron 工作的形式、並以 Python 指令碼協調。
+
+
+
+== 運作方式
+
+當您設定及安裝完整叢集備份工作流程時、 cron 工作會定期執行、並保護任何尚未受管理的命名空間、並根據您在安裝期間選擇的排程自動建立保護原則。
+
+如果您不想使用完整叢集備份工作流程來保護叢集上的每個非託管命名空間、您可以改用標籤型備份工作流程。標籤型備份工作流程也使用 cron 工作、但它並未保護所有未受管理的命名空間、而是根據您提供的標籤來識別命名空間、以選擇性地保護以銅級、銀級或金級備份原則為基礎的命名空間。
+
+當建立屬於所選工作流程範圍的新命名空間時、它會自動受到保護、無需任何系統管理員動作。這些工作流程是以每個叢集為基礎來實作、因此不同的叢集可以使用具有獨特保護層級的任一工作流程、視叢集重要性而定。
+
+.範例：完整叢集保護
+舉例來說、當您設定並安裝完整叢集備份工作流程時、任何命名空間中的任何應用程式都會定期受到管理和保護、而無需管理員進一步努力。在您安裝工作流程時、命名空間不一定存在；如果在未來新增命名空間、它將受到保護。
+
+.範例：標籤式保護
+為了更精細、您可以使用標籤型工作流程。例如、您可以安裝此工作流程、並告知使用者將多個標籤之一套用至他們想要保護的任何命名空間、視他們所需的保護層級而定。這可讓使用者使用其中一個標籤來建立命名空間、而無需通知系統管理員。他們的新命名空間及其中的所有應用程式都會自動受到保護。
+
+
+
+== 建立所有命名空間的排程備份
+
+您可以使用完整叢集備份工作流程、在叢集上建立所有命名空間的排程備份。
+
+.步驟
+. 將下列檔案下載到具有叢集網路存取權的電腦：
++
+** https://raw.githubusercontent.com/NetApp/netapp-astra-toolkits/main/examples/fullcluster-backup/components.yaml["components 。 yaml CRD 檔案"]
+** https://raw.githubusercontent.com/NetApp/netapp-astra-toolkits/main/examples/fullcluster-backup/protectCluster.py["protectCluster.py Python 指令碼"]
+
+
+. 若要設定及安裝工具組、 https://github.com/NetApp/netapp-astra-toolkits/blob/main/examples/fullcluster-backup/README.md["請遵循隨附的指示"^]。
+
+
+
+
+== 建立特定命名空間的排程備份
+
+您可以使用標籤型備份工作流程、根據特定命名空間的標籤來建立排程備份。
+
+.步驟
+. 將下列檔案下載到具有叢集網路存取權的電腦：
++
+** https://raw.githubusercontent.com/NetApp/netapp-astra-toolkits/main/examples/labelbased-backup/components.yaml["components 。 yaml CRD 檔案"]
+** https://raw.githubusercontent.com/NetApp/netapp-astra-toolkits/main/examples/labelbased-backup/protectCluster.py["protectCluster.py Python 指令碼"]
+
+
+. 若要設定及安裝工具組、 https://github.com/NetApp/netapp-astra-toolkits/blob/main/examples/labelbased-backup/README.md["請遵循隨附的指示"^]。
+

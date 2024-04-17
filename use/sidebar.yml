@@ -10,6 +10,8 @@ entries:
     url: "/use/manage-apps.html"
   - title: 保護應用程式
     url: "/use/protect-apps.html"
+  - title: 保護整個叢集
+    url: "/use/back-up-full-cluster.html"
   - title: 還原應用程式
     url: "/use/restore-apps.html"
   - title: 複製及移轉應用程式

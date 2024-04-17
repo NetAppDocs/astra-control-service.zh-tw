@@ -2683,4 +2683,30 @@ Astra Control Provisioner 取代 Astra Trident 做為 Astra Control 架構中的
   <block id="931459f37abea3d820afa0fcf0ecfef7" category="list-text">Astra控制中心
 Astra Control現已推出新的部署模式。_Astra Control Center_ 是自行管理的軟體、可在資料中心內安裝及運作、以便管理 Kubernetes 應用程式生命週期管理、以供內部部署 Kubernetes 叢集使用。</block>
   <block id="b4cdc34d8767d1d4b7a24fbb97a1d8a7" category="paragraph"><block ref="b4cdc34d8767d1d4b7a24fbb97a1d8a7" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="a1932721112c7fa6e0a220f8d12316b9" category="summary">透過排程完整叢集備份來保護您的應用程式、以保護叢集上的所有命名空間。</block>
+  <block id="71a086a5ae784c9162639b628b47f232" category="doc">[ 技術預覽 ] 保護整個叢集</block>
+  <block id="55663ff2954ae71700f6f717aacad2a3" category="paragraph">您可以在叢集上建立任何或所有未受管理命名空間的排程自動備份。這些工作流程是由 NetApp 提供、以 Kubernetes 服務帳戶、角色繫結和 cron 工作的形式、並以 Python 指令碼協調。</block>
+  <block id="9ffdb95250e26c7a6b468126ac7c75b0" category="section-title">運作方式</block>
+  <block id="5802e6b0af2e6482a64feeddbae90420" category="paragraph">當您設定及安裝完整叢集備份工作流程時、 cron 工作會定期執行、並保護任何尚未受管理的命名空間、並根據您在安裝期間選擇的排程自動建立保護原則。</block>
+  <block id="b5f80c63a9b3f7187b8a71e3279b1d40" category="paragraph">如果您不想使用完整叢集備份工作流程來保護叢集上的每個非託管命名空間、您可以改用標籤型備份工作流程。標籤型備份工作流程也使用 cron 工作、但它並未保護所有未受管理的命名空間、而是根據您提供的標籤來識別命名空間、以選擇性地保護以銅級、銀級或金級備份原則為基礎的命名空間。</block>
+  <block id="3215156b98c07a49699d09346585d0f8" category="paragraph">當建立屬於所選工作流程範圍的新命名空間時、它會自動受到保護、無需任何系統管理員動作。這些工作流程是以每個叢集為基礎來實作、因此不同的叢集可以使用具有獨特保護層級的任一工作流程、視叢集重要性而定。</block>
+  <block id="4f3bac614b10b9269eff9557644b9d68" category="paragraph-title">範例：完整叢集保護</block>
+  <block id="823f5a690316e8d8db6de2fd88676b37" category="paragraph">舉例來說、當您設定並安裝完整叢集備份工作流程時、任何命名空間中的任何應用程式都會定期受到管理和保護、而無需管理員進一步努力。在您安裝工作流程時、命名空間不一定存在；如果在未來新增命名空間、它將受到保護。</block>
+  <block id="20220274e3d349d98f94f4af6c1d54cf" category="paragraph-title">範例：標籤式保護</block>
+  <block id="ab9b4add4c2750df9ea518f6cfe58c09" category="paragraph">為了更精細、您可以使用標籤型工作流程。例如、您可以安裝此工作流程、並告知使用者將多個標籤之一套用至他們想要保護的任何命名空間、視他們所需的保護層級而定。這可讓使用者使用其中一個標籤來建立命名空間、而無需通知系統管理員。他們的新命名空間及其中的所有應用程式都會自動受到保護。</block>
+  <block id="07b045e6ed11320210f203c982fd829d" category="section-title">建立所有命名空間的排程備份</block>
+  <block id="8332335e5e8bddc0b81921741539149a" category="paragraph">您可以使用完整叢集備份工作流程、在叢集上建立所有命名空間的排程備份。</block>
+  <block id="20ebd9eda05c23de72572e3c4aa298f5" category="list-text">將下列檔案下載到具有叢集網路存取權的電腦：</block>
+  <block id="b8d3f43c1b8b6847ecf7255053992be6" category="inline-link">components 。 yaml CRD 檔案</block>
+  <block id="e50ee5d787cfb185cfc2734fce798446" category="list-text"><block ref="e50ee5d787cfb185cfc2734fce798446" category="inline-link-rx"></block></block>
+  <block id="ac728b04543286ddda4fc836c6e98155" category="inline-link">protectCluster.py Python 指令碼</block>
+  <block id="7b1407a1eec5953c774bcc2d3d8908ab" category="list-text"><block ref="7b1407a1eec5953c774bcc2d3d8908ab" category="inline-link-rx"></block></block>
+  <block id="a9bd07d5dee89e8f8d63365bf38ed3ae" category="inline-link">請遵循隨附的指示</block>
+  <block id="5c3f07c159adb2641838be3ccfa6f663" category="list-text">若要設定及安裝工具組、<block ref="f14b0785043f5fca456d2804860e2da9" category="inline-link-rx"></block>。</block>
+  <block id="0e770ae52a7daab5fccefca84b2322ce" category="section-title">建立特定命名空間的排程備份</block>
+  <block id="8a6d3ef96a37da0f9a9d95b72a87049a" category="paragraph">您可以使用標籤型備份工作流程、根據特定命名空間的標籤來建立排程備份。</block>
+  <block id="25c5f7a0ed30f3d017ebfd4b8f0b50a4" category="list-text"><block ref="25c5f7a0ed30f3d017ebfd4b8f0b50a4" category="inline-link-rx"></block></block>
+  <block id="b68db3e0a56f3b8c81ba53790b675138" category="list-text"><block ref="b68db3e0a56f3b8c81ba53790b675138" category="inline-link-rx"></block></block>
+  <block id="df3bb36ac44fafa7502c4bf87e8770ea" category="list-text">若要設定及安裝工具組、<block ref="ce6ac21e909840a69102ba43afa6cfb6" category="inline-link-rx"></block>。</block>
+  <block id="6a96f7d929fa0abae3976fe12471f4f9" category="sidebar">保護整個叢集</block>
 </blocks>
