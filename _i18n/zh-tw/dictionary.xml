@@ -797,8 +797,6 @@
   <block id="ea643bf7aaf130341a17f697a7009368" category="list-text"><block ref="ea643bf7aaf130341a17f697a7009368" category="inline-link-rx"></block></block>
   <block id="14d9b10c6196045941347a9e85704b50" category="inline-link">Astra Trident文件</block>
   <block id="4a2ab62188738135163aaaaeab1d6cfe" category="list-text"><block ref="4a2ab62188738135163aaaaeab1d6cfe" category="inline-link-rx"></block></block>
-  <block id="5858ee4031acd7b896faa2d3d2c1a299" category="inline-link">本文檔 Cloud Insights</block>
-  <block id="2b93b48daf034e4100d00b85950e109d" category="list-text"><block ref="2b93b48daf034e4100d00b85950e109d" category="inline-link-rx"></block></block>
   <block id="eb75aeb3b4b2b9734ba3e52f5483f0b2" category="inline-link">本文檔 ONTAP</block>
   <block id="8217522f2b9eea86f1099a2aba54aebd" category="list-text"><block ref="8217522f2b9eea86f1099a2aba54aebd" category="inline-link-rx"></block></block>
   <block id="e9c44bbfd795a5d63d74c6a77afee70d" category="summary">法律聲明提供版權聲明、商標、專利等存取權限。</block>
@@ -846,7 +844,6 @@
   <block id="60f694f21643599c137f6c610e48124e" category="paragraph">以下概述Astra Control環境的各個元件。</block>
   <block id="51d249216b03414f10b242b851af7951" category="section-title">Astra控制元件</block>
   <block id="a8d77bbb11d2e1a349811767d194e9ba" category="list-text">* Kubernetes叢集*：Kubernetes是可攜式、可擴充的開放原始碼平台、可用於管理容器化工作負載與服務、同時促進宣告式組態與自動化。Astra為Kubernetes叢集中託管的應用程式提供管理服務。</block>
-  <block id="415ba7b6a21fb373d9c5b72207313c1c" category="list-text">*《NetApp雲端基礎架構監控工具》《支援VMware技術》*《支援架構監控工具》、可讓您監控由Astra Control Center管理的Kubernetes叢集的效能與使用率。Cloud Insights Cloud Insights可將儲存使用量與工作負載建立關聯。Cloud Insights當您在Cloud Insights Astra控制中心啟用「支援不中斷連線」時、遙測資訊會顯示在Astra控制中心UI頁面中。</block>
   <block id="de0c45e94d4b178203631d55e65d1b62" category="section-title">Astra控制介面</block>
   <block id="d015aca78df45458ee1d6533c5246919" category="paragraph">您可以使用不同的介面來完成工作：</block>
   <block id="085434e07821849d9d71c59516ad591f" category="list-text">*網路使用者介面（UI）*：Astra Control Service和Astra Control Center都使用相同的網路型UI來管理、移轉及保護應用程式。也可以使用UI來管理使用者帳戶和組態設定。</block>
@@ -1072,7 +1069,6 @@
   <block id="c5e2734ed937951c4604f55129ebf6bb" category="list-text">Azure託管磁碟：不提供價格、效能或恢復能力資訊</block>
   <block id="368def07c6bfa29b38f6913d1a01d925" category="paragraph">+*適用於GKE叢集、Astra Control Service使用<block ref="33441d63a8e7ace6860eab2024320819" category="inline-link-rx"></block> 或Google持續磁碟做為持續磁碟區的儲存後端。</block>
   <block id="eb1ac977ae8f3dc0832dd982e309d50b" category="paragraph">+在Azure中、Astra Control Service也會為Blob容器建立資源群組、儲存帳戶和金鑰。</block>
-  <block id="47de31b9013ca59e1620936759a1c481" category="paragraph">Astra Control旨在簡化Kubernetes原生應用程式的應用程式資料生命週期管理作業。Astra Control Service支援在多個雲端供應商環境中執行的Kubernetes叢集。</block>
   <block id="e29d7c0b36af68edd13ebac84f15b44b" category="sidebar">雲端供應商</block>
   <block id="46aef2e5080a5347df1ce7546e1be1df" category="sidebar">所有雲端供應商</block>
   <block id="56ef2682280ac110060b881925a87b80" category="sidebar">Google Cloud</block>
@@ -1611,7 +1607,6 @@
   <block id="934c5edffa8e732ecb866cb319c8454a" category="doc">應用程式管理</block>
   <block id="516729a7c0562425406a22cfe6a2c163" category="list-text">Amazon EBS</block>
   <block id="79c9c43a409053927cc323915dbf1c06" category="list-text">Azure託管磁碟</block>
-  <block id="43e71b094d6e4df1d87b41898754d340" category="paragraph">在雲端連線的環境中、Astra Control Center使用Cloud Insights 「資訊中心」來提供進階的監控和遙測功能。若缺乏Cloud Insights 支援鏈接、Astra Control Center可提供有限（7天數據）的監控與遙測功能、並透過開放式指標端點匯出至Kubernetes原生監控工具（例如Prometheus和Grafana）。</block>
   <block id="736df34727d37ee0029df106be139889" category="paragraph">您可以將應用程式新增至叢集。或者、如果叢集中已有一些應用程式正在管理中、您可以使用Astra Control Center來管理這些應用程式。然後、使用Astra Control Center建立快照、備份、複製及複寫關係。</block>
   <block id="8eea62084ca7e541d918e823422bd82e" category="paragraph-title">結果</block>
   <block id="06c2cea18679d64399783748fa367bdd" category="inline-image-macro">一</block>
@@ -2709,4 +2704,5 @@ Astra Control現已推出新的部署模式。_Astra Control Center_ 是自行�
   <block id="b68db3e0a56f3b8c81ba53790b675138" category="list-text"><block ref="b68db3e0a56f3b8c81ba53790b675138" category="inline-link-rx"></block></block>
   <block id="df3bb36ac44fafa7502c4bf87e8770ea" category="list-text">若要設定及安裝工具組、<block ref="ce6ac21e909840a69102ba43afa6cfb6" category="inline-link-rx"></block>。</block>
   <block id="6a96f7d929fa0abae3976fe12471f4f9" category="sidebar">保護整個叢集</block>
+  <block id="c6549ebb7cd213e64b91aa2f6576c5f6" category="paragraph">Astra Control 旨在簡化 Kubernetes 原生應用程式的應用程式資料生命週期管理作業。Astra Control Service支援在多個雲端供應商環境中執行的Kubernetes叢集。</block>
 </blocks>

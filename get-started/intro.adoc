@@ -219,8 +219,6 @@ Astra Control Center可在您自己的私有雲端本機執行。
 
 Astra Control Center 支援 Kubernetes 叢集、其中包含 Astra Control Provisioner 設定的儲存類別、以及 ONTAP 儲存後端。
 
-在雲端連線的環境中、Astra Control Center使用Cloud Insights 「資訊中心」來提供進階的監控和遙測功能。若缺乏Cloud Insights 支援鏈接、Astra Control Center可提供有限（7天數據）的監控與遙測功能、並透過開放式指標端點匯出至Kubernetes原生監控工具（例如Prometheus和Grafana）。
-
 Astra Control Center已完全整合AutoSupport 至整套的功能、可Active IQ 為使用者和NetApp支援人員提供疑難排解和使用資訊。
 
 您可以使用90天試用版授權試用Astra Control Center。評估版本可透過電子郵件和社群選項來支援。此外、您也可以從產品內的支援儀表板存取知識庫文章和文件。
@@ -252,6 +250,5 @@ Astra Control Center的高層級運作方式如下：
 * https://docs.netapp.com/us-en/astra-control-center/index.html["Astra Control Center文件"^]
 * https://docs.netapp.com/us-en/astra-automation/index.html["Astra Control API 文件"^]
 * https://docs.netapp.com/us-en/trident/index.html["Astra Trident文件"^]
-* https://docs.netapp.com/us-en/cloudinsights/["本文檔 Cloud Insights"^]
 * https://docs.netapp.com/us-en/ontap/index.html["本文檔 ONTAP"^]
 
