@@ -4,7 +4,7 @@ permalink: get-started/faq.html
 keywords: faq, frequently asked questions 
 summary: 如果您只是想要快速回答問題、這個常見問題集就能幫上忙。 
 ---
-= Astra Control Service的常見問題集
+= 常見問題集
 :hardbreaks:
 :allow-uri-read: 
 :icons: font
@@ -26,44 +26,35 @@ Astra Control 旨在簡化 Kubernetes 原生應用程式的應用程式資料生
 
 == 使用Astra Control
 
-*註冊Astra Control時為何需要提供這麼多詳細資料？*
-
+.註冊 Astra Control 時、為什麼需要提供這麼多詳細資料？
 Astra Control在註冊時需要準確的客戶資訊。這項資訊必須經過全球貿易法規遵循（GTC）檢查。
 
-*註冊Astra Control時為什麼收到「登錄失敗」錯誤？*
-
+.為何我在註冊 Astra Control 時收到「登錄失敗」錯誤？
 Astra Control要求您在就職部分提供準確的客戶資訊。如果您提供的資訊不正確、您將會收到「Registration Failed（註冊失敗）」錯誤訊息。您所屬的其他帳戶也會遭到鎖定。
 
-*什麼是Astra Control Service URL？*
-
+.Astra Control Service URL 是什麼？
 您可以在存取Astra Control Service https://astra.netapp.io[]。
 
-*我寄了一封電子郵件邀請函給同事、但他們尚未收到。我該怎麼辦？*
-
+.我已傳送電子郵件邀請給同事、但他們尚未收到邀請函。我該怎麼做？
 請他們查看垃圾郵件資料夾中是否有來自do-not-reply@netapp.com的電子郵件、或在收件匣中搜尋「邀請」。 您也可以移除使用者並嘗試重新新增。
 
-*我從免費方案升級至優質PayGO方案。我會為前10個命名空間付費嗎？*
-
+.我從免費方案升級至 Premium PayGO 方案。我會為前 10 個命名空間收取費用嗎？
 是的。升級至Premium Plan之後、Astra Control會開始為您帳戶中的所有託管命名空間收取費用。
 
-*我在一個月內升級至Premium PayGO方案。我會收取整個月的費用嗎？*
-
+.我在一個月內升級至優質 PayGO 方案。我會收取整個月的費用嗎？
 不可以計費從您升級至優質方案開始算起。
 
-*我正在使用免費方案、我是否會收到持續大量報銷的費用？*
-
+.我使用的是免費方案、是否會收取持續量請款的費用？
 是的、您將需要支付雲端供應商叢集使用的持續磁碟區費用。
 
 
 
 == 正在登錄Kubernetes叢集
 
-*在將叢集新增至Astra Control Service之前、我是否需要在叢集上安裝SCSI驅動程式？*
-
+.將 CSI 驅動程式新增至 Astra Control Service 之前、是否需要先在叢集上安裝 CSI 驅動程式？
 不可以當您的叢集新增至 Astra Control 時、服務會自動在 Kubernetes 叢集上安裝 Astra Trident Container Storage Interface （ CSI ）驅動程式。此驅動程式可用於為雲端供應商所支援的叢集配置持續磁碟區。
 
-*新增Astra Control Service之後、我需要將工作節點新增至叢集。我該怎麼辦？*
-
+.新增至 Astra Control Service 之後、我需要將工作節點新增至叢集。我該怎麼做？
 新的工作者節點可以新增至現有的資源池、或只要新的資源池是、就能建立新的資源池 `COS_CONTAINERD` 映像類型。Astra Control會自動探索這些功能。如果在Astra Control中看不到新節點、請檢查新的工作節點是否執行支援的映像類型。您也可以使用驗證新工作節點的健全狀況 `kubectl get nodes` 命令。
 
 ifdef::aws[]
@@ -72,8 +63,7 @@ ifdef::aws[]
 
 == 登錄Elastic Kubernetes Service（EKS）叢集
 
-*我可以將私有EKS叢集新增至Astra Control Service嗎？*
-
+.我可以將私有 EKS 叢集新增至 Astra Control Service 嗎？
 可以、您可以將私有 EKS 叢集新增至 Astra Control Service 。若要新增私有 EKS 叢集、請參閱 link:add-first-cluster.html["從Astra Control Service開始管理Kubernetes叢集"]。
 
 endif::aws[]
@@ -84,12 +74,10 @@ ifdef::azure[]
 
 == 註冊Azure Kubernetes Service（KS）叢集
 
-*我可以將私有的高層叢集新增至Astra Control Service嗎？*
-
+.我可以將私有的 Astra 叢集新增至 Astra Control 服務嗎？
 是的、您可以將私有的高層叢集新增至Astra Control Service。若要新增私有的高效能叢集、請參閱 link:add-first-cluster.html["從Astra Control Service開始管理Kubernetes叢集"]。
 
-*我可以使用Active Directory來管理高效能叢集的驗證嗎？*
-
+.我可以使用 Active Directory 來管理我的 AKS 叢集的驗證嗎？
 是的、您可以將您的高效能叢集設定為使用Azure Active Directory（Azure AD）進行驗證和身分識別管理。建立叢集時、請遵循中的指示 https://docs.microsoft.com/en-us/azure/aks/managed-aad["正式文件"^] 設定叢集使用Azure AD。您必須確保叢集符合高峰管理Azure AD整合的要求。
 
 endif::azure[]
@@ -100,24 +88,20 @@ ifdef::gcp[]
 
 == 註冊Google Kubernetes Engine（GKE）叢集
 
-*我可以將私有GKE叢集新增至Astra Control Service嗎？*
-
+.我可以將私有 GKE 叢集新增至 Astra Control Service 嗎？
 是的、您可以將私有GKE叢集新增至Astra Control Service。若要新增私有 GKE 叢集、請參閱 link:add-first-cluster.html["從Astra Control Service開始管理Kubernetes叢集"]。
 
 私有 GKE 叢集必須具有 https://cloud.google.com/kubernetes-engine/docs/concepts/private-cluster-concept["授權網路"^] 設定為允許Astra控制IP位址：
 
 52.188.218.166/32
 
-*我的GKE叢集是否可以位於共用VPC上？*
-
+.我的 GKE 叢集是否可以位於共用 VPC 上？
 是的。Astra Control 可以管理位於共享 VPC 中的叢集。 link:set-up-google-cloud.html["瞭解如何設定Astra服務帳戶以進行共用VPC組態"]。
 
-*何處可以找到GCP上的服務帳戶認證資料？*
-
+.哪裡可以在 GCP 上找到我的服務帳戶認證？
 登入之後 https://console.cloud.google.com/["Google Cloud Console"^]、您的服務帳戶詳細資料將會顯示在「* IAM and admin*」區段中。如需詳細資料、請參閱 link:set-up-google-cloud.html["如何設定Google Cloud for Astra Control"]。
 
-*我想新增不同GCP專案的GKE叢集。Astra Control是否支援此功能？*
-
+.我想新增不同 GCP 專案的不同 GKE 叢集。Astra Control 是否支援此功能？
 否、這不是支援的組態。僅支援單一GCP專案。
 
 endif::gcp[]
@@ -126,16 +110,14 @@ endif::gcp[]
 
 == 移除叢集
 
-*如何正確取消註冊、關閉叢集及刪除相關的磁碟區？*
-
+.如何正確取消登錄、關閉叢集、以及刪除相關的磁碟區？
 . link:../use/unmanage.html["從Astra Control取消應用程式管理"]。
 . link:../use/unmanage.html#stop-managing-compute["從Astra Control取消登錄叢集"]。
 . link:../use/unmanage.html#deleting-clusters-from-your-cloud-provider["刪除持續的Volume宣告"]。
 . 刪除叢集。
 
 
-*從Astra Control移除叢集之後、應用程式和資料會發生什麼變化？*
-
+.從 Astra Control 移除叢集之後、我的應用程式和資料會發生什麼變化？
 從Astra Control移除叢集不會對叢集的組態（應用程式和持續儲存）進行任何變更。在該叢集上執行的任何Astra Control快照或應用程式備份都無法還原。儲存在儲存後端內的Volume Snapshot資料將不會移除。由Astra Control所建立的持續儲存備份仍會保留在雲端供應商的物件存放區內、但無法還原。
 
 ifdef::gcp[]
@@ -145,21 +127,19 @@ WARNING: 透過GCP刪除叢集之前、請務必先從Astra Control移除叢集�
 
 endif::gcp[]
 
-* 取消管理時 Astra Control Provisioner 是否會自動從叢集解除安裝？ *
+.Astra Control Provisioner 在我取消管理叢集時是否會自動從叢集解除安裝？
 當您從 Astra Control Center 取消管理叢集時、 Astra Control Provisioner 或 Astra Trident 不會自動從叢集中解除安裝。若要解除安裝 Astra Control Provisioner 及其元件或 Astra Trident 、您需要 https://docs.netapp.com/us-en/trident/trident-managing-k8s/uninstall-trident.html["請依照下列步驟、解除安裝內含 Astra Control Provisioner 服務的 Astra Trident 執行個體"^]。
 
 
 
 == 管理應用程式
 
-* Astra Control是否能部署應用程式？*
-
+.Astra Control 是否能部署應用程式？
 Astra Control不會部署應用程式。應用程式必須部署在Astra Control之外。
 
 ifdef::gcp[]
 
-*我看不到應用程式的任何PVCS都與GCP CVS綁定。錯誤為何？*
-
+.我看不到任何應用程式的 PVCS 都綁定到 GCP CVS 。發生什麼問題？
 Astra Trident操作員成功新增至Astra Control之後、將預設儲存類別設為「NetApp-CVs-perf-perf-pPremium」。當應用程式的PVCS不受限於Cloud Volumes Service Google Cloud的功能時、您可以採取幾個步驟：
 
 * 執行「kubectl Get SC」、然後檢查預設的儲存類別。
@@ -169,51 +149,42 @@ Astra Trident操作員成功新增至Astra Control之後、將預設儲存類別
 
 endif::gcp[]
 
-*停止從Astra Control管理應用程式之後、應用程式會發生什麼事？*
-
+.停止從 Astra Control 管理應用程式之後、應用程式會發生什麼事？
 將刪除任何現有的備份或快照。應用程式與資料仍可繼續使用。資料管理作業無法用於未受管理的應用程式、或屬於它的任何備份或快照。
 
 
 
 == 資料管理作業
 
-* Astra Control在何處建立物件存放區？*
-
+.Astra Control 在哪裡建立物件儲存庫貯體？
 第一個託管叢集的地理區域決定物件存放區的位置。例如、如果您新增的第一個叢集位於歐洲區域、則會在該地理區域中建立該儲存區。如有需要、您可以 link:../use/manage-buckets.html["新增額外的貯體"]。
 
-*我的帳戶中有我沒有建立的快照。他們來自何處？*
-
+.我的帳戶中有未建立的快照。他們來自何處？
 在某些情況下、Astra Control會自動建立快照、做為執行其他程序的一部分。如果快照時間超過幾分鐘、您可以安全地刪除快照。
 
-*我的應用程式使用數個PV。Astra Control是否會對所有這些PVCs執行快照和備份？*
-
+.我的應用程式使用數個 PV 。Astra Control 是否會對所有這些 PVC 執行快照和備份？
 是的。Astra Control在應用程式上執行的快照作業包括繫結至應用程式PVCS的所有PV快照。
 
-*我可以直接透過雲端供應商來管理Astra Control拍攝的快照嗎？*
-
+.我可以直接透過雲端供應商管理 Astra Control 拍攝的快照嗎？
 不可以Astra Control 所拍攝的快照和備份只能透過 Astra Control 進行管理。
 
 
 
 == Astra Control 資源配置程式
 
-Astra Control Provisioner 的儲存資源配置功能與 Astra Trident 的儲存資源配置功能有何不同？ *
-
+.Astra Control Provisioner 的儲存資源配置功能與 Astra Trident 的儲存資源配置功能有何不同？
 Astra Control Provisioner 是 Astra Control 的一部分、支援開放原始碼 Astra Trident 中無法使用的儲存資源配置功能超集。這些功能是開放原始碼 Trident 所提供的所有功能之外的附加功能。
 
-* Astra Control 資源配置程式是否取代 Astra Trident ？ *
+.Astra Control 資源配置程式是否取代 Astra Trident ？
 Astra Control Provisioner 取代 Astra Trident 做為 Astra Control 架構中的儲存資源配置程式和 Orchestrator 。Astra Control 使用者應該 link:../use/enable-acp.html["啟用 Astra Control Provisioner"] 使用 Astra Control 。Astra Trident 將繼續在此版本中受到支援、但未來版本將不支援 Astra Trident 。Astra Trident 將維持開放原始碼、並以 NetApp 的新 CSI 和其他功能來發行、維護、支援及更新。不過、只有包含 Astra Trident CSI 功能和擴充儲存管理功能的 Astra Control Provisioner 、才能用於即將推出的 Astra Control 版本。
 
-* 我必須支付 Astra Trident 的費用嗎？ *
-
+.我是否必須支付 Astra Trident 的費用？
 不可以Astra Trident 將繼續是開放原始碼、並可免費下載。Astra Control Provisioner 功能現在需要 Astra Control 授權。
 
-* 我可以在 Astra Control 中使用儲存管理和資源配置功能、而無需安裝和使用所有 Astra Control 嗎？ *
-
+.我可以在 Astra Control 中使用儲存管理和資源配置功能、而無需安裝和使用所有 Astra Control 嗎？
 是的、即使您不想使用完整的 Astra Control 資料管理功能集、也可以升級至 Astra Control Provisioner 並使用其功能。
 
-[Running （執行） -ACP 檢查 ] * 如何知道 Astra 控制項資源配置程式是否已取代叢集上的 Astra Trident ？ *
-
+.如何知道 Astra Control Provisioner 是否已取代叢集上的 Astra Trident ？
 安裝 Astra Control Provisioner 之後、 Astra Control UI 中的主機叢集會顯示 `ACP version` 而非 `Trident version` 欄位和目前安裝的版本號碼。
 
 image:ac-acp-version.png["在 UI 中描繪 Astra Control Provisioner 版本位置的螢幕擷取畫面"]
