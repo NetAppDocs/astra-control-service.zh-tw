@@ -27,8 +27,13 @@ entries:
 - title: 新增叢集
   url: "/get-started/add-first-cluster.html"
   entries:
-  - title: 安裝 Astra Connector for Private 叢集
-    url: "/get-started/install-astra-connector.html"
+  - title: 安裝 Astra Connector 以管理叢集
+    url: "/get-started/astra-connector-overview.html"
+    entries:
+    - title: 安裝舊版 Astra Connector for Private 叢集
+      url: "/get-started/install-astra-connector-previous.html"
+    - title: 為宣告式 Kubernetes 叢集安裝 Astra Connector
+      url: "/get-started/install-astra-connector-declarative.html"
   - title: 新增由供應商管理的叢集
     entries:
     - title: 新增由公用提供者管理的叢集

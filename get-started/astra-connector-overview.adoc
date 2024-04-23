@@ -1,0 +1,22 @@
+---
+sidebar: sidebar 
+permalink: get-started/astra-connector-overview.html 
+keywords: connector, install, astra connector, manage cluster, add cluster, cluster, add, manage 
+summary: 您必須安裝 Astra Connector 、才能使用 Astra Control 來管理叢集。 
+---
+= 安裝 Astra Connector 以管理叢集
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/get-started/
+
+
+[role="lead"]
+Astra Connector 是一種軟體、位於託管叢集上、可促進託管叢集與 Astra Control 之間的通訊。對於使用 Astra Control Service 管理的叢集、有兩個可用版本的 Astra Connector ：
+
+* * 舊版 Astra Connector* ： link:install-astra-connector-previous.html["安裝舊版 Astra Connector"] 如果您計畫使用非 Kubernetes 原生工作流程來管理叢集、請在叢集上進行。
+* [ 技術預覽 ] * 聲明性 Kubernetes Astra Connector* ： link:install-astra-connector-declarative.html["安裝 Astra Connector for 叢集、以宣告式 Kubernetes 工作流程進行管理"] 如果您打算使用宣告式 Kubernetes 工作流程來管理叢集、請在叢集上執行。在叢集上安裝 Astra Connector 之後、叢集會自動新增至 Astra Control 。
+
+
+
+NOTE: 聲明性 Kubernetes Astra Connector 僅可作為 Astra Control Early Adopter Program （ EAP ）的一部分使用。請聯絡您的 NetApp 銷售代表、以取得加入 EAP 的相關資訊。

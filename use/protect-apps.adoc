@@ -33,20 +33,27 @@ summary: 使用自動保護原則或臨機操作、拍攝快照和備份資料�
 
 == 設定保護原則
 
-保護原則可在已定義的排程中建立快照、備份或兩者、以保護應用程式。您可以選擇每小時、每天、每週和每月建立快照和備份、也可以指定要保留的複本數量。
+保護原則可在已定義的排程中建立快照、備份或兩者、以保護應用程式。您可以選擇每小時、每天、每週和每月建立快照和備份、也可以指定要保留的複本數量。您可以使用 Astra Control Web UI 或自訂資源（ CR ）檔案來定義保護原則。
 
 如果您需要每小時執行一次以上的備份或快照、您可以 https://docs.netapp.com/us-en/astra-automation/workflows/workflows_before.html["使用Astra Control REST API建立快照與備份"^]。
 
 
 NOTE: 如果您定義的保護原則會建立不可變的備份、以便在多次讀取（ WORM ）貯體時寫入資料、請確保備份的保留時間不會短於為該貯體設定的保留時間。
 
+
+TIP: 偏移備份和複寫排程、以避免排程重疊。例如、在每小時的最長時間執行備份、並排程複寫以 5 分鐘偏移和 10 分鐘間隔開始。
+
+[role="tabbed-block"]
+====
+.使用 Web UI 設定保護原則
+--
 .步驟
-. 選取*應用程式*、然後選取託管應用程式的名稱。
+. 選取*應用程式*、然後選取應用程式名稱。
 . 選擇*資料保護*。
 . 選取*設定保護原則*。
 . 選擇每小時、每日、每週和每月排程所需保留的快照和備份數量、以定義保護排程。
 +
-您可以同時定義每小時、每日、每週及每月排程。在您設定快照和備份的保留層級之前、排程不會變成作用中。
+您可以同時定義每小時、每日、每週及每月排程。在您設定保留層級之前、排程不會變成作用中。
 
 +
 當您設定備份的保留層級時、可以選擇要儲存備份的儲存區。
@@ -55,12 +62,67 @@ NOTE: 如果您定義的保護原則會建立不可變的備份、以便在多�
 下列範例設定四種保護排程：每小時、每日、每週及每月提供快照與備份。
 
 +
-image:screenshot-protection-policy.png["範例組態原則的螢幕擷取畫面、您可以選擇每小時、每天、每週或每月拍攝快照和備份。"]
+image:screenshot-config-protection-policy.png["範例組態原則的螢幕擷取畫面、您可以選擇每小時、每天、每週或每月拍攝快照和備份。"]
 
+. [*Tech preview*] 從儲存區清單中選擇備份或快照的目的地儲存區。
 . 選擇* Review *。
-. 選取*設定保護原則*。
+. 選取*設定保護原則。*
 
 
+--
+.[ 技術預覽 ] 使用 CR 設定保護原則
+--
+.步驟
+. 建立自訂資源（ CR ）檔案並命名 `astra-control-schedule-cr.yaml`。更新括弧 <> 中的值以符合 Astra Control 環境、叢集組態和資料保護需求：
++
+** <CR_NAME> ：此自訂資源的名稱；為您的環境選擇一個獨特且合理的名稱。
+** <APPLICATION_NAME> ：要備份之應用程式的 Kubernetes 名稱。
+** <APPVAULT_NAME> ：應儲存備份內容的 AppVault 名稱。
+** <BACKUPS_RETAINED> ：要保留的備份數量。零表示不應建立備份。
+** <SNAPSHOTS_RETAINED> ：要保留的快照數。零表示不應建立任何快照。
+** <GRANULARITY> ：排程應執行的頻率。可能的值、以及必要的相關欄位：
++
+*** `hourly` （需要您指定 `spec.minute`）
+*** `daily` （需要您指定 `spec.minute` 和 `spec.hour`）
+*** `weekly` （需要您指定 `spec.minute`、 `spec.hour`和 `spec.dayOfWeek`）
+*** `monthly` （需要您指定 `spec.minute`、 `spec.hour`和 `spec.dayOfMonth`）
+
+
+** <DAY_OF_MONTH> ： _ （選擇性） _ 排程應執行的月份日期（ 1 - 31 ）。如果精細度設為、則此欄位為必填欄位 `monthly`。
+** <DAY_OF_WEEK> ： _ （選擇性） _ 排程應執行的一週中的一天（ 0 - 7 ）。0 或 7 的值表示星期日。如果精細度設為、則此欄位為必填欄位 `weekly`。
+** <HOUR_OF_DAY> ： _ （選擇性） _ 排程應執行的當日時數（ 0 - 23 ）。如果精細度設為、則此欄位為必填欄位 `daily`、 `weekly`或 `monthly`。
+** <MINUTE_OF_HOUR> ： _ （選擇性） _ 排程應執行的小時數（ 0 - 59 ）。如果精細度設為、則此欄位為必填欄位 `hourly`、 `daily`、 `weekly`或 `monthly`。
++
+[source, yaml]
+----
+apiVersion: astra.netapp.io/v1
+kind: Schedule
+metadata:
+  namespace: astra-connector
+  name: <CR_NAME>
+spec:
+  applicationRef: <APPLICATION_NAME>
+  appVaultRef: <APPVAULT_NAME>
+  backupRetention: "<BACKUPS_RETAINED>"
+  snapshotRetention: "<SNAPSHOTS_RETAINED>"
+  granularity: <GRANULARITY>
+  dayOfMonth: "<DAY_OF_MONTH>"
+  dayOfWeek: "<DAY_OF_WEEK>"
+  hour: "<HOUR_OF_DAY>"
+  minute: "<MINUTE_OF_HOUR>"
+----
+
+
+. 填入之後 `astra-control-schedule-cr.yaml` 使用正確值的檔案、請套用 CR ：
++
+[source, console]
+----
+kubectl apply -f astra-control-schedule-cr.yaml
+----
+
+
+--
+====
 .結果
 Astra Control會使用您定義的排程和保留原則來建立和保留快照和備份、以實作資料保護原則。
 
@@ -81,13 +143,58 @@ Astra Control 支援使用下列驅動程式所支援的儲存類別來建立快
 
 IMPORTANT: 如果您的應用程式使用以作為後盾的儲存類別 `ontap-nas-economy` 驅動程式、無法建立快照。使用替代的儲存類別來執行快照。
 
+[role="tabbed-block"]
+====
+.使用 Web UI 建立快照
+--
 .步驟
 . 選擇*應用程式*。
 . 在所需應用程式*「Actions」（動作）欄的「Options」（選項）功能表中、選取*「Snapshot」（快照）*。
 . 自訂快照的名稱、然後選取*下一步*。
+. [*Tech preview*] 從儲存貯體清單中選擇快照的目的地貯體。
 . 檢閱快照摘要、然後選取* Snapshot *。
 
 
+--
+.[ 技術預覽 ] 使用 CR 建立快照
+--
+.步驟
+. 建立自訂資源（ CR ）檔案並命名 `astra-control-snapshot-cr.yaml`。更新括弧 <> 中的值以符合 Astra Control 環境和叢集組態：
++
+** <CR_NAME> ：此自訂資源的名稱；為您的環境選擇一個獨特且合理的名稱。
+** <APPLICATION_NAME> ：要快照的應用程式的 Kubernetes 名稱。
+** <APPVAULT_NAME> ：應儲存快照內容的 AppVault 名稱。
+** <RECLAIM_POLICY> ： _ （選用） _ 定義刪除快照 CR 時、快照會發生什麼情況。有效選項：
++
+*** `Retain`
+*** `Delete` （預設）
++
+[source, yaml]
+----
+apiVersion: astra.netapp.io/v1
+kind: Snapshot
+metadata:
+  namespace: astra-connector
+  name: <CR_NAME>
+spec:
+  applicationRef: <APPLICATION_NAME>
+  appVaultRef: <APPVAULT_NAME>
+  reclaimPolicy: <RECLAIM_POLICY>
+----
+
+
+
+
+. 填入之後 `astra-control-snapshot-cr.yaml` 使用正確值的檔案、請套用 CR ：
++
+[source, console]
+----
+kubectl apply -f astra-control-snapshot-cr.yaml
+----
+
+
+--
+====
 .結果
 快照程序隨即開始。當「*資料保護*>*快照*」頁面的「*狀態*」欄中的狀態為「*健全*」時、快照就會成功。
 
@@ -122,16 +229,53 @@ Astra Control 中的貯體不會報告可用容量。在備份或複製 Astra Co
 
 如果您的應用程式使用以作為後盾的儲存類別 `ontap-nas-economy` 您需要的是驅動程式 <<啟用 ONTAP NAS 經濟營運的備份與還原,啟用備份與還原>> 功能。請確定您已定義 `backendType` 中的參數 https://docs.netapp.com/us-en/trident/trident-reference/objects.html#kubernetes-storageclass-objects["Kubernetes 儲存物件"^] 值為 `ontap-nas-economy` 執行任何保護作業之前。
 
+[role="tabbed-block"]
+====
+.使用 Web UI 建立備份
+--
 .步驟
 . 選擇*應用程式*。
 . 在所需應用程式*「Actions」（動作）欄的「Options」（選項）功能表中、選取*「Back up」（備份）*。
 . 自訂備份名稱。
 . 選擇是否要從現有的快照備份應用程式。如果選取此選項、您可以從現有快照清單中進行選擇。
-. 從儲存貯體清單中選擇要備份的目的地儲存桶。
+. [*Tech preview*] 從儲存貯體清單中選擇備份的目的地貯體。
 . 選擇*下一步*。
 . 檢閱備份摘要、然後選取*備份*。
 
 
+--
+.[ 技術預覽 ] 使用 CR 建立備份
+--
+.步驟
+. 建立自訂資源（ CR ）檔案並命名 `astra-control-backup-cr.yaml`。更新括弧 <> 中的值以符合 Astra Control 環境和叢集組態：
++
+** <CR_NAME> ：此自訂資源的名稱；為您的環境選擇一個獨特且合理的名稱。
+** <APPLICATION_NAME> ：要備份之應用程式的 Kubernetes 名稱。
+** <APPVAULT_NAME> ：應儲存備份內容的 AppVault 名稱。
++
+[source, yaml]
+----
+apiVersion: astra.netapp.io/v1
+kind: Backup
+metadata:
+  namespace: astra-connector
+  name: <CR_NAME>
+spec:
+  applicationRef: <APPLICATION_NAME>
+  appVaultRef: <APPVAULT_NAME>
+----
+
+
+. 填入之後 `astra-control-backup-cr.yaml` 使用正確值的檔案、請套用 CR ：
++
+[source, console]
+----
+kubectl apply -f astra-control-backup-cr.yaml
+----
+
+
+--
+====
 .結果
 Astra Control會建立應用程式的備份。
 

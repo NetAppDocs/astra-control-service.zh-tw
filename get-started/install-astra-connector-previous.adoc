@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
-permalink: get-started/install-astra-connector.html 
+permalink: get-started/install-astra-connector-previous.html 
 keywords: connector, install, astra connector, manage cluster, add cluster, cluster, add, manage 
 summary: 您可以安裝 Astra Connector 來協助管理私有叢集。 
 ---
-= 安裝 Astra Connector for Private 叢集
+= 安裝舊版 Astra Connector
 :hardbreaks:
 :allow-uri-read: 
 :icons: font
@@ -12,9 +12,9 @@ summary: 您可以安裝 Astra Connector 來協助管理私有叢集。
 
 
 [role="lead"]
-Astra Control Service 使用 Astra Connector 來啟用 Astra Control Service 與私有叢集之間的通訊。您需要在要管理的私有叢集上安裝 Astra Connector 。
+Astra Control Service 使用舊版 Astra Connector 、在 Astra Control Service 和使用非 Kubernetes 原生工作流程管理的私有叢集之間進行通訊。您需要在想要使用非 Kubernetes 原生工作流程管理的私有叢集上安裝 Astra Connector 。
 
-Astra Connector 支援下列類型的私有叢集：
+舊版 Astra Connector 支援下列類型的私有叢集、這些叢集是以非 Kubernetes 原生工作流程管理：
 
 * Amazon Elastic Kubernetes Service （ EKS ）
 * Azure Kubernetes服務（KS）
@@ -23,10 +23,6 @@ Astra Connector 支援下列類型的私有叢集：
 * ROSA 搭配 AWS Private Link
 * 內部部署 Red Hat OpenShift Container Platform
 
-
-
-
-== 安裝 Astra Connector
 
 .關於這項工作
 * 當您執行這些步驟時、請針對您要使用 Astra Control Service 管理的私有叢集執行這些命令。
@@ -39,7 +35,7 @@ Astra Connector 支援下列類型的私有叢集：
 
 
 .步驟
-. 在您要使用 Astra Control Service 管理的私有叢集上安裝 Astra Connector 運算子。當您執行此命令時、命名空間 `astra-connector-operator` 已建立並套用組態至命名空間：
+. 使用非 Kubernetes 原生工作流程、在您要管理的私有叢集上安裝先前的 Astra Connector 運算子。當您執行此命令時、命名空間 `astra-connector-operator` 已建立並套用組態至命名空間：
 +
 [source, console]
 ----

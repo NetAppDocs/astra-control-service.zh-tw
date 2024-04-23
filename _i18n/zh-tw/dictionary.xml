@@ -325,11 +325,9 @@
   <block id="dea95de7f2633f161384f311ab180946" category="list-text">選擇*資料保護*。</block>
   <block id="991b4d6d3f0be95d8e0ca4853eea90a9" category="list-text">選取*設定保護原則*。</block>
   <block id="a080c1d6ad4654d9b12e290cb531df28" category="list-text">選擇每小時、每日、每週和每月排程所需保留的快照和備份數量、以定義保護排程。</block>
-  <block id="3c87cbf934c17bb682cfb8503e06cba9" category="paragraph">您可以同時定義每小時、每日、每週及每月排程。在您設定快照和備份的保留層級之前、排程不會變成作用中。</block>
   <block id="5c1427e50f55ee41de824edbb1570947" category="paragraph">當您設定備份的保留層級時、可以選擇要儲存備份的儲存區。</block>
   <block id="51ef5dbf6271c393f6d97e405ca64acb" category="paragraph">下列範例設定四種保護排程：每小時、每日、每週及每月提供快照與備份。</block>
   <block id="24dbaabc8acdace35cfc98c9178faeb5" category="inline-image-macro">範例組態原則的螢幕擷取畫面、您可以選擇每小時、每天、每週或每月拍攝快照和備份。</block>
-  <block id="9433a2dfbb0db6b2b8a07db04f4febd4" category="paragraph"><block ref="9433a2dfbb0db6b2b8a07db04f4febd4" category="inline-image-macro-rx" type="image"></block></block>
   <block id="b99a9a5879442c5ad3ae30c94964ccb3" category="list-text">選擇* Review *。</block>
   <block id="ea4ebf424434e7ebdf07f2247bd94dd6" category="paragraph">Astra Control會使用您定義的排程和保留原則來建立和保留快照和備份、以實作資料保護原則。</block>
   <block id="af9c364e0933200b7b8c1e7e13947ccf" category="section-title">建立快照</block>
@@ -1540,7 +1538,6 @@
   <block id="49507728a783fa319e52827452a8c306" category="list-text">若要依命名空間檢視帳單記錄、請選取*帳單記錄*。</block>
   <block id="09ea52ceb771c5d3a7dbc11021104012" category="paragraph">Astra Control會顯示每個命名空間的使用時間和成本。使用分鐘數是指在計費期間、Astra Control管理命名空間的分鐘數。</block>
   <block id="203528de7353cc2eb54ffc07e54122d7" category="list-text">您的Astra Control帳單包含管理命名空間的費用。您的雲端供應商會為持續磁碟區的儲存後端另行收費。</block>
-  <block id="5c6e486607b402b2c91fc889e966340e" category="list-text">選取*設定保護原則*。</block>
   <block id="8cf5def8eede43ff4c75800399b44fb7" category="list-text">在所需應用程式*「Actions」（動作）欄的「Options」（選項）功能表中、選取*「Snapshot」（快照）*。</block>
   <block id="e731b69194fb461b61a50d70056eadeb" category="list-text">自訂快照的名稱、然後選取*下一步*。</block>
   <block id="932f89164903be81ff337dd1df9741eb" category="list-text">檢閱快照摘要、然後選取* Snapshot *。</block>
@@ -1548,7 +1545,6 @@
   <block id="9916507b3209a34b61365719daccee17" category="list-text">在所需應用程式*「Actions」（動作）欄的「Options」（選項）功能表中、選取*「Back up」（備份）*。</block>
   <block id="154044900ec18a9168786e9732e60aea" category="list-text">自訂備份名稱。</block>
   <block id="693e02c2755e3bd5aa6c9cd127fef46e" category="list-text">選擇是否要從現有的快照備份應用程式。如果選取此選項、您可以從現有快照清單中進行選擇。</block>
-  <block id="137c45611597ee2966a295d2c5bed2ba" category="list-text">從儲存貯體清單中選擇要備份的目的地儲存桶。</block>
   <block id="0a976f3c5cd8c23ef9a0b4e7978580fa" category="list-text">檢閱備份摘要、然後選取*備份*。</block>
   <block id="6644c65dfe41666f4430ec48ffb52324" category="admonition">如果您需要取消執行中的備份、請依照中的指示操作 <block ref="d36d12c984fabf8d0626a7b2539983bf" category="inline-xref-macro-rx"></block>。若要刪除備份、請等到備份完成後再依照中的指示進行 <block ref="da28e1f6ad1e5135aab14ac0664600c6" category="inline-xref-macro-rx"></block>。</block>
   <block id="57cec2186373e15c3082b81aa26022cc" category="list-text">在所需快照*「Actions」（動作）欄的「Options」（選項）功能表中、選取*「Delete snapshot」（刪除快照）*。</block>
@@ -1828,7 +1824,6 @@
   <block id="0a7a7f4a53adc5b0553b40b1e29b0ba0" category="list-text">* 種類 * ：從下拉式清單中、選取要在篩選器中使用的 Kubernetes 資源類型的物件架構。</block>
   <block id="8267e7bf8eea35734f6959fde07b17d9" category="list-text">* 版本 * ：選取 Kubernetes API 版本。</block>
   <block id="e9f8a964cfe8d148cfb0e30848e5fa69" category="admonition">您可以根據需要建立任意數量的資源、包括和排除規則。這些規則會在您開始作業之前顯示在還原應用程式摘要中。</block>
-  <block id="45ad0235a77627fe6b23b64997cecf69" category="paragraph">保護原則可在已定義的排程中建立快照、備份或兩者、以保護應用程式。您可以選擇每小時、每天、每週和每月建立快照和備份、也可以指定要保留的複本數量。</block>
   <block id="ea4406d0295c7a1fc18318721ed0eb77" category="paragraph">如果您需要每小時執行一次以上的備份或快照、您可以<block ref="e7190f2033c7866ebb246bbdd297729e" category="inline-link-rx"></block>。</block>
   <block id="24de3392d815c86d9bc54afa43409615" category="inline-link-macro">應用程式備份</block>
   <block id="e68b36f1fd0d0f8bbe23162e44e442d1" category="paragraph">請注意、當您備份託管在 Azure NetApp Files 儲存設備上的應用程式時、儲存空間的處理方式為何。請參閱 <block ref="7bb90b7122f027c565a9c95a353052fc" category="inline-link-macro-rx"></block> 以取得更多資訊。</block>
@@ -2046,9 +2041,6 @@
   <block id="5cf8b5937cb82a5351c4c73d39637045" category="paragraph">如果您要管理自己的叢集、但叢集並非由雲端供應商代管、請檢閱自我管理叢集的需求。
 <block ref="a9fe61a91bc6d7fb0348dcee66b62bae" category="inline-link-macro-rx"></block>。</block>
   <block id="a3c5aa86ee838da565b2cd95a4d4050f" category="summary">您可以安裝 Astra Connector 來協助管理私有叢集。</block>
-  <block id="47855f6445b935349857dbfd8122b3a9" category="doc">安裝 Astra Connector for Private 叢集</block>
-  <block id="86a177c8b0866600fff2490a0bf1203f" category="paragraph">Astra Control Service 使用 Astra Connector 來啟用 Astra Control Service 與私有叢集之間的通訊。您需要在要管理的私有叢集上安裝 Astra Connector 。</block>
-  <block id="753382fed028d041553f0851f19678e7" category="paragraph">Astra Connector 支援下列類型的私有叢集：</block>
   <block id="480c9b5f979d1ce95ea2a58b09826d1b" category="list-text">Amazon Elastic Kubernetes Service （ EKS ）</block>
   <block id="f28c5620810ae2a6961a1811277a7ff8" category="list-text">Azure Kubernetes服務（KS）</block>
   <block id="974030a30a48754684d05541fd5e96c9" category="list-text">Google Kubernetes Engine（GKE）</block>
@@ -2059,7 +2051,6 @@
   <block id="1edf1f850fb1dd3ecb6ec5a68b931d8a" category="list-text">如果您使用的是堡壘主機、請從堡壘主機的命令列發出這些命令。</block>
   <block id="46f84f76c193988a23a05e2533e85012" category="list-text">您需要存取想要使用 Astra Control Service 管理的私有叢集。</block>
   <block id="3ba9d4444750a5b9f273108e52fab161" category="list-text">您需要 Kubernetes 管理員權限、才能在叢集上安裝 Astra Connector 運算子。</block>
-  <block id="ddf67d6bca798cdb05a03cd3e8c353a5" category="list-text">在您要使用 Astra Control Service 管理的私有叢集上安裝 Astra Connector 運算子。當您執行此命令時、命名空間<block ref="c6ead53be77481f9e0a3f904f9a88686" prefix=" " category="inline-code"></block> 已建立並套用組態至命名空間：</block>
   <block id="df6b3ae9d235c55e4852987eb13aca3a" category="list-text">確認操作員已安裝就緒：</block>
   <block id="de2197712ea8457243c4dd6357e2765e" category="list-text">從 Astra Control 取得 API 權杖。請參閱<block ref="c02899be0babfb1350e3b2576a6e8c97" category="inline-link-rx"></block> 以取得相關指示。</block>
   <block id="9606554dacabd47ad1eea6bf025ec9f2" category="list-text">建立 Astra 連接器命名空間：</block>
@@ -2084,7 +2075,6 @@
   <block id="b2f16d028eefb97c311806a92cfd1819" category="list-text">列出取代的服務帳戶機密<block ref="b7deaaa7156445a472f0757516cd1509" prefix=" " category="inline-code"></block> 正確的安裝環境：</block>
   <block id="a46411d662ebd15db7079553439dbcdc" category="paragraph">中每個元素的索引<block ref="7de38f3c3d3baa7ca58a366f09577586" prefix=" " category="inline-code"></block> 陣列開頭為0。在上述範例中、索引為<block ref="5bb15412e9504feb0711be74d8c6ed33" prefix=" " category="inline-code"></block> 將為0、索引則為<block ref="ce8dd462bb623b9902ba4f0151eb2f1b" prefix=" " category="inline-code"></block> 應該是1。在輸出中、記下服務帳戶密碼的索引編號。您在下一個步驟中需要此索引編號。</block>
   <block id="ca492be8d9c67f790505b17ed0272fa9" category="list-text"><block ref="43d42a1bad9233e3772b4daeb39d1495" category="inline-xref-macro-rx"></block></block>
-  <block id="8ab37db051796602226f25a5530aeaca" category="paragraph">在新增私有叢集之前、您需要在叢集上安裝 Astra Connector 、以便 Astra Control 能夠與其通訊。請參閱 <block ref="5c81995f6b8f1946f7d874c3b5f608ab" category="inline-link-macro-rx"></block> 以取得相關指示。</block>
   <block id="258c9b2ecd2a4147777d96a2577bb01d" category="list-text">* 私有路由識別碼 * ：輸入可從 Astra Connector 取得的私有路由識別碼。如果您透過查詢 Astra Connector<block ref="e29c11c68aee82b23845c3b2bf3ce544" prefix=" " category="inline-code"></block> 命令時、私有路由識別碼稱為<block ref="6205f02991df9d45acb59ccb61d7a0cb" prefix=" " category="inline-code"></block>。</block>
   <block id="1d740d5e28f5ec526ba0e21bd2c042ae" category="list-text"><block ref="d19f65bb3040b630d929eb2fd73ae249" category="inline-link-macro-rx"></block>。</block>
   <block id="615193f2c37d9fd054a61bf78b73ad01" category="section-title">不可變的備份</block>
@@ -2705,4 +2695,161 @@ Astra Control現已推出新的部署模式。_Astra Control Center_ 是自行�
   <block id="6080a9c8227972613444a9ebc88e3b3c" category="paragraph-title">我是否必須支付 Astra Trident 的費用？</block>
   <block id="369842d22c436a81bf21800576abee8b" category="paragraph-title">我可以在 Astra Control 中使用儲存管理和資源配置功能、而無需安裝和使用所有 Astra Control 嗎？</block>
   <block id="63bdba47639989b6e534ecb34c5f142e" category="paragraph-title">如何知道 Astra Control Provisioner 是否已取代叢集上的 Astra Trident ？</block>
+  <block id="899ffe13f2bb16a187ce9807836e3d5f" category="paragraph">保護原則可在已定義的排程中建立快照、備份或兩者、以保護應用程式。您可以選擇每小時、每天、每週和每月建立快照和備份、也可以指定要保留的複本數量。您可以使用 Astra Control Web UI 或自訂資源（ CR ）檔案來定義保護原則。</block>
+  <block id="69f7fefc112d0cd0af937e058f3df889" category="admonition">偏移備份和複寫排程、以避免排程重疊。例如、在每小時的最長時間執行備份、並排程複寫以 5 分鐘偏移和 10 分鐘間隔開始。</block>
+  <block id="d306a8d55f523487d15819734d6cfba4" category="open-title">使用 Web UI 設定保護原則</block>
+  <block id="a2327a6ff4730e78bedb7d226cc38d2b" category="paragraph">您可以同時定義每小時、每日、每週及每月排程。在您設定保留層級之前、排程不會變成作用中。</block>
+  <block id="db49e5314c2b4fd9bc9299afc637aa12" category="paragraph"><block ref="db49e5314c2b4fd9bc9299afc637aa12" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="9f33a2042fc3e70dae9f8c5507596e07" category="list-text">[*Tech preview*] 從儲存區清單中選擇備份或快照的目的地儲存區。</block>
+  <block id="7754a3e7b00b1d0b1394a3ce015c6110" category="list-text">選取*設定保護原則。*</block>
+  <block id="c45e50979034e4d37ed1ea77e95e8476" category="open-title">[ 技術預覽 ] 使用 CR 設定保護原則</block>
+  <block id="0a0f328bd1b4a1ac5f356ea87a31c3fa" category="list-text">建立自訂資源（ CR ）檔案並命名<block ref="534821cc2d5862b328eea0ae3958ad02" prefix=" " category="inline-code"></block>。更新括弧 &lt;&gt; 中的值以符合 Astra Control 環境、叢集組態和資料保護需求：</block>
+  <block id="9461963df02697b9fc35206ce7f9895a" category="list-text">&lt;CR_NAME&gt; ：此自訂資源的名稱；為您的環境選擇一個獨特且合理的名稱。</block>
+  <block id="ad7895edfca0c0da33bbb180a1ec8ba2" category="list-text">&lt;APPLICATION_NAME&gt; ：要備份之應用程式的 Kubernetes 名稱。</block>
+  <block id="c05cc64c85777c45bbf22594c1f2be5b" category="list-text">&lt;APPVAULT_NAME&gt; ：應儲存備份內容的 AppVault 名稱。</block>
+  <block id="69c143beb182925943165b22d17ae5de" category="list-text">&lt;BACKUPS_RETAINED&gt; ：要保留的備份數量。零表示不應建立備份。</block>
+  <block id="085d94d71675ee9e4831b3f3c5088f97" category="list-text">&lt;SNAPSHOTS_RETAINED&gt; ：要保留的快照數。零表示不應建立任何快照。</block>
+  <block id="121bace18f96f31d6350b5a13306a2d0" category="list-text">&lt;GRANULARITY&gt; ：排程應執行的頻率。可能的值、以及必要的相關欄位：</block>
+  <block id="682d677bcf1ee88366ae753c477ace2d" category="list-text"><block ref="745fd0ea7f576f350a0eed4b8c48a8e2" prefix="" category="inline-code"></block> （需要您指定<block ref="aadd5cec42dbc02d51f62a1095401f59" prefix=" " category="inline-code"></block>）</block>
+  <block id="a1fbdfda9f5f05dbe5b05383881f400f" category="list-text"><block ref="bea79186fd7af2da67e59b4b15df5a26" prefix="" category="inline-code"></block> （需要您指定<block ref="aadd5cec42dbc02d51f62a1095401f59" prefix=" " category="inline-code"></block> 和<block ref="9199af27775b1a2a876e6d7b25540711" prefix=" " category="inline-code"></block>）</block>
+  <block id="658b1c98606e33324a33b76f12a8227b" category="list-text"><block ref="4a11fc05ed694c195f0703605b64da90" prefix="" category="inline-code"></block> （需要您指定<block ref="aadd5cec42dbc02d51f62a1095401f59" prefix=" " category="inline-code"></block>、<block ref="9199af27775b1a2a876e6d7b25540711" prefix=" " category="inline-code"></block>和<block ref="4a04848e0e6e9423892ebc93ae61842d" prefix=" " category="inline-code"></block>）</block>
+  <block id="fcac3dfd31718b4bc1aca2266ebb4cf6" category="list-text"><block ref="708638881f3bac9d9c8c742c79502811" prefix="" category="inline-code"></block> （需要您指定<block ref="aadd5cec42dbc02d51f62a1095401f59" prefix=" " category="inline-code"></block>、<block ref="9199af27775b1a2a876e6d7b25540711" prefix=" " category="inline-code"></block>和<block ref="9a7606959f42328ceeef95d70c353158" prefix=" " category="inline-code"></block>）</block>
+  <block id="3c3e2b331ed38c2b4f91c0e6e005c232" category="list-text">&lt;DAY_OF_MONTH&gt; ： _ （選擇性） _ 排程應執行的月份日期（ 1 - 31 ）。如果精細度設為、則此欄位為必填欄位<block ref="708638881f3bac9d9c8c742c79502811" prefix=" " category="inline-code"></block>。</block>
+  <block id="83a25bd356e4b2b1791a70e7a3d5686d" category="list-text">&lt;DAY_OF_WEEK&gt; ： _ （選擇性） _ 排程應執行的一週中的一天（ 0 - 7 ）。0 或 7 的值表示星期日。如果精細度設為、則此欄位為必填欄位<block ref="4a11fc05ed694c195f0703605b64da90" prefix=" " category="inline-code"></block>。</block>
+  <block id="a214309740c5fce73f555efb0f57e3b0" category="list-text">&lt;HOUR_OF_DAY&gt; ： _ （選擇性） _ 排程應執行的當日時數（ 0 - 23 ）。如果精細度設為、則此欄位為必填欄位<block ref="bea79186fd7af2da67e59b4b15df5a26" prefix=" " category="inline-code"></block>、<block ref="4a11fc05ed694c195f0703605b64da90" prefix=" " category="inline-code"></block>或<block ref="708638881f3bac9d9c8c742c79502811" prefix=" " category="inline-code"></block>。</block>
+  <block id="b528ecefdd7d1b08f11f79cf2fff599a" category="list-text">&lt;MINUTE_OF_HOUR&gt; ： _ （選擇性） _ 排程應執行的小時數（ 0 - 59 ）。如果精細度設為、則此欄位為必填欄位<block ref="745fd0ea7f576f350a0eed4b8c48a8e2" prefix=" " category="inline-code"></block>、<block ref="bea79186fd7af2da67e59b4b15df5a26" prefix=" " category="inline-code"></block>、<block ref="4a11fc05ed694c195f0703605b64da90" prefix=" " category="inline-code"></block>或<block ref="708638881f3bac9d9c8c742c79502811" prefix=" " category="inline-code"></block>。</block>
+  <block id="62c1134a4dd5a6f3b144823808bb9be6" category="list-text">填入之後<block ref="534821cc2d5862b328eea0ae3958ad02" prefix=" " category="inline-code"></block> 使用正確值的檔案、請套用 CR ：</block>
+  <block id="d9febddf6562311d8624eeb4e58744b8" category="open-title">使用 Web UI 建立快照</block>
+  <block id="fcb86323ae9c4068f3f947debdbd82eb" category="list-text">[*Tech preview*] 從儲存貯體清單中選擇快照的目的地貯體。</block>
+  <block id="655ce779ad9dd1131dd074820f73722a" category="open-title">[ 技術預覽 ] 使用 CR 建立快照</block>
+  <block id="721baa84468e1b3151168d2e7f280e27" category="list-text">建立自訂資源（ CR ）檔案並命名<block ref="0663444b0cf552b14d10b5610dccad23" prefix=" " category="inline-code"></block>。更新括弧 &lt;&gt; 中的值以符合 Astra Control 環境和叢集組態：</block>
+  <block id="83f2d981711626f79fc196e471c75cee" category="list-text">&lt;APPLICATION_NAME&gt; ：要快照的應用程式的 Kubernetes 名稱。</block>
+  <block id="f030ba1730d76a142cf9fabffedee017" category="list-text">&lt;APPVAULT_NAME&gt; ：應儲存快照內容的 AppVault 名稱。</block>
+  <block id="25acb3ac28bce3019c433b02088d833e" category="list-text">&lt;RECLAIM_POLICY&gt; ： _ （選用） _ 定義刪除快照 CR 時、快照會發生什麼情況。有效選項：</block>
+  <block id="0219cebc6ab6bc045fd44c689e3508dd" category="list-text"><block ref="afece4245269582cb2f1009d4fb52047" prefix="" category="inline-code"></block></block>
+  <block id="eced49573e92b0138aa5161875ff0f1e" category="list-text"><block ref="f2a6c498fb90ee345d997f888fce3b18" prefix="" category="inline-code"></block> （預設）</block>
+  <block id="1d175f34d0a8dd047617222b41b6b00a" category="list-text">填入之後<block ref="0663444b0cf552b14d10b5610dccad23" prefix=" " category="inline-code"></block> 使用正確值的檔案、請套用 CR ：</block>
+  <block id="fc6d173005cab506ffbeb8c0d3455f3b" category="open-title">使用 Web UI 建立備份</block>
+  <block id="e6bd281e2969b57f2aeb891a41b9effd" category="list-text">[*Tech preview*] 從儲存貯體清單中選擇備份的目的地貯體。</block>
+  <block id="9c5c1631394c2d4015e998dcaa9aa668" category="open-title">[ 技術預覽 ] 使用 CR 建立備份</block>
+  <block id="9124beb314d23f8cdcaae61ae4998da0" category="list-text">建立自訂資源（ CR ）檔案並命名<block ref="3a82584d62d84a13b61332b383bf82f7" prefix=" " category="inline-code"></block>。更新括弧 &lt;&gt; 中的值以符合 Astra Control 環境和叢集組態：</block>
+  <block id="435455e544bd4209e44cee568e575a9c" category="list-text">填入之後<block ref="3a82584d62d84a13b61332b383bf82f7" prefix=" " category="inline-code"></block> 使用正確值的檔案、請套用 CR ：</block>
+  <block id="13af4e3ac91a9ef7750f92e0b37e63e4" category="section-title">[ 技術預覽 ] 使用 Kubernetes 自訂資源定義應用程式</block>
+  <block id="357204803719793ed0da30746b6bc5f4" category="paragraph">您可以使用自訂資源（ CR ）將 Kubernetes 資源定義為應用程式、以指定您要使用 Astra Control 管理的資源。如果您想要個別管理這些資源、或是在命名空間中管理所有 Kubernetes 資源、則可以新增叢集範圍的資源、例如、如果您想以類似的方式、在一般時間間隔管理和保護特定命名空間中的所有資源。</block>
+  <block id="17b3b1a1bf7937e2bd6f64482e4bb4b9" category="list-text">建立自訂資源（ CR ）檔案並命名（例如、<block ref="6a9e31a9ccfc563d5424113ed9b98e26" prefix=" " category="inline-code"></block>）。</block>
+  <block id="52787e86804c9d6c9c6c75659472cbe1" category="list-text">在中命名應用程式<block ref="765cecee8002899c6cc0bea7842f7fe5" prefix=" " category="inline-code"></block>。</block>
+  <block id="dc8859823f6bb6d73e0e05746c4687d0" category="list-text">定義要管理的應用程式資源：</block>
+  <block id="af167f2ec857ea34e3a4b00ea3398743" category="open-title">spec.includedClusterScopedResources</block>
+  <block id="740c8865342027f8f41789f16c7ba59f" category="paragraph">除了 Astra Control 自動包含的資源類型之外、還包括叢集範圍的資源類型：</block>
+  <block id="126bdd98fac353e3f02ee55ddbc2c4dd" category="list-text">* spec.includedClusterScopedResources*: _ （選用） _ 要納入的叢集範圍資源類型清單。</block>
+  <block id="bff11da3e4b4ee861cf8a3090ea6463a" category="list-text">* 群組版本 Kind* ： _ （選擇性） _ 明確識別種類。</block>
+  <block id="66b2c618e769b771604d433574711e1d" category="list-text">* 群組 * ： _ （若使用 groupVersionKind 則為必填） _ 要納入的資源的 API 群組。</block>
+  <block id="8bde402f4657c0dc86fe3eb5bb339750" category="list-text">* 版本 * ： _ （如果使用 groupVersionKind 則需要） _ 要包含的資源的 API 版本。</block>
+  <block id="95589b0e167ff303f21f81b16c6b759b" category="list-text">* 種類 * ： _ （如果使用 groupVersionKind 則需要） _ 要包含的資源種類。</block>
+  <block id="54727b98d5345ddc8edc0d2731cd1a2f" category="list-text">* 標籤選取器 * ： _ （選用） _ 一組資源的標籤查詢。它僅用於擷取符合標籤的資源。如果您未提供標籤、Astra Control會收集為該叢集指定之資源種類的所有執行個體。對 matchLabels 和 matchExpedions 的結果進行 AND 運算。</block>
+  <block id="75ebaac795307ecf0b4e138b62380a19" category="list-text">*matchLabels * ： _ （選用） _ ｛ key 、 value ｝ 對的地圖。matchLabels 對應中的單一 {key,value} 相當於 matchExpions 元素、其中的關鍵欄位為 "key" 、運算子為 "in " 、值陣列僅包含 "value" 。這些要求均已與之進行 AND 運算。</block>
+  <block id="a3c831c873315dfca75a1f211c9ad655" category="list-text">*matchExpedions * ： _ （選擇性） _ 標籤選取器要求清單。這些要求均已與之進行 AND 運算。</block>
+  <block id="511c5b020a02430e6bb355cf4308b59d" category="list-text">* 機碼 * ： _ （若使用媒合、則為必填） _ 與標籤選取器相關的標籤機碼。</block>
+  <block id="1c5403520c5189df3c10b68d47ab9c32" category="list-text">* 運算子 * ： _ （若使用媒合、則為必填） _ 代表金鑰與一組值的關係。有效的運算子為<block ref="efeb369cccbd560588a756610865664c" prefix=" " category="inline-code"></block>、<block ref="c949090e2cb12faab4dabb4621dd6c9e" prefix=" " category="inline-code"></block>、<block ref="2a8eb028670e972535e8e246be645821" prefix=" " category="inline-code"></block> 和<block ref="c47c93cf49de211bba5d62d65225f128" prefix=" " category="inline-code"></block>。</block>
+  <block id="3e3e7264b90d2650f1ec138144702991" category="list-text">* 值 * ： _ （若使用媒合、則為必填） _ 字串值的陣列。如果運算子是<block ref="efeb369cccbd560588a756610865664c" prefix=" " category="inline-code"></block> 或<block ref="c949090e2cb12faab4dabb4621dd6c9e" prefix=" " category="inline-code"></block>的值數組不能爲空。如果運算子是<block ref="2a8eb028670e972535e8e246be645821" prefix=" " category="inline-code"></block> 或<block ref="c47c93cf49de211bba5d62d65225f128" prefix=" " category="inline-code"></block>的值數組必須爲空。</block>
+  <block id="433654d93a8bceecdfef9ae705b9a053" category="open-title">spec.includedNamespaces</block>
+  <block id="4e421b0bb17858a1de67bedae22fc10f" category="paragraph">在應用程式中的這些資源中包含命名空間和資源：</block>
+  <block id="616733fb8bb6db3b287cdf462685d0fc" category="list-text">* spec.includedNamespaces*: _ （必要） _ 定義用於資源選擇的命名空間和選用篩選器。</block>
+  <block id="adaf8816823a4ba8dd2cb506ce3314ba" category="list-text">* 命名空間 * ： _ （必填） _ 包含您要使用 Astra Control 管理的應用程式資源的命名空間。</block>
+  <block id="3dd4f818996bed4e859fa3a9a12d63fc" category="list-text">*matchExpedions * ： _ （選擇性） _ 標籤選取器要求清單。<block ref="3c6e0b8a9c15224a8228b9a98ca1531d" prefix=" " category="inline-code"></block> 和<block ref="4b583376b2767b923c3e1da60d10de59" prefix=" " category="inline-code"></block> 為必填項目。這些要求均已與之進行 AND 運算。</block>
+  <block id="83a4334df2d568f08135301519e0294d" category="list-text">* 值 * ： _ （如果使用匹配運算、則為必填） _ 字串值的陣列。如果運算子是<block ref="efeb369cccbd560588a756610865664c" prefix=" " category="inline-code"></block> 或<block ref="c949090e2cb12faab4dabb4621dd6c9e" prefix=" " category="inline-code"></block>的值數組不能爲空。如果運算子是<block ref="2a8eb028670e972535e8e246be645821" prefix=" " category="inline-code"></block> 或<block ref="c47c93cf49de211bba5d62d65225f128" prefix=" " category="inline-code"></block>的值數組必須爲空。</block>
+  <block id="139f344cca23a89c521bc7cc6c7100b8" category="paragraph">YAML 範例：</block>
+  <block id="e1580e3f854017c65e242047bf63a3cd" category="list-text">填入之後<block ref="6a9e31a9ccfc563d5424113ed9b98e26" prefix=" " category="inline-code"></block> 使用正確值的檔案、請套用 CR ：</block>
+  <block id="a23ad0e7e9c822577ac47cc696fd68bd" category="section-title">[ 技術預覽 ] 使用自訂資源（ CR ）從備份還原</block>
+  <block id="589c3ffbeb874692bc987f25471bdec5" category="paragraph">您可以使用自訂資源（ CR ）檔案、將備份資料還原至不同的命名空間或原始來源命名空間。</block>
+  <block id="45ff81bf0afcefe9451aab9b611c1934" category="open-title">使用 CR 從備份還原</block>
+  <block id="0291eb75f7d9f722c1c83050970a021f" category="list-text">建立自訂資源（ CR ）檔案並命名<block ref="5cdae9ef2c57d39bfd2be879e506f5ce" prefix=" " category="inline-code"></block>。更新括弧 &lt;&gt; 中的值以符合 Astra Control 環境和叢集組態：</block>
+  <block id="607cb816902b97513f9f07eaf1cf9526" category="list-text">&lt;CR_NAME&gt; ：此 CR 作業的名稱；請為您的環境選擇合理的名稱。</block>
+  <block id="32c38c61b072ed7be99e03554fcc5dc7" category="list-text">&lt;APPVAULT_NAME&gt; ：儲存備份內容的 AppVault 名稱。</block>
+  <block id="b6f7c06130923ff859915637bdd832de" category="list-text">&lt;BACKUP_PATH&gt; ：儲存備份內容的 AppVault 內部路徑。例如：</block>
+  <block id="98766ce59cde6328ee287141ac6463fc" category="list-text">&lt;SOURCE_NAMESPACE&gt; ：還原作業的來源命名空間。</block>
+  <block id="2de12cc712c3180de4a36bafe4b03d27" category="list-text">&lt;DESTINATION_NAMESPACE&gt; ：還原作業的目的地命名空間。</block>
+  <block id="68394cd490bb116e95fb9fa813fc64ac" category="paragraph">&lt;stdin&gt; 中未解決的指令 - 包括： ..//_INCLUDE / 選擇性還原 -CR.adoc []</block>
+  <block id="fb72d03a8b8ac14ae1e7d9aa1f047e05" category="list-text">填入之後<block ref="5cdae9ef2c57d39bfd2be879e506f5ce" prefix=" " category="inline-code"></block> 使用正確值的檔案、請套用 CR ：</block>
+  <block id="4f6d84376015daa09c05aaa62c5169b3" category="open-title">使用 CR 從備份還原至原始命名空間</block>
+  <block id="d21e7e879c0776ee09e7586ce29d2898" category="list-text">建立自訂資源（ CR ）檔案並命名<block ref="eb9b00b26a03b44f5f2897edcd77fbc2" prefix=" " category="inline-code"></block>。更新括弧 &lt;&gt; 中的值以符合 Astra Control 環境和叢集組態：</block>
+  <block id="5348fdd12f57331552ca99bd9874fb9e" category="list-text">填入之後<block ref="eb9b00b26a03b44f5f2897edcd77fbc2" prefix=" " category="inline-code"></block> 使用正確值的檔案、請套用 CR ：</block>
+  <block id="59996d3ba6c2c9c9164c73f5f9dbaaef" category="section-title">[ 技術預覽 ] 使用自訂資源（ CR ）從快照還原</block>
+  <block id="7708c3b204f347f9a3f6641e7484ab47" category="paragraph">您可以使用自訂資源（ CR ）檔案、將資料從快照還原至不同的命名空間或原始來源命名空間。</block>
+  <block id="713a47b0e743ef100957f9dbf7a7b970" category="open-title">使用 CR 從快照還原</block>
+  <block id="c0f816a602a40acd8086ff72e41b3c9c" category="list-text">建立自訂資源（ CR ）檔案並命名<block ref="47c8c017693706f1deca4469c915fc62" prefix=" " category="inline-code"></block>。更新括弧 &lt;&gt; 中的值以符合 Astra Control 環境和叢集組態：</block>
+  <block id="9698c53c78d261962a4a1c26b913eee1" category="list-text">填入之後<block ref="47c8c017693706f1deca4469c915fc62" prefix=" " category="inline-code"></block> 使用正確值的檔案、請套用 CR ：</block>
+  <block id="b78248634602cda93bac3dff3aaa9393" category="open-title">使用 CR 從快照還原至原始命名空間</block>
+  <block id="c32ab7b52b53095f9f5158cc1e448576" category="list-text">建立自訂資源（ CR ）檔案並命名<block ref="7789d21ba00a1b12ae9d85f219dabda2" prefix=" " category="inline-code"></block>。更新括弧 &lt;&gt; 中的值以符合 Astra Control 環境和叢集組態：</block>
+  <block id="375b1db65557163f2d0e23f660a3d7f9" category="list-text">填入之後<block ref="7789d21ba00a1b12ae9d85f219dabda2" prefix=" " category="inline-code"></block> 使用正確值的檔案、請套用 CR ：</block>
+  <block id="c9d43c9d4ce1936591207cd7ff5311cb" category="section-title">[ 技術預覽 ] 使用自訂資源管理貯體</block>
+  <block id="e2af1d5e5fa116233e71ad721f3e307b" category="paragraph">您可以使用應用程式叢集上的 Astra Control 自訂資源（ CR ）來新增貯體。如果您想要備份應用程式和持續儲存設備、或是想要跨叢集複製應用程式、則必須新增物件存放區資源庫供應商。Astra Control會將這些備份或複製儲存在您定義的物件存放區中。如果您使用自訂資源方法、則應用程式快照功能需要一個儲存區。</block>
+  <block id="e397375a1991bd3b78d0436ce29592b7" category="paragraph">如果您要將應用程式組態和持續儲存設備複製到同一個叢集、則無需使用Astra Control中的儲存庫。</block>
+  <block id="d8b0a07b7fa1af1e74af87346ff33870" category="paragraph">Astra Control 的貯體自訂資源稱為 AppVault 。此 CR 包含用於保護作業的貯體所需的組態。</block>
+  <block id="590fc6039a76d3145b15d507ca5bcb69" category="list-text">確保您擁有一個可從 Astra Control Center 所管理的叢集存取的貯體。</block>
+  <block id="4a32b7d8f42a393453794c007946d6fe" category="list-text">確保您擁有貯體的認證。</block>
+  <block id="3f23a4c261d25b12e00f6171fdb38359" category="list-text">確認貯體為下列其中一種類型：</block>
+  <block id="cc76a05fe8cbb45b45b1139e841822bd" category="admonition">Amazon Web Services（AWS）和Google Cloud Platform（GCP）使用通用S3儲存區類型。</block>
+  <block id="3443da831f646641a051400a8359fced" category="admonition">雖然Astra Control Center支援Amazon S3做為通用S3儲存區供應商、但Astra Control Center可能不支援所有聲稱Amazon S3支援的物件儲存區廠商。</block>
+  <block id="45a79ca58f818fe6f7e34d3ad01781ce" category="list-text">建立自訂資源（ CR ）檔案並命名（例如、<block ref="056c513f9078872b92d07c3cc704b909" prefix=" " category="inline-code"></block>）。</block>
+  <block id="18924d9e76d2dc9a88bddb772904461d" category="list-text">設定下列屬性：</block>
+  <block id="1224dce1461236a797d84749d37c9491" category="list-text">* metadata.name*: _ （必要） _ AppVault 自訂資源的名稱。</block>
+  <block id="69b5be000688679a9ee2fef5a4c0c6e5" category="list-text">*spec.prefix* ： _ （選用） _ 以 AppVault 中儲存的所有實體名稱為前置的路徑。</block>
+  <block id="fcbc6a61a9db33b3fae0293b3f248d8b" category="list-text">* spec.providerConfig*: _ （必要） _ 儲存使用指定供應商存取 AppVault 所需的組態。</block>
+  <block id="2bda4ec158506a5cc3faac161d6d620d" category="list-text">* spec.providerCredentials*: _ （必要） _ 儲存使用指定供應商存取 AppVault 所需的任何認證資料。</block>
+  <block id="343fc86e1ff54e13706200b99b851d91" category="list-text">* spec.providerCredentials.valueFromSecret*: _ （選用） _ 表示認證值應來自機密。</block>
+  <block id="2d32c7aa536ab1e00f078fb24a7eb990" category="list-text">* 機碼 * ： _ （如果使用 valueFromSecret 、則為必填） _ 要從中選取的密碼的有效金鑰。</block>
+  <block id="d1b4714eb6d54919b20d4d6f82d1acb4" category="list-text">* 名稱 * ： _ （如果使用 valueFromSecret 、則為必填） _ 包含此欄位值的機密名稱。必須位於相同的命名空間中。</block>
+  <block id="9c20f9a97f5024f7f0cbeebb01127512" category="list-text">* spec.providerType*: _ （必要） _ 決定提供備份的內容、例如 NetApp ONTAP S3 或 Microsoft Azure 。</block>
+  <block id="a7f829a367be9439add4237b61a50388" category="list-text">填入之後<block ref="056c513f9078872b92d07c3cc704b909" prefix=" " category="inline-code"></block> 使用正確值的檔案、請套用 CR ：</block>
+  <block id="e9a2cf6bcc4b5dac4132bd23653461f4" category="inline-link-macro">設定另一個預設儲存區</block>
+  <block id="70c54cfcee3c9263e59ee7de13eaba8a" category="admonition">當您新增貯體時、Astra Control會使用預設的貯體指標來標記一個貯體。您建立的第一個儲存區會成為預設儲存區。當您新增儲存庫時、可以稍後決定 <block ref="f83337d9020c8fbb1074e1310043d277" category="inline-link-macro-rx"></block>。</block>
+  <block id="52431bbd389e0fa547d3457c7623dfdb" category="paragraph-title">（技術預覽）聲明性 Kubernetes 工作流程</block>
+  <block id="a70f47b04c91a98499e8d350fa135250" category="paragraph">此 Astra Control Center 版本包含宣告式 Kubernetes 功能、可讓您從原生 Kubernetes 自訂資源（ CR ）執行資料管理。</block>
+  <block id="0addefdac9fea093ab0631c42bf63154" category="paragraph">此功能僅適用於 Astra Control Service Early Adopter Program （ EAP ）執行個體。請聯絡您的 NetApp 銷售代表、以取得加入 EAP 的相關資訊。</block>
+  <block id="1d649712f351065ae3623bc575a29774" category="inline-link-macro">Astra Connector</block>
+  <block id="9edf27bb0e7572b9900e7980f47a9346" category="paragraph">安裝之後 <block ref="124c0a76592741cd24122aa865f475c8" category="inline-link-macro-rx"></block> 在您要管理的叢集上、您可以在 UI 或 CR 中執行下列 CR 型叢集作業：</block>
+  <block id="04bba2bce404c3f162c566f599d5a5f0" category="inline-link-macro">使用自訂資源定義應用程式</block>
+  <block id="f1e93254db114ec09dfb4e798efbd486" category="list-text"><block ref="f1e93254db114ec09dfb4e798efbd486" category="inline-link-macro-rx"></block></block>
+  <block id="7552906db45dd4810da20c3ab62fd315" category="inline-link-macro">定義貯體</block>
+  <block id="a806d7f7605195d7e64e704b2059885c" category="list-text"><block ref="a806d7f7605195d7e64e704b2059885c" category="inline-link-macro-rx"></block></block>
+  <block id="adeac59ad1862a3e0c4f40cfe863ae90" category="list-text"><block ref="adeac59ad1862a3e0c4f40cfe863ae90" category="inline-link-macro-rx"></block></block>
+  <block id="c0ddbdd4dd215b4d8e8c8b37f50bee6e" category="inline-link-macro">備份您的應用程式</block>
+  <block id="3201e6dd0f57980edf66d0f7c4dc08ed" category="list-text"><block ref="3201e6dd0f57980edf66d0f7c4dc08ed" category="inline-link-macro-rx"></block></block>
+  <block id="a1525043f13c3444c6cf8185256e95b6" category="list-text"><block ref="a1525043f13c3444c6cf8185256e95b6" category="inline-link-macro-rx"></block></block>
+  <block id="c9bc674578c656555f1074d9bceeb427" category="inline-link-macro">建立快照或備份排程</block>
+  <block id="430bc38f66ff95df230db47441847e3e" category="list-text"><block ref="430bc38f66ff95df230db47441847e3e" category="inline-link-macro-rx"></block></block>
+  <block id="89e886bcb189a0f892c41a8565bbf540" category="inline-link-macro">從快照或備份還原應用程式</block>
+  <block id="efbaf254e1ec98ba6d53c22597ae4b1d" category="list-text"><block ref="efbaf254e1ec98ba6d53c22597ae4b1d" category="inline-link-macro-rx"></block></block>
+  <block id="781392df556bdfd6e27dbfef443453b2" category="summary">您必須安裝 Astra Connector 、才能使用 Astra Control 來管理叢集。</block>
+  <block id="06877d6aa63b21abc5ce55f40de7ee52" category="doc">安裝 Astra Connector 以管理叢集</block>
+  <block id="d6ad3b571e0f464e77d6c9b3c1a0bba0" category="paragraph">Astra Connector 是一種軟體、位於託管叢集上、可促進託管叢集與 Astra Control 之間的通訊。對於使用 Astra Control Service 管理的叢集、有兩個可用版本的 Astra Connector ：</block>
+  <block id="0cc4b3b8046b530020e26e2380506f6e" category="inline-link-macro">安裝舊版 Astra Connector</block>
+  <block id="e4616ecb2775b9808fd4b78fb4fe1885" category="list-text">* 舊版 Astra Connector* ： <block ref="d9f90a4052b642b7c706a424bd9589eb" category="inline-link-macro-rx"></block> 如果您計畫使用非 Kubernetes 原生工作流程來管理叢集、請在叢集上進行。</block>
+  <block id="3787453d1199ecd94f5fa3196160ae7c" category="inline-link-macro">安裝 Astra Connector for 叢集、以宣告式 Kubernetes 工作流程進行管理</block>
+  <block id="f87f3d1e5ddd3a702395cb1b396cc179" category="list-text">[ 技術預覽 ] * 聲明性 Kubernetes Astra Connector* ： <block ref="89ba4d4f19bfeda98bc4487268f84956" category="inline-link-macro-rx"></block> 如果您打算使用宣告式 Kubernetes 工作流程來管理叢集、請在叢集上執行。在叢集上安裝 Astra Connector 之後、叢集會自動新增至 Astra Control 。</block>
+  <block id="2e6b95d2857110cd03ac586959cc4347" category="admonition">聲明性 Kubernetes Astra Connector 僅可作為 Astra Control Early Adopter Program （ EAP ）的一部分使用。請聯絡您的 NetApp 銷售代表、以取得加入 EAP 的相關資訊。</block>
+  <block id="0bc1501dc6ef7b7d1bfe536d5f848cb6" category="doc">（技術預覽）安裝宣告性 Kubernetes Astra Connector</block>
+  <block id="fa7bba9dc1b5d46fa6e83a75a0ece441" category="paragraph">使用宣告式 Kubernetes 工作流程管理的叢集使用 Astra Connector 來啟用託管叢集與 Astra Control 之間的通訊。您需要在所有要使用宣告式 Kubernetes 工作流程管理的叢集上安裝 Astra Connector 。</block>
+  <block id="3bdf80685767528cf0c6a3f961534f3c" category="paragraph">您可以使用 Kubernetes 命令和自訂資源（ CR ）檔案來安裝宣告式 Kubernetes Astra Connector 。</block>
+  <block id="cd766c5429e11347a117de2f27183aa1" category="list-text">執行這些步驟時、請在您要使用 Astra Control 管理的叢集上執行這些命令。</block>
+  <block id="26fe73fe65da416c905dcda6ebf96d41" category="list-text">您需要存取想要使用 Astra Control 管理的叢集。</block>
+  <block id="e79045292ac242d3c1a91d2615c41ef8" category="inline-link-macro">使用Astra Control為環境做好叢集管理準備</block>
+  <block id="dadca91e6ec143a55e85acab971da96f" category="admonition">如果叢集已設定 Pod 安全許可強制（ Kubernetes 1.25 及更新叢集的預設值）、則您需要針對適當的命名空間啟用 PSA 限制。請參閱 <block ref="43de17e09b552a43292c1bd8c4ae14f6" category="inline-link-macro-rx"></block> 以取得相關指示。</block>
+  <block id="43ab194768f3f7aeec2a16d677b90acc" category="list-text">使用宣告式 Kubernetes 工作流程、在您要管理的叢集上安裝 Astra Connector 運算子。當您執行此命令時、命名空間<block ref="c6ead53be77481f9e0a3f904f9a88686" prefix=" " category="inline-code"></block> 已建立並套用組態至命名空間：</block>
+  <block id="bb067eb8af0a21790f055c64251d9a79" category="list-text">使用權杖建立秘密。將 &lt;API_TOKEN&gt; 取代為您從 Astra Control 收到的權杖：</block>
+  <block id="99d56ece0d76a0aaa456be40a57654b9" category="list-text">建立 Docker 秘密以用於拉出 Astra Connector 映像。以您環境的資訊取代括弧 &lt;&gt; 中的值：</block>
+  <block id="c0e44c19b002d338ea7349bbebc6b185" category="admonition">您可以在 Astra 控制網路 UI 中找到 &lt;ASTRA_CONTROL_ACCOUNT_ID&gt; 。在 Web UI 中、選取頁面右上角的圖示、然後選取 * API 存取 * 。</block>
+  <block id="fff80cdd2f7437a87cfb1039bab24adf" category="list-text">&lt;ASTRA_CONTROL_ACCOUNT_ID&gt; ：在前一個步驟中從 Astra Control 網路 UI 取得。</block>
+  <block id="418e0bc869410b7cea5c4ec2f7cfedad" category="list-text">&lt;CLUSTER_NAME&gt; ：應在 Astra Control 中指派此叢集的名稱。</block>
+  <block id="02919393c3215473898bd73efdcab254" category="list-text">&lt;ASTRA_CONTROL_URL&gt; ： Astra Control 的網路 UI URL 。例如：</block>
+  <block id="152bd63676ee23bad02f75c472aadc5c" category="list-text">驗證叢集是否出現在 Astra Control 網路 UI 的 * Clusters* 頁面上的受管理叢集清單中。</block>
+  <block id="ae145a4e59321514fcc818f6234d42ea" category="paragraph">Astra Control Service 使用舊版 Astra Connector 、在 Astra Control Service 和使用非 Kubernetes 原生工作流程管理的私有叢集之間進行通訊。您需要在想要使用非 Kubernetes 原生工作流程管理的私有叢集上安裝 Astra Connector 。</block>
+  <block id="dc1e99798a3474c6f53219c06f7195f2" category="paragraph">舊版 Astra Connector 支援下列類型的私有叢集、這些叢集是以非 Kubernetes 原生工作流程管理：</block>
+  <block id="d1398a9488bb275cd91d0cb20ce8d256" category="list-text">內部部署 Red Hat OpenShift Container Platform</block>
+  <block id="36d5f594791128c06a9a2e269fe98439" category="list-text">使用非 Kubernetes 原生工作流程、在您要管理的私有叢集上安裝先前的 Astra Connector 運算子。當您執行此命令時、命名空間<block ref="c6ead53be77481f9e0a3f904f9a88686" prefix=" " category="inline-code"></block> 已建立並套用組態至命名空間：</block>
+  <block id="93e728f3cef8a701d22805c3347d946a" category="inline-link-macro">安裝以非 Kubernetes 原生工作流程管理的舊版 Astra Connector for Private 叢集</block>
+  <block id="8dc028a3d902834a7e6f010e1a35e554" category="paragraph">在新增私有叢集之前、您需要在叢集上安裝 Astra Connector 、以便 Astra Control 能夠與其通訊。請參閱 <block ref="12c939bcb32d435c20b0ec67c951c270" category="inline-link-macro-rx"></block> 以取得相關指示。</block>
+  <block id="9b06baba613e90a3ed72891e00a4cdf1" category="sidebar">安裝舊版 Astra Connector for Private 叢集</block>
+  <block id="d3cb2575aeb827f8b18b8b3f4aef77de" category="sidebar">為宣告式 Kubernetes 叢集安裝 Astra Connector</block>
 </blocks>

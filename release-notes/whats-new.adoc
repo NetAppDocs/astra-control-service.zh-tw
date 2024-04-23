@@ -18,8 +18,21 @@ NetApp會定期更新Astra Control Service、為您提供新功能、增強功�
 
 == 2024 年 3 月 14 日
 
-.新功能與支援
-這是次要的錯誤修正版本。
+.（技術預覽）聲明性 Kubernetes 工作流程
+此 Astra Control Center 版本包含宣告式 Kubernetes 功能、可讓您從原生 Kubernetes 自訂資源（ CR ）執行資料管理。
+
+此功能僅適用於 Astra Control Service Early Adopter Program （ EAP ）執行個體。請聯絡您的 NetApp 銷售代表、以取得加入 EAP 的相關資訊。
+
+安裝之後 link:../get-started/install-astra-connector-declarative.html["Astra Connector"] 在您要管理的叢集上、您可以在 UI 或 CR 中執行下列 CR 型叢集作業：
+
+* link:../use/manage-apps.html#tech-preview-define-an-application-using-a-kubernetes-custom-resource["使用自訂資源定義應用程式"]
+* link:../use/manage-buckets.html#tech-preview-manage-a-bucket-using-a-custom-resource["定義貯體"]
+* link:../use/back-up-full-cluster.html["保護整個叢集"]
+* link:../use/protect-apps.html#create-a-backup["備份您的應用程式"]
+* link:../use/protect-apps.html#create-a-snapshot["建立快照"]
+* link:../use/protect-apps.html#configure-a-protection-policy["建立快照或備份排程"]
+* link:../use/restore-apps.html["從快照或備份還原應用程式"]
+
 
 
 

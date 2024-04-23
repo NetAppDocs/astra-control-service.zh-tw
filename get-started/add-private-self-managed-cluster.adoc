@@ -50,7 +50,7 @@ RKE 2 ：採用 Rancher Manager 2.7.9 的版本 1.24.17 、 1.25.14 、 1.26.9
 
 == 安裝 Astra Connector
 
-在新增私有叢集之前、您需要在叢集上安裝 Astra Connector 、以便 Astra Control 能夠與其通訊。請參閱 link:install-astra-connector.html["安裝 Astra Connector for Private 叢集"] 以取得相關指示。
+在新增私有叢集之前、您需要在叢集上安裝 Astra Connector 、以便 Astra Control 能夠與其通訊。請參閱 link:install-astra-connector-previous.html["安裝以非 Kubernetes 原生工作流程管理的舊版 Astra Connector for Private 叢集"] 以取得相關指示。
 
 
 

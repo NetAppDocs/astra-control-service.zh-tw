@@ -94,6 +94,190 @@ NOTE: 若要瞭解如何設定 INCLUDE 及 EXCLUDE 規則、請參閱 <<在應�
 . 仔細檢閱還原動作的詳細資料、輸入「還原」（如有提示）、然後選取 * 還原 * 。
 
 
+
+
+== [ 技術預覽 ] 使用自訂資源（ CR ）從備份還原
+
+您可以使用自訂資源（ CR ）檔案、將備份資料還原至不同的命名空間或原始來源命名空間。
+
+[role="tabbed-block"]
+====
+.使用 CR 從備份還原
+--
+.步驟
+. 建立自訂資源（ CR ）檔案並命名 `astra-control-backup-restore-cr.yaml`。更新括弧 <> 中的值以符合 Astra Control 環境和叢集組態：
++
+** <CR_NAME> ：此 CR 作業的名稱；請為您的環境選擇合理的名稱。
+** <APPVAULT_NAME> ：儲存備份內容的 AppVault 名稱。
+** <BACKUP_PATH> ：儲存備份內容的 AppVault 內部路徑。例如：
++
+[listing]
+----
+ONTAP-S3_1343ff5e-4c41-46b5-af00/backups/schedule-20231213023800_94347756-9d9b-401d-a0c3
+----
+** <SOURCE_NAMESPACE> ：還原作業的來源命名空間。
+** <DESTINATION_NAMESPACE> ：還原作業的目的地命名空間。
++
+[source, yaml]
+----
+apiVersion: astra.netapp.io/v1
+kind: BackupRestore
+metadata:
+  name: <CR_NAME>
+  namespace: astra-connector
+spec:
+  appVaultRef: <APPVAULT_NAME>
+  appArchivePath: <BACKUP_PATH>
+  namespaceMapping: [{"source": "<SOURCE_NAMESPACE>", "destination": "<DESTINATION_NAMESPACE>"}]
+----
+
+
+
+
+<stdin> 中未解決的指令 - 包括： ..//_INCLUDE / 選擇性還原 -CR.adoc []
+
+. 填入之後 `astra-control-backup-restore-cr.yaml` 使用正確值的檔案、請套用 CR ：
++
+[source, console]
+----
+kubectl apply -f astra-control-backup-restore-cr.yaml
+----
+
+
+--
+.使用 CR 從備份還原至原始命名空間
+--
+.步驟
+. 建立自訂資源（ CR ）檔案並命名 `astra-control-backup-ipr-cr.yaml`。更新括弧 <> 中的值以符合 Astra Control 環境和叢集組態：
++
+** <CR_NAME> ：此 CR 作業的名稱；請為您的環境選擇合理的名稱。
+** <APPVAULT_NAME> ：儲存備份內容的 AppVault 名稱。
+** <BACKUP_PATH> ：儲存備份內容的 AppVault 內部路徑。例如：
++
+[listing]
+----
+ONTAP-S3_1343ff5e-4c41-46b5-af00/backups/schedule-20231213023800_94347756-9d9b-401d-a0c3
+----
++
+[source, yaml]
+----
+apiVersion: astra.netapp.io/v1
+kind: BackupInplaceRestore
+metadata:
+  name: <CR_NAME>
+  namespace: astra-connector
+spec:
+  appVaultRef: <APPVAULT_NAME>
+  appArchivePath: <BACKUP_PATH>
+----
+
+
+
+
+<stdin> 中未解決的指令 - 包括： ..//_INCLUDE / 選擇性還原 -CR.adoc []
+
+. 填入之後 `astra-control-backup-ipr-cr.yaml` 使用正確值的檔案、請套用 CR ：
++
+[source, console]
+----
+kubectl apply -f astra-control-backup-ipr-cr.yaml
+----
+
+
+--
+====
+
+
+== [ 技術預覽 ] 使用自訂資源（ CR ）從快照還原
+
+您可以使用自訂資源（ CR ）檔案、將資料從快照還原至不同的命名空間或原始來源命名空間。
+
+[role="tabbed-block"]
+====
+.使用 CR 從快照還原
+--
+.步驟
+. 建立自訂資源（ CR ）檔案並命名 `astra-control-snapshot-restore-cr.yaml`。更新括弧 <> 中的值以符合 Astra Control 環境和叢集組態：
++
+** <CR_NAME> ：此 CR 作業的名稱；請為您的環境選擇合理的名稱。
+** <APPVAULT_NAME> ：儲存備份內容的 AppVault 名稱。
+** <BACKUP_PATH> ：儲存備份內容的 AppVault 內部路徑。例如：
++
+[listing]
+----
+ONTAP-S3_1343ff5e-4c41-46b5-af00/backups/schedule-20231213023800_94347756-9d9b-401d-a0c3
+----
+** <SOURCE_NAMESPACE> ：還原作業的來源命名空間。
+** <DESTINATION_NAMESPACE> ：還原作業的目的地命名空間。
++
+[source, yaml]
+----
+apiVersion: astra.netapp.io/v1
+kind: SnapshotRestore
+metadata:
+  name: <CR_NAME>
+  namespace: astra-connector
+spec:
+  appArchivePath: <BACKUP_PATH>
+  appVaultRef: <APPVAULT_NAME>
+  namespaceMapping: [{"source": "<SOURCE_NAMESPACE>", "destination": "<DESTINATION_NAMESPACE>"}]
+----
+
+
+
+
+<stdin> 中未解決的指令 - 包括： ..//_INCLUDE / 選擇性還原 -CR.adoc []
+
+. 填入之後 `astra-control-snapshot-restore-cr.yaml` 使用正確值的檔案、請套用 CR ：
++
+[source, console]
+----
+kubectl apply -f astra-control-snapshot-restore-cr.yaml
+----
+
+
+--
+.使用 CR 從快照還原至原始命名空間
+--
+.步驟
+. 建立自訂資源（ CR ）檔案並命名 `astra-control-snapshot-ipr-cr.yaml`。更新括弧 <> 中的值以符合 Astra Control 環境和叢集組態：
++
+** <CR_NAME> ：此 CR 作業的名稱；請為您的環境選擇合理的名稱。
+** <APPVAULT_NAME> ：儲存備份內容的 AppVault 名稱。
+** <BACKUP_PATH> ：儲存備份內容的 AppVault 內部路徑。例如：
++
+[listing]
+----
+ONTAP-S3_1343ff5e-4c41-46b5-af00/backups/schedule-20231213023800_94347756-9d9b-401d-a0c3
+----
++
+[source, yaml]
+----
+apiVersion: astra.netapp.io/v1
+kind: SnapshotInplaceRestore
+metadata:
+  name: <CR_NAME>
+  namespace: astra-connector
+spec:
+  appArchivePath: <BACKUP_PATH>
+  appVaultRef: <APPVAULT_NAME>
+----
+
+
+
+
+<stdin> 中未解決的指令 - 包括： ..//_INCLUDE / 選擇性還原 -CR.adoc []
+
+. 填入之後 `astra-control-snapshot-ipr-cr.yaml` 使用正確值的檔案、請套用 CR ：
++
+[source, console]
+----
+kubectl apply -f astra-control-snapshot-ipr-cr.yaml
+----
+
+
+--
+====
 .結果
 Astra Control會根據您提供的資訊還原應用程式。如果您就地還原應用程式、現有持續磁碟區的內容會由還原應用程式的持續磁碟區內容取代。
 

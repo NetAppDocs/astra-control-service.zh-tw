@@ -265,6 +265,106 @@ NOTE: 選取「*顯示系統命名空間*」核取方塊、顯示預設不會用
 
 
 
+=== [ 技術預覽 ] 使用 Kubernetes 自訂資源定義應用程式
+
+您可以使用自訂資源（ CR ）將 Kubernetes 資源定義為應用程式、以指定您要使用 Astra Control 管理的資源。如果您想要個別管理這些資源、或是在命名空間中管理所有 Kubernetes 資源、則可以新增叢集範圍的資源、例如、如果您想以類似的方式、在一般時間間隔管理和保護特定命名空間中的所有資源。
+
+.步驟
+. 建立自訂資源（ CR ）檔案並命名（例如、 `astra_mysql_app.yaml`）。
+. 在中命名應用程式 `metadata.name`。
+. 定義要管理的應用程式資源：
++
+[role="tabbed-block"]
+====
+.spec.includedClusterScopedResources
+--
+除了 Astra Control 自動包含的資源類型之外、還包括叢集範圍的資源類型：
+
+** * spec.includedClusterScopedResources*: _ （選用） _ 要納入的叢集範圍資源類型清單。
++
+*** * 群組版本 Kind* ： _ （選擇性） _ 明確識別種類。
++
+**** * 群組 * ： _ （若使用 groupVersionKind 則為必填） _ 要納入的資源的 API 群組。
+**** * 版本 * ： _ （如果使用 groupVersionKind 則需要） _ 要包含的資源的 API 版本。
+**** * 種類 * ： _ （如果使用 groupVersionKind 則需要） _ 要包含的資源種類。
+
+
+*** * 標籤選取器 * ： _ （選用） _ 一組資源的標籤查詢。它僅用於擷取符合標籤的資源。如果您未提供標籤、Astra Control會收集為該叢集指定之資源種類的所有執行個體。對 matchLabels 和 matchExpedions 的結果進行 AND 運算。
++
+**** *matchLabels * ： _ （選用） _ ｛ key 、 value ｝ 對的地圖。matchLabels 對應中的單一 {key,value} 相當於 matchExpions 元素、其中的關鍵欄位為 "key" 、運算子為 "in " 、值陣列僅包含 "value" 。這些要求均已與之進行 AND 運算。
+**** *matchExpedions * ： _ （選擇性） _ 標籤選取器要求清單。這些要求均已與之進行 AND 運算。
++
+***** * 機碼 * ： _ （若使用媒合、則為必填） _ 與標籤選取器相關的標籤機碼。
+***** * 運算子 * ： _ （若使用媒合、則為必填） _ 代表金鑰與一組值的關係。有效的運算子為 `In`、 `NotIn`、 `Exists` 和 `DoesNotExist`。
+***** * 值 * ： _ （若使用媒合、則為必填） _ 字串值的陣列。如果運算子是 `In` 或 `NotIn`的值數組不能爲空。如果運算子是 `Exists` 或 `DoesNotExist`的值數組必須爲空。
+
+
+
+
+
+
+
+
+--
+.spec.includedNamespaces
+--
+在應用程式中的這些資源中包含命名空間和資源：
+
+** * spec.includedNamespaces*: _ （必要） _ 定義用於資源選擇的命名空間和選用篩選器。
++
+*** * 命名空間 * ： _ （必填） _ 包含您要使用 Astra Control 管理的應用程式資源的命名空間。
+*** * 標籤選取器 * ： _ （選用） _ 一組資源的標籤查詢。它僅用於擷取符合標籤的資源。如果您未提供標籤、Astra Control會收集為該叢集指定之資源種類的所有執行個體。對 matchLabels 和 matchExpedions 的結果進行 AND 運算。
++
+**** *matchLabels * ： _ （選用） _ ｛ key 、 value ｝ 對的地圖。matchLabels 對應中的單一 {key,value} 相當於 matchExpions 元素、其中的關鍵欄位為 "key" 、運算子為 "in " 、值陣列僅包含 "value" 。這些要求均已與之進行 AND 運算。
+**** *matchExpedions * ： _ （選擇性） _ 標籤選取器要求清單。 `key` 和 `operator` 為必填項目。這些要求均已與之進行 AND 運算。
++
+***** * 機碼 * ： _ （若使用媒合、則為必填） _ 與標籤選取器相關的標籤機碼。
+***** * 運算子 * ： _ （若使用媒合、則為必填） _ 代表金鑰與一組值的關係。有效的運算子為 `In`、 `NotIn`、 `Exists` 和 `DoesNotExist`。
+***** * 值 * ： _ （如果使用匹配運算、則為必填） _ 字串值的陣列。如果運算子是 `In` 或 `NotIn`的值數組不能爲空。如果運算子是 `Exists` 或 `DoesNotExist`的值數組必須爲空。
+
+
+
+
+
+
+
+
+--
+====
++
+YAML 範例：
+
++
+[source, yaml]
+----
+apiVersion: astra.netapp.io/v1
+kind: Application
+metadata:
+  name: astra_mysql_app
+spec:
+  includedNamespaces:
+    - namespace: astra_mysql_app
+      labelSelector:
+        matchLabels:
+          app: nginx
+          env: production
+        matchExpressions:
+          - key: tier
+            operator: In
+            values:
+              - frontend
+              - backend
+----
+. 填入之後 `astra_mysql_app.yaml` 使用正確值的檔案、請套用 CR ：
++
+[source, console]
+----
+kubectl apply -f astra_mysql_app.yaml -n astra-connector
+----
+
+
+
+
 == 系統命名空間如何？
 
 Astra Control也會探索Kubernetes叢集上的系統命名空間。我們預設不會顯示這些系統命名空間、因為您很少需要備份系統應用程式資源。

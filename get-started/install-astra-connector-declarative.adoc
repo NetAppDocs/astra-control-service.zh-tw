@@ -1,0 +1,130 @@
+---
+sidebar: sidebar 
+permalink: get-started/install-astra-connector-declarative.html 
+keywords: connector, install, astra connector, manage cluster, add cluster, cluster, add, manage 
+summary: 您可以安裝 Astra Connector 來協助管理私有叢集。 
+---
+= （技術預覽）安裝宣告性 Kubernetes Astra Connector
+:hardbreaks:
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/get-started/
+
+
+[role="lead"]
+使用宣告式 Kubernetes 工作流程管理的叢集使用 Astra Connector 來啟用託管叢集與 Astra Control 之間的通訊。您需要在所有要使用宣告式 Kubernetes 工作流程管理的叢集上安裝 Astra Connector 。
+
+您可以使用 Kubernetes 命令和自訂資源（ CR ）檔案來安裝宣告式 Kubernetes Astra Connector 。
+
+.關於這項工作
+* 執行這些步驟時、請在您要使用 Astra Control 管理的叢集上執行這些命令。
+* 如果您使用的是堡壘主機、請從堡壘主機的命令列發出這些命令。
+
+
+.開始之前
+* 您需要存取想要使用 Astra Control 管理的叢集。
+* 您需要 Kubernetes 管理員權限、才能在叢集上安裝 Astra Connector 運算子。
+
+
+
+NOTE: 如果叢集已設定 Pod 安全許可強制（ Kubernetes 1.25 及更新叢集的預設值）、則您需要針對適當的命名空間啟用 PSA 限制。請參閱 link:prep-for-cluster-management.html["使用Astra Control為環境做好叢集管理準備"] 以取得相關指示。
+
+.步驟
+. 使用宣告式 Kubernetes 工作流程、在您要管理的叢集上安裝 Astra Connector 運算子。當您執行此命令時、命名空間 `astra-connector-operator` 已建立並套用組態至命名空間：
++
+[source, console]
+----
+kubectl apply -f https://github.com/NetApp/astra-connector-operator/releases/download/24.02.0-202403151353/astraconnector_operator.yaml
+----
+. 確認操作員已安裝就緒：
++
+[source, console]
+----
+kubectl get all -n astra-connector-operator
+----
+. 從 Astra Control 取得 API 權杖。請參閱 https://docs.netapp.com/us-en/astra-automation/get-started/get_api_token.html["Astra Automation文件"^] 以取得相關指示。
+. 使用權杖建立秘密。將 <API_TOKEN> 取代為您從 Astra Control 收到的權杖：
++
+[source, console]
+----
+kubectl create secret generic astra-token \
+--from-literal=apiToken=<API_TOKEN> \
+-n astra-connector
+----
+. 建立 Docker 秘密以用於拉出 Astra Connector 映像。以您環境的資訊取代括弧 <> 中的值：
++
+
+NOTE: 您可以在 Astra 控制網路 UI 中找到 <ASTRA_CONTROL_ACCOUNT_ID> 。在 Web UI 中、選取頁面右上角的圖示、然後選取 * API 存取 * 。
+
++
+[source, console]
+----
+kubectl create secret docker-registry regcred \
+--docker-username=<ASTRA_CONTROL_ACCOUNT_ID> \
+--docker-password=<API_TOKEN> \
+-n astra-connector \
+--docker-server=cr.astra.netapp.io
+----
+. 建立 Astra Connector CR 檔案並命名 `astra-connector-cr.yaml`。更新括弧 <> 中的值以符合 Astra Control 環境和叢集組態：
++
+** <ASTRA_CONTROL_ACCOUNT_ID> ：在前一個步驟中從 Astra Control 網路 UI 取得。
+** <CLUSTER_NAME> ：應在 Astra Control 中指派此叢集的名稱。
+** <ASTRA_CONTROL_URL> ： Astra Control 的網路 UI URL 。例如：
++
+[listing]
+----
+https://astra.control.url
+----
++
+[source, yaml]
+----
+apiVersion: astra.netapp.io/v1
+kind: AstraConnector
+metadata:
+  name: astra-connector
+  namespace: astra-connector
+spec:
+  astra:
+    accountId: <ASTRA_CONTROL_ACCOUNT_ID>
+    clusterName: <CLUSTER_NAME>
+    #Only set `skipTLSValidation` to `true` when using the default self-signed
+    #certificate in a proof-of-concept environment.
+    skipTLSValidation: false #Should be set to false in production environments
+    tokenRef: astra-token
+  natsSyncClient:
+    cloudBridgeURL: <ASTRA_CONTROL_HOST_URL>
+  imageRegistry:
+    name: cr.astra.netapp.io
+    secret: regcred
+----
+
+
+. 填入之後 `astra-connector-cr.yaml` 使用正確值的檔案、請套用 CR ：
++
+[source, console]
+----
+kubectl apply -n astra-connector -f astra-connector-cr.yaml
+----
+. 確認 Astra Connector 已完全部署：
++
+[source, console]
+----
+kubectl get all -n astra-connector
+----
+. 確認叢集已向 Astra Control 註冊：
++
+[source, console]
+----
+kubectl get astraconnectors.astra.netapp.io -A
+----
++
+您應該會看到類似下列的輸出：
+
++
+[listing]
+----
+NAMESPACE         NAME              REGISTERED   ASTRACONNECTORID                       STATUS
+astra-connector   astra-connector   true         00ac8-2cef-41ac-8777-ed0583e   Registered with Astra
+----
+. 驗證叢集是否出現在 Astra Control 網路 UI 的 * Clusters* 頁面上的受管理叢集清單中。
+

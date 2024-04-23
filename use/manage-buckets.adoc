@@ -174,6 +174,94 @@ NOTE: Astra Control會先確保不會有使用儲存庫進行備份的排程原�
 
 
 
+== [ 技術預覽 ] 使用自訂資源管理貯體
+
+您可以使用應用程式叢集上的 Astra Control 自訂資源（ CR ）來新增貯體。如果您想要備份應用程式和持續儲存設備、或是想要跨叢集複製應用程式、則必須新增物件存放區資源庫供應商。Astra Control會將這些備份或複製儲存在您定義的物件存放區中。如果您使用自訂資源方法、則應用程式快照功能需要一個儲存區。
+
+如果您要將應用程式組態和持續儲存設備複製到同一個叢集、則無需使用Astra Control中的儲存庫。
+
+Astra Control 的貯體自訂資源稱為 AppVault 。此 CR 包含用於保護作業的貯體所需的組態。
+
+.開始之前
+* 確保您擁有一個可從 Astra Control Center 所管理的叢集存取的貯體。
+* 確保您擁有貯體的認證。
+* 確認貯體為下列其中一種類型：
++
+** NetApp ONTAP 產品S3
+** NetApp StorageGRID 產品S3
+** Microsoft Azure
+** 一般S3
+
+
+
+
+
+NOTE: Amazon Web Services（AWS）和Google Cloud Platform（GCP）使用通用S3儲存區類型。
+
+
+NOTE: 雖然Astra Control Center支援Amazon S3做為通用S3儲存區供應商、但Astra Control Center可能不支援所有聲稱Amazon S3支援的物件儲存區廠商。
+
+.步驟
+. 建立自訂資源（ CR ）檔案並命名（例如、 `astra-appvault.yaml`）。
+. 設定下列屬性：
++
+** * metadata.name*: _ （必要） _ AppVault 自訂資源的名稱。
+** *spec.prefix* ： _ （選用） _ 以 AppVault 中儲存的所有實體名稱為前置的路徑。
+** * spec.providerConfig*: _ （必要） _ 儲存使用指定供應商存取 AppVault 所需的組態。
+** * spec.providerCredentials*: _ （必要） _ 儲存使用指定供應商存取 AppVault 所需的任何認證資料。
++
+*** * spec.providerCredentials.valueFromSecret*: _ （選用） _ 表示認證值應來自機密。
++
+**** * 機碼 * ： _ （如果使用 valueFromSecret 、則為必填） _ 要從中選取的密碼的有效金鑰。
+**** * 名稱 * ： _ （如果使用 valueFromSecret 、則為必填） _ 包含此欄位值的機密名稱。必須位於相同的命名空間中。
+
+
+
+
+** * spec.providerType*: _ （必要） _ 決定提供備份的內容、例如 NetApp ONTAP S3 或 Microsoft Azure 。
++
+YAML 範例：
+
++
+[source, yaml]
+----
+apiVersion: astra.netapp.io/v1
+kind: AppVault
+metadata:
+  name: astra-appvault
+spec:
+  providerType: generic-s3
+  providerConfig:
+    path: testpath
+    endpoint: 192.168.1.100:80
+    bucketName: bucket1
+    secure: "false"
+  providerCredentials:
+    accessKeyID:
+      valueFromSecret:
+        name: s3-creds
+        key: accessKeyID
+    secretAccessKey:
+      valueFromSecret:
+        name: s3-creds
+        key: secretAccessKey
+----
+
+
+. 填入之後 `astra-appvault.yaml` 使用正確值的檔案、請套用 CR ：
++
+[source, console]
+----
+kubectl apply -f astra-appvault.yaml -n astra-connector
+----
++
+
+NOTE: 當您新增貯體時、Astra Control會使用預設的貯體指標來標記一個貯體。您建立的第一個儲存區會成為預設儲存區。當您新增儲存庫時、可以稍後決定 link:../use/manage-buckets.html#set-the-default-bucket["設定另一個預設儲存區"^]。
+
+
+
+
+
 == 如需詳細資訊、請參閱
 
 * https://docs.netapp.com/us-en/astra-automation/index.html["使用Astra Control API"^]

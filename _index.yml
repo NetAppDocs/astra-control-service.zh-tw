@@ -20,6 +20,8 @@ indexpage:
       url: "/use/manage-apps.html"
     - title: 保護您的應用程式
       url: "/use/protect-apps.html"
+    - title: 保護整個叢集
+      url: "/use/back-up-full-cluster.html"
     - title: 移轉應用程式
       url: "/use/clone-apps.html"
     - title: 設定帳單
