@@ -818,14 +818,6 @@
   <block id="ff42fb74ba93da15d304e42948c0b518" category="paragraph"><block ref="250fe5b998dd6cb4de09bf9afa3806e9" category="inline-link-rx"></block>。</block>
   <block id="ef8ee09fa3337e5d951394563bcf6ba8" category="summary">以下概述Astra Control環境的各個元件。</block>
   <block id="9282ad3aef7e124a3b2b9c7eab52b33d" category="doc">架構與元件</block>
-  <block id="60f694f21643599c137f6c610e48124e" category="paragraph">以下概述Astra Control環境的各個元件。</block>
-  <block id="51d249216b03414f10b242b851af7951" category="section-title">Astra控制元件</block>
-  <block id="a8d77bbb11d2e1a349811767d194e9ba" category="list-text">* Kubernetes叢集*：Kubernetes是可攜式、可擴充的開放原始碼平台、可用於管理容器化工作負載與服務、同時促進宣告式組態與自動化。Astra為Kubernetes叢集中託管的應用程式提供管理服務。</block>
-  <block id="de0c45e94d4b178203631d55e65d1b62" category="section-title">Astra控制介面</block>
-  <block id="d015aca78df45458ee1d6533c5246919" category="paragraph">您可以使用不同的介面來完成工作：</block>
-  <block id="085434e07821849d9d71c59516ad591f" category="list-text">*網路使用者介面（UI）*：Astra Control Service和Astra Control Center都使用相同的網路型UI來管理、移轉及保護應用程式。也可以使用UI來管理使用者帳戶和組態設定。</block>
-  <block id="2a531f6e1eec4782b314fc38a518cc75" category="list-text">* API*：Astra Control Service和Astra Control Center都使用相同的Astra Control API。使用API、您可以執行與使用UI相同的工作。</block>
-  <block id="ff66234381e2d5213adaf96c742cb4c3" category="paragraph">Astra Control Center也能讓您管理、移轉及保護在VM環境中執行的Kubernetes叢集。</block>
   <block id="ff24590464659ee8cdec688128c35f89" category="list-text">複製</block>
   <block id="d4e2713d1b1725a1592f9268589f990d" category="list-text">Snapshot</block>
   <block id="3500ba09d0538297440ca620c9dd46bf" category="list-text">備份</block>
@@ -1363,7 +1355,6 @@
   <block id="f0f3d2a56548b1d53077b0b5eff5bb54" category="section-title">2021年3月1日</block>
   <block id="3bdf2e1f16a21b037f1f56168c9e298b" category="section-title">2021年1月25日</block>
   <block id="c8b4516515e1372ec542880d39c0b12d" category="section-title">2020年12月17日（試用版更新）</block>
-  <block id="2325c645f4d2112a8e96b127fbad7bf2" category="inline-image-macro">Astra Control架構圖與元件</block>
   <block id="0e7f3e02eec3115e69bf39331337aa40" category="list-text">*儲存帳戶*（僅限Azure）：輸入Azure儲存帳戶的名稱。此儲存區必須屬於名為_Astra備份rg-_的資源群組。</block>
   <block id="46c53b029194c1de2930d506c617135a" category="inline-link">Amazon文件</block>
   <block id="00aad21491943f355fbfdfc6d4402aab" category="paragraph">+*對於高峰叢集、Astra Control Service使用<block ref="16e1ab965c1d673c5cb3b5a28e77c1c1" category="inline-link-rx"></block> 或Azure託管磁碟做為持續磁碟區的儲存後端。</block>
@@ -2467,7 +2458,6 @@ RKE 2 ：採用 Rancher Manager 2.7.9 的版本 1.24.17 、 1.25.14 、 1.26.9</
   <block id="0807267958e2627050b310b6c4fbc307" category="list-text"><block ref="0807267958e2627050b310b6c4fbc307" category="inline-link-rx"></block></block>
   <block id="c3ca8e473fcc08b80feb32d2ad5b1966" category="inline-link">Astra Control API 文件</block>
   <block id="1ee256dec031da4c8764ac0ab9618006" category="list-text"><block ref="1ee256dec031da4c8764ac0ab9618006" category="inline-link-rx"></block></block>
-  <block id="98687150a7223edc47d2aeb5f1686527" category="list-text">* Astra Control Provisioner* ： Astra Control Provisioner* 是由 NetApp 維護的完全支援的儲存資源配置程式與協調程式、其中包含 Astra Trident CSI 功能、以及延伸的儲存管理功能、因此 Astra Control Provisioner 可讓您為由 Docker 和 Kubernetes 管理的容器化應用程式建立儲存磁碟區。當與 Astra Control 一起部署時、 Astra Control Provisioner 會包含已設定的 ONTAP 儲存後端。</block>
   <block id="2411d46a6f92e6f14127f5089d27d8fe" category="admonition">如果您將 CVS 服務類型與 Astra Control Provisioner 搭配使用、則必須先設定儲存資源池、才能配置磁碟區。如果您在未設定儲存資源池的情況下佈建磁碟區、則磁碟區資源配置將會失敗。請參閱<block ref="c8e96960daef0620d62e613312bed1b3" category="inline-link-rx"></block> 以取得有關建立 Volume 的更多資訊。</block>
   <block id="b88c081e2a4b249f94292c6f7bf16bdc" category="inline-link">下載 Astra Trident 安裝程式並將其解壓縮</block>
   <block id="f1f44f407a364d092b4a3b446d6593b5" category="list-text"><block ref="5512264baa78f7d10bb082092407833c" category="inline-link-rx"></block>。</block>
@@ -2633,7 +2623,6 @@ RKE 2 ：採用 Rancher Manager 2.7.9 的版本 1.24.17 、 1.25.14 、 1.26.9</
   <block id="df3d75a39182fab8d217744cdb76529e" category="list-text">* 使用 Kerberos 5 加密技術增強儲存後端安全性 * ：您可以藉由改善儲存安全性 <block ref="63a1519b1e13a139789d4589996b0d00" category="inline-link-macro-rx"></block> 用於託管叢集與儲存後端之間的流量。Astra Control Provisioner 支援透過 NFSv4.1 連線、從 Red Hat OpenShift 叢集到 Azure NetApp Files 和內部部署 ONTAP 磁碟區的 Kerberos 5 加密。</block>
   <block id="931459f37abea3d820afa0fcf0ecfef7" category="list-text">Astra控制中心
 Astra Control現已推出新的部署模式。_Astra Control Center_ 是自行管理的軟體、可在資料中心內安裝及運作、以便管理 Kubernetes 應用程式生命週期管理、以供內部部署 Kubernetes 叢集使用。</block>
-  <block id="b4cdc34d8767d1d4b7a24fbb97a1d8a7" category="paragraph"><block ref="b4cdc34d8767d1d4b7a24fbb97a1d8a7" category="inline-image-macro-rx" type="image"></block></block>
   <block id="a1932721112c7fa6e0a220f8d12316b9" category="summary">透過排程完整叢集備份來保護您的應用程式、以保護叢集上的所有命名空間。</block>
   <block id="71a086a5ae784c9162639b628b47f232" category="doc">[ 技術預覽 ] 保護整個叢集</block>
   <block id="55663ff2954ae71700f6f717aacad2a3" category="paragraph">您可以在叢集上建立任何或所有未受管理命名空間的排程自動備份。這些工作流程是由 NetApp 提供、以 Kubernetes 服務帳戶、角色繫結和 cron 工作的形式、並以 Python 指令碼協調。</block>
@@ -2852,4 +2841,49 @@ Astra Control現已推出新的部署模式。_Astra Control Center_ 是自行�
   <block id="8dc028a3d902834a7e6f010e1a35e554" category="paragraph">在新增私有叢集之前、您需要在叢集上安裝 Astra Connector 、以便 Astra Control 能夠與其通訊。請參閱 <block ref="12c939bcb32d435c20b0ec67c951c270" category="inline-link-macro-rx"></block> 以取得相關指示。</block>
   <block id="9b06baba613e90a3ed72891e00a4cdf1" category="sidebar">安裝舊版 Astra Connector for Private 叢集</block>
   <block id="d3cb2575aeb827f8b18b8b3f4aef77de" category="sidebar">為宣告式 Kubernetes 叢集安裝 Astra Connector</block>
+  <block id="9323549177620e1dd794512ee7cc0748" category="paragraph">Astra Control 是 Kubernetes 應用程式資料生命週期管理解決方案、可簡化有狀態應用程式的作業、並協助您在混合式和多雲端環境中儲存、保護及移動 Kubernetes 工作負載。</block>
+  <block id="82ec2cd6fda87713f588da75c3b1d0ed" category="section-title">功能</block>
+  <block id="953ad711b5d812e3876fb8a28266ba3e" category="paragraph">* 商店 * ：</block>
+  <block id="1cc20f69146066d58ea30c167da06503" category="list-text">為容器化工作負載提供動態儲存資源配置</block>
+  <block id="40f0627cce837b232dcada830895754a" category="list-text">在執行中加密從容器到持續磁碟區的資料</block>
+  <block id="4d8ebc166f514bc42ed5a5c421a85b7b" category="list-text">跨區域跨區域複寫</block>
+  <block id="f748216a486ca824f2e1350704fdf7cd" category="paragraph">* 保護 * ：</block>
+  <block id="5eea249d5621961399d6b0e6cd549b2a" category="list-text">自動探索及應用程式感知保護整個應用程式及其資料</block>
+  <block id="0905306fb359d754b2fb6b91b4b687b6" category="list-text">根據貴組織的需求、從任何快照版本即時還原應用程式</block>
+  <block id="43130eaaed6187a0c013e3badf7d841a" category="list-text">跨區域、區域和雲端供應商快速容錯移轉</block>
+  <block id="1b329bb5f586d96aac9b868339b54d3c" category="paragraph">* 移動 * ：</block>
+  <block id="fc1049d8b413380216308212cf5b9cd9" category="list-text">在 Kubernetes 叢集與雲端之間、完成應用程式與資料的移動性</block>
+  <block id="1f86e32e0eaaa822d13a5b9730c85ab7" category="list-text">即時複製整個應用程式和資料</block>
+  <block id="b54bcca0ec823f9bf8916580d0df9186" category="list-text">透過一致的 Web UI 和 API 、只需按一下滑鼠即可移轉應用程式</block>
+  <block id="2d242bb36ec91b32005f9296ff03a912" category="section-title">架構</block>
+  <block id="56da5995454440513c0c0a111bb3b132" category="paragraph">Astra Control 的架構可讓 IT 提供進階的資料管理功能、強化 Kubernetes 應用程式的功能與可用度、簡化跨公有雲和內部環境的容器化工作負載的管理、保護及移動、 並透過其 REST API 和 SDK 提供自動化功能、以程式設計方式存取、與現有工作流程無縫整合。</block>
+  <block id="f0f6f0fb4331084912739b8873eea074" category="paragraph">Astra Control 是 Kubernetes 原生產品、可啟用資料保護工作流程、利用自訂資源、同時與現有的 API 和 SDK 保持向下相容。Kubernetes 原生資料保護提供顯著優勢；透過與 Kubernetes API 和資源無縫整合、資料保護可透過組織現有的 CI/CD 和 / 或 GitOps 工具、成為應用程式生命週期的固有部分。</block>
+  <block id="3e9fd553c2a72f2fea1001b682208a54" category="inline-image-macro">Astra Control 架構</block>
+  <block id="28a0c6c94cda259516d07dedb9c854ef" category="paragraph"><block ref="28a0c6c94cda259516d07dedb9c854ef" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="8103c53d603644d4ee7cc959e53cf3a4" category="paragraph">Astra Control 以四個輔助元件為基礎：</block>
+  <block id="4f16f53fe0ab96995516c186edf87fe6" category="list-text">*Astra Control* ： Astra Control 是適用於所有託管叢集的集中式管理服務、可在雲端和內部部署中提供協調的應用程式保護和行動性工作負載、以及下列功能：</block>
+  <block id="51fed4624a5a53152693a41ce5efa15a" category="list-text">多個叢集和雲端的組合檢視</block>
+  <block id="e046b9c3be3479bde3b3259db738a78f" category="list-text">保護協調的工作流程</block>
+  <block id="8dc1680125686fe1458b22e1961b1899" category="list-text">精細的資源視覺化與選擇</block>
+  <block id="4568e5d7e97ee5d6e4866ccd0c1dc770" category="list-text">*Astra Connector* ： Astra Connector 與 Astra Control 團隊可為每個託管叢集提供安全連線、無論連線狀態為何、都能在本機執行排程作業、並具備下列功能：</block>
+  <block id="7655b1a562ca01e9844b38904e5aa812" category="list-text">無論連線狀態為何、都能在本機執行排程的作業</block>
+  <block id="e41d9e394671a0a661bcca4d52b1926b" category="list-text">在叢集之間散佈和最佳化 Astra 系統資源使用率的本機作業</block>
+  <block id="579304cbfdd1e8dd005de8205aa02d54" category="list-text">本機安裝、可讓您以最少的權限存取叢集、以提高安全性</block>
+  <block id="389aa9334cd9e108116e432d44e3be76" category="list-text">* Astra Control Provisioner* ： Astra Control Provisioner 提供核心 CSI 資源配置功能和進階儲存管理功能、以增加安全性和災難恢復組態、以及下列功能：</block>
+  <block id="c965b0e84a84d7b5a6b37d24fb0c0ebd" category="list-text">進階儲存管理：</block>
+  <block id="6b7d4094418426d522e44a55d578c055" category="list-text">從容器到 PV 的資料在執行中加密</block>
+  <block id="378d291dd5c8d9b13457391d74a1c166" category="list-text">SnapMirror Cloud 功能可跨區域跨區域複寫</block>
+  <block id="0aa3c724313cb48f6cecfc8393736174" category="list-text">* Astra 自訂資源 * ：每個叢集上使用的自訂資源提供 Kubernetes 原生方法來在本機執行作業、簡化與其他 Kubernetes 友好工具和自動化的整合、並提供下列功能：</block>
+  <block id="427ee8760fb4e2d4c8d849fa36bab15b" category="list-text">直接生態系統工具整合與自動化工作流程</block>
+  <block id="c7349a414c37176e5941afbe8fd1bf31" category="list-text">可啟用自訂工作流程的低階原元</block>
+  <block id="15bdafd183c9dcdccccb2ef960342018" category="paragraph">Astra Control 提供兩種部署模式。</block>
+  <block id="e2a57f6b4c1a4fc07e57320580de76c4" category="inline-image-macro">Astra 部署模型</block>
+  <block id="ed910480be660ce44964d26abfc6a0d8" category="paragraph"><block ref="ed910480be660ce44964d26abfc6a0d8" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="b7372905cd310308af0541e07ef5175f" category="list-text">* Astra Control Service*：NetApp託管服務、可在多個雲端供應商環境及自行管理的Kubernetes叢集中、提供Kubernetes叢集的應用程式感知資料管理功能。</block>
+  <block id="6762180adf48075df77efbf264e982ec" category="paragraph"><block ref="6762180adf48075df77efbf264e982ec" category="inline-link-rx"></block></block>
+  <block id="db7cdbe16748f17a4795bd3e96b798a0" category="list-text">* Astra Control Center*：自我管理的軟體、可針對在內部部署環境中執行的Kubernetes叢集、提供應用程式感知資料管理功能。Astra Control Center也可安裝在多個雲端供應商環境中、採用NetApp Cloud Volumes ONTAP 的解決方案儲存後端。</block>
+  <block id="281db70ca8dfcac9ebe6166029058548" category="paragraph"><block ref="281db70ca8dfcac9ebe6166029058548" category="inline-link-rx"></block></block>
+  <block id="e84bb7e947a5b25481546110f575734a" category="list-text"><block ref="e84bb7e947a5b25481546110f575734a" category="inline-link-rx"></block></block>
+  <block id="5858ee4031acd7b896faa2d3d2c1a299" category="inline-link">本文檔 Cloud Insights</block>
+  <block id="2b93b48daf034e4100d00b85950e109d" category="list-text"><block ref="2b93b48daf034e4100d00b85950e109d" category="inline-link-rx"></block></block>
 </blocks>
