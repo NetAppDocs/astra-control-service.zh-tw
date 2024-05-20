@@ -50,6 +50,12 @@ endif::gcp[]
 
 
 
+=== ONTAP NAS 經濟型儲存類別的就地還原作業失敗
+
+如果您執行應用程式的就地還原（將應用程式還原至其原始命名空間）、應用程式的儲存類別會使用 `ontap-nas-economy` 驅動程式、如果未隱藏快照目錄、還原作業可能會失敗。在就地還原之前、請遵循中的指示 link:../use/protect-apps.html#enable-backup-and-restore-for-ontap-nas-economy-operations["啟用 ONTAP NAS 經濟營運的備份與還原"^] 可隱藏 Snapshot 目錄。
+
+
+
 === 使用相同命名空間的多個應用程式無法一起還原至不同的命名空間
 
 如果您管理多個使用相同命名空間的應用程式（在Astra Control中建立多個應用程式定義）、則無法將所有應用程式還原至不同的單一命名空間。您需要將每個應用程式還原至各自獨立的命名空間。
