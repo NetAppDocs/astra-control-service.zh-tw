@@ -19,7 +19,7 @@ NetApp會定期更新Astra Control Service、為您提供新功能、增強功�
 == 2024 年 3 月 14 日
 
 .（技術預覽）聲明性 Kubernetes 工作流程
-此 Astra Control Center 版本包含宣告式 Kubernetes 功能、可讓您從原生 Kubernetes 自訂資源（ CR ）執行資料管理。
+此 Astra Control Service 版本包含宣告式 Kubernetes 功能、可讓您從原生 Kubernetes 自訂資源（ CR ）執行資料管理。
 
 此功能僅適用於 Astra Control Service Early Adopter Program （ EAP ）執行個體。請聯絡您的 NetApp 銷售代表、以取得加入 EAP 的相關資訊。
 

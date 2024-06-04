@@ -2307,7 +2307,6 @@
   <block id="25c0fc647d4495551197e1366ffb88c1" category="inline-link-macro">啟用執行攔截功能</block>
   <block id="d18d82128e00bde35f6e0d2869d5bf4d" category="list-text">* 依預設關閉執行攔截器 * ：從本版本開始、執行攔截器功能就可以 <block ref="5fbd6d349444ac17373b392afcdaf677" category="inline-link-macro-rx"></block> 或停用以提高安全性（預設為停用）。如果您尚未建立用於 Astra Control 的執行攔截器、則需要 <block ref="85c1cb9c60d373b225cb02cebdd0fa71" category="inline-link-macro-rx"></block> 開始建立攔截器。如果您在此版本之前建立了執行攔截器、則執行攔截器功能會保持啟用狀態、您可以像平常一樣使用攔截器。</block>
   <block id="cbcb0d5fc851d3d299a5b4094fe28e88" category="paragraph">任何<block ref="aa08769cdcb26674c6706093503ff0a3" prefix=" " category="inline-code"></block> 具有命名空間名稱/ID之RBAC限制的使用者、可以將應用程式複製或還原至同一叢集上的新命名空間、或是組織帳戶中的任何其他叢集。不過、相同的使用者無法存取新命名空間中的複製或還原應用程式。在複製或還原作業建立新命名空間之後、帳戶管理員 / 擁有者可以編輯<block ref="aa08769cdcb26674c6706093503ff0a3" prefix=" " category="inline-code"></block> 使用者帳戶和更新角色限制、讓受影響的使用者能夠授予新命名空間的存取權。</block>
-  <block id="212a5202776ec83aae2e348c300b284e" category="list-text"><block ref="ba01bb34315cdda27da30f151a6b3a93" category="inline-xref-macro-rx"></block></block>
   <block id="2a9637886ec18ac79339d54fd59c3dac" category="list-text"><block ref="e6692a6ca085ac5ca4d1b661f3b80574" category="inline-xref-macro-rx"></block></block>
   <block id="6d00a00b6023f439cef44dc10b9b46f4" category="list-text"><block ref="025a13f8160290a685803adf4afe8791" category="inline-xref-macro-rx"></block></block>
   <block id="389f816f6fc3ba34f8ccf0ecdb3fcbb6" category="section-title">ONTAP NAS 經濟型儲存類別的就地還原作業失敗</block>
@@ -2794,7 +2793,6 @@ Astra Control現已推出新的部署模式。_Astra Control Center_ 是自行�
   <block id="e9a2cf6bcc4b5dac4132bd23653461f4" category="inline-link-macro">設定另一個預設儲存區</block>
   <block id="70c54cfcee3c9263e59ee7de13eaba8a" category="admonition">當您新增貯體時、Astra Control會使用預設的貯體指標來標記一個貯體。您建立的第一個儲存區會成為預設儲存區。當您新增儲存庫時、可以稍後決定 <block ref="f83337d9020c8fbb1074e1310043d277" category="inline-link-macro-rx"></block>。</block>
   <block id="52431bbd389e0fa547d3457c7623dfdb" category="paragraph-title">（技術預覽）聲明性 Kubernetes 工作流程</block>
-  <block id="a70f47b04c91a98499e8d350fa135250" category="paragraph">此 Astra Control Center 版本包含宣告式 Kubernetes 功能、可讓您從原生 Kubernetes 自訂資源（ CR ）執行資料管理。</block>
   <block id="0addefdac9fea093ab0631c42bf63154" category="paragraph">此功能僅適用於 Astra Control Service Early Adopter Program （ EAP ）執行個體。請聯絡您的 NetApp 銷售代表、以取得加入 EAP 的相關資訊。</block>
   <block id="1d649712f351065ae3623bc575a29774" category="inline-link-macro">Astra Connector</block>
   <block id="9edf27bb0e7572b9900e7980f47a9346" category="paragraph">安裝之後 <block ref="124c0a76592741cd24122aa865f475c8" category="inline-link-macro-rx"></block> 在您要管理的叢集上、您可以在 UI 或 CR 中執行下列 CR 型叢集作業：</block>
@@ -2886,4 +2884,5 @@ Astra Control現已推出新的部署模式。_Astra Control Center_ 是自行�
   <block id="e84bb7e947a5b25481546110f575734a" category="list-text"><block ref="e84bb7e947a5b25481546110f575734a" category="inline-link-rx"></block></block>
   <block id="5858ee4031acd7b896faa2d3d2c1a299" category="inline-link">本文檔 Cloud Insights</block>
   <block id="2b93b48daf034e4100d00b85950e109d" category="list-text"><block ref="2b93b48daf034e4100d00b85950e109d" category="inline-link-rx"></block></block>
+  <block id="20186cef4fc96e59fa1bf8ee82f413ce" category="paragraph">此 Astra Control Service 版本包含宣告式 Kubernetes 功能、可讓您從原生 Kubernetes 自訂資源（ CR ）執行資料管理。</block>
 </blocks>
