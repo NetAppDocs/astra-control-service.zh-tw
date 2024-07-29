@@ -14,4 +14,4 @@ summary: 本文件網站上的許多頁面都包含影片、說明如何使用As
 [role="lead"]
 請查看 NetApp TV 、瞭解 Astra Control Service 的最新影片內容。NetApp TV 包含示範 Astra Control Service 某些功能的影片、或是示範如何完成某些常見工作。
 
-https://www.netapp.tv/search/astra%20control%20service["Astra Control Service影片"^]
+https://media.netapp.com/search?q=astra%20control%20service["Astra Control Service影片"^]
