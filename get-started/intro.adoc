@@ -219,7 +219,7 @@ Astra Control Center可在您自己的私有雲端本機執行。
 
 Astra Control Center 支援 Kubernetes 叢集、其中包含 Astra Control Provisioner 設定的儲存類別、以及 ONTAP 儲存後端。
 
-Astra Control Center已完全整合AutoSupport 至整套的功能、可Active IQ 為使用者和NetApp支援人員提供疑難排解和使用資訊。
+Astra Control Center 已完全整合至 AutoSupport 和 Active IQ 數位顧問（也稱為數位顧問）生態系統、為使用者和 NetApp 支援提供疑難排解和使用資訊。
 
 您可以使用90天試用版授權試用Astra Control Center。評估版本可透過電子郵件和社群選項來支援。此外、您也可以從產品內的支援儀表板存取知識庫文章和文件。
 

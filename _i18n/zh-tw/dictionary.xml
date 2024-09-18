@@ -757,7 +757,6 @@
   <block id="67d2a2db6f77778acc532b68658f63cc" category="list-text">然後使用Astra Control Service來管理這些應用程式、並開始建立快照、備份和複製。</block>
   <block id="b714fdd25acef8e71be758de7ff02f0b" category="section-title">Astra控制中心的運作方式</block>
   <block id="90d397f2aa31c2e6d9f5dfda5d12adca" category="paragraph">Astra Control Center可在您自己的私有雲端本機執行。</block>
-  <block id="ea2708b459fc0cad6936ec216bd9405e" category="paragraph">Astra Control Center已完全整合AutoSupport 至整套的功能、可Active IQ 為使用者和NetApp支援人員提供疑難排解和使用資訊。</block>
   <block id="b4851e92b19af0c5c82447fc0937709d" category="inline-link">需求</block>
   <block id="e63cc3795b9216d59b085bd3111a248d" category="paragraph">若要安裝及使用Astra Control Center、您必須符合特定需求<block ref="bdde32b2c988689d803729c06660acb4" category="inline-link-rx"></block>。</block>
   <block id="6319f881d45c326a5f6222a746f50981" category="paragraph">Astra Control Center的高層級運作方式如下：</block>
@@ -2885,4 +2884,5 @@ Astra Control現已推出新的部署模式。_Astra Control Center_ 是自行�
   <block id="20186cef4fc96e59fa1bf8ee82f413ce" category="paragraph">此 Astra Control Service 版本包含宣告式 Kubernetes 功能、可讓您從原生 Kubernetes 自訂資源（ CR ）執行資料管理。</block>
   <block id="7da594e16f0a75f632446ae54fcebe05" category="paragraph"><block ref="7da594e16f0a75f632446ae54fcebe05" category="inline-link-rx"></block></block>
   <block id="f5a6b606e4d3218555a81c4263520975" category="admonition">若要觀看 Azure Marketplace 訂閱程序的影片逐步解說，請造訪<block ref="f66ebb92a2b0ab499cd7d4ec1bb5ea24" category="inline-link-rx"></block>。</block>
+  <block id="a9cf730f8ab04a5b52f1d19c74c1483c" category="paragraph">Astra Control Center 已完全整合至 AutoSupport 和 Active IQ 數位顧問（也稱為數位顧問）生態系統、為使用者和 NetApp 支援提供疑難排解和使用資訊。</block>
 </blocks>
